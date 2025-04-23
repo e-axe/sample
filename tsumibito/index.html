@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"> <title>ソフトボイルド『ツミビト ～7つと1つの大罪～』公演詳細</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kaisei+Decol:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* カスタムフォントの適用 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf6; /* ややオフホワイトの背景 */
+            color: #333;
+            padding-top: 64px; /* Add padding to body to prevent content from being hidden behind fixed navbar */
+        }
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Kaisei Decol', serif; /* 見出し用の手書き風フォント */
+        }
+        /* 背景に微細なテクスチャやパターンを追加 (オプション) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        /* グラレコ風のカスタムスタイル */
+        .gr-border {
+            border: 2px solid #555; /* やや太めのボーダー */
+            box-shadow: 4px 4px 0px #ddd; /* シンプルな影 */
+        }
+        .gr-highlight { /* ハイライトが必要な要素用にスタイルを保持 */
+            background-color: #fffacd; /* 薄い黄色のハイライト */
+            padding: 2px 6px;
+            display: inline;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        .section-bg {
+            background-color: rgba(255, 255, 255, 0.8); /* セクション用の半透明の白い背景 */
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .ticket-button {
+            transition: all 0.3s ease;
+        }
+        .ticket-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        /* ビジュアルプレースホルダーテキストのスタイル */
+        .visual-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px; /* 必要に応じて高さを調整 */
+            background-color: #f0e6d2; /* プレースホルダーの背景色 */
+            color: #555; /* プレースホルダーのテキスト色 */
+            font-size: 1.25rem; /* テキストサイズ */
+            font-weight: 600;
+            border: 2px dashed #aaa; /* 破線のボーダー */
+            border-radius: 0.5rem; /* 角丸 */
+        }
+        /* タイムテーブルのスタイル */
+        .timetable {
+            table-layout: fixed; /* テーブルレイアウトを固定 */
+            width: 100%;
+        }
+        .timetable th, .timetable td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.875rem;
+            word-break: keep-all; /* 日本語の改行を防ぐ */
+            overflow-wrap: break-word;
+        }
+        .timetable th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+        }
+        .timetable .stage-time {
+            font-weight: bold;
+            color: #c81e1e;
+            display: block;
+            white-space: nowrap; /* 時間が改行されないように */
+        }
+        .timetable .date-cell {
+            font-weight: bold;
+            white-space: nowrap; /* 日付が改行されないように */
+        }
+        /* レスポンシブテーブル */
+        .table-container {
+            overflow-x: auto; /* 小画面で水平スクロールを有効化 */
+            -webkit-overflow-scrolling: touch; /* iOSでのスムーズスクロール */
+        }
+        /* 地図コンテナとiframeのスタイル */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* Remove default border */
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar a {
+             transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #dc2626; /* Red color on hover */
+        }
+        /* Hamburger Menu Styles */
+        .hamburger div {
+             transition: all 0.3s ease;
+        }
+        .hamburger.active .line-1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+         .hamburger.active .line-2 {
+            opacity: 0;
+        }
+        .hamburger.active .line-3 {
+             transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="text-lg font-bold text-gray-800">ツミビト</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#synopsis" class="text-gray-600 hover:text-red-600">あらすじ</a>
+                <a href="#cast" class="text-gray-600 hover:text-red-600">CAST</a>
+                <a href="#schedule" class="text-gray-600 hover:text-red-600">日程</a>
+                <a href="#theater" class="text-gray-600 hover:text-red-600">劇場</a>
+                <a href="#ticket" class="text-gray-600 hover:text-red-600">チケット</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-600">お問い合わせ</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="hamburger focus:outline-none">
+                    <div class="line-1 block w-6 h-0.5 bg-gray-800 mb-1"></div>
+                    <div class="line-2 block w-6 h-0.5 bg-gray-800 mb-1"></div>
+                    <div class="line-3 block w-6 h-0.5 bg-gray-800"></div>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-2">
+            <a href="#synopsis" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">あらすじ</a>
+            <a href="#cast" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">CAST</a>
+            <a href="#schedule" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">日程</a>
+            <a href="#theater" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">劇場</a>
+            <a href="#ticket" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">チケット</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">お問い合わせ</a>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-4 pt-8 pb-4 text-center"> <div class="mb-4 text-sm text-gray-600">[Soft Boiled Theater-15]</div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+            クリエイティブユニット【ソフトボイルド】
+        </h1>
+        <h2 class="text-5xl md:text-7xl font-bold text-red-700 mb-6">
+            『ツミビト ～7つと1つの大罪～』
+        </h2>
+        <p class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">
+            2025年4月23日(水)〜27日(日)
+        </p>
+        <p class="text-lg md:text-xl font-semibold text-gray-700">
+            @ CBGKシブゲキ!!
+        </p>
+        <div class="mt-8 mb-12 max-w-4xl mx-auto">
+            <div class="visual-placeholder gr-border">
+                <p>メインビジュアル、フライヤー表示予定</p>
+            </div>
+            </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+
+        <section id="synopsis" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">あらすじ</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-left whitespace-pre-line">
+            数百年の昔、神とやらが二つの気まぐれを起こした。
+            ひとつ、それまでひとつであった世界を上ノ国と下ノ国に分断した。
+            ふたつ、選ばれし者に力を与え、七つの罪の名を冠した。
+            これにより、世界には明白な支配と秩序ができ、生きる場所で豊かさと貧しさは決められた。
+            変わることのない仕組みの中で、抗う者たちは力を求めた。
+            そして今、８つ目のツミビトが生まれる。
+            </p>
+        </section>
+
+        <section id="cast" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">CAST</h3>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-6">
+                    <p class="text-xl">高田舟 (ソフトボイルド)</p>
+                    <p class="text-xl mt-2">沖侑果</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6 text-lg">
+                    <span>中島健</span>
+                    <span>春斗</span>
+                    <span>河合健太郎</span>
+                    <span>蔵田尚樹</span>
+                    <span>内藤光佑</span>
+                    <span>松岡拳紀介</span>
+                    <span>工藤舞人</span>
+                    <span>前田直紀</span> </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6 text-lg">
+                    <span>武田智加</span>
+                    <span>橘二葉</span>
+                    <span>古仲可奈</span>
+                    <span>有沢澪風</span>
+                    <span>都筑あやめ</span>
+                    <span>高野美幸</span>
+                    <span>天翔ゆい</span>
+                    <span>冨永実里</span>
+                    <span>椿あい子</span>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl">中山優貴</p>
+                    <p class="text-xl mt-2">納谷健</p>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700"><ソフトボイルド></h4>
+                    <div class="flex justify-center space-x-4 text-lg">
+                        <span>加藤光大</span>
+                        <span>樹くるみ</span>
+                        <span>大橋篤</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700"><殺陣衆></h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-lg">
+                        <span>髙木悠慎</span>
+                        <span>吉岡臣</span>
+                        <span>奈良宙生</span>
+                        <span>虎太郎</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="staff" class="mb-12 section-bg">
+             <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">脚本・演出</h3>
+             <p class="text-xl text-center font-semibold">前田直紀</p> </section>
+
+        <section id="schedule" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">公演タイムテーブル</h3>
+             <p class="text-center text-lg mb-6">2025年4月23日(水)〜27日(日) 全7ステージ</p>
+            <div class="table-container max-w-3xl mx-auto gr-border rounded-lg overflow-hidden">
+                <table class="timetable bg-white">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="py-3 px-2 w-2/7">日付</th>
+                            <th scope="col" class="py-3 px-2 w-1/7">12:00</th>
+                            <th scope="col" class="py-3 px-2 w-1/7">13:00</th>
+                            <th scope="col" class="py-3 px-2 w-1/7">16:30</th>
+                            <th scope="col" class="py-3 px-2 w-1/7">18:00</th>
+                            <th scope="col" class="py-3 px-2 w-1/7">19:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="date-cell py-4 px-2">4月23日(水)</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">① 19:00</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="date-cell py-4 px-2">4月24日(木)</td>
+                             <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">② 19:00</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="date-cell py-4 px-2">4月25日(金)</td>
+                             <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">③ 19:00</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="date-cell py-4 px-2">4月26日(土)</td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">④ 13:00</span></td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">⑤ 18:00</span></td>
+                            <td class="py-4 px-2">-</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="date-cell py-4 px-2">4月27日(日)</td>
+                            <td class="py-4 px-2"><span class="stage-time">⑥ 12:00</span></td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2"><span class="stage-time">⑦ 16:30</span></td>
+                            <td class="py-4 px-2">-</td>
+                            <td class="py-4 px-2">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="theater" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">劇場</h3>
+            <p class="text-2xl text-center font-semibold mb-4">CBGKシブゲキ!!</p>
+            <p class="text-center text-gray-600 mb-6">〒150-0043 東京都渋谷区道玄坂2-29-5 ザ・プライム 6階</p>
+            <div class="map-container max-w-3xl mx-auto rounded-lg overflow-hidden gr-border">
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747799736451!2d139.6977893152581!3d35.65861118019941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f354700d1%3A0x8cb13c4d3519ca94!2sCBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD!!%20(Cbgk%20Shibugeki)!5e0!3m2!1sja!2sjp!4v1678886012345!5m2!1sja!2sjp1"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                 </iframe>
+            </div>
+        </section>
+
+        <section id="ticket" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">チケット</h3>
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="mb-6 space-y-2 text-lg">
+                    <p><span class="font-bold text-yellow-600">S席:</span> 8,800円</p>
+                    <p><span class="font-bold text-blue-600">A席:</span> 6,800円 ／ <span class="font-bold text-green-600">特典付A席:</span> 7,800円</p>
+                    <p class="text-sm text-gray-600">（全席指定席／当日券500円増し）</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8 text-left">
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 shadow-sm">
+                        <h4 class="font-bold text-lg mb-2 text-yellow-700">☆ S席特典 ☆</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>前方列保証</li>
+                            <li>選択キャストの非売品2L版ブロマイド1枚</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200 shadow-sm">
+                        <h4 class="font-bold text-lg mb-2 text-green-700">★ 特典付A席 ★</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>選択キャストの非売品2L版ブロマイド1枚のみ<br>（ブロマイドの絵柄はS席特典と同じ）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-600 mb-8 max-w-xl mx-auto">
+                    ※S席、特典付A席共に殺陣衆の特典ブロマイドの配布はございません。尚、殺陣衆扱いのS席チケットを選択された方は前方列保証のみの対応となります。
+                </p>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">《カンフェティ》</h4>
+                    <p class="text-lg mb-4">
+                        <span class="font-bold gr-highlight">2025年3月23日(日) 11:00 発売</span>
+                    </p>
+                    <a href="https://www.confetti-web.com/events/7363" target="_blank" rel="noopener noreferrer"
+                       class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-md ticket-button">
+                        チケット購入はこちら
+                    </a>
+                    <p class="text-sm text-gray-600 mt-3">※先着順 / URLは発売時に有効になります</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">ご来場のお客様へ</h3>
+            <ul class="list-disc list-inside space-y-3 max-w-3xl mx-auto text-left text-base md:text-lg text-gray-700">
+                <li>お花・プレゼント・ファンレターはスペース確保と感染症対策のため受付を遠慮させていただきます。予めご了承ください。</li>
+                <li>出演者の入り待ち、出待ちや、長時間にわたる劇場周辺での滞留は禁止といたします。</li>
+                <li>新型コロナウイルス感染者が発生した場合など、必要に応じて、カンフェティ等からお客様のお名前及びご連絡先を提供いただきます。また、来場者名簿等を保健所等の公的機関へ提供する場合もございます。予めご了承いただきますようお願いいたします。</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="mb-12 section-bg">
+            <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">お問い合わせ</h3>
+            <div class="text-center">
+                <p class="text-lg mb-2">
+                    <a href="mailto:softboiled0101@gmail.com" class="text-blue-600 hover:underline">softboiled0101@gmail.com</a>
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                    ※折返しのメールが受信できるように、ドメイン指定受信で「gmail.com」を許可するように設定してください。
+                </p>
+                <p class="text-sm text-gray-600">
+                    ※車椅子にてご観劇のお客様は、上記メールアドレスへご連絡ください。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg font-semibold mb-2">企画・制作</p>
+            <p class="mb-4">ソフトボイルド / 合同会社otonapro</p>
+            <p class="text-sm">© 2025 Soft Boiled / otonapro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a'); // Get all links in mobile menu
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuButton.classList.toggle('active'); // Toggle active class for hamburger animation
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuButton.classList.remove('active');
+            });
+        });
+
+        // Optional: Close mobile menu if clicked outside
+        document.addEventListener('click', (event) => {
+            const isClickInsideNav = menuButton.contains(event.target) || mobileMenu.contains(event.target);
+            if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                menuButton.classList.remove('active');
+            }
+        });
+
+        // Optional: Change navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-opacity-100', 'shadow-lg');
+                navbar.classList.remove('bg-opacity-90', 'shadow-md');
+            } else {
+                navbar.classList.remove('bg-opacity-100', 'shadow-lg');
+                navbar.classList.add('bg-opacity-90', 'shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>
