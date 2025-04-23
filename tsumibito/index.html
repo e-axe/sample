@@ -14,10 +14,10 @@
             font-family: 'Inter', sans-serif;
             background-color: #fdfaf6; /* ややオフホワイトの背景 */
             color: #333;
-            padding-top: 64px; /* Add padding to body to prevent content from being hidden behind fixed navbar */
+            padding-top: 64px; /* 固定ナビゲーションバー分のパディング */
         }
         html {
-            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scroll-behavior: smooth; /* スムーズスクロールを有効化 */
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Kaisei Decol', serif; /* 見出し用の手書き風フォント */
@@ -48,9 +48,14 @@
         .section-bg {
             background-color: rgba(255, 255, 255, 0.8); /* セクション用の半透明の白い背景 */
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem; /* スマホ用に少しパディングを調整 */
             margin-bottom: 2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .section-bg {
+                padding: 2rem; /* デスクトップでは元のパディング */
+            }
         }
         .ticket-button {
             transition: all 0.3s ease;
@@ -64,27 +69,41 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 300px; /* 必要に応じて高さを調整 */
+            height: 200px; /* スマホ用に高さを調整 */
             background-color: #f0e6d2; /* プレースホルダーの背景色 */
             color: #555; /* プレースホルダーのテキスト色 */
-            font-size: 1.25rem; /* テキストサイズ */
+            font-size: 1rem; /* スマホ用にフォントサイズ調整 */
             font-weight: 600;
             border: 2px dashed #aaa; /* 破線のボーダー */
             border-radius: 0.5rem; /* 角丸 */
         }
+         @media (min-width: 768px) { /* md breakpoint */
+            .visual-placeholder {
+                 height: 300px; /* デスクトップでは元の高さ */
+                 font-size: 1.25rem; /* デスクトップでは元のフォントサイズ */
+            }
+        }
         /* タイムテーブルのスタイル */
         .timetable {
-            table-layout: fixed; /* テーブルレイアウトを固定 */
+             /* table-layout: fixed; を削除して自動調整に */
             width: 100%;
+            border-collapse: collapse; /* ボーダーを結合 */
         }
         .timetable th, .timetable td {
             border: 1px solid #ddd;
-            padding: 0.75rem;
+            padding: 0.5rem 0.25rem; /* スマホ用にパディングを小さく */
             text-align: center;
-            font-size: 0.875rem;
-            word-break: keep-all; /* 日本語の改行を防ぐ */
+            font-size: 0.75rem; /* スマホ用にフォントサイズを少し小さく */
+            word-break: keep-all;
             overflow-wrap: break-word;
+            min-width: 40px; /* 列の最小幅を設定 */
         }
+         @media (min-width: 640px) { /* sm breakpoint */
+             .timetable th, .timetable td {
+                 padding: 0.75rem; /* sm以上でパディングを戻す */
+                 font-size: 0.875rem; /* sm以上でフォントサイズを戻す */
+             }
+         }
         .timetable th {
             background-color: #f3f4f6;
             font-weight: bold;
@@ -93,11 +112,11 @@
             font-weight: bold;
             color: #c81e1e;
             display: block;
-            white-space: nowrap; /* 時間が改行されないように */
+            white-space: nowrap;
         }
         .timetable .date-cell {
             font-weight: bold;
-            white-space: nowrap; /* 日付が改行されないように */
+            white-space: nowrap;
         }
         /* レスポンシブテーブル */
         .table-container {
@@ -118,7 +137,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0; /* Remove default border */
+            border: 0; /* デフォルトのボーダーを削除 */
         }
         /* Navigation Bar Styles */
         .navbar {
@@ -128,7 +147,7 @@
              transition: color 0.3s ease;
         }
         .navbar a:hover {
-            color: #dc2626; /* Red color on hover */
+            color: #dc2626; /* ホバー時の色 (赤) */
         }
         /* Hamburger Menu Styles */
         .hamburger div {
@@ -227,7 +246,8 @@
                     <span>内藤光佑</span>
                     <span>松岡拳紀介</span>
                     <span>工藤舞人</span>
-                    <span>前田直紀</span> </div>
+                    <span>前田直紀</span>
+                </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6 text-lg">
                     <span>武田智加</span>
@@ -269,7 +289,8 @@
 
         <section id="staff" class="mb-12 section-bg">
              <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">脚本・演出</h3>
-             <p class="text-xl text-center font-semibold">前田直紀</p> </section>
+             <p class="text-xl text-center font-semibold">前田直紀</p>
+        </section>
 
         <section id="schedule" class="mb-12 section-bg">
             <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">公演タイムテーブル</h3>
@@ -278,54 +299,54 @@
                 <table class="timetable bg-white">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
-                            <th scope="col" class="py-3 px-2 w-2/7">日付</th>
-                            <th scope="col" class="py-3 px-2 w-1/7">12:00</th>
-                            <th scope="col" class="py-3 px-2 w-1/7">13:00</th>
-                            <th scope="col" class="py-3 px-2 w-1/7">16:30</th>
-                            <th scope="col" class="py-3 px-2 w-1/7">18:00</th>
-                            <th scope="col" class="py-3 px-2 w-1/7">19:00</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">日付</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">12:00</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">13:00</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">16:30</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">18:00</th>
+                            <th scope="col" class="py-3 px-1 sm:px-2">19:00</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-b">
-                            <td class="date-cell py-4 px-2">4月23日(水)</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">① 19:00</span></td>
+                            <td class="date-cell py-4 px-1 sm:px-2">4月23日(水)</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">① 19:00</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="date-cell py-4 px-2">4月24日(木)</td>
-                             <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">② 19:00</span></td>
+                            <td class="date-cell py-4 px-1 sm:px-2">4月24日(木)</td>
+                             <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">② 19:00</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="date-cell py-4 px-2">4月25日(金)</td>
-                             <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">③ 19:00</span></td>
+                            <td class="date-cell py-4 px-1 sm:px-2">4月25日(金)</td>
+                             <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">③ 19:00</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="date-cell py-4 px-2">4月26日(土)</td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">④ 13:00</span></td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">⑤ 18:00</span></td>
-                            <td class="py-4 px-2">-</td>
+                            <td class="date-cell py-4 px-1 sm:px-2">4月26日(土)</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">④ 13:00</span></td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">⑤ 18:00</span></td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
                         </tr>
                         <tr class="border-b">
-                            <td class="date-cell py-4 px-2">4月27日(日)</td>
-                            <td class="py-4 px-2"><span class="stage-time">⑥ 12:00</span></td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2"><span class="stage-time">⑦ 16:30</span></td>
-                            <td class="py-4 px-2">-</td>
-                            <td class="py-4 px-2">-</td>
+                            <td class="date-cell py-4 px-1 sm:px-2">4月27日(日)</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">⑥ 12:00</span></td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2"><span class="stage-time">⑦ 16:30</span></td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
+                            <td class="py-4 px-1 sm:px-2">-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -426,14 +447,14 @@
         // Mobile Menu Toggle
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = mobileMenu.querySelectorAll('a'); // Get all links in mobile menu
+        const navLinks = mobileMenu.querySelectorAll('a'); // モバイルメニュー内の全リンクを取得
 
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            menuButton.classList.toggle('active'); // Toggle active class for hamburger animation
+            menuButton.classList.toggle('active'); // ハンバーガーアニメーション用のactiveクラスを切り替え
         });
 
-        // Close mobile menu when a link is clicked
+        // リンククリック時にモバイルメニューを閉じる
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -441,7 +462,7 @@
             });
         });
 
-        // Optional: Close mobile menu if clicked outside
+        // オプション: メニュー外クリック時にモバイルメニューを閉じる
         document.addEventListener('click', (event) => {
             const isClickInsideNav = menuButton.contains(event.target) || mobileMenu.contains(event.target);
             if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
@@ -450,7 +471,7 @@
             }
         });
 
-        // Optional: Change navbar background on scroll
+        // オプション: スクロール時にナビゲーションバーの背景を変更
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
