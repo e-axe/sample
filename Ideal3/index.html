@@ -14,6 +14,15 @@
             color: #f8fafc; /* Overall base text color - light */
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
+        .top-info-section { 
+            /* background property removed to make it transparent against body gradient */
+            padding-top: 8rem; /* Padding to account for fixed header and desired spacing */
+            padding-bottom: 4rem; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
         .main-title-font {
             font-family: 'Exo 2', sans-serif;
             font-weight: 800;
@@ -30,22 +39,22 @@
             text-shadow: 1px 1px #083344;
         }
         .card {
-            background-color: rgba(30, 41, 59, 0.85); /* Slightly darker semi-transparent card background for contrast */
-            border: 2px solid #0ea5e9; /* Cyber blue border */
-            border-radius: 0.75rem; /* Tailwind: rounded-xl */
-            padding: 1.5rem; /* Tailwind: p-6 */
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.3); /* Cyber blue glow effect */
-            backdrop-filter: blur(5px); /* Background blur effect */
-            color: #e0f2fe; /* Base text color within cards */
+            background-color: rgba(30, 41, 59, 0.85); 
+            border: 2px solid #0ea5e9; 
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.3); 
+            backdrop-filter: blur(5px); 
+            color: #e0f2fe; 
         }
         .card p, .card li {
-             color: #e0f2fe; /* Light text color for paragraphs and list items in cards */
+             color: #e0f2fe; 
         }
-        .card .text-xs { /* Small text like notes within cards */
-            color: #cbd5e1; /* Slightly muted light color */
+        .card .text-xs { 
+            color: #cbd5e1; 
         }
         .btn-primary {
-            background-color: #0ea5e9; /* Cyber blue */
+            background-color: #0ea5e9; 
             color: #ffffff; 
             padding: 0.85rem 1.75rem;
             border-radius: 0.5rem;
@@ -57,7 +66,7 @@
             box-shadow: 0px 0px 15px rgba(14, 165, 233, 0.6), inset 0px 0px 5px rgba(255,255,255,0.3);
         }
         .btn-primary:hover {
-            background-color: #06b6d4; /* Slightly darker cyan */
+            background-color: #06b6d4; 
             color: #f0f9ff;
             box-shadow: 0px 0px 25px rgba(14, 165, 233, 0.8), inset 0px 0px 8px rgba(255,255,255,0.4);
             transform: translateY(-2px);
@@ -70,33 +79,33 @@
             border-collapse: collapse;
         }
         th, td {
-            border: 1px solid #334155; /* Slate border color */
+            border: 1px solid #334155; 
             padding: 0.75rem;
             text-align: left;
-            color: #e0f2fe; /* Table text color */
+            color: #e0f2fe; 
         }
         th {
-            background-color: #1e293b; /* Table header background */
-            color: #7dd3fc; /* Light cyan text for headers */
+            background-color: #1e293b; 
+            color: #7dd3fc; 
             font-family: 'Rajdhani', sans-serif;
             font-weight: 600;
             font-size: 1em;
         }
-        .highlight { /* Emphasis for ticket prices, etc. */
-            color: #ec4899; /* Vivid pink */
+        .highlight { 
+            color: #ec4899; 
             font-weight: bold;
         }
         .text-accent-cyan {
             color: #22d3ee;
         }
-        .text-accent-pink { /* Vivid pink for strong emphasis */
-            color: #ff007f; /* Vivid magenta pink */
+        .text-accent-pink { 
+            color: #ff007f; 
         }
         .cast-category {
             font-family: 'Rajdhani', sans-serif;
             font-weight: 700;
             font-size: 1.6rem;
-            color: #67e8f9; /* Light cyan */
+            color: #67e8f9; 
             margin-top: 1rem;
             margin-bottom: 0.75rem;
             border-bottom: 2px solid #67e8f9;
@@ -116,10 +125,10 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
-            background-color: #0f172a; /* Accordion content background */
+            background-color: #0f172a; 
         }
         .accordion-content ul li {
-            color: #cbd5e1; /* Accordion list item color */
+            color: #cbd5e1; 
         }
         .accordion-button.active + .accordion-content {
             max-height: 1000px;
@@ -129,31 +138,31 @@
             font-family: 'Rajdhani', sans-serif;
             font-weight: 600;
             font-size: 1.05rem;
-            color: #e0f2fe; /* Light color for navigation links */
+            color: #e0f2fe; 
         }
         .nav-link:hover {
-            color: #7dd3fc; /* Light cyan on hover */
+            color: #7dd3fc; 
             text-shadow: 0 0 10px #7dd3fc;
         }
         header {
-            background-color: rgba(15, 23, 42, 0.85); /* Header background */
+            background-color: rgba(15, 23, 42, 0.85); 
             backdrop-filter: blur(8px);
         }
         #mobile-menu {
-             background-color: rgba(15, 23, 42, 0.95); /* Mobile menu background */
+             background-color: rgba(15, 23, 42, 0.95); 
         }
         #mobile-menu a {
-            color: #e0f2fe; /* Mobile menu link color */
+            color: #e0f2fe; 
         }
-        .schedule-cast-name { /* Standard color for cast names in schedule */
+        .schedule-cast-name { 
             font-weight: bold;
-            color: #7dd3fc; /* Light cyan - no individual pink */
+            color: #7dd3fc; 
         }
         .text-story-emphasis {
             font-family: 'Exo 2', sans-serif;
             font-weight: 700;
         }
-        .link-external { /* External link style */
+        .link-external { 
             color: #67e8f9;
             text-decoration: underline;
             transition: color 0.3s;
@@ -162,46 +171,36 @@
             color: #a5f3fc;
         }
         footer p {
-            color: #cbd5e1; /* Footer text color */
+            color: #cbd5e1; 
         }
-        footer .text-sky-400 { /* Footer accent color */
+        footer .text-sky-400 { 
             color: #38bdf8;
         }
-        .map-container { /* Map container */
+        .map-container { 
             width: 100%;
-            max-width: 800px; /* Max width for the map (adjust as needed) */
+            max-width: 800px; 
             margin-left: auto;
             margin-right: auto;
-            border-radius: 0.75rem; /* rounded-lg */
-            overflow: hidden; /* To make iframe corners rounded */
-            border: 2px solid #0ea5e9; /* Cyber blue border */
+            border-radius: 0.75rem; 
+            overflow: hidden; 
+            border: 2px solid #0ea5e9; 
             box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
         }
         .map-container iframe {
-            display: block; /* Remove extra space below iframe */
-            width: 100%; /* Fit to container width */
+            display: block; 
+            width: 100%; 
         }
         .flyer-image-container {
-            padding-top: 6rem; /* Adjusted for header height + some space */
-            padding-bottom: 2rem; /* Tailwind: pb-8 */
+            padding-top: 2rem; 
+            padding-bottom: 2rem; 
         }
         .flyer-image {
             max-width: 100%;
             height: auto;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4); /* Shadow to match card style */
-            border: 2px solid #0ea5e9; /* Border to match card style */
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4); 
+            border: 2px solid #0ea5e9; 
         }
-        .performance-info-block {
-            text-align: center;
-            padding: 2rem 1rem; /* Tailwind: p-8 sm:p-4 */
-            background-color: rgba(15, 23, 42, 0.5); /* Slightly transparent dark blue */
-            border-radius: 0.75rem; /* rounded-xl */
-            margin-top: -2rem; /* Overlap slightly with flyer or create space */
-            position: relative;
-            z-index: 10; /* Ensure it's above the flyer if overlapping */
-        }
-
 
     </style>
 </head>
@@ -211,7 +210,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold main-title-font tracking-wider">アイディール・セミナー</a>
+                    <a href="#" class="text-xl md:text-2xl font-bold main-title-font tracking-wider">アイディール・セミナー/Final session</a>
                 </div>
                 <nav class="hidden md:flex space-x-6">
                     <a href="#story" class="nav-link">あらすじ</a>
@@ -236,28 +235,28 @@
         </div>
     </header>
 
-    <main class="pt-20">
-        <section id="flyer-top">
-            <div class="flyer-image-container max-w-2xl mx-auto">
-                <img src="image/Ideal3_omote.png" alt="アイディール・セミナー フライヤー画像" class="flyer-image">
-            </div>
-        </section>
-
-        <section class="performance-info-block container mx-auto px-4 sm:px-6 lg:px-8 -mt-8 md:-mt-12 mb-12 md:mb-16">
-            <div class="bg-slate-900 bg-opacity-70 p-6 md:p-8 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-3xl mx-auto">
+    <main>
+        <section class="top-info-section">
+            <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-3xl mx-auto">
                 <p class="text-md md:text-lg mb-2 font-sans text-slate-100">［Otona Project 第六十三弾］演劇ユニット【爆走おとな小学生】第二十三回全校集会</p>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 leading-tight main-title-font">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 leading-tight main-title-font">
                     "朗読×ACT"<br>『アイディール・セミナー<span class="block md:inline">/Final session</span>』
                 </h1>
-                <p class="text-sm md:text-md text-slate-200 mb-3 font-sans">脚本・演出：加藤光大</p>
-                <p class="text-md md:text-lg text-slate-100 mb-6 font-sans">2025年6月4日(水)～6月8日(日) @ こくみん共済 coop ホール／スペース・ゼロ</p>
+                <p class="text-md md:text-lg text-slate-200 mb-6 font-sans">脚本・演出：加藤光大</p>
+                <p class="text-lg md:text-xl text-slate-100 mb-8 font-sans">2025年6月4日(水)～6月8日(日) @ こくみん共済 coop ホール／スペース・ゼロ</p>
                 <a href="#ticket" class="btn-primary text-md md:text-lg inline-block">
                     <i class="fas fa-ticket-alt mr-2"></i>チケット情報はこちら
                 </a>
             </div>
         </section>
 
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-16 md:space-y-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-16 md:space-y-24">
+
+            <section id="flyer">
+                <div class="flyer-image-container max-w-2xl mx-auto">
+                    <img src="image/Ideal3_omote.png" alt="アイディール・セミナー フライヤー画像" class="flyer-image">
+                </div>
+            </section>
 
             <section id="story">
                 <h2 class="section-title">STORY</h2>
