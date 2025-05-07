@@ -10,12 +10,12 @@
     <style>
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Cool blue gradient background */
-            color: #f8fafc; /* Overall base text color - light */
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            overflow-x: hidden;
         }
         .top-info-section { 
-            padding-top: 8rem; /* Padding to account for fixed header and desired spacing */
+            padding-top: 8rem;
             padding-bottom: 4rem; 
             display: flex;
             align-items: center;
@@ -25,16 +25,16 @@
         .main-title-font {
             font-family: 'Exo 2', sans-serif;
             font-weight: 800;
-            text-shadow: 2px 2px #0ea5e9, -1px -1px #082f49; /* Cyber blue shadow and dark blue outline */
-            color: #ffffff; /* Main title in white for emphasis */
+            text-shadow: 2px 2px #0ea5e9, -1px -1px #082f49;
+            color: #ffffff;
         }
         .section-title {
             font-family: 'Exo 2', sans-serif;
             font-weight: 700;
-            font-size: 2.5rem; /* Tailwind: text-4xl */
-            margin-bottom: 2rem; /* Tailwind: mb-8 */
+            font-size: 2.5rem; /* text-4xl */
+            margin-bottom: 2rem; /* mb-8 */
             text-align: center;
-            color: #38bdf8; /* Light sky blue */
+            color: #38bdf8;
             text-shadow: 1px 1px #083344;
         }
         .card {
@@ -112,17 +112,17 @@
         }
         .accordion-button {
             background-color: #1e293b;
-            color: #7dd3fc; /* Default color for icon */
+            color: #7dd3fc;
             font-family: 'Rajdhani', sans-serif;
             font-weight: 600;
-            font-size: 1.1em; /* Base font size for the button */
+            font-size: 1.1em;
         }
         .accordion-button:hover {
             background-color: #334155;
         }
-        .accordion-button-text { /* Style for the text part of the accordion button */
-            font-weight: 700; /* Bolder */
-            color: #a5f3fc; /* Brighter cyan */
+        .accordion-button-text {
+            font-weight: 700;
+            color: #a5f3fc;
         }
         .accordion-content {
             max-height: 0;
@@ -140,10 +140,14 @@
         .accordion-content .text-xs { 
             color: #94a3b8; 
         }
-
-
         .accordion-button.active + .accordion-content {
             max-height: 1200px; 
+        }
+        .accordion-button.active {
+            background-color: #475569; 
+        }
+        .accordion-button.active i { 
+            color: #e0f2fe; 
         }
         .nav-link {
             transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -210,9 +214,14 @@
             border: 2px solid #0ea5e9; 
         }
         .access-info p {
-            margin-bottom: 0.5rem; /* Tailwind: mb-2 */
+            margin-bottom: 0.5rem; 
         }
-
+        .top-catchphrase {
+            font-family: 'Exo 2', sans-serif; 
+            text-shadow: 1px 1px 3px rgba(14, 165, 233, 0.5), -1px -1px 3px rgba(8, 47, 73, 0.5); 
+            letter-spacing: 0.05em; 
+            color: #67e8f9; 
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -249,15 +258,24 @@
     <main>
         <section class="top-info-section">
             <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-4xl mx-auto">
-                <p class="text-md md:text-lg mb-2 font-sans text-slate-100">［Otona Project 第六十三弾］演劇ユニット【爆走おとな小学生】第二十三回全校集会</p>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight main-title-font">
-                    "朗読×ACT"<br>『アイディール・セミナー<br>/Final session』
+                <p class="top-catchphrase text-2xl md:text-3xl font-bold mb-6">理想の自分に出会いませんか？</p>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight main-title-font">
+                    アイディール・セミナー<br>Final session
                 </h1>
+                
                 <p class="text-md md:text-lg text-slate-200 mb-3 font-sans">脚本・演出：加藤光大</p>
                 <p class="text-lg md:text-xl text-slate-100 mb-2 font-sans">2025年6月4日(水)～6月8日(日)</p>
-                <p class="text-md md:text-lg text-slate-100 mb-8 font-sans">こくみん共済 coop ホール／スペース・ゼロ 提携公演</p>
+                <p class="text-md md:text-lg text-slate-100 mb-4 font-sans">こくみん共済 coop ホール／スペース・ゼロ</p> 
+                
+                <p class="top-catchphrase text-2xl md:text-3xl font-bold my-8 leading-relaxed"> 
+                    自分の幸せを掴むためにはまず<br>
+                    勇気ある一歩が必要です。<br>
+                    さあ、貴方の人生が大きく変わります。
+                </p>
+
                 <a href="#ticket" class="btn-primary text-md md:text-lg inline-block">
-                    <i class="fas fa-ticket-alt mr-2"></i>チケット情報はこちら
+                    <i class="fas fa-ticket-alt mr-2"></i>今すぐ受講する
                 </a>
             </div>
         </section>
@@ -265,8 +283,13 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-16 md:space-y-24">
 
             <section id="flyer">
-                <div class="flyer-image-container max-w-2xl mx-auto">
-                    <img src="image/Ideal3_omote.png" alt="アイディール・セミナー フライヤー画像" class="flyer-image">
+                <div class="flyer-image-container max-w-4xl mx-auto flex flex-col md:flex-row md:items-start gap-8"> 
+                    <div class="w-full md:w-1/2">
+                        <img src="image/Ideal3_omote.png" alt="アイディール・セミナー フライヤー画像（表）" class="flyer-image">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="image/Ideal3_ura.png" alt="アイディール・セミナー フライヤー画像（裏）" class="flyer-image"> 
+                    </div>
                 </div>
             </section>
 
@@ -280,7 +303,7 @@
                         <span class="text-story-emphasis text-accent-cyan">アイディール・ヒーローズ</span>は、あなたの大切な人たちを守ります。<br>
                         安心してください。私たちは味方です。<br>
                         共に沢山の人たちを救いましょう。<br>
-                        何があっても、何に変えても、絶対に。
+                        <span class="font-semibold">何があっても、何に変えても、絶対に。</span>
                     </p>
                     <hr class="my-6 border-slate-600">
                     <p class="mb-4 leading-relaxed">
@@ -297,7 +320,7 @@
                     </p>
                     <p class="mb-4 font-bold text-xl text-center text-story-emphasis">大切な人を守るために。</p>
                     <p class="mb-6 font-bold text-2xl sm:text-3xl text-center text-accent-pink text-story-emphasis">ただ全てを、排除するだけ。</p>
-                    <p class="text-center text-xl sm:text-2xl font-bold p-4 rounded-md text-accent-pink text-story-emphasis">
+                    <p class="text-center text-lg sm:text-2xl font-bold p-4 rounded-md text-accent-pink text-story-emphasis"> 
                         『アイディール・セミナー』"FINAL"<br>
                         朗読×ACTの新感覚バトルエンターテイメント!!<br>
                         遂に完結!!
@@ -314,20 +337,25 @@
                             <li>小林愛香</li>
                             <li>緒方佑奈</li>
                             <li>結那</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>小泉遥香(超ときめき♡宣伝部)</li>
                             <li>松永あかね</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>山岸理子</li>
                             <li>鳴海まい／結木美咲</li>
                             <li>石田みなみ／岩田陽菜</li>
                             <li>渡部優衣／駒形友梨</li>
                             <li>福嶋晴菜／十二稜子</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>西本りみ／小日向美香</li>
                             <li>立石凛／阿部寿世</li>
                             <li>真野美月／紫月杏朱彩／小森結梨</li>
                             <li>汐入あすか／花岩香奈／宮白桃子</li>
                             <li>鈴木杏奈／小島菜々恵</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>小笠原仁／松岡侑李</li>
                             <li>宮﨑雅也／清水大登</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>正木郁</li>
                         </ul>
                     </div>
@@ -336,6 +364,7 @@
                         <ul class="space-y-1">
                             <li>赤坂麻凪／石井萌々果／篠原望</li>
                             <li>畑美紗起／小越春花／髙橋彩香／大澤萌々</li>
+                            <li class="h-0 pt-3"></li> 
                             <li>大橋篤／井川勇樹／加藤光大</li>
                         </ul>
                         <h4 class="text-xl font-semibold mt-4 mb-1 text-accent-cyan" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">〈おとな小学生〉</h4>
@@ -390,39 +419,52 @@
                             <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content p-4 border-t border-slate-600">
-                            <ul class="space-y-2 text-sm">
+                            <ul class="space-y-1 text-sm">
                                 <li><span class="schedule-cast-name">小林愛香:</span> 6/4(水), 6/7(土), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">緒方佑奈:</span> 6/5(木)</li>
                                 <li><span class="schedule-cast-name">結那:</span> 6/6(金)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">小泉遥香</span><span class="text-xs">(超ときめき♡宣伝部)</span>: 6/5(木), 6/6(金), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">松永あかね:</span> 6/4(水), 6/7(土)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">山岸理子:</span> 全セッション参加</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">結木美咲:</span> 6/4(水), 6/5(木), 6/6(金)</li>
                                 <li><span class="schedule-cast-name">鳴海まい:</span> 6/7(土), 6/8(日)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">石田みなみ:</span> 6/4(水), 6/5(木), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">岩田陽菜:</span> 6/6(金), 6/7(土)</li>
-                                <li><span class="schedule-cast-name">駒形友梨:</span> 6/4(水), 6/6(金), 6/8(日) <span class="text-xs">※5日は後日発表</span></li>
-                                <li><span class="schedule-cast-name">渡部優衣:</span> 6/7(土) <span class="text-xs">※5日は後日発表</span></li>
+                                <li class="h-0 pt-3"></li> 
+                                <li><span class="schedule-cast-name">駒形友梨:</span> 6/4(水), 6/6(金), 6/8(日)</li>
+                                <li><span class="schedule-cast-name">渡部優衣:</span> 6/5(木), 6/7(土)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">福嶋晴菜:</span> 6/4(水), 6/6(金), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">十二稜子:</span> 6/5(木), 6/7(土)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">西本りみ:</span> 6/4(水), 6/6(金), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">小日向美香:</span> 6/5(木), 6/7(土)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">阿部寿世:</span> 6/6(金), 6/7(土)</li>
                                 <li><span class="schedule-cast-name">立石凛:</span> 6/4(水), 6/5(木), 6/8(日)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">小森結梨:</span> 6/4(水), 6/5(木)</li>
                                 <li><span class="schedule-cast-name">紫月杏朱彩:</span> 6/6(金)</li>
                                 <li><span class="schedule-cast-name">真野美月:</span> 6/7(土), 6/8(日)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">宮白桃子:</span> 6/4(水), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">花岩香奈:</span> 6/5(木)</li>
                                 <li><span class="schedule-cast-name">汐入あすか:</span> 6/6(金), 6/7(土)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">小島菜々恵:</span> 6/4(水), 6/6(金), 6/7(土)</li>
                                 <li><span class="schedule-cast-name">鈴木杏奈:</span> 6/5(木), 6/8(日)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">小笠原仁:</span> 6/4(水), 6/7(土), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">松岡侑李:</span> 6/5(木), 6/6(金)</li>
-                                <li><span class="schedule-cast-name">宮﨑雅也:</span> 6/5(木), 6/7(土) <span class="text-xs">※4日は後日発表</span></li>
-                                <li><span class="schedule-cast-name">清水大登:</span> 6/6(金), 6/8(日) <span class="text-xs">※4日は後日発表</span></li>
+                                <li class="h-0 pt-3"></li> 
+                                <li><span class="schedule-cast-name">宮﨑雅也:</span> 6/4(水), 6/5(木), 6/7(土)</li>
+                                <li><span class="schedule-cast-name">清水大登:</span> 6/6(金), 6/8(日)</li>
+                                <li class="h-0 pt-3"></li> 
                                 <li><span class="schedule-cast-name">正木郁:</span> 全セッション参加</li>
-                                <li>他</li>
                             </ul>
                         </div>
                     </div>
@@ -432,7 +474,7 @@
             <section id="ticket">
                 <h2 class="section-title">TICKET</h2>
                 <div class="card">
-                    <h3 class="text-3xl font-bold mb-6 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット詳細》</h3>
+                    <h3 class="text-3xl font-bold mb-6 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット詳細》</h3>
                     <div class="space-y-4 mb-8">
                         <p><span class="font-bold text-xl text-sky-300">S席:</span> <span class="text-xl highlight">9,800円</span></p>
                         <p><span class="font-bold text-xl text-sky-300">A席:</span> <span class="text-xl highlight">7,800円</span> / <span class="font-bold text-sky-300">特典付A席:</span> <span class="text-xl highlight">8,800円</span></p>
@@ -440,13 +482,12 @@
                         <p class="text-xl">(最前中央席/各公演6席限定): <span class="font-bold text-3xl text-sky-200 highlight">36,666円</span></p>
                         <p class="text-sm mt-2">〈全席指定席/当日券500円増し〉 ※全て税込</p>
                     </div>
-
-                    <h3 class="text-3xl font-bold mb-4 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット販売日》</h3>
-                    <p class="text-center text-2xl font-bold text-accent-pink mb-8" style="font-family: 'Rajdhani', sans-serif;">【2025年5月8日(木)22:00時販売開始】</p>
+                    <h3 class="font-bold mb-4 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット販売日》</h3>
+                    <p class="text-center font-bold text-accent-pink mb-8 sm:text-2xl text-xl" style="font-family: 'Rajdhani', sans-serif;">【2025年5月8日(木)22:00時販売開始】</p>
                     
                     <div class="text-center mb-10">
                         <a href="http://confetti-web.com/@/otonapro-63" target="_blank" class="btn-primary text-xl inline-flex items-center">
-                            <i class="fas fa-shopping-cart mr-3"></i> チケット購入!!
+                            <i class="fas fa-shopping-cart mr-3"></i> 受講チケット購入
                         </a>
                         <p class="text-xs mt-3">※発売開始と同時にURLが有効となります。<br>※先着順/カンフェティの無料会員登録が必要です</p>
                     </div>
@@ -500,7 +541,7 @@
             <section id="message">
                  <h2 class="section-title">MESSAGE</h2>
                 <div class="card max-w-3xl mx-auto">
-                    <p class="text-center text-xl font-semibold mb-4 text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:600;">【本公演に興味をお持ちのお客様へ】</p>
+                    <p class="text-center font-semibold mb-4 text-sky-400 sm:text-xl text-lg" style="font-family: 'Exo 2', sans-serif; font-weight:600;">【本公演に興味をお持ちのお客様へ】</p>
                     <p class="leading-relaxed text-center text-lg">
                         本公演の観劇をする事によって<span class="text-accent-pink font-bold">貴方の人生が大きく変わります</span>。成功体験をする事により人生観の拡がり、
                         コミュニケーション力等、人間関係に必要な様々な能力の向上が望まれ、人生において大きな成果を上げることが出来ます。<br><br>
@@ -564,20 +605,17 @@
                 }
                 
                 const targetId = this.getAttribute('href');
-                // Handle cases where the target might be the flyer section if it's the first visible content
                 let targetElement;
-                if (targetId === "#" && this.closest("header")) { // Logo link
-                     targetElement = document.body; // Scroll to top
+                if (targetId === "#" && this.closest("header")) { 
+                     targetElement = document.body; 
                 } else {
                     targetElement = document.querySelector(targetId);
                 }
 
-
                 if (targetElement) {
                     let headerOffset = document.querySelector('header').offsetHeight;
-                    // If scrolling to the very top (e.g. via logo), no offset is needed
                     if (targetElement === document.body || (targetId === "#flyer-top" || targetId === "#flyer")) {
-                         headerOffset = 0; // Adjust if flyer is truly the top and header shouldn't offset
+                         headerOffset = 0; 
                     }
 
                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
@@ -595,16 +633,13 @@
         const accordionButtons = document.querySelectorAll('.accordion-button');
         accordionButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const currentlyActive = button.classList.contains('active');
+                button.classList.toggle('active'); 
                 
-                if (!currentlyActive) {
-                    button.classList.add('active');
-                    const icon = button.querySelector('i');
+                const icon = button.querySelector('i');
+                if (button.classList.contains('active')) {
                     icon.classList.remove('fa-chevron-down');
                     icon.classList.add('fa-chevron-up');
                 } else {
-                     button.classList.remove('active');
-                    const icon = button.querySelector('i');
                     icon.classList.remove('fa-chevron-up');
                     icon.classList.add('fa-chevron-down');
                 }
