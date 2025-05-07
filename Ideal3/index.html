@@ -15,7 +15,6 @@
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
         .top-info-section { 
-            /* background property removed to make it transparent against body gradient */
             padding-top: 8rem; /* Padding to account for fixed header and desired spacing */
             padding-bottom: 4rem; 
             display: flex;
@@ -113,13 +112,17 @@
         }
         .accordion-button {
             background-color: #1e293b;
-            color: #7dd3fc;
+            color: #7dd3fc; /* Default color for icon */
             font-family: 'Rajdhani', sans-serif;
             font-weight: 600;
-            font-size: 1.1em;
+            font-size: 1.1em; /* Base font size for the button */
         }
         .accordion-button:hover {
             background-color: #334155;
+        }
+        .accordion-button-text { /* Style for the text part of the accordion button */
+            font-weight: 700; /* Bolder */
+            color: #a5f3fc; /* Brighter cyan */
         }
         .accordion-content {
             max-height: 0;
@@ -127,11 +130,20 @@
             transition: max-height 0.3s ease-out;
             background-color: #0f172a; 
         }
-        .accordion-content ul li {
+        .accordion-content ul li { 
             color: #cbd5e1; 
         }
+         .accordion-content .schedule-cast-name { 
+            font-weight: bold;
+            color: #7dd3fc;
+        }
+        .accordion-content .text-xs { 
+            color: #94a3b8; 
+        }
+
+
         .accordion-button.active + .accordion-content {
-            max-height: 1000px;
+            max-height: 1200px; 
         }
         .nav-link {
             transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -153,10 +165,6 @@
         }
         #mobile-menu a {
             color: #e0f2fe; 
-        }
-        .schedule-cast-name { 
-            font-weight: bold;
-            color: #7dd3fc; 
         }
         .text-story-emphasis {
             font-family: 'Exo 2', sans-serif;
@@ -242,8 +250,9 @@
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 leading-tight main-title-font">
                     "朗読×ACT"<br>『アイディール・セミナー<span class="block md:inline">/Final session</span>』
                 </h1>
-                <p class="text-md md:text-lg text-slate-200 mb-6 font-sans">脚本・演出：加藤光大</p>
-                <p class="text-lg md:text-xl text-slate-100 mb-8 font-sans">2025年6月4日(水)～6月8日(日) @ こくみん共済 coop ホール／スペース・ゼロ</p>
+                <p class="text-md md:text-lg text-slate-200 mb-3 font-sans">脚本・演出：加藤光大</p>
+                <p class="text-lg md:text-xl text-slate-100 mb-2 font-sans">2025年6月4日(水)～6月8日(日)</p>
+                <p class="text-md md:text-lg text-slate-100 mb-8 font-sans">こくみん共済 coop ホール／スペース・ゼロ 提携公演</p>
                 <a href="#ticket" class="btn-primary text-md md:text-lg inline-block">
                     <i class="fas fa-ticket-alt mr-2"></i>チケット情報はこちら
                 </a>
@@ -374,7 +383,7 @@
                     <h3 class="text-2xl font-bold my-4 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">◇READING CAST SCHEDULE</h3>
                     <div class="accordion-item rounded-lg mb-2">
                         <button class="accordion-button w-full text-left p-4 font-semibold text-lg hover:bg-slate-700 transition duration-300 flex justify-between items-center">
-                            <span>キャスト別スケジュール詳細</span>
+                            <span class="accordion-button-text">キャスト別スケジュール詳細</span>
                             <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content p-4 border-t border-slate-600">
@@ -382,7 +391,7 @@
                                 <li><span class="schedule-cast-name">小林愛香:</span> 6/4(水), 6/7(土), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">緒方佑奈:</span> 6/5(木)</li>
                                 <li><span class="schedule-cast-name">結那:</span> 6/6(金)</li>
-                                <li><span class="schedule-cast-name">小泉遥香</span>(超ときめき♡宣伝部): 6/5(木), 6/6(金), 6/8(日)</li>
+                                <li><span class="schedule-cast-name">小泉遥香</span><span class="text-xs">(超ときめき♡宣伝部)</span>: 6/5(木), 6/6(金), 6/8(日)</li>
                                 <li><span class="schedule-cast-name">松永あかね:</span> 6/4(水), 6/7(土)</li>
                                 <li><span class="schedule-cast-name">山岸理子:</span> 全セッション参加</li>
                                 <li><span class="schedule-cast-name">結木美咲:</span> 6/4(水), 6/5(木), 6/6(金)</li>
@@ -469,7 +478,7 @@
                             </p>
                             <p class="text-xs mt-1">
                                 ※2.美容整体VIENESS池袋店 【全身美容整体＋小顔・骨盤矯正】60分コースチケット（有効期限あり）
-                                <a href="https://beauty.hotpepper.jp/kr/slnH000557005/" target="_blank" class="link-external">▪️美容整体VIENESS店舗情報</a>
+                                → <a href="https://beauty.hotpepper.jp/kr/slnH000557005/" target="_blank" class="link-external">美容整体VIENESS 店舗情報はこちら</a>
                             </p>
                         </div>
                         <div>
