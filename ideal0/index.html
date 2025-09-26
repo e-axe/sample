@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【爆走おとな小学生】第二十五回全校集会 『アイディール・セミナー/Prologue session』</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Inter:wght@400;700&family=Exo+2:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .top-info-section {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .main-title-font {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
+            text-shadow: 2px 2px #0ea5e9, -1px -1px #082f49;
+            color: #ffffff;
+        }
+        .section-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #38bdf8;
+            text-shadow: 1px 1px #083344;
+        }
+        .card {
+            background-color: rgba(30, 41, 59, 0.85);
+            border: 2px solid #0ea5e9;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+            backdrop-filter: blur(5px);
+            color: #e0f2fe;
+        }
+        .card p, .card li {
+             color: #e0f2fe;
+        }
+        .card .text-xs {
+            color: #cbd5e1;
+        }
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: #ffffff;
+            padding: 0.85rem 1.75rem;
+            border-radius: 0.5rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #0ea5e9;
+            box-shadow: 0px 0px 15px rgba(14, 165, 233, 0.6), inset 0px 0px 5px rgba(255,255,255,0.3);
+        }
+        .btn-primary:hover {
+            background-color: #06b6d4;
+            color: #f0f9ff;
+            box-shadow: 0px 0px 25px rgba(14, 165, 233, 0.8), inset 0px 0px 8px rgba(255,255,255,0.4);
+            transform: translateY(-2px);
+        }
+        .btn-disabled {
+            background-color: #475569;
+            color: #94a3b8;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .btn-disabled:hover {
+            background-color: #475569;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 0.75rem;
+            text-align: left;
+            color: #e0f2fe;
+        }
+        th {
+            background-color: #1e293b;
+            color: #7dd3fc;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        .highlight {
+            color: #ec4899;
+            font-weight: bold;
+        }
+        .text-accent-cyan {
+            color: #22d3ee;
+        }
+        .text-accent-pink {
+            color: #ff007f;
+        }
+        .cast-category {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #67e8f9;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #67e8f9;
+            padding-bottom: 0.35rem;
+        }
+        .accordion-button {
+            background-color: #1e293b;
+            color: #7dd3fc;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        .accordion-button:hover {
+            background-color: #334155;
+        }
+        .accordion-button-text {
+            font-weight: 700;
+            color: #a5f3fc;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #0f172a;
+        }
+        .accordion-content ul li {
+            color: #cbd5e1;
+        }
+         .accordion-content .schedule-cast-name {
+            font-weight: bold;
+            color: #7dd3fc;
+        }
+        .accordion-content .text-xs {
+            color: #94a3b8;
+        }
+        .accordion-button.active + .accordion-content {
+            max-height: 1200px;
+        }
+        .accordion-button.active {
+            background-color: #475569;
+        }
+        .accordion-button.active i {
+            color: #e0f2fe;
+        }
+        .nav-link {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #e0f2fe;
+        }
+        .nav-link:hover {
+            color: #7dd3fc;
+            text-shadow: 0 0 10px #7dd3fc;
+        }
+        header {
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+        }
+        #mobile-menu {
+             background-color: rgba(15, 23, 42, 0.95);
+        }
+        #mobile-menu a {
+            color: #e0f2fe;
+        }
+        .text-story-emphasis {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+        }
+        .link-external {
+            color: #67e8f9;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .link-external:hover {
+            color: #a5f3fc;
+        }
+        footer p {
+            color: #cbd5e1;
+        }
+        footer .text-sky-400 {
+            color: #38bdf8;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 2px solid #0ea5e9;
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+        }
+        .map-container iframe {
+            display: block;
+            width: 100%;
+        }
+        .flyer-image-container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .flyer-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+            border: 2px solid #0ea5e9;
+        }
+        .access-info p {
+            margin-bottom: 0.5rem;
+        }
+        .top-catchphrase {
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 1px 1px 3px rgba(14, 165, 233, 0.5), -1px -1px 3px rgba(8, 47, 73, 0.5);
+            letter-spacing: 0.05em;
+            color: #67e8f9;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed w-full z-50 shadow-2xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl md:text-2xl font-bold main-title-font tracking-wider">アイディール・セミナー/Prologue session</a>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#story" class="nav-link">あらすじ</a>
+                    <a href="#cast" class="nav-link">出演者</a>
+                    <a href="#schedule" class="nav-link">日程</a>
+                    <a href="#ticket" class="nav-link">チケット</a>
+                    <a href="#access" class="nav-link">劇場</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-100 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="#story" class="block py-3 px-4 text-sm hover:bg-slate-700 hover:text-sky-300">あらすじ</a>
+            <a href="#cast" class="block py-3 px-4 text-sm hover:bg-slate-700 hover:text-sky-300">出演者</a>
+            <a href="#schedule" class="block py-3 px-4 text-sm hover:bg-slate-700 hover:text-sky-300">日程</a>
+            <a href="#ticket" class="block py-3 px-4 text-sm hover:bg-slate-700 hover:text-sky-300">チケット</a>
+            <a href="#access" class="block py-3 px-4 text-sm hover:bg-slate-700 hover:text-sky-300">劇場</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="top-info-section">
+            <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-4xl mx-auto">
+                <p class="text-md text-slate-200 mb-3 font-sans">［Otona Project 第六十六弾］演劇ユニット【爆走おとな小学生】<br>第二十五回全校集会</p>
+
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight main-title-font">
+                    アイディール・セミナー<br>Prologue session
+                </h1>
+
+                <p class="text-md md:text-lg text-slate-200 mb-3 font-sans">脚本・演出：加藤光大</p>
+                <p class="text-lg md:text-xl text-slate-100 mb-2 font-sans">2025年12月4日(木)〜12月7日(日)</p>
+                <p class="text-md md:text-lg text-slate-100 mb-4 font-sans">東京ドームシティ シアターGロッソ</p>
+
+                <p class="top-catchphrase text-2xl md:text-3xl font-bold my-8 leading-relaxed">
+                    この扉を開けば、<br>あなたの人生が大きく変わる。
+                </p>
+
+                <a href="#ticket" class="btn-primary text-md md:text-lg inline-block">
+                    <i class="fas fa-ticket-alt mr-2"></i>チケット情報を確認する
+                </a>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-16 md:space-y-24">
+
+            <section id="flyer">
+                <div class="flyer-image-container max-w-4xl mx-auto flex flex-col md:flex-row md:items-start gap-8">
+                    <div class="w-full md:w-1/2">
+                        <img src="image/flyer_omote.png" alt="公演フライヤー画像（表）" class="flyer-image">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="image/flyer_ura.png" alt="公演フライヤー画像（裏）" class="flyer-image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="story">
+                <h2 class="section-title">STORY</h2>
+                <div class="card max-w-3xl mx-auto">
+                    <p class="mb-4 leading-relaxed">
+                        アイディールとは、具現化された自分の理想の存在。姿形は物理的に存在しているが、アイディールが発現している者にしか見えない。
+                    </p>
+                    <hr class="my-6 border-slate-600">
+                    <p class="mb-4 leading-relaxed">
+                        国立の大学に通う"城崎華恋"はプリンセスに憧れていた。裕福な家庭に生まれ、正にプリンセスのように優雅な生活をしていたのは小学3年生まで。
+                        父親の会社は倒産し、自己破産。突如貧相な暮らしへと急降下。人生の下剋上を狙う華恋は必死に勉学に励み、国立大学へと進学。
+                        将来有望なフィアンセを見つける為、血眼になってサークルに参加するも、冴えない男ばかりで中々お相手は見つからない。
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        そんなときにふと<span class="text-story-emphasis text-accent-cyan">「理想の自分に出逢いませんか？」</span>というチラシが目に入る。怪しげなチラシではあるが、何かを感じた華恋はそのまま指定された部室へと向かう。
+                        部室の扉には<span class="text-story-emphasis text-accent-pink">"この扉を開けば、あなたの人生が大きく変わる。"</span>と、より一層怪しい貼り紙が貼られていた。
+                        流石に怖くなって立ち去ろうと振り返ると、1人の男が立っていた。
+                    </p>
+                    <p class="mb-4 font-bold text-xl text-center text-story-emphasis">「アイディール・サークルへようこそ。」</p>
+                    <p class="mb-6 leading-relaxed">
+                        その男は、満面の笑みでそう言った。
+                    </p>
+                    <p class="mb-4 font-bold text-xl text-center text-story-emphasis">
+                        これは「アイディール・セミナー」<br>創始者吉澤隆司、大学時代の物語。
+                    </p>
+                    <hr class="my-6 border-slate-600">
+                    <p class="text-center text-sm sm:text-lg md:text-xl lg:text-2xl font-bold p-4 rounded-md text-accent-pink text-story-emphasis">
+                        『アイディール・セミナー』スピンオフ!!<br>
+                        朗読×ACTの新感覚バトルエンターテイメント!!<br>
+                        待望の第四弾!!
+                    </p>
+                </div>
+            </section>
+
+            <section id="cast">
+                <h2 class="section-title">CAST</h2>
+                 <h3 class="text-center text-2xl font-bold mb-6 text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《セミナー参加者》</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="cast-category">◇READING</h3>
+                        <ul class="space-y-1">
+                            <li>Coming Soon...</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="cast-category">◆ACTOR</h3>
+                        <ul class="space-y-1">
+                            <li>新谷姫加</li>
+                            <li>山岸理子</li>
+                            <li>篠原望</li>
+                            <li>石井萌々果</li>
+                            <li>小越春花</li>
+                            <li>松岡ななせ</li>
+                            <li>北野瑠華</li>
+                            <li>小山内花凜</li>
+                            <li>古仲可奈</li>
+                            <li class="h-0 pt-3"></li>
+                            <li>大橋篤</li>
+                            <li>井川勇樹</li>
+                            <li>加藤光大</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mt-4 mb-1 text-accent-cyan" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">〈おとな小学生〉</h4>
+                        <ul class="space-y-1">
+                            <li>石原美沙紀</li>
+                            <li>花塚廉太郎</li>
+                            <li>三島京華</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="cast-category">◆ENSEMBLE</h3>
+                        <ul class="space-y-1">
+                            <li>Coming Soon...</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="schedule">
+                <h2 class="section-title">SCHEDULE</h2>
+                <div class="card">
+                    <h3 class="text-3xl font-bold mb-4 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《セミナー開催日》</h3>
+                    <p class="text-center text-xl mb-6">2025年12月4日(木)〜7日(日) 全6ステージ</p>
+                    <div class="table-container mb-8">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>セッション</th>
+                                    <th>日時</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>① 第1セッション</td><td>12月4日(木) 19:00</td></tr>
+                                <tr><td>② 第2セッション</td><td>12月5日(金) 19:00</td></tr>
+                                <tr><td>③ 第3セッション</td><td>12月6日(土) 13:30</td></tr>
+                                <tr><td>④ 第4セッション</td><td>12月6日(土) 18:30</td></tr>
+                                <tr><td>⑤ 第5セッション</td><td>12月7日(日) 12:30</td></tr>
+                                <tr><td>⑥ 第6セッション</td><td>12月7日(日) 17:00</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-center mb-6"><span class="font-bold text-2xl text-accent-pink">◆ACTORは全セッション参加</span></p>
+
+                    <h3 class="text-2xl font-bold my-4 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">◇CAST SCHEDULE</h3>
+                    <div class="accordion-item rounded-lg mb-2">
+                        <button class="accordion-button w-full text-left p-4 font-semibold text-lg hover:bg-slate-700 transition duration-300 flex justify-between items-center">
+                            <span class="accordion-button-text">キャスト別スケジュール詳細</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-slate-600">
+                           <p>Coming Soon...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ticket">
+                <h2 class="section-title">TICKET</h2>
+                <div class="card">
+                    <h3 class="text-3xl font-bold mb-6 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット詳細》</h3>
+                    <div class="space-y-4 mb-8 text-center">
+                        <p class="text-xl">チケット料金・席種は後日発表いたします。</p>
+                        <p class="text-xl highlight font-bold">Coming Soon...</p>
+                    </div>
+
+                    <h3 class="font-bold mb-4 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット販売日》</h3>
+                    <p class="text-center font-bold text-accent-pink mb-8 sm:text-2xl text-xl" style="font-family: 'Rajdhani', sans-serif;">【販売開始までしばらくお待ちください】</p>
+
+                    <div class="text-center mb-10">
+                        <a href="#" class="btn-primary text-xl inline-flex items-center btn-disabled">
+                            <i class="fas fa-shopping-cart mr-3"></i> 現在準備中です
+                        </a>
+                        <p class="text-xs mt-3">※販売開始日時は後日発表いたします。</p>
+                    </div>
+
+                    <h3 class="text-2xl font-bold my-6 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット特典詳細》</h3>
+                    <div class="space-y-8 text-center">
+                         <p>各種チケット特典の詳細は、後日発表いたします。</p>
+                         <p class="text-xl highlight font-bold">Coming Soon...</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="message">
+                 <h2 class="section-title">MESSAGE</h2>
+                <div class="card max-w-3xl mx-auto">
+                    <p class="text-center font-semibold mb-4 text-sky-400 sm:text-xl text-lg" style="font-family: 'Exo 2', sans-serif; font-weight:600;">【本公演に興味をお持ちのお客様へ】</p>
+                    <p class="leading-relaxed text-center text-lg">
+                        本公演の観劇をする事によって<span class="text-accent-pink font-bold">貴方の人生が大きく変わります</span>。成功体験をする事により人生観の拡がり、
+                        コミュニケーション力等、人間関係に必要な様々な能力の向上が望まれ、人生において大きな成果を上げることが出来ます。<br><br>
+                        悩んでいる方はご安心下さい。<br>
+                        <span class="text-story-emphasis text-accent-cyan">アイディール・セミナー</span>は貴方の人生に華を添えます。<br>
+                        どうぞ勇気を持って一歩を踏み出し、我々と共に<span class="text-accent-pink font-bold">新しい人生をデザインしましょう</span>。
+                    </p>
+                </div>
+            </section>
+
+            <section id="access">
+                <h2 class="section-title">THEATER</h2>
+                <div class="card text-center">
+                    <h3 class="text-3xl font-bold mb-2 text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">東京ドームシティ シアターGロッソ</h3>
+                    <p class="text-lg mb-4">
+                        〒112-0004 東京都文京区後楽1-3-61
+                    </p>
+                    <div class="access-info my-4">
+                        <h4 class="font-bold text-xl text-sky-300 mb-2" style="font-family: 'Rajdhani', sans-serif; font-weight:600;">〈アクセス〉</h4>
+                        <p>JR「水道橋駅」東口 より徒歩3分</p>
+                        <p>都営地下鉄三田線「水道橋駅」A5出口 より徒歩3分</p>
+                        <p>東京メトロ丸ノ内線・南北線「後楽園駅」2番出口 より徒歩6分</p>
+                        <p>都営地下鉄大江戸線「春日駅」A1出口 より徒歩8分</p>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.73589945037!2d139.75024731525954!3d35.70817398018804!2m3!1f0!2f0!3f0!3m2!1i1024!i768!4f13.1!3m3!1m2!1s0x60188c49ba187f35%3A0x8b71822ab1d29752!2z44V744Ki44KBF-OCs-ODv-ODsyBDaXR5IOOCr-ODs-ODv-OCu-ODo-ODs-OCuA!5e0!3m2!1sja!2sjp!4v1622333444555!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="劇場アクセスGoogle Map"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 py-10 border-t-4 border-cyan-500">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2 text-xl font-semibold text-sky-400" style="font-family: 'Rajdhani', sans-serif; font-weight:600;">《企画・制作》</p>
+            <p class="mb-1">合同会社otonapro</p>
+            <p class="mb-4">爆走おとな小学生</p>
+            <p class="text-sm">© 2025 otonapro / 爆走おとな小学生. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                }
+
+                const targetId = this.getAttribute('href');
+                let targetElement;
+                if (targetId === "#" && this.closest("header")) {
+                     targetElement = document.body;
+                } else {
+                    targetElement = document.querySelector(targetId);
+                }
+
+                if (targetElement) {
+                    let headerOffset = document.querySelector('header').offsetHeight;
+                    if (targetElement === document.body || (targetId === "#flyer-top" || targetId === "#flyer")) {
+                         headerOffset = 0;
+                    }
+
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+
+                const icon = button.querySelector('i');
+                if (button.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
