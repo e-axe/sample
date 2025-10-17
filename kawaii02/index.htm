@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライブ×リーディング『KAWAII偶像パラドキシカル2』</title>
+    <style>
+        /* * Base Style (Reset & Typography)
+         * Design Concept: Rich, Luxurious, Art Nouveau
+         * Key Colors: Sage Green, Magenta Pink, Cream, Gold Accents
+        */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@600;800&display=swap');
+
+        :root {
+            --font-serif: 'Shippori Mincho', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --color-text: #2c2c2c;
+            --color-bg: #fdfaf3;
+            --color-bg-light: rgba(255, 255, 255, 0.8);
+            --color-sage-green: #5a6a53;
+            --color-muted-grey: #888888;
+            --color-accent-pink: #e5007f;
+            --color-border: #d1c4b2;
+            --color-gold-glow: rgba(230, 197, 108, 0.5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            background-image: 
+                radial-gradient(circle at top, rgba(245, 233, 233, 0.6), transparent 50%),
+                radial-gradient(circle at bottom, rgba(233, 239, 245, 0.5), transparent 50%),
+                url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 800;
+            margin-top: 0;
+            letter-spacing: 0.1em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--color-sage-green);
+            padding-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* アール・ヌーヴォー風の見出し装飾 */
+        h2::before,
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 80px;
+            opacity: 0.7;
+        }
+        h2::before {
+            left: 50%;
+            transform: translateX(calc(-50% - 60px));
+            background: linear-gradient(90deg, transparent, var(--color-muted-grey));
+        }
+        h2::after {
+            right: 50%;
+            transform: translateX(calc(50% + 60px));
+            background: linear-gradient(-90deg, transparent, var(--color-sage-green));
+        }
+        h2 .section-subtitle {
+            display: block;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-muted-grey);
+            letter-spacing: 0.05em;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        a {
+            color: var(--color-sage-green);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: var(--color-accent-pink);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: 40px 0;
+            position: relative;
+        }
+        /* セクション区切りデザイン */
+        section:not(:first-of-type)::before {
+            content: '＊';
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            color: var(--color-sage-green);
+            opacity: 0.3;
+            margin-bottom: 40px;
+        }
+
+        /* * Navigation Bar */
+        .navbar {
+            background-color: rgba(253, 250, 243, 0.85);
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--color-border);
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--color-sage-green);
+            text-decoration: none;
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            padding: 10px 15px;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--color-accent-pink);
+        }
+
+        /* * Main Visual
+        */
+        .main-visual {
+            text-align: center;
+            padding: 60px 20px 60px;
+        }
+        .flyer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .main-visual .flyer-img {
+            max-width: 100%;
+            width: 350px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .main-visual .flyer-img:hover {
+            transform: scale(1.03);
+        }
+
+        .main-title {
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+        .main-title .organizer-name {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--color-text);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+        .main-title .subtitle {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--color-text);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .main-title .main-event-title {
+            display: block;
+            font-size: 2.8rem;
+            color: var(--color-text);
+        }
+
+        .performance-info {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .performance-info p {
+            margin: 5px 0;
+        }
+        .staff-info-main {
+            font-size: 1rem;
+            color: var(--color-text);
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            padding: 15px 25px;
+            border-radius: 5px;
+            background-color: var(--color-bg-light);
+        }
+        .staff-info-main p {
+            margin: 0;
+        }
+        .staff-info-main span {
+            font-weight: 700;
+            color: var(--color-sage-green);
+            margin-right: 0.5em;
+        }
+
+
+        /* * Story (あらすじ)
+        */
+        .story-box {
+            background-color: var(--color-bg-light);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--color-border);
+            border-left: 5px solid var(--color-sage-green);
+            border-right: 5px solid var(--color-muted-grey);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            backdrop-filter: blur(5px);
+        }
+        .story-box p {
+            line-height: 2.2;
+            text-align: justify;
+        }
+        .story-box .emphasis-text {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--color-accent-pink);
+        }
+        .story-box .highlight {
+            font-family: var(--font-serif);
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--color-sage-green);
+            display: block;
+            text-align: center;
+            margin: 30px 0 10px;
+            letter-spacing: 0.1em;
+        }
+
+        /* * Cast
+        */
+        .cast-grouping {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2.2;
+        }
+        .cast-grouping p {
+            margin-bottom: 2em;
+        }
+        .cast-note {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--color-muted-grey);
+        }
+
+        /* * Schedule (日程)
+        */
+        .schedule-table, .cast-schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .schedule-table th, .schedule-table td,
+        .cast-schedule-table th, .cast-schedule-table td {
+            border: 1px solid var(--color-border);
+            padding: 12px 15px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .schedule-table th, .cast-schedule-table th {
+            background-color: #edeae1;
+            color: var(--color-sage-green);
+            font-weight: 700;
+        }
+        .cast-schedule-table tbody tr:nth-child(odd) {
+             background-color: rgba(255,255,255,0.6);
+        }
+        .cast-schedule-table tbody tr:hover {
+            background-color: rgba(138, 154, 131, 0.1);
+        }
+        .schedule-table .stage,
+        .schedule-table .time {
+            font-weight: 700;
+        }
+
+        .cast-schedule-table td:first-child {
+            font-weight: 700;
+            color: var(--color-text);
+            text-align: left;
+            padding-left: 20px;
+        }
+        .schedule-table td:first-child {
+             font-weight: 700;
+             color: var(--color-text);
+             width: 25%;
+        }
+        .schedule-table .time {
+            font-size: 1.2rem;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            position: relative;
+            background-color: var(--color-bg-light);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+         /* For browsers that support it, add a scrollbar style */
+        .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+        .table-wrapper::-webkit-scrollbar-track {
+            background: #fff;
+        }
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: var(--color-sage-green);
+            border-radius: 4px;
+        }
+        
+        .note {
+            font-size: 0.9rem;
+            color: var(--color-muted-grey);
+            background-color: var(--color-bg-light);
+            padding: 15px;
+            border-radius: 5px;
+            line-height: 1.7;
+            border: 1px solid var(--color-border);
+        }
+        .note a:hover {
+            color: var(--color-accent-pink);
+        }
+
+        /* * Ticket
+        */
+        .ticket-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .ticket-item {
+            background-color: var(--color-bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            border-top: 4px solid;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .ticket-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .ticket-item.s-seat { border-color: var(--color-sage-green); }
+        .ticket-item.a-seat { border-color: var(--color-muted-grey); }
+
+        .ticket-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+        .ticket-item .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-sage-green);
+            margin-bottom: 20px;
+        }
+        .ticket-item .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text);
+        }
+        .ticket-item .features {
+            list-style: none;
+            padding-left: 0;
+        }
+        .ticket-item .features li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .ticket-item.s-seat .features li::before {
+            content: '＊';
+            position: absolute;
+            left: 0;
+            color: var(--color-sage-green);
+            font-weight: 700;
+        }
+        .ticket-item.a-seat .features li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
+            color: var(--color-muted-grey);
+            font-weight: 700;
+        }
+
+        .ticket-release {
+            text-align: center;
+            font-size: 2rem;
+            font-family: var(--font-serif);
+            color: #fff;
+            letter-spacing: 0.1em;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(45deg, var(--color-accent-pink), #ff66a3);
+            border-radius: 10px;
+            border: none;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(229, 0, 127, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .ticket-release:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(229, 0, 127, 0.4);
+        }
+        
+        /* * Access & Contact
+        */
+        .access-info {
+            text-align: center;
+        }
+        .access-info .theater-name {
+            font-size: 1.8rem;
+            font-family: var(--font-serif);
+            color: var(--color-text);
+            margin-bottom: 20px;
+        }
+        .map-container {
+            width: 100%;
+            border: 2px solid var(--color-border);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        .contact-info {
+            text-align: center;
+            background-color: var(--color-bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            margin-top: 50px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+        .contact-info .email {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-sage-green);
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        /* * Footer
+        */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #edeae1;
+            color: var(--color-muted-grey);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* * Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* * Image Modal (Lightbox) */
+        .image-modal {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 85%;
+            max-height: 85vh;
+        }
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+
+        /* * Responsive Design
+        */
+        @media (max-width: 768px) {
+            body { font-size: 15px; }
+            .container { width: 95%; padding: 20px 10px; }
+            h2 { font-size: 2rem; }
+            .main-title .main-event-title { font-size: 2.2rem; }
+            .main-title .organizer-name, .main-title .subtitle { font-size: 1rem; }
+            .schedule-table, .cast-schedule-table { font-size: 0.9rem; }
+            .schedule-table th, .schedule-table td,
+            .cast-schedule-table th, .cast-schedule-table td { padding: 10px 8px; }
+            .cast-schedule-table tbody td:first-child { padding-left: 10px; }
+            .nav-links { gap: 5px; }
+            .nav-links a { font-size: 0.9rem; padding: 8px 10px; }
+            .flyer-container {
+                gap: 20px;
+            }
+            .main-visual .flyer-img {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#story">Story</a></li>
+            <li><a href="#cast">Cast</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#ticket">Ticket</a></li>
+            <li><a href="#access">Access</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- メインビジュアル & 公演概要 -->
+        <section class="main-visual">
+            <div class="flyer-container fade-in">
+                <img src="Image/kawaii02_omote.png" alt="KAWAII偶像パラドキシカル2 フライヤー 表" class="flyer-img">
+                <img src="Image/kawaii02_ura.png" alt="KAWAII偶像パラドキシカル2 フライヤー 裏" class="flyer-img">
+            </div>
+            
+            <h1 class="main-title fade-in">
+                <span class="organizer-name">演劇ユニット【メイホリック】×【Kawaii Party！】メイホリックシアター20</span>
+                <span class="subtitle">ライブ×リーディング</span>
+                <span class="main-event-title">『KAWAII偶像パラドキシカル2』</span>
+            </h1>
+
+            <div class="performance-info fade-in">
+                <p>２０２５年１１月１３日（木）～１１月１６日（日）</p>
+                <p>東京ドームシティ シアターGロッソ</p>
+            </div>
+             <div class="staff-info-main fade-in">
+                <p><span>脚本:</span> 福緒唯</p>
+                <p><span>総合演出:</span> 加藤光大</p>
+                <p><span>演出:</span> 髙木悠慎</p>
+                <p><span>プロデュース:</span> 岡本芽子（メイホリック）</p>
+            </div>
+        </section>
+
+        <!-- あらすじ -->
+        <section id="story" class="fade-in">
+            <div class="container">
+                <h2>
+                    Story
+                    <span class="section-subtitle">あらすじ</span>
+                </h2>
+                <div class="story-box">
+                    <p><span class="emphasis-text">「あなたたちは死にました」</span><br>
+                    神にそう告げられたのは１１人の少女たち。<br>
+                    しかし、神が見守る箱庭でアイドルとして活動し、<br>
+                    自身の転生に必要なエネルギーを信仰心というかたちで集めれば<br>
+                    第二の人生を送ることができるようになるという。</p>
+                    <p>少女たちは神の提案に応じ、これまでの名を捨て<br>
+                    神に与えられた名でアイドルとして新たな一歩を踏み出すことにした。</p>
+                    <p><span class="emphasis-text">《GO！5！クレッシェンド》《ReBells》</span><br>
+                    そして、彼女たちの先輩である<span class="emphasis-text">《ステラレラール》</span><br>
+                    アイドルとして生きるなかで少女たちは、アイドルという存在の持つパワーに気づいた。</p>
+                    <p><span class="emphasis-text">──しかし、神は真実を隠していた。</span><br>
+                    転生するためなんて、嘘。<br>
+                    神はアイドルたちが生み出す力を箱庭を維持するために使っていたのである。<br>
+                    アイドルが嫌いだから。……そう言って、神は微笑んだ。</p>
+                    <p>神に自分たちを認めさせるため、少女たちは神に自らの歌声をぶつける。<br>
+                    ラスト一曲、アイドルたちは神にも手が届くパフォーマンスをした。<br>
+                    その結果、神の怒りに触れ 《GO！5！クレッシェンド》は捕えられてしまう。</p>
+                    <p>《ReBells》と《ステラレラール》は《GO！5！クレッシェンド》を救うための<br>
+                    手掛かりが始祖アイドルにあると信じ、彼女らを復活させようとする。</p>
+                    <p>一報その頃、 《GO！5！クレッシェンド》は神が抱える悲しみに触れていた。</p>
+                    <p>神はなぜこの世界にアイドルを生み、アイドルを憎むのか。<br>
+                    アイドルとはいったい……なんなのか。</p>
+                    <p>これは神と偶像が手を取るＬＩＶＥ。<br>
+                    心の慟哭は歌声になる。己の体すべてをつかって貴方に届ける。</p>
+                    <p class="highlight">新感覚LIVE×Readingエンターテインメント、開幕。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 出演者 -->
+        <section id="cast" class="fade-in">
+            <div class="container">
+                <h2>
+                    Cast
+                    <span class="section-subtitle">出演者</span>
+                </h2>
+                <div class="cast-grouping">
+                    <p>佐々木琴子</p>
+                    <p>真山りか（私立恵比寿中学）<br>
+                    鷲見友美ジェナ</p>
+                    <p>飯塚麻結／篠原望<br>
+                    原田彩楓／和泉芳怜<br>
+                    中川梨花／石田みなみ<br>
+                    本郷柚巴／小森結梨<br>
+                    中澤ミナ／各務華梨</p>
+                    <p>西尾夕香／宮﨑想乃<br>
+                    真野美月／紫月杏朱彩<br>
+                    天麻ゆうき／三島京華<br>
+                    阿部寿世<br>
+                    花谷麻妃／白石真菜<br>
+                    豆咲りお</p>
+                    <p>佐倉薫／間島和奏<br>
+                    厚木那奈美／吉武千颯<br>
+                    武田智加／小島菜々恵<br>
+                    月城莉奈／宮内桃子<br>
+                    三葉海緒</p>
+                    <p>あわつまい／日高里緒<br>
+                    堺萌香／夏目妃菜<br>
+                    渡瀬結月／高畑結希<br>
+                    湯本亜美／夏目綾<br>
+                    山田美鈴／佐東美波<br>
+                    和久野愛佳／日比優理香</p>
+                    <p>生田輝／小日向美香／末吉咲子</p>
+                    <p>石原美沙紀<br>
+                    岡本芽子（メイホリック）</p>
+                    <p>他,</p>
+                </div>
+                <p class="cast-note">※一部ダブルキャスト制にて公演いたします。</p>
+            </div>
+        </section>
+
+        <!-- 公演日程 -->
+        <section id="schedule" class="fade-in">
+            <div class="container">
+                <h2>
+                    Schedule
+                    <span class="section-subtitle">公演日程</span>
+                </h2>
+
+                <h3 style="text-align:center; margin-bottom: 20px;">タイムテーブル</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>日程</th>
+                            <th>ステージ</th>
+                            <th>開演時間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>１１月１３日（木）</td>
+                            <td class="stage">本番①</td>
+                            <td class="time">１９：００</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">１１月１４日（金）</td>
+                            <td class="stage">本番②</td>
+                            <td class="time">１４：００</td>
+                        </tr>
+                        <tr>
+                            <td class="stage">本番③</td>
+                            <td class="time">１９：００</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">１１月１５日（土）</td>
+                            <td class="stage">本番④</td>
+                            <td class="time">１３：３０</td>
+                        </tr>
+                        <tr>
+                            <td class="stage">本番⑤</td>
+                            <td class="time">１８：３０</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">１１月１６日（日）</td>
+                            <td class="stage">本番⑥</td>
+                            <td class="time">１２：３０</td>
+                        </tr>
+                        <tr>
+                            <td class="stage">本番⑦</td>
+                            <td class="time">１７：００</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">
+                    ※初日公演日を、続編発表時のご案内より上記の通り変更させていただいております。<br>
+                    ※公演時間に変更がある可能性がございます。変更の際は、<a href="https://x.com/mayholictheater/" target="_blank" rel="noopener noreferrer">公式X</a>にてご案内いたします。
+                </p>
+
+                <h3 style="margin-top: 50px; text-align: center; margin-bottom: 20px;">キャスト出演日程</h3>
+                <div class="table-wrapper">
+                    <table class="cast-schedule-table">
+                        <thead>
+                            <tr>
+                                <th>キャスト名</th>
+                                <th>①</th>
+                                <th>②</th>
+                                <th>③</th>
+                                <th>④</th>
+                                <th>⑤</th>
+                                <th>⑥</th>
+                                <th>⑦</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>佐々木琴子</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>真山りか</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>鷲見友美ジェナ</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>飯塚麻結</td><td>●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>篠原望</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>原田彩楓</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>和泉芳怜</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>中川梨花</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>石田みなみ</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>本郷柚巴</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>小森結梨</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>中澤ミナ</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>各務華梨</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>西尾夕香</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>宮﨑想乃</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>真野美月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>紫月杏朱彩</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>天麻ゆうき</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>三島京華</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>阿部寿世</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>花谷麻妃</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>白石真菜</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>豆咲りお</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>佐倉薫</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>間島和奏</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>武田智加</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>小島菜々恵</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>月城莉奈</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>宮内桃子</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>厚木那奈美</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>吉武千颯</td><td>●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>三葉海緒</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>あわつまい</td><td></td><td></td><td>●</td><td>●</td><td>●</td><td></td><td>●</td></tr>
+                            <tr><td>日高里緒</td><td>●</td><td>●</td><td></td><td></td><td></td><td>●</td><td></td></tr>
+                            <tr><td>渡瀬結月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>高畑結希</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>堺萌香</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>夏目妃菜</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>山田美鈴</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>佐東美波</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>湯本亜美</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>夏目綾</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>和久野愛佳</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>日比優理香</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>生田輝</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>小日向美香</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>末吉咲子</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>石原美沙紀</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>岡本芽子</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>他,</td><td colspan="7">Coming soon</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- チケット -->
+        <section id="ticket" class="fade-in">
+            <div class="container">
+                <h2>
+                    Ticket
+                    <span class="section-subtitle">チケット</span>
+                </h2>
+                
+                <div class="ticket-grid">
+                    <div class="ticket-item s-seat">
+                        <h3>S席</h3>
+                        <div class="price">11,000円 <span>（税込）</span></div>
+                        <ul class="features">
+                            <li>前方列保証</li>
+                            <li>非売品2L版ブロマイド1枚</li>
+                            <li>公演毎に特典ブロマイドは絵柄が異なります。(出演回数分ご用意しております)</li>
+                            <li>佐々木琴子さんのみ、日毎に特典ブロマイドの絵柄が異なります。（全4種類ご用意しております）</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-item a-seat">
+                        <h3>特典付A席</h3>
+                        <div class="price">9,800円 <span>（税込）</span></div>
+                        <ul class="features">
+                            <li>非売品2L版ブロマイド1枚のみ<br>（ブロマイドの種類はS席特典と同じ）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ticket-item a-seat">
+                        <h3>A席</h3>
+                        <div class="price">8,800円 <span>（税込）</span></div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 20px;">
+                    （全席指定席 / 当日券500円増し）<br>
+                    ※全て税込
+                </p>
+
+                <h3 style="text-align: center; margin-top: 50px; font-family: var(--font-serif);">チケット発売日</h3>
+                <div class="ticket-release">
+                    Coming soon…!
+                </div>
+            </div>
+        </section>
+        
+        <!-- 劇場 -->
+        <section id="access" class="fade-in">
+            <div class="container access-info">
+                <h2>
+                    Access
+                    <span class="section-subtitle">劇場</span>
+                </h2>
+                <p class="theater-name">東京ドームシティ シアターGロッソ</p>
+                <div class="map-container">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7515667152595!3d35.7045359801889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44Vb44OK44Kk44Ki44K_44O844K544OG44Kj44O8IEctUm9zc28!5e0!3m2!1sja!2sjp!4v1668574312345!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div id="contact" class="contact-info">
+                    <h3 style="font-size: 1.5rem; color: var(--color-muted-grey); margin-bottom: 20px;">お問い合わせ</h3>
+                    <a href="mailto:mayholic20209@gmail.com" class="email">mayholic20209@gmail.com</a>
+                    <p>折り返しのメールが受信できるように、<br>ドメイン指定受信で「gmail.com」を許可するように設定してください。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>〔企画・制作〕 メイホリック</p>
+        <p>&copy; 2025 MEIHOLIC</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+
+    <script>
+        // Simple fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Image Modal Logic
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var images = document.getElementsByClassName("flyer-img");
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+        var span = document.getElementsByClassName("modal-close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
