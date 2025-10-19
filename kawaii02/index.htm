@@ -170,6 +170,11 @@
             text-align: center;
             padding: 60px 20px 60px;
         }
+        .main-logo {
+            max-width: 100%;
+            width: 550px;
+            margin-bottom: 40px;
+        }
         .flyer-container {
             display: flex;
             justify-content: center;
@@ -246,6 +251,10 @@
             color: var(--color-sage-green);
             margin-right: 0.5em;
         }
+        .staff-info-main .affiliation {
+            font-size: 0.65em;
+            vertical-align: middle;
+        }
 
 
         /* * Story (あらすじ)
@@ -307,15 +316,25 @@
         .schedule-table th, .schedule-table td,
         .cast-schedule-table th, .cast-schedule-table td {
             border: 1px solid var(--color-border);
-            padding: 12px 15px;
+            padding: 12px 5px;
             text-align: center;
-            white-space: nowrap;
         }
         .schedule-table th, .cast-schedule-table th {
             background-color: #edeae1;
             color: var(--color-sage-green);
             font-weight: 700;
         }
+        .cast-schedule-table th {
+            font-size: 1.1rem;
+            vertical-align: middle;
+        }
+        .cast-schedule-table .datetime {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: normal;
+            margin-top: 4px;
+        }
+
         .cast-schedule-table tbody tr:nth-child(odd) {
              background-color: rgba(255,255,255,0.6);
         }
@@ -342,7 +361,6 @@
             font-size: 1.2rem;
         }
         .table-wrapper {
-            overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             border: 1px solid var(--color-border);
             border-radius: 5px;
@@ -350,7 +368,6 @@
             background-color: var(--color-bg-light);
             box-shadow: 0 5px 25px rgba(0,0,0,0.07);
         }
-         /* For browsers that support it, add a scrollbar style */
         .table-wrapper::-webkit-scrollbar {
             height: 8px;
         }
@@ -360,6 +377,25 @@
         .table-wrapper::-webkit-scrollbar-thumb {
             background-color: var(--color-sage-green);
             border-radius: 4px;
+        }
+
+        /* 中間ヘッダー行のスタイル */
+        /* <!-- 変更箇所 --> 中間ヘッダーのセル(td)に直接背景色を指定するように修正 */
+        .cast-schedule-table tbody tr.intermediate-header td {
+            background-color: #edeae1;
+            color: var(--color-sage-green);
+            font-weight: 700;
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+        .cast-schedule-table tbody tr.intermediate-header:hover td {
+            background-color: #edeae1;
+        }
+        .cast-schedule-table tbody tr.intermediate-header td:first-child {
+             font-weight: 700;
+             color: var(--color-sage-green);
+             text-align: center;
+             padding-left: 5px;
         }
         
         .note {
@@ -570,10 +606,10 @@
             h2 { font-size: 2rem; }
             .main-title .main-event-title { font-size: 2.2rem; }
             .main-title .organizer-name, .main-title .subtitle { font-size: 1rem; }
-            .schedule-table, .cast-schedule-table { font-size: 0.9rem; }
+            .schedule-table, .cast-schedule-table { font-size: 0.85rem; }
             .schedule-table th, .schedule-table td,
-            .cast-schedule-table th, .cast-schedule-table td { padding: 10px 8px; }
-            .cast-schedule-table tbody td:first-child { padding-left: 10px; }
+            .cast-schedule-table th, .cast-schedule-table td { padding: 10px 4px; }
+            .cast-schedule-table td:first-child { padding-left: 8px; }
             .nav-links { gap: 5px; }
             .nav-links a { font-size: 0.9rem; padding: 8px 10px; }
             .flyer-container {
@@ -581,6 +617,9 @@
             }
             .main-visual .flyer-img {
                 width: 100%;
+            }
+            .main-logo {
+                width: 90%;
             }
         }
 
@@ -602,6 +641,8 @@
     <main>
         <!-- メインビジュアル & 公演概要 -->
         <section class="main-visual">
+            <img src="Image/kawaii02_logo2.png" alt="KAWAII偶像パラドキシカル2 ロゴ" class="main-logo fade-in">
+
             <div class="flyer-container fade-in">
                 <img src="Image/kawaii02_omote.png" alt="KAWAII偶像パラドキシカル2 フライヤー 表" class="flyer-img">
                 <img src="Image/kawaii02_ura.png" alt="KAWAII偶像パラドキシカル2 フライヤー 裏" class="flyer-img">
@@ -614,14 +655,14 @@
             </h1>
 
             <div class="performance-info fade-in">
-                <p>２０２５年１１月１３日（木）～１１月１６日（日）</p>
+                <p>2025.11.13 thu - 11.16 sun</p>
                 <p>東京ドームシティ シアターGロッソ</p>
             </div>
              <div class="staff-info-main fade-in">
                 <p><span>脚本:</span> 福緒唯</p>
                 <p><span>総合演出:</span> 加藤光大</p>
                 <p><span>演出:</span> 髙木悠慎</p>
-                <p><span>プロデュース:</span> 岡本芽子（メイホリック）</p>
+                <p><span>プロデュース:</span> 岡本芽子<span class="affiliation">（メイホリック）</span></p>
             </div>
         </section>
 
@@ -767,13 +808,13 @@
                         <thead>
                             <tr>
                                 <th>キャスト名</th>
-                                <th>①</th>
-                                <th>②</th>
-                                <th>③</th>
-                                <th>④</th>
-                                <th>⑤</th>
-                                <th>⑥</th>
-                                <th>⑦</th>
+                                <th>①<span class="datetime">11/13(木)<br>19:00</span></th>
+                                <th>②<span class="datetime">11/14(金)<br>14:00</span></th>
+                                <th>③<span class="datetime">11/14(金)<br>19:00</span></th>
+                                <th>④<span class="datetime">11/15(土)<br>13:30</span></th>
+                                <th>⑤<span class="datetime">11/15(土)<br>18:30</span></th>
+                                <th>⑥<span class="datetime">11/16(日)<br>12:30</span></th>
+                                <th>⑦<span class="datetime">11/16(日)<br>17:00</span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -790,6 +831,16 @@
                             <tr><td>小森結梨</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>中澤ミナ</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>各務華梨</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr class="intermediate-header">
+                                <td>キャスト名</td>
+                                <td>①<span class="datetime">11/13(木)<br>19:00</span></td>
+                                <td>②<span class="datetime">11/14(金)<br>14:00</span></td>
+                                <td>③<span class="datetime">11/14(金)<br>19:00</span></td>
+                                <td>④<span class="datetime">11/15(土)<br>13:30</span></td>
+                                <td>⑤<span class="datetime">11/15(土)<br>18:30</span></td>
+                                <td>⑥<span class="datetime">11/16(日)<br>12:30</span></td>
+                                <td>⑦<span class="datetime">11/16(日)<br>17:00</span></td>
+                            </tr>
                             <tr><td>西尾夕香</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>宮﨑想乃</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>真野美月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
@@ -800,6 +851,16 @@
                             <tr><td>花谷麻妃</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>白石真菜</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>豆咲りお</td><td colspan="7">Coming soon</td></tr>
+                            <tr class="intermediate-header">
+                                <td>キャスト名</td>
+                                <td>①<span class="datetime">11/13(木)<br>19:00</span></td>
+                                <td>②<span class="datetime">11/14(金)<br>14:00</span></td>
+                                <td>③<span class="datetime">11/14(金)<br>19:00</span></td>
+                                <td>④<span class="datetime">11/15(土)<br>13:30</span></td>
+                                <td>⑤<span class="datetime">11/15(土)<br>18:30</span></td>
+                                <td>⑥<span class="datetime">11/16(日)<br>12:30</span></td>
+                                <td>⑦<span class="datetime">11/16(日)<br>17:00</span></td>
+                            </tr>
                             <tr><td>佐倉薫</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>間島和奏</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>武田智加</td><td colspan="7">Coming soon</td></tr>
@@ -809,6 +870,16 @@
                             <tr><td>厚木那奈美</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>吉武千颯</td><td>●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                             <tr><td>三葉海緒</td><td colspan="7">Coming soon</td></tr>
+                            <tr class="intermediate-header">
+                                <td>キャスト名</td>
+                                <td>①<span class="datetime">11/13(木)<br>19:00</span></td>
+                                <td>②<span class="datetime">11/14(金)<br>14:00</span></td>
+                                <td>③<span class="datetime">11/14(金)<br>19:00</span></td>
+                                <td>④<span class="datetime">11/15(土)<br>13:30</span></td>
+                                <td>⑤<span class="datetime">11/15(土)<br>18:30</span></td>
+                                <td>⑥<span class="datetime">11/16(日)<br>12:30</span></td>
+                                <td>⑦<span class="datetime">11/16(日)<br>17:00</span></td>
+                            </tr>
                             <tr><td>あわつまい</td><td></td><td></td><td>●</td><td>●</td><td>●</td><td></td><td>●</td></tr>
                             <tr><td>日高里緒</td><td>●</td><td>●</td><td></td><td></td><td></td><td>●</td><td></td></tr>
                             <tr><td>渡瀬結月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
@@ -888,7 +959,10 @@
                 </h2>
                 <p class="theater-name">東京ドームシティ シアターGロッソ</p>
                 <div class="map-container">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7515667152595!3d35.7045359801889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44Vb44OK44Kk44Ki44K_44O844K544OG44Kj44O8IEctUm9zc28!5e0!3m2!1sja!2sjp!4v1668574312345!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <!-- 変更箇所 -->
+                   <!-- 地図の埋め込みコードを更新 -->
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7541416!3d35.704535899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44K344Ki44K_44O877yn44Ot44OD44K9!5e0!3m2!1sja!2sjp!4v1760863842188!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <!-- 変更ここまで -->
                 </div>
 
                 <div id="contact" class="contact-info">
@@ -958,4 +1032,3 @@
 
 </body>
 </html>
-
