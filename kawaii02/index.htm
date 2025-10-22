@@ -8,7 +8,7 @@
         /* * Base Style (Reset & Typography)
          * Design Concept: Rich, Luxurious, Art Nouveau
          * Key Colors: Sage Green, Magenta Pink, Cream, Gold Accents
-        */
+         */
         
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@600;800&display=swap');
 
@@ -165,7 +165,7 @@
         }
 
         /* * Main Visual
-        */
+         */
         .main-visual {
             text-align: center;
             padding: 60px 20px 60px;
@@ -258,7 +258,7 @@
 
 
         /* * Story (あらすじ)
-        */
+         */
         .story-box {
             background-color: var(--color-bg-light);
             padding: 40px;
@@ -290,7 +290,7 @@
         }
 
         /* * Cast
-        */
+         */
         .cast-grouping {
             text-align: center;
             font-size: 1.1rem;
@@ -306,7 +306,7 @@
         }
 
         /* * Schedule (日程)
-        */
+         */
         .schedule-table, .cast-schedule-table {
             width: 100%;
             border-collapse: collapse;
@@ -362,6 +362,7 @@
         }
         .table-wrapper {
             -webkit-overflow-scrolling: touch;
+            overflow-x: auto;
             border: 1px solid var(--color-border);
             border-radius: 5px;
             position: relative;
@@ -372,7 +373,7 @@
             height: 8px;
         }
         .table-wrapper::-webkit-scrollbar-track {
-            background: #fff;
+            background: #fdfaf3; 
         }
         .table-wrapper::-webkit-scrollbar-thumb {
             background-color: var(--color-sage-green);
@@ -380,7 +381,6 @@
         }
 
         /* 中間ヘッダー行のスタイル */
-        /* <!-- 変更箇所 --> 中間ヘッダーのセル(td)に直接背景色を指定するように修正 */
         .cast-schedule-table tbody tr.intermediate-header td {
             background-color: #edeae1;
             color: var(--color-sage-green);
@@ -389,7 +389,7 @@
             vertical-align: middle;
         }
         .cast-schedule-table tbody tr.intermediate-header:hover td {
-            background-color: #edeae1;
+            background-color: #edeae1; /* ホバー時も色を維持 */
         }
         .cast-schedule-table tbody tr.intermediate-header td:first-child {
              font-weight: 700;
@@ -412,7 +412,7 @@
         }
 
         /* * Ticket
-        */
+         */
         .ticket-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -437,6 +437,13 @@
             font-size: 1.8rem;
             margin-bottom: 10px;
             color: var(--color-text);
+        }
+        .ticket-benefit-title {
+            font-weight: 700;
+            color: var(--color-accent-pink);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: center;
         }
         .ticket-item .price {
             font-size: 1.6rem;
@@ -475,7 +482,8 @@
 
         .ticket-release {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            line-height: 1.6;
             font-family: var(--font-serif);
             color: #fff;
             letter-spacing: 0.1em;
@@ -492,9 +500,53 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(229, 0, 127, 0.4);
         }
+        .ticket-release .ticket-release-note {
+            display: block;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            letter-spacing: 0;
+            margin-top: 10px;
+            font-weight: 400;
+            text-shadow: none;
+        }
+
+        .ticket-button-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .ticket-button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 1.8rem;
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(45deg, var(--color-sage-green), #7a8d71);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(90, 106, 83, 0.3);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        .ticket-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(90, 106, 83, 0.4);
+            color: #fff; /* ホバー時も文字色を白に指定 */
+        }
+        .ticket-button-note {
+            font-size: 0.9rem;
+            color: var(--color-muted-grey);
+            margin-top: 25px;
+            text-align: left;
+            line-height: 1.7;
+            background-color: var(--color-bg-light);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid var(--color-border);
+        }
         
         /* * Access & Contact
-        */
+         */
         .access-info {
             text-align: center;
         }
@@ -535,7 +587,7 @@
         }
         
         /* * Footer
-        */
+         */
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -599,7 +651,7 @@
 
 
         /* * Responsive Design
-        */
+         */
         @media (max-width: 768px) {
             body { font-size: 15px; }
             .container { width: 95%; padding: 20px 10px; }
@@ -620,6 +672,20 @@
             }
             .main-logo {
                 width: 90%;
+        }
+            .ticket-release {
+                font-size: 1.5rem;
+                padding: 25px 20px;
+            }
+            .ticket-release .ticket-release-note {
+                font-size: 0.9rem;
+            }
+            .ticket-button {
+                font-size: 1.5rem;
+                padding: 18px 30px;
+            }
+            .ticket-button-note {
+                padding: 15px;
             }
         }
 
@@ -659,11 +725,11 @@
                 <p>東京ドームシティ シアターGロッソ</p>
             </div>
              <div class="staff-info-main fade-in">
-                <p><span>脚本:</span> 福緒唯</p>
-                <p><span>総合演出:</span> 加藤光大</p>
-                <p><span>演出:</span> 髙木悠慎</p>
-                <p><span>プロデュース:</span> 岡本芽子<span class="affiliation">（メイホリック）</span></p>
-            </div>
+                 <p><span>脚本:</span> 福緒唯</p>
+                 <p><span>総合演出:</span> 加藤光大</p>
+                 <p><span>演出:</span> 髙木悠慎</p>
+                 <p><span>プロデュース:</span> 岡本芽子<span class="affiliation">（メイホリック）</span></p>
+             </div>
         </section>
 
         <!-- あらすじ -->
@@ -693,7 +759,9 @@
                     その結果、神の怒りに触れ 《GO！5！クレッシェンド》は捕えられてしまう。</p>
                     <p>《ReBells》と《ステラレラール》は《GO！5！クレッシェンド》を救うための<br>
                     手掛かりが始祖アイドルにあると信じ、彼女らを復活させようとする。</p>
-                    <p>一報その頃、 《GO！5！クレッシェンド》は神が抱える悲しみに触れていた。</p>
+                    
+                    <p>一方その頃、 《GO！5！クレッシェンド》は神が抱える悲しみに触れていた。</p>
+                    
                     <p>神はなぜこの世界にアイドルを生み、アイドルを憎むのか。<br>
                     アイドルとはいったい……なんなのか。</p>
                     <p>これは神と偶像が手を取るＬＩＶＥ。<br>
@@ -719,17 +787,21 @@
                     中川梨花／石田みなみ<br>
                     本郷柚巴／小森結梨<br>
                     中澤ミナ／各務華梨</p>
+                    
                     <p>西尾夕香／宮﨑想乃<br>
                     真野美月／紫月杏朱彩<br>
                     天麻ゆうき／三島京華<br>
                     阿部寿世<br>
                     花谷麻妃／白石真菜<br>
-                    豆咲りお</p>
+                    小松穂葉／豆咲りお</p>
+                    
                     <p>佐倉薫／間島和奏<br>
                     厚木那奈美／吉武千颯<br>
                     武田智加／小島菜々恵<br>
                     月城莉奈／宮内桃子<br>
-                    三葉海緒</p>
+                    高倉萌香／三葉海緒<br>
+                    汐入あすか／入江麻衣子</p>
+                    
                     <p>あわつまい／日高里緒<br>
                     堺萌香／夏目妃菜<br>
                     渡瀬結月／高畑結希<br>
@@ -739,7 +811,7 @@
                     <p>生田輝／小日向美香／末吉咲子</p>
                     <p>石原美沙紀<br>
                     岡本芽子（メイホリック）</p>
-                    <p>他,</p>
+                    
                 </div>
                 <p class="cast-note">※一部ダブルキャスト制にて公演いたします。</p>
             </div>
@@ -850,7 +922,8 @@
                             <tr><td>阿部寿世</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>花谷麻妃</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>白石真菜</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
-                            <tr><td>豆咲りお</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>小松穂葉</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>豆咲りお</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr class="intermediate-header">
                                 <td>キャスト名</td>
                                 <td>①<span class="datetime">11/13(木)<br>19:00</span></td>
@@ -863,13 +936,16 @@
                             </tr>
                             <tr><td>佐倉薫</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>間島和奏</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
-                            <tr><td>武田智加</td><td colspan="7">Coming soon</td></tr>
-                            <tr><td>小島菜々恵</td><td colspan="7">Coming soon</td></tr>
-                            <tr><td>月城莉奈</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
-                            <tr><td>宮内桃子</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>厚木那奈美</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>吉武千颯</td><td>●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>三葉海緒</td><td colspan="7">Coming soon</td></tr>
+                            <tr><td>武田智加</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>小島菜々恵</td><td></td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>月城莉奈</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>宮内桃子</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>高倉萌香</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>三葉海緒</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+                            <tr><td>汐入あすか</td><td></td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>入江麻衣子</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr class="intermediate-header">
                                 <td>キャスト名</td>
                                 <td>①<span class="datetime">11/13(木)<br>19:00</span></td>
@@ -882,14 +958,14 @@
                             </tr>
                             <tr><td>あわつまい</td><td></td><td></td><td>●</td><td>●</td><td>●</td><td></td><td>●</td></tr>
                             <tr><td>日高里緒</td><td>●</td><td>●</td><td></td><td></td><td></td><td>●</td><td></td></tr>
-                            <tr><td>渡瀬結月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-                            <tr><td>高畑結希</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
                             <tr><td>堺萌香</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>夏目妃菜</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>渡瀬結月</td><td></td><td></td><td></td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+                            <tr><td>高畑結希</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>湯本亜美</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+                            <tr><td>夏目綾</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>山田美鈴</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>佐東美波</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
-                            <tr><td>湯本亜美</td><td></td><td>●</td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
-                            <tr><td>夏目綾</td><td>●</td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>和久野愛佳</td><td></td><td>●</td><td>●</td><td></td><td></td><td>●</td><td>●</td></tr>
                             <tr><td>日比優理香</td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
                             <tr><td>生田輝</td><td>●</td><td>●</td><td>●</td><td></td><td></td><td></td><td></td></tr>
@@ -897,7 +973,6 @@
                             <tr><td>末吉咲子</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>石原美沙紀</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
                             <tr><td>岡本芽子</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-                            <tr><td>他,</td><td colspan="7">Coming soon</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -915,6 +990,7 @@
                 <div class="ticket-grid">
                     <div class="ticket-item s-seat">
                         <h3>S席</h3>
+                        <p class="ticket-benefit-title">☆S席特典☆</p>
                         <div class="price">11,000円 <span>（税込）</span></div>
                         <ul class="features">
                             <li>前方列保証</li>
@@ -926,6 +1002,7 @@
 
                     <div class="ticket-item a-seat">
                         <h3>特典付A席</h3>
+                        <p class="ticket-benefit-title">★特典付A席★</p>
                         <div class="price">9,800円 <span>（税込）</span></div>
                         <ul class="features">
                             <li>非売品2L版ブロマイド1枚のみ<br>（ブロマイドの種類はS席特典と同じ）</li>
@@ -945,7 +1022,21 @@
 
                 <h3 style="text-align: center; margin-top: 50px; font-family: var(--font-serif);">チケット発売日</h3>
                 <div class="ticket-release">
-                    Coming soon…!
+                    2025年10月26日(日) 22:00～<br>11月9日(日)21:00迄
+                    <span class="ticket-release-note">※先着順にて販売いたします。</span>
+                </div>
+                
+                <div class="ticket-button-container fade-in">
+                    <a href="https://confetti-web.com/@/may-holic20" class="ticket-button" target="_blank" rel="noopener noreferrer">チケットはこちら</a>
+                    <p class="ticket-button-note">
+                        ※発売日時に合わせてアクセス可能となります。<br>
+                        ※出演スケジュールにご注意ください。<br>
+                        ※チケット特典はチケット購入の際に選択する応援キャストのブロマイドが特典として付きます。
+                        尚、選択する応援キャストは、出演日に関わらず全公演選択できる状態です。
+                        つきましては、ご購入前に必ず出演日、並びにチケット券種をご確認いただきご購入をお願いいたします。<br><br>
+                        チケット販売サイトカンフェティのシステム上、ご予約成立後のチケットのお取消し・払い戻しはできません。
+                        重複してご購入された場合も同様となり他ステージへの変更も出来かねます。
+                    </p>
                 </div>
             </div>
         </section>
@@ -959,10 +1050,8 @@
                 </h2>
                 <p class="theater-name">東京ドームシティ シアターGロッソ</p>
                 <div class="map-container">
-                   <!-- 変更箇所 -->
-                   <!-- 地図の埋め込みコードを更新 -->
+                   <!-- 地図の埋め込みコード (既存のまま) -->
                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7541416!3d35.704535899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44K344Ki44K_44O877yn44Ot44OD44K9!5e0!3m2!1sja!2sjp!4v1760863842188!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                   <!-- 変更ここまで -->
                 </div>
 
                 <div id="contact" class="contact-info">
@@ -1032,3 +1121,6 @@
 
 </body>
 </html>
+
+
+
