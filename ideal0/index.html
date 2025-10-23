@@ -302,8 +302,8 @@
             padding: 1rem;
         }
         .lightbox-content {
-            max-width: 90vw;
-            max-height: 90vh;
+            /* max-width: 90vw; (削除) */
+            /* max-height: 90vh; (削除) */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -311,8 +311,8 @@
         .lightbox-content img {
             width: auto;
             height: auto;
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90vw; /* 90vwをimgに直接適用 */
+            max-height: 90vh; /* 90vhをimgに直接適用 */
             border-radius: 0.5rem;
             border: 2px solid #0ea5e9;
         }
@@ -1015,3 +1015,5 @@
 
 </body>
 </html>
+
+
