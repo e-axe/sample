@@ -17,7 +17,7 @@
         .logo-img-section{
             padding-top: 3rem;
             align-items: center;
-            width: 100vw;
+            /* width: 100vw; を削除 (横スクロールの原因) */
         }
         .top-info-section {
             padding-top: 1rem;
@@ -275,7 +275,7 @@
             margin-left: auto;
             margin-right: auto;
             max-width: 2xl; /* コンテンツ幅を制限 */
-        }
+      S }
         .ticket-perk-list li {
             margin-bottom: 0.5rem;
             color: #e0f2fe;
@@ -401,13 +401,14 @@
     <main>
         <!-- ロゴセクション -->
         <section class="logo-img-section">
-            <!-- ロゴ画像のサイズを max-w-2xl に変更 -->
-            <img src="Image/logo_03.png" alt="公演ロゴ" class="max-w-2xl mx-auto px-4">
+            <!-- ロゴ画像のサイズを max-w-2xl に変更し、w-full を追加してコンテナに収める -->
+            <img src="Image/logo_03.png" alt="公演ロゴ" class="w-full max-w-2xl mx-auto px-4">
         </section>
         
         <!-- トップ情報セクション -->
         <section class="top-info-section">
-            <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-4xl mx-auto">
+            <!-- (修正) px-4 を追加して、スマホ表示で左右の余白を確保 -->
+            <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-4xl mx-auto px-4">
                 <p class="text-md text-slate-200 mb-3 font-sans">［Otona Project 第六十六弾］演劇ユニット【爆走おとな小学生】<br>第二十五回全校集会</p>
 
                 <p class="top-catchphrase text-2xl md:text-3xl font-bold mb-6">理想の自分に出会いませんか？</p>
@@ -455,7 +456,7 @@
                         父親の会社は倒産し、自己破産。突如貧相な暮らしへと急降下。人生の下剋上を狙う華恋は必死に勉学に励み、国立大学へと進学。将来有望なフィアンセを見つける為、血眼になってサークルに参加するも、冴えない男ばかりで中々お相手は見つからない。
                     </p>
                     <p class="mb-4 leading-relaxed">
-                        そんなときにふと<span class="text-story-emphasis text-accent-cyan">「理想の自分に出逢いませんか？」</span>というチラシが目に入る。怪しげなチラシではあるが、何かを感じた華恋はそのまま指定された部室へと向かう。
+                  C       そんなときにふと<span class="text-story-emphasis text-accent-cyan">「理想の自分に出逢いませんか？」</span>というチラシが目に入る。怪しげなチラシではあるが、何かを感じた華恋はそのまま指定された部室へと向かう。
                     </p>
                     <p class="mb-4 leading-relaxed">
                         部室の扉には<span class="text-story-emphasis text-accent-pink">"この扉を開けば、あなたの人生が大きく変わる。"</span>と、より一層怪しい貼り紙が貼られていた。
@@ -556,7 +557,7 @@
                                 <tr><td>② 第2セッション</td><td>12月5日(金) 19:00</td></tr>
                                 <tr><td>③ 第3セッション</td><td>12月6日(土) 13:30</td></tr>
                                 <tr><td>④ 第4セッション</td><td>12月6日(土) 18:30</td></tr>
-                                <tr><td>⑤ 第5セッション</td><td>12月7日(日) 12:30</td></tr>
+e                               <tr><td>⑤ 第5セッション</td><td>12月7日(日) 12:30</td></tr>
                                 <tr><td>⑥ 第6セッション</td><td>12月7日(日) 17:00</td></tr>
                             </tbody>
                         </table>
@@ -644,7 +645,7 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+e                                   <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">鳴海まい</td>
@@ -653,7 +654,7 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+                              S     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">大渕野々花</td>
@@ -692,7 +693,7 @@
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
+SESSION                                 <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
@@ -702,7 +703,7 @@
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+S                                   <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">益田珠希</td>
@@ -726,7 +727,7 @@
                                     <td class="cast-name-cell">門林有羽</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-absent">-</span></td>
+e                                   <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
@@ -738,13 +739,13 @@
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+SESSION                                 <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">十二稜子</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
+s                                   <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
@@ -755,7 +756,7 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
+e                                   <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
@@ -765,7 +766,7 @@
                                 <tr>
                                     <td class="cast-name-cell">安井一真</td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+e                                   <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
@@ -777,7 +778,7 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
+Next                                    <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                             </tbody>
@@ -799,7 +800,7 @@
                         <p class="text-lg font-bold mt-4 text-accent-cyan">☆スペシャルセッションアイディールプラクティックVIPシート☆<br>(最前中央席/各公演8席限定)</p>
                         <p class="text-3xl font-bold highlight">37,777<span class="text-xl">円</span></p>
                         <p class="text-sm text-slate-300 mt-2">〈全席指定席/当日券500円増し〉<br>※全て税込</p>
-                    </div>
+section                     </div>
 
                     <h3 class="font-bold mb-4 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット販売日》</h3>
                     <p class="text-center font-bold text-accent-pink mb-8 sm:text-2xl text-xl" style="font-family: 'Rajdhani', sans-serif;">Coming soon</p>
@@ -884,7 +885,7 @@
                         <p>JR「水道橋駅」東口 より徒歩3分</p>
                         <p>都営地下鉄三田線「水道橋駅」A5出口 より徒歩3分</p>
                         <p>東京メトロ丸ノ内線・南北線「後楽園駅」2番出口 より徒歩6分</p>
-                        <p>都営地下T鉄大江戸線「春日駅」A1出口 より徒歩8分</p>
+SESSION                     <p>都営地下T鉄大江戸線「春日駅」A1出口 より徒歩8分</p>
                     </div>
                     <div class="map-container">
                         <!-- Googleマップの埋め込みコードを更新 -->
@@ -919,9 +920,9 @@
     <footer class="bg-slate-900 py-10 border-t-4 border-cyan-500">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="mb-2 text-xl font-semibold text-sky-400" style="font-family: 'Rajdhani', sans-serif; font-weight:600;">《企画・制作》</p>
-            <p class="mb-1">合同会社otonapro</p>
+ci          <p class="mb-1">合同会社otonapro</p>
             <p class="mb-4">爆走おとな小学生</p>
-            <p class="text-sm">© 2025 otonapro / 爆走おとな小学生. All Rights Reserved.</p>
+      t     <p class="text-sm">© 2025 otonapro / 爆走おとな小学生. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -969,8 +970,9 @@
                     let headerOffset = document.querySelector('header').offsetHeight;
                     
                     // ページトップまたはフライヤーセクションへのリンク時はオフセットなし
+                    // (修正) エラーの原因となっていた 'section' を削除
                     if (targetElement === document.body || targetId === "#flyer") {
-                         headerOffset = 0;
+                        headerOffset = 0;
                     }
 
                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
@@ -994,7 +996,7 @@
             image.addEventListener('click', () => {
                 lightboxImage.src = image.src;
                 lightboxModal.style.display = 'flex'; // hiddenクラスより直接styleを変更
-            });
+s           });
         });
 
         const closeModal = () => {
@@ -1005,7 +1007,7 @@
         lightboxClose.addEventListener('click', closeModal);
         
         lightboxModal.addEventListener('click', (e) => {
-            // 背景（モーダル本体）クリックで閉じる
+s           // 背景（モーダル本体）クリックで閉じる
             if (e.target === lightboxModal) {
                 closeModal();
             }
@@ -1015,5 +1017,4 @@
 
 </body>
 </html>
-
 
