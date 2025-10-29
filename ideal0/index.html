@@ -268,7 +268,7 @@
             padding-bottom: 0.35rem;
         }
         .ticket-perk-list {
-            list-style-type: disc;
+            list-style-type: none; /* デフォルトのdiscを削除 */
             list-style-position: inside;
             padding-left: 0.5rem;
             text-align: left;
@@ -360,6 +360,19 @@
             font-size: 1.3rem; /* アイコンサイズ */
             width: 25px; /* アイコンの幅を固定 */
             text-align: center;
+        }
+        /* ガイドライン用スタイル */
+        .guideline-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #67e8f9;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .guideline-text {
+            padding-left: 1rem;
+            border-left: 3px solid #334155;
         }
     </style>
 </head>
@@ -489,31 +502,31 @@
                             <li>モモコグミカンパニー</li>
                             <li class="h-0 pt-3"></li>
                             <li>田中ちえ美／豊田萌絵</li>
+                            <li>小泉遥香(超ときめき♡宣伝部)／小島菜々恵</li>
                             <li>駒形友梨／Coming soon</li>
-                            <li>佐倉薫／小島菜々恵</li>
-                            <li>美雨(ファントムシータ)／Coming soon</li>
+                            <li>佐倉薫／Coming soon</li>
+                            <li>美雨(ファントムシータ)／内山悠里菜</li>
                             <li>百花(ファントムシータ)／Coming soon</li>
                             <li>鳴海まい／大渕野々花</li>
                             <li>福嶋晴菜／宮白桃子</li>
-                            <li>岩田陽菜／Coming soon</li>
+                            <li>石田みなみ／岩田陽菜</li>
                             <li>阿部寿世／真名瀬日和</li>
                             <li>水野舞菜／門林有羽(SUPER☆GiRLS)</li>
                             <li>豊田ルナ(AND CaaaLL)／益田珠希(マジカル・パンチライン)</li>
-                            <li>十二稜子／Coming soon</li>
+                            <li>十二稜子／貝賀琴莉</li>
                             <li class="h-0 pt-3"></li>
-                            <li>小林愛香</li>
-                            <li>山崎エリイ</li>
+                            <li>小林愛香／緒方佑奈</li>
+                            <li>山崎エリイ／Coming soon</li>
                             <li class="h-0 pt-3"></li>
                             <li>堂島颯人／安井一真</li>
                             <li class="h-0 pt-3"></li>
-                            <!-- 「他,」を追記 -->
                             <li>他,</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3 class="cast-category">◆ACTOR</h3>
                         <ul class="space-y-2">
-                            <li>石原美SA紀(おとな小学生)</li>
+                            <li>石原美沙紀(おとな小学生)</li>
                             <li class="h-0 pt-3"></li>
                             <li>新谷姫加</li>
                             <li>山岸理子</li>
@@ -535,6 +548,13 @@
                             <li>三島京華</li>
                         </ul>
                     </div>
+                </div>
+                <div class="card mt-8">
+                    <h3 class="cast-category text-center">◆ENSEMBLE</h3>
+                    <ul class="space-y-2 text-center">
+                        <li>橋爪亮磨／吉岡臣／東風東／山本晃樹</li>
+                        <li>星野美夢(おとな小学生)／西嶋沙紀／桃原華恋／真実きりん</li>
+                    </ul>
                 </div>
             </section>
 
@@ -578,7 +598,6 @@
                                     <th>⑥ 12/7(日)<span class="session-time">17:00</span></th>
                                 </tr>
                             </thead>
-                            <!-- Wキャスト表の<tbody>をゼロから再構築 -->
                             <tbody>
                                 <tr>
                                     <td class="cast-name-cell">モモコグミカンパニー</td>
@@ -608,17 +627,13 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">駒形友梨</td>
+                                    <td class="cast-name-cell">小泉遥香</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="cast-name-cell">佐倉薫</td>
-                                    <td colspan="6"><span class="coming-soon">Coming soon</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">小島菜々恵</td>
@@ -630,6 +645,24 @@
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
+                                    <td class="cast-name-cell">駒形友梨</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">佐倉薫</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
                                     <td class="cast-name-cell">美雨</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
@@ -637,6 +670,15 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">内山悠里菜</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">百花</td>
@@ -684,8 +726,22 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
+                                    <td class="cast-name-cell">石田みなみ</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                </tr>
+                                <tr>
                                     <td class="cast-name-cell">岩田陽菜</td>
-                                    <td colspan="6"><span class="coming-soon">Coming soon</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">阿部寿世</td>
@@ -751,6 +807,15 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
+                                    <td class="cast-name-cell">貝賀琴莉</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                </tr>
+                                <tr>
                                     <td class="cast-name-cell">小林愛香</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
@@ -760,8 +825,22 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
+                                    <td class="cast-name-cell">緒方佑奈</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                </tr>
+                                <tr>
                                     <td class="cast-name-cell">山崎エリイ</td>
-                                    <td colspan="6"><span class="coming-soon">Coming soon</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">安井一真</td>
@@ -782,7 +861,6 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                             </tbody>
-                            <!-- <tbody>の再構築完了 -->
                         </table>
                     </div>
                 </div>
@@ -795,8 +873,7 @@
                     <h3 class="text-3xl font-bold mb-6 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット詳細》</h3>
                     <div class="space-y-4 mb-8 text-center max-w-2xl mx-auto">
                         <p class="text-xl font-bold">S席： <span class="text-2xl highlight">11,000</span>円</p>
-                        <p class="text-xl font-bold">A席： <span class="text-2xl highlight">8,800</span>円</p>
-                        <p class="text-xl font-bold">特典付A席： <span class="text-2xl highlight">9,800</span>円</p>
+                        <p class="text-xl font-bold">特典付A席： <span class="text-2xl highlight">9,800</span>円 / A席： <span class="text-2xl highlight">8,800</span>円</p>
                         <p class="text-lg font-bold mt-4 text-accent-cyan">☆スペシャルセッションアイディールプラクティックVIPシート☆<br>(最前中央席/各公演8席限定)</p>
                         <p class="text-3xl font-bold highlight">37,777<span class="text-xl">円</span></p>
                         <p class="text-sm text-slate-300 mt-2">〈全席指定席/当日券500円増し〉<br>※全て税込</p>
@@ -817,25 +894,25 @@
                         
                         <h4 class="ticket-perk-title">〈S席特典〉</h4>
                         <ul class="ticket-perk-list">
-                            <li>前方列保証</li>
-                            <li>非売品キャスト別2L版ブロマイド1枚（各キャスト出演回数分)</li>
+                            <li>＊前方列保証</li>
+                            <li>＊非売品キャスト別2L版ブロマイド1枚（各キャスト出演回数分)</li>
                         </ul>
 
                         <h4 class="ticket-perk-title">〈特典付A席〉</h4>
                         <ul class="ticket-perk-list">
-                            <li>非売品キャスト別2L版ブロマイド1枚のみ
+                            <li>＊非売品キャスト別2L版ブロマイド1枚のみ
                                 （各キャスト出演回数分)</li>
                             <li class="ticket-note">（ブロマイドの種類はS席特典と同じ）</li>
                         </ul>
 
                         <h4 class="ticket-perk-title">〈スペシャルセッションアイディールプラクティックVIPシート〉</h4>
                         <ul class="ticket-perk-list">
-                            <li>非売品2L版ブロマイド1枚（各キャスト出演回数分)
+                            <li>①非売品2L版ブロマイド1枚（各キャスト出演回数分)
                                 <span class="block ticket-note">（ブロマイドの種類はS席特典と同じ）</span>
                             </li>
-                            <li>公演パンフレット</li>
-                            <li>開演前舞台ツアー <span class="highlight">※1</span></li>
-                            <li>美容整体VIENESSギフトカード <span class="highlight">※2</span></li>
+                            <li>②公演パンフレット</li>
+                            <li>③開演前舞台ツアー <span class="highlight">※1</span></li>
+                            <li>④美容整体VIENESSギフトカード <span class="highlight">※2</span></li>
                         </ul>
                         <div class="text-left text-xs text-slate-400 bg-slate-800 p-3 rounded-lg mt-4">
                             <p class="mb-2"><span class="highlight font-bold">※1.</span> 開演50分前に実際の舞台上(ステージ)を出演するおとな小学生メンバーが衣装姿にてご案内。最後に案内をしたメンバーと集合写真を撮ります。所要時間約10分。購入公演回のみ対象。指定時間外の開催は出来ません。舞台ツアーはステージ上となり裏動線等の案内はございません。(ツアーガイド:石原美沙紀・花塚廉太郎・三島京華・星野美夢)</p>
@@ -845,13 +922,13 @@
                             </p>
                         </div>
 
-
                         <h4 class="ticket-perk-title">〈各特典注意事項〉</h4>
                         <ul class="ticket-perk-list text-sm">
-                            <li>チケット特典は各公演ごとに異なる絵柄をご用意しております。(出演回数分のみご用意しております)</li>
-                            <li>チケット特典はチケット購入の際に選択する応援キャストのブロマイドが特典として付きます。尚、選択する応援キャストは、出演日に関わらず全公演選択できる状態です。</li>
-                            <li>つきましては、ご購入前に必ず出演日、並びにチケット券種をご確認いただきご購入をお願いいたします。</li>
-                            <li>チケット販売サイトカンフェティのシステム上、ご予約成立後のチケットのお取消し・払い戻しはできません。重複してご購入された場合も同様となり他ステージへの変更も出来かねます。</li>
+                            <li>※チケット特典は各公演ごとに異なる絵柄をご用意しております。(出演回数分のみご用意しております)</li>
+                            <li>※緒方佑奈さん、ENSEMBLEのS席特典及び特典付A席の特典ブロマイドは付きません。</li>
+                            <li>※チケット特典はチケット購入の際に選択する応援キャストのブロマイドが特典として付きます。尚、選択する応援キャストは、出演日に関わらず全公演選択できる状態です。</li>
+                            <li>※つきましては、ご購入前に必ず出演日、並びにチケット券種をご確認いただきご購入をお願いいたします。</li>
+                            <li>※チケット販売サイトカンフェティのシステム上、ご予約成立後のチケットのお取消し・払い戻しはできません。重複してご購入された場合も同様となり他ステージへの変更も出来かねます。</li>
                         </ul>
                     </div>
                 </div>
@@ -890,6 +967,21 @@
                     <div class="map-container">
                         <!-- Googleマップの埋め込みコードを更新 -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7541416!3d35.704535899999996!2m3!1f0!2f0!3f0!3m2!1i1024!i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44K344Ki44K_44O877yn44Ot44OD44K9!5e0!3m2!1sja!2sjp!4v1761196266318!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="劇場アクセスGoogle Map"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 公演ガイドライン セクション -->
+            <section id="guidelines">
+                <h2 class="section-title">公演ガイドライン</h2>
+                <div class="card max-w-3xl mx-auto text-left">
+                    <div>
+                        <h3 class="guideline-title">① お祝い花・プレゼントについて</h3>
+                        <p class="guideline-text">今回、お祝い花及びプレゼント(お手紙)はお断りさせていただきます。</p>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="guideline-title">② 出待ち入り待ちの禁止</h3>
+                        <p class="guideline-text">出演者の入り待ち、出待ちや、長時間にわたる劇場周辺での滞留は禁止といたします。ご協力をお願いいたします。</p>
                     </div>
                 </div>
             </section>
@@ -1017,4 +1109,3 @@
 
 </body>
 </html>
-
