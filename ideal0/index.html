@@ -17,7 +17,6 @@
         .logo-img-section{
             padding-top: 3rem;
             align-items: center;
-            /* width: 100vw; を削除 (横スクロールの原因) */
         }
         .top-info-section {
             padding-top: 1rem;
@@ -107,7 +106,6 @@
             font-weight: 600;
             font-size: 1em;
         }
-        /* スケジュール表用の追加スタイル */
         .schedule-table th, .schedule-table td {
             text-align: center;
             padding: 0.75rem 0.5rem;
@@ -120,19 +118,19 @@
             text-align: left;
             font-weight: 600;
             padding-left: 1rem;
-            width: 25%; /* キャスト名カラム */
+            width: 25%;
         }
         .schedule-table .cast-name-cell {
             font-size: 0.95em;
             color: #e0f2fe;
         }
         .schedule-table .icon-present {
-            color: #67e8f9; /* シアン */
+            color: #67e8f9;
             font-weight: bold;
             font-size: 1.2rem;
         }
         .schedule-table .icon-absent {
-            color: #475569; /* グレー */
+            color: #475569;
             font-size: 1rem;
         }
         .schedule-table .session-time {
@@ -141,13 +139,6 @@
             display: block;
             font-weight: normal;
         }
-        .schedule-table .coming-soon {
-            font-size: 0.9em;
-            color: #94a3b8;
-        }
-        /* スケジュール表の色分け - 削除 */
-        
-        /* セミナー開催日テーブルのヘッダー */
         .seminar-dates-table th {
             background-color: #1e293b;
             color: #7dd3fc;
@@ -159,7 +150,6 @@
         .seminar-dates-table td {
             text-align: center;
         }
-        /* --- */
         .highlight {
             color: #ec4899;
             font-weight: bold;
@@ -237,7 +227,7 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             display: grid;
-            gap: 2rem; /* 画像間のスペース */
+            gap: 2rem;
         }
         .flyer-image {
             max-width: 100%;
@@ -245,7 +235,7 @@
             border-radius: 0.75rem;
             box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
             border: 2px solid #0ea5e9;
-            cursor: zoom-in; /* クリック可能であることを示す */
+            cursor: zoom-in;
         }
         .access-info p {
             margin-bottom: 0.5rem;
@@ -256,7 +246,6 @@
             letter-spacing: 0.05em;
             color: #67e8f9;
         }
-        /* チケット特典スタイル */
         .ticket-perk-title {
             font-family: 'Rajdhani', sans-serif;
             font-weight: 700;
@@ -268,13 +257,13 @@
             padding-bottom: 0.35rem;
         }
         .ticket-perk-list {
-            list-style-type: none; /* デフォルトのdiscを削除 */
+            list-style-type: none;
             list-style-position: inside;
             padding-left: 0.5rem;
             text-align: left;
             margin-left: auto;
             margin-right: auto;
-            max-width: 2xl; /* コンテンツ幅を制限 */
+            max-width: 2xl;
         }
         .ticket-perk-list li {
             margin-bottom: 0.5rem;
@@ -285,8 +274,6 @@
             color: #cbd5e1;
             margin-top: 0.5rem;
         }
-        
-        /* Lightbox Modal Styles */
         .lightbox-modal {
             position: fixed;
             top: 0;
@@ -294,7 +281,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.85);
-            display: none; /* JSでflexに変更 */
+            display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -302,8 +289,6 @@
             padding: 1rem;
         }
         .lightbox-content {
-            /* max-width: 90vw; (削除) */
-            /* max-height: 90vh; (削除) */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -311,8 +296,8 @@
         .lightbox-content img {
             width: auto;
             height: auto;
-            max-width: 90vw; /* 90vwをimgに直接適用 */
-            max-height: 90vh; /* 90vhをimgに直接適用 */
+            max-width: 90vw;
+            max-height: 90vh;
             border-radius: 0.5rem;
             border: 2px solid #0ea5e9;
         }
@@ -330,8 +315,6 @@
         .lightbox-close:hover {
             color: #0ea5e9;
         }
-
-        /* 公式リンクボタン */
         .btn-link {
             display: inline-flex;
             align-items: center;
@@ -342,26 +325,25 @@
             border-radius: 0.5rem;
             font-family: 'Rajdhani', sans-serif;
             font-weight: 700;
-            font-size: 1.1rem; /* 他のボタンとフォントサイズを合わせる */
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             border: 2px solid #38bdf8;
             box-shadow: 0px 0px 15px rgba(56, 189, 248, 0.4), inset 0px 0px 5px rgba(56, 189, 248, 0.2);
             width: 100%;
-            max-width: 400px; /* ボタンの最大幅 */
+            max-width: 400px;
         }
         .btn-link:hover {
             background-color: #38bdf8;
-            color: #0f172a; /* ホバー時のテキスト色 */
+            color: #0f172a;
             box-shadow: 0px 0px 25px rgba(56, 189, 248, 0.7), inset 0px 0px 8px rgba(255,255,255,0.4);
             transform: translateY(-2px);
         }
         .btn-link i {
             margin-right: 0.75rem;
-            font-size: 1.3rem; /* アイコンサイズ */
-            width: 25px; /* アイコンの幅を固定 */
+            font-size: 1.3rem;
+            width: 25px;
             text-align: center;
         }
-        /* ガイドライン用スタイル */
         .guideline-title {
             font-family: 'Rajdhani', sans-serif;
             font-weight: 700;
@@ -383,7 +365,6 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
-                    <!-- ロゴテキストのサイズを text-lg md:text-xl に変更 -->
                     <a href="#" class="text-lg md:text-xl font-bold main-title-font tracking-wider">アイディール・セミナー/Prologue session</a>
                 </div>
                 <nav class="hidden md:flex space-x-6">
@@ -414,13 +395,11 @@
     <main>
         <!-- ロゴセクション -->
         <section class="logo-img-section">
-            <!-- ロゴ画像のサイズを max-w-2xl に変更し、w-full を追加してコンテナに収める -->
             <img src="Image/logo_03.png" alt="公演ロゴ" class="w-full max-w-2xl mx-auto px-4">
         </section>
         
         <!-- トップ情報セクション -->
         <section class="top-info-section">
-            <!-- (修正) px-4 を追加して、スマホ表示で左右の余白を確保 -->
             <div class="bg-slate-900 bg-opacity-70 p-6 md:p-10 rounded-lg border-2 border-cyan-500 shadow-2xl shadow-cyan-500/50 backdrop-blur-sm max-w-4xl mx-auto px-4">
                 <p class="text-md text-slate-200 mb-3 font-sans">［Otona Project 第六十六弾］演劇ユニット【爆走おとな小学生】<br>第二十五回全校集会</p>
 
@@ -448,11 +427,10 @@
 
             <!-- フライヤーセクション -->
             <section id="flyer">
-                <!-- PC(md)以上で2カラム表示にするため md:grid-cols-2 を追加 -->
                 <div class="flyer-image-container max-w-2xl mx-auto md:grid-cols-2">
-                    <!-- flyer-image クラスにJSがアタッチされる -->
-                    <img src="Image/ideal0_omote.jpg" alt="公演フライヤー画像 オモテ" class="flyer-image">
-                    <img src="Image/ideal0_ura.jpg" alt="公演フライヤー画像 ウラ" class="flyer-image">
+                    <!-- 【変更箇所】フライヤー画像ファイル名変更 -->
+                    <img src="Image/ideal0_omote_2.png" alt="公演フライヤー画像 オモテ" class="flyer-image">
+                    <img src="Image/ideal0_ura_2.png" alt="公演フライヤー画像 ウラ" class="flyer-image">
                 </div>
             </section>
 
@@ -498,15 +476,17 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="card">
                         <h3 class="cast-category">◇READING</h3>
+                        <!-- 【変更箇所】READINGキャストのリストを最新情報に更新 -->
                         <ul class="space-y-2">
                             <li>モモコグミカンパニー</li>
                             <li class="h-0 pt-3"></li>
                             <li>田中ちえ美／豊田萌絵</li>
                             <li>小泉遥香(超ときめき♡宣伝部)／小島菜々恵</li>
-                            <li>駒形友梨／渡部優衣／宇咲(#ババババンビ)</li>
                             <li>佐倉薫／岸みゆ(#ババババンビ)</li>
-                            <li>美雨(ファントムシータ)／内山悠里菜</li>
-                            <li>百花(ファントムシータ)／Coming soon</li>
+                            <li class="h-0 pt-3"></li>
+                            <li>駒形友梨／渡部優衣／宇咲(#ババババンビ)</li>
+                            <li>美雨(ファントムシータ)／神志那結衣</li>
+                            <li>百花(ファントムシータ)／藤谷美海(いぎなり東北産)</li>
                             <li>鳴海まい／大渕野々花</li>
                             <li>福嶋晴菜／宮白桃子</li>
                             <li>石田みなみ／岩田陽菜</li>
@@ -516,11 +496,9 @@
                             <li>十二稜子／貝賀琴莉</li>
                             <li class="h-0 pt-3"></li>
                             <li>小林愛香／緒方佑奈</li>
-                            <li>山崎エリイ／Coming soon</li>
+                            <li>山崎エリイ／内山悠里菜</li>
                             <li class="h-0 pt-3"></li>
                             <li>堂島颯人／安井一真</li>
-                            <li class="h-0 pt-3"></li>
-                            <li>他,</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -584,8 +562,15 @@
                     </div>
                     <p class="text-center mb-10"><span class="font-bold text-2xl text-accent-pink">◆ACTORは全セッション参加</span></p>
 
+                    <!-- 【変更箇所】役名ごとキャストスケジュール画像を追加 -->
+                    <h3 class="text-2xl font-bold mb-6 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《役名ごとキャストスケジュール》</h3>
+                    <div class="max-w-xl mx-auto mb-10">
+                         <img src="Image/ideal0_castschedule.png" alt="役名ごとキャストスケジュール" class="flyer-image">
+                    </div>
+
                     <h3 class="text-2xl font-bold my-4 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《Wキャスト出演日程》</h3>
                     <div class="table-container">
+                        <!-- 【変更箇所】Wキャスト出演日程を最新情報に更新 -->
                         <table class="schedule-table">
                             <thead>
                                 <tr>
@@ -645,6 +630,24 @@
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
+                                    <td class="cast-name-cell">佐倉薫</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">岸みゆ</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                </tr>
+                                <tr>
                                     <td class="cast-name-cell">駒形友梨</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
@@ -672,24 +675,6 @@
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">佐倉薫</td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="cast-name-cell">岸みゆ</td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                </tr>
-                                <tr>
                                     <td class="cast-name-cell">美雨</td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
@@ -699,7 +684,7 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">内山悠里菜</td>
+                                    <td class="cast-name-cell">神志那結衣</td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
@@ -715,6 +700,15 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">藤谷美海</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">鳴海まい</td>
@@ -734,6 +728,15 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
+                                 <tr>
+                                    <td class="cast-name-cell">福嶋晴菜</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                </tr>
                                 <tr>
                                     <td class="cast-name-cell">宮白桃子</td>
                                     <td><span class="icon-present">●</span></td>
@@ -742,15 +745,6 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="cast-name-cell">福嶋晴菜</td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">石田みなみ</td>
@@ -789,20 +783,11 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">益田珠希</td>
-                                    <td><span class="icon-present">●</span></td>
+                                    <td class="cast-name-cell">水野舞菜</td>
                                     <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="cast-name-cell">豊田ルナ</td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-absent">-</span></td>
-                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
@@ -816,13 +801,22 @@
                                     <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">水野舞菜</td>
+                                    <td class="cast-name-cell">豊田ルナ</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">益田珠希</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                 </tr>
                                 <tr>
                                     <td class="cast-name-cell">十二稜子</td>
@@ -870,9 +864,9 @@
                                     <td><span class="icon-present">●</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="cast-name-cell">安井一真</td>
-                                    <td><span class="icon-present">●</span></td>
-                                    <td><span class="icon-present">●</span></td>
+                                    <td class="cast-name-cell">内山悠里菜</td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-absent">-</span></td>
@@ -886,6 +880,15 @@
                                     <td><span class="icon-absent">-</span></td>
                                     <td><span class="icon-present">●</span></td>
                                     <td><span class="icon-present">●</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="cast-name-cell">安井一真</td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-present">●</span></td>
+                                    <td><span class="icon-absent">-</span></td>
+                                    <td><span class="icon-absent">-</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -906,14 +909,21 @@
                         <p class="text-sm text-slate-300 mt-2">〈全席指定席/当日券500円増し〉<br>※全て税込</p>
                     </div>
 
+                    <!-- 【変更箇所】チケット発売日を更新 -->
                     <h3 class="font-bold mb-4 text-center text-sky-400 sm:text-3xl text-2xl" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット販売日》</h3>
-                    <p class="text-center font-bold text-accent-pink mb-8 sm:text-2xl text-xl" style="font-family: 'Rajdhani', sans-serif;">Coming soon</p>
+                    <div class="text-center mb-8">
+                        <p class="font-bold text-accent-cyan mb-2 sm:text-lg">〈スペシャルセッションアイディールプラクティックVIPシート〉</p>
+                        <p class="font-bold text-white mb-4 sm:text-xl">11月10日(月) 22:00〜</p>
+                        <p class="font-bold text-accent-cyan mb-2 sm:text-lg">〈S席 / 特典付A席 / A席〉</p>
+                        <p class="font-bold text-white sm:text-xl">11月12日(水) 22:00〜</p>
+                    </div>
 
+                    <!-- 【変更箇所】チケット購入ボタンを有効化＆リンク設定 -->
                     <div class="text-center mb-10">
-                        <a href="#" class="btn-primary text-xl inline-flex items-center btn-disabled">
-                            <i class="fas fa-shopping-cart mr-3"></i> Coming soon
+                        <a href="https://www.confetti-web.com/@/otonapro-66" target="_blank" rel="noopener noreferrer" class="btn-primary text-xl inline-flex items-center">
+                            <i class="fas fa-ticket-alt mr-3"></i> チケットはこちら
                         </a>
-                        <p class="text-xs mt-3">※販売開始までしばらくお待ちください。</p>
+                        <p class="text-xs mt-3">※発売日時になりましたら、上記ボタンよりご購入いただけます。</p>
                     </div>
 
                     <h3 class="text-2xl font-bold my-6 text-center text-sky-400" style="font-family: 'Exo 2', sans-serif; font-weight:700;">《受講チケット特典詳細》</h3>
@@ -992,7 +1002,6 @@
                         <p>都営地下T鉄大江戸線「春日駅」A1出口 より徒歩8分</p>
                     </div>
                     <div class="map-container">
-                        <!-- Googleマップの埋め込みコードを更新 -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.88140604687!2d139.7541416!3d35.704535899999996!2m3!1f0!2f0!3f0!3m2!1i1024!i768!4f13.1!3m3!1m2!1s0x60188c38c3607f13%3A0x64c09a105c8e615b!2z44K344Ki44K_44O877yn44Ot44OD44K9!5e0!3m2!1sja!2sjp!4v1761196266318!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="劇場アクセスGoogle Map"></iframe>
                     </div>
                 </div>
@@ -1018,12 +1027,10 @@
                 <h2 class="section-title">OFFICIAL LINKS</h2>
                 <div class="card max-w-lg mx-auto">
                     <div class="flex flex-col items-center gap-6">
-                        <!-- ファンクラブリンク -->
                         <a href="https://otonashogakusei-fc.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
                             <i class="fas fa-house"></i>
                             <span>オフィシャルFC【保護者総会】</span>
                         </a>
-                        <!-- 公式Xリンク -->
                         <a href="https://x.com/otona_project" target="_blank" rel="noopener noreferrer" class="btn-link">
                             <i class="fab fa-x-twitter"></i>
                             <span>公式X (@otona_project)</span>
@@ -1069,34 +1076,25 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                // モバイルメニューが開いていれば閉じる
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                     mobileMenuButton.querySelector('i').classList.add('fa-bars');
                     mobileMenuButton.querySelector('i').classList.remove('fa-times');
                 }
-
                 const targetId = this.getAttribute('href');
                 let targetElement;
-                // ヘッダーのロゴクリック（href="#"）の場合、ボディトップへ
                 if (targetId === "#" && this.closest("header")) {
                      targetElement = document.body;
                 } else {
                     targetElement = document.querySelector(targetId);
                 }
-
                 if (targetElement) {
                     let headerOffset = document.querySelector('header').offsetHeight;
-                    
-                    // ページトップまたはフライヤーセクションへのリンク時はオフセットなし
-                    // (修正) エラーの原因となっていた 'section' を削除
                     if (targetElement === document.body || targetId === "#flyer") {
                         headerOffset = 0;
                     }
-
                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                     const offsetPosition = elementPosition - headerOffset;
-
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: "smooth"
@@ -1114,19 +1112,18 @@
         flyerImages.forEach(image => {
             image.addEventListener('click', () => {
                 lightboxImage.src = image.src;
-                lightboxModal.style.display = 'flex'; // hiddenクラスより直接styleを変更
+                lightboxModal.style.display = 'flex';
             });
         });
 
         const closeModal = () => {
             lightboxModal.style.display = 'none';
-            lightboxImage.src = ''; // srcをクリア
+            lightboxImage.src = '';
         };
 
         lightboxClose.addEventListener('click', closeModal);
         
         lightboxModal.addEventListener('click', (e) => {
-            // 背景（モーダル本体）クリックで閉じる
             if (e.target === lightboxModal) {
                 closeModal();
             }
