@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイディール・セミナー/Replay session | 爆走おとな小学生</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        en: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9', // Sky 500
+                        secondary: '#8b5cf6', // Violet 500
+                        dark: '#0f172a', // Slate 900
+                        darker: '#020617', // Slate 950
+                        light: '#f8fafc', // Slate 50
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-pattern': 'linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(2, 6, 23, 1))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* スクロールアニメーション用のカスタムクラス */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* テキストのグラデーション */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #0ea5e9, #8b5cf6);
+        }
+
+        /* 画像がない時のフォールバック用スタイル */
+        .cast-img-fallback {
+            background-color: #1e293b;
+            position: relative;
+        }
+        .cast-img-fallback::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-darker text-light font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-darker/80 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-en font-bold text-xl tracking-wider text-white">
+                        IDEAL<span class="text-primary">SEMINAR</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm text-gray-300 hover:text-white transition">STORY</a>
+                    <a href="#cast" class="text-sm text-gray-300 hover:text-white transition">CAST</a>
+                    <a href="#schedule" class="text-sm text-gray-300 hover:text-white transition">SCHEDULE</a>
+                    <a href="#tickets" class="text-sm text-gray-300 hover:text-white transition">TICKETS</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">STORY</a>
+                <a href="#cast" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">CAST</a>
+                <a href="#schedule" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">SCHEDULE</a>
+                <a href="#tickets" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">TICKETS</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute inset-0 z-0">
+            <!-- ダミーフライヤー(表)を背景にぼかして使用 -->
+            <img src="Image/ideal1-re_omote.png" alt="Background Flyer" class="w-full h-full object-cover opacity-20 filter blur-sm scale-105" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center">
+            <p class="text-sm md:text-base text-gray-400 tracking-widest mb-4 font-en fade-up">Otona Project 第六十七弾 / 爆走おとな小学生 第二十六回全校集会</p>
+            <p class="text-primary font-bold tracking-[0.2em] mb-2 fade-up">"朗読×ACT"theater</p>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-en mb-8 tracking-tight fade-up">
+                『アイディール・セミナー<br>
+                <span class="text-2xl md:text-4xl lg:text-5xl text-gray-300 font-normal">/ Replay session』</span>
+            </h1>
+
+            <!-- フライヤー画像（表・裏） -->
+            <div class="mb-8 w-full max-w-5xl mx-auto flex flex-col md:flex-row gap-6 justify-center items-center fade-up">
+                <!-- 表面 -->
+                <div class="w-full sm:w-4/5 md:w-1/2 rounded-lg overflow-hidden shadow-2xl shadow-primary/20 border border-white/10 relative group">
+                    <img src="Image/ideal1-re_omote.png" alt="アイディール・セミナー フライヤー 表面" class="w-full h-auto transition-transform duration-500 group-hover:scale-105" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Front (Dummy)%3C/text%3E%3C/svg%3E'">
+                </div>
+                <!-- 裏面 -->
+                <div class="w-full sm:w-4/5 md:w-1/2 rounded-lg overflow-hidden shadow-2xl shadow-secondary/20 border border-white/10 relative group">
+                    <img src="Image/ideal1-re_ura.png" alt="アイディール・セミナー フライヤー 裏面" class="w-full h-auto transition-transform duration-500 group-hover:scale-105" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Back (Dummy)%3C/text%3E%3C/svg%3E'">
+                </div>
+            </div>
+            
+            <div class="my-8 inline-block backdrop-blur-sm bg-white/5 border border-white/10 px-6 py-3 rounded-full fade-up">
+                <p class="text-lg md:text-xl font-medium tracking-widest">2026.4.1<span class="text-sm">wed</span> - 4.5<span class="text-sm">sun</span></p>
+                <p class="text-sm text-gray-400 mt-1">@ CBGKシブゲキ!!</p>
+            </div>
+            
+            <p class="text-xl md:text-2xl font-bold mt-4 tracking-widest text-gradient fade-up">
+                「理想の自分と出逢いませんか？」
+            </p>
+            <p class="mt-4 text-gray-300 font-light tracking-wide fade-up">朗読×ACTの新感覚バトルエンターテイメント!!<br>1st session 待望の再演決定!!</p>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-xs tracking-widest text-gray-500 mb-2 font-en">SCROLL</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-gray-500 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="about" class="py-24 relative z-10 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-en mb-2 tracking-widest">STORY</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded"></div>
+            </div>
+            
+            <div class="prose prose-invert prose-lg mx-auto text-gray-300 space-y-8 leading-relaxed tracking-wide fade-up">
+                <p class="text-center text-xl text-white font-medium mb-12">
+                    「理想の自分と出逢いませんか？」<br>
+                    "アイディール・セミナー"をご存知ですか？
+                </p>
+                
+                <p>
+                    <strong class="text-primary font-bold">アイディール</strong>とは、具現化された自分の理想の存在。<br>
+                    姿形は物理的に存在しているが、アイディールが発現している者にしか見えない。<br>
+                    そして、基本的にアイディールは、<span class="text-white">戦闘型となっており本体の個性に見合った能力を備える。</span>
+                </p>
+                
+                <p>
+                    このアイディールを使い、アイディール同士で戦わせ己を鍛えていく"アイディール・セミナー"。<br>
+                    アイディールと共に肉体的にも精神的にも強くなるのがセミナーの本来の目的。だが、このアイディールを使って悪事を働く組織がいる。
+                </p>
+
+                <div class="bg-dark border border-white/10 p-6 rounded-lg my-8 space-y-4 text-sm md:text-base text-gray-400">
+                    <p class="flex items-start"><span class="text-secondary mr-2">◆</span>アイディールは通常の人間には見えない為、殺人が容易に可能となる。</p>
+                    <p class="flex items-start"><span class="text-secondary mr-2">◆</span>アイディールは本体の人間が死んでも消滅せず、無機質に人間を攻撃する存在となる。</p>
+                    <p class="flex items-start"><span class="text-secondary mr-2">◆</span>殺し屋稼業としてアイディールを使って儲けている組織たちがいる。</p>
+                </div>
+
+                <p>
+                    アイディール・セミナーの受講生<strong class="text-white">「桃瀬しずか」</strong>は、アイディールによって両親を殺された。<br>
+                    両親を殺した組織の中に姉の<strong class="text-white">「桃瀬ゆかり」</strong>の存在が確認されている。
+                </p>
+                
+                <p class="text-center text-xl text-white font-bold mt-12 pt-8 border-t border-white/10">
+                    その真相を巡り、<br class="md:hidden">"アイディール・セミナー"の第1セッションがはじまる。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cast Section -->
+    <section id="cast" class="py-24 bg-dark relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-en mb-2 tracking-widest">CAST</h2>
+                <div class="h-1 w-20 bg-secondary mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400 text-sm tracking-widest">セミナー参加者</p>
+            </div>
+
+            <!-- READING -->
+            <div class="mb-24 fade-up">
+                <h3 class="text-2xl font-bold text-center mb-16 flex items-center justify-center gap-4">
+                    <span class="w-12 h-px bg-white/20"></span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400 tracking-widest">READING</span>
+                    <span class="w-12 h-px bg-white/20"></span>
+                </h3>
+                
+                <!-- トップ3 (桃瀬しずか 役 / トリプルキャスト) -->
+                <div class="mb-16 text-center">
+                    <h4 class="inline-block text-primary font-bold mb-8 tracking-widest text-lg md:text-xl border-b border-primary/30 pb-2 px-4">〈 桃瀬しずか 役 〉</h4>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-4 md:gap-12 max-w-4xl mx-auto">
+                        <!-- 小林愛香 -->
+                        <div class="flex flex-col items-center group w-full sm:w-1/3">
+                            <div class="w-32 h-32 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-2 md:border-4 border-primary/50 group-hover:border-primary transition-all duration-300 mb-4 cast-img-fallback shadow-lg shadow-primary/20">
+                                <img src="Image/ideal-re_cast_01.jpg" alt="小林愛香" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-lg md:text-xl font-bold text-center text-white tracking-wide">小林愛香</p>
+                        </div>
+                        <div class="hidden sm:block text-white/20 text-3xl font-light italic">/</div>
+                        <!-- 緒方佑奈 -->
+                        <div class="flex flex-col items-center group w-full sm:w-1/3 mt-4 sm:mt-0">
+                            <div class="w-32 h-32 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-2 md:border-4 border-primary/50 group-hover:border-primary transition-all duration-300 mb-4 cast-img-fallback shadow-lg shadow-primary/20">
+                                <img src="Image/ideal-re_cast_02.jpg" alt="緒方佑奈" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-lg md:text-xl font-bold text-center text-white tracking-wide">緒方佑奈</p>
+                        </div>
+                        <div class="hidden sm:block text-white/20 text-3xl font-light italic">/</div>
+                        <!-- 桜井えま -->
+                        <div class="flex flex-col items-center group w-full sm:w-1/3 mt-4 sm:mt-0">
+                            <div class="w-32 h-32 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-2 md:border-4 border-primary/50 group-hover:border-primary transition-all duration-300 mb-4 cast-img-fallback shadow-lg shadow-primary/20">
+                                <img src="Image/ideal-re_cast_03.jpg" alt="桜井えま" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-lg md:text-xl font-bold text-center text-white tracking-wide">桜井えま</p>
+                            <p class="text-xs md:text-sm text-gray-400 mt-1">(私立恵比寿中学)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wキャスト群 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 max-w-6xl mx-auto mb-10 mt-20">
+                    
+                    <!-- 桃瀬ゆかり 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-primary/50 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-200 tracking-wider whitespace-nowrap shadow-md shadow-primary/20">桃瀬ゆかり 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_04.jpg" alt="秋本帆華" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">秋本帆華</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_05.jpg" alt="咲々木瞳" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">咲々木瞳</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 岡崎里美 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">岡崎里美 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_06.jpg" alt="内山悠里菜" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">内山悠里菜</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_07.jpg" alt="谷真理佳" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">谷真理佳</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 暁 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">暁 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_09.jpg" alt="七瀬つむぎ" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">七瀬つむぎ</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_08.jpg" alt="真野美月" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">真野美月</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 清水幸奈 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">清水幸奈 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_11.jpg" alt="吉瀬真珠" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">吉瀬真珠</p>
+                                <p class="text-[10px] sm:text-xs text-gray-500 mt-1 whitespace-nowrap scale-90 sm:scale-100">(いぎなり東北産)</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_10.jpg" alt="森下来奈" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">森下来奈</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 初恋りんご 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">初恋りんご 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_13.jpg" alt="月なぎさ" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">月なぎさ</p>
+                                <p class="text-[10px] sm:text-xs text-gray-500 mt-1 whitespace-nowrap scale-90 sm:scale-100">(#よーよーよー)</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_12.jpg" alt="紫月杏朱彩" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">紫月杏朱彩</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 鷹城亜美 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">鷹城亜美 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_14.jpg" alt="立石凛" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">立石凛</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_15.jpg" alt="堺萌香" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">堺萌香</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大迫舞 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">大迫舞 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_16.jpg" alt="小森結梨" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">小森結梨</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_17.jpg" alt="橋本侑芽" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">橋本侑芽</p>
+                                <p class="text-[10px] sm:text-xs text-gray-500 mt-1 whitespace-nowrap scale-90 sm:scale-100">(Devil ANTHEM.)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 山田花子 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">山田花子 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_19.jpg" alt="大渕野々花" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">大渕野々花</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_18.jpg" alt="鳴海まい" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">鳴海まい</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ケンケン 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">ケンケン 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_21.jpg" alt="蔵田尚樹" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">蔵田尚樹</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_20.jpg" alt="露口祐斗" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">露口祐斗</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ジン 役 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors relative pt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">ジン 役</div>
+                        <div class="flex items-start justify-around">
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_22.jpg" alt="草野太一" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">草野太一</p>
+                            </div>
+                            <div class="text-white/20 mx-1 sm:mx-2 mt-6 text-xl md:text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center flex-1 group">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_23.jpg" alt="西海龍人" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-xs sm:text-sm font-bold text-center">西海龍人</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ヨシザワ 役 (トリプルキャスト) -->
+                <div class="max-w-3xl mx-auto mt-12">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 hover:bg-white/10 transition-colors relative pt-8 sm:pt-10">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-dark border border-white/20 px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-gray-300 tracking-wider whitespace-nowrap">ヨシザワ 役</div>
+                        <div class="flex flex-wrap sm:flex-nowrap items-center justify-center gap-4 sm:gap-0 sm:justify-around">
+                            <div class="flex flex-col items-center group w-[45%] sm:w-auto">
+                                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_26.jpg" alt="鷲尾修斗" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-[10px] sm:text-sm font-bold text-center whitespace-nowrap">鷲尾修斗</p>
+                            </div>
+                            <div class="hidden sm:block text-white/20 mx-2 text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center group w-[45%] sm:w-auto">
+                                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback">
+                                    <img src="Image/ideal-re_cast_24.jpg" alt="堂島颯人" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-[10px] sm:text-sm font-bold text-center whitespace-nowrap">堂島颯人</p>
+                            </div>
+                            <div class="hidden sm:block text-white/20 mx-2 text-2xl font-light italic">/</div>
+                            <div class="flex flex-col items-center group w-full sm:w-auto mt-4 sm:mt-0">
+                                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/80 transition-all duration-300 mb-2 cast-img-fallback mx-auto">
+                                    <img src="Image/ideal-re_cast_25.jpg" alt="濱健人" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                <p class="text-[10px] sm:text-sm font-bold text-center whitespace-nowrap">濱健人</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTOR -->
+            <div class="mb-20 fade-up">
+                <h3 class="text-2xl font-bold text-center mb-10 flex items-center justify-center gap-4">
+                    <span class="w-12 h-px bg-white/20"></span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400 tracking-widest">ACTOR</span>
+                    <span class="text-xs text-secondary/80 ml-2 font-normal">全セッション参加</span>
+                    <span class="w-12 h-px bg-white/20"></span>
+                </h3>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-y-12 gap-x-6">
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_27.jpg" alt="山岸理子" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">山岸理子</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_28.jpg" alt="日高里緒" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">日高里緒</p>
+                        <p class="text-xs text-gray-500 mt-1">(まねきケチャ)</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_29.jpg" alt="古仲可奈" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">古仲可奈</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_30.jpg" alt="大澤萌々" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">大澤萌々</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_31.jpg" alt="井川勇樹" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">井川勇樹</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_32.jpg" alt="湊竜也" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-sm">湊竜也</p>
+                    </div>
+                </div>
+
+                <!-- おとな小学生 (ACTOR内) -->
+                <div class="border-t border-white/5 pt-12 mt-8">
+                    <h4 class="text-lg font-bold text-center mb-8 text-secondary/80 tracking-widest flex items-center justify-center gap-3">
+                        <span class="w-6 h-px bg-secondary/30"></span>
+                        〈 おとな小学生 〉
+                        <span class="w-6 h-px bg-secondary/30"></span>
+                    </h4>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 max-w-4xl mx-auto">
+                        <!-- 34〜37 -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                                <img src="Image/ideal-re_cast_34.jpg" alt="石原美沙紀" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-center font-bold text-sm">石原美沙紀</p>
+                        </div>
+                        <div class="flex flex-col items-center group">
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                                <img src="Image/ideal-re_cast_35.jpg" alt="花塚廉太郎" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-center font-bold text-sm">花塚廉太郎</p>
+                        </div>
+                        <div class="flex flex-col items-center group">
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                                <img src="Image/ideal-re_cast_36.jpg" alt="三島京華" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-center font-bold text-sm">三島京華</p>
+                        </div>
+                        <div class="flex flex-col items-center group">
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-secondary/40 group-hover:border-secondary transition-all duration-300 mb-3 cast-img-fallback">
+                                <img src="Image/ideal-re_cast_37.jpg" alt="星野美夢" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            </div>
+                            <p class="text-center font-bold text-sm">星野美夢</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENSEMBLE -->
+            <div class="mb-10 fade-up">
+                <h3 class="text-xl font-bold text-center mb-8 flex items-center justify-center gap-4 text-gray-500">
+                    <span class="w-8 h-px bg-white/5"></span>
+                    <span class="tracking-widest font-en">ENSEMBLE</span>
+                    <span class="w-8 h-px bg-white/5"></span>
+                </h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 max-w-3xl mx-auto">
+                    <!-- 38〜41 -->
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-all duration-300 mb-2 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_38.jpg" alt="橋爪亮磨" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center text-xs text-gray-400">橋爪亮磨</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-all duration-300 mb-2 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_39.jpg" alt="山本晃樹" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center text-xs text-gray-400">山本晃樹</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-all duration-300 mb-2 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_40.jpg" alt="桃原華恋" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center text-xs text-gray-400">桃原華恋</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full overflow-hidden border border-gray-700 group-hover:border-gray-500 transition-all duration-300 mb-2 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_41.jpg" alt="北村夏未" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center text-xs text-gray-400">北村夏未</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Creator Section (創始者) -->
+    <section class="py-20 bg-darker relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up">
+                <h3 class="text-xl md:text-2xl font-bold text-center mb-10 flex items-center justify-center gap-4 text-primary">
+                    <span class="w-12 h-px bg-primary/30"></span>
+                    <span class="tracking-widest font-en">FOUNDER</span>
+                    <span class="text-sm font-normal text-gray-400 ml-2">創始者（脚本・演出）</span>
+                    <span class="w-12 h-px bg-primary/30"></span>
+                </h3>
+                
+                <div class="flex justify-center">
+                    <div class="flex flex-col items-center group">
+                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/40 group-hover:border-primary transition-all duration-300 mb-4 cast-img-fallback">
+                            <img src="Image/ideal-re_cast_42.jpg" alt="加藤光大" class="w-full h-full object-cover filter grayscale sepia-[.2]" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-center font-bold text-lg tracking-widest text-white">加藤光大</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-24 relative z-10 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-en mb-2 tracking-widest">SCHEDULE</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400 text-sm tracking-widest">セミナー開催日：2026年4月1日(水)〜5日(日)</p>
+            </div>
+
+            <!-- タイムテーブル -->
+            <div class="bg-darker/50 border border-white/10 rounded-xl overflow-hidden mb-16 shadow-lg fade-up">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center border-collapse">
+                        <thead>
+                            <tr class="bg-white/5 text-gray-300 text-sm md:text-base border-b border-white/10">
+                                <th class="py-4 px-4 font-normal">時間</th>
+                                <th class="py-4 px-4 font-normal">4.1<br><span class="text-xs">水</span></th>
+                                <th class="py-4 px-4 font-normal">4.2<br><span class="text-xs">木</span></th>
+                                <th class="py-4 px-4 font-normal">4.3<br><span class="text-xs text-primary">金</span></th>
+                                <th class="py-4 px-4 font-normal">4.4<br><span class="text-xs text-blue-400">土</span></th>
+                                <th class="py-4 px-4 font-normal">4.5<br><span class="text-xs text-red-400">日</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm md:text-base divide-y divide-white/5">
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="py-5 px-4 text-gray-400">昼</td>
+                                <td class="py-5 px-4"><span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold">14:00 ①</span></td>
+                                <td class="py-5 px-4">-</td>
+                                <td class="py-5 px-4">-</td>
+                                <td class="py-5 px-4"><span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold">13:30 ⑤</span></td>
+                                <td class="py-5 px-4"><span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold">12:30 ⑦</span></td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="py-5 px-4 text-gray-400">夜</td>
+                                <td class="py-5 px-4"><span class="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-bold">19:00 ②</span></td>
+                                <td class="py-5 px-4"><span class="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-bold">19:00 ③</span></td>
+                                <td class="py-5 px-4"><span class="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-bold">19:00 ④</span></td>
+                                <td class="py-5 px-4"><span class="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-bold">18:30 ⑥</span></td>
+                                <td class="py-5 px-4"><span class="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-bold">17:00 ⑧</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reading 出演日程 -->
+            <div class="fade-up">
+                <h3 class="text-xl font-bold mb-6 text-center tracking-widest text-gray-300">《 Reading 出演日程 》</h3>
+                <div class="bg-dark p-6 md:p-8 rounded-xl border border-white/5 text-sm md:text-base leading-relaxed grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-300">
+                    <ul class="space-y-3">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>小林愛香</span> <span class="text-primary font-en">(①〜③)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>緒方佑奈</span> <span class="text-primary font-en">(④〜⑥)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>桜井えま</span> <span class="text-primary font-en">(⑦・⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>秋本帆華</span> <span class="text-primary font-en">(①〜④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>咲々木瞳</span> <span class="text-primary font-en">(⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>内山悠里菜</span> <span class="text-primary font-en">(①・②・⑦・⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>谷真理佳</span> <span class="text-primary font-en">(③〜⑥)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>七瀬つむぎ</span> <span class="text-primary font-en">(①〜③)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>真野美月</span> <span class="text-primary font-en">(④〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>吉瀬真珠</span> <span class="text-primary font-en">(①・②・⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>森下来奈</span> <span class="text-primary font-en">(③・④)</span></li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>月なぎさ</span> <span class="text-primary font-en">(①〜④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>紫月杏朱彩</span> <span class="text-primary font-en">(⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>立石凛</span> <span class="text-primary font-en">(①〜③)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>堺萌香</span> <span class="text-primary font-en">(④〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>小森結梨</span> <span class="text-primary font-en">(①・②・⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>橋本侑芽</span> <span class="text-primary font-en">(③・④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>大渕野々花</span> <span class="text-primary font-en">(①〜③)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>鳴海まい</span> <span class="text-primary font-en">(④〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>蔵田尚樹</span> <span class="text-primary font-en">(①〜④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>露口祐斗</span> <span class="text-primary font-en">(⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>草野太一</span> <span class="text-primary font-en">(①・②・④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>西海龍人</span> <span class="text-primary font-en">(③・⑤〜⑧)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>鷲尾修斗</span> <span class="text-primary font-en">(①〜③)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>堂島颯人</span> <span class="text-primary font-en">(④)</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>濱健人</span> <span class="text-primary font-en">(⑤〜⑧)</span></li>
+                    </ul>
+                </div>
+                <p class="text-xs text-secondary mt-4 text-right">※ ACTORは全セッション参加</p>
+            </div>
+
+            <!-- キャストスケジュール画像 -->
+            <div class="mt-16 fade-up">
+                <h3 class="text-xl font-bold mb-6 text-center tracking-widest text-gray-300">《 キャストスケジュール表 》</h3>
+                <div class="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-white/10 relative">
+                    <img src="Image/ideal1-re_schedule.jpg" alt="キャストスケジュール表" class="w-full h-auto" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22800%22 viewBox=%220 0 600 800%22%3E%3Crect fill=%22%231e293b%22 width=%22600%22 height=%22800%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2230%22 dy=%2210%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ESchedule Image (Dummy)%3C/text%3E%3C/svg%3E'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="py-24 bg-dark relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-en mb-2 tracking-widest">TICKETS</h2>
+                <div class="h-1 w-20 bg-secondary mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400 text-sm tracking-widest">受講チケット詳細</p>
+            </div>
+
+            <div class="text-center mb-12 fade-up">
+                <p class="inline-block bg-primary/10 border border-primary/30 text-primary px-6 py-2 rounded-full font-bold mb-4">
+                    発売日：2月23日(月) 22:00〜
+                </p>
+                <div class="mt-4">
+                    <a href="https://www.confetti-web.com/@/otonapro-67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:from-sky-400 hover:to-purple-400 transition-all duration-300 shadow-lg shadow-primary/30 transform hover:-translate-y-1">
+                        カンフェティで購入する
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <p class="text-xs text-gray-500 mt-3">※先着順 / カンフェティの無料会員登録が必要です。</p>
+                </div>
+            </div>
+
+            <!-- Ticket Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                
+                <!-- VIP -->
+                <div class="lg:col-span-3 bg-gradient-to-br from-yellow-900/20 to-yellow-600/10 border border-yellow-500/30 rounded-2xl p-8 relative overflow-hidden fade-up">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-darker text-xs font-bold px-4 py-1 rounded-bl-lg">最前中央席 / 各8席限定</div>
+                    <h3 class="text-xl md:text-2xl font-bold text-yellow-500 mb-2">スペシャルセッション<br class="md:hidden">アイディールプラクティックVIPシート</h3>
+                    <p class="text-3xl font-en font-bold text-white mb-6">37,777<span class="text-base font-normal text-gray-400 ml-1">YEN</span></p>
+                    
+                    <div class="bg-darker/50 rounded-lg p-6">
+                        <h4 class="text-sm text-yellow-400/80 mb-3 font-bold border-b border-yellow-500/20 pb-2">〈 特典内容 〉</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">①</span>「アイディール・セミナー」特別ライセンスPASS</li>
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">②</span>非売品2L版ブロマイド1枚<br><span class="text-xs text-gray-500">（各キャスト出演回数分/絵柄はS席特典と同じ）</span></li>
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">③</span>公演パンフレット</li>
+                            <li class="flex items-start">
+                                <div>
+                                    <span class="text-yellow-500 mr-2">④</span>開演前舞台ツアー<br>
+                                    <p class="text-xs text-gray-400 mt-1">
+                                        ※開演50分前に実際の舞台上(ステージ)を出演するおとな小学生メンバーが衣装姿にてご案内。最後に案内をしたメンバーと集合写真を撮ります。所要時間約10分。指定時間外の開催不可。裏動線等の案内はございません。<br>
+                                        (ツアーガイド:石原美沙紀・花塚廉太郎・三島京華・星野美夢)
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div>
+                                    <span class="text-yellow-500 mr-2">⑤</span>美容整体VIENESSギフトカード<br>
+                                    <p class="text-xs text-gray-400 mt-1">
+                                        【全身美容整体＋小顔・骨盤矯正】60分コースチケット（池袋店 / 有効期限あり）<br>
+                                        <a href="https://beauty.hotpepper.jp/kr/slnH000557005/" target="_blank" class="text-primary hover:underline">店舗情報はこちら</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S席 -->
+                <div class="bg-darker/80 border border-primary/30 rounded-2xl p-8 flex flex-col fade-up">
+                    <h3 class="text-xl font-bold text-primary mb-2">S席</h3>
+                    <p class="text-3xl font-en font-bold text-white mb-6">12,500<span class="text-base font-normal text-gray-400 ml-1">YEN</span></p>
+                    
+                    <div class="bg-white/5 rounded-lg p-5 flex-grow">
+                        <h4 class="text-sm text-primary/80 mb-3 font-bold border-b border-white/10 pb-2">〈 特典内容 〉</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-primary mr-2">＊</span>「アイディール・セミナー」特別ライセンスPASS</li>
+                            <li class="flex items-start"><span class="text-primary mr-2">＊</span>非売品キャスト別2L版ブロマイド1枚<br><span class="text-xs text-gray-500">（各キャスト出演回数分）</span></li>
+                            <li class="flex items-start"><span class="text-primary mr-2">＊</span>前方列保証</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 特典付A席 -->
+                <div class="bg-darker/80 border border-white/20 rounded-2xl p-8 flex flex-col fade-up">
+                    <h3 class="text-xl font-bold text-white mb-2">特典付A席</h3>
+                    <p class="text-3xl font-en font-bold text-white mb-6">9,800<span class="text-base font-normal text-gray-400 ml-1">YEN</span></p>
+                    
+                    <div class="bg-white/5 rounded-lg p-5 flex-grow">
+                        <h4 class="text-sm text-gray-400 mb-3 font-bold border-b border-white/10 pb-2">〈 特典内容 〉</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-gray-400 mr-2">＊</span>非売品キャスト別2L版ブロマイド1枚のみ<br><span class="text-xs text-gray-500">（各キャスト出演回数分/S席特典と同じ）</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- A席 -->
+                <div class="bg-darker/80 border border-white/10 rounded-2xl p-8 flex flex-col fade-up">
+                    <h3 class="text-xl font-bold text-gray-400 mb-2">A席</h3>
+                    <p class="text-3xl font-en font-bold text-white mb-6">8,800<span class="text-base font-normal text-gray-400 ml-1">YEN</span></p>
+                    <div class="flex-grow flex items-center justify-center text-gray-500 text-sm">
+                        特典なし / 一般席
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center text-sm text-gray-500 mb-12 fade-up">
+                <p>〈全席指定席 / 当日券500円増し / 全て税込〉</p>
+            </div>
+
+            <!-- 注意事項 -->
+            <div class="bg-black/30 border border-white/5 rounded-lg p-6 md:p-8 text-sm text-gray-400 space-y-4 fade-up">
+                <h4 class="text-white font-bold mb-4 border-b border-white/10 pb-2">〈 各特典注意事項 〉</h4>
+                <p>※チケット特典は各公演ごとに異なる絵柄をご用意しております。(出演回数分のみご用意しております)</p>
+                <p>※チケット特典はチケット購入の際に選択する応援キャストのブロマイドが特典として付きます。尚、選択する応援キャストは、出演日に関わらず全公演選択できる状態です。つきましては、<span class="text-red-400">ご購入前に必ず出演日、並びにチケット券種をご確認いただきご購入をお願いいたします。</span></p>
+                <p>※チケット特典の引き換えは公演期間中のみとなります。</p>
+                <p>※チケット販売サイトカンフェティのシステム上、ご予約成立後のチケットのお取消し・払い戻しはできません。重複してご購入された場合も同様となり他ステージへの変更も出来かねます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seminar Message -->
+    <section class="py-32 relative z-10 bg-darker overflow-hidden border-t border-y-white/5">
+        <!-- Background geometric -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 relative z-10 fade-up">
+            <div class="border border-white/20 bg-darker/80 backdrop-blur-md p-8 md:p-12 shadow-2xl relative">
+                <!-- Corner decorations -->
+                <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+                <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary"></div>
+                <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary"></div>
+                <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
+
+                <h3 class="text-xl md:text-2xl font-bold text-center mb-8 tracking-widest text-primary">【本公演に興味をお持ちのお客様へ】</h3>
+                
+                <div class="space-y-6 text-gray-300 leading-loose tracking-wide md:text-lg text-center font-light">
+                    <p>
+                        本公演の観劇をする事によって<br class="hidden md:block">
+                        貴方の人生が大きく変わります。
+                    </p>
+                    <p>
+                        成功体験をする事により人生観の拡がり、<br>
+                        コミュニケーション力等、<br class="md:hidden">人間関係に必要な様々な能力の向上が望まれ、<br>
+                        人生において大きな成果を上げることが出来ます。
+                    </p>
+                    <p>
+                        悩んでいる方はご安心下さい。<br>
+                        <strong class="text-white font-bold">アイディール・セミナーは貴方の人生に華を添えます。</strong>
+                    </p>
+                    <p class="pt-6 border-t border-white/10 mt-8 text-white font-medium">
+                        どうぞ勇気を持って一歩を踏み出し、<br>
+                        我々と共に新しい人生をデザインしましょう。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidelines -->
+    <section class="py-16 bg-dark z-10 relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-lg font-bold text-center mb-8 tracking-widest text-gray-400">◇ 公演ガイドライン ◇</h3>
+            <div class="space-y-6 text-sm text-gray-400 max-w-2xl mx-auto fade-up">
+                <div>
+                    <h4 class="text-white font-bold mb-2">①お祝い花・プレゼントについて</h4>
+                    <p>今回、お祝い花及びプレゼント(お手紙)はお断りさせていただきます。</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2">②出待ち入り待ちの禁止</h4>
+                    <p>出演者の入り待ち、出待ちや、長時間にわたる劇場周辺での滞留は禁止といたします。ご協力をお願いいたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flyer Back Image & Footer -->
+    <footer class="bg-darker relative z-10 border-t border-white/10 pt-12 pb-8">
+        <div class="text-center text-gray-500 text-sm space-y-2 fade-up">
+            <p>《 企画・制作 》</p>
+            <p class="font-bold text-gray-300">合同会社otonapro / 爆走おとな小学生</p>
+            <p class="mt-8 pt-8 border-t border-white/5 text-xs font-en">&copy; 2026 Otona Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Header Background on Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'bg-darker/95');
+                header.classList.remove('bg-darker/80');
+            } else {
+                header.classList.remove('shadow-lg', 'bg-darker/95');
+                header.classList.add('bg-darker/80');
+            }
+        });
+
+        // Scroll Reveal Animation (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // 一度表示したら監視を解除
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach((elem) => {
+            observer.observe(elem);
+        });
+    </script>
+</body>
+</html>
