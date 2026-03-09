@@ -38,12 +38,35 @@
         /* スクロールアニメーション用のカスタムクラス */
         .fade-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.6s ease-out;
         }
         .fade-up.is-visible {
             opacity: 1;
-            transform: translateY(0);
+        }
+
+        /* Chrome + high DPI + GPU 合成で破綻しやすい blur / mix-blend 依存を減らした装飾 */
+        .hero-orb {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+            background: radial-gradient(circle at center, rgba(14, 165, 233, 0.22) 0%, rgba(14, 165, 233, 0.12) 32%, rgba(14, 165, 233, 0.04) 52%, rgba(14, 165, 233, 0) 72%);
+            isolation: isolate;
+        }
+        .hero-orb-secondary {
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.22) 0%, rgba(139, 92, 246, 0.12) 32%, rgba(139, 92, 246, 0.04) 52%, rgba(139, 92, 246, 0) 72%);
+        }
+        .glass-safe {
+            background-color: rgba(15, 23, 42, 0.88);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+            .fade-up {
+                opacity: 1;
+            }
         }
         
         /* テキストのグラデーション */
@@ -71,7 +94,7 @@
 <body class="bg-darker text-light font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
     <!-- Header / Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-darker/80 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="header">
+    <header class="fixed w-full top-0 z-50 bg-darker/90 glass-safe border-b border-white/10 transition-colors duration-300" id="header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
@@ -115,13 +138,13 @@
         <!-- Background elements -->
         <div class="absolute inset-0 z-0">
             <!-- ダミーフライヤー(表)を背景にぼかして使用 -->
-            <img src="Image/ideal1-re_omote.png" alt="Background Flyer" class="w-full h-full object-cover opacity-20 filter blur-sm scale-105" onerror="this.style.display='none'">
+            <img src="Image/ideal1-re_omote.png" alt="Background Flyer" class="w-full h-full object-cover opacity-12 scale-105" onerror="this.style.display='none'">
             <div class="absolute inset-0 bg-hero-pattern"></div>
         </div>
         
         <!-- Glowing Orbs -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="hero-orb absolute top-1/4 left-1/4 w-[26rem] h-[26rem] opacity-70"></div>
+        <div class="hero-orb hero-orb-secondary absolute bottom-1/4 right-1/4 w-[26rem] h-[26rem] opacity-70"></div>
 
         <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center">
             <div class="text-sm md:text-base text-gray-400 tracking-widest mb-4 font-en fade-up text-center leading-relaxed">
@@ -136,7 +159,7 @@
                 <span class="text-2xl md:text-4xl lg:text-5xl text-gray-300 font-normal mt-4 inline-block">〜Replay session〜</span>
             </h1>
 
-            <div class="my-8 inline-block backdrop-blur-sm bg-white/5 border border-white/10 px-6 py-3 rounded-full fade-up">
+            <div class="my-8 inline-block bg-white/5 glass-safe border border-white/10 px-6 py-3 rounded-full fade-up">
                 <p class="text-lg md:text-xl font-medium tracking-widest">2026.4.1<span class="text-sm">wed</span> - 4.5<span class="text-sm">sun</span></p>
                 <p class="text-sm text-gray-400 mt-1">@ CBGKシブゲキ!!</p>
             </div>
@@ -147,7 +170,7 @@
             <p class="mt-4 text-gray-300 font-light tracking-wide fade-up">朗読×ACTの新感覚バトルエンターテイメント!!<br>1st session 待望の再演決定!!</p>
 
             <div class="mt-10 fade-up">
-                <a href="https://www.confetti-web.com/@/otonapro-67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:from-sky-400 hover:to-purple-400 transition-all duration-300 shadow-lg shadow-primary/30 transform hover:-translate-y-1">
+                <a href="https://www.confetti-web.com/@/otonapro-67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:from-sky-400 hover:to-purple-400 transition-colors duration-300 shadow-lg shadow-primary/30">
                     カンフェティで購入する
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
@@ -805,7 +828,7 @@
 
             <div class="text-center mb-12 fade-up">
                 <div class="mt-4">
-                    <a href="https://www.confetti-web.com/@/otonapro-67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:from-sky-400 hover:to-purple-400 transition-all duration-300 shadow-lg shadow-primary/30 transform hover:-translate-y-1">
+                    <a href="https://www.confetti-web.com/@/otonapro-67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:from-sky-400 hover:to-purple-400 transition-colors duration-300 shadow-lg shadow-primary/30">
                         カンフェティで購入する
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
@@ -984,11 +1007,11 @@
             <div class="w-full mx-auto flex flex-col md:flex-row gap-8 justify-center items-center fade-up">
                 <!-- 表面 -->
                 <div class="w-full sm:w-4/5 md:w-1/2 rounded-xl overflow-hidden shadow-2xl shadow-primary/20 border border-white/10 relative group">
-                    <img src="Image/ideal1-re_omote.jpg" alt="アイディール・セミナー フライヤー 表面" class="w-full h-auto transition-transform duration-500 group-hover:scale-105" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Front (Dummy)%3C/text%3E%3C/svg%3E'">
+                    <img src="Image/ideal1-re_omote.jpg" alt="アイディール・セミナー フライヤー 表面" class="w-full h-auto" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Front (Dummy)%3C/text%3E%3C/svg%3E'">
                 </div>
                 <!-- 裏面 -->
                 <div class="w-full sm:w-4/5 md:w-1/2 rounded-xl overflow-hidden shadow-2xl shadow-secondary/20 border border-white/10 relative group">
-                    <img src="Image/ideal1-re_ura.jpg" alt="アイディール・セミナー フライヤー 裏面" class="w-full h-auto transition-transform duration-500 group-hover:scale-105" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Back (Dummy)%3C/text%3E%3C/svg%3E'">
+                    <img src="Image/ideal1-re_ura.jpg" alt="アイディール・セミナー フライヤー 裏面" class="w-full h-auto" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Back (Dummy)%3C/text%3E%3C/svg%3E'">
                 </div>
             </div>
         </div>
@@ -1000,7 +1023,7 @@
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 40px 40px;"></div>
         
         <div class="max-w-3xl mx-auto px-4 relative z-10 fade-up">
-            <div class="border border-white/20 bg-darker/80 backdrop-blur-md p-8 md:p-12 shadow-2xl relative">
+            <div class="border border-white/20 bg-darker/90 glass-safe p-8 md:p-12 shadow-2xl relative">
                 <!-- Corner decorations -->
                 <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
                 <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary"></div>
@@ -1063,49 +1086,62 @@
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
             });
-        });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
 
         // Header Background on Scroll
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+
+        const syncHeaderState = () => {
+            if (!header) return;
             if (window.scrollY > 50) {
                 header.classList.add('shadow-lg', 'bg-darker/95');
-                header.classList.remove('bg-darker/80');
+                header.classList.remove('bg-darker/90');
             } else {
                 header.classList.remove('shadow-lg', 'bg-darker/95');
-                header.classList.add('bg-darker/80');
+                header.classList.add('bg-darker/90');
             }
-        });
-
-        // Scroll Reveal Animation (Intersection Observer)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
+            ticking = false;
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // 一度表示したら監視を解除
-                }
-            });
-        }, observerOptions);
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(syncHeaderState);
+                ticking = true;
+            }
+        }, { passive: true });
+        syncHeaderState();
 
-        document.querySelectorAll('.fade-up').forEach((elem) => {
-            observer.observe(elem);
-        });
+        // Scroll Reveal Animation (Intersection Observer)
+        const revealTargets = document.querySelectorAll('.fade-up');
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, io) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -8% 0px',
+                threshold: 0.08
+            });
+
+            revealTargets.forEach(elem => observer.observe(elem));
+        } else {
+            revealTargets.forEach(elem => elem.classList.add('is-visible'));
+        }
     </script>
 </body>
 </html>
