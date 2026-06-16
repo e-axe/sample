@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラブイデオロギーは突然に〈劇場版〉 | 劇団だるめしあん25周年記念公演</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main-red': '#D32F2F',
+                        'main-green': '#2E8B57',
+                        'sweet-pink': '#FF69B4',
+                        'love-blue': '#4169E1',
+                        'retro-bg': '#FAF8F5',
+                        'text-main': '#333333',
+                    },
+                    fontFamily: {
+                        'dot': ['"DotGothic16"', 'sans-serif'],
+                        'sans': ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        'mincho': ['"Zen Old Mincho"', 'serif'],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0px 0px rgba(51, 51, 51, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタム背景パターン */
+        .bg-dots {
+            background-color: #FAF8F5;
+            background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
+            background-size: 24px 24px;
+        }
+        .bg-halftone-pink {
+            background-color: #fff0f5;
+            background-image: radial-gradient(#FFB6C1 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+        .bg-halftone-blue {
+            background-color: #f0f8ff;
+            background-image: radial-gradient(#add8e6 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+        /* セクションの見出し装飾 */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(211, 47, 47, 0.2);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-dots text-text-main font-sans overflow-x-hidden">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b-2 border-text-main z-50">
+        <div class="max-w-5xl mx-auto px-4 h-14 flex justify-between items-center">
+            <a href="#" class="font-dot text-xl font-bold text-main-red">ラブイデオロギーは突然に</a>
+            <div class="hidden md:flex space-x-6 font-bold text-sm">
+                <a href="#about" class="hover:text-main-red transition">ABOUT</a>
+                <a href="#cast" class="hover:text-main-red transition">CAST</a>
+                <a href="#schedule" class="hover:text-main-red transition">SCHEDULE</a>
+                <a href="#ticket" class="hover:text-main-red transition">TICKET</a>
+            </div>
+            <!-- モバイルメニューボタン -->
+            <button class="md:hidden text-text-main focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t-2 border-text-main absolute w-full">
+            <a href="#about" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">ABOUT</a>
+            <a href="#cast" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">CAST</a>
+            <a href="#schedule" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">SCHEDULE</a>
+            <a href="#ticket" class="block px-4 py-3 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">TICKET</a>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="pt-20 pb-12 px-4 md:pt-28 md:pb-20 relative overflow-hidden bg-main-green">
+        <!-- 背景装飾 -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-20" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #000 2px, #000 4px);"></div>
+        
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center relative z-10">
+            <!-- テキスト情報 -->
+            <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-8 text-white">
+                <p class="font-dot text-sm md:text-base mb-2 tracking-widest">
+                    日本劇作家協会プログラム<br>
+                    劇団だるめしあん25周年記念公演
+                </p>
+                <h1 class="font-dot text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-[4px_4px_0_rgba(211,47,47,1)]">
+                    ラブイデオロギー<br>は突然に<br>
+                    <span class="text-3xl md:text-4xl">〈劇場版〉</span>
+                </h1>
+                <div class="bg-white text-text-main border-2 border-text-main shadow-retro p-4 inline-block mb-6 transform -rotate-2">
+                    <p class="font-bold text-lg md:text-xl">2026.8.7 Fri - 8.11 Tue</p>
+                    <p class="text-sm md:text-base mt-1">作・演出 坂本鈴</p>
+                    <p class="text-sm md:text-base">＠ 座・高円寺１</p>
+                </div>
+                <div class="mt-4">
+                    <a href="#ticket" class="inline-block bg-main-red text-white font-bold font-dot text-xl py-3 px-8 border-2 border-text-main shadow-retro hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
+                        チケット予約はこちら ▶
+                    </a>
+                </div>
+            </div>
+            
+            <!-- フライヤー画像（表） -->
+            <div class="w-full md:w-1/2 max-w-sm mx-auto">
+                <div class="border-4 border-text-main shadow-[8px_8px_0_rgba(51,51,51,1)] bg-white p-2 transform rotate-2">
+                    <img src="Image/loveide2026_omote.png" onerror="this.src='https://placehold.co/800x1130/3eb489/fff?text=Flyer+Front'" alt="ラブイデオロギーは突然に フライヤー表" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT / あらすじ -->
+    <section id="about" class="py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">ABOUT</h2>
+            </div>
+            
+            <div class="bg-white border-2 border-text-main p-6 md:p-10 shadow-retro rounded-xl relative">
+                <!-- ガラケー風の装飾 -->
+                <div class="absolute -top-4 -left-4 w-8 h-8 bg-sweet-pink border-2 border-text-main rounded-full flex items-center justify-center">
+                    <span class="text-white text-xs">♥</span>
+                </div>
+                
+                <h3 class="font-mincho text-xl md:text-2xl font-bold mb-6 text-main-red leading-relaxed text-center">
+                    ドラマ化したケータイ小説『あまこい』の世界に転生する<br class="hidden md:block">原作者と脚本家。
+                </h3>
+                
+                <div class="space-y-4 text-base md:text-lg leading-loose font-medium">
+                    <p>ケータイ小説特有の悲劇的な運命を回避するため奔走していくが、やがて最も大きな「罪」に気がついていく……。</p>
+                    <p>ともに40代女性である二人が、20年前の作品世界に触れ、自分たちが囚われていた価値観を見つめ直していくシスターフッド作品。</p>
+                    <p class="text-center mt-8 font-bold text-main-green text-lg md:text-xl">
+                        『ガチゲキ!!復活前年祭』で大好評を呼んだ本作品が、<br>
+                        座・高円寺１で蘇る！
+                    </p>
+                </div>
+            </div>
+
+            <!-- フライヤー画像（裏） -->
+            <div class="mt-16 border-2 border-text-main shadow-retro bg-white p-2 max-w-2xl mx-auto">
+                <img src="Image/loveide2026_ura.png" onerror="this.src='https://placehold.co/800x1130/ffb6c1/333?text=Flyer+Back+(Correlation+Chart)'" alt="ラブイデオロギーは突然に 相関図（フライヤー裏）" class="w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- CAST / キャスト -->
+    <section id="cast" class="py-16 md:py-24 border-t-2 border-text-main bg-retro-bg">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">CAST</h2>
+                <p class="mt-4 font-bold text-gray-600">一部Wキャストによる【甘組】【恋組】の2チーム公演</p>
+            </div>
+
+            <!-- 甘組 -->
+            <div class="mb-20 bg-halftone-pink border-2 border-text-main rounded-3xl p-6 md:p-10 shadow-retro">
+                <div class="text-center mb-8">
+                    <h3 class="inline-block font-dot text-3xl font-bold bg-white text-sweet-pink border-2 border-text-main px-8 py-2 rounded-full transform -rotate-2">
+                        甘組
+                    </h3>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4">
+                    <!-- キャストカード生成用スクリプト（HTML内に直接記述） -->
+                    <!-- ※実際は動的生成か静的記述。ここでは静的に記述しダミー画像をフォールバック指定 -->
+                    
+                    <!-- 甘組キャスト1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_01.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="田実陽子" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">杉原美咲</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">田実陽子</p>
+                    </div>
+                    <!-- 甘組キャスト2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_02.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="小泉まき" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">藤井リカ</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">小泉まき<br><span class="text-[10px] font-normal">(中野成樹+フランケンズ)</span></p>
+                    </div>
+                    <!-- 甘組キャスト3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_03.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="陽向さと子" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮桜子</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">陽向さと子<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
+                    </div>
+                    <!-- 甘組キャスト4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_04.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="若尾颯太" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">矢吹和也</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">若尾颯太</p>
+                    </div>
+                    <!-- 甘組キャスト5 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_05.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="木内コギト" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">佐伯啓介</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">木内コギト<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
+                    </div>
+                    <!-- 甘組キャスト6 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_06.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="菅野貴夫" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮秀俊</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">菅野貴夫</p>
+                    </div>
+                    <!-- 甘組キャスト7 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_07.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="岡田 優" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">桜庭哲平</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">岡田 優<br><span class="text-[10px] font-normal">(㈱オフィス33)</span></p>
+                    </div>
+                    <!-- 甘組キャスト8 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_08.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="小林桃香" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">柴崎小雪</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">小林桃香<br><span class="text-[10px] font-normal">(露と枕)</span></p>
+                    </div>
+                    <!-- 甘組キャスト9 -->
+                    <div class="flex flex-col items-center lg:col-start-3">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_09.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="榊原あみ" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">岩瀬あかり</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">榊原あみ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 恋組 -->
+            <div class="bg-halftone-blue border-2 border-text-main rounded-3xl p-6 md:p-10 shadow-retro">
+                <div class="text-center mb-8">
+                    <h3 class="inline-block font-dot text-3xl font-bold bg-white text-love-blue border-2 border-text-main px-8 py-2 rounded-full transform rotate-2">
+                        恋組
+                    </h3>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4">
+                    <!-- 恋組キャスト1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_10.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="高羽彩" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">杉原美咲</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">高羽彩<br><span class="text-[10px] font-normal">(タカハ劇団)</span></p>
+                    </div>
+                    <!-- 恋組キャスト2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_11.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="河南由良" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">藤井リカ</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">河南由良<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
+                    </div>
+                    <!-- 恋組キャスト3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_12.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="大内彩加" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮桜子</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">大内彩加<br><span class="text-[10px] font-normal">(Spacenoid Company)</span></p>
+                    </div>
+                    <!-- 恋組キャスト4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_13.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="甲斐優風汰" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">矢吹和也</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">甲斐優風汰</p>
+                    </div>
+                    <!-- 恋組キャスト5 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_14.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="堤和悠樹" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">佐伯啓介</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">堤和悠樹</p>
+                    </div>
+                    <!-- 恋組キャスト6 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_15.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="中嶌聡" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮秀俊</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">中嶌聡</p>
+                    </div>
+                    <!-- 恋組キャスト7 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white relative">
+                             <!-- 特記事項アイコン -->
+                             <div class="absolute -top-1 -right-1 bg-yellow-300 text-xs font-bold px-1 border border-text-main rounded transform rotate-12">斧くん</div>
+                            <img src="Image/loveide2026_cast_16.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="吉岡あきこ" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">澤村順子</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main">吉岡あきこ</p>
+                    </div>
+                    <!-- 恋組キャスト8 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_17.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="木村美月" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">柴崎小雪</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">木村美月<br><span class="text-[10px] font-normal">(j-beans)</span></p>
+                    </div>
+                    <!-- 恋組キャスト9 -->
+                    <div class="flex flex-col items-center lg:col-start-3">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
+                            <img src="Image/loveide2026_cast_18.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="林美月" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs font-bold text-gray-600 mb-1">岩瀬あかり</p>
+                        <p class="text-xs">as</p>
+                        <p class="text-sm md:text-base font-bold text-text-main text-center">林美月<br><span class="text-[10px] font-normal">(にもじ)</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE / 公演スケジュール -->
+    <section id="schedule" class="py-16 md:py-24 border-t-2 border-text-main relative overflow-hidden bg-white">
+        <!-- ドット装飾 -->
+        <div class="absolute top-10 right-10 w-20 h-20 bg-main-green opacity-20 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 left-10 w-32 h-32 bg-main-red opacity-10 rounded-full blur-2xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">SCHEDULE</h2>
+                <p class="mt-4 font-bold text-lg">2026年8月7日(金) 〜 11日(火)</p>
+            </div>
+
+            <!-- タイムテーブル -->
+            <div class="overflow-x-auto bg-white border-2 border-text-main shadow-retro">
+                <table class="w-full text-center border-collapse whitespace-nowrap min-w-[600px]">
+                    <thead>
+                        <tr class="bg-gray-100 border-b-2 border-text-main">
+                            <th class="py-3 px-4 border-r-2 border-text-main font-dot text-lg">日程</th>
+                            <th class="py-3 px-4 border-r border-gray-300">7<span class="text-xs ml-1">(金)</span></th>
+                            <th class="py-3 px-4 border-r border-gray-300 text-blue-600">8<span class="text-xs ml-1">(土)</span></th>
+                            <th class="py-3 px-4 border-r border-gray-300 text-red-600">9<span class="text-xs ml-1">(日)</span></th>
+                            <th class="py-3 px-4 border-r border-gray-300">10<span class="text-xs ml-1">(月)</span></th>
+                            <th class="py-3 px-4">11<span class="text-xs ml-1">(火)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-4 px-4 border-r-2 border-text-main font-bold">13:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-sweet-pink text-white font-bold py-1 px-3 rounded-full text-sm">甘組</span>
+                                <span class="text-main-red font-bold text-lg">★</span>
+                            </td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4">
+                                <span class="inline-block bg-love-blue text-white font-bold py-1 px-3 rounded-full text-sm">恋組</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-300 bg-gray-50">
+                            <td class="py-4 px-4 border-r-2 border-text-main font-bold">14:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-love-blue text-white font-bold py-1 px-3 rounded-full text-sm">恋組</span>
+                                <span class="text-main-red font-bold text-lg">★</span>
+                            </td>
+                            <td class="py-4 px-4"></td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-4 px-4 border-r-2 border-text-main font-bold">15:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-sweet-pink text-white font-bold py-1 px-3 rounded-full text-sm">甘組</span>
+                            </td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4"></td>
+                        </tr>
+                        <tr class="border-b border-gray-300 bg-gray-50">
+                            <td class="py-4 px-4 border-r-2 border-text-main font-bold">17:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-love-blue text-white font-bold py-1 px-3 rounded-full text-sm">恋組</span>
+                            </td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4"></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 border-r-2 border-text-main font-bold">19:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-sweet-pink text-white font-bold py-1 px-3 rounded-full text-sm">甘組</span>
+                                <div class="text-xs mt-1 font-bold text-main-red">初恋割</div>
+                            </td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-love-blue text-white font-bold py-1 px-3 rounded-full text-sm">恋組</span>
+                                <div class="text-xs mt-1 font-bold text-main-red">初恋割</div>
+                            </td>
+                            <td class="py-4 px-4 border-r border-gray-300"></td>
+                            <td class="py-4 px-4 border-r border-gray-300">
+                                <span class="inline-block bg-sweet-pink text-white font-bold py-1 px-3 rounded-full text-sm">甘組</span>
+                            </td>
+                            <td class="py-4 px-4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6 text-sm font-medium space-y-2 bg-gray-100 p-4 border-2 border-text-main border-dashed">
+                <p>※受付開始は開演の45分前、開場は開演の30分前</p>
+                <p>※上演時間は110分程度（休憩なし）を予定しております。</p>
+                <p class="text-main-red font-bold">★託児サービスあり（定員あり／曜日によって事業者・申し込み方法・対象年齢が異なります。詳細は座・高円寺にお問い合わせください。）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKET / チケット -->
+    <section id="ticket" class="py-16 md:py-24 border-t-2 border-text-main bg-main-green/10">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">TICKET</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 料金表 -->
+                <div class="bg-white border-2 border-text-main p-6 shadow-retro">
+                    <h3 class="font-dot text-xl font-bold mb-4 border-b-2 border-text-main pb-2">チケット料金（全席自由）</h3>
+                    <ul class="space-y-4 font-bold">
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                            <span>一般</span>
+                            <span class="text-xl">5,000円</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                            <span>U-25</span>
+                            <span class="text-xl">3,500円</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2 text-main-red">
+                            <div class="flex flex-col">
+                                <span>初恋割 <span class="text-xs font-normal">［初回割引］</span></span>
+                            </div>
+                            <span class="text-xl">4,500円</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                            <span>杉並区民割引</span>
+                            <span class="text-xl">4,500円</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2 text-main-green">
+                            <div class="flex flex-col">
+                                <span>あまこいセット券</span>
+                                <span class="text-xs font-normal">甘組・恋組両チームを各回500円引でご観劇</span>
+                            </div>
+                            <span class="text-xl">9,000円</span>
+                        </li>
+                    </ul>
+                    <p class="text-xs mt-4 text-gray-600">※障害者割引：各券種500円引き（座・高円寺ボックスオフィスのみ取り扱い）</p>
+                </div>
+
+                <!-- 予約・会場情報 -->
+                <div class="space-y-6">
+                    <div class="bg-white border-2 border-text-main p-6 shadow-retro flex flex-col justify-center items-center text-center">
+                        <h3 class="font-dot text-xl font-bold mb-4 text-main-red">ご予約はこちら</h3>
+                        <a href="#" class="block w-full bg-main-red text-white font-bold text-lg py-4 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all mb-4">
+                            WEB予約フォームへ
+                        </a>
+                        <p class="text-sm font-bold text-gray-700">劇団だるめしあん</p>
+                    </div>
+
+                    <div class="bg-white border-2 border-text-main p-6 shadow-retro">
+                        <h3 class="font-dot text-xl font-bold mb-3 border-b-2 border-text-main pb-2">会場</h3>
+                        <p class="text-xl font-bold mb-2">座・高円寺１</p>
+                        <p class="text-sm text-gray-600 mb-4">
+                            〒166-0002<br>
+                            東京都杉並区高円寺北2-1-2<br>
+                            JR中央線「高円寺」駅 北口より徒歩5分
+                        </p>
+                        <a href="https://za-koenji.jp/" target="_blank" rel="noopener noreferrer" class="text-main-blue underline text-sm hover:text-main-red font-bold flex items-center">
+                            会場アクセス詳細を見る
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / スタッフクレジット -->
+    <footer class="bg-text-main text-white py-12 px-4 font-sans text-sm">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10 text-center">
+                <h2 class="font-dot text-2xl font-bold mb-2">ラブイデオロギーは突然に〈劇場版〉</h2>
+                <p class="text-gray-400">劇団だるめしあん25周年記念公演</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10 text-gray-300 leading-relaxed max-w-4xl mx-auto text-center md:text-left">
+                <span><b class="text-white">作・演出:</b> 坂本鈴</span>
+                <span><b class="text-white">舞台監督:</b> 土居歩</span>
+                <span><b class="text-white">舞台美術:</b> 多賀慧(黒組)</span>
+                <span><b class="text-white">照明:</b> 瀬戸あずさ（balance,inc.DESIGN）</span>
+                <span><b class="text-white">音響:</b> 大嵜逸生</span>
+                <span><b class="text-white">演出助手:</b> 由木貴</span>
+                <span><b class="text-white">宣伝美術:</b> 安藤理樹</span>
+                <span><b class="text-white">主題歌協力:</b> PEPESALE</span>
+                <span><b class="text-white">企画補佐:</b> タナバタカナリア</span>
+                <span><b class="text-white">LPサイト制作:</b> 斧口智彦 (Theatre劇団子)</span>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400 space-y-2 text-xs md:text-sm">
+                <p>提携：ＮＰＯ法人劇場創造ネットワーク／座・高円寺</p>
+                <p>主催：劇団だるめしあん</p>
+                <p>協力：エアフォルク企画、キューブ、株式会社2PS</p>
+                <p class="mt-6 font-dot text-gray-500">© 2026 Gekidan Dalmatian All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
