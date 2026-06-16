@@ -87,7 +87,7 @@
             </button>
         </div>
         <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t-2 border-text-main absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t-2 border-text-main absolute w-full shadow-md">
             <a href="#about" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">ABOUT</a>
             <a href="#cast" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">CAST</a>
             <a href="#schedule" class="block px-4 py-3 border-b border-gray-200 font-bold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">SCHEDULE</a>
@@ -97,11 +97,9 @@
 
     <!-- ヒーローセクション -->
     <header class="pt-20 pb-12 px-4 md:pt-28 md:pb-20 relative overflow-hidden bg-main-green">
-        <!-- 背景装飾 -->
         <div class="absolute top-0 left-0 w-full h-full opacity-20" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #000 2px, #000 4px);"></div>
         
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center relative z-10">
-            <!-- テキスト情報 -->
             <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-8 text-white">
                 <p class="font-dot text-sm md:text-base mb-2 tracking-widest">
                     日本劇作家協会プログラム<br>
@@ -123,7 +121,6 @@
                 </div>
             </div>
             
-            <!-- フライヤー画像（表） -->
             <div class="w-full md:w-1/2 max-w-sm mx-auto">
                 <div class="border-4 border-text-main shadow-[8px_8px_0_rgba(51,51,51,1)] bg-white p-2 transform rotate-2">
                     <img src="Image/loveide2026_omote.png" onerror="this.src='https://placehold.co/800x1130/3eb489/fff?text=Flyer+Front'" alt="ラブイデオロギーは突然に フライヤー表" class="w-full h-auto">
@@ -140,7 +137,6 @@
             </div>
             
             <div class="bg-white border-2 border-text-main p-6 md:p-10 shadow-retro rounded-xl relative">
-                <!-- ガラケー風の装飾 -->
                 <div class="absolute -top-4 -left-4 w-8 h-8 bg-sweet-pink border-2 border-text-main rounded-full flex items-center justify-center">
                     <span class="text-white text-xs">♥</span>
                 </div>
@@ -159,208 +155,404 @@
                 </div>
             </div>
 
-            <!-- フライヤー画像（裏） -->
             <div class="mt-16 border-2 border-text-main shadow-retro bg-white p-2 max-w-2xl mx-auto">
                 <img src="Image/loveide2026_ura.png" onerror="this.src='https://placehold.co/800x1130/ffb6c1/333?text=Flyer+Back+(Correlation+Chart)'" alt="ラブイデオロギーは突然に 相関図（フライヤー裏）" class="w-full h-auto">
             </div>
         </div>
     </section>
 
-    <!-- CAST / キャスト -->
+    <!-- CAST / キャスト（相関図） -->
     <section id="cast" class="py-16 md:py-24 border-t-2 border-text-main bg-retro-bg">
-        <div class="max-w-5xl mx-auto px-4">
+        <div class="max-w-6xl mx-auto px-2 md:px-4">
             <div class="text-center mb-16">
-                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">CAST</h2>
-                <p class="mt-4 font-bold text-gray-600">一部Wキャストによる【甘組】【恋組】の2チーム公演</p>
+                <h2 class="font-dot text-3xl md:text-4xl font-bold section-title">CAST & CORRELATION</h2>
+                <p class="mt-4 font-bold text-gray-600 text-sm md:text-base">一部Wキャストによる【甘組】【恋組】の2チーム公演</p>
             </div>
 
-            <!-- 甘組 -->
-            <div class="mb-20 bg-halftone-pink border-2 border-text-main rounded-3xl p-6 md:p-10 shadow-retro">
+            <!-- ================= 甘組 相関図 ================= -->
+            <div class="mb-24 bg-halftone-pink border-2 border-text-main rounded-3xl p-3 md:p-8 shadow-retro">
                 <div class="text-center mb-8">
                     <h3 class="inline-block font-dot text-3xl font-bold bg-white text-sweet-pink border-2 border-text-main px-8 py-2 rounded-full transform -rotate-2">
                         甘組
                     </h3>
                 </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4">
-                    <!-- キャストカード生成用スクリプト（HTML内に直接記述） -->
-                    <!-- ※実際は動的生成か静的記述。ここでは静的に記述しダミー画像をフォールバック指定 -->
+
+                <div class="relative max-w-4xl mx-auto bg-white/90 backdrop-blur px-1 py-8 md:p-8 rounded-xl border-2 border-text-main shadow-sm overflow-hidden">
                     
-                    <!-- 甘組キャスト1 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_01.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="田実陽子" class="w-full h-full object-cover">
+                    <!-- 現実世界ラベル -->
+                    <div class="absolute top-2 left-2 md:-top-4 md:left-4 bg-gray-800 text-white text-[10px] md:text-sm px-3 py-1 rounded shadow z-20">現実世界</div>
+
+                    <!-- メイングリッド -->
+                    <div class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-x-4 md:gap-y-4 pt-4 md:pt-0">
+                        
+                        <!-- ROW 1: 現実世界 -->
+                        <div class="flex flex-col items-center">
+                            <!-- 杉原 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_01.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="田実陽子" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">杉原美咲</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">田実陽子</p>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">杉原美咲</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">田実陽子</p>
-                    </div>
-                    <!-- 甘組キャスト2 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_02.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="小泉まき" class="w-full h-full object-cover">
+
+                        <div class="flex flex-col items-center justify-start mt-2 md:mt-4">
+                            <!-- 桜庭 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_07.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="岡田 優" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">桜庭哲平</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">岡田 優<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(㈱オフィス33)</span></p>
+                                <span class="inline-block mt-1 bg-gray-200 text-[8px] md:text-[10px] px-1 rounded whitespace-nowrap">現実世界側の人物</span>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">藤井リカ</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">小泉まき<br><span class="text-[10px] font-normal">(中野成樹+フランケンズ)</span></p>
-                    </div>
-                    <!-- 甘組キャスト3 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_03.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="陽向さと子" class="w-full h-full object-cover">
+
+                        <div class="flex flex-col items-center">
+                            <!-- 藤井 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_02.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="小泉まき" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">藤井リカ</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">小泉まき<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(中野成樹+フランケンズ)</span></p>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮桜子</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">陽向さと子<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
-                    </div>
-                    <!-- 甘組キャスト4 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_04.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="若尾颯太" class="w-full h-full object-cover">
+
+                        <!-- ROW 2: 転生矢印 -->
+                        <div class="flex justify-center items-center flex-col text-main-red font-bold">
+                            <span class="text-[9px] md:text-xs bg-white border border-main-red px-2 py-0.5 rounded-full z-10 shadow-sm animate-pulse whitespace-nowrap">転生!?</span>
+                            <div class="h-6 md:h-10 border-l-2 border-dashed border-main-red -mt-1"></div>
+                            <span class="text-main-red leading-none -mt-2 text-sm md:text-lg">▼</span>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">矢吹和也</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">若尾颯太</p>
-                    </div>
-                    <!-- 甘組キャスト5 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_05.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="木内コギト" class="w-full h-full object-cover">
+                        <div></div>
+                        <div class="flex justify-center items-center flex-col text-main-red font-bold">
+                            <span class="text-[9px] md:text-xs bg-white border border-main-red px-2 py-0.5 rounded-full z-10 shadow-sm animate-pulse whitespace-nowrap">転生!?</span>
+                            <div class="h-6 md:h-10 border-l-2 border-dashed border-main-red -mt-1"></div>
+                            <span class="text-main-red leading-none -mt-2 text-sm md:text-lg">▼</span>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">佐伯啓介</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">木内コギト<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
-                    </div>
-                    <!-- 甘組キャスト6 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_06.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="菅野貴夫" class="w-full h-full object-cover">
+
+                        <!-- ================= あまこい世界コンテナ ================= -->
+                        <div class="col-span-3 relative border-[2px] border-dashed border-sweet-pink bg-sweet-pink/5 rounded-xl pt-8 pb-4 px-1 md:px-4 mt-2">
+                            <div class="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 bg-sweet-pink text-white font-bold text-[10px] md:text-sm px-4 md:px-6 py-1 rounded-full shadow whitespace-nowrap z-20">あまこい世界 ♥</div>
+
+                            <div class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-x-4 md:gap-y-4">
+                                
+                                <!-- ROW 3: あまこい 上段 -->
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 柴崎 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-sweet-pink overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_08.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="小林桃香" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">柴崎小雪</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">小林桃香<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(露と枕)</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div></div>
+                                
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 岩瀬 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-sweet-pink overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_09.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="榊原あみ" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">岩瀬あかり</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">榊原あみ</p>
+                                    </div>
+                                </div>
+
+                                <!-- ROW 4: あまこい 縦矢印（好意） -->
+                                <div class="flex justify-center items-center flex-col text-sweet-pink -mt-2 md:-mt-4 relative z-10">
+                                    <span class="text-[8px] md:text-[10px] bg-white px-1 border border-sweet-pink rounded-full z-10 whitespace-nowrap">好意 ♡</span>
+                                    <div class="h-8 md:h-12 border-l-2 border-sweet-pink -mt-2"></div>
+                                    <span class="text-sweet-pink leading-none -mt-2 text-sm md:text-base">▼</span>
+                                </div>
+                                <div></div>
+                                <div class="flex justify-center items-center flex-col text-sweet-pink -mt-2 md:-mt-4 relative z-10">
+                                    <span class="text-[8px] md:text-[10px] bg-white px-1 border border-sweet-pink rounded-full z-10 whitespace-nowrap">好意 ♡</span>
+                                    <div class="h-8 md:h-12 border-l-2 border-sweet-pink -mt-2"></div>
+                                    <span class="text-sweet-pink leading-none -mt-2 text-sm md:text-base">▼</span>
+                                </div>
+
+                                <!-- ROW 5: あまこい 中段 -->
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 矢吹 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-red overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_04.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="若尾颯太" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-red mb-0">矢吹和也</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">若尾颯太</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center relative w-full">
+                                    <!-- 桜子 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-red overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_03.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="陽向さと子" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1 relative z-20">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-red mb-0">雨宮桜子</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight bg-white/80 rounded px-1">陽向さと子<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(劇団だるめしあん)</span></p>
+                                    </div>
+
+                                    <!-- 左矢印（恋愛） -->
+                                    <div class="absolute top-7 md:top-10 lg:top-12 right-[50%] w-full flex items-center justify-center -z-10 text-main-red px-10 md:px-14 lg:px-16">
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px] border-r-main-red"></div>
+                                        <div class="flex-grow border-t-2 border-main-red h-0"></div>
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px] border-l-main-red"></div>
+                                        <span class="absolute -top-3 md:-top-4 bg-white/90 px-1.5 text-[7px] md:text-[10px] font-bold border border-main-red rounded-full whitespace-nowrap z-10 shadow-sm">恋愛 ♡</span>
+                                    </div>
+
+                                    <!-- 右矢印（先生） -->
+                                    <div class="absolute top-7 md:top-10 lg:top-12 left-[50%] w-full flex items-center justify-center -z-10 text-love-blue px-10 md:px-14 lg:px-16">
+                                        <div class="flex-grow border-t-2 border-love-blue h-0"></div>
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px] border-l-love-blue"></div>
+                                        <span class="absolute -top-3 md:-top-4 bg-white/90 px-1.5 text-[7px] md:text-[10px] font-bold border border-love-blue rounded-full whitespace-nowrap z-10 shadow-sm">先生</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 佐伯 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-love-blue overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_05.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="木内コギト" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-love-blue mb-0">佐伯啓介</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">木内コギト<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(劇団だるめしあん)</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- ROW 6: あまこい 下段（親子矢印） -->
+                                <div></div>
+                                <div class="flex justify-center items-center flex-col text-main-green -mt-4 md:-mt-6 relative z-0">
+                                    <div class="h-10 md:h-14 border-l-2 border-main-green"></div>
+                                    <span class="absolute top-1/2 transform -translate-y-1/2 text-[8px] md:text-[10px] bg-white px-1 border border-main-green rounded-full z-10 whitespace-nowrap font-bold">親子</span>
+                                </div>
+                                <div></div>
+
+                                <!-- ROW 7: あまこい 下段（秀俊） -->
+                                <div></div>
+                                <div class="flex flex-col items-center relative z-20 -mt-2 md:-mt-4">
+                                    <!-- 秀俊 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-green overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_06.jpg" onerror="this.src='https://placehold.co/200x200/e0f8e0/2e8b57?text=Photo'" alt="菅野貴夫" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-green mb-0">雨宮秀俊</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">菅野貴夫</p>
+                                    </div>
+                                </div>
+                                <div></div>
+
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮秀俊</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">菅野貴夫</p>
-                    </div>
-                    <!-- 甘組キャスト7 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_07.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="岡田 優" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">桜庭哲平</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">岡田 優<br><span class="text-[10px] font-normal">(㈱オフィス33)</span></p>
-                    </div>
-                    <!-- 甘組キャスト8 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_08.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="小林桃香" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">柴崎小雪</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">小林桃香<br><span class="text-[10px] font-normal">(露と枕)</span></p>
-                    </div>
-                    <!-- 甘組キャスト9 -->
-                    <div class="flex flex-col items-center lg:col-start-3">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-sweet-pink overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_09.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="榊原あみ" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">岩瀬あかり</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">榊原あみ</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 恋組 -->
-            <div class="bg-halftone-blue border-2 border-text-main rounded-3xl p-6 md:p-10 shadow-retro">
+            <!-- ================= 恋組 相関図 ================= -->
+            <div class="bg-halftone-blue border-2 border-text-main rounded-3xl p-3 md:p-8 shadow-retro">
                 <div class="text-center mb-8">
                     <h3 class="inline-block font-dot text-3xl font-bold bg-white text-love-blue border-2 border-text-main px-8 py-2 rounded-full transform rotate-2">
                         恋組
                     </h3>
                 </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4">
-                    <!-- 恋組キャスト1 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_10.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="高羽彩" class="w-full h-full object-cover">
+
+                <div class="relative max-w-4xl mx-auto bg-white/90 backdrop-blur px-1 py-8 md:p-8 rounded-xl border-2 border-text-main shadow-sm overflow-hidden">
+                    
+                    <!-- 現実世界ラベル -->
+                    <div class="absolute top-2 left-2 md:-top-4 md:left-4 bg-gray-800 text-white text-[10px] md:text-sm px-3 py-1 rounded shadow z-20">現実世界</div>
+
+                    <!-- メイングリッド -->
+                    <div class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-x-4 md:gap-y-4 pt-4 md:pt-0">
+                        
+                        <!-- ROW 1: 現実世界 -->
+                        <div class="flex flex-col items-center">
+                            <!-- 杉原 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_10.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="高羽彩" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">杉原美咲</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">高羽彩<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(タカハ劇団)</span></p>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">杉原美咲</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">高羽彩<br><span class="text-[10px] font-normal">(タカハ劇団)</span></p>
-                    </div>
-                    <!-- 恋組キャスト2 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_11.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="河南由良" class="w-full h-full object-cover">
+
+                        <div class="flex flex-col items-center justify-start mt-2 md:mt-4">
+                            <!-- 澤村 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_16.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="吉岡あきこ" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">澤村順子</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">吉岡あきこ</p>
+                                <span class="inline-block mt-1 bg-gray-200 text-[8px] md:text-[10px] px-1 rounded whitespace-nowrap">現実世界側の人物</span>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">藤井リカ</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">河南由良<br><span class="text-[10px] font-normal">(劇団だるめしあん)</span></p>
-                    </div>
-                    <!-- 恋組キャスト3 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_12.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="大内彩加" class="w-full h-full object-cover">
+
+                        <div class="flex flex-col items-center">
+                            <!-- 藤井 -->
+                            <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-gray-400 overflow-hidden shadow bg-white">
+                                <img src="Image/loveide2026_cast_11.jpg" onerror="this.src='https://placehold.co/200x200/eee/999?text=Photo'" alt="河南由良" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-1">
+                                <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">藤井リカ</p>
+                                <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">河南由良<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(劇団だるめしあん)</span></p>
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮桜子</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">大内彩加<br><span class="text-[10px] font-normal">(Spacenoid Company)</span></p>
-                    </div>
-                    <!-- 恋組キャスト4 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_13.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="甲斐優風汰" class="w-full h-full object-cover">
+
+                        <!-- ROW 2: 転生矢印 -->
+                        <div class="flex justify-center items-center flex-col text-main-red font-bold">
+                            <span class="text-[9px] md:text-xs bg-white border border-main-red px-2 py-0.5 rounded-full z-10 shadow-sm animate-pulse whitespace-nowrap">転生!?</span>
+                            <div class="h-6 md:h-10 border-l-2 border-dashed border-main-red -mt-1"></div>
+                            <span class="text-main-red leading-none -mt-2 text-sm md:text-lg">▼</span>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">矢吹和也</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">甲斐優風汰</p>
-                    </div>
-                    <!-- 恋組キャスト5 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_14.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="堤和悠樹" class="w-full h-full object-cover">
+                        <div></div>
+                        <div class="flex justify-center items-center flex-col text-main-red font-bold">
+                            <span class="text-[9px] md:text-xs bg-white border border-main-red px-2 py-0.5 rounded-full z-10 shadow-sm animate-pulse whitespace-nowrap">転生!?</span>
+                            <div class="h-6 md:h-10 border-l-2 border-dashed border-main-red -mt-1"></div>
+                            <span class="text-main-red leading-none -mt-2 text-sm md:text-lg">▼</span>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">佐伯啓介</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">堤和悠樹</p>
-                    </div>
-                    <!-- 恋組キャスト6 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_15.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="中嶌聡" class="w-full h-full object-cover">
+
+                        <!-- ================= あまこい世界コンテナ ================= -->
+                        <div class="col-span-3 relative border-[2px] border-dashed border-love-blue bg-love-blue/5 rounded-xl pt-8 pb-4 px-1 md:px-4 mt-2">
+                            <div class="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 bg-love-blue text-white font-bold text-[10px] md:text-sm px-4 md:px-6 py-1 rounded-full shadow whitespace-nowrap z-20">あまこい世界 ♥</div>
+
+                            <div class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-x-4 md:gap-y-4">
+                                
+                                <!-- ROW 3: あまこい 上段 -->
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 柴崎 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-love-blue overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_17.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="木村美月" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">柴崎小雪</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">木村美月<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(j-beans)</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div></div>
+                                
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 岩瀬 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-love-blue overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_18.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="林美月" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-gray-600 mb-0">岩瀬あかり</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">林美月<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(にもじ)</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- ROW 4: あまこい 縦矢印（好意） -->
+                                <div class="flex justify-center items-center flex-col text-love-blue -mt-2 md:-mt-4 relative z-10">
+                                    <span class="text-[8px] md:text-[10px] bg-white px-1 border border-love-blue rounded-full z-10 whitespace-nowrap">好意 ♡</span>
+                                    <div class="h-8 md:h-12 border-l-2 border-love-blue -mt-2"></div>
+                                    <span class="text-love-blue leading-none -mt-2 text-sm md:text-base">▼</span>
+                                </div>
+                                <div></div>
+                                <div class="flex justify-center items-center flex-col text-love-blue -mt-2 md:-mt-4 relative z-10">
+                                    <span class="text-[8px] md:text-[10px] bg-white px-1 border border-love-blue rounded-full z-10 whitespace-nowrap">好意 ♡</span>
+                                    <div class="h-8 md:h-12 border-l-2 border-love-blue -mt-2"></div>
+                                    <span class="text-love-blue leading-none -mt-2 text-sm md:text-base">▼</span>
+                                </div>
+
+                                <!-- ROW 5: あまこい 中段 -->
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 矢吹 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-red overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_13.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="甲斐優風汰" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-red mb-0">矢吹和也</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">甲斐優風汰</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center relative w-full">
+                                    <!-- 桜子 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-red overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_12.jpg" onerror="this.src='https://placehold.co/200x200/ffe4e1/ff69b4?text=Photo'" alt="大内彩加" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1 relative z-20">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-red mb-0">雨宮桜子</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight bg-white/80 rounded px-1">大内彩加<br><span class="text-[7px] md:text-[9px] font-normal block scale-90 -mt-1">(Spacenoid Company)</span></p>
+                                    </div>
+
+                                    <!-- 左矢印（恋愛） -->
+                                    <div class="absolute top-7 md:top-10 lg:top-12 right-[50%] w-full flex items-center justify-center -z-10 text-main-red px-10 md:px-14 lg:px-16">
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px] border-r-main-red"></div>
+                                        <div class="flex-grow border-t-2 border-main-red h-0"></div>
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px] border-l-main-red"></div>
+                                        <span class="absolute -top-3 md:-top-4 bg-white/90 px-1.5 text-[7px] md:text-[10px] font-bold border border-main-red rounded-full whitespace-nowrap z-10 shadow-sm">恋愛 ♡</span>
+                                    </div>
+
+                                    <!-- 右矢印（先生） -->
+                                    <div class="absolute top-7 md:top-10 lg:top-12 left-[50%] w-full flex items-center justify-center -z-10 text-love-blue px-10 md:px-14 lg:px-16">
+                                        <div class="flex-grow border-t-2 border-love-blue h-0"></div>
+                                        <div class="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px] border-l-love-blue"></div>
+                                        <span class="absolute -top-3 md:-top-4 bg-white/90 px-1.5 text-[7px] md:text-[10px] font-bold border border-love-blue rounded-full whitespace-nowrap z-10 shadow-sm">先生</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center relative z-20">
+                                    <!-- 佐伯 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-love-blue overflow-hidden shadow bg-white relative z-20">
+                                        <img src="Image/loveide2026_cast_14.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="堤和悠樹" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-love-blue mb-0">佐伯啓介</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">堤和悠樹</p>
+                                    </div>
+                                </div>
+
+                                <!-- ROW 6: あまこい 下段（親子矢印） -->
+                                <div></div>
+                                <div class="flex justify-center items-center flex-col text-main-green -mt-4 md:-mt-6 relative z-0">
+                                    <div class="h-10 md:h-14 border-l-2 border-main-green"></div>
+                                    <span class="absolute top-1/2 transform -translate-y-1/2 text-[8px] md:text-[10px] bg-white px-1 border border-main-green rounded-full z-10 whitespace-nowrap font-bold">親子</span>
+                                </div>
+                                <div></div>
+
+                                <!-- ROW 7: あまこい 下段（秀俊） -->
+                                <div></div>
+                                <div class="flex flex-col items-center relative z-20 -mt-2 md:-mt-4">
+                                    <!-- 秀俊 -->
+                                    <div class="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[3px] md:border-4 border-main-green overflow-hidden shadow bg-white">
+                                        <img src="Image/loveide2026_cast_15.jpg" onerror="this.src='https://placehold.co/200x200/e0f8e0/2e8b57?text=Photo'" alt="中嶌聡" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <p class="text-[8px] md:text-[10px] font-bold text-main-green mb-0">雨宮秀俊</p>
+                                        <p class="text-[7px] md:text-[9px] text-gray-400 leading-none">as</p>
+                                        <p class="text-[10px] md:text-sm font-bold text-text-main leading-tight">中嶌聡</p>
+                                    </div>
+                                </div>
+                                <div></div>
+
+                            </div>
                         </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">雨宮秀俊</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">中嶌聡</p>
-                    </div>
-                    <!-- 恋組キャスト7 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white relative">
-                             <!-- 特記事項アイコン -->
-                             <div class="absolute -top-1 -right-1 bg-yellow-300 text-xs font-bold px-1 border border-text-main rounded transform rotate-12">斧くん</div>
-                            <img src="Image/loveide2026_cast_16.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="吉岡あきこ" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">澤村順子</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main">吉岡あきこ</p>
-                    </div>
-                    <!-- 恋組キャスト8 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_17.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="木村美月" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">柴崎小雪</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">木村美月<br><span class="text-[10px] font-normal">(j-beans)</span></p>
-                    </div>
-                    <!-- 恋組キャスト9 -->
-                    <div class="flex flex-col items-center lg:col-start-3">
-                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-love-blue overflow-hidden shadow-md mb-3 bg-white">
-                            <img src="Image/loveide2026_cast_18.jpg" onerror="this.src='https://placehold.co/200x200/f0f8ff/4169e1?text=Photo'" alt="林美月" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 mb-1">岩瀬あかり</p>
-                        <p class="text-xs">as</p>
-                        <p class="text-sm md:text-base font-bold text-text-main text-center">林美月<br><span class="text-[10px] font-normal">(にもじ)</span></p>
                     </div>
                 </div>
             </div>
@@ -369,7 +561,6 @@
 
     <!-- SCHEDULE / 公演スケジュール -->
     <section id="schedule" class="py-16 md:py-24 border-t-2 border-text-main relative overflow-hidden bg-white">
-        <!-- ドット装飾 -->
         <div class="absolute top-10 right-10 w-20 h-20 bg-main-green opacity-20 rounded-full blur-xl"></div>
         <div class="absolute bottom-10 left-10 w-32 h-32 bg-main-red opacity-10 rounded-full blur-2xl"></div>
 
@@ -379,7 +570,6 @@
                 <p class="mt-4 font-bold text-lg">2026年8月7日(金) 〜 11日(火)</p>
             </div>
 
-            <!-- タイムテーブル -->
             <div class="overflow-x-auto bg-white border-2 border-text-main shadow-retro">
                 <table class="w-full text-center border-collapse whitespace-nowrap min-w-[600px]">
                     <thead>
@@ -524,6 +714,10 @@
                             東京都杉並区高円寺北2-1-2<br>
                             JR中央線「高円寺」駅 北口より徒歩5分
                         </p>
+                        <!-- Google Maps 埋め込み -->
+                        <div class="w-full h-48 md:h-64 mb-4 border-2 border-text-main">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8311950171133!2d139.6540185!3d35.705771399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2863da9a9d7%3A0xf35f2445cb0ef3be!2z5bqn44O76auY5YaG5a-6!5e0!3m2!1sja!2sjp!4v1781630262757!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <a href="https://za-koenji.jp/" target="_blank" rel="noopener noreferrer" class="text-main-blue underline text-sm hover:text-main-red font-bold flex items-center">
                             会場アクセス詳細を見る
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -552,7 +746,7 @@
                 <span><b class="text-white">宣伝美術:</b> 安藤理樹</span>
                 <span><b class="text-white">主題歌協力:</b> PEPESALE</span>
                 <span><b class="text-white">企画補佐:</b> タナバタカナリア</span>
-                <span><b class="text-white">LPサイト制作:</b> 斧口智彦 (Theatre劇団子)</span>
+                <span><b class="text-white">特設サイト制作:</b> 斧口智彦 (Theatre劇団子)</span>
             </div>
 
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400 space-y-2 text-xs md:text-sm">
