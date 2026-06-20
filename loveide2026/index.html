@@ -155,9 +155,12 @@
                 </div>
             </div>
 
+            <!-- フライヤー裏面（準備中につき非表示） -->
+            <!--
             <div class="mt-16 border-2 border-text-main shadow-retro bg-white p-2 max-w-2xl mx-auto">
                 <img src="Image/loveide2026_ura.png" onerror="this.src='https://placehold.co/800x1130/ffb6c1/333?text=Flyer+Back+(Correlation+Chart)'" alt="ラブイデオロギーは突然に 相関図（フライヤー裏）" class="w-full h-auto">
             </div>
+            -->
         </div>
     </section>
 
@@ -632,7 +635,7 @@
             <div class="mt-6 text-sm font-medium space-y-2 bg-gray-100 p-4 border-2 border-text-main border-dashed">
                 <p>※受付開始は開演の45分前、開場は開演の30分前</p>
                 <p>※上演時間は110分程度（休憩なし）を予定しております。</p>
-                <p class="text-main-red font-bold">★託児サービスあり（定員あり／曜日によって事業者・申し込み方法・対象年齢が異なります。詳細は座・高円寺にお問い合わせください。）</p>
+                <p class="text-main-red font-bold">★託児サービスあり（定員あり／曜日によって事業者・申し込み方法・対象年齢が異なります。詳細は<a href="https://za-koenji.jp/detail/?id=256" target="_blank" rel="noopener noreferrer" class="underline hover:text-red-700">座・高円寺ウェブページ</a>をご確認ください。）</p>
             </div>
         </div>
     </section>
@@ -646,7 +649,7 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- 料金表 -->
-                <div class="bg-white border-2 border-text-main p-6 shadow-retro">
+                <div class="bg-white border-2 border-text-main p-6 shadow-retro h-fit">
                     <h3 class="font-dot text-xl font-bold mb-4 border-b-2 border-text-main pb-2">チケット料金（全席自由）</h3>
                     <ul class="space-y-4 font-bold">
                         <li class="flex justify-between items-end border-b border-gray-200 pb-2">
@@ -663,10 +666,6 @@
                             </div>
                             <span class="text-xl">4,500円</span>
                         </li>
-                        <li class="flex justify-between items-end border-b border-gray-200 pb-2">
-                            <span>杉並区民割引</span>
-                            <span class="text-xl">4,500円</span>
-                        </li>
                         <li class="flex justify-between items-end border-b border-gray-200 pb-2 text-main-green">
                             <div class="flex flex-col">
                                 <span>あまこいセット券</span>
@@ -674,32 +673,61 @@
                             </div>
                             <span class="text-xl">9,000円</span>
                         </li>
+                        <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                            <span>杉並区民割引</span>
+                            <span class="text-xl">4,500円</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                            <div class="flex flex-col">
+                                <span>障害者割引</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm">一般: <span class="text-lg">4,500円</span></span>
+                                <span class="block text-sm">U-25: <span class="text-lg">3,000円</span></span>
+                            </div>
+                        </li>
                     </ul>
-                    <p class="text-xs mt-4 text-gray-600">※障害者割引：各券種500円引き（座・高円寺ボックスオフィスのみ取り扱い）</p>
+                    <p class="text-xs mt-4 text-main-red font-bold">※障害者割引と杉並区民割引は座・高円寺ボックスオフィスのみ取り扱い</p>
                 </div>
 
                 <!-- 予約・会場情報 -->
                 <div class="space-y-6">
-                    <div class="bg-white border-2 border-text-main p-6 shadow-retro flex flex-col justify-center items-center text-center">
-                        <h3 class="font-dot text-xl font-bold mb-4 text-main-red">ご予約はこちら</h3>
-                        <div class="w-full space-y-3 mb-4">
-                            <a href="https://darumesian.corich.co/loveideology/cardpaypay" target="_blank" rel="noopener noreferrer" class="block w-full bg-main-red text-white font-bold text-base md:text-lg py-3 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
-                                事前決済（クレカ・PayPay）
-                            </a>
-                            <a href="https://darumesian.corich.co/loveideology/toujitu" target="_blank" rel="noopener noreferrer" class="block w-full bg-white text-main-red font-bold text-base md:text-lg py-3 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
-                                当日精算
+                    <div class="bg-white border-2 border-text-main p-6 shadow-retro">
+                        <h3 class="font-dot text-xl font-bold mb-6 text-main-red text-center border-b-2 border-text-main pb-2">ご予約はこちら</h3>
+                        
+                        <div class="mb-8">
+                            <p class="text-md font-bold text-gray-800 mb-3 text-center">◆ 劇団だるめしあん 取扱</p>
+                            <div class="w-full space-y-3">
+                                <a href="https://darumesian.corich.co/loveideology/cardpaypay" target="_blank" rel="noopener noreferrer" class="block w-full bg-main-red text-white text-center font-bold text-base py-3 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
+                                    事前決済（クレカ・PayPay）
+                                </a>
+                                <a href="https://darumesian.corich.co/loveideology/toujitu" target="_blank" rel="noopener noreferrer" class="block w-full bg-white text-main-red text-center font-bold text-base py-3 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
+                                    当日精算
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-md font-bold text-gray-800 mb-3 text-center">◆ 座・高円寺ボックスオフィス 取扱</p>
+                            <div class="text-sm font-bold text-gray-700 space-y-2 mb-4 bg-gray-50 p-3 border border-gray-200">
+                                <p>・電話予約: 03-3223-7300<br><span class="text-xs font-normal pl-3 text-gray-500">(10:00〜18:00／月曜定休)</span></p>
+                                <p>・窓口販売<br><span class="text-xs font-normal pl-3 text-gray-500">(座・高円寺2Fオフィス／10:00〜18:00／月曜定休)</span></p>
+                            </div>
+                            <a href="https://cloud-pass.jp/project/zakoenji" target="_blank" rel="noopener noreferrer" class="block w-full bg-love-blue text-white text-center font-bold text-base py-3 border-2 border-text-main shadow-[4px_4px_0_rgba(51,51,51,1)] hover:translate-y-1 hover:shadow-[2px_2px_0_rgba(51,51,51,1)] transition-all">
+                                Web予約 <span class="text-xs font-normal ml-1">(24時間受付)</span>
                             </a>
                         </div>
-                        <p class="text-sm font-bold text-gray-700">劇団だるめしあん</p>
                     </div>
 
                     <div class="bg-white border-2 border-text-main p-6 shadow-retro">
                         <h3 class="font-dot text-xl font-bold mb-3 border-b-2 border-text-main pb-2">会場</h3>
                         <p class="text-xl font-bold mb-2">座・高円寺１</p>
-                        <p class="text-sm text-gray-600 mb-4">
+                        <p class="text-sm text-gray-800 font-medium mb-4 leading-relaxed">
                             〒166-0002<br>
                             東京都杉並区高円寺北2-1-2<br>
-                            JR中央線「高円寺」駅 北口より徒歩5分
+                            JR中央線「高円寺」駅 北口より徒歩5分<br>
+                            <span class="text-xs text-main-red mt-2 block font-bold">※土日・祝日の中央線快速は高円寺駅に停車しませんのでご注意ください。</span>
+                            <span class="text-xs text-main-red mt-1 block font-bold">※駐車場はございませんので、お越しの際は公共交通機関をご利用ください。</span>
                         </p>
                         <!-- Google Maps 埋め込み -->
                         <div class="w-full h-48 md:h-64 mb-4 border-2 border-text-main">
@@ -711,6 +739,37 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMATION / ご案内 -->
+    <section class="py-12 px-4 bg-white border-t-2 border-text-main">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- トリガーウォーニング -->
+            <div class="border-2 border-text-main p-4 md:p-6 shadow-[2px_2px_0_rgba(51,51,51,1)] bg-red-50">
+                <h3 class="font-bold text-main-red mb-2 flex items-center">
+                    <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    作品の表現に関するお知らせ
+                </h3>
+                <p class="text-sm md:text-base font-medium mb-2">本作品には以下の表現が含まれます。</p>
+                <ul class="list-disc list-inside text-sm md:text-base font-medium mb-3 ml-2 text-gray-800">
+                    <li>性暴力を想起させる描写</li>
+                    <li>DV描写</li>
+                </ul>
+                <p class="text-xs md:text-sm text-gray-700">※詳細をお知りになりたい方は劇団だるめしあん(<a href="mailto:gekidandarumesian@gmail.com" class="underline hover:text-main-red">gekidandarumesian@gmail.com</a>)までお問い合わせください。</p>
+            </div>
+
+            <!-- アクセシビリティ -->
+            <div class="border-2 border-text-main p-4 md:p-6 shadow-[2px_2px_0_rgba(51,51,51,1)] bg-blue-50">
+                <h3 class="font-bold text-love-blue mb-2 flex items-center">
+                    <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    アクセシビリティについて
+                </h3>
+                <p class="text-sm md:text-base font-medium mb-2 text-gray-800">
+                    聴覚に障害のある方向けに事前に台本のデータ貸し出しをいたします。
+                </p>
+                <p class="text-xs md:text-sm text-gray-700">ご希望の方はメール(<a href="mailto:gekidandarumesian@gmail.com" class="underline hover:text-love-blue">gekidandarumesian@gmail.com</a>)でお申込みください。</p>
             </div>
         </div>
     </section>
@@ -728,18 +787,18 @@
                 <span><b class="text-white">舞台監督:</b> 土居歩</span>
                 <span><b class="text-white">舞台美術:</b> 多賀慧(黒組)</span>
                 <span><b class="text-white">照明:</b> 瀬戸あずさ（balance,inc.DESIGN）</span>
-                <span><b class="text-white">音響:</b> 大嵜逸生</span>
+                <span><b class="text-white">音響プラン:</b> 大嵜逸生(大人計画 別邸)</span>
                 <span><b class="text-white">演出助手:</b> 由木貴</span>
                 <span><b class="text-white">宣伝美術:</b> 安藤理樹</span>
-                <span><b class="text-white">主題歌協力:</b> PEPESALE</span>
+                <span><b class="text-white">主題歌制作:</b> PEPESALE</span>
                 <span><b class="text-white">企画補佐:</b> タナバタカナリア</span>
                 <span><b class="text-white">特設サイト制作:</b> 斧口智彦 (Theatre劇団子)</span>
             </div>
 
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400 space-y-2 text-xs md:text-sm">
-                <p>提携：ＮＰＯ法人劇場創造ネットワーク／座・高円寺</p>
+                <p>提携：座・高円寺(指定管理者：合同会社syuz'gen)</p>
                 <p>主催：劇団だるめしあん</p>
-                <p>協力：エアフォルク企画、キューブ、株式会社2PS</p>
+                <p>協力：エアフォルク企画、キューブ、株式会社2PS、大人計画、劇作家女子会。、劇団劇作家</p>
                 <p class="mt-6 font-dot text-gray-500">© 2026 Gekidan Dalmatian All Rights Reserved.</p>
             </div>
         </div>
