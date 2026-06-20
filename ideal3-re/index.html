@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アイディール・セミナー/Final session-Replay- | 爆走おとな小学生</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -144,12 +146,14 @@
 </head>
 <body class="bg-darker text-light font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white relative">
 
+    <!-- 画面全体に固定で配置するカラーオーブ -->
     <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-darker">
         <div class="absolute top-[-20%] left-[-20%] w-[80vw] h-[80vw] rounded-full orb-float-1 bg-[radial-gradient(circle,rgba(220,38,38,0.12)_0%,transparent_60%)]"></div>
         <div class="absolute bottom-[-20%] right-[-20%] w-[90vw] h-[90vw] rounded-full orb-float-2 bg-[radial-gradient(circle,rgba(37,99,235,0.08)_0%,transparent_60%)]"></div>
         <div class="absolute top-[20%] right-[5%] w-[60vw] h-[60vw] rounded-full orb-float-3 bg-[radial-gradient(circle,rgba(37,99,235,0.08)_0%,transparent_60%)]"></div>
     </div>
 
+    <!-- Header / Navigation -->
     <header class="fixed w-full top-0 z-50 glass-safe border-b border-white/10 transition-colors duration-300" id="header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -166,6 +170,7 @@
                     <a href="#theater" class="text-sm text-gray-300 hover:text-white hover:drop-shadow-[0_0_5px_#fff] transition">THEATER</a>
                     <a href="#flyer" class="text-sm text-gray-300 hover:text-white hover:drop-shadow-[0_0_5px_#fff] transition">FLYER</a>
                 </nav>
+                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-primary focus:outline-none">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -175,6 +180,7 @@
                 </div>
             </div>
         </div>
+        <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-safe border-b border-primary">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-bold font-en text-center">
                 <a href="#cast" class="block px-3 py-3 text-base text-gray-300 hover:text-white hover:bg-white/5">CAST</a>
@@ -187,7 +193,9 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-polka-dots">
+        <!-- Background stripes -->
         <div class="absolute inset-0 z-0 bg-stripes opacity-40 pointer-events-none"></div>
         
         <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
@@ -227,13 +235,14 @@
 
             <div class="mt-12 fade-up">
                 <a href="#tickets" class="inline-flex items-center justify-center px-10 py-4 text-lg font-black text-white bg-gradient-to-r from-blue-600 to-blue-800 border-2 border-secondary rounded-full hover:from-white hover:to-white hover:text-blue-700 hover:border-white transition-all duration-300 comic-shadow-blue group shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-                    受講チケットを申し込む
+                    受講チケット詳細を見る
                     <svg class="w-6 h-6 ml-2 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Cast Section -->
     <section id="cast" class="pt-24 pb-16 relative z-10 border-t border-white/10 bg-darker/80">
         <div class="absolute inset-0 bg-polka-dots opacity-20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -244,8 +253,10 @@
                 <p class="mt-4 text-gray-300 text-sm tracking-widest font-bold">セミナー参加者</p>
             </div>
 
+            <!-- キャスト一覧（基本2列、奇数余りは中央寄せ、3人枠は幅広1列） -->
             <div class="mb-24 space-y-16 w-full max-w-6xl mx-auto">
                 
+                <!-- 1. 主人公枠：桃瀬しずか -->
                 <div class="max-w-4xl mx-auto w-full fade-up">
                     <div class="bg-dark/90 border border-primary/50 rounded-2xl p-6 md:p-10 relative comic-shadow shadow-[0_0_30px_rgba(220,38,38,0.15)]">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-red-600 text-white px-8 py-1 rounded-sm text-sm sm:text-base font-bold tracking-widest whitespace-nowrap w-max shadow-lg border border-red-400">
@@ -282,6 +293,7 @@
                                 </div>
                             </div>
 
+                            <!-- 繋ぎ目 -->
                             <div class="flex flex-col items-center my-6 flex-grow">
                                 <div class="h-6 w-px bg-gradient-to-b from-white/20 to-primary/50"></div>
                                 <div class="text-[10px] text-primary tracking-widest my-1 flex items-center gap-2 font-en bg-primary/10 px-4 py-1 rounded-full border border-primary/30 ideal-link-pulse shadow-[0_0_10px_rgba(220,38,38,0.2)]">
@@ -292,6 +304,7 @@
                                 <div class="h-6 w-px bg-gradient-to-b from-primary/50 to-white/20"></div>
                             </div>
 
+                            <!-- ACTOR -->
                             <div class="flex flex-col items-center pb-2 relative">
                                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full -z-10 bg-[radial-gradient(circle,rgba(220,38,38,0.15)_0%,transparent_70%)]"></div>
                                 <div class="px-4 py-1 border border-primary text-primary rounded-sm text-xs font-bold mb-4 tracking-widest bg-darker/90 shadow-[0_0_10px_rgba(220,38,38,0.2)]">パラダイス・クイーン</div>
@@ -308,8 +321,10 @@
                     </div>
                 </div>
 
+                <!-- その他役名群 (2カラムベース、flex-wrapで中央寄せ) -->
                 <div class="flex flex-wrap justify-center gap-y-16 gap-x-8 w-full">
                     
+                    <!-- 2. 桃瀬ゆかり -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             桃瀬ゆかり <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-YUKARI MOMOSE-</span>
@@ -356,6 +371,7 @@
                         </div>
                     </div>
 
+                    <!-- 3. 桜庭仁美 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             桜庭仁美 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-HITOMI SAKURABA-</span>
@@ -401,6 +417,7 @@
                         </div>
                     </div>
 
+                    <!-- 4. 早乙女真琴 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             早乙女真琴 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-MAKOTO SAOTOME-</span>
@@ -447,6 +464,7 @@
                         </div>
                     </div>
 
+                    <!-- 5. 山田花子 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             山田花子 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-HANAKO YAMADA-</span>
@@ -505,9 +523,10 @@
                         </div>
                     </div>
 
+                    <!-- 6. アミティー・ロケッツ -->
                     <div class="w-full max-w-4xl bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
-                            大黒叶 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-KANAE OOGURO-</span>
+                            アミティ・ロケッツ <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-AMITY ROCKETS-</span>
                         </div>
                         <div class="pt-4 flex-grow flex flex-col justify-between">
                             <div>
@@ -559,9 +578,10 @@
                         </div>
                     </div>
 
+                    <!-- 7. 大黒叶 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
-                            大黒叶 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-KANAE DAIKOKU-</span>
+                            大黒叶 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-KANAE OOGURO-</span>
                         </div>
                         <div class="pt-4 flex-grow flex flex-col justify-between">
                             <div>
@@ -604,6 +624,7 @@
                         </div>
                     </div>
 
+                    <!-- 8. 佐藤道子 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             佐藤道子 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-MICHIKO SATO-</span>
@@ -630,6 +651,7 @@
                         </div>
                     </div>
 
+                    <!-- 9. 墨田由花 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             墨田由花 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-YUKA SUMIDA-</span>
@@ -675,6 +697,7 @@
                         </div>
                     </div>
 
+                    <!-- 10. 咲村加奈 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             咲村加奈 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-KANA SAKIMURA-</span>
@@ -720,6 +743,7 @@
                         </div>
                     </div>
 
+                    <!-- 11. 染谷和佳奈 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             染谷和佳奈 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-WAKANA SOMEYA-</span>
@@ -765,6 +789,7 @@
                         </div>
                     </div>
 
+                    <!-- 12. 藍川玲香 -->
                     <div class="w-full max-w-4xl bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             藍川玲香 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-REIKA AIKAWA-</span>
@@ -818,6 +843,7 @@
                         </div>
                     </div>
 
+                    <!-- 13. 東條朱音 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             東條朱音 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-AKANE TOJO-</span>
@@ -844,6 +870,7 @@
                         </div>
                     </div>
 
+                    <!-- 14. 五十嵐瑞稀 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             五十嵐瑞稀 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-MIZUKI IGARASHI-</span>
@@ -889,6 +916,7 @@
                         </div>
                     </div>
 
+                    <!-- 15. 墨田球太郎 -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             墨田球太郎 <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-KYUTARO SUMIDA-</span>
@@ -935,6 +963,7 @@
                         </div>
                     </div>
 
+                    <!-- 16. 神楽ジン -->
                     <div class="w-full lg:w-[calc(50%-1rem)] bg-dark/80 border border-white/10 rounded-2xl p-6 md:p-10 relative comic-shadow fade-up flex flex-col hover:border-white/30 hover:bg-dark transition-all">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-200 text-darker px-6 py-1 rounded-sm text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap w-max border border-white">
                             神楽ジン <span class="text-[10px] ml-1 font-en font-normal text-gray-600">-JIN KAGURA-</span>
@@ -964,6 +993,7 @@
                 </div>
             </div>
 
+            <!-- ENSEMBLE -->
             <div class="mb-4 fade-up pt-12 border-t border-white/10">
                 <h3 class="text-lg md:text-xl font-bold text-center mb-8 flex items-center justify-center gap-4 text-gray-500 font-en tracking-widest">
                     <span class="w-12 h-px bg-white/10"></span>
@@ -985,6 +1015,7 @@
         </div>
     </section>
 
+    <!-- Creator Section (創始者 / 脚本・演出) -->
     <section class="pt-12 pb-24 relative z-10 border-t border-white/5 bg-darker/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="fade-up">
@@ -1007,6 +1038,7 @@
         </div>
     </section>
 
+    <!-- Schedule Section -->
     <section id="schedule" class="py-24 relative z-10 border-t border-white/10 bg-dark/90">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="absolute top-0 right-10 w-64 h-64 rounded-full -z-10 bg-[radial-gradient(circle,rgba(37,99,235,0.1)_0%,transparent_70%)]"></div>
@@ -1018,6 +1050,7 @@
                 <p class="mt-4 text-lg font-bold text-white">2026年7月25日(土)〜27日(月) <span class="text-xs font-normal text-gray-400">/ 6ステージ</span></p>
             </div>
 
+            <!-- タイムテーブル -->
             <div class="bg-darker border border-white/10 rounded-2xl overflow-hidden mb-16 shadow-2xl fade-up comic-shadow">
                 <div class="overflow-x-auto">
                     <table class="w-full text-center border-collapse min-w-[500px]">
@@ -1047,6 +1080,7 @@
                 </div>
             </div>
 
+            <!-- キャストスケジュール画像 -->
             <div class="mt-20 fade-up">
                 <h3 class="text-sm font-bold mb-6 text-center tracking-widest text-gray-400">《 キャストスケジュール表 》</h3>
                 <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10 relative">
@@ -1056,6 +1090,7 @@
         </div>
     </section>
 
+    <!-- Tickets Section -->
     <section id="tickets" class="py-24 bg-darker/90 relative z-10 border-t border-white/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-up relative">
@@ -1065,8 +1100,10 @@
                 <p class="mt-4 text-gray-300 text-sm tracking-widest font-bold">受講チケット詳細</p>
             </div>
 
+            <!-- Ticket Cards -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                 
+                <!-- VIP -->
                 <div class="lg:col-span-3 bg-gradient-to-br from-darker to-[#0f172a] border border-secondary/50 rounded-2xl p-8 relative overflow-hidden fade-up comic-shadow-blue transition-transform hover:-translate-y-1">
                     <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-xs md:text-sm font-bold px-6 py-2 rounded-bl-lg shadow-md">最前中央席 / 各公演8席限定</div>
                     <h3 class="text-xl md:text-2xl font-bold text-secondary mb-2 mt-4 md:mt-0 leading-snug drop-shadow-md">☆スペシャルセッション<br class="md:hidden">アイディールプラクティックVIPシート☆</h3>
@@ -1107,6 +1144,7 @@
                     </div>
                 </div>
 
+                <!-- S席 -->
                 <div class="bg-dark border border-primary/50 rounded-2xl p-8 flex flex-col fade-up comic-shadow-red transition-transform hover:-translate-y-1">
                     <h3 class="text-2xl font-bold text-primary mb-2 drop-shadow-[0_0_5px_rgba(220,38,38,0.5)]">S席</h3>
                     <p class="text-3xl font-en font-black text-white mb-6">12,500<span class="text-sm font-normal text-gray-400 ml-1">YEN</span></p>
@@ -1121,6 +1159,7 @@
                     </div>
                 </div>
 
+                <!-- 特典付A席 -->
                 <div class="bg-dark border border-white/20 rounded-2xl p-8 flex flex-col fade-up transition-transform hover:-translate-y-1 comic-shadow">
                     <h3 class="text-xl font-bold text-white mb-2">特典付A席</h3>
                     <p class="text-3xl font-en font-black text-white mb-6">9,800<span class="text-sm font-normal text-gray-400 ml-1">YEN</span></p>
@@ -1133,6 +1172,7 @@
                     </div>
                 </div>
 
+                <!-- A席 -->
                 <div class="bg-dark border border-white/10 rounded-2xl p-8 flex flex-col fade-up transition-transform hover:-translate-y-1 comic-shadow">
                     <h3 class="text-xl font-bold text-gray-400 mb-2">A席</h3>
                     <p class="text-3xl font-en font-black text-white mb-6">8,800<span class="text-sm font-normal text-gray-400 ml-1">YEN</span></p>
@@ -1172,6 +1212,7 @@
                 <p class="text-xs text-gray-500 mt-4">※先着順/カンフェティの無料会員登録が必要です。</p>
             </div>
 
+            <!-- 注意事項 -->
             <div class="bg-black/50 border border-white/10 rounded-xl p-6 md:p-8 text-xs sm:text-sm text-gray-400 space-y-3 fade-up">
                 <h4 class="text-white font-bold mb-4 border-b border-white/10 pb-2">〈 各特典注意事項 〉</h4>
                 <p>※チケット特典は各公演ごとに異なる絵柄をご用意しております。(出演回数分のみご用意しております)</p>
@@ -1182,6 +1223,7 @@
         </div>
     </section>
 
+    <!-- Story Section -->
     <section id="about" class="py-24 relative z-10 border-t border-white/5 bg-dark">
         <div class="absolute inset-0 bg-polka-dots opacity-10"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1237,6 +1279,7 @@
         </div>
     </section>
 
+    <!-- Theater Section -->
     <section id="theater" class="py-24 bg-darker relative z-10 border-t border-white/5">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-up">
@@ -1253,6 +1296,7 @@
                     </p>
                 </div>
 
+                <!-- Google Map -->
                 <div class="w-full aspect-video rounded-2xl overflow-hidden border border-white/10 relative comic-shadow shadow-[0_0_20px_rgba(255,255,255,0.05)]">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.9982448175383!2d139.8045948!3d35.7508479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e4f41aaaaab%3A0xa95a7ccba3ace105!2z44K344Ki44K_44O8MTAxMA!5e0!3m2!1sja!2sjp!4v1781616691693!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute top-0 left-0 w-full h-full"></iframe>
                 </div>
@@ -1260,6 +1304,7 @@
         </div>
     </section>
 
+    <!-- Flyer Section -->
     <section id="flyer" class="py-24 bg-dark/80 relative z-10 border-t border-white/5">
         <div class="absolute inset-0 bg-polka-dots opacity-10"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1269,10 +1314,13 @@
                 <div class="h-1 w-16 bg-gradient-to-r from-primary to-accent mx-auto rounded mt-4"></div>
             </div>
 
+            <!-- フライヤー画像（表・裏） -->
             <div class="w-full mx-auto flex flex-col md:flex-row gap-12 justify-center items-center fade-up">
+                <!-- 表面 -->
                 <div class="w-full sm:w-4/5 md:w-1/2 rounded-xl overflow-hidden comic-shadow border border-white/10 relative group bg-darker">
                     <img src="Image/ideal3-re_omote.jpg" alt="アイディール・セミナー フライヤー 表面" class="w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Front (Dummy)%3C/text%3E%3C/svg%3E'">
                 </div>
+                <!-- 裏面 -->
                 <div class="w-full sm:w-4/5 md:w-1/2 rounded-xl overflow-hidden comic-shadow border border-white/10 relative group bg-darker">
                     <img src="Image/ideal3-re_ura.jpg" alt="アイディール・セミナー フライヤー 裏面" class="w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%221131%22 viewBox=%220 0 800 1131%22%3E%3Crect fill=%22%231e293b%22 width=%22800%22 height=%221131%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22sans-serif%22 font-size=%2240%22 dy=%2215%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EFlyer Back (Dummy)%3C/text%3E%3C/svg%3E'">
                 </div>
@@ -1280,6 +1328,7 @@
         </div>
     </section>
 
+    <!-- Seminar Message -->
     <section class="py-24 relative z-10 bg-darker border-t border-white/10 overflow-hidden">
         <div class="max-w-3xl mx-auto px-4 relative z-10 fade-up">
             <div class="border border-white/10 bg-dark/80 p-8 md:p-12 comic-shadow-blue relative rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.8)]">
@@ -1308,6 +1357,7 @@
         </div>
     </section>
 
+    <!-- Guidelines -->
     <section class="py-16 bg-dark z-10 relative border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-8 fade-up">
@@ -1326,6 +1376,7 @@
         </div>
     </section>
 
+    <!-- Links Section -->
     <section class="py-16 bg-darker z-10 relative border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 fade-up">
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -1341,6 +1392,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-black relative z-10 border-t border-white/10 pt-12 pb-8">
         <div class="text-center text-gray-500 text-sm space-y-2 fade-up">
             <p class="text-xs tracking-widest mb-4">《 企画・制作 》</p>
@@ -1350,6 +1402,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
