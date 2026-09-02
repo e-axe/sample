@@ -11,6 +11,7 @@
   <meta property="og:description" content="天気×華（花）×音楽が織りなす、王道ファンタジーエンターテインメント。">
   <meta property="og:url" content="https://e-axe.github.io/sample/stubborn-fantasia/">
   <link rel="canonical" href="https://e-axe.github.io/sample/stubborn-fantasia/">
+  <link rel="preload" as="image" href="assets/stubborn-fantasia-logo.png" type="image/png">
   <title>sTuBboRN FANTASIa | 天華楽喜 vol.6</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +61,7 @@
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="ページ上部へ">
-      <span class="brand-mark">天華楽喜</span>
+      <img class="brand-logo" src="assets/stubborn-fantasia-logo.png" alt="" width="8236" height="1994">
       <span class="brand-edition">vol.6 / 2026</span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
@@ -80,8 +81,6 @@
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-atmosphere" aria-hidden="true"></div>
-      <div class="hero-notation notation-a" aria-hidden="true">♭</div>
-      <div class="hero-notation notation-b" aria-hidden="true">♯</div>
 
       <div class="hero-head reveal">
         <p>TENKA LUCKY THEATRE PROJECT</p>
@@ -93,9 +92,8 @@
           <div class="hero-edition reveal">
             <span>天華楽喜</span><b>vol.6</b>
           </div>
-          <h1 id="hero-title" class="reveal">
-            <span class="title-stubborn">sTuBboRN</span>
-            <span class="title-fantasia">FANTASI<span>a</span></span>
+          <h1 id="hero-title" class="hero-logo reveal">
+            <img src="assets/stubborn-fantasia-logo.png" alt="sTuBboRN FANTASIa" width="8236" height="1994" fetchpriority="high">
           </h1>
           <div class="hero-concept reveal">
             <p class="hero-reading">スタボーン・ファンタジア</p>
@@ -111,27 +109,20 @@
           </div>
         </div>
 
-        <aside class="weather-score reveal" aria-label="作品を象徴する四つの天気">
-          <div class="score-head">
-            <span>WEATHER SCORE</span>
+        <aside class="weather-prism reveal" aria-label="物語を形づくる四つの天気">
+          <div class="prism-head">
+            <span>FOUR SKIES / FOUR COUNTRIES</span>
             <span>NO. 06</span>
           </div>
-          <div class="score-field" aria-hidden="true">
-            <span class="score-word score-clear">晴</span>
-            <span class="score-word score-cloud">曇</span>
-            <span class="score-word score-rain">雨</span>
-            <span class="score-word score-snow">雪</span>
-            <i class="score-line line-one"></i>
-            <i class="score-line line-two"></i>
-            <i class="score-line line-three"></i>
-            <i class="score-pulse pulse-one"></i>
-            <i class="score-pulse pulse-two"></i>
+          <div class="prism-grid">
+            <div class="prism-cell prism-clear"><span>01 / CLEAR</span><b>晴</b><small>解放</small></div>
+            <div class="prism-cell prism-cloud"><span>02 / CLOUD</span><b>曇</b><small>救いたいもの</small></div>
+            <div class="prism-cell prism-rain"><span>03 / RAIN</span><b>雨</b><small>潔く包み込む</small></div>
+            <div class="prism-cell prism-snow"><span>04 / SNOW</span><b>雪</b><small>攻撃性の煌めき</small></div>
           </div>
-          <blockquote>「私は、だぁれ？」</blockquote>
-          <div class="score-legend">
-            <span><i class="dot dot-clear"></i>CLEAR / 解放</span>
-            <span><i class="dot dot-rain"></i>RAIN / 包容</span>
-            <span><i class="dot dot-snow"></i>SNOW / 煌めき</span>
+          <div class="prism-question">
+            <span>THE QUESTION</span>
+            <blockquote>「私は、だぁれ？」</blockquote>
           </div>
         </aside>
       </div>
@@ -169,7 +160,7 @@
         <div class="intro-story reveal">
           <p class="intro-opening">晴れ、曇り、雨、雪。</p>
           <p>物語は何にも囚われず、自由な発想が交わり重なっていく。これは凸凹だけれど、繊細な均衡を保っている物語。</p>
-          <div class="question-score" aria-label="物語の問い">
+          <div class="question-list" aria-label="物語の問い">
             <span>私は怪物？</span>
             <span>私は、だぁれ？</span>
             <span>私は、いるの？</span>
@@ -471,7 +462,10 @@
 
   <footer>
     <div class="footer-top">
-      <p><span>天華楽喜 vol.6</span>sTuBboRN<br><i>FANTASIa</i></p>
+      <div class="footer-identity">
+        <span>天華楽喜 vol.6</span>
+        <img src="assets/stubborn-fantasia-logo.png" alt="" width="8236" height="1994" loading="lazy">
+      </div>
       <div>
         <span>OFFICIAL LINKS</span>
         <a href="https://ticket.corich.jp/apply/464010/0/" target="_blank" rel="noopener">TICKET <i>↗</i></a>
