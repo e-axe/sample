@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /sample/saimer-pro/
+
+Sitemap: https://e-axe.github.io/sample/saimer-pro/sitemap.xml
