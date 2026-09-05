@@ -1151,14 +1151,6 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 }
 
 @media (max-width: 767px) {
-  /* Copy stays above the image, so future mobile crops never obscure text. */
-  .hero-media {
-    position: relative;
-    order: 1;
-    height: clamp(180px, 48vw, 320px);
-    flex: 0 0 auto;
-  }
-
   .about-preview .section-title,
   .about-preview-copy {
     grid-column: 1;
@@ -1327,21 +1319,16 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   }
 
   .hero {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+    /* Keep the sky behind the copy as one composition on small screens. */
+    min-height: clamp(420px, 65svh, 560px);
   }
 
   .hero-media img {
     object-position: var(--hero-position-sp);
   }
 
-  .hero-media::after {
-    background: transparent;
-  }
-
   .hero-inner {
-    padding-block: 40px;
+    padding-block: 56px;
   }
 
   .eyebrow {
