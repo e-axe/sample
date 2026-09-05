@@ -309,8 +309,8 @@ img {
   margin-top: 18px;
   font-family: var(--serif-ja);
   font-size: clamp(34px, 4vw, 58px);
-  letter-spacing: -0.07em;
-  line-height: 1.18;
+  letter-spacing: -0.025em;
+  line-height: 1.28;
 }
 
 .hero-copy {
@@ -345,7 +345,7 @@ img {
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .section-title,
@@ -359,7 +359,7 @@ img {
 
 .section-title {
   font-size: clamp(44px, 4.1vw, 60px);
-  line-height: 0.96;
+  line-height: 1.05;
 }
 
 .view-link,
@@ -369,23 +369,30 @@ img {
   align-items: center;
   min-height: 44px;
   gap: 12px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
 }
 
-.view-link::after,
-.arrow-link::after {
+.link-arrow {
+  display: block;
+  flex: 0 0 auto;
   width: 28px;
-  height: 1px;
-  background: currentColor;
-  content: "";
-  transition: transform 160ms ease;
+  height: 20px;
+  transition: transform 180ms ease;
 }
 
-.view-link:hover::after,
-.arrow-link:hover::after {
+.view-link:hover .link-arrow,
+.arrow-link:hover .link-arrow {
   transform: translateX(4px);
+}
+
+.back-link .link-arrow {
+  order: -1;
+}
+
+.back-link:hover .link-arrow {
+  transform: translateX(-4px);
 }
 
 .talent-grid {
@@ -407,7 +414,7 @@ img {
 }
 
 .talent-card:hover .talent-photo {
-  opacity: 0.88;
+  opacity: 0.96;
 }
 
 .talent-card:hover .sprite-image {
@@ -439,7 +446,7 @@ img {
 .sprite-row-2 { top: -100%; }
 
 .talent-card-name {
-  margin: 17px 0 3px;
+  margin: 16px 0 6px;
   font-family: var(--serif-ja);
   font-size: 18px;
   font-weight: 500;
@@ -449,9 +456,9 @@ img {
 .talent-card-en {
   margin: 0;
   color: var(--color-muted);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  line-height: 1.4;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  line-height: 1.6;
 }
 
 .about-preview {
@@ -481,32 +488,37 @@ img {
 
 .social-row {
   display: grid;
-  grid-template-columns: 28px minmax(130px, 2fr) minmax(220px, 6fr) auto;
+  grid-template-columns: 40px minmax(130px, 2fr) minmax(200px, 6fr) auto;
   align-items: center;
-  min-height: 68px;
+  min-height: 80px;
   gap: 24px;
   border-bottom: 1px solid var(--color-line);
 }
 
 .social-icon {
   display: grid;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   place-items: center;
 }
 
 .social-icon img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: auto;
+  object-fit: contain;
+}
+
+.social-icon img[src*="youtube.png"] {
+  /* Official PNG includes its clear space; visible mark is about 26px wide. */
+  width: 40px;
 }
 
 .social-name {
   color: var(--color-heading);
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .social-description,
@@ -525,16 +537,19 @@ img {
 }
 
 .contact-cta {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   min-height: 136px;
   padding: 32px clamp(28px, 4vw, 56px);
-  flex-wrap: wrap;
   gap: 16px 32px;
   border: 1px solid var(--color-accent);
   color: var(--color-heading);
   transition: background-color 200ms ease, color 200ms ease;
+}
+
+.contact-cta:has(.contact-cta-description) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
 }
 
 .contact-cta:hover {
@@ -551,9 +566,14 @@ img {
 }
 
 .contact-cta-arrow {
-  font-family: var(--serif-en);
-  font-size: 38px;
+  grid-column: -2 / -1;
+  grid-row: 1;
   transition: transform 180ms ease;
+}
+
+.contact-cta-arrow .link-arrow {
+  width: 48px;
+  height: 30px;
 }
 
 .contact-cta:hover .contact-cta-arrow {
@@ -1081,12 +1101,12 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 }
 
 .view-link {
-  text-decoration: underline;
-  text-underline-offset: 8px;
+  text-decoration: none;
 }
 
-.view-link::after {
-  display: none;
+.view-link > span {
+  text-decoration: underline;
+  text-underline-offset: 7px;
 }
 
 .hero-media picture {
@@ -1136,10 +1156,12 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 }
 
 .contact-cta-description {
-  flex: 1 1 220px;
+  grid-column: 2;
+  grid-row: 1;
   font-family: var(--serif-ja);
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.9;
+  text-wrap: pretty;
 }
 
 .contact-cta-arrow {
@@ -1156,10 +1178,19 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
     grid-column: 1;
   }
 
+  .contact-cta:has(.contact-cta-description) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .contact-cta-description {
-    order: 2;
-    flex-basis: 100%;
-    font-size: 13px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: 14px;
+  }
+
+  .contact-cta-arrow .link-arrow {
+    width: 32px;
+    height: 24px;
   }
 }
 
@@ -1332,8 +1363,9 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   }
 
   .eyebrow {
-    margin-bottom: 12px;
-    font-size: 9px;
+    margin-bottom: 16px;
+    font-size: 10px;
+    letter-spacing: 0.13em;
   }
 
   .hero-title .latin {
@@ -1342,17 +1374,17 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 
   .hero-title .japanese {
     margin-top: 12px;
-    font-size: clamp(30px, 9.3vw, 40px);
+    font-size: clamp(29px, 8.6vw, 40px);
   }
 
   .hero-copy {
-    margin-top: 24px;
-    font-size: 14px;
+    margin-top: 28px;
+    font-size: 15px;
   }
 
   .section-head {
     align-items: center;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .section-title {
@@ -1361,7 +1393,12 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 
   .view-link,
   .arrow-link {
-    font-size: 10px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .view-link .link-arrow {
+    width: 22px;
   }
 
   .talent-grid {
@@ -1374,12 +1411,12 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   }
 
   .talent-card-name {
-    margin-top: 12px;
-    font-size: 15px;
+    margin-top: 14px;
+    font-size: 17px;
   }
 
   .talent-card-en {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .about-preview,
@@ -1399,14 +1436,14 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   }
 
   .social-row {
-    grid-template-columns: 28px 1fr auto;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
     min-height: 96px;
-    gap: 4px 16px;
+    gap: 4px 12px;
     padding-block: 20px;
   }
 
   .social-name {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .social-description {
@@ -1417,7 +1454,7 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   .social-status {
     grid-column: 3;
     grid-row: 1;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .social-icon {
@@ -1428,6 +1465,7 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   .contact-cta {
     min-height: 128px;
     padding: 26px 24px;
+    column-gap: 16px;
   }
 
   .contact-cta-title {
@@ -1578,6 +1616,31 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   }
 }
 
+/* The same quiet link cues are available from the keyboard. */
+.global-nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.talent-card:focus-visible .talent-card-name {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.contact-cta:focus-visible {
+  background: var(--color-surface);
+}
+
+.contact-cta:focus-visible .contact-cta-arrow,
+.view-link:focus-visible .link-arrow,
+.arrow-link:focus-visible .link-arrow {
+  transform: translateX(4px);
+}
+
+.back-link:focus-visible .link-arrow {
+  transform: translateX(-4px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1595,5 +1658,11 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .link-arrow,
+  .contact-cta-arrow,
+  .talent-card .sprite-image {
+    transform: none !important;
   }
 }

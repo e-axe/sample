@@ -90,3 +90,25 @@ Node.jsが利用できる環境で、`saimer-pro` 内から `npm run dev -- --po
 文字と空画像を上下に分離せず、PC同様に画像へ文字を重ねる構成へ変更。共通の淡い面と濃紺文字で可読性を確保し、PC側のレイアウトは変更していません。
 
 修正後はChromiumで320／375／430／767／1,440pxを確認。画像がヒーロー全面を覆い、見出しと本文が画像内に収まり、横方向にはみ出さないことを確認しました。
+
+## デザイン調整（v1.3）
+
+- X・Instagram・YouTubeを公式配布素材に更新。ロゴ本来の縦横比を保ち、見た目の大きさと中心を調整。青系UIに合わせ、ロゴは公式のモノクロ表現を使用。
+- ヒーローの日本語の字間・行間、モバイルのコピー、タレント名・英字表記のサイズと余白を調整。スマホの文字と空画像の重なり、既存の9ページとURLは維持。
+- CONTACT・VIEW ALL・MORE ABOUT US・BACK TO HOMEの矢印を共通のSVGに統一。CONTACTをGridで整列し、スマホでは説明文を次の行に配置。
+- ナビゲーションの下線やCONTACTのマウスオーバーは既存の動きを維持。写真の薄くなる効果を控えめにし、キーボードフォーカスでもリンクの手がかりを表示。動きを減らす設定では矢印移動・写真拡大も停止。
+- SOCIALは公式URL未支給のため、準備中の表示を維持。リンク先や実在プロフィールは追加していません。正式写真のトリミング・露出合わせは素材受領後に実施。
+
+### SNS素材の出典
+
+| ファイル | 公式配布元・処理 |
+| --- | --- |
+| `assets/icons/x.svg` | https://about.x.com/en/who-we-are/brand-toolkit の `x-logo.zip` 内 `logo.svg`。形状・比率を保持し、同梱の黒版と同じ黒単色で表示。 |
+| `assets/icons/instagram.svg` | https://www.meta.com/brand/resources/instagram/instagram-brand/ の `IG_brand_asset_pack_2023.zip` 内 `Instagram_Glyph_Black.svg` をそのまま使用。 |
+| `assets/icons/youtube.png` | https://brand.youtube/youtube-icon の `youtube-icon.zip` 内 `yt_icon_almostblack_digital.png` をそのまま使用。配布画像内の透明な余白を含むため、表示幅40pxでロゴ本体が約26pxになるよう調整。 |
+
+SNSロゴの形状・比率・配色は各社の公式素材に従います。UIの矢印は自作の共通線画で、SNSロゴには独自の変形・色フィルター・ホバーアニメーションを適用しません。
+
+### v1.3の確認結果
+
+Chromiumで全9ページ×320／375／480／768／1,440pxの45通りを確認。横方向のはみ出し・画像欠落・CONTACTの文字と矢印の重なりなし。スマホのヒーロー背景と文字の重なりを維持。PCでCONTACTの既存ホバー（矢印6px移動）を確認しました。全9ページのリンク先が変更前と一致し、画像参照とSVGが有効であることも確認しています。
