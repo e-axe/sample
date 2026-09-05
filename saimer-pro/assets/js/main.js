@@ -12,6 +12,9 @@ function setMenu(open) {
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
   mobileMenu.setAttribute("aria-hidden", String(isMobile && !open));
+  document.querySelectorAll("main, .site-footer, .sample-bar").forEach((region) => {
+    region.inert = isMobile && open;
+  });
 
   if (open) {
     lastFocusedElement = document.activeElement;
@@ -66,11 +69,11 @@ const copyStatus = document.querySelector("[data-copy-status]");
 const email = "saimer.pro.onishi@outlook.jp";
 
 copyButton?.addEventListener("click", async () => {
-  const original = copyButton.textContent;
+  copyButton.disabled = true;
+  let copied = false;
   try {
     await navigator.clipboard.writeText(email);
-    copyButton.textContent = "コピーしました";
-    if (copyStatus) copyStatus.textContent = "メールアドレスをコピーしました。";
+    copied = true;
   } catch {
     const input = document.createElement("textarea");
     input.value = email;
@@ -79,16 +82,21 @@ copyButton?.addEventListener("click", async () => {
     input.style.opacity = "0";
     document.body.appendChild(input);
     input.select();
-    document.execCommand("copy");
-    input.remove();
-    copyButton.textContent = "コピーしました";
-    if (copyStatus) copyStatus.textContent = "メールアドレスをコピーしました。";
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+      copied = false;
+    } finally {
+      input.remove();
+    }
   }
-
-  window.setTimeout(() => {
-    copyButton.textContent = original;
-    if (copyStatus) copyStatus.textContent = "";
-  }, 2000);
+  copyButton.disabled = false;
+  copyButton.focus();
+  if (copyStatus) {
+    copyStatus.textContent = copied
+      ? "メールアドレスをコピーしました。"
+      : "コピーできませんでした。表示されているメールアドレスを選択してコピーしてください。";
+  }
 });
 
 const talentNames = {

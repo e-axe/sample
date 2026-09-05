@@ -12,8 +12,9 @@
   <meta property="og:url" content="https://e-axe.github.io/sample/saimer-pro/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.2">
+  <script src="./assets/js/main.js?v=1.2" defer></script>
+  <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -41,8 +42,11 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" aria-hidden="true">
-        <img src="./assets/images/hero/sky-sample.webp" alt="" width="1672" height="941" fetchpriority="high">
+      <div class="hero-media" aria-hidden="true" data-asset-status="sample">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/images/hero/sky-sample-sp.webp">
+          <img src="./assets/images/hero/sky-sample-pc.webp" alt="" width="1672" height="941" fetchpriority="high">
+        </picture>
       </div>
       <div class="container hero-inner reveal">
         <p class="eyebrow">ACTOR MANAGEMENT / PRODUCTION</p>
@@ -63,7 +67,7 @@
         <div class="talent-grid">
           <a class="talent-card reveal" href="./talents/ishihara-yueto/">
             <div class="talent-photo">
-              <img class="sprite-image sprite-col-1" src="./assets/images/talents/sample-portraits.webp" alt="石原月斗さんのサンプル写真" width="1536" height="1024">
+              <img class="sprite-image sprite-col-1" src="./assets/images/talents/sample-portraits.webp" alt="石原月斗さんのサンプル写真" width="1536" height="1024" loading="lazy">
             </div>
             <h3 class="talent-card-name">石原 月斗</h3>
             <p class="talent-card-en">YUETO ISHIHARA / SAMPLE</p>
@@ -93,7 +97,7 @@
       </div>
     </section>
 
-    <section class="section ruled-section" aria-labelledby="about-title">
+    <section class="section about-section" aria-labelledby="about-title">
       <div class="container about-preview reveal">
         <h2 class="section-title" id="about-title">About</h2>
         <div class="about-preview-copy">
@@ -135,6 +139,7 @@
     <div class="container contact-wrap reveal">
       <a class="contact-cta" href="./contact/">
         <span class="contact-cta-title">Contact</span>
+        <span class="contact-cta-description">お仕事のご依頼・ご相談はこちらから</span>
         <span class="contact-cta-arrow" aria-hidden="true">→</span>
       </a>
     </div>
