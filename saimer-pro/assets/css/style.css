@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&display=swap");
 
 :root {
-  /* Specification v1.2 — adjust the shared palette here. */
+  /* Shared palette — v1.3.1 blue typography refinement. */
   --color-bg: #F5FAFE;
   --color-surface: #E6F3FB;
-  --color-heading: #173F63;
-  --color-text: #243F54;
-  --color-muted: #526B7A;
+  --color-heading: #236695;
+  --color-text: #2A5777;
+  --color-muted: #466C85;
   --color-accent: #008BCB;
   --color-accent-hover: #006FA6;
   --color-line: #C6DEED;
   --color-white: #FFFFFF;
   --color-cta-text: #FFFFFF;
   --color-cta-bg: #006FA6;
-  --color-focus: #173F63;
+  --color-focus: #236695;
   --hero-position-pc: 50% 50%;
   --hero-position-sp: 50% 50%;
   --hero-overlay: rgb(245 250 254 / 38%);
@@ -304,13 +304,13 @@ img {
   letter-spacing: -0.055em;
 }
 
-.hero-title .japanese {
+.hero-title .production {
   display: block;
-  margin-top: 18px;
-  font-family: var(--serif-ja);
-  font-size: clamp(34px, 4vw, 58px);
-  letter-spacing: -0.025em;
-  line-height: 1.28;
+  margin-top: 10px;
+  font-family: var(--serif-en);
+  font-size: clamp(64px, 7vw, 100px);
+  letter-spacing: -0.035em;
+  line-height: 0.98;
 }
 
 .hero-copy {
@@ -1118,7 +1118,12 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 .hero .provisional-label {
   display: block;
   margin: 12px 0 0;
-  color: var(--color-heading);
+  color: var(--color-text);
+}
+
+.hero .eyebrow,
+.hero-copy {
+  color: var(--color-text);
 }
 
 .about-section, .about-page .page-hero {
@@ -1372,9 +1377,9 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
     font-size: clamp(52px, 16vw, 64px);
   }
 
-  .hero-title .japanese {
-    margin-top: 12px;
-    font-size: clamp(29px, 8.6vw, 40px);
+  .hero-title .production {
+    margin-top: 8px;
+    font-size: clamp(44px, 13.5vw, 60px);
   }
 
   .hero-copy {
