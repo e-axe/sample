@@ -64,6 +64,10 @@
   }
 
   .about-sky-media img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     object-position: center bottom;
     mask-image: linear-gradient(180deg, transparent, #000 22%);
