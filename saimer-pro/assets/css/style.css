@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&display=swap");
 
 :root {
-  /* Shared palette — v1.3.1 blue typography refinement. */
+  /* Shared palette — v1.3.2 vivid blue matched to the supplied reference. */
   --color-bg: #F5FAFE;
   --color-surface: #E6F3FB;
-  --color-heading: #236695;
-  --color-text: #2A5777;
-  --color-muted: #466C85;
+  --color-heading: #3883C8;
+  --color-text: #2478B3;
+  --color-muted: #2478B3;
   --color-accent: #008BCB;
-  --color-accent-hover: #006FA6;
+  --color-accent-hover: #17659D;
   --color-line: #C6DEED;
   --color-white: #FFFFFF;
   --color-cta-text: #FFFFFF;
   --color-cta-bg: #006FA6;
-  --color-focus: #236695;
+  --color-focus: #3883C8;
   --hero-position-pc: 50% 50%;
   --hero-position-sp: 50% 50%;
   --hero-overlay: rgb(245 250 254 / 38%);
@@ -74,7 +74,7 @@ img {
 }
 
 ::selection {
-  background: var(--color-heading);
+  background: var(--color-cta-bg);
   color: var(--color-bg);
 }
 
@@ -89,7 +89,7 @@ img {
   top: 8px;
   left: 8px;
   padding: 10px 16px;
-  background: var(--color-heading);
+  background: var(--color-cta-bg);
   color: var(--color-bg);
   transform: translateY(-140%);
   transition: transform 160ms ease;
@@ -991,14 +991,14 @@ img {
 }
 
 .button:hover {
-  background: var(--color-heading);
-  border-color: var(--color-heading);
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
   color: var(--color-white);
 }
 
 .button-secondary {
   background: transparent;
-  color: var(--color-accent-hover);
+  color: var(--color-text);
 }
 
 .button-secondary:hover {
@@ -1093,11 +1093,11 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 }
 
 .view-link, .arrow-link, .inline-link, .contact-cta-arrow {
-  color: var(--color-accent-hover);
+  color: var(--color-text);
 }
 
 .inline-link:hover, .view-link:hover, .arrow-link:hover {
-  color: var(--color-heading);
+  color: var(--color-accent-hover);
 }
 
 .view-link {
