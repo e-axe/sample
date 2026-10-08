@@ -85,3 +85,12 @@
 |公式ロゴ|硝子の星の子供達ロゴ.png|glass-star-logo.png／1200×546px、透過PNG|
 
 フライヤーの一覧表示は `glass-star-flyer-front-preview.webp` と `glass-star-flyer-back-preview.webp`（855×1200px）を遅延読み込み。拡大操作時のみ1800pxのJPEGを読み込む。ロゴは透明余白をトリミングし、縦横比と透過を保持。
+
+## 公開URLとSNS共有画像（2026-10-08確定）
+
+- 本番URL／canonical：`https://garasunohoshi.otonapro.com/`
+- 確認用GitHub Pages：`noindex,nofollow`を維持。
+- OGP・X共有画像：**公式フライヤー表面** `image/glass-star-flyer-front.jpg`（1283×1800px、縦長）を使用。
+- OGP専用横長画像（`glass-star-ogp.jpg`）は**未制作・未登録**。将来差し替える場合は推奨1200×630pxで制作し、OGPとXの画像URL・画像寸法を合わせて更新。
+- 本番用のインデックス許可・robots.txt・sitemap.xmlは`tools/prepare_release.py`で生成。手順は`README-DELIVERY.md`。
+- キャスト写真が全員分反映されるまで、本番ZIPを生成しない。
