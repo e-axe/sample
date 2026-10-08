@@ -6,7 +6,7 @@
 - 正本：`e-axe/sample` リポジトリの `glass-star-children/`
 
 ## 現状
-- 公式フライヤー表面 `image/glass-star-flyer-front.jpg` をOGP画像に指定済み（本番URLからの絶対URL）
+- 採用済み横長画像 `image/glass-star-ogp.jpg`（1200×630px）をOGP画像に指定済み（本番URLからの絶対URL）
 - canonical、OGP、X向けカード、全8回のEvent構造化データを設定済み
 - **キャスト32名の写真は未支給・未反映**。現在は仮画像のまま
 - 確認用 `index.html` の robots は **noindex,nofollow**。公開準備前に解除しない
@@ -24,7 +24,7 @@
 | robotsメタ | `noindex,nofollow` | `index,follow,max-image-preview:large` |
 | キャスト仮画像注記 | 表示（写真未反映時） | 削除 |
 | canonical | 本番ドメイン | 本番ドメイン |
-| OGP画像 | 本番ドメインの公式フライヤー表 | 本番ドメインの公式フライヤー表 |
+| OGP画像 | 本番ドメインの横長OGP画像 | 本番ドメインの横長OGP画像 |
 | robots.txt / sitemap.xml | 生成しない | 生成する |
 
 **注意：** GitHubの確認用 `index.html` をそのまま本番へ設置すると `noindex` が残り、検索結果に掲載されません。必ず本番用ZIPを使用してください。
@@ -33,7 +33,7 @@
 - `https://garasunohoshi.otonapro.com/` がHTTPSで正常表示される（証明書・リダイレクトも確認）。
 - `index.html` のrobotsメタが `index,follow,max-image-preview:large` になり、サーバーの `X-Robots-Tag: noindex`、robots.txtのDisallow、Basic認証などでブロックされない。
 - `https://garasunohoshi.otonapro.com/robots.txt` と `/sitemap.xml` が200で取得できる。
-- `https://garasunohoshi.otonapro.com/image/glass-star-flyer-front.jpg` が一般公開され、SNSクローラーから取得できる。フライヤーは縦長なので、横長カード向け画像（1200×630px等）に差し替える場合は、OGP画像URLと寸法の両方を更新する。
+- `https://garasunohoshi.otonapro.com/image/glass-star-ogp.jpg` が一般公開され、SNSクローラーから取得できる。OGP画像は1200×630px。Xカードは `summary_large_image`。
 - 全8公演、出演者ごとの表示、チケット導線、公式リンク、フライヤーの拡大、スマホメニューが正常動作する。
 - サーバーへのアップロード後にGoogle Search Consoleで所有権確認、サイトマップ登録、URL検査を実施。登録・掲載には時間がかかり、検索順位は保証されない。
 

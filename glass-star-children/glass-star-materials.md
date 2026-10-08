@@ -56,6 +56,7 @@
 | ヒーロー背景 | `glass-star-hero.webp` |
 | 公演日程背景 | `glass-star-schedule.webp` |
 | あらすじ背景 | `glass-star-story.webp` |
+| SNS共有用画像 | `glass-star-ogp.jpg` |
 
 ## 追加素材の命名
 
@@ -66,7 +67,7 @@
 | 公式メインビジュアル（文字入り） | `glass-star-main-visual.jpg` |
 | 公式メインビジュアル（文字なし） | `glass-star-main-visual-clean.jpg` |
 | フライヤー表・裏のPDF | `glass-star-flyer.pdf` |
-| SNS共有用画像 | `glass-star-ogp.jpg` |
+
 | 公演情報テキスト | `glass-star-performance-info.txt` |
 | 外部リンク一覧 | `glass-star-links.txt` |
 | キャスト画像対応表 | `glass-star-cast-list.csv` |
@@ -90,7 +91,7 @@
 
 - 本番URL／canonical：`https://garasunohoshi.otonapro.com/`
 - 確認用GitHub Pages：`noindex,nofollow`を維持。
-- OGP・X共有画像：**公式フライヤー表面** `image/glass-star-flyer-front.jpg`（1283×1800px、縦長）を使用。
-- OGP専用横長画像（`glass-star-ogp.jpg`）は**未制作・未登録**。将来差し替える場合は推奨1200×630pxで制作し、OGPとXの画像URL・画像寸法を合わせて更新。
+- OGP・X共有画像：採用済みの「左に公式フライヤー、右に作品情報」の横長画像 `image/glass-star-ogp.jpg`（1200×630px、JPEG）を使用。
+- OGPとXの画像URLを統一。Xカードは `summary_large_image`。元の採用PNGから縮小・JPEG化。
 - 本番用のインデックス許可・robots.txt・sitemap.xmlは`tools/prepare_release.py`で生成。手順は`README-DELIVERY.md`。
 - キャスト写真が全員分反映されるまで、本番ZIPを生成しない。
