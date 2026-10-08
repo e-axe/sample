@@ -61,7 +61,7 @@
 
 | 用途 | 支給用ファイル名（未登録） |
 |---|---|
-| 作品ロゴ（透過PNG） | `glass-star-logo.png` |
+
 | ロゴの編集元データ | `glass-star-logo.ai` |
 | 公式メインビジュアル（文字入り） | `glass-star-main-visual.jpg` |
 | 公式メインビジュアル（文字なし） | `glass-star-main-visual-clean.jpg` |
@@ -73,3 +73,15 @@
 
 上記のJPEGをPNGで支給する場合は、実際の形式に合わせて拡張子も変更する。
 `index.html` や第三者配布のフォント・ライセンスファイルは標準名を維持する。
+
+## 公式素材（2026-10-08受領）
+
+支給元：Google Driveフォルダ `1qwwLiUNrRTbY1PrP_SFWxU4EJyv4y6J4`。公式支給データを使用し、生成画像への置換・意匠の変更は行わない。原寸データはDriveに保持し、LPにはsRGBのWeb用データを配置。
+
+|用途|Driveの旧名称|統一名称／LP仕様|
+|---|---|---|
+|フライヤー表|1.jpg|glass-star-flyer-front.jpg／1283×1800px、JPEG（拡大用）|
+|フライヤー裏|硝子_裏面.jpg|glass-star-flyer-back.jpg／1283×1800px、JPEG（拡大用）|
+|公式ロゴ|硝子の星の子供達ロゴ.png|glass-star-logo.png／1200×546px、透過PNG|
+
+フライヤーの一覧表示は `glass-star-flyer-front-preview.webp` と `glass-star-flyer-back-preview.webp`（855×1200px）を遅延読み込み。拡大操作時のみ1800pxのJPEGを読み込む。ロゴは透明余白をトリミングし、縦横比と透過を保持。
