@@ -91,7 +91,7 @@
 
 - 本番URL／canonical：`https://garasunohoshi.otonapro.com/`
 - 確認用GitHub Pages：`noindex,nofollow`を維持。
-- OGP・X共有画像：採用済みの「左に公式フライヤー、右に作品情報」の横長画像 `image/glass-star-ogp.jpg`（1200×630px、JPEG）を使用。
-- OGPとXの画像URLを統一。Xカードは `summary_large_image`。元の採用PNGから縮小・JPEG化。
+- OGP・X共有画像：正式採用の「左に公式フライヤー、右に作品情報」の横長画像 `image/glass-star-ogp.jpg`（1200×630px、JPEG）を使用。
+- OGPとXの画像URLを統一。Xカードは `summary_large_image`。2026-10-08に後から作成された正式採用PNG「宇宙に響く朗読劇「硝子の星」.png」から縮小・JPEG化。
 - 本番用のインデックス許可・robots.txt・sitemap.xmlは`tools/prepare_release.py`で生成。手順は`README-DELIVERY.md`。
 - キャスト写真が全員分反映されるまで、本番ZIPを生成しない。
