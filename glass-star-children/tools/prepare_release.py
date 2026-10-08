@@ -18,7 +18,7 @@ ARCHIVE = ROOT / "glass-star-children-release.zip"
 PRODUCTION_URL = "https://garasunohoshi.otonapro.com/"
 PREVIEW_ROBOTS = '<meta name="robots" content="noindex,nofollow">'
 PRODUCTION_ROBOTS = '<meta name="robots" content="index,follow,max-image-preview:large">'
-SAMPLE_NOTE = '<p class="sample-note">写真は仮画像です。出演者を選ぶと出演回を確認できます。</p>'
+SAMPLE_NOTE = '<p class="sample-note">出演者を選ぶと出演回を確認できます。</p>'
 
 
 def fail(message: str) -> None:

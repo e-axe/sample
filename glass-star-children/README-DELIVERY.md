@@ -8,7 +8,7 @@
 ## 現状
 - 採用済み横長画像 `image/glass-star-ogp.jpg`（1200×630px）をOGP画像に指定済み（本番URLからの絶対URL）
 - canonical、OGP、X向けカード、全8回のEvent構造化データを設定済み
-- **キャスト32名の写真は未支給・未反映**。現在は仮画像のまま
+- **キャスト32名の本番写真を反映済み**。支給画像01〜32を掲載順に対応させ、仮画像注記を削除済み
 - 確認用 `index.html` の robots は **noindex,nofollow**。公開準備前に解除しない
 
 ## 本番用ZIPの作り方（写真差し替え後）
@@ -22,7 +22,7 @@
 | | GitHub確認用 | 本番用ZIP |
 |---|---|---|
 | robotsメタ | `noindex,nofollow` | `index,follow,max-image-preview:large` |
-| キャスト仮画像注記 | 表示（写真未反映時） | 削除 |
+| キャスト案内 | 出演回を確認する案内を表示 | 削除 |
 | canonical | 本番ドメイン | 本番ドメイン |
 | OGP画像 | 本番ドメインの横長OGP画像 | 本番ドメインの横長OGP画像 |
 | robots.txt / sitemap.xml | 生成しない | 生成する |
