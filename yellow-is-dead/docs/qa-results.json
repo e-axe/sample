@@ -1,0 +1,487 @@
+{
+  "browser": "153.0.8010.0",
+  "widths": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 871.5
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 940.453125
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 951.625
+    },
+    {
+      "width": 430,
+      "scroll": 430,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 981.46875
+    },
+    {
+      "width": 767,
+      "scroll": 767,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 1025.890625
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 717.9375
+    },
+    {
+      "width": 1023,
+      "scroll": 1023,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 796.03125
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 796.328125
+    },
+    {
+      "width": 1079,
+      "scroll": 1079,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 813.171875
+    },
+    {
+      "width": 1080,
+      "scroll": 1080,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 764.609375
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 817.125
+    },
+    {
+      "width": 1920,
+      "scroll": 1920,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 810
+    }
+  ],
+  "checks": [
+    {
+      "name": "CAST names and order",
+      "result": true
+    },
+    {
+      "name": "All seven performance times",
+      "result": true
+    },
+    {
+      "name": "noindex",
+      "result": true
+    },
+    {
+      "name": "Menu opens",
+      "result": true
+    },
+    {
+      "name": "Escape closes menu",
+      "result": true
+    },
+    {
+      "name": "Menu selection closes and changes hash",
+      "result": true
+    },
+    {
+      "name": "Cast target visible below header",
+      "result": true
+    },
+    {
+      "name": "Resize closes mobile menu",
+      "result": true
+    },
+    {
+      "name": "Story expands",
+      "result": true
+    },
+    {
+      "name": "Full original story",
+      "result": true
+    },
+    {
+      "name": "Story collapses",
+      "result": true
+    },
+    {
+      "name": "CTA header internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA hero internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA ticket internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA sticky internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA footer internal before sale",
+      "result": true
+    },
+    {
+      "name": "Hash back navigation",
+      "result": true
+    },
+    {
+      "name": "200% text no horizontal overflow",
+      "result": true
+    },
+    {
+      "name": "No-JS primary content",
+      "result": true
+    },
+    {
+      "name": "No-JS story expands",
+      "result": true
+    },
+    {
+      "name": "No-JS mobile menu opens",
+      "result": true
+    },
+    {
+      "name": "Font/image failure preserves text and CTAs",
+      "result": true
+    },
+    {
+      "name": "Failure no horizontal overflow",
+      "result": true
+    },
+    {
+      "name": "No uncaught errors / missing required resources",
+      "result": true
+    }
+  ],
+  "performance": [
+    {
+      "lcp": 2492,
+      "cls": 0,
+      "resources": [
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 53620,
+          "encoded": 53320
+        },
+        {
+          "name": "style.css",
+          "bytes": 20217,
+          "encoded": 19917
+        },
+        {
+          "name": "app.js",
+          "bytes": 1747,
+          "encoded": 1447
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 110124,
+          "encoded": 109824
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 63736,
+          "encoded": 63436
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 15678
+    },
+    {
+      "lcp": 2480,
+      "cls": 0,
+      "resources": [
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 53620,
+          "encoded": 53320
+        },
+        {
+          "name": "style.css",
+          "bytes": 20217,
+          "encoded": 19917
+        },
+        {
+          "name": "app.js",
+          "bytes": 1747,
+          "encoded": 1447
+        },
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 110124,
+          "encoded": 109824
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 63736,
+          "encoded": 63436
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 15678
+    },
+    {
+      "lcp": 2476,
+      "cls": 0.0029313343028052447,
+      "resources": [
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 53620,
+          "encoded": 53320
+        },
+        {
+          "name": "style.css",
+          "bytes": 20217,
+          "encoded": 19917
+        },
+        {
+          "name": "app.js",
+          "bytes": 1747,
+          "encoded": 1447
+        },
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 110124,
+          "encoded": 109824
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 63736,
+          "encoded": 63436
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 15678
+    }
+  ],
+  "errors": []
+}
