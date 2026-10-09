@@ -167,3 +167,12 @@ P02/P04：初回転送429,664bytes（旧版429,399bytes）、追加リクエス�
 今回の制限環境では両版ともLCP2.5秒の目標を満たさず、ばらつきが大きい。今回版が速くなったという判断にも使わない。配色変更による転送差は265bytes、コード由来の速度低下は比較では確認されなかった。実機iOS Safari/Android Chromeの初回読込と連続操作は未検証として残す。詳細はfooter-review-20261009-loading-results.json。
 
 R05/R06：配信HTML/CSS/JSとバイト一致するZIPへ更新。展開後、HTTPルート直下/サブディレクトリ配置で320px幅・18名・7公演・販売期間・全素材を確認済み。404なし。GitHub Pagesでの実反映は公開確認追記に記録する。
+
+
+## フッター配色版の公開確認
+
+実装コミット：194943df41b87d5120f2b8e96adc270b85f3b0a0。GitHub Pages run 37936105706 は completed / success。
+
+https://e-axe.github.io/sample/yellow-is-dead/ を新規Chromiumコンテキストの1440px/390pxで確認。HTTP200、配信HTMLは最終生成物とバイト一致。ヘッダー/フッターの黄・赤、公演名の黒と白い背景を計算済みスタイルと画面の目視で確認。同梱3書体loaded、18名・7公演・販売案内・制作クレジット・noindexを確認。メニュー/Escape/下部CTA、外部リンクの別タブ設定、内部移動、横はみ出しなし、必須素材404/未処理例外0件を確認。詳細はfooter-review-20261009-public-results.json。
+
+本公開確認の追記は検証文書のみの変更。確認済みのHTML/CSS/JS/画像/ZIPは変更しない。実機iOS/AndroidとCPU制限下の描画の再現確認は未実施で、先の通常/制限試験の条件と限界を保持する。

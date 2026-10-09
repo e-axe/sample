@@ -1,0 +1,58 @@
+{
+  "url": "https://e-axe.github.io/sample/yellow-is-dead/",
+  "checks": [
+    {
+      "width": 1440,
+      "status": 200,
+      "cast": 18,
+      "shows": 7,
+      "hero": "yellow-is-dead-hero-1536.webp",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "cast": 18,
+      "shows": 7,
+      "hero": "yellow-is-dead-hero-mobile-640.webp",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "implementationCommit": "194943df41b87d5120f2b8e96adc270b85f3b0a0",
+  "pagesRun": 37936105706,
+  "pagesConclusion": "success",
+  "verified": [
+    "Published HTML matches generated HTML byte-for-byte",
+    "Header and footer use official yellow and red; footer has black text on paper-colored surface",
+    "18 cast, 7 shows, current sales information, local fonts, noindex",
+    "External links open new tabs; internal menu and sticky actions retain current tab",
+    "No overflow, required-resource HTTP errors or uncaught exceptions at 1440px and 390px"
+  ]
+}
