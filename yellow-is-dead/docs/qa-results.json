@@ -19,7 +19,7 @@
         }
       ],
       "prices": true,
-      "hero": 871.5
+      "hero": 896.6875
     },
     {
       "width": 375,
@@ -252,6 +252,50 @@
       "result": true
     },
     {
+      "name": "Official appearance ①",
+      "result": true
+    },
+    {
+      "name": "Official appearance ②",
+      "result": true
+    },
+    {
+      "name": "Official appearance ③",
+      "result": true
+    },
+    {
+      "name": "Official appearance ④",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑤",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑥",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑦",
+      "result": true
+    },
+    {
+      "name": "Official sales period",
+      "result": true
+    },
+    {
+      "name": "Official sales-page URL",
+      "result": true
+    },
+    {
+      "name": "Old public information removed",
+      "result": true
+    },
+    {
+      "name": "Latest credit",
+      "result": true
+    },
+    {
       "name": "noindex",
       "result": true
     },
@@ -342,18 +386,20 @@
   ],
   "performance": [
     {
-      "lcp": 2492,
+      "lcp": 2464,
       "cls": 0,
+      "lcpElement": "",
+      "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
           "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 53620,
-          "encoded": 53320
+          "bytes": 60892,
+          "encoded": 60592
         },
         {
           "name": "style.css",
-          "bytes": 20217,
-          "encoded": 19917
+          "bytes": 22612,
+          "encoded": 22312
         },
         {
           "name": "app.js",
@@ -367,13 +413,13 @@
         },
         {
           "name": "yellow-is-dead-hero-mobile-800.webp",
-          "bytes": 110124,
-          "encoded": 109824
+          "bytes": 83982,
+          "encoded": 83682
         },
         {
           "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 63736,
-          "encoded": 63436
+          "bytes": 69768,
+          "encoded": 69468
         },
         {
           "name": "yellow-is-dead-condensed.woff2",
@@ -386,21 +432,23 @@
           "encoded": 58880
         }
       ],
-      "navigation": 15678
+      "navigation": 20051
     },
     {
-      "lcp": 2480,
+      "lcp": 2148,
       "cls": 0,
+      "lcpElement": "",
+      "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
           "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 53620,
-          "encoded": 53320
+          "bytes": 60892,
+          "encoded": 60592
         },
         {
           "name": "style.css",
-          "bytes": 20217,
-          "encoded": 19917
+          "bytes": 22612,
+          "encoded": 22312
         },
         {
           "name": "app.js",
@@ -409,8 +457,8 @@
         },
         {
           "name": "yellow-is-dead-hero-mobile-800.webp",
-          "bytes": 110124,
-          "encoded": 109824
+          "bytes": 83982,
+          "encoded": 83682
         },
         {
           "name": "yellow-is-dead-logo-640.webp",
@@ -418,14 +466,14 @@
           "encoded": 94980
         },
         {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 69768,
+          "encoded": 69468
+        },
+        {
           "name": "yellow-is-dead-condensed.woff2",
           "bytes": 14428,
           "encoded": 14128
-        },
-        {
-          "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 63736,
-          "encoded": 63436
         },
         {
           "name": "yellow-is-dead-story-floor.webp",
@@ -433,21 +481,18 @@
           "encoded": 58880
         }
       ],
-      "navigation": 15678
+      "navigation": 20051
     },
     {
-      "lcp": 2476,
-      "cls": 0.0029313343028052447,
+      "lcp": 2072,
+      "cls": 0,
+      "lcpElement": "",
+      "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
           "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 53620,
-          "encoded": 53320
-        },
-        {
-          "name": "style.css",
-          "bytes": 20217,
-          "encoded": 19917
+          "bytes": 60892,
+          "encoded": 60592
         },
         {
           "name": "app.js",
@@ -455,9 +500,14 @@
           "encoded": 1447
         },
         {
+          "name": "style.css",
+          "bytes": 22612,
+          "encoded": 22312
+        },
+        {
           "name": "yellow-is-dead-hero-mobile-800.webp",
-          "bytes": 110124,
-          "encoded": 109824
+          "bytes": 83982,
+          "encoded": 83682
         },
         {
           "name": "yellow-is-dead-logo-640.webp",
@@ -466,8 +516,8 @@
         },
         {
           "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 63736,
-          "encoded": 63436
+          "bytes": 69768,
+          "encoded": 69468
         },
         {
           "name": "yellow-is-dead-condensed.woff2",
@@ -480,8 +530,9 @@
           "encoded": 58880
         }
       ],
-      "navigation": 15678
+      "navigation": 20051
     }
   ],
-  "errors": []
+  "errors": [],
+  "officialSourceVersion": "2026-10-09-latest-official / Library version 3"
 }

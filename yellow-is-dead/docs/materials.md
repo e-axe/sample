@@ -12,11 +12,19 @@
 | cast-06 | 依光希空 | 未受領 | yellow-is-dead-cast-06.jpg | 受領後確認 |
 | cast-07 | 城崎桃華 | 未受領 | yellow-is-dead-cast-07.jpg | 受領後確認 |
 | cast-08 | 澤田奏音 | 未受領 | yellow-is-dead-cast-08.jpg | 受領後確認 |
-| cast-09 | 倉橋怜奈 | 未受領 | yellow-is-dead-cast-09.jpg | 受領後確認 |
+| cast-09 | 倉橋伶奈 | 未受領 | yellow-is-dead-cast-09.jpg | 受領後確認 |
 | cast-10 | 高田舟 | 未受領 | yellow-is-dead-cast-10.jpg | 受領後確認 |
 | cast-11 | 加藤光大 | 未受領 | yellow-is-dead-cast-11.jpg | 受領後確認 |
 | cast-12 | 樹くるみ | 未受領 | yellow-is-dead-cast-12.jpg | 受領後確認 |
 | cast-13 | 大橋篤 | 未受領 | yellow-is-dead-cast-13.jpg | 受領後確認 |
+
+| cast-14 | 神志那結衣 | 未受領 | yellow-is-dead-cast-14.jpg | 受領後確認 |
+| cast-15 | 間島和奏 | 未受領 | yellow-is-dead-cast-15.jpg | 受領後確認 |
+| cast-16 | 内龍星 | 未受領 | yellow-is-dead-cast-16.jpg | 受領後確認 |
+| cast-17 | 七瀬つむぎ | 未受領 | yellow-is-dead-cast-17.jpg | 受領後確認 |
+| cast-18 | 熊沢世莉奈 | 未受領 | yellow-is-dead-cast-18.jpg | 受領後確認 |
+
+固定IDは初版から維持。掲載順はperformance.jsonのCASTグループで管理し、上表のID順と分離。cast-09は正字訂正のみで同じ人物への対応を維持。
 
 ## 採用素材
 

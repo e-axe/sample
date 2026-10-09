@@ -21,3 +21,25 @@
 .date-range{flex-wrap:wrap;white-space:normal;row-gap:8px}.date-range>span{white-space:nowrap}.strip-date{white-space:normal;line-height:1.15}.strip-venue{white-space:normal;line-height:1.15}
 
 @media(max-width:767px){.caution-tape{top:6px;transform:rotate(3deg)}}
+
+/* Confirmed appearance dates and ticket sales information. */
+.schedule-cast-note{font-size:14px;color:var(--muted);margin-bottom:18px}
+.day li{display:block}.show-heading{display:flex;align-items:center;gap:14px}
+.show-cast{margin-top:12px;font-size:14px;line-height:1.7}.show-cast p+p{margin-top:8px}
+.show-cast a{border-bottom:1px solid var(--line);padding-block:3px}.show-cast a:hover{border-color:var(--red)}
+.reading-label{display:block;font-size:11px;color:var(--muted);letter-spacing:.03em;line-height:1.5}
+.ticket-release{align-items:flex-start}.ticket-release>.en{margin-top:4px}
+.ticket-release .sale-vendor{font-size:16px;margin-bottom:12px}
+.ticket-release .sale-status{font-size:13px;font-weight:400;margin-bottom:8px;color:var(--muted)}
+.sale-period{display:grid;gap:12px}.sale-period>div{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline}
+.sale-period dt{font-size:13px;font-weight:400;color:var(--muted)}.sale-period dd{font-size:18px;font-weight:800}
+.ticket-release .sale-method{font-size:14px;font-weight:400;margin-top:12px}
+.sale-page-link{display:block;width:fit-content;margin:18px auto 0}
+.cast-card{scroll-margin-top:calc(var(--header) + 24px)}
+.cast-pair .cast-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:568px;position:relative}
+.cast-pair .cast-grid:after{content:'/';position:absolute;top:calc(100% - 37px);left:50%;transform:translateX(-50%);font-size:18px;color:var(--muted)}
+.cast-pair .cast-grid:has(.cast-appearances):after{top:calc(100% - 74px)}
+.cast-appearances{font-size:13px;margin-top:8px;line-height:1.6}.cast-appearances span{display:block;color:var(--muted);font-size:11px}
+@media(max-width:1079px){.cast-pair .cast-grid{max-width:568px}}
+@media(max-width:767px){.day{grid-template-columns:108px minmax(0,1fr);align-items:start}.day h3{align-items:center;padding-top:0}.day ul{display:grid;gap:24px}.show-heading{gap:8px}.show-cast{margin-top:10px}.schedule-cast-note{font-size:13px}.sale-period>div{grid-template-columns:1fr;gap:2px}.sale-period dd{font-size:16px}.ticket-release .sale-vendor{margin-top:12px}.cast-pair .cast-grid{max-width:none}.cast-appearances{font-size:12px}.cast-pair .cast-grid:has(.cast-appearances):after{top:calc(100% - 70px)}}
+@media(max-width:359px){.day{grid-template-columns:95px minmax(0,1fr)}.show-heading{gap:5px}.show-cast{font-size:13px}.cast-appearances{font-size:11px}}

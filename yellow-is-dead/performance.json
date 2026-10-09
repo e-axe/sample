@@ -2,8 +2,10 @@
   "source": {
     "filename": "イエローが死んだ_公演情報最新版.md",
     "updated": "2026-10-09",
-    "performanceProvided": "2026-10-01",
-    "accessVerified": "2026-10-09"
+    "performanceProvided": "2026-10-09",
+    "accessVerified": "2026-10-09",
+    "version": "2026-10-09-latest-official",
+    "libraryVersion": 3
   },
   "title": "イエローが死んだ",
   "story": [
@@ -95,12 +97,19 @@
   "ticketNote": "全席指定席／当日券500円増し",
   "sale": {
     "status": "before_sale",
-    "url": "",
-    "releaseText": "10月中旬カンフェティにて発売予定"
+    "url": "http://confetti-web.com/softboiled16",
+    "vendor": "カンフェティ",
+    "startsAt": "2026-10-13T22:00:00+09:00",
+    "endsAt": "2026-11-23T21:00:00+09:00",
+    "startLabel": "2026年10月13日（火）22:00",
+    "endLabel": "11月23日（祝・月）21:00",
+    "method": "先着順",
+    "releaseText": "10月13日（火）22:00〜 カンフェティにて販売開始"
   },
   "castGroups": [
     {
       "label": "",
+      "paired": false,
       "members": [
         {
           "id": "cast-01",
@@ -113,64 +122,79 @@
     },
     {
       "label": "",
+      "paired": true,
+      "members": [
+        {
+          "id": "cast-14",
+          "name": "神志那結衣",
+          "image": null,
+          "focus": "50% 30%",
+          "order": 2,
+          "appearances": [
+            "②",
+            "③",
+            "⑥",
+            "⑦"
+          ],
+          "appearanceLabel": "②・③・⑥・⑦"
+        },
+        {
+          "id": "cast-15",
+          "name": "間島和奏",
+          "image": null,
+          "focus": "50% 30%",
+          "order": 3,
+          "appearances": [
+            "①",
+            "④",
+            "⑤"
+          ],
+          "appearanceLabel": "①・④・⑤"
+        }
+      ]
+    },
+    {
+      "label": "",
+      "paired": false,
       "members": [
         {
           "id": "cast-02",
           "name": "春斗",
-          "order": 2,
+          "order": 4,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-03",
           "name": "中島礼貴",
-          "order": 3,
+          "order": 5,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-04",
           "name": "きたつとむ",
-          "order": 4,
+          "order": 6,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-05",
           "name": "岡本和樹",
-          "order": 5,
-          "image": null,
-          "focus": "50% 30%"
-        },
-        {
-          "id": "cast-06",
-          "name": "依光希空",
-          "order": 6,
-          "image": null,
-          "focus": "50% 30%"
-        }
-      ]
-    },
-    {
-      "label": "",
-      "members": [
-        {
-          "id": "cast-07",
-          "name": "城崎桃華",
           "order": 7,
           "image": null,
           "focus": "50% 30%"
         },
         {
-          "id": "cast-08",
-          "name": "澤田奏音",
-          "order": 8,
+          "id": "cast-16",
+          "name": "内龍星",
           "image": null,
-          "focus": "50% 30%"
+          "focus": "50% 30%",
+          "order": 8
         },
         {
-          "id": "cast-09",
-          "name": "倉橋怜奈",
+          "id": "cast-06",
+          "name": "依光希空",
           "order": 9,
           "image": null,
           "focus": "50% 30%"
@@ -178,33 +202,94 @@
       ]
     },
     {
+      "label": "",
+      "paired": false,
+      "members": [
+        {
+          "id": "cast-07",
+          "name": "城崎桃華",
+          "order": 10,
+          "image": null,
+          "focus": "50% 30%"
+        },
+        {
+          "id": "cast-08",
+          "name": "澤田奏音",
+          "order": 11,
+          "image": null,
+          "focus": "50% 30%"
+        },
+        {
+          "id": "cast-09",
+          "name": "倉橋伶奈",
+          "order": 12,
+          "image": null,
+          "focus": "50% 30%"
+        }
+      ]
+    },
+    {
+      "label": "〈Reading cast〉",
+      "paired": true,
+      "members": [
+        {
+          "id": "cast-17",
+          "name": "七瀬つむぎ",
+          "image": null,
+          "focus": "50% 30%",
+          "order": 13,
+          "appearances": [
+            "①",
+            "②",
+            "③",
+            "④",
+            "⑤"
+          ],
+          "appearanceLabel": "①〜⑤"
+        },
+        {
+          "id": "cast-18",
+          "name": "熊沢世莉奈",
+          "image": null,
+          "focus": "50% 30%",
+          "order": 14,
+          "appearances": [
+            "⑥",
+            "⑦"
+          ],
+          "appearanceLabel": "⑥・⑦"
+        }
+      ]
+    },
+    {
       "label": "〈ソフトボイルド〉",
+      "paired": false,
       "members": [
         {
           "id": "cast-10",
           "name": "高田舟",
-          "order": 10,
+          "order": 15,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-11",
           "name": "加藤光大",
-          "order": 11,
+          "order": 16,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-12",
           "name": "樹くるみ",
-          "order": 12,
+          "order": 17,
           "image": null,
           "focus": "50% 30%"
         },
         {
           "id": "cast-13",
           "name": "大橋篤",
-          "order": 13,
+          "order": 18,
           "image": null,
           "focus": "50% 30%"
         }
@@ -233,7 +318,7 @@
     },
     {
       "role": "企画・制作",
-      "name": "ソフトボイルド"
+      "name": "合同会社otonapro/ソフトボイルド"
     }
   ],
   "venue": "BOX in BOX THEATER"
