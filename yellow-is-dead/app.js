@@ -7,16 +7,27 @@
   }
   const menu = document.querySelector('.mobile-menu');
   const summary = menu?.querySelector('summary');
+  const syncMenu = () => {
+    if (!menu || !summary) return;
+    summary.setAttribute('aria-expanded', String(menu.open));
+    document.body.classList.toggle('menu-open', menu.open);
+  };
   const closeMenu = (restore = false) => {
     if (!menu?.open) return;
     menu.open = false;
+    syncMenu();
     if (restore) summary.focus();
   };
   if (menu) {
-    summary.setAttribute('aria-expanded', String(menu.open));
-    menu.addEventListener('toggle', () => {
-      summary.setAttribute('aria-expanded', String(menu.open));
-      document.body.classList.toggle('menu-open', menu.open);
+    syncMenu();
+    summary.addEventListener('click', event => {
+      event.preventDefault();
+      menu.open = !menu.open;
+      syncMenu();
+    });
+    menu.addEventListener('toggle', syncMenu);
+    menu.addEventListener('focusout', event => {
+      if (event.relatedTarget && !menu.contains(event.relatedTarget)) closeMenu();
     });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape') closeMenu(true);
@@ -25,7 +36,14 @@
       if (!menu.contains(event.target)) closeMenu();
     });
     matchMedia('(min-width:1080px)').addEventListener('change', event => {
-      if (event.matches) closeMenu();
+      if (!event.matches) return;
+      const focusedLink = menu.contains(document.activeElement) ? document.activeElement.closest('a') : null;
+      const wasFocused = menu.contains(document.activeElement);
+      closeMenu();
+      if (wasFocused) {
+        const destination = focusedLink && document.querySelector(`.desktop-nav a[href="${focusedLink.getAttribute('href')}"]`);
+        (destination || document.querySelector('.brand')).focus({preventScroll:true});
+      }
     });
   }
   document.addEventListener('click', event => {
@@ -46,6 +64,11 @@
       if (placeholder) placeholder.hidden = false;
     };
     img.addEventListener('error', fail);
+    img.addEventListener('load', () => {
+      img.classList.remove('image-error');
+      const placeholder = img.parentElement.querySelector('.image-fallback');
+      if (placeholder) placeholder.hidden = true;
+    });
     if (img.complete && img.naturalWidth === 0) fail();
   });
 })();
