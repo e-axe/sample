@@ -320,15 +320,31 @@
       "result": true
     },
     {
-      "name": "Story expands",
+      "name": "Full synopsis visible by default",
       "result": true
     },
     {
-      "name": "Full original story",
+      "name": "Full original synopsis unchanged",
       "result": true
     },
     {
-      "name": "Story collapses",
+      "name": "Only the four names are colored",
+      "result": true
+    },
+    {
+      "name": "Title-first header",
+      "result": true
+    },
+    {
+      "name": "Two distinct ticket actions",
+      "result": true
+    },
+    {
+      "name": "Schedule action always opens ticket information",
+      "result": true
+    },
+    {
+      "name": "Sticky schedule label matches destination",
       "result": true
     },
     {
@@ -340,10 +356,6 @@
       "result": true
     },
     {
-      "name": "CTA ticket internal before sale",
-      "result": true
-    },
-    {
       "name": "CTA sticky internal before sale",
       "result": true
     },
@@ -352,11 +364,27 @@
       "result": true
     },
     {
+      "name": "Ticket external page before sale",
+      "result": true
+    },
+    {
       "name": "Hash back navigation",
       "result": true
     },
     {
-      "name": "200% text no horizontal overflow",
+      "name": "Rapid navigation and history anchor stable",
+      "result": true
+    },
+    {
+      "name": "Double computed text sizes no horizontal overflow",
+      "result": true
+    },
+    {
+      "name": "Anchor offset tracks actual header",
+      "result": true
+    },
+    {
+      "name": "Double-size text menu and anchor usable",
       "result": true
     },
     {
@@ -364,7 +392,7 @@
       "result": true
     },
     {
-      "name": "No-JS story expands",
+      "name": "No-JS entire story visible",
       "result": true
     },
     {
@@ -386,25 +414,30 @@
   ],
   "performance": [
     {
-      "lcp": 2464,
+      "lcp": 2408,
       "cls": 0,
       "lcpElement": "",
       "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
           "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 60892,
-          "encoded": 60592
+          "bytes": 61448,
+          "encoded": 61148
         },
         {
           "name": "style.css",
-          "bytes": 22612,
-          "encoded": 22312
+          "bytes": 25431,
+          "encoded": 25131
         },
         {
           "name": "app.js",
-          "bytes": 1747,
-          "encoded": 1447
+          "bytes": 2500,
+          "encoded": 2200
         },
         {
           "name": "yellow-is-dead-logo-640.webp",
@@ -412,14 +445,9 @@
           "encoded": 94980
         },
         {
-          "name": "yellow-is-dead-hero-mobile-800.webp",
-          "bytes": 83982,
-          "encoded": 83682
-        },
-        {
           "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 69768,
-          "encoded": 69468
+          "bytes": 64376,
+          "encoded": 64076
         },
         {
           "name": "yellow-is-dead-condensed.woff2",
@@ -432,33 +460,33 @@
           "encoded": 58880
         }
       ],
-      "navigation": 20051
+      "navigation": 20673
     },
     {
-      "lcp": 2148,
-      "cls": 0,
+      "lcp": 2280,
+      "cls": 0.003641862390079962,
       "lcpElement": "",
       "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
-          "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 60892,
-          "encoded": 60592
-        },
-        {
-          "name": "style.css",
-          "bytes": 22612,
-          "encoded": 22312
-        },
-        {
-          "name": "app.js",
-          "bytes": 1747,
-          "encoded": 1447
-        },
-        {
           "name": "yellow-is-dead-hero-mobile-800.webp",
           "bytes": 83982,
           "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 25431,
+          "encoded": 25131
+        },
+        {
+          "name": "app.js",
+          "bytes": 2500,
+          "encoded": 2200
         },
         {
           "name": "yellow-is-dead-logo-640.webp",
@@ -467,8 +495,8 @@
         },
         {
           "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 69768,
-          "encoded": 69468
+          "bytes": 64376,
+          "encoded": 64076
         },
         {
           "name": "yellow-is-dead-condensed.woff2",
@@ -481,33 +509,33 @@
           "encoded": 58880
         }
       ],
-      "navigation": 20051
+      "navigation": 20673
     },
     {
-      "lcp": 2072,
+      "lcp": 2156,
       "cls": 0,
       "lcpElement": "",
       "lcpUrl": "yellow-is-dead-hero-mobile-800.webp",
       "resources": [
         {
-          "name": "yellow-is-dead-gothic-800.woff2",
-          "bytes": 60892,
-          "encoded": 60592
-        },
-        {
-          "name": "app.js",
-          "bytes": 1747,
-          "encoded": 1447
-        },
-        {
-          "name": "style.css",
-          "bytes": 22612,
-          "encoded": 22312
-        },
-        {
           "name": "yellow-is-dead-hero-mobile-800.webp",
           "bytes": 83982,
           "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 25431,
+          "encoded": 25131
+        },
+        {
+          "name": "app.js",
+          "bytes": 2500,
+          "encoded": 2200
         },
         {
           "name": "yellow-is-dead-logo-640.webp",
@@ -516,8 +544,8 @@
         },
         {
           "name": "yellow-is-dead-gothic-400.woff2",
-          "bytes": 69768,
-          "encoded": 69468
+          "bytes": 64376,
+          "encoded": 64076
         },
         {
           "name": "yellow-is-dead-condensed.woff2",
@@ -530,9 +558,8 @@
           "encoded": 58880
         }
       ],
-      "navigation": 20051
+      "navigation": 20673
     }
   ],
-  "errors": [],
-  "officialSourceVersion": "2026-10-09-latest-official / Library version 3"
+  "errors": []
 }

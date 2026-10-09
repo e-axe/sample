@@ -43,3 +43,31 @@
 @media(max-width:1079px){.cast-pair .cast-grid{max-width:568px}}
 @media(max-width:767px){.day{grid-template-columns:108px minmax(0,1fr);align-items:start}.day h3{align-items:center;padding-top:0}.day ul{display:grid;gap:24px}.show-heading{gap:8px}.show-cast{margin-top:10px}.schedule-cast-note{font-size:13px}.sale-period>div{grid-template-columns:1fr;gap:2px}.sale-period dd{font-size:16px}.ticket-release .sale-vendor{margin-top:12px}.cast-pair .cast-grid{max-width:none}.cast-appearances{font-size:12px}.cast-pair .cast-grid:has(.cast-appearances):after{top:calc(100% - 70px)}}
 @media(max-width:359px){.day{grid-template-columns:95px minmax(0,1fr)}.show-heading{gap:5px}.show-cast{font-size:13px}.cast-appearances{font-size:11px}}
+
+/* Review: title-first header, full synopsis and distinct actions. */
+.brand{display:flex;flex-direction:column;gap:5px;line-height:1.2}
+.brand-title{font-size:21px;font-weight:800;letter-spacing:.03em;white-space:nowrap}
+.brand-series{font-size:12px;letter-spacing:.045em}
+.story-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:28px 48px;align-items:start}
+.story-grid>.story-lead{grid-column:1;grid-row:1}
+.story-grid>.story-photo{grid-column:2;grid-row:1/span 2;margin-top:6px}
+.story-grid>.story-paragraph{grid-column:1;grid-row:2}
+.story-paragraph,.story-ending{font-size:17px;line-height:1.9}
+.story-sentence{display:block}.story-sentence+.story-sentence{margin-top:14px}
+.motive-intro{font-size:17px;font-weight:800;margin-top:32px}
+.story-motives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin-top:18px}
+.story-motives li{background:#fff;border:1px solid var(--line);padding:22px 24px;line-height:1.8;font-size:17px}
+.role-name{font-weight:800}.role-red{color:#b91b27}.role-blue{color:#18519a}.role-green{color:#28703b}.role-pink{color:#ac2868}
+.story-ending{max-width:850px;border-left:2px solid var(--red);padding-left:22px;margin-top:30px}
+.ticket-action{display:flex;align-items:stretch;justify-content:center;gap:14px;flex-wrap:wrap}
+.ticket-action>.button{min-width:0;margin:0;gap:8px;flex:0 1 auto}
+.ticket-action .primary{min-width:360px}.ticket-action .secondary{min-width:240px}
+.section-heading h2:focus-visible,.cast-card h3:focus-visible,#main:focus-visible,.hero:focus-visible{outline:2px solid var(--red);outline-offset:6px}
+@media(max-width:1079px){.brand-title{font-size:20px}.story-grid{gap:24px 30px}}
+@media(max-width:767px){.brand-title{font-size:18px}.brand-series{font-size:11px}.brand{gap:3px}.story-grid{grid-template-columns:minmax(0,1fr);gap:22px}.story-grid>.story-lead{grid-column:1;grid-row:1}.story-grid>.story-photo{grid-column:1;grid-row:2;margin-top:0}.story-grid>.story-paragraph{grid-column:1;grid-row:3}.story-photo img{aspect-ratio:1.85}.story-paragraph,.story-ending{font-size:16px;line-height:1.85}.motive-intro{font-size:16px;margin-top:28px}.story-motives{grid-template-columns:minmax(0,1fr);gap:12px}.story-motives li{padding:18px 20px;font-size:16px}.story-ending{padding-left:16px;margin-top:24px}.ticket-action{flex-direction:column;gap:12px}.ticket-action>.button{width:100%;min-width:0;flex:auto}.sale-page-link{font-size:15px}}
+
+/* Immediate anchor scrolling keeps rapid navigation and history restoration stable. */
+html{scroll-behavior:auto;scroll-padding-top:calc(var(--header-offset,var(--header)) + 20px)}
+.brand{flex-shrink:1;min-width:0}.brand-title{white-space:normal}.keep-word{white-space:nowrap}
+.cast-card{scroll-margin-top:24px}
+.section-heading h2{min-width:0;flex-wrap:wrap;row-gap:8px}
