@@ -1,0 +1,79 @@
+{
+  "url": "http://127.0.0.1:46541/",
+  "browser": "153.0.8010.0",
+  "screens": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "『イエローが死んだ』",
+      "title": "rgb(247, 247, 243)",
+      "yellow": "rgb(245, 197, 58)",
+      "red": "rgb(237, 98, 105)",
+      "background": "rgba(0, 0, 0, 0)",
+      "footerBackground": "rgb(23, 23, 23)",
+      "padding": "0px",
+      "headerRed": "rgb(193, 39, 45)",
+      "fonts": [
+        "loaded",
+        "loaded",
+        "loaded"
+      ],
+      "cast": 18,
+      "shows": 7,
+      "contrast": {
+        "text": 16.69282551553455,
+        "yellow": 11.038507670545524,
+        "red": 5.593453863868657
+      }
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "『イエローが死んだ』",
+      "title": "rgb(247, 247, 243)",
+      "yellow": "rgb(245, 197, 58)",
+      "red": "rgb(237, 98, 105)",
+      "background": "rgba(0, 0, 0, 0)",
+      "footerBackground": "rgb(23, 23, 23)",
+      "padding": "0px",
+      "headerRed": "rgb(193, 39, 45)",
+      "fonts": [
+        "loaded",
+        "loaded",
+        "loaded"
+      ],
+      "cast": 18,
+      "shows": 7,
+      "contrast": {
+        "text": 16.69282551553455,
+        "yellow": 11.038507670545524,
+        "red": 5.593453863868657
+      }
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "『イエローが死んだ』",
+      "title": "rgb(247, 247, 243)",
+      "yellow": "rgb(245, 197, 58)",
+      "red": "rgb(237, 98, 105)",
+      "background": "rgba(0, 0, 0, 0)",
+      "footerBackground": "rgb(23, 23, 23)",
+      "padding": "0px",
+      "headerRed": "rgb(193, 39, 45)",
+      "fonts": [
+        "loaded",
+        "loaded",
+        "loaded"
+      ],
+      "cast": 18,
+      "shows": 7,
+      "contrast": {
+        "text": 16.69282551553455,
+        "yellow": 11.038507670545524,
+        "red": 5.593453863868657
+      }
+    }
+  ],
+  "errors": []
+}

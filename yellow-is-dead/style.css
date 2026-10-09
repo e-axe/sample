@@ -85,5 +85,7 @@ html{scroll-behavior:auto;scroll-padding-top:calc(var(--header-offset,var(--head
 
 body:has(.mobile-menu[open]) .mobile-sticky{visibility:hidden}
 
-/* The footer title shares the official palette on a readable white surface. */
-.footer-title{display:table;background:var(--paper);color:var(--ink);padding:4px 10px;font-weight:800;line-height:1.6}
+/* A dark-background text treatment keeps the footer title within its surface. */
+.footer-title{color:var(--paper);font-weight:800;line-height:1.6}
+.footer-title .title-yellow{-webkit-text-stroke:0}
+.footer-title .title-red{color:#ed6269}
