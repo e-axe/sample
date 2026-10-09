@@ -1,0 +1,48 @@
+{
+  "url": "https://e-axe.github.io/sample/yellow-is-dead/",
+  "checks": [
+    {
+      "width": 1440,
+      "status": 200,
+      "cast": 18,
+      "shows": 7,
+      "hero": "yellow-is-dead-hero-1536.webp",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "cast": 18,
+      "shows": 7,
+      "hero": "yellow-is-dead-hero-mobile-640.webp",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
