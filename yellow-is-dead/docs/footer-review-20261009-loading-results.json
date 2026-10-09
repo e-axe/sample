@@ -1,0 +1,313 @@
+{
+  "conditions": "Linux Chromium 153.0.8010.0, local HTTP, cold cache, 390x844 DPR2, RTT150ms, download200000bytes/s, upload90000bytes/s, CPU4x. Alternating previous HEAD and footer update. Custom Open Sans fallback font configuration. Not real-user or actual-device data.",
+  "baselineCommit": "1fd762254bcc2b6bf4892d7959886a6a074cbbec",
+  "runs": [
+    {
+      "lcp": 4044,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/qa/performance-baseline/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "previous",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26151,
+          "encoded": 25851
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21094
+    },
+    {
+      "lcp": 3212,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/yellow-lp/yellow-is-dead/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "footer-update",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26351,
+          "encoded": 26051
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21159
+    },
+    {
+      "lcp": 4356,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/qa/performance-baseline/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "previous",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26151,
+          "encoded": 25851
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21094
+    },
+    {
+      "lcp": 3712,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/yellow-lp/yellow-is-dead/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "footer-update",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26351,
+          "encoded": 26051
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21159
+    },
+    {
+      "lcp": 8824,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/qa/performance-baseline/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "previous",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26151,
+          "encoded": 25851
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21094
+    },
+    {
+      "lcp": 5520,
+      "cls": 0,
+      "shifts": [],
+      "lcpElement": "",
+      "lcpUrl": "http://127.0.0.1:45325/yellow-lp/yellow-is-dead/assets/yellow-is-dead-hero-mobile-800.webp",
+      "version": "footer-update",
+      "resources": [
+        {
+          "name": "yellow-is-dead-hero-mobile-800.webp",
+          "bytes": 83982,
+          "encoded": 83682
+        },
+        {
+          "name": "yellow-is-dead-gothic-800.woff2",
+          "bytes": 61448,
+          "encoded": 61148
+        },
+        {
+          "name": "style.css",
+          "bytes": 26351,
+          "encoded": 26051
+        },
+        {
+          "name": "app.js",
+          "bytes": 3460,
+          "encoded": 3160
+        },
+        {
+          "name": "yellow-is-dead-logo-640.webp",
+          "bytes": 95280,
+          "encoded": 94980
+        },
+        {
+          "name": "yellow-is-dead-gothic-400.woff2",
+          "bytes": 64376,
+          "encoded": 64076
+        },
+        {
+          "name": "yellow-is-dead-condensed.woff2",
+          "bytes": 14428,
+          "encoded": 14128
+        },
+        {
+          "name": "yellow-is-dead-story-floor.webp",
+          "bytes": 59180,
+          "encoded": 58880
+        }
+      ],
+      "navigation": 21159
+    }
+  ],
+  "interpretation": "Large variability exists in both versions; P04 LCP target not met in this stress test. Do not compare as a speed improvement or regression with historical tests in a different execution environment. Code adds 265 bytes without extra requests or JS."
+}

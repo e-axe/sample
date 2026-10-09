@@ -1,0 +1,673 @@
+{
+  "browser": "153.0.8010.0",
+  "widths": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 896.6875
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 940.453125
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 951.625
+    },
+    {
+      "width": 430,
+      "scroll": 430,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 981.46875
+    },
+    {
+      "width": 767,
+      "scroll": 767,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 1025.890625
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 717.9375
+    },
+    {
+      "width": 1023,
+      "scroll": 1023,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 796.03125
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 796.328125
+    },
+    {
+      "width": 1079,
+      "scroll": 1079,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 813.171875
+    },
+    {
+      "width": 1080,
+      "scroll": 1080,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 764.609375
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 817.125
+    },
+    {
+      "width": 1920,
+      "scroll": 1920,
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "prices": true,
+      "hero": 810
+    }
+  ],
+  "checks": [
+    {
+      "name": "CAST names and order",
+      "result": true
+    },
+    {
+      "name": "All seven performance times",
+      "result": true
+    },
+    {
+      "name": "Official appearance ①",
+      "result": true
+    },
+    {
+      "name": "Official appearance ②",
+      "result": true
+    },
+    {
+      "name": "Official appearance ③",
+      "result": true
+    },
+    {
+      "name": "Official appearance ④",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑤",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑥",
+      "result": true
+    },
+    {
+      "name": "Official appearance ⑦",
+      "result": true
+    },
+    {
+      "name": "Official sales period",
+      "result": true
+    },
+    {
+      "name": "Official sales-page URL",
+      "result": true
+    },
+    {
+      "name": "Old public information removed",
+      "result": true
+    },
+    {
+      "name": "Latest credit",
+      "result": true
+    },
+    {
+      "name": "noindex",
+      "result": true
+    },
+    {
+      "name": "Menu opens",
+      "result": true
+    },
+    {
+      "name": "Escape closes menu",
+      "result": true
+    },
+    {
+      "name": "Menu selection closes and changes hash",
+      "result": true
+    },
+    {
+      "name": "Cast target visible below header",
+      "result": true
+    },
+    {
+      "name": "Resize closes mobile menu",
+      "result": true
+    },
+    {
+      "name": "Full synopsis visible by default",
+      "result": true
+    },
+    {
+      "name": "Full original synopsis unchanged",
+      "result": true
+    },
+    {
+      "name": "Only the four names are colored",
+      "result": true
+    },
+    {
+      "name": "Title-first header",
+      "result": true
+    },
+    {
+      "name": "Two distinct ticket actions",
+      "result": true
+    },
+    {
+      "name": "Schedule action always opens ticket information",
+      "result": true
+    },
+    {
+      "name": "Sticky schedule label matches destination",
+      "result": true
+    },
+    {
+      "name": "CTA header internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA hero internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA sticky internal before sale",
+      "result": true
+    },
+    {
+      "name": "CTA footer internal before sale",
+      "result": true
+    },
+    {
+      "name": "Ticket external page before sale",
+      "result": true
+    },
+    {
+      "name": "Hash back navigation",
+      "result": true
+    },
+    {
+      "name": "Double computed text sizes no horizontal overflow",
+      "result": true
+    },
+    {
+      "name": "Anchor offset tracks actual header",
+      "result": true
+    },
+    {
+      "name": "Double-size text menu and anchor usable",
+      "result": true
+    },
+    {
+      "name": "No-JS primary content",
+      "result": true
+    },
+    {
+      "name": "No-JS entire story visible",
+      "result": true
+    },
+    {
+      "name": "No-JS mobile menu opens",
+      "result": true
+    },
+    {
+      "name": "Font/image failure preserves text and CTAs",
+      "result": true
+    },
+    {
+      "name": "Failure no horizontal overflow",
+      "result": true
+    },
+    {
+      "name": "Footer title uses official palette",
+      "result": true
+    },
+    {
+      "name": "Header title uses official yellow and red",
+      "result": true
+    },
+    {
+      "name": "Only opening-story Yellow is gold",
+      "result": true
+    },
+    {
+      "name": "No decorative slash between cast cards",
+      "result": true
+    },
+    {
+      "name": "All external links open new tabs",
+      "result": true
+    },
+    {
+      "name": "Internal links keep current tab",
+      "result": true
+    },
+    {
+      "name": "Actual new-tab click http://confetti-web.com/softboiled16",
+      "result": true
+    },
+    {
+      "name": "Actual new-tab click https://goo.gl/maps/WyGBnobm58iw8pMi7",
+      "result": true
+    },
+    {
+      "name": "Actual new-tab click https://theater-green.com/access/",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 320x480",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 320x480 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 320x480 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 320x480 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 320x480 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 320x480 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 320x480",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 320x480",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 375x667",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 375x667 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 375x667 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 375x667 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 375x667 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 375x667 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 375x667",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 375x667",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 390x844",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x844 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x844 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x844 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x844 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x844 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 390x844",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 390x844",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 844x390",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 844x390 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 844x390 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 844x390 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 844x390 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 844x390 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 844x390",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 844x390",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 667x375",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 667x375 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 667x375 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 667x375 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 667x375 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 667x375 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 667x375",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 667x375",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 568x320",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 568x320 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 568x320 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 568x320 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 568x320 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 568x320 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 568x320",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 568x320",
+      "result": true
+    },
+    {
+      "name": "Menu open sticky hidden 390x300",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x300 story",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x300 schedule",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x300 ticket",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x300 cast",
+      "result": true
+    },
+    {
+      "name": "Menu item reachable 390x300 access",
+      "result": true
+    },
+    {
+      "name": "Menu selection restores sticky 390x300",
+      "result": true
+    },
+    {
+      "name": "Escape focus restored 390x300",
+      "result": true
+    },
+    {
+      "name": "No uncaught errors / missing required resources",
+      "result": true
+    }
+  ],
+  "performance": [],
+  "errors": []
+}

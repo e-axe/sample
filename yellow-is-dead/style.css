@@ -84,3 +84,6 @@ html{scroll-behavior:auto;scroll-padding-top:calc(var(--header-offset,var(--head
 @media(max-width:767px){.caution-tape{top:calc(10px + 3vw)}}
 
 body:has(.mobile-menu[open]) .mobile-sticky{visibility:hidden}
+
+/* The footer title shares the official palette on a readable white surface. */
+.footer-title{display:table;background:var(--paper);color:var(--ink);padding:4px 10px;font-weight:800;line-height:1.6}

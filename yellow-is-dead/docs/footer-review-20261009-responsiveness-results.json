@@ -1,0 +1,2222 @@
+{
+  "normal": {
+    "browser": "153.0.8010.0",
+    "conditions": "Local HTTP, cache warm, CPU unthrottled, trusted CDP pointer events without Playwright actionability polling; click to second requestAnimationFrame is a lab paint proxy, not field INP",
+    "screens": [
+      {
+        "paints": [
+          {
+            "label": "STORY",
+            "duration": 21.5999999998603
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 29.699999999953434
+          },
+          {
+            "label": "TICKET",
+            "duration": 28.799999999813735
+          },
+          {
+            "label": "CAST",
+            "duration": 18.699999999953434
+          },
+          {
+            "label": "ACCESS",
+            "duration": 32.10000000009313
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 27.9000000001397
+          },
+          {
+            "label": "STORY",
+            "duration": 29.800000000046566
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 25.699999999953434
+          },
+          {
+            "label": "TICKET",
+            "duration": 22.899999999906868
+          },
+          {
+            "label": "CAST",
+            "duration": 21.4000000001397
+          },
+          {
+            "label": "ACCESS",
+            "duration": 23.699999999953434
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 30.300000000046566
+          },
+          {
+            "label": "STORY",
+            "duration": 29.899999999906868
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 19.800000000046566
+          },
+          {
+            "label": "TICKET",
+            "duration": 15.400000000139698
+          },
+          {
+            "label": "CAST",
+            "duration": 24.899999999906868
+          },
+          {
+            "label": "ACCESS",
+            "duration": 30.100000000093132
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 17.600000000093132
+          },
+          {
+            "label": "STORY",
+            "duration": 12.5
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 23.5999999998603
+          },
+          {
+            "label": "TICKET",
+            "duration": 15.5
+          },
+          {
+            "label": "CAST",
+            "duration": 124
+          },
+          {
+            "label": "ACCESS",
+            "duration": 23
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 15.900000000139698
+          },
+          {
+            "label": "STORY",
+            "duration": 27.899999999906868
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 26.800000000046566
+          },
+          {
+            "label": "TICKET",
+            "duration": 16.699999999953434
+          },
+          {
+            "label": "CAST",
+            "duration": 22.399999999906868
+          },
+          {
+            "label": "ACCESS",
+            "duration": 19.699999999953434
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 24
+          }
+        ],
+        "events": [
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 2.5999999998603016,
+            "processing": 3.9000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 1.3000000000465661,
+            "processing": 4.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 0.5,
+            "processing": 0.7999999998137355
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1.3000000000465661,
+            "processing": 1.6999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 48,
+            "delay": 2.5,
+            "processing": 1.4000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.6999999999534339,
+            "processing": 2
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.6999999999534339,
+            "processing": 0.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 2.5,
+            "processing": 4.100000000093132
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.4000000001396984,
+            "processing": 1.5999999998603016
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 2,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5,
+            "processing": 1.3999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 0.6999999999534339,
+            "processing": 1.3000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.3000000000465661,
+            "processing": 2.2999999998137355
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.8000000000465661,
+            "processing": 1.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.6999999999534339,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 2.300000000046566,
+            "processing": 1.6999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.9000000001396984,
+            "processing": 1.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.6000000000931323,
+            "processing": 3.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.8000000000465661,
+            "processing": 0.8000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1.6999999999534339,
+            "processing": 1.3000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 136,
+            "delay": 0.6999999999534339,
+            "processing": 2.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1.1999999999534339,
+            "processing": 1.6000000000931323
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 2.699999999953434,
+            "processing": 4.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.39999999990686774,
+            "processing": 0.6000000000931323
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 0.5,
+            "processing": 0.8000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1.7000000001862645,
+            "processing": 1.3999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 2.3999999999068677,
+            "processing": 1.1000000000931323
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.6000000000931323,
+            "processing": 0.5999999998603016
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5,
+            "processing": 2.3999999999068677
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 112,
+            "start": 3083.399999999907
+          }
+        ],
+        "width": 1440,
+        "frameGapsMs": [
+          -8.900000000046475,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.5,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.799999999999272,
+          16.700000000000728,
+          16.599999999999454
+        ]
+      },
+      {
+        "paints": [
+          {
+            "label": "MENU",
+            "duration": 22.899999999906868
+          },
+          {
+            "label": "STORY",
+            "duration": 19.600000000093132
+          },
+          {
+            "label": "MENU",
+            "duration": 23.700000000186265
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 22.899999999906868
+          },
+          {
+            "label": "MENU",
+            "duration": 23.600000000093132
+          },
+          {
+            "label": "TICKET",
+            "duration": 30.300000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 28.800000000046566
+          },
+          {
+            "label": "CAST",
+            "duration": 20.300000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 26
+          },
+          {
+            "label": "ACCESS",
+            "duration": 26.399999999906868
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 27.399999999906868
+          },
+          {
+            "label": "MENU",
+            "duration": 28.100000000093132
+          },
+          {
+            "label": "STORY",
+            "duration": 19.699999999953434
+          },
+          {
+            "label": "MENU",
+            "duration": 32.0999999998603
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 19.399999999906868
+          },
+          {
+            "label": "MENU",
+            "duration": 18
+          },
+          {
+            "label": "TICKET",
+            "duration": 23.600000000093132
+          },
+          {
+            "label": "MENU",
+            "duration": 23.699999999953434
+          },
+          {
+            "label": "CAST",
+            "duration": 25.399999999906868
+          },
+          {
+            "label": "MENU",
+            "duration": 22.200000000186265
+          },
+          {
+            "label": "ACCESS",
+            "duration": 24.199999999953434
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 30.300000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 22.300000000046566
+          },
+          {
+            "label": "STORY",
+            "duration": 26.800000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 26.300000000046566
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 30.800000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 29
+          },
+          {
+            "label": "TICKET",
+            "duration": 16.5
+          },
+          {
+            "label": "MENU",
+            "duration": 30.899999999906868
+          },
+          {
+            "label": "CAST",
+            "duration": 28.399999999906868
+          },
+          {
+            "label": "MENU",
+            "duration": 31.5
+          },
+          {
+            "label": "ACCESS",
+            "duration": 17.600000000093132
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 27.800000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 28.799999999813735
+          },
+          {
+            "label": "STORY",
+            "duration": 18.199999999953434
+          },
+          {
+            "label": "MENU",
+            "duration": 18.600000000093132
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 25
+          },
+          {
+            "label": "MENU",
+            "duration": 26.799999999813735
+          },
+          {
+            "label": "TICKET",
+            "duration": 26.299999999813735
+          },
+          {
+            "label": "MENU",
+            "duration": 25.5
+          },
+          {
+            "label": "CAST",
+            "duration": 25
+          },
+          {
+            "label": "MENU",
+            "duration": 29.300000000046566
+          },
+          {
+            "label": "ACCESS",
+            "duration": 27.300000000046566
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 21.4000000001397
+          },
+          {
+            "label": "MENU",
+            "duration": 31.699999999953434
+          },
+          {
+            "label": "STORY",
+            "duration": 22.800000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 30.799999999813735
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 18.799999999813735
+          },
+          {
+            "label": "MENU",
+            "duration": 16.800000000046566
+          },
+          {
+            "label": "TICKET",
+            "duration": 20.5999999998603
+          },
+          {
+            "label": "MENU",
+            "duration": 28
+          },
+          {
+            "label": "CAST",
+            "duration": 26.4000000001397
+          },
+          {
+            "label": "MENU",
+            "duration": 28.600000000093132
+          },
+          {
+            "label": "ACCESS",
+            "duration": 30.800000000046566
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 26.299999999813735
+          }
+        ],
+        "events": [
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.30000000004656613,
+            "processing": 6.399999999906868
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.19999999995343387,
+            "processing": 0.30000000004656613
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.30000000004656613,
+            "processing": 1.8000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.20000000018626451,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.4000000001396984,
+            "processing": 1.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5999999998603016,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.30000000004656613,
+            "processing": 2.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.1999999999534339,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 2.199999999953434,
+            "processing": 3.5
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 3.699999999953434,
+            "processing": 4.400000000139698
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5,
+            "processing": 0.10000000009313226
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.30000000004656613,
+            "processing": 1.6999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.8000000000465661,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.39999999990686774,
+            "processing": 2
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.20000000018626451,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.19999999995343387,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.09999999986030161,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.30000000004656613,
+            "processing": 2
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 1.1000000000931323,
+            "processing": 1.3000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.6999999999534339,
+            "processing": 0.30000000004656613
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.30000000004656613,
+            "processing": 1.3000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1.8000000000465661,
+            "processing": 0.10000000009313226
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.1999999999534339,
+            "processing": 1.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.30000000004656613,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 2.2000000001862645,
+            "processing": 2.5999999998603016
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.19999999995343387,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 3.8999999999068677,
+            "processing": 2
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.4000000001396984,
+            "processing": 0.8000000000465661
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.9000000001396984,
+            "processing": 4.099999999860302
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1,
+            "processing": 2.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.19999999995343387,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 1,
+            "processing": 0.30000000004656613
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.5,
+            "processing": 3.6000000000931323
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.5,
+            "processing": 0.4000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.39999999990686774,
+            "processing": 2.3999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.7000000001862645,
+            "processing": 0.5
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 4.800000000046566,
+            "processing": 4.399999999906868
+          },
+          {
+            "name": "click",
+            "duration": 40,
+            "delay": 1.3999999999068677,
+            "processing": 1.9000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.6999999999534339,
+            "processing": 3.4000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.6999999999534339,
+            "processing": 1.6000000000931323
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 0.30000000004656613,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 6.100000000093132,
+            "processing": 3.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.30000000004656613,
+            "processing": 0.09999999986030161
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.19999999995343387,
+            "processing": 1.8999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 16,
+            "delay": 0.5,
+            "processing": 1.1999999999534339
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 0.2999999998137355,
+            "processing": 1.2000000001862645
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 1.2999999998137355,
+            "processing": 0.4000000001396984
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 3,
+            "processing": 2.3999999999068677
+          },
+          {
+            "name": "click",
+            "duration": 32,
+            "delay": 1.3999999999068677,
+            "processing": 2
+          }
+        ],
+        "longTasks": [],
+        "width": 390,
+        "frameGapsMs": [
+          6.598000000046341,
+          16.602000000000317,
+          16.699999999999818,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.700000000000273,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          33.30000000000018,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          66.60000000000036,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          50,
+          16.700000000000728
+        ]
+      }
+    ]
+  },
+  "stress": {
+    "browser": "153.0.8010.0",
+    "conditions": "Local HTTP, cache warm, CPU 4x throttle, trusted CDP pointer events without Playwright actionability polling; click to second requestAnimationFrame is a lab paint proxy, not field INP",
+    "screens": [
+      {
+        "paints": [
+          {
+            "label": "STORY",
+            "duration": 35.300000000046566
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 23.100000000093132
+          },
+          {
+            "label": "TICKET",
+            "duration": 40.199999999953434
+          },
+          {
+            "label": "CAST",
+            "duration": 25.700000000186265
+          },
+          {
+            "label": "ACCESS",
+            "duration": 36.5
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 59.799999999813735
+          },
+          {
+            "label": "STORY",
+            "duration": 100.19999999995343
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 96
+          },
+          {
+            "label": "TICKET",
+            "duration": 65.69999999995343
+          },
+          {
+            "label": "CAST",
+            "duration": 44.300000000046566
+          },
+          {
+            "label": "ACCESS",
+            "duration": 36.800000000046566
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 88.10000000009313
+          },
+          {
+            "label": "STORY",
+            "duration": 50.199999999953434
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 99.29999999981374
+          },
+          {
+            "label": "TICKET",
+            "duration": 37.89999999990687
+          },
+          {
+            "label": "CAST",
+            "duration": 76.30000000004657
+          },
+          {
+            "label": "ACCESS",
+            "duration": 36.89999999990687
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 57.5
+          },
+          {
+            "label": "STORY",
+            "duration": 58.5999999998603
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 49.5
+          },
+          {
+            "label": "TICKET",
+            "duration": 81.4000000001397
+          },
+          {
+            "label": "CAST",
+            "duration": 54.60000000009313
+          },
+          {
+            "label": "ACCESS",
+            "duration": 26.800000000046566
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 68
+          },
+          {
+            "label": "STORY",
+            "duration": 67.5
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 13.5
+          },
+          {
+            "label": "TICKET",
+            "duration": 83.5999999998603
+          },
+          {
+            "label": "CAST",
+            "duration": 59.0999999998603
+          },
+          {
+            "label": "ACCESS",
+            "duration": 56.39999999990687
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 73.10000000009313
+          }
+        ],
+        "events": [
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 6.5,
+            "processing": 23.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 5.5,
+            "processing": 8.200000000186265
+          },
+          {
+            "name": "click",
+            "duration": 48,
+            "delay": 4,
+            "processing": 5.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 48,
+            "delay": 11.799999999813735,
+            "processing": 8.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 18.300000000046566,
+            "processing": 11.800000000046566
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 27.5,
+            "processing": 19.899999999906868
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 34.699999999953434,
+            "processing": 12.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 120,
+            "delay": 15.899999999906868,
+            "processing": 25.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 41,
+            "processing": 20.100000000093132
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 24.4000000001397,
+            "processing": 13.899999999906868
+          },
+          {
+            "name": "click",
+            "duration": 96,
+            "delay": 49.60000000009313,
+            "processing": 15.599999999860302
+          },
+          {
+            "name": "click",
+            "duration": 120,
+            "delay": 9.100000000093132,
+            "processing": 23.5999999998603
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 42.9000000001397,
+            "processing": 31.899999999906868
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 31.600000000093132,
+            "processing": 34.89999999990687
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 15.399999999906868,
+            "processing": 12.400000000139698
+          },
+          {
+            "name": "click",
+            "duration": 88,
+            "delay": 13,
+            "processing": 33.4000000001397
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 13.699999999953434,
+            "processing": 12.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 88,
+            "delay": 17.699999999953434,
+            "processing": 8.399999999906868
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 11.099999999860302,
+            "processing": 18.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 14.299999999813735,
+            "processing": 16.800000000046566
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 28,
+            "processing": 20.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 88,
+            "delay": 25,
+            "processing": 20.200000000186265
+          },
+          {
+            "name": "click",
+            "duration": 40,
+            "delay": 10.399999999906868,
+            "processing": 11.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 35.300000000046566,
+            "processing": 12.099999999860302
+          },
+          {
+            "name": "click",
+            "duration": 64,
+            "delay": 9.200000000186265,
+            "processing": 7.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 4.600000000093132,
+            "processing": 1.0999999998603016
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 43.5,
+            "processing": 15.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 16,
+            "processing": 6.399999999906868
+          },
+          {
+            "name": "click",
+            "duration": 88,
+            "delay": 33.60000000009313,
+            "processing": 6.7999999998137355
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 17.100000000093132,
+            "processing": 18
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 50,
+            "start": 2429.100000000093
+          },
+          {
+            "duration": 61,
+            "start": 2715
+          },
+          {
+            "duration": 70,
+            "start": 3727.899999999907
+          },
+          {
+            "duration": 50,
+            "start": 3874.3000000000466
+          },
+          {
+            "duration": 50,
+            "start": 4850
+          },
+          {
+            "duration": 51,
+            "start": 6142.899999999907
+          }
+        ],
+        "width": 1440,
+        "frameGapsMs": [
+          -9.300000000000182,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.699999999999818,
+          16.600000000000364,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454
+        ]
+      },
+      {
+        "paints": [
+          {
+            "label": "MENU",
+            "duration": 169.79999999981374
+          },
+          {
+            "label": "STORY",
+            "duration": 86.69999999995343
+          },
+          {
+            "label": "MENU",
+            "duration": 20.200000000186265
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 123.60000000009313
+          },
+          {
+            "label": "MENU",
+            "duration": 42.0999999998603
+          },
+          {
+            "label": "TICKET",
+            "duration": 75.10000000009313
+          },
+          {
+            "label": "MENU",
+            "duration": 200.4000000001397
+          },
+          {
+            "label": "CAST",
+            "duration": 224.5999999998603
+          },
+          {
+            "label": "MENU",
+            "duration": 189.5
+          },
+          {
+            "label": "ACCESS",
+            "duration": 73
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 115.39999999990687
+          },
+          {
+            "label": "MENU",
+            "duration": 1447.6999999999534
+          },
+          {
+            "label": "STORY",
+            "duration": 63.300000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 135
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 125.5999999998603
+          },
+          {
+            "label": "MENU",
+            "duration": 163.20000000018626
+          },
+          {
+            "label": "TICKET",
+            "duration": 1099.3999999999069
+          },
+          {
+            "label": "MENU",
+            "duration": 131.20000000018626
+          },
+          {
+            "label": "CAST",
+            "duration": 493.30000000004657
+          },
+          {
+            "label": "MENU",
+            "duration": 112.5
+          },
+          {
+            "label": "ACCESS",
+            "duration": 134.0999999998603
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 84.39999999990687
+          },
+          {
+            "label": "MENU",
+            "duration": 54.200000000186265
+          },
+          {
+            "label": "STORY",
+            "duration": 100.5999999998603
+          },
+          {
+            "label": "MENU",
+            "duration": 55.700000000186265
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 55.300000000046566
+          },
+          {
+            "label": "MENU",
+            "duration": 70.19999999995343
+          },
+          {
+            "label": "TICKET",
+            "duration": 189.0999999998603
+          },
+          {
+            "label": "MENU",
+            "duration": 58.800000000046566
+          },
+          {
+            "label": "CAST",
+            "duration": 227.19999999995343
+          },
+          {
+            "label": "MENU",
+            "duration": 48.699999999953434
+          },
+          {
+            "label": "ACCESS",
+            "duration": 58
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 72.19999999995343
+          },
+          {
+            "label": "MENU",
+            "duration": 51.5999999998603
+          },
+          {
+            "label": "STORY",
+            "duration": 44
+          },
+          {
+            "label": "MENU",
+            "duration": 21.5
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 108
+          },
+          {
+            "label": "MENU",
+            "duration": 141.39999999990687
+          },
+          {
+            "label": "TICKET",
+            "duration": 56
+          },
+          {
+            "label": "MENU",
+            "duration": 108
+          },
+          {
+            "label": "CAST",
+            "duration": 200.20000000018626
+          },
+          {
+            "label": "MENU",
+            "duration": 226.19999999995343
+          },
+          {
+            "label": "ACCESS",
+            "duration": 118.5
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 90
+          },
+          {
+            "label": "MENU",
+            "duration": 69
+          },
+          {
+            "label": "STORY",
+            "duration": 133
+          },
+          {
+            "label": "MENU",
+            "duration": 41.800000000046566
+          },
+          {
+            "label": "SCHEDULE",
+            "duration": 94.60000000009313
+          },
+          {
+            "label": "MENU",
+            "duration": 55.10000000009313
+          },
+          {
+            "label": "TICKET",
+            "duration": 179.60000000009313
+          },
+          {
+            "label": "MENU",
+            "duration": 67.69999999995343
+          },
+          {
+            "label": "CAST",
+            "duration": 131.60000000009313
+          },
+          {
+            "label": "MENU",
+            "duration": 96.5
+          },
+          {
+            "label": "ACCESS",
+            "duration": 61.5
+          },
+          {
+            "label": "ページ先頭へ",
+            "duration": 90.70000000018626
+          }
+        ],
+        "events": [
+          {
+            "name": "click",
+            "duration": 152,
+            "delay": 3.1000000000931323,
+            "processing": 20.5
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 2.300000000046566,
+            "processing": 45.5
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 3,
+            "processing": 2
+          },
+          {
+            "name": "click",
+            "duration": 144,
+            "delay": 13.799999999813735,
+            "processing": 17.4000000001397
+          },
+          {
+            "name": "click",
+            "duration": 48,
+            "delay": 2.5,
+            "processing": 4.5
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 11.199999999953434,
+            "processing": 43.5
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 3.4000000001396984,
+            "processing": 0.19999999995343387
+          },
+          {
+            "name": "click",
+            "duration": 264,
+            "delay": 30.800000000046566,
+            "processing": 98.60000000009313
+          },
+          {
+            "name": "click",
+            "duration": 168,
+            "delay": 12.600000000093132,
+            "processing": 3.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 6.5,
+            "processing": 47.5
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 5.899999999906868,
+            "processing": 23.899999999906868
+          },
+          {
+            "name": "click",
+            "duration": 1424,
+            "delay": 7,
+            "processing": 0.39999999990686774
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 4.5,
+            "processing": 25.9000000001397
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 2.4000000001396984,
+            "processing": 3.5999999998603016
+          },
+          {
+            "name": "click",
+            "duration": 120,
+            "delay": 5.5,
+            "processing": 30.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 168,
+            "delay": 10.399999999906868,
+            "processing": 17.4000000001397
+          },
+          {
+            "name": "click",
+            "duration": 1040,
+            "delay": 21.100000000093132,
+            "processing": 815.2999999998137
+          },
+          {
+            "name": "click",
+            "duration": 152,
+            "delay": 28.300000000046566,
+            "processing": 14.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 464,
+            "delay": 10.800000000046566,
+            "processing": 188.19999999995343
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 15.300000000046566,
+            "processing": 12.5
+          },
+          {
+            "name": "click",
+            "duration": 152,
+            "delay": 9.400000000139698,
+            "processing": 26.799999999813735
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 11.800000000046566,
+            "processing": 15.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 5.699999999953434,
+            "processing": 9.200000000186265
+          },
+          {
+            "name": "click",
+            "duration": 96,
+            "delay": 1.1000000000931323,
+            "processing": 19.800000000046566
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 2.5,
+            "processing": 0.09999999986030161
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 3.699999999953434,
+            "processing": 15.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 15.199999999953434,
+            "processing": 4.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 168,
+            "delay": 10.100000000093132,
+            "processing": 23.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 3,
+            "processing": 4.400000000139698
+          },
+          {
+            "name": "click",
+            "duration": 216,
+            "delay": 1.1000000000931323,
+            "processing": 92.0999999998603
+          },
+          {
+            "name": "click",
+            "duration": 40,
+            "delay": 2,
+            "processing": 1.5
+          },
+          {
+            "name": "click",
+            "duration": 72,
+            "delay": 4.900000000139698,
+            "processing": 15.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 1.8999999999068677,
+            "processing": 8.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 48,
+            "delay": 0.8999999999068677,
+            "processing": 4.400000000139698
+          },
+          {
+            "name": "click",
+            "duration": 96,
+            "delay": 10,
+            "processing": 19.5999999998603
+          },
+          {
+            "name": "click",
+            "duration": 24,
+            "delay": 0.7999999998137355,
+            "processing": 0.20000000018626451
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 6.899999999906868,
+            "processing": 25.399999999906868
+          },
+          {
+            "name": "click",
+            "duration": 144,
+            "delay": 8.399999999906868,
+            "processing": 0.30000000004656613
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 2.5,
+            "processing": 13.599999999860302
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 7,
+            "processing": 5.5
+          },
+          {
+            "name": "click",
+            "duration": 152,
+            "delay": 3.9000000001396984,
+            "processing": 37.699999999953434
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 32.199999999953434,
+            "processing": 15.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 7.7999999998137355,
+            "processing": 39.60000000009313
+          },
+          {
+            "name": "click",
+            "duration": 112,
+            "delay": 9.5,
+            "processing": 48.299999999813735
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 0.5999999998603016,
+            "processing": 4.100000000093132
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 3.699999999953434,
+            "processing": 31.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 9,
+            "processing": 3.300000000046566
+          },
+          {
+            "name": "click",
+            "duration": 104,
+            "delay": 12.199999999953434,
+            "processing": 21.600000000093132
+          },
+          {
+            "name": "click",
+            "duration": 80,
+            "delay": 16,
+            "processing": 3
+          },
+          {
+            "name": "click",
+            "duration": 176,
+            "delay": 7.399999999906868,
+            "processing": 43.39999999990687
+          },
+          {
+            "name": "click",
+            "duration": 96,
+            "delay": 22.600000000093132,
+            "processing": 8.899999999906868
+          },
+          {
+            "name": "click",
+            "duration": 128,
+            "delay": 7.600000000093132,
+            "processing": 34.89999999990687
+          },
+          {
+            "name": "click",
+            "duration": 96,
+            "delay": 3.9000000001396984,
+            "processing": 5.199999999953434
+          },
+          {
+            "name": "click",
+            "duration": 56,
+            "delay": 1.1999999999534339,
+            "processing": 19
+          },
+          {
+            "name": "click",
+            "duration": 144,
+            "delay": 47.60000000009313,
+            "processing": 57.60000000009313
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 92,
+            "start": 1625.6999999999534
+          },
+          {
+            "duration": 62,
+            "start": 1840.9000000001397
+          },
+          {
+            "duration": 76,
+            "start": 2089.5
+          },
+          {
+            "duration": 75,
+            "start": 2303.4000000001397
+          },
+          {
+            "duration": 52,
+            "start": 2395.8000000000466
+          },
+          {
+            "duration": 65,
+            "start": 2536.9000000001397
+          },
+          {
+            "duration": 131,
+            "start": 2776.8000000000466
+          },
+          {
+            "duration": 80,
+            "start": 2917.4000000001397
+          },
+          {
+            "duration": 159,
+            "start": 3113.1999999999534
+          },
+          {
+            "duration": 60,
+            "start": 3367.1999999999534
+          },
+          {
+            "duration": 62,
+            "start": 3527.5
+          },
+          {
+            "duration": 74,
+            "start": 3650.4000000001397
+          },
+          {
+            "duration": 1408,
+            "start": 3778.600000000093
+          },
+          {
+            "duration": 75,
+            "start": 5427.90000000014
+          },
+          {
+            "duration": 59,
+            "start": 5577.300000000047
+          },
+          {
+            "duration": 58,
+            "start": 5641.300000000047
+          },
+          {
+            "duration": 88,
+            "start": 5772
+          },
+          {
+            "duration": 54,
+            "start": 5870.90000000014
+          },
+          {
+            "duration": 911,
+            "start": 5973.5
+          },
+          {
+            "duration": 149,
+            "start": 6884.5
+          },
+          {
+            "duration": 108,
+            "start": 7136.600000000093
+          },
+          {
+            "duration": 201,
+            "start": 7308.300000000047
+          },
+          {
+            "duration": 119,
+            "start": 7688.800000000047
+          },
+          {
+            "duration": 332,
+            "start": 7998.800000000047
+          },
+          {
+            "duration": 148,
+            "start": 8331.40000000014
+          },
+          {
+            "duration": 104,
+            "start": 8515.800000000047
+          },
+          {
+            "duration": 131,
+            "start": 8668.300000000047
+          },
+          {
+            "duration": 64,
+            "start": 8890.40000000014
+          },
+          {
+            "duration": 69,
+            "start": 9119.699999999953
+          },
+          {
+            "duration": 56,
+            "start": 9284.40000000014
+          },
+          {
+            "duration": 79,
+            "start": 9565.699999999953
+          },
+          {
+            "duration": 53,
+            "start": 9683.800000000047
+          },
+          {
+            "duration": 116,
+            "start": 9736.800000000047
+          },
+          {
+            "duration": 132,
+            "start": 10055.90000000014
+          },
+          {
+            "duration": 79,
+            "start": 10192.5
+          },
+          {
+            "duration": 61,
+            "start": 10511.90000000014
+          },
+          {
+            "duration": 54,
+            "start": 10619.300000000047
+          },
+          {
+            "duration": 81,
+            "start": 11019.90000000014
+          },
+          {
+            "duration": 58,
+            "start": 11309.100000000093
+          },
+          {
+            "duration": 56,
+            "start": 11476.300000000047
+          },
+          {
+            "duration": 91,
+            "start": 11533.699999999953
+          },
+          {
+            "duration": 51,
+            "start": 11695.90000000014
+          },
+          {
+            "duration": 56,
+            "start": 11753.100000000093
+          },
+          {
+            "duration": 118,
+            "start": 11859.300000000047
+          },
+          {
+            "duration": 55,
+            "start": 12053.5
+          },
+          {
+            "duration": 54,
+            "start": 12314.800000000047
+          },
+          {
+            "duration": 61,
+            "start": 12378.600000000093
+          },
+          {
+            "duration": 97,
+            "start": 12577.300000000047
+          },
+          {
+            "duration": 52,
+            "start": 12724.300000000047
+          },
+          {
+            "duration": 77,
+            "start": 12845.199999999953
+          },
+          {
+            "duration": 86,
+            "start": 12930
+          },
+          {
+            "duration": 51,
+            "start": 13220.100000000093
+          },
+          {
+            "duration": 71,
+            "start": 13271.40000000014
+          },
+          {
+            "duration": 95,
+            "start": 13376.100000000093
+          },
+          {
+            "duration": 53,
+            "start": 13486.600000000093
+          },
+          {
+            "duration": 59,
+            "start": 13712.100000000093
+          },
+          {
+            "duration": 130,
+            "start": 13778.699999999953
+          }
+        ],
+        "width": 390,
+        "frameGapsMs": [
+          -3.8359999999993306,
+          16.635999999998603,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.5,
+          16.799999999999272,
+          16.600000000000364,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.600000000000364,
+          16.799999999999272,
+          16.600000000000364,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.799999999999272,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.599999999998545,
+          16.700000000000728,
+          16.700000000000728,
+          16.599999999998545,
+          16.700000000000728,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.599999999998545,
+          16.80000000000109,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.600000000000364,
+          16.799999999999272,
+          16.5
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Click to second requestAnimationFrame is a laboratory paint proxy, not field INP.",
+    "The separate traced test identified paint, GC and test-driver activity during CPU-throttled delays. This does not establish a site JavaScript root cause.",
+    "No performance code change was made; current code already uses static HTML, small JS and local fonts/images. Actual-device validation remains required."
+  ]
+}
