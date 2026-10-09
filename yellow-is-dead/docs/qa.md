@@ -80,3 +80,9 @@ LCP代表値（中央値）：2.480秒。CLS最大：0.00294未満。モバイ�
 ## 追加確認
 
 配信ZIPを展開し、HTTPルート直下と/client/yellow/の2配置でHTML・CSS・JS・HERO・全フォント・日程7回・氏名13名の表示を確認。404なし。キーボードEnterでメニュー開閉、Escapeで閉じて起点へフォーカス復帰、Enter/SpaceでSTORYの展開/折り畳み、動き低減時のscroll-behavior:autoを確認。
+
+## 公開確認
+
+実装コミット：b04723f6aab9dcdc0dfc2f6533f9da997948b4be。GitHub Pages build/deployment run 37892603528 は completed / success。
+
+https://e-axe.github.io/sample/yellow-is-dead/ を公開URLで開き、HTTP 200、正式title、noindex、同梱3書体の読込、CAST13名、公演7回を確認。1440pxと390pxのスクリーンショットを目視。390pxの新規読み込みでスマホ用HEROの選択、横幅390px、メニュー/Escape、下部CTA→#ticket、必須素材404/未処理例外0件を確認。GitHubのindex.htmlを読み戻し、配信元blobがローカル生成物に対応することを確認した。公開環境のLCP/実利用INPと実機Safari等は未検証。
