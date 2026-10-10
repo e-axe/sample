@@ -69,6 +69,132 @@
       const placeholder = img.parentElement.querySelector('.image-fallback');
       if (placeholder) placeholder.hidden = true;
     });
-    if (img.complete && img.naturalWidth === 0) fail();
+    if (img.getAttribute('src') && img.complete && img.naturalWidth === 0) fail();
   });
+  const viewer = document.querySelector('.flyer-viewer');
+  if (!viewer || typeof viewer.showModal !== 'function') return;
+  const stage = viewer.querySelector('.viewer-stage');
+  const canvas = viewer.querySelector('.viewer-canvas');
+  const image = viewer.querySelector('.viewer-image');
+  const message = viewer.querySelector('.viewer-message');
+  const status = message.querySelector('[role="status"]');
+  const retry = viewer.querySelector('.viewer-retry');
+  const zoomButton = viewer.querySelector('.viewer-zoom');
+  const sides = [...viewer.querySelectorAll('.viewer-side')];
+  const triggers = [...document.querySelectorAll('[data-flyer]')];
+  const flyers = new Map(triggers.map(link => [link.dataset.flyer, {
+    url: link.href, label: link.dataset.label,
+    alt: document.querySelector(`.flyer-image-link[data-flyer="${link.dataset.flyer}"] img`).alt
+  }]));
+  let activeSide, opener, scrollY = 0, zoomed = false, ready = false;
+  const layout = (center = false) => {
+    if (!viewer.open || !ready) return;
+    const ratio = image.naturalWidth / image.naturalHeight;
+    const fittedWidth = Math.min(image.naturalWidth, Math.max(1, stage.clientWidth - 32), Math.max(1, stage.clientHeight - 32) * ratio);
+    const width = Math.min(image.naturalWidth, fittedWidth * (zoomed ? 3 : 1));
+    image.style.width = `${width}px`;
+    canvas.style.width = `${Math.max(stage.clientWidth, width + 32)}px`;
+    canvas.style.height = `${Math.max(stage.clientHeight, width / ratio + 32)}px`;
+    stage.classList.toggle('is-zoomed', zoomed);
+    if (center) {
+      stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+      stage.scrollTop = (stage.scrollHeight - stage.clientHeight) / 2;
+    }
+  };
+  const setZoom = value => {
+    zoomed = value;
+    zoomButton.setAttribute('aria-pressed', String(value));
+    zoomButton.querySelector('.viewer-zoom-label').textContent = value ? '全体を表示' : '拡大する';
+    layout(true);
+  };
+  const loadSide = side => {
+    const flyer = flyers.get(side);
+    if (!flyer) return;
+    activeSide = side;
+    ready = false;
+    zoomButton.disabled = true;
+    setZoom(false);
+    stage.scrollTop = stage.scrollLeft = 0;
+    canvas.style.width = canvas.style.height = '100%';
+    image.hidden = true;
+    image.classList.remove('image-error');
+    image.alt = flyer.alt;
+    message.hidden = false;
+    status.textContent = `${flyer.label}を読み込んでいます。`;
+    retry.hidden = true;
+    sides.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.side === side)));
+    image.src = flyer.url;
+  };
+  const imageFailed = () => {
+    if (!viewer.open) return;
+    ready = false;
+    image.hidden = true;
+    zoomButton.disabled = true;
+    message.hidden = false;
+    status.textContent = '画像を読み込めませんでした。';
+    retry.hidden = false;
+  };
+  image.addEventListener('error', imageFailed);
+  image.addEventListener('load', async () => {
+    const loadedUrl = image.src;
+    try { await image.decode(); } catch { if (image.src === loadedUrl) imageFailed(); return; }
+    if (!viewer.open || image.src !== loadedUrl) return;
+    ready = true;
+    image.hidden = false;
+    message.hidden = true;
+    zoomButton.disabled = false;
+    layout(true);
+  });
+  triggers.forEach(link => {
+    link.setAttribute('role', 'button');
+    link.setAttribute('aria-haspopup', 'dialog');
+    link.setAttribute('aria-controls', viewer.id);
+    link.setAttribute('aria-label', `フライヤー${link.dataset.label}を拡大表示`);
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = link;
+      scrollY = window.scrollY;
+      document.body.style.setProperty('--viewer-scroll-top', `${-scrollY}px`);
+      document.body.classList.add('flyer-viewer-open');
+      viewer.showModal();
+      loadSide(link.dataset.flyer);
+    });
+    link.addEventListener('keydown', event => {
+      if (event.key === ' ') { event.preventDefault(); link.click(); }
+    });
+  });
+  sides.forEach(button => button.addEventListener('click', () => {
+    if (button.dataset.side !== activeSide) loadSide(button.dataset.side);
+  }));
+  retry.addEventListener('click', () => loadSide(activeSide));
+  zoomButton.addEventListener('click', () => setZoom(!zoomed));
+  image.addEventListener('click', () => { if (ready) setZoom(!zoomed); });
+  viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
+  viewer.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    const controls = [...viewer.querySelectorAll('button:not(:disabled), [tabindex="0"]')].filter(element => element.getClientRects().length);
+    const first = controls[0], last = controls.at(-1);
+    if (event.shiftKey && (document.activeElement === first || !viewer.contains(document.activeElement))) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && (document.activeElement === last || !viewer.contains(document.activeElement))) {
+      event.preventDefault(); first.focus();
+    }
+  });
+  let backdropPress = false;
+  viewer.addEventListener('pointerdown', event => { backdropPress = event.target === viewer; });
+  viewer.addEventListener('click', event => {
+    if (backdropPress && event.target === viewer) viewer.close();
+    backdropPress = false;
+  });
+  viewer.addEventListener('close', () => {
+    ready = false;
+    image.hidden = true;
+    image.removeAttribute('src');
+    document.body.classList.remove('flyer-viewer-open');
+    document.body.style.removeProperty('--viewer-scroll-top');
+    window.scrollTo({top: scrollY, behavior: 'instant'});
+    opener?.focus({preventScroll: true});
+  });
+  new ResizeObserver(() => layout()).observe(stage);
 })();

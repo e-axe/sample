@@ -91,19 +91,71 @@ body:has(.mobile-menu[open]) .mobile-sticky{visibility:hidden}
 .footer-title .title-red{color:#ed6269}
 
 /* Official print artwork: uncropped, deferred previews and on-demand detail. */
+/* Official flyers: paper frames, caution yellow and fine red registration marks. */
 .flyer-section{background:#fff}
 .flyer-intro{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;margin-bottom:28px;flex-wrap:wrap}
 .flyer-intro p{font-size:15px;color:var(--muted)}
 .official-x-link{display:inline-flex;align-items:center;gap:8px;line-height:1.6}
 .official-x-link .en{font-size:22px}
-.flyer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,380px));justify-content:center;align-items:start;gap:32px}
-.flyer-card{min-width:0}
-.flyer-image-link{display:block;border:1px solid var(--line);background:var(--paper);position:relative}
+.flyer-board{border:1px solid var(--line);background:linear-gradient(#d9d9d233 1px,transparent 1px),linear-gradient(90deg,#d9d9d233 1px,transparent 1px),var(--paper);background-size:32px 32px;padding:0 36px 36px;position:relative}
+.flyer-board-heading{display:flex;align-items:center;gap:18px;background:var(--yellow);margin:0 -36px 32px;padding:14px 24px;border-bottom:1px solid var(--ink);font-size:20px}
+.flyer-board-heading>.en:last-child{font-size:16px;white-space:nowrap}
+.flyer-board-stripe{height:12px;flex:1;background:repeating-linear-gradient(120deg,var(--ink) 0 5px,transparent 5px 12px)}
+.flyer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,412px));justify-content:center;align-items:start;gap:36px}
+.flyer-card{min-width:0;padding:16px;background:#fff;border:1px solid var(--line);box-shadow:5px 6px 0 #1414140a;position:relative}
+.flyer-card:before,.flyer-card:after{content:'';position:absolute;width:16px;height:16px;pointer-events:none}
+.flyer-card:before{left:-1px;top:-1px;border-top:2px solid var(--red);border-left:2px solid var(--red)}
+.flyer-card:after{right:-1px;bottom:-1px;border-right:2px solid var(--red);border-bottom:2px solid var(--red)}
+.flyer-card-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:18px;letter-spacing:.05em}
+.flyer-crosshair{position:relative;width:14px;height:14px;background:linear-gradient(var(--red),var(--red)) center/14px 1px no-repeat,linear-gradient(var(--red),var(--red)) center/1px 14px no-repeat}
+.flyer-image-link{display:block;border:1px solid var(--line);background:var(--paper);position:relative;overflow:hidden;cursor:zoom-in}
 .flyer-image-link img{width:100%;height:auto}
-.flyer-image-link:hover{border-color:var(--red)}
-.flyer-image-link .image-fallback{position:absolute;inset:0;align-content:center;text-align:center;padding:24px;font-size:14px;background:var(--paper)}
-.flyer-card figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px;font-size:14px}
+.flyer-image-link .image-fallback{position:absolute;inset:0;text-align:center;padding:24px;font-size:14px;background:var(--paper)}
+.flyer-image-hint{position:absolute;right:12px;bottom:12px;display:flex;gap:8px;align-items:center;padding:9px 12px;background:var(--yellow);color:var(--ink);font-size:12px;font-weight:800;box-shadow:2px 2px 0 var(--ink);opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;pointer-events:none}
+.flyer-image-link:hover .flyer-image-hint,.flyer-image-link:focus-visible .flyer-image-hint{opacity:1;transform:none}
+.flyer-card figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;font-size:14px}
 .flyer-card figcaption>span{font-weight:800}
+.flyer-open-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:8px 12px;background:var(--ink);color:#fff;font-size:13px;font-weight:800;line-height:1.4;transition:background .15s,color .15s}
+.flyer-open-link:hover{background:var(--yellow);color:var(--ink)}
+.expand-icon{display:inline-block;width:16px;height:16px;flex-shrink:0;background:linear-gradient(currentColor,currentColor) left top/6px 1.5px no-repeat,linear-gradient(currentColor,currentColor) left top/1.5px 6px no-repeat,linear-gradient(currentColor,currentColor) right bottom/6px 1.5px no-repeat,linear-gradient(currentColor,currentColor) right bottom/1.5px 6px no-repeat}
 .site-footer .official-x-link{border-color:#777;margin-top:12px}
+/* Native dialog keeps the page in place and makes its background inert. */
+body.flyer-viewer-open{position:fixed;top:var(--viewer-scroll-top);left:0;right:0;overflow:hidden}
+.flyer-viewer{width:min(1160px,calc(100% - 48px));height:min(900px,calc(100vh - 48px));height:min(900px,calc(100dvh - 48px));max-width:none;max-height:none;padding:0;border:1px solid #ffffff40;background:#181818;color:#fff;overflow:hidden;box-shadow:0 24px 100px #0009}
+.flyer-viewer:not([open]){display:none}
+.flyer-viewer::backdrop{background:#0b0b0be6;backdrop-filter:blur(8px)}
+.flyer-viewer[open]{animation:viewer-enter .18s ease-out}
+.flyer-viewer-panel{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.viewer-header{display:flex;align-items:center;gap:24px;padding:14px 20px;background:var(--yellow);color:var(--ink);border-bottom:1px solid var(--ink)}
+.viewer-title{display:flex;align-items:baseline;gap:12px;flex:1;min-width:0}
+.viewer-title .en{font-size:26px;white-space:nowrap}
+.viewer-title h2{font-size:13px;font-weight:800}
+.viewer-sides{display:flex;gap:4px}
+.flyer-viewer button{border:1px solid transparent;cursor:pointer;min-height:44px;font-size:14px;font-weight:800;line-height:1.4}
+.flyer-viewer button:focus-visible,.viewer-stage:focus-visible{outline:3px solid #ed6269;outline-offset:-4px}
+.viewer-side{padding:10px 20px;background:transparent;color:var(--ink)}
+.viewer-side[aria-pressed=true]{background:var(--ink);color:var(--yellow)}
+.viewer-side:hover{border-color:var(--ink)}
+.viewer-close{width:44px;display:grid;place-items:center;background:transparent;color:var(--ink);flex-shrink:0}
+.viewer-close:hover{background:var(--ink);color:var(--yellow)}
+.close-icon{position:relative;width:20px;height:20px}
+.close-icon:before,.close-icon:after{content:'';position:absolute;top:9px;left:0;width:20px;height:2px;background:currentColor;transform:rotate(45deg)}
+.close-icon:after{transform:rotate(-45deg)}
+.viewer-stage{position:relative;min-height:0;overflow:auto;overscroll-behavior:contain;background:radial-gradient(ellipse at center,#343434,#181818);scrollbar-color:#777 #202020}
+.viewer-canvas{display:grid;place-items:center;min-width:100%;min-height:100%;padding:16px}
+.viewer-image{max-width:none;height:auto;box-shadow:0 8px 36px #0008;cursor:zoom-in}
+.viewer-image[hidden]{display:none}
+.is-zoomed .viewer-image{cursor:zoom-out}
+.viewer-message{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:24px;text-align:center;color:#e2e2dc;font-size:14px}
+.viewer-message[hidden]{display:none}
+.viewer-retry{padding:10px 20px;background:var(--yellow);color:var(--ink)}
+.viewer-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 20px;border-top:1px solid #ffffff26;background:#181818}
+.viewer-footer p{font-size:12px;line-height:1.6;color:#ccc}
+.viewer-zoom{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 16px;flex-shrink:0;background:#fff;color:var(--ink);min-width:132px}
+.viewer-zoom:hover{background:var(--yellow)}
+.viewer-zoom:disabled{opacity:.4;cursor:wait}
+@keyframes viewer-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media(min-width:1080px){.desktop-nav{gap:18px}.desktop-nav a{font-size:17px}}
-@media(max-width:767px){.flyer-intro{display:block;margin-bottom:24px}.flyer-intro .official-x-link{margin-top:12px}.flyer-grid{grid-template-columns:minmax(0,380px);gap:28px}.flyer-card figcaption{font-size:13px}}
+@media(max-width:767px){.flyer-intro{display:block;margin-bottom:24px}.flyer-intro .official-x-link{margin-top:12px}.flyer-board{padding:0 16px 20px}.flyer-board-heading{margin:0 -16px 20px;padding:12px 14px;gap:12px;font-size:18px}.flyer-board-heading>.en:last-child{font-size:13px}.flyer-board-stripe{height:10px}.flyer-grid{grid-template-columns:minmax(0,412px);gap:24px}.flyer-card{padding:14px}.flyer-card figcaption{font-size:13px;gap:8px}.flyer-open-link{font-size:12px;padding-inline:10px}.flyer-viewer{width:calc(100% - 20px);height:calc(100vh - 20px);height:calc(100dvh - 20px)}.viewer-header{flex-wrap:wrap;padding:10px 12px;gap:4px 12px}.viewer-title{display:block}.viewer-title .en{font-size:22px}.viewer-title h2{font-size:11px;margin-top:2px}.viewer-sides{order:3;width:100%}.viewer-side{flex:1}.viewer-footer{padding:10px 12px max(10px,env(safe-area-inset-bottom));gap:12px}.viewer-footer p{max-width:16em;font-size:11px}.viewer-zoom{min-width:120px;padding-inline:10px;font-size:13px!important}}
+@media(max-height:480px){.viewer-header{flex-wrap:nowrap;padding-block:6px;gap:12px}.viewer-title h2{display:none}.viewer-title .en{font-size:20px}.viewer-sides{order:initial;width:auto;flex-shrink:0}.viewer-side{padding-inline:12px}.viewer-footer{padding-block:6px}.viewer-footer p{max-width:none}}
+@media(prefers-reduced-motion:reduce){.flyer-viewer[open]{animation:none}.flyer-image-hint,.flyer-open-link{transition:none}}
