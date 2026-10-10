@@ -141,7 +141,8 @@ body.flyer-viewer-open{position:fixed;top:var(--viewer-scroll-top);left:0;right:
 .close-icon{position:relative;width:20px;height:20px}
 .close-icon:before,.close-icon:after{content:'';position:absolute;top:9px;left:0;width:20px;height:2px;background:currentColor;transform:rotate(45deg)}
 .close-icon:after{transform:rotate(-45deg)}
-.viewer-stage{position:relative;min-height:0;overflow:auto;overscroll-behavior:contain;background:radial-gradient(ellipse at center,#343434,#181818);scrollbar-color:#777 #202020}
+.viewer-stage{position:relative;min-height:0;overflow:hidden;overscroll-behavior:contain;background:radial-gradient(ellipse at center,#343434,#181818);scrollbar-color:#777 #202020;overflow-anchor:none;scroll-behavior:auto}
+.viewer-stage.is-zoomed{overflow:auto}
 .viewer-canvas{display:grid;place-items:center;min-width:100%;min-height:100%;padding:16px}
 .viewer-image{max-width:none;height:auto;box-shadow:0 8px 36px #0008;cursor:zoom-in}
 .viewer-image[hidden]{display:none}

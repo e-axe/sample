@@ -89,13 +89,18 @@
   let activeSide, opener, scrollY = 0, zoomed = false, ready = false;
   const layout = (center = false) => {
     if (!viewer.open || !ready) return;
+    // Scrollbars change clientWidth/clientHeight. Use the stable outer frame
+    // so fitting an image cannot trigger a second zoom calculation.
+    stage.classList.toggle('is-zoomed', zoomed);
+    const viewport = stage.getBoundingClientRect();
     const ratio = image.naturalWidth / image.naturalHeight;
-    const fittedWidth = Math.min(image.naturalWidth, Math.max(1, stage.clientWidth - 32), Math.max(1, stage.clientHeight - 32) * ratio);
+    const fittedWidth = Math.min(image.naturalWidth, Math.max(1, viewport.width - 32), Math.max(1, viewport.height - 32) * ratio);
     const width = Math.min(image.naturalWidth, fittedWidth * (zoomed ? 3 : 1));
     image.style.width = `${width}px`;
-    canvas.style.width = `${Math.max(stage.clientWidth, width + 32)}px`;
-    canvas.style.height = `${Math.max(stage.clientHeight, width / ratio + 32)}px`;
-    stage.classList.toggle('is-zoomed', zoomed);
+    // CSS min-size fills the remaining viewport without forcing a horizontal
+    // scrollbar when only the image height exceeds the frame.
+    canvas.style.width = zoomed ? `${width + 32}px` : '100%';
+    canvas.style.height = zoomed ? `${width / ratio + 32}px` : '100%';
     if (center) {
       stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
       stage.scrollTop = (stage.scrollHeight - stage.clientHeight) / 2;
@@ -196,5 +201,5 @@
     window.scrollTo({top: scrollY, behavior: 'instant'});
     opener?.focus({preventScroll: true});
   });
-  new ResizeObserver(() => layout()).observe(stage);
+  new ResizeObserver(() => layout()).observe(stage, {box: 'border-box'});
 })();

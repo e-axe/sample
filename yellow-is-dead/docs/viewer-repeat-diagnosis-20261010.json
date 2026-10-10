@@ -1,0 +1,18 @@
+{
+  "condition": "Linux Chromium153 / 1440x900 DPR1 / classic scrollbars allocating 15px (not physical Windows)",
+  "baseCommit": "c5ee26459997ca14f826b038e3258b837a1937be",
+  "before": {
+    "toggles": 24,
+    "resizeEvents": 26,
+    "maxSecondSizeChangePx": 31.8125,
+    "maxSecondHeightChangePx": 45.0,
+    "errors": []
+  },
+  "after": {
+    "toggles": 24,
+    "resizeEvents": 2,
+    "maxSecondSizeChangePx": 0.0,
+    "maxSecondHeightChangePx": 0.0,
+    "errors": []
+  }
+}
