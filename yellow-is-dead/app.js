@@ -60,13 +60,13 @@
   document.querySelectorAll('img').forEach(img => {
     const fail = () => {
       img.classList.add('image-error');
-      const placeholder = img.parentElement.querySelector('.image-fallback');
+      const placeholder = (img.closest('.cast-photo') || img.parentElement).querySelector('.image-fallback');
       if (placeholder) placeholder.hidden = false;
     };
     img.addEventListener('error', fail);
     img.addEventListener('load', () => {
       img.classList.remove('image-error');
-      const placeholder = img.parentElement.querySelector('.image-fallback');
+      const placeholder = (img.closest('.cast-photo') || img.parentElement).querySelector('.image-fallback');
       if (placeholder) placeholder.hidden = true;
     });
     if (img.getAttribute('src') && img.complete && img.naturalWidth === 0) fail();

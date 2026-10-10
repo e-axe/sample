@@ -11,7 +11,7 @@ const root = path.dirname(site);
 (async () => {
   const server = http.createServer((req, res) => {
     let file = path.join(root, decodeURIComponent(req.url.split('?')[0]));
-    if (file.endsWith('/')) file += 'index.html';
+    if (file.endsWith('/') || file.endsWith(path.sep)) file = path.join(file, 'index.html');
     try {
       res.setHeader('Content-Type', {'.html':'text/html; charset=utf-8', '.css':'text/css', '.js':'application/javascript', '.webp':'image/webp', '.woff2':'font/woff2', '.svg':'image/svg+xml'}[path.extname(file)] || 'application/octet-stream');
       res.end(fs.readFileSync(file));

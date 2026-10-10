@@ -1,0 +1,639 @@
+{
+  "date": "2026-10-10",
+  "quality": 90,
+  "processing": "EXIF orientation, sRGB, metadata removal, proportional downsize only, no crop or enlargement",
+  "images": [
+    {
+      "id": "cast-01",
+      "name": "櫻井圭登",
+      "order": 1,
+      "source": "yellow-is-dead-cast-01.jpg",
+      "sourceWidth": 1600,
+      "sourceHeight": 2000,
+      "sourceBytes": 1351091,
+      "sourceSHA256": "c132c216c366ee98787ff5f1f99f1dfef04b9eb95f938ad45a06591885433bb2",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-01-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16288
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 44466
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 82300
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-01-640.jpg",
+        "bytes": 73769
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-14",
+      "name": "神志那結衣",
+      "order": 2,
+      "source": "yellow-is-dead-cast-14.jpg",
+      "sourceWidth": 749,
+      "sourceHeight": 936,
+      "sourceBytes": 499235,
+      "sourceSHA256": "e9405968441a7e6487cb9d4f212dbcd5fdd67eb0495ae1a9061070bb68e474f6",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-14-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 20568
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 81308
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-749.webp",
+          "width": 749,
+          "height": 936,
+          "bytes": 111136
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-14-640.jpg",
+        "bytes": 100807
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-15",
+      "name": "間島和奏",
+      "order": 3,
+      "source": "yellow-is-dead-cast-15.jpg",
+      "sourceWidth": 978,
+      "sourceHeight": 1223,
+      "sourceBytes": 629418,
+      "sourceSHA256": "82f800ec515f05c072aca0f48accc7fa2582c8c2727ea911dbf57b060ac67fe2",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-15-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 15958
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 56902
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 107386
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-15-640.jpg",
+        "bytes": 79417
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-02",
+      "name": "春斗",
+      "order": 4,
+      "source": "yellow-is-dead-cast-02.jpg",
+      "sourceWidth": 380,
+      "sourceHeight": 475,
+      "sourceBytes": 195248,
+      "sourceSHA256": "0e5daa91e0457bbd99c6e00028e672d35b80fc51d169a7882861152addab5af3",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-02-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 34772
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-380.webp",
+          "width": 380,
+          "height": 475,
+          "bytes": 50452
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-02-380.jpg",
+        "bytes": 54867
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-03",
+      "name": "中島礼貴",
+      "order": 5,
+      "source": "yellow-is-dead-cast-03.jpg",
+      "sourceWidth": 1600,
+      "sourceHeight": 2000,
+      "sourceBytes": 1298343,
+      "sourceSHA256": "50986073e7fe0aa5d2e7ddfd34427c7c41936c87e87dc4963eb478c5e251185e",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-03-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 12314
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40258
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 81770
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-03-640.jpg",
+        "bytes": 66332
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-04",
+      "name": "きたつとむ",
+      "order": 6,
+      "source": "yellow-is-dead-cast-04.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 593,
+      "sourceBytes": 167494,
+      "sourceSHA256": "7e716da87a7137c5a161e57e1309a7359344e66a473a8fafc3a51a72da372975",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-04-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16282
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-474.webp",
+          "width": 474,
+          "height": 593,
+          "bytes": 31386
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-04-474.jpg",
+        "bytes": 46321
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-05",
+      "name": "岡本和樹",
+      "order": 7,
+      "source": "yellow-is-dead-cast-05.jpg",
+      "sourceWidth": 640,
+      "sourceHeight": 800,
+      "sourceBytes": 417413,
+      "sourceSHA256": "790a0b4e524ba052eafbbc42cb672df576b62b151d240bdab29c2c8abf1918bf",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-05-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22580
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 86858
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-05-640.jpg",
+        "bytes": 104380
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-16",
+      "name": "内龍星",
+      "order": 8,
+      "source": "yellow-is-dead-cast-16.jpg",
+      "sourceWidth": 1508,
+      "sourceHeight": 1885,
+      "sourceBytes": 1605879,
+      "sourceSHA256": "b8487c196681807afa196cdc418c96be4ed6896f762d9861fe46612b21d977c0",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-16-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16046
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 73874
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 197566
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-16-640.jpg",
+        "bytes": 98103
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-06",
+      "name": "依光希空",
+      "order": 9,
+      "source": "yellow-is-dead-cast-06.jpg",
+      "sourceWidth": 397,
+      "sourceHeight": 496,
+      "sourceBytes": 158575,
+      "sourceSHA256": "07ea51eedb99f22d40440af3ff613882a5dcef0021a978c3e7b7d7ac900cc013",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-06-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16892
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-397.webp",
+          "width": 397,
+          "height": 496,
+          "bytes": 23032
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-06-397.jpg",
+        "bytes": 34757
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-07",
+      "name": "城崎桃華",
+      "order": 10,
+      "source": "yellow-is-dead-cast-07.jpg",
+      "sourceWidth": 1302,
+      "sourceHeight": 1628,
+      "sourceBytes": 668974,
+      "sourceSHA256": "01dbb0f17a831e5f9f817c93496fb14d6f3e5052c670022c0d1d3bcb6fd733bf",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-07-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 15334
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 47516
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 87860
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-07-640.jpg",
+        "bytes": 77584
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-08",
+      "name": "澤田奏音",
+      "order": 11,
+      "source": "yellow-is-dead-cast-08.jpg",
+      "sourceWidth": 768,
+      "sourceHeight": 960,
+      "sourceBytes": 367534,
+      "sourceSHA256": "a639ba73cc4f43e42486c4817d9d28841e36b7350bf234f1f590aa2e3ec9085f",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-08-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 15754
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 47050
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-768.webp",
+          "width": 768,
+          "height": 960,
+          "bytes": 62932
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-08-640.jpg",
+        "bytes": 74234
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-09",
+      "name": "倉橋伶奈",
+      "order": 12,
+      "source": "yellow-is-dead-cast-09.jpg",
+      "sourceWidth": 1600,
+      "sourceHeight": 2000,
+      "sourceBytes": 1364057,
+      "sourceSHA256": "986ffb584a1a24c412d014c20d0ba851126e22140a46c1eeea1a12e87236f15f",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-09-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16438
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 60106
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 134180
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-09-640.jpg",
+        "bytes": 81486
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-17",
+      "name": "七瀬つむぎ",
+      "order": 13,
+      "source": "yellow-is-dead-cast-17.jpg",
+      "sourceWidth": 1600,
+      "sourceHeight": 2000,
+      "sourceBytes": 1461771,
+      "sourceSHA256": "41a7aff90a110af8c10c9885919fea49a51977cff8a1f690b6da5657775d04bd",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-17-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16592
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 59862
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 126892
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-17-640.jpg",
+        "bytes": 81011
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-18",
+      "name": "熊沢世莉奈",
+      "order": 14,
+      "source": "yellow-is-dead-cast-18.jpg",
+      "sourceWidth": 1402,
+      "sourceHeight": 1752,
+      "sourceBytes": 1419813,
+      "sourceSHA256": "c0b88fb948273c03636c7d4d73f602be5668e58a31110d6ab618a6eb0ac58685",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-18-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 20154
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 67722
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 149824
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-18-640.jpg",
+        "bytes": 92537
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-10",
+      "name": "高田舟",
+      "order": 15,
+      "source": "yellow-is-dead-cast-10.jpg",
+      "sourceWidth": 1000,
+      "sourceHeight": 1250,
+      "sourceBytes": 525163,
+      "sourceSHA256": "63a597aab0209b15c2f13b35ccc7321b0589c8c7d156e41c455a07cfe00f7c77",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-10-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16296
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 55952
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 96336
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-10-640.jpg",
+        "bytes": 74278
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-11",
+      "name": "加藤光大",
+      "order": 16,
+      "source": "yellow-is-dead-cast-11.jpg",
+      "sourceWidth": 602,
+      "sourceHeight": 752,
+      "sourceBytes": 318137,
+      "sourceSHA256": "f44256f2eee96c3942ba15711a06df8981e671818a7303190897e0a82cb433da",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-11-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 28226
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-602.webp",
+          "width": 602,
+          "height": 752,
+          "bytes": 89190
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-11-602.jpg",
+        "bytes": 101224
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-12",
+      "name": "樹くるみ",
+      "order": 17,
+      "source": "yellow-is-dead-cast-12.jpg",
+      "sourceWidth": 1600,
+      "sourceHeight": 2000,
+      "sourceBytes": 1324900,
+      "sourceSHA256": "c91b20e940dd5b13ae9050e9c1fe80add8d3951596dfca5d2d55f395b369810f",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-12-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16166
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 46878
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 93110
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-12-640.jpg",
+        "bytes": 76166
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    },
+    {
+      "id": "cast-13",
+      "name": "大橋篤",
+      "order": 18,
+      "source": "yellow-is-dead-cast-13.jpg",
+      "sourceWidth": 419,
+      "sourceHeight": 524,
+      "sourceBytes": 199824,
+      "sourceSHA256": "1f5bcade1d6524db15f6586ad704f2f253e2697c0e056f278b647ed9fdabd92d",
+      "outputs": [
+        {
+          "path": "assets/yellow-is-dead-cast-13-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 23918
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-419.webp",
+          "width": 419,
+          "height": 524,
+          "bytes": 36080
+        }
+      ],
+      "fallback": {
+        "path": "assets/yellow-is-dead-cast-13-419.jpg",
+        "bytes": 49173
+      },
+      "focus": "50% 50%",
+      "alt": "",
+      "permission": "User-provided portraits; LP implementation requested 2026-10-10"
+    }
+  ],
+  "sourceBytes": 13972869,
+  "defaultWebpBytes": 998892
+}

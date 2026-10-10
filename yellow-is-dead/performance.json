@@ -115,8 +115,32 @@
           "id": "cast-01",
           "name": "櫻井圭登",
           "order": 1,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-01-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-01-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16288
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-01-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 44466
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-01-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 82300
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-01-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         }
       ]
     },
@@ -127,8 +151,8 @@
         {
           "id": "cast-14",
           "name": "神志那結衣",
-          "image": null,
-          "focus": "50% 30%",
+          "image": "assets/yellow-is-dead-cast-14-640.webp",
+          "focus": "50% 50%",
           "order": 2,
           "appearances": [
             "②",
@@ -136,20 +160,68 @@
             "⑥",
             "⑦"
           ],
-          "appearanceLabel": "②・③・⑥・⑦"
+          "appearanceLabel": "②・③・⑥・⑦",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-14-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 20568
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-14-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 81308
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-14-749.webp",
+              "width": 749,
+              "height": 936,
+              "bytes": 111136
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-14-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), 272px"
         },
         {
           "id": "cast-15",
           "name": "間島和奏",
-          "image": null,
-          "focus": "50% 30%",
+          "image": "assets/yellow-is-dead-cast-15-640.webp",
+          "focus": "50% 50%",
           "order": 3,
           "appearances": [
             "①",
             "④",
             "⑤"
           ],
-          "appearanceLabel": "①・④・⑤"
+          "appearanceLabel": "①・④・⑤",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-15-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 15958
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-15-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 56902
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-15-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 107386
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-15-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), 272px"
         }
       ]
     },
@@ -161,43 +233,163 @@
           "id": "cast-02",
           "name": "春斗",
           "order": 4,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-02-380.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-02-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 34772
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-02-380.webp",
+              "width": 380,
+              "height": 475,
+              "bytes": 50452
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-02-380.jpg",
+          "imageWidth": 380,
+          "imageHeight": 475,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-03",
           "name": "中島礼貴",
           "order": 5,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-03-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-03-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 12314
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-03-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 40258
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-03-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 81770
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-03-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-04",
           "name": "きたつとむ",
           "order": 6,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-04-474.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-04-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16282
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-04-474.webp",
+              "width": 474,
+              "height": 593,
+              "bytes": 31386
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-04-474.jpg",
+          "imageWidth": 474,
+          "imageHeight": 593,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-05",
           "name": "岡本和樹",
           "order": 7,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-05-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-05-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 22580
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-05-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 86858
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-05-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-16",
           "name": "内龍星",
-          "image": null,
-          "focus": "50% 30%",
-          "order": 8
+          "image": "assets/yellow-is-dead-cast-16-640.webp",
+          "focus": "50% 50%",
+          "order": 8,
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-16-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16046
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-16-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 73874
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-16-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 197566
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-16-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-06",
           "name": "依光希空",
           "order": 9,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-06-397.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-06-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16892
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-06-397.webp",
+              "width": 397,
+              "height": 496,
+              "bytes": 23032
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-06-397.jpg",
+          "imageWidth": 397,
+          "imageHeight": 496,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         }
       ]
     },
@@ -209,22 +401,94 @@
           "id": "cast-07",
           "name": "城崎桃華",
           "order": 10,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-07-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-07-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 15334
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-07-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 47516
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-07-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 87860
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-07-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-08",
           "name": "澤田奏音",
           "order": 11,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-08-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-08-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 15754
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-08-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 47050
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-08-768.webp",
+              "width": 768,
+              "height": 960,
+              "bytes": 62932
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-08-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-09",
           "name": "倉橋伶奈",
           "order": 12,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-09-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-09-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16438
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-09-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 60106
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-09-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 134180
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-09-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         }
       ]
     },
@@ -235,8 +499,8 @@
         {
           "id": "cast-17",
           "name": "七瀬つむぎ",
-          "image": null,
-          "focus": "50% 30%",
+          "image": "assets/yellow-is-dead-cast-17-640.webp",
+          "focus": "50% 50%",
           "order": 13,
           "appearances": [
             "①",
@@ -245,19 +509,67 @@
             "④",
             "⑤"
           ],
-          "appearanceLabel": "①〜⑤"
+          "appearanceLabel": "①〜⑤",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-17-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16592
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-17-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 59862
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-17-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 126892
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-17-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), 272px"
         },
         {
           "id": "cast-18",
           "name": "熊沢世莉奈",
-          "image": null,
-          "focus": "50% 30%",
+          "image": "assets/yellow-is-dead-cast-18-640.webp",
+          "focus": "50% 50%",
           "order": 14,
           "appearances": [
             "⑥",
             "⑦"
           ],
-          "appearanceLabel": "⑥・⑦"
+          "appearanceLabel": "⑥・⑦",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-18-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 20154
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-18-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 67722
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-18-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 149824
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-18-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), 272px"
         }
       ]
     },
@@ -269,29 +581,113 @@
           "id": "cast-10",
           "name": "高田舟",
           "order": 15,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-10-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-10-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16296
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-10-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 55952
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-10-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 96336
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-10-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-11",
           "name": "加藤光大",
           "order": 16,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-11-602.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-11-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 28226
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-11-602.webp",
+              "width": 602,
+              "height": 752,
+              "bytes": 89190
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-11-602.jpg",
+          "imageWidth": 602,
+          "imageHeight": 752,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-12",
           "name": "樹くるみ",
           "order": 17,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-12-640.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-12-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 16166
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-12-640.webp",
+              "width": 640,
+              "height": 800,
+              "bytes": 46878
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-12-960.webp",
+              "width": 960,
+              "height": 1200,
+              "bytes": 93110
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-12-640.jpg",
+          "imageWidth": 640,
+          "imageHeight": 800,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         },
         {
           "id": "cast-13",
           "name": "大橋篤",
           "order": 18,
-          "image": null,
-          "focus": "50% 30%"
+          "image": "assets/yellow-is-dead-cast-13-419.webp",
+          "focus": "50% 50%",
+          "imageSources": [
+            {
+              "path": "assets/yellow-is-dead-cast-13-320.webp",
+              "width": 320,
+              "height": 400,
+              "bytes": 23918
+            },
+            {
+              "path": "assets/yellow-is-dead-cast-13-419.webp",
+              "width": 419,
+              "height": 524,
+              "bytes": 36080
+            }
+          ],
+          "imageFallback": "assets/yellow-is-dead-cast-13-419.jpg",
+          "imageWidth": 419,
+          "imageHeight": 524,
+          "imageSizes": "(max-width:359px) calc((100vw - 48px) / 2), (max-width:767px) calc((100vw - 56px) / 2), (max-width:1079px) calc((100vw - 104px) / 3), (max-width:1239px) calc((100vw - 152px) / 4), 272px"
         }
       ]
     }

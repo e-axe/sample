@@ -2,7 +2,7 @@
 import json, html, pathlib, datetime, re, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-DATA = json.loads((ROOT / 'performance.json').read_text())
+DATA = json.loads((ROOT / 'performance.json').read_text(encoding='utf-8'))
 def asset_version(name):
     return hashlib.sha256((ROOT / name).read_bytes()).hexdigest()[:12]
 esc = html.escape
@@ -41,7 +41,10 @@ for group in DATA['castGroups']:
     for person in group['members']:
         photo=person.get('image')
         if photo:
-            frame=f'<div class="cast-photo"><img src="{esc(photo)}" alt="" width="640" height="800" loading="lazy" decoding="async" style="object-position:{esc(person.get("focus","50% 30%"))}"><span class="image-fallback" hidden>写真準備中</span></div>'
+            candidates=', '.join(f'{p["path"]} {p["width"]}w' for p in person.get('imageSources',[]))
+            source=f'<source type="image/webp" srcset="{esc(candidates)}" sizes="{esc(person["imageSizes"])}">' if candidates else ''
+            fallback=person.get('imageFallback',photo)
+            frame=f'<div class="cast-photo"><picture>{source}<img src="{esc(fallback)}" alt="" width="{person.get("imageWidth",640)}" height="{person.get("imageHeight",800)}" loading="lazy" fetchpriority="low" decoding="async" style="object-position:{esc(person.get("focus","50% 30%"))}"></picture><span class="image-fallback" hidden>写真を読み込めませんでした</span></div>'
         else:
             frame='<div class="cast-photo photo-pending" aria-hidden="true"><span class="photo-label"><span class="en">PHOTO</span><span>写真準備中</span></span></div>'
         appearance=f'<p class="cast-appearances"><span>出演回</span>{esc(person["appearanceLabel"])}</p>' if person.get('appearanceLabel') else ''
