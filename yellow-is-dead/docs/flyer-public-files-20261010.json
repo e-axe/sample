@@ -1,0 +1,20 @@
+{
+  "index.html": {
+    "status": 200,
+    "bytes": 23886,
+    "sha256": "64451ee42a604d2bf8bdc9c4eb0a79bdd79ba73e382156a110649cafa664180e",
+    "matchesLocal": true
+  },
+  "style.css": {
+    "status": 200,
+    "bytes": 27526,
+    "sha256": "85f3f778067b675fc627d6ff34ababf13a45e035a59a7e3854a60dc7860744b1",
+    "matchesLocal": true
+  },
+  "app.js": {
+    "status": 200,
+    "bytes": 3160,
+    "sha256": "0a1217726bea0f8f8007b34c4234b7064d4d4bc2889b1b001781459cd0fe6172",
+    "matchesLocal": true
+  }
+}
