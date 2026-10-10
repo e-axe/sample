@@ -87,6 +87,58 @@
     alt: document.querySelector(`.flyer-image-link[data-flyer="${link.dataset.flyer}"] img`).alt
   }]));
   let activeSide, opener, scrollY = 0, zoomed = false, ready = false;
+  let drag = null, draggedClick = null;
+  const finishDrag = (blockClick = false) => {
+    if (!drag) return;
+    const {pointerId, moved} = drag;
+    drag = null;
+    draggedClick = blockClick && moved ? pointerId : null;
+    stage.classList.remove('is-dragging');
+    if (stage.hasPointerCapture(pointerId)) stage.releasePointerCapture(pointerId);
+  };
+  const resetDrag = () => { finishDrag(); draggedClick = null; };
+  // Mouse-only drag-to-pan; touch keeps the browser's native scrolling.
+  stage.addEventListener('pointerdown', event => {
+    resetDrag();
+    if (event.pointerType !== 'mouse' || event.button !== 0 || !zoomed || !ready) return;
+    const bounds = stage.getBoundingClientRect();
+    // Leave the native scrollbar tracks available for mouse interaction.
+    if (event.clientX >= bounds.left + stage.clientWidth || event.clientY >= bounds.top + stage.clientHeight) return;
+    drag = {pointerId: event.pointerId, x: event.clientX, y: event.clientY,
+      left: stage.scrollLeft, top: stage.scrollTop, moved: false};
+  });
+  window.addEventListener('pointermove', event => {
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    if (!(event.buttons & 1)) { finishDrag(true); return; }
+    const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+    if (!drag.moved) {
+      if (Math.hypot(dx, dy) < 5) return;
+      drag.moved = true;
+      stage.setPointerCapture(event.pointerId);
+      stage.classList.add('is-dragging');
+    }
+    event.preventDefault();
+    stage.scrollLeft = drag.left - dx;
+    stage.scrollTop = drag.top - dy;
+  });
+  window.addEventListener('pointerup', event => {
+    if (drag?.pointerId === event.pointerId) finishDrag(true);
+  });
+  window.addEventListener('pointercancel', event => {
+    if (drag?.pointerId === event.pointerId) resetDrag();
+  });
+  stage.addEventListener('lostpointercapture', event => {
+    if (drag?.pointerId === event.pointerId) finishDrag(true);
+  });
+  window.addEventListener('blur', () => finishDrag(true));
+  stage.addEventListener('click', event => {
+    if (draggedClick !== null && event.detail > 0 && event.pointerId === draggedClick) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    draggedClick = null;
+  }, true);
+  image.addEventListener('dragstart', event => event.preventDefault());
   const layout = (center = false) => {
     if (!viewer.open || !ready) return;
     // Scrollbars change clientWidth/clientHeight. Use the stable outer frame
@@ -107,6 +159,7 @@
     }
   };
   const setZoom = value => {
+    resetDrag();
     zoomed = value;
     zoomButton.setAttribute('aria-pressed', String(value));
     zoomButton.querySelector('.viewer-zoom-label').textContent = value ? '全体を表示' : '拡大する';
@@ -193,6 +246,7 @@
     backdropPress = false;
   });
   viewer.addEventListener('close', () => {
+    resetDrag();
     ready = false;
     image.hidden = true;
     image.removeAttribute('src');

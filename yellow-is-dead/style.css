@@ -144,9 +144,11 @@ body.flyer-viewer-open{position:fixed;top:var(--viewer-scroll-top);left:0;right:
 .viewer-stage{position:relative;min-height:0;overflow:hidden;overscroll-behavior:contain;background:radial-gradient(ellipse at center,#343434,#181818);scrollbar-color:#777 #202020;overflow-anchor:none;scroll-behavior:auto}
 .viewer-stage.is-zoomed{overflow:auto}
 .viewer-canvas{display:grid;place-items:center;min-width:100%;min-height:100%;padding:16px}
-.viewer-image{max-width:none;height:auto;box-shadow:0 8px 36px #0008;cursor:zoom-in}
+.viewer-image{max-width:none;height:auto;box-shadow:0 8px 36px #0008;cursor:zoom-in;user-select:none;-webkit-user-select:none}
 .viewer-image[hidden]{display:none}
 .is-zoomed .viewer-image{cursor:zoom-out}
+.viewer-mouse-help{display:none}
+@media(hover:hover) and (pointer:fine){.is-zoomed .viewer-canvas,.is-zoomed .viewer-image{cursor:grab}.is-dragging .viewer-canvas,.is-dragging .viewer-image{cursor:grabbing}.viewer-mouse-help{display:inline}.viewer-touch-help{display:none}}
 .viewer-message{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:24px;text-align:center;color:#e2e2dc;font-size:14px}
 .viewer-message[hidden]{display:none}
 .viewer-retry{padding:10px 20px;background:var(--yellow);color:var(--ink)}

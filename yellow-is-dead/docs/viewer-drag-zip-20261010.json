@@ -1,0 +1,13 @@
+{
+  "zipBytes": 12075046,
+  "files": 24,
+  "crcError": null,
+  "allFilesMatch": true,
+  "sha256": "61a243b427ec36dbddeaf9c6714454f57471e80bb21494b86a34fe50f87712c1",
+  "indexRebuildIdentical": true,
+  "appGzipBytes": 3396,
+  "newHelpMissingGlyphs": {
+    "400": 0,
+    "800": 0
+  }
+}
