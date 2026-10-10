@@ -1,0 +1,15 @@
+{
+  "commit": "3018939b1cf4e1f03aadb12da17dd3447ec255f2",
+  "files": [
+    {
+      "file": "index.html",
+      "matches": true,
+      "localBytes": 34933
+    },
+    {
+      "file": "yellow-is-dead-client-preview.zip",
+      "matches": true,
+      "localBytes": 16121242
+    }
+  ]
+}
