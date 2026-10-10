@@ -1,0 +1,13 @@
+舞台『イエローが死んだ』クライアント確認用LP
+
+index.html/style.css/app.js/assets/fontsを同じ階層関係のままWebサーバーへ配置してください。サーバー側Node.js/DBは不要です。
+公式フライヤー表裏はFLYERに掲載。拡大用はリンク先で必要時のみ読み込みます。公式XリンクはFLYERとフッターにあります。
+
+確認用のnoindex,nofollow,noarchiveを設定しています。本番公開時の索引方針・canonical・公開ドメインは未確定です。
+チケットは発売前表示。正式な販売開始を確認後に更新します。CAST個別写真は未受領です。
+実機iOS/Android等の最終確認は未実施です。
+
+公開情報の正本はプロジェクト「イエローが死んだ_公演情報最新版.md」。更新用データ・ビルド方法・画像処理・検証結果はGitHubで管理しています。
+https://github.com/e-axe/sample/tree/main/yellow-is-dead
+
+更新版：2026-10-10（公式X・フライヤー追加）

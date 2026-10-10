@@ -1,11 +1,11 @@
 {
   "source": {
     "filename": "イエローが死んだ_公演情報最新版.md",
-    "updated": "2026-10-09",
+    "updated": "2026-10-10",
     "performanceProvided": "2026-10-09",
     "accessVerified": "2026-10-09",
-    "version": "2026-10-09-latest-official",
-    "libraryVersion": 3
+    "version": "2026-10-10-official-x-added",
+    "libraryVersion": 4
   },
   "title": "イエローが死んだ",
   "story": [
@@ -321,5 +321,31 @@
       "name": "合同会社otonapro/ソフトボイルド"
     }
   ],
-  "venue": "BOX in BOX THEATER"
+  "venue": "BOX in BOX THEATER",
+  "officialLinks": {
+    "x": {
+      "label": "ソフトボイルド公式X",
+      "url": "https://x.com/sb_stage"
+    }
+  },
+  "flyers": [
+    {
+      "side": "front",
+      "label": "表面",
+      "width": 960,
+      "height": 1358,
+      "thumbnail": "assets/yellow-is-dead-flyer-front-480.webp",
+      "image": "assets/yellow-is-dead-flyer-front-960.webp",
+      "large": "assets/yellow-is-dead-flyer-front-1600.webp"
+    },
+    {
+      "side": "back",
+      "label": "裏面",
+      "width": 960,
+      "height": 1347,
+      "thumbnail": "assets/yellow-is-dead-flyer-back-480.webp",
+      "image": "assets/yellow-is-dead-flyer-back-960.webp",
+      "large": "assets/yellow-is-dead-flyer-back-1600.webp"
+    }
+  ]
 }

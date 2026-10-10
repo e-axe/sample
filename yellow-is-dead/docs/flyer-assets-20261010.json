@@ -1,0 +1,62 @@
+[
+  {
+    "file": "yellow-is-dead-flyer-front-480.webp",
+    "dimensions": [
+      480,
+      679
+    ],
+    "bytes": 382904,
+    "sourceBytes": 7707905,
+    "losslessPixels": true
+  },
+  {
+    "file": "yellow-is-dead-flyer-front-960.webp",
+    "dimensions": [
+      960,
+      1358
+    ],
+    "bytes": 1406460,
+    "sourceBytes": 7707905,
+    "losslessPixels": true
+  },
+  {
+    "file": "yellow-is-dead-flyer-back-480.webp",
+    "dimensions": [
+      480,
+      673
+    ],
+    "bytes": 382114,
+    "sourceBytes": 10518649,
+    "losslessPixels": true
+  },
+  {
+    "file": "yellow-is-dead-flyer-back-960.webp",
+    "dimensions": [
+      960,
+      1347
+    ],
+    "bytes": 1372856,
+    "sourceBytes": 10518649,
+    "losslessPixels": true
+  },
+  {
+    "file": "yellow-is-dead-flyer-front-1600.webp",
+    "dimensions": [
+      1600,
+      2263
+    ],
+    "bytes": 3750004,
+    "sourceBytes": 7707905,
+    "losslessPixels": true
+  },
+  {
+    "file": "yellow-is-dead-flyer-back-1600.webp",
+    "dimensions": [
+      1600,
+      2245
+    ],
+    "bytes": 3431788,
+    "sourceBytes": 10518649,
+    "losslessPixels": true
+  }
+]

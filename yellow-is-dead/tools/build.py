@@ -15,7 +15,7 @@ def cta(place, label='チケット情報', style='primary'):
     extra = f' {new_tab}' if active else ''
     hint = new_tab_hint if active else ''
     return f'<a class="button {style}" data-ticket-placement="{place}" href="{esc(target)}"{extra}>{text}{hint}</a>'
-nav=''.join(f'<a href="#{key}">{key.upper()}</a>' for key in ['story','schedule','ticket','cast','access'])
+nav=''.join(f'<a href="#{key}">{key.upper()}</a>' for key in ['story','schedule','ticket','cast','flyer','access'])
 people=[p for g in DATA['castGroups'] for p in g['members']]
 reading_ids={p['id'] for g in DATA['castGroups'] if g['label']=='〈Reading cast〉' for p in g['members']}
 day_html=''
@@ -76,6 +76,11 @@ if sale['url'] and sale['status']!='ended':
 else:
     ticket_primary=''
 ticket_actions=f'{ticket_primary}<a class="button secondary" href="#schedule">出演日程を確認する</a>'
+official_x = DATA['officialLinks']['x']
+x_link = f'<a class="text-link official-x-link" href="{esc(official_x["url"])}" {new_tab}><span class="en" aria-hidden="true">X</span> {esc(official_x["label"])}{new_tab_hint}</a>'
+flyer_html = ''
+for flyer in DATA['flyers']:
+    flyer_html += f'<figure class="flyer-card"><a class="flyer-image-link" href="{esc(flyer["large"])}" {new_tab} aria-label="フライヤー{esc(flyer["label"])}を拡大（新しいタブで開きます）"><img src="{esc(flyer["image"])}" srcset="{esc(flyer["thumbnail"])} 480w, {esc(flyer["image"])} 960w" sizes="(max-width:767px) calc(100vw - 40px), 380px" alt="舞台『{esc(DATA['title'])}』公式フライヤー{esc(flyer["label"])}" width="{flyer["width"]}" height="{flyer["height"]}" loading="lazy" decoding="async" fetchpriority="low"><span class="image-fallback" hidden>画像を読み込めませんでした。リンクから拡大画像を開けます。</span></a><figcaption><span>フライヤー{esc(flyer["label"])}</span><a class="text-link" href="{esc(flyer["large"])}" {new_tab}>{esc(flyer["label"])}を拡大<span aria-hidden="true"> ↗</span>{new_tab_hint}</a></figcaption></figure>'
 title=esc(DATA['title'])
 brand_title=title.replace('イエロー','<span class="title-yellow">イエロー</span>',1).replace('死','<span class="title-red">死</span>',1)
 page=f'''<!doctype html>
@@ -88,9 +93,10 @@ page=f'''<!doctype html>
 <section class="section schedule-section" id="schedule" aria-labelledby="schedule-heading"><div class="container">{heading('schedule','公演日程','02')}<div class="section-intro"><p>{period}</p><p class="section-note">全{total}ステージ / 開演時刻</p></div><p class="schedule-cast-note">Wキャスト・Reading castの出演者を各公演に表示しています。</p><div class="schedule-grid">{day_html}</div><div class="section-action"><a class="button secondary" href="#ticket">料金・特典を見る</a></div></div></section>
 <section class="section ticket-section" id="ticket" aria-labelledby="ticket-heading"><div class="container">{heading('ticket','チケット','03')}<p class="ticket-notice">{esc(DATA['ticketNote'])}</p><div class="ticket-grid">{ticket_html}</div><p class="benefit-note">（ブロマイドの絵柄はS席特典と同じ）</p><div class="ticket-release"><span class="en">{sale_label}</span>{sale_details}</div><div class="ticket-action">{ticket_actions}</div></div></section>
 <section class="section cast-section" id="cast" aria-labelledby="cast-heading"><div class="container">{heading('cast','出演者','04')}{cast_html}</div></section>
-<section class="section access-section" id="access" aria-labelledby="access-heading"><div class="container">{heading('access','劇場・アクセス','05')}<div class="access-layout"><div><p class="venue-kicker">シアターグリーン</p><h3 class="venue-title en">{venue}</h3><p class="address">{esc(DATA['access']['postal'])}<br>{esc(DATA['access']['address'])}</p></div><div class="access-directions"><ul>{''.join('<li>'+esc(t)+'</li>' for t in DATA['access']['routes'])}</ul><div class="access-links"><a class="button primary" href="{esc(DATA['access']['mapUrl'])}" {new_tab}>Google マップで開く{new_tab_hint}</a><a class="text-link" href="{esc(DATA['access']['officialUrl'])}" {new_tab}>劇場公式アクセス案内{new_tab_hint}</a></div></div></div></div></section>
-<section class="section staff-section" id="staff" aria-labelledby="staff-heading"><div class="container">{heading('staff','スタッフ','06')}<dl class="staff-list">{staff}</dl></div></section></main>
-<footer class="site-footer"><div class="container footer-inner"><div><p class="en footer-series">Soft Boiled Theater-16</p><p class="footer-title">『{brand_title}』</p></div><div class="footer-actions">{cta('footer','チケット情報')}<a class="text-link" href="#top">ページ先頭へ</a></div></div></footer>
+<section class="section flyer-section" id="flyer" aria-labelledby="flyer-heading"><div class="container">{heading('flyer','フライヤー','05')}<div class="flyer-intro"><p>画像を選ぶと拡大してご覧いただけます。</p>{x_link}</div><div class="flyer-grid">{flyer_html}</div></div></section>
+<section class="section access-section" id="access" aria-labelledby="access-heading"><div class="container">{heading('access','劇場・アクセス','06')}<div class="access-layout"><div><p class="venue-kicker">シアターグリーン</p><h3 class="venue-title en">{venue}</h3><p class="address">{esc(DATA['access']['postal'])}<br>{esc(DATA['access']['address'])}</p></div><div class="access-directions"><ul>{''.join('<li>'+esc(t)+'</li>' for t in DATA['access']['routes'])}</ul><div class="access-links"><a class="button primary" href="{esc(DATA['access']['mapUrl'])}" {new_tab}>Google マップで開く{new_tab_hint}</a><a class="text-link" href="{esc(DATA['access']['officialUrl'])}" {new_tab}>劇場公式アクセス案内{new_tab_hint}</a></div></div></div></div></section>
+<section class="section staff-section" id="staff" aria-labelledby="staff-heading"><div class="container">{heading('staff','スタッフ','07')}<dl class="staff-list">{staff}</dl></div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><div><p class="en footer-series">Soft Boiled Theater-16</p><p class="footer-title">『{brand_title}』</p>{x_link}</div><div class="footer-actions">{cta('footer','チケット情報')}<a class="text-link" href="#top">ページ先頭へ</a></div></div></footer>
 <nav class="mobile-sticky" aria-label="公演情報へのクイックアクセス"><a href="#schedule">公演日程</a>{cta('sticky','チケット情報')}</nav></body></html>'''
 (ROOT/'index.html').write_text(page,encoding='utf-8')
 print('Built index.html from performance.json')

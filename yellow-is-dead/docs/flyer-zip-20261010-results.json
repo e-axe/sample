@@ -1,0 +1,190 @@
+{
+  "browser": "153.0.8010.0",
+  "deviceScaleFactor": 2,
+  "rows": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "header": [
+        {
+          "class": "brand",
+          "x": 16,
+          "y": 11.921875,
+          "width": 148.359375,
+          "height": 36.140625,
+          "right": 164.359375,
+          "bottom": 48.0625
+        },
+        {
+          "class": "mobile-menu",
+          "x": 326,
+          "y": 4,
+          "width": 48,
+          "height": 52,
+          "right": 374,
+          "bottom": 56
+        }
+      ],
+      "flyerGrid": "350px",
+      "images": [
+        {
+          "file": "yellow-is-dead-flyer-front-960.webp",
+          "naturalWidth": 349,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "x": 21,
+          "y": 24.015625,
+          "width": 348,
+          "height": 492.265625,
+          "right": 369,
+          "bottom": 516.28125
+        },
+        {
+          "file": "yellow-is-dead-flyer-back-960.webp",
+          "naturalWidth": 349,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "x": 21,
+          "y": 598.46875,
+          "width": 348,
+          "height": 488.28125,
+          "right": 369,
+          "bottom": 1086.75
+        }
+      ],
+      "links": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-front-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-front-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-back-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-back-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "highResolutionLoaded": false,
+      "detailPopup": "assets/yellow-is-dead-flyer-front-1920.webp",
+      "flyerMenuWorks": true
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "header": [
+        {
+          "class": "brand",
+          "x": 60,
+          "y": 14.609375,
+          "width": 173.078125,
+          "height": 42.78125,
+          "right": 233.078125,
+          "bottom": 57.390625
+        },
+        {
+          "class": "desktop-nav",
+          "x": 881,
+          "y": 0.703125,
+          "width": 345,
+          "height": 70.59375,
+          "right": 1226,
+          "bottom": 71.296875
+        },
+        {
+          "class": "button primary header-ticket",
+          "x": 1250,
+          "y": 14,
+          "width": 130,
+          "height": 44,
+          "right": 1380,
+          "bottom": 58
+        }
+      ],
+      "flyerGrid": "380px 380px",
+      "images": [
+        {
+          "file": "yellow-is-dead-flyer-front-960.webp",
+          "naturalWidth": 380,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "x": 325,
+          "y": 284.609375,
+          "width": 378,
+          "height": 534.703125,
+          "right": 703,
+          "bottom": 819.3125
+        },
+        {
+          "file": "yellow-is-dead-flyer-back-960.webp",
+          "naturalWidth": 380,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "x": 737,
+          "y": 284.609375,
+          "width": 378,
+          "height": 530.375,
+          "right": 1115,
+          "bottom": 814.984375
+        }
+      ],
+      "links": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-front-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-front-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-back-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "assets/yellow-is-dead-flyer-back-1920.webp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "highResolutionLoaded": false
+    }
+  ],
+  "errors": []
+}

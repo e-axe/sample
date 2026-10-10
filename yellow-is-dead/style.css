@@ -89,3 +89,21 @@ body:has(.mobile-menu[open]) .mobile-sticky{visibility:hidden}
 .footer-title{color:var(--paper);font-weight:800;line-height:1.6}
 .footer-title .title-yellow{-webkit-text-stroke:0}
 .footer-title .title-red{color:#ed6269}
+
+/* Official print artwork: uncropped, deferred previews and on-demand detail. */
+.flyer-section{background:#fff}
+.flyer-intro{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;margin-bottom:28px;flex-wrap:wrap}
+.flyer-intro p{font-size:15px;color:var(--muted)}
+.official-x-link{display:inline-flex;align-items:center;gap:8px;line-height:1.6}
+.official-x-link .en{font-size:22px}
+.flyer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,380px));justify-content:center;align-items:start;gap:32px}
+.flyer-card{min-width:0}
+.flyer-image-link{display:block;border:1px solid var(--line);background:var(--paper);position:relative}
+.flyer-image-link img{width:100%;height:auto}
+.flyer-image-link:hover{border-color:var(--red)}
+.flyer-image-link .image-fallback{position:absolute;inset:0;align-content:center;text-align:center;padding:24px;font-size:14px;background:var(--paper)}
+.flyer-card figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px;font-size:14px}
+.flyer-card figcaption>span{font-weight:800}
+.site-footer .official-x-link{border-color:#777;margin-top:12px}
+@media(min-width:1080px){.desktop-nav{gap:18px}.desktop-nav a{font-size:17px}}
+@media(max-width:767px){.flyer-intro{display:block;margin-bottom:24px}.flyer-intro .official-x-link{margin-top:12px}.flyer-grid{grid-template-columns:minmax(0,380px);gap:28px}.flyer-card figcaption{font-size:13px}}

@@ -39,3 +39,12 @@
 - Noto Sans JP：Google Fonts公式リポジトリ ofl/notosansjp/NotoSansJP[wght].ttf。必要字形をサブセット化、内部名YID Gothic。
 - Anton：Google Fonts公式リポジトリ ofl/anton/Anton-Regular.ttf。ASCIIをサブセット化、内部名YID Condensed。
 - ライセンスはfonts内のOFL.txt。正字と400/800のウェイトを確認。新規文言の字形追加時は再出力して検証する。
+
+## 2026-10-10 追加フライヤー
+
+| 元ファイル | 用途 | 配信ファイル | 処理 |
+| --- | --- | --- | --- |
+| yellow-is-dead_omoteA4.jpg（2894×4093px、7,707,905 bytes） | FLYER表面 | yellow-is-dead-flyer-front-480/960/1600.webp | sRGB変換、比率維持の縮小、WebP可逆圧縮 |
+| yellow-is-dead_uraA4.jpg（3386×4750px、10,518,649 bytes） | FLYER裏面 | yellow-is-dead-flyer-back-480/960/1600.webp | 比率維持の縮小、WebP可逆圧縮 |
+
+2026-10-10にユーザーがプロジェクトへ提供した正式素材を使用。絵柄・文字・全体を保持し、切り出し・描き直しなし。画像の微小な比率差は元画像に由来するため、高さを固定して揃えずそのまま表示。表裏のaltは公演名・公式フライヤー・面を説明。印刷用原画像は配信物に含めない。詳細な寸法・容量・縮小後画素一致は flyer-assets-20261010.json に記録。
