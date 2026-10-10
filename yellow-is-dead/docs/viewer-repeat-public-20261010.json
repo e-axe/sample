@@ -1,0 +1,310 @@
+{
+  "browser": "153.0.8010.0",
+  "deviceScaleFactor": 1,
+  "sourceCommit": "8c525ee573757a56701acd823f81f387cf40c765",
+  "rows": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "grid": "412px 412px",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-front-480.webp",
+          "width": 376,
+          "height": 531.875,
+          "visibility": "visible"
+        },
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-back-480.webp",
+          "width": 376,
+          "height": 527.171875,
+          "visibility": "visible"
+        }
+      ],
+      "highResolutionBeforeOpen": 0,
+      "x": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "repeatChecks": [
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        }
+      ],
+      "restoredScroll": {
+        "actual": 7605,
+        "expected": 7605
+      },
+      "samePageViewer": true,
+      "zoomSwitchClose": true
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "grid": "301px",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-front-480.webp",
+          "width": 269,
+          "height": 380.515625,
+          "visibility": "visible"
+        },
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-back-480.webp",
+          "width": 269,
+          "height": 377.15625,
+          "visibility": "visible"
+        }
+      ],
+      "highResolutionBeforeOpen": 0,
+      "x": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "repeatChecks": [
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        },
+        {
+          "size": 0,
+          "position": 0
+        }
+      ],
+      "restoredScroll": {
+        "actual": 8635,
+        "expected": 8635
+      },
+      "menu": true,
+      "samePageViewer": true,
+      "zoomSwitchClose": true
+    }
+  ],
+  "errors": [],
+  "browserTlsVerification": "managed proxy CA exception; byte verification uses normal TLS"
+}
