@@ -1,0 +1,114 @@
+{
+  "browser": "153.0.8010.0",
+  "deviceScaleFactor": 2,
+  "sourceCommit": "a0e0b863878dda5da55f15b1620a898b0df128ff",
+  "rows": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "grid": "412px 412px",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-front-960.webp",
+          "width": 376,
+          "height": 531.875,
+          "visibility": "visible"
+        },
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-back-960.webp",
+          "width": 376,
+          "height": 527.5625,
+          "visibility": "visible"
+        }
+      ],
+      "highResolutionBeforeOpen": 0,
+      "x": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "restoredScroll": {
+        "actual": 7605,
+        "expected": 7605
+      },
+      "samePageViewer": true,
+      "zoomSwitchClose": true
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "grid": "316px",
+      "fonts": [
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Gothic",
+          "status": "loaded"
+        },
+        {
+          "family": "YID Condensed",
+          "status": "loaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-front-960.webp",
+          "width": 284,
+          "height": 401.734375,
+          "visibility": "visible"
+        },
+        {
+          "src": "https://e-axe.github.io/sample/yellow-is-dead/assets/yellow-is-dead-flyer-back-960.webp",
+          "width": 284,
+          "height": 398.484375,
+          "visibility": "visible"
+        }
+      ],
+      "highResolutionBeforeOpen": 0,
+      "x": [
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://x.com/sb_stage",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "restoredScroll": {
+        "actual": 8767,
+        "expected": 8767
+      },
+      "menu": true,
+      "samePageViewer": true,
+      "zoomSwitchClose": true
+    }
+  ],
+  "errors": [],
+  "browserTlsVerification": "managed proxy CA exception; byte verification uses normal TLS"
+}

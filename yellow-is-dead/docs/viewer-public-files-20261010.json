@@ -1,0 +1,20 @@
+[
+  {
+    "file": "index.html",
+    "bytes": 26275,
+    "matches": true,
+    "sha256": "7ada1a490f021f05798039dbf65078001e5d3184583e629010308c2c63da0a9c"
+  },
+  {
+    "file": "style.css",
+    "bytes": 34485,
+    "matches": true,
+    "sha256": "86bad281c0ff64cfd91075bc6841554a3385bdbe79b173f0b90d5e3fb8ae3340"
+  },
+  {
+    "file": "app.js",
+    "bytes": 9007,
+    "matches": true,
+    "sha256": "d3ee4aa8576ba5fdcd779be3e06bfd1f9aed8b4a3533ffe5e3366f283d62fdec"
+  }
+]
