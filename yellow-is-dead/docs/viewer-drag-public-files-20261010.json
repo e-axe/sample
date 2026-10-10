@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "164b98fef9337d337f3cd1b6984bff2af4594016",
+  "normalTlsVerification": true,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 26449,
+      "matches": true,
+      "sha256": "0251402fcc817f8373b088abbcc82fc85f921f5a8af523725c2f77390f61a2c8"
+    },
+    {
+      "file": "style.css",
+      "url": "https://e-axe.github.io/sample/yellow-is-dead/style.css?v=0f4b06ad05a3",
+      "bytes": 34884,
+      "matches": true,
+      "sha256": "0f4b06ad05a3c38be7e11b38876eddd739f908f45456763477fe8f5046e7bbba"
+    },
+    {
+      "file": "app.js",
+      "url": "https://e-axe.github.io/sample/yellow-is-dead/app.js?v=2c240d3f5e75",
+      "bytes": 11686,
+      "matches": true,
+      "sha256": "2c240d3f5e756698e3bc83d37caef5e8c4ab5305247533ed41c4baf1f459f5ff"
+    }
+  ]
+}
