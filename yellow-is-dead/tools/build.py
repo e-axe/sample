@@ -1,5 +1,5 @@
 """Build the static preview from the public performance-data derivative."""
-import json, html, pathlib, datetime, re, hashlib
+import json, html, pathlib, datetime, re, hashlib, os
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'performance.json').read_text(encoding='utf-8'))
@@ -91,9 +91,43 @@ for number, flyer in enumerate(DATA['flyers'], 1):
 flyer_tabs = ''.join(f'<button type="button" class="viewer-side" data-side="{esc(f["side"])}" aria-pressed="false">{esc(f["label"])}</button>' for f in DATA['flyers'])
 flyer_viewer = f'''<dialog class="flyer-viewer" id="flyer-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-help"><div class="flyer-viewer-panel"><header class="viewer-header"><div class="viewer-title"><span class="en" aria-hidden="true">OFFICIAL FLYER</span><h2 id="viewer-title">フライヤー</h2></div><div class="viewer-sides" role="group" aria-label="フライヤーの面を選択">{flyer_tabs}</div><button class="viewer-close" type="button" autofocus aria-label="フライヤーを閉じる"><span class="close-icon" aria-hidden="true"></span></button></header><div class="viewer-stage" tabindex="0" aria-label="フライヤー画像。拡大後はスクロールできます。"><div class="viewer-canvas"><img class="viewer-image" alt="" decoding="async" draggable="false" hidden></div><div class="viewer-message"><p role="status"></p><button type="button" class="viewer-retry" hidden>再読み込み</button></div></div><footer class="viewer-footer"><p id="viewer-help"><span class="viewer-mouse-help">拡大中はドラッグで移動できます。</span><span class="viewer-touch-help">拡大するとスクロールして細部を確認できます。</span></p><button class="viewer-zoom" type="button" aria-pressed="false" disabled><span class="expand-icon" aria-hidden="true"></span><span class="viewer-zoom-label">拡大する</span></button></footer></div></dialog>'''
 title=esc(DATA['title'])
+# Confirmed OGP artwork, 1200 x 630 JPG; same file is used on preview and production.
+# The preview stays noindex and uses the GitHub Pages absolute image URL.
+# For delivery, set YELLOW_IS_DEAD_ENV=production and YELLOW_IS_DEAD_PUBLIC_URL.
+site_url=os.environ.get('YELLOW_IS_DEAD_PUBLIC_URL','https://e-axe.github.io/sample/yellow-is-dead/').strip().rstrip('/')+'/'
+site_env=os.environ.get('YELLOW_IS_DEAD_ENV','preview').strip().lower()
+if site_env not in ('preview','production'):
+    raise ValueError('YELLOW_IS_DEAD_ENV must be preview or production')
+if not site_url.startswith(('https://','http://')):
+    raise ValueError('YELLOW_IS_DEAD_PUBLIC_URL must be an absolute HTTP(S) URL')
+if site_env=='production' and 'YELLOW_IS_DEAD_PUBLIC_URL' not in os.environ:
+    raise ValueError('Production requires an explicit YELLOW_IS_DEAD_PUBLIC_URL')
+robots='index,follow,max-image-preview:large' if site_env=='production' else 'noindex,nofollow,noarchive'
+page_title=f'舞台『{title}』｜Soft Boiled Theater-16'
+page_description=f'舞台『{title}』。{period}、{venue}にて全{total}ステージ。公演日程、チケット、出演者、あらすじのご案内。'
+og_image=site_url+'assets/yellow-is-dead-ogp.jpg'
+canonical=f'<link rel="canonical" href="{esc(site_url)}">' if site_env=='production' else ''
+social_meta=(
+    f'<meta property="og:type" content="website">'
+    f'<meta property="og:locale" content="ja_JP">'
+    f'<meta property="og:site_name" content="Soft Boiled Theater-16">'
+    f'<meta property="og:title" content="{page_title}">'
+    f'<meta property="og:description" content="{page_description}">'
+    f'<meta property="og:url" content="{esc(site_url)}">'
+    f'<meta property="og:image" content="{esc(og_image)}">'
+    f'<meta property="og:image:type" content="image/jpeg">'
+    f'<meta property="og:image:width" content="1200">'
+    f'<meta property="og:image:height" content="630">'
+    f'<meta property="og:image:alt" content="舞台『{title}』の公式OGPビジュアル。コインランドリーの洗濯機と黄色いヒーローマスク">'
+    f'<meta name="twitter:card" content="summary_large_image">'
+    f'<meta name="twitter:title" content="{page_title}">'
+    f'<meta name="twitter:description" content="{page_description}">'
+    f'<meta name="twitter:image" content="{esc(og_image)}">'
+    f'<meta name="twitter:image:alt" content="舞台『{title}』の公式OGPビジュアル">'
+)
 brand_title=title.replace('イエロー','<span class="title-yellow">イエロー</span>',1).replace('死','<span class="title-red">死</span>',1)
 page=f'''<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#FFD928"><title>舞台『{title}』｜Soft Boiled Theater-16</title><meta name="description" content="舞台『{title}』。{period}、{venue}にて全{total}ステージ。公演日程、チケット、出演者、あらすじのご案内。"><link rel="icon" type="image/svg+xml" href="assets/yellow-is-dead-favicon.svg"><link rel="preload" as="image" href="assets/yellow-is-dead-hero-e-suit-mobile-800.webp" imagesrcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" imagesizes="100vw" media="(max-width:767px)" type="image/webp" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="fonts/yellow-is-dead-gothic-800.woff2" crossorigin><link rel="stylesheet" href="style.css?v={asset_version("style.css")}"><script src="app.js?v={asset_version("app.js")}" defer></script></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="{robots}"><meta name="theme-color" content="#FFD928"><title>舞台『{title}』｜Soft Boiled Theater-16</title><meta name="description" content="{page_description}">{social_meta}{canonical}<link rel="icon" type="image/svg+xml" href="assets/yellow-is-dead-favicon.svg"><link rel="preload" as="image" href="assets/yellow-is-dead-hero-e-suit-mobile-800.webp" imagesrcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" imagesizes="100vw" media="(max-width:767px)" type="image/webp" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="fonts/yellow-is-dead-gothic-800.woff2" crossorigin><link rel="stylesheet" href="style.css?v={asset_version("style.css")}"><script src="app.js?v={asset_version("app.js")}" defer></script></head>
 <body><a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="#top" aria-label="{title}のページ先頭"><span class="brand-title">{brand_title}</span><span class="brand-series en">Soft Boiled Theater-16</span></a><nav class="desktop-nav" aria-label="メインメニュー">{nav}</nav>{cta('header','チケット情報','primary header-ticket')}<details class="mobile-menu"><summary aria-label="メニューを開閉" aria-controls="mobile-navigation"><span class="menu-lines" aria-hidden="true"></span><span class="menu-caption">MENU</span></summary><nav id="mobile-navigation" aria-label="モバイルメニュー">{nav}</nav></details></div></header>
 <main id="main" tabindex="-1"><section class="hero" id="top" aria-label="公演概要"><picture class="hero-picture"><source media="(max-width:767px)" srcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" sizes="100vw"><img src="assets/yellow-is-dead-hero-e-suit-1536.webp" srcset="assets/yellow-is-dead-hero-e-suit-1536.webp 1536w, assets/yellow-is-dead-hero-e-suit-1920.webp 1920w" sizes="(min-width:1600px) 1215px, (min-width:1201px) 1080px, (min-width:1080px) 1005px, (min-width:960px) 960px, 100vw" alt="白いコインランドリーの作業台に残された、イエローのマスクと破れた黄色いスーツ" width="1536" height="1024" fetchpriority="high" decoding="async"></picture><div class="caution-tape" aria-hidden="true"><span class="en">CAUTION</span><strong class="en">Soft Boiled Theater-16</strong><span class="en">CAUTION</span></div><div class="hero-inner"><div class="hero-copy"><p class="hero-unit">クリエイティブユニット【ソフトボイルド】</p><p class="hero-series en">Soft Boiled Theater-16</p><h1><span class="sr-only">{title}</span><picture><source media="(max-width:767px)" srcset="assets/yellow-is-dead-logo-640.webp"><img class="official-logo" src="assets/yellow-is-dead-logo-800.webp" srcset="assets/yellow-is-dead-logo-640.webp 640w, assets/yellow-is-dead-logo-800.webp 800w, assets/yellow-is-dead-logo-1200.webp 1200w" sizes="(max-width:767px) calc(100vw - 40px), (min-width:1600px) 560px, 46vw" alt="" width="1200" height="750" fetchpriority="high"></picture></h1><div class="hero-date"><span class="en year">{year}</span><p class="en date-range"><span>{start_date}<small>{start_en}</small></span><span class="date-separator">—</span><span>{end_date}<small>{end_en}</small></span></p></div><p class="hero-venue en">{venue} <span class="jp">全{total}ステージ</span></p><p class="release-text">{release}</p><div class="hero-actions">{cta('hero','公演日程・チケット')}<a class="button secondary" href="#story">物語を読む</a></div></div></div></section>
