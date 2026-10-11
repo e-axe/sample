@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-11",
+  "baseCommit": "f01e102b1c359a6825e6a4a0a42963aee8a912f8",
+  "localReferences": 86,
+  "missingReferences": 0,
+  "heroAssets": [
+    {
+      "name": "yellow-is-dead-hero-e-suit-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 156452,
+      "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-1920.webp",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 191672,
+      "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-mobile-640.webp",
+      "width": 640,
+      "crop": {
+        "left": 384,
+        "top": 0,
+        "width": 1152,
+        "height": 1024
+      },
+      "height": 569,
+      "bytes": 63374,
+      "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-mobile-800.webp",
+      "width": 800,
+      "crop": {
+        "left": 384,
+        "top": 0,
+        "width": 1152,
+        "height": 1024
+      },
+      "height": 711,
+      "bytes": 89954,
+      "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f"
+    }
+  ],
+  "publicInformationUnchanged": true,
+  "otherPublicHtmlUnchanged": true,
+  "preloadMatchesPicture": true,
+  "cssContentHashMatches": true,
+  "conservativeInitialBytes": 453191,
+  "jsGzipBytes": 3424,
+  "zip": {
+    "files": 90,
+    "bytes": 15899235,
+    "sha256": "9c2c4c1e443612c8b7807f6854a22e20ff965d924a4262201fc79595423cc9db",
+    "allEntriesMatchSource": true,
+    "oldHeroIncluded": false
+  },
+  "cropSimulationWidths": [
+    320,
+    390,
+    600,
+    767,
+    768,
+    1080,
+    1440,
+    1920
+  ],
+  "browserQa": "not available: control-browser skill unavailable in managed Linux; no browser or real-device verification",
+  "lcpCls": "not measured for this revision"
+}

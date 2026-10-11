@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-11",
+  "approved": "E案・スーツ残骸追加版",
+  "source": {
+    "width": 1536,
+    "height": 1024,
+    "sha256": "ede3117086660baab3b3d0055c0db04b660fc258d5d6b769befcef3175d24ff4"
+  },
+  "processing": "sRGB, Lanczos3, WebP quality 88 / effort 6, metadata removed; 1920px is a non-generative enlargement",
+  "variants": [
+    {
+      "name": "yellow-is-dead-hero-e-suit-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 156452,
+      "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-1920.webp",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 191672,
+      "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-mobile-640.webp",
+      "width": 640,
+      "crop": {
+        "left": 384,
+        "top": 0,
+        "width": 1152,
+        "height": 1024
+      },
+      "height": 569,
+      "bytes": 63374,
+      "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768"
+    },
+    {
+      "name": "yellow-is-dead-hero-e-suit-mobile-800.webp",
+      "width": 800,
+      "crop": {
+        "left": 384,
+        "top": 0,
+        "width": 1152,
+        "height": 1024
+      },
+      "height": 711,
+      "bytes": 89954,
+      "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f"
+    }
+  ]
+}

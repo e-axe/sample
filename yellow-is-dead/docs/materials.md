@@ -32,9 +32,9 @@
 ## 採用素材
 
 - 公式ロゴ：yellow-is-dead_logo_B.png（Drive ID 1jnQKnVyIfqTzZnSQP84rzIMc4NrfYr4l、2026-09-28版）。形・配色・比率を保持して640/800/1200px幅の透過WebPへ縮小（可逆圧縮）。
-- HERO背景：公式フライヤーyellow-is-dead_omoteA4.jpg（2026-10-05版）とクリーン設定画を参照。文字なしLP用の生成画像。生成条件はimage-generation.md。
+- HERO背景：2026-10-11に採用されたE案・スーツ残骸追加版。白いコインランドリーの作業台、イエローのマスク、破れた黄色いスーツ。生成記録はimage-generation.md、配信画像の寸法・容量・切り出し位置はhero-assets-20261011.json。
 - STORY床：yellow-is-dead_SNS_4.jpg（Drive ID 1SdDswSMdZMCJShZjzUFDaKE297kiFxB6、2026-10-01版）。床の血痕を残す切り出し＋WebP化。装飾用途、空alt。
-- HERO alt：白い洗濯機の中に残された、血の付いたイエローのマスク。非公開プロットの情報は含めない。
+- HERO alt：白いコインランドリーの作業台に残された、イエローのマスクと破れた黄色いスーツ。非公開プロットの情報は含めない。
 - CASTは2026-10-10に受領した提供写真18枚を掲載済み。隣接氏名を読上げるため、写真のaltは空、焦点位置は人物ごとに確認。
 
 ## フォント

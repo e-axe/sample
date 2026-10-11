@@ -1,5 +1,7 @@
 # LP用背景の生成記録
 
+現行採用：2026-10-11の「E案・スーツ残骸追加版」。以下の2026-10-09記録は旧HEROの履歴。
+
 2026-10-09。内蔵 imagegen を使用。公式フライヤーとクリーン設定画を参照し、文字なしの白い洗濯機背景を生成。原生成画像1536×1024px。造形と構図を目視確認して配信用WebPへ変換。
 
 採用ファイル：`assets/yellow-is-dead-hero-1536.webp` / `yellow-is-dead-hero-1920.webp` / `yellow-is-dead-hero-mobile-640.webp` / `yellow-is-dead-hero-mobile-800.webp`。スマホ版は右側の洗濯機を切り出したもの。原生成画像は配信物に含めない。
@@ -15,3 +17,11 @@ Use case: precise-object-edit / compositing. Asset type: photorealistic theater 
 ## 2026-10-09 UIレビュー後の採用確認
 
 途中で生成したコインランドリー全景案はユーザーの指示により不採用。本記録の既存採用ファイル4点へ復帰し、直前の公開版とバイト単位で一致することをGit blob SHAで確認。PC/スマホの配置も復帰。新規案は公開リポジトリ・納品ZIPに含めない。スマホHEROのsrcsetに一致するレスポンシブpreloadを追加し、初期表示を優先する。
+
+## 2026-10-11 E案・スーツ残骸追加版の採用
+
+クライアントから刺激が強いとの指摘を受け、白いランドリーとイエローのマスクの世界観を残した複数モックを提示。E案の作業台構図へ黄色と黒の破れたスーツ布を追加した画像を、ユーザーが明示採用しサイト実装を依頼した。直接的な血、人体は含めない。マスクの黄・黒・銀、額の琥珀色パーツ、洗濯機列と白タイルを保持。公式ロゴ・規制テープは別素材/HTMLで置く。
+
+採用原画は内蔵imagegenで生成した1536×1024px。今回の実装では再生成しない。PC1536/1920pxとスマホ640/800pxを原画から出力。スマホは左384pxを除く1152×1024pxの切り出し。WebP品質88、effort 6、sRGB、メタデータ除去。1920pxは通常の補間拡大。原画ハッシュと派生ファイルはhero-assets-20261011.jsonへ記録。原生成画像は配信物に含めない。
+
+現行配信ファイル：`yellow-is-dead-hero-e-suit-1536.webp` / `yellow-is-dead-hero-e-suit-1920.webp` / `yellow-is-dead-hero-e-suit-mobile-640.webp` / `yellow-is-dead-hero-e-suit-mobile-800.webp`。A〜Fの他モックと旧HEROは今回のHTMLと配置用ZIPから参照しない。

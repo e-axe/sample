@@ -310,3 +310,8 @@ P02/P06/R05：追加ライブラリなし。app.jsは9339→11686 bytes、gzip27
 GitHub Pagesのデプロイ成功を確認。公開URL https://e-axe.github.io/sample/yellow-is-dead/ で390/767/1079/1440pxの写真18枚・順序・メニュー・JPEG代替・読込失敗時表示・例外/必須素材404なしを確認した。公開HTMLとZIPは検証済みローカルファイルとSHA-256一致。公開結果は cast-public-20261010.json と cast-public-files-20261010.json。
 
 原画像を保持し、標準WebP合計約1MB（約92.9%削減）。ページ先頭でCAST画像要求0件。元幅500px未満の4枚は元素材以上の細部を補完しない。実機iOS/Android、Firefox/Safari、最新版公演情報との全面再照合、本番クライアントサーバーは今回未検証。全項目合格とは扱わず、CASTと関連配信の変更範囲の検証記録とする。
+
+
+## 2026-10-11 採用HERO：E案・スーツ残骸追加版
+
+ユーザーの明示採用を反映。対象・容量・静的参照・配置ZIPの照合結果と今回の未検証範囲は `hero-implementation-20261011.md` / `hero-implementation-20261011.json` に記録。以前のブラウザ表示・速度測定を今回の達成値として扱わない。公演情報・JS・他セクションの内容は変更なし。
