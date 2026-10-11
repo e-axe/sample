@@ -1,0 +1,3211 @@
+{
+  "createdAt": "2026-10-11T21:40:12.707578+09:00",
+  "repository": "e-axe/sample",
+  "sourceCommit": "dc166cfc9e057b70e66cf18e668696a6705bc111",
+  "sourceData": {
+    "filename": "イエローが死んだ_公演情報最新版.md",
+    "updated": "2026-10-10",
+    "performanceProvided": "2026-10-09",
+    "accessVerified": "2026-10-09",
+    "version": "2026-10-10-official-x-added",
+    "libraryVersion": 4
+  },
+  "sale": {
+    "status": "scheduled",
+    "url": "http://confetti-web.com/softboiled16",
+    "vendor": "カンフェティ",
+    "startsAt": "2026-10-13T22:00:00+09:00",
+    "endsAt": "2026-11-23T21:00:00+09:00",
+    "startLabel": "2026年10月13日（火）22:00",
+    "endLabel": "11月23日（祝・月）21:00",
+    "method": "先着順",
+    "releaseText": "10月13日（火）22:00〜 カンフェティにて販売開始"
+  },
+  "builds": [
+    {
+      "protocol": "https",
+      "publicURL": "https://yellow-is-dead.softboiled.net/",
+      "metadata": "passed",
+      "localReferences": "passed",
+      "crcAndByteEquality": "passed",
+      "extractVerification": "passed",
+      "file": "yellow-is-dead_本番配置用_HTTPS.zip",
+      "bytes": 16140090,
+      "sha256": "d0d156abaa1df46afb90de5bf302c2514da59021eb5b65c1526717dda8d442c2",
+      "files": 90,
+      "manifest": [
+        {
+          "path": "app.js",
+          "bytes": 15497,
+          "sha256": "1378eb352fe4d95e69e22afdd4b410dc759ce1008f67db283a3d954fd5dcebc1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-320.webp",
+          "bytes": 16288,
+          "sha256": "e40e3d1ef374c1fcc244bf264481ed4777f09e9cced93dc5fa4717b3ed809581"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-640.jpg",
+          "bytes": 73769,
+          "sha256": "0cc59fcc24927855a5bf4f80077be892083f3239f8fd7a25a396874adf49c6c1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-640.webp",
+          "bytes": 44466,
+          "sha256": "c1348ea6e78ebfa205a5c7ba955fdff2ff0bf8c595efa4461b2a49a2a75136e1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-960.webp",
+          "bytes": 82300,
+          "sha256": "0f8a42948ba831a30da92eb11bc94ff8bb894370bc93b52dd2ae9e0adeebc291"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-320.webp",
+          "bytes": 34772,
+          "sha256": "41e5e15bdae1a133decaccac3be2f0c852b32add45ecda0b6f7aee7373ff92f6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-380.jpg",
+          "bytes": 54867,
+          "sha256": "d07ca0d17865281ee6bcc1a214f9ad0f08abf0b144d1a62c1803178515de4f3a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-380.webp",
+          "bytes": 50452,
+          "sha256": "71874cdecbef888cda72070a16cb1b12b093e9a9098b693a67faec0263e033ca"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-320.webp",
+          "bytes": 12314,
+          "sha256": "8765e60bfa427fb715cea8263531ec3fc9c85a7d5916e842774605e39d55be2a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-640.jpg",
+          "bytes": 66332,
+          "sha256": "0cbd7a755e5a0590c6d0709b20c4cd6af3d898caa27939794d95fcc9e3f562e6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-640.webp",
+          "bytes": 40258,
+          "sha256": "13e08eea3add33434e7cd142a51750ec309c119159b7e4f3be26410ef5471569"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-960.webp",
+          "bytes": 81770,
+          "sha256": "7a4d2f29517d40ea3043a23fe11f7d811ea44ebb4d13ba9613c502a9325dfda0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-320.webp",
+          "bytes": 16282,
+          "sha256": "4ca85ed5aaa07b16fcef11429987e5c8930af2a041cdb1b798cad1e205baf1fc"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-474.jpg",
+          "bytes": 46321,
+          "sha256": "6392506de3afd1765c4d6c58f41eefea2861c2102476dcabf0697663dd7aefb1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-474.webp",
+          "bytes": 31386,
+          "sha256": "402857e788d86ff9d808439fec043b6eec73c3c4a53a1442401162ab48f75d77"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-320.webp",
+          "bytes": 22580,
+          "sha256": "c52bd4ad380b1f5e91c832db1406c323fa24236563b93a9c8b51d0a82419966b"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-640.jpg",
+          "bytes": 104380,
+          "sha256": "33d5113eb41d9390c4014482e45a691d3836fad1feb7e2998f3b5925461f53a3"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-640.webp",
+          "bytes": 86858,
+          "sha256": "d019e68bbdd1c90e1aef515ef550ce3cbbaa2251700c76d64bb9e688e241a794"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-320.webp",
+          "bytes": 16892,
+          "sha256": "69d8eeabec4f6bb763f9a3c96d7e735cc0070317f076f1ee38f81766f5fd2064"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-397.jpg",
+          "bytes": 34757,
+          "sha256": "8f201f03d90006a66aaebaa0095ac9b9ec10e5cc4a965a7d390f7b0dc7cb1dc4"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-397.webp",
+          "bytes": 23032,
+          "sha256": "498c7cccd3a6f9c5f40d5de55a7cd33f7bccdae5a51a5b58a808a2993fad5c60"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-320.webp",
+          "bytes": 15334,
+          "sha256": "665adaf092d1953dd39f016987ab370f5453e9eeb54be29c3a95ea4056144aa0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-640.jpg",
+          "bytes": 77584,
+          "sha256": "9c433b3798c5275f2ff6fb879250d00b55b282eb6e948dd411966597d2740adb"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-640.webp",
+          "bytes": 47516,
+          "sha256": "7af8520b4d399f0dc31a089c9228ba6de4a16e32bac7b25ec32e0fa3f80235e3"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-960.webp",
+          "bytes": 87860,
+          "sha256": "01b6d5f542c8bf180acbd6f42d2262c49e54809892647c1402dae94349625c01"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-320.webp",
+          "bytes": 15754,
+          "sha256": "534412cfea405dacb3420a43427ad6182f1cfa3c725a424793bbdeed75affbc0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-640.jpg",
+          "bytes": 74234,
+          "sha256": "dcfb6e6f34667266f43a512c69b9e5370763b82a1df0b3161bce7d420ca180b4"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-640.webp",
+          "bytes": 47050,
+          "sha256": "cd69633c82e2aaf646329917538f9d6ad28be218adcb44f6b26438c0c0815360"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-768.webp",
+          "bytes": 62932,
+          "sha256": "74fcc5df2ebba68c0678dd176da3441b031636ea225a1973ab84a7c603db518e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-320.webp",
+          "bytes": 16438,
+          "sha256": "f222e629c1d113ff0f2949e841fc0fe9974911abb6c3f83a8b74f6ab23139b60"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-640.jpg",
+          "bytes": 81486,
+          "sha256": "35370c8f95166f40ee596265e15588ce46dbc0709b97bc98c8a65ae8fa8918a8"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-640.webp",
+          "bytes": 60106,
+          "sha256": "951702d9f8ea7a23ec934017ab3f697469e82d4f858f980f6dae3bcdfc2d9ec6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-960.webp",
+          "bytes": 134180,
+          "sha256": "e0133bec9bcae350791aaecc2ca4203f05c0ea60c88d3769130342e5030f7040"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-320.webp",
+          "bytes": 16296,
+          "sha256": "b87814bee20b06b4b47ca17b43ef4f83b7e4f73c4e3580ae2052a7d7203343c7"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-640.jpg",
+          "bytes": 74278,
+          "sha256": "d4920d8fa0adb2ee84380dcb7e75136d21da6747b447c048263cc53c2dee45e0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-640.webp",
+          "bytes": 55952,
+          "sha256": "7874dbf2cda3ceb4366c857862030cac7058a95971adb6f6178c4113b7a24208"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-960.webp",
+          "bytes": 96336,
+          "sha256": "943c184676fb2ee908c19fb4a7a30ad0bb223579e6da4153072858f5fdc646df"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-320.webp",
+          "bytes": 28226,
+          "sha256": "00e804914c8314a048aace87145aec524f50252aac6809cb39b937a9804c79a6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-602.jpg",
+          "bytes": 101224,
+          "sha256": "6b60f46d756b53111f1d60851656651b3c0a3745905aed91104bf7f828de168c"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-602.webp",
+          "bytes": 89190,
+          "sha256": "248c050514ccae5c5637560e930fc55e1af866002b3d24718a55305691131b50"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-320.webp",
+          "bytes": 16166,
+          "sha256": "39bcc6ea46124b49baa476891bcec2dd85e5cf73907a5503c9bb2bd7f18ab702"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-640.jpg",
+          "bytes": 76166,
+          "sha256": "d64dd14ad71de79488d23f158640612db430bf752e11c5ba4f8e42e67967bd9e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-640.webp",
+          "bytes": 46878,
+          "sha256": "b3c7b76bed0b1c703c1d71cf0ef3efc4d5c9bc848518cb0c9457e2b326ec3722"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-960.webp",
+          "bytes": 93110,
+          "sha256": "4cc1546b2e44842bf9c7488e1c98612817c34e4a155d2c6d2fa71911acdfe84b"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-320.webp",
+          "bytes": 23918,
+          "sha256": "30518bb3e388665e0236ce6f74152583764f57997c1c8b2fc02d344d7aa11998"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-419.jpg",
+          "bytes": 49173,
+          "sha256": "10d2b661ab4acb10f50e9a6489b04ad20f0ec4e38c884368c453a9c6f5419be0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-419.webp",
+          "bytes": 36080,
+          "sha256": "6913406ba5b5ca1b6060b6f8347b7636ef8e8fc87be08e806f85495c0be71018"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-320.webp",
+          "bytes": 20568,
+          "sha256": "2738683df7991a32484c9e4f15a57fdb7b5426b86ac0b74d34d7859ebc4257ac"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-640.jpg",
+          "bytes": 100807,
+          "sha256": "bb015785a3a539af2b4c87f074d30a05df433cceba6ad1e51f2dc3dc7d714387"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-640.webp",
+          "bytes": 81308,
+          "sha256": "3c721423bb8e6baeea2eed6312b8da9573154c860177366831648380e021e37a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-749.webp",
+          "bytes": 111136,
+          "sha256": "b015d684b08faf9a0137aff97726f85c67f56c10853b27ecbed97b8d94f1da6f"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-320.webp",
+          "bytes": 15958,
+          "sha256": "bf44c7e2b8d7293946bc554d699c64ff83c5a001d6c265b6b607ae42b1acf21d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-640.jpg",
+          "bytes": 79417,
+          "sha256": "34cd64435d5a4d7a98901eadcc2d29822b2ec6c3ed4ec61d291148acceb54f3a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-640.webp",
+          "bytes": 56902,
+          "sha256": "d863bc604a42c0b9195c20f4a393e4ed54acbd2771c4efa8a03569d218295e29"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-960.webp",
+          "bytes": 107386,
+          "sha256": "9746fba28ae39549685c5d7878d8386cbd8455f9248116ac5119fe0350f288bc"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-320.webp",
+          "bytes": 16046,
+          "sha256": "cd88f6f8c61866a199ac758c9d728539659f113cec9d5ebdf60b95157a473273"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-640.jpg",
+          "bytes": 98103,
+          "sha256": "610e3480bca4f6e75941bf40bd031cc8b3e60d930d66a78636ea325794b53475"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-640.webp",
+          "bytes": 73874,
+          "sha256": "9982c83422ddfd3476e8ec0a24095186b8d80eedbc2002e28aae732bce03d88d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-960.webp",
+          "bytes": 197566,
+          "sha256": "00fc653e66c94f222325848fd26deb490ad7cef267398ec1c51a53ce6eefeaa6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-320.webp",
+          "bytes": 16592,
+          "sha256": "a5979abc2e88396dc235a5d2ee22b9ec273d8e643300665b5ecad11fc0ac6d37"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-640.jpg",
+          "bytes": 81011,
+          "sha256": "39b8e934c02437cd602b1c90c2765905476e44472784fa309da153a0cd507326"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-640.webp",
+          "bytes": 59862,
+          "sha256": "82e05dc3031f7426e935a4ac626906c43a60dc7f0beab38b1a9347761f20800d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-960.webp",
+          "bytes": 126892,
+          "sha256": "f849de48e4df58ec45d66e870b3695c3be20080423ac7212613ac35e872e9e29"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-320.webp",
+          "bytes": 20154,
+          "sha256": "9c688cf4fcf6c338c153fd07dc7adf93a6a8917baea8439be999036ca436337e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-640.jpg",
+          "bytes": 92537,
+          "sha256": "83f1dbc24656ca2dbb4fce4670a02bc2b2b9cfabc2c7841f9da74efd38437219"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-640.webp",
+          "bytes": 67722,
+          "sha256": "0904c67951350d45ec23d382e15d126e34c606e835f6ab70baac15ab73947c38"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-960.webp",
+          "bytes": 149824,
+          "sha256": "557854b16d4257dc10f22f481d941ca636218ce5cb2aed55acfd12cfe2eced9b"
+        },
+        {
+          "path": "assets/yellow-is-dead-favicon.svg",
+          "bytes": 303,
+          "sha256": "175ccabecc628300ee3c9c350bad211410765f5565b4ca3bf684d3a31be07b75"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-1600.webp",
+          "bytes": 3431788,
+          "sha256": "2418a7efd3ccf6071c861e43a7afd9cb39eacb628c51892a2ad285ed3ce33f26"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-480.webp",
+          "bytes": 382114,
+          "sha256": "ecfd35468b23336c3f0cbf93ae6653ea7b68d1807672f0369d97ec49d604f3ba"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-960.webp",
+          "bytes": 1372856,
+          "sha256": "f0fc433c21e5698a4b51334fdf3acc4882e03be4d475dd53bcb37e179868d6e6"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-1600.webp",
+          "bytes": 3750004,
+          "sha256": "ca7ecacc733ce67856b5667485acb8d729928d4dbbef4715bffcc50f696057bf"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-480.webp",
+          "bytes": 382904,
+          "sha256": "0e0eed7cf4da230b46addaefa45bf139f57c54e28667f354908c799a53a8a13f"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-960.webp",
+          "bytes": 1406460,
+          "sha256": "5600aede10c70318ae4663d1869c0133249df9ff7a959e9736c09654b60f962e"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-1536.webp",
+          "bytes": 156452,
+          "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-1920.webp",
+          "bytes": 191672,
+          "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+          "bytes": 63374,
+          "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-mobile-800.webp",
+          "bytes": 89954,
+          "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-1200.webp",
+          "bytes": 220806,
+          "sha256": "1415be21ea1661bbb9ec3321f0947b425b6fd9a1e117fd85ea025154f6761efd"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-640.webp",
+          "bytes": 94980,
+          "sha256": "7149b6aa8e95fdc9101c37023e40ec9407edb06b724aa33e3aeb489c9462f956"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-800.webp",
+          "bytes": 125364,
+          "sha256": "c63d053fa2554f645b815587d167c233bb4d55aca8a5a68ff897d492d8e3d9b3"
+        },
+        {
+          "path": "assets/yellow-is-dead-ogp.jpg",
+          "bytes": 240312,
+          "sha256": "ef4e8ee73080c2361c518f326ba365767c28baf18143fd583ff940e227d3feb1"
+        },
+        {
+          "path": "assets/yellow-is-dead-story-floor.webp",
+          "bytes": 58880,
+          "sha256": "3506683f48d531ebc1542577fb46227a424a7abd572d73360a2a1a16931ea6d2"
+        },
+        {
+          "path": "fonts/Anton-OFL.txt",
+          "bytes": 4391,
+          "sha256": "eee1d24ff8f553eb732237c7dd9b945a78313ed49ad6de02872a47277741b44a"
+        },
+        {
+          "path": "fonts/NotoSansJP-OFL.txt",
+          "bytes": 4388,
+          "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+        },
+        {
+          "path": "fonts/yellow-is-dead-condensed.woff2",
+          "bytes": 14128,
+          "sha256": "87c123aa660b2436a31138e58cc569bd24339caf92e02039c45a44fdc5394307"
+        },
+        {
+          "path": "fonts/yellow-is-dead-gothic-400.woff2",
+          "bytes": 69700,
+          "sha256": "691b76b568896e2489613f0d9b5bfc11abff2e6bc7e070681399b1eb89093491"
+        },
+        {
+          "path": "fonts/yellow-is-dead-gothic-800.woff2",
+          "bytes": 71460,
+          "sha256": "91aa992022b42153dde37101d4b38a2b1ed24775a9b5a4024426eb5f173ce53a"
+        },
+        {
+          "path": "index.html",
+          "bytes": 38080,
+          "sha256": "2aad63450d2fa6a3bb395c00f735854e2c4debde339017ab479e690576c55bdb"
+        },
+        {
+          "path": "style.css",
+          "bytes": 35543,
+          "sha256": "0a33ea2927a881ee78d39f3e6f91197dd42e3903d37244433cbbb7359c36a62e"
+        }
+      ]
+    },
+    {
+      "protocol": "http",
+      "publicURL": "http://yellow-is-dead.softboiled.net/",
+      "metadata": "passed",
+      "localReferences": "passed",
+      "crcAndByteEquality": "passed",
+      "extractVerification": "passed",
+      "file": "yellow-is-dead_本番配置用_HTTP.zip",
+      "bytes": 16140091,
+      "sha256": "1eeff3ba200f1095acb8eb4cbea17165486a8b4c81fe20f9e125f8c310b9a505",
+      "files": 90,
+      "manifest": [
+        {
+          "path": "app.js",
+          "bytes": 15497,
+          "sha256": "1378eb352fe4d95e69e22afdd4b410dc759ce1008f67db283a3d954fd5dcebc1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-320.webp",
+          "bytes": 16288,
+          "sha256": "e40e3d1ef374c1fcc244bf264481ed4777f09e9cced93dc5fa4717b3ed809581"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-640.jpg",
+          "bytes": 73769,
+          "sha256": "0cc59fcc24927855a5bf4f80077be892083f3239f8fd7a25a396874adf49c6c1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-640.webp",
+          "bytes": 44466,
+          "sha256": "c1348ea6e78ebfa205a5c7ba955fdff2ff0bf8c595efa4461b2a49a2a75136e1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-01-960.webp",
+          "bytes": 82300,
+          "sha256": "0f8a42948ba831a30da92eb11bc94ff8bb894370bc93b52dd2ae9e0adeebc291"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-320.webp",
+          "bytes": 34772,
+          "sha256": "41e5e15bdae1a133decaccac3be2f0c852b32add45ecda0b6f7aee7373ff92f6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-380.jpg",
+          "bytes": 54867,
+          "sha256": "d07ca0d17865281ee6bcc1a214f9ad0f08abf0b144d1a62c1803178515de4f3a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-02-380.webp",
+          "bytes": 50452,
+          "sha256": "71874cdecbef888cda72070a16cb1b12b093e9a9098b693a67faec0263e033ca"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-320.webp",
+          "bytes": 12314,
+          "sha256": "8765e60bfa427fb715cea8263531ec3fc9c85a7d5916e842774605e39d55be2a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-640.jpg",
+          "bytes": 66332,
+          "sha256": "0cbd7a755e5a0590c6d0709b20c4cd6af3d898caa27939794d95fcc9e3f562e6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-640.webp",
+          "bytes": 40258,
+          "sha256": "13e08eea3add33434e7cd142a51750ec309c119159b7e4f3be26410ef5471569"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-03-960.webp",
+          "bytes": 81770,
+          "sha256": "7a4d2f29517d40ea3043a23fe11f7d811ea44ebb4d13ba9613c502a9325dfda0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-320.webp",
+          "bytes": 16282,
+          "sha256": "4ca85ed5aaa07b16fcef11429987e5c8930af2a041cdb1b798cad1e205baf1fc"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-474.jpg",
+          "bytes": 46321,
+          "sha256": "6392506de3afd1765c4d6c58f41eefea2861c2102476dcabf0697663dd7aefb1"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-04-474.webp",
+          "bytes": 31386,
+          "sha256": "402857e788d86ff9d808439fec043b6eec73c3c4a53a1442401162ab48f75d77"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-320.webp",
+          "bytes": 22580,
+          "sha256": "c52bd4ad380b1f5e91c832db1406c323fa24236563b93a9c8b51d0a82419966b"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-640.jpg",
+          "bytes": 104380,
+          "sha256": "33d5113eb41d9390c4014482e45a691d3836fad1feb7e2998f3b5925461f53a3"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-05-640.webp",
+          "bytes": 86858,
+          "sha256": "d019e68bbdd1c90e1aef515ef550ce3cbbaa2251700c76d64bb9e688e241a794"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-320.webp",
+          "bytes": 16892,
+          "sha256": "69d8eeabec4f6bb763f9a3c96d7e735cc0070317f076f1ee38f81766f5fd2064"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-397.jpg",
+          "bytes": 34757,
+          "sha256": "8f201f03d90006a66aaebaa0095ac9b9ec10e5cc4a965a7d390f7b0dc7cb1dc4"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-06-397.webp",
+          "bytes": 23032,
+          "sha256": "498c7cccd3a6f9c5f40d5de55a7cd33f7bccdae5a51a5b58a808a2993fad5c60"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-320.webp",
+          "bytes": 15334,
+          "sha256": "665adaf092d1953dd39f016987ab370f5453e9eeb54be29c3a95ea4056144aa0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-640.jpg",
+          "bytes": 77584,
+          "sha256": "9c433b3798c5275f2ff6fb879250d00b55b282eb6e948dd411966597d2740adb"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-640.webp",
+          "bytes": 47516,
+          "sha256": "7af8520b4d399f0dc31a089c9228ba6de4a16e32bac7b25ec32e0fa3f80235e3"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-07-960.webp",
+          "bytes": 87860,
+          "sha256": "01b6d5f542c8bf180acbd6f42d2262c49e54809892647c1402dae94349625c01"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-320.webp",
+          "bytes": 15754,
+          "sha256": "534412cfea405dacb3420a43427ad6182f1cfa3c725a424793bbdeed75affbc0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-640.jpg",
+          "bytes": 74234,
+          "sha256": "dcfb6e6f34667266f43a512c69b9e5370763b82a1df0b3161bce7d420ca180b4"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-640.webp",
+          "bytes": 47050,
+          "sha256": "cd69633c82e2aaf646329917538f9d6ad28be218adcb44f6b26438c0c0815360"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-08-768.webp",
+          "bytes": 62932,
+          "sha256": "74fcc5df2ebba68c0678dd176da3441b031636ea225a1973ab84a7c603db518e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-320.webp",
+          "bytes": 16438,
+          "sha256": "f222e629c1d113ff0f2949e841fc0fe9974911abb6c3f83a8b74f6ab23139b60"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-640.jpg",
+          "bytes": 81486,
+          "sha256": "35370c8f95166f40ee596265e15588ce46dbc0709b97bc98c8a65ae8fa8918a8"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-640.webp",
+          "bytes": 60106,
+          "sha256": "951702d9f8ea7a23ec934017ab3f697469e82d4f858f980f6dae3bcdfc2d9ec6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-09-960.webp",
+          "bytes": 134180,
+          "sha256": "e0133bec9bcae350791aaecc2ca4203f05c0ea60c88d3769130342e5030f7040"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-320.webp",
+          "bytes": 16296,
+          "sha256": "b87814bee20b06b4b47ca17b43ef4f83b7e4f73c4e3580ae2052a7d7203343c7"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-640.jpg",
+          "bytes": 74278,
+          "sha256": "d4920d8fa0adb2ee84380dcb7e75136d21da6747b447c048263cc53c2dee45e0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-640.webp",
+          "bytes": 55952,
+          "sha256": "7874dbf2cda3ceb4366c857862030cac7058a95971adb6f6178c4113b7a24208"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-10-960.webp",
+          "bytes": 96336,
+          "sha256": "943c184676fb2ee908c19fb4a7a30ad0bb223579e6da4153072858f5fdc646df"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-320.webp",
+          "bytes": 28226,
+          "sha256": "00e804914c8314a048aace87145aec524f50252aac6809cb39b937a9804c79a6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-602.jpg",
+          "bytes": 101224,
+          "sha256": "6b60f46d756b53111f1d60851656651b3c0a3745905aed91104bf7f828de168c"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-11-602.webp",
+          "bytes": 89190,
+          "sha256": "248c050514ccae5c5637560e930fc55e1af866002b3d24718a55305691131b50"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-320.webp",
+          "bytes": 16166,
+          "sha256": "39bcc6ea46124b49baa476891bcec2dd85e5cf73907a5503c9bb2bd7f18ab702"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-640.jpg",
+          "bytes": 76166,
+          "sha256": "d64dd14ad71de79488d23f158640612db430bf752e11c5ba4f8e42e67967bd9e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-640.webp",
+          "bytes": 46878,
+          "sha256": "b3c7b76bed0b1c703c1d71cf0ef3efc4d5c9bc848518cb0c9457e2b326ec3722"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-12-960.webp",
+          "bytes": 93110,
+          "sha256": "4cc1546b2e44842bf9c7488e1c98612817c34e4a155d2c6d2fa71911acdfe84b"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-320.webp",
+          "bytes": 23918,
+          "sha256": "30518bb3e388665e0236ce6f74152583764f57997c1c8b2fc02d344d7aa11998"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-419.jpg",
+          "bytes": 49173,
+          "sha256": "10d2b661ab4acb10f50e9a6489b04ad20f0ec4e38c884368c453a9c6f5419be0"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-13-419.webp",
+          "bytes": 36080,
+          "sha256": "6913406ba5b5ca1b6060b6f8347b7636ef8e8fc87be08e806f85495c0be71018"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-320.webp",
+          "bytes": 20568,
+          "sha256": "2738683df7991a32484c9e4f15a57fdb7b5426b86ac0b74d34d7859ebc4257ac"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-640.jpg",
+          "bytes": 100807,
+          "sha256": "bb015785a3a539af2b4c87f074d30a05df433cceba6ad1e51f2dc3dc7d714387"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-640.webp",
+          "bytes": 81308,
+          "sha256": "3c721423bb8e6baeea2eed6312b8da9573154c860177366831648380e021e37a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-14-749.webp",
+          "bytes": 111136,
+          "sha256": "b015d684b08faf9a0137aff97726f85c67f56c10853b27ecbed97b8d94f1da6f"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-320.webp",
+          "bytes": 15958,
+          "sha256": "bf44c7e2b8d7293946bc554d699c64ff83c5a001d6c265b6b607ae42b1acf21d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-640.jpg",
+          "bytes": 79417,
+          "sha256": "34cd64435d5a4d7a98901eadcc2d29822b2ec6c3ed4ec61d291148acceb54f3a"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-640.webp",
+          "bytes": 56902,
+          "sha256": "d863bc604a42c0b9195c20f4a393e4ed54acbd2771c4efa8a03569d218295e29"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-15-960.webp",
+          "bytes": 107386,
+          "sha256": "9746fba28ae39549685c5d7878d8386cbd8455f9248116ac5119fe0350f288bc"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-320.webp",
+          "bytes": 16046,
+          "sha256": "cd88f6f8c61866a199ac758c9d728539659f113cec9d5ebdf60b95157a473273"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-640.jpg",
+          "bytes": 98103,
+          "sha256": "610e3480bca4f6e75941bf40bd031cc8b3e60d930d66a78636ea325794b53475"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-640.webp",
+          "bytes": 73874,
+          "sha256": "9982c83422ddfd3476e8ec0a24095186b8d80eedbc2002e28aae732bce03d88d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-16-960.webp",
+          "bytes": 197566,
+          "sha256": "00fc653e66c94f222325848fd26deb490ad7cef267398ec1c51a53ce6eefeaa6"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-320.webp",
+          "bytes": 16592,
+          "sha256": "a5979abc2e88396dc235a5d2ee22b9ec273d8e643300665b5ecad11fc0ac6d37"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-640.jpg",
+          "bytes": 81011,
+          "sha256": "39b8e934c02437cd602b1c90c2765905476e44472784fa309da153a0cd507326"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-640.webp",
+          "bytes": 59862,
+          "sha256": "82e05dc3031f7426e935a4ac626906c43a60dc7f0beab38b1a9347761f20800d"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-17-960.webp",
+          "bytes": 126892,
+          "sha256": "f849de48e4df58ec45d66e870b3695c3be20080423ac7212613ac35e872e9e29"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-320.webp",
+          "bytes": 20154,
+          "sha256": "9c688cf4fcf6c338c153fd07dc7adf93a6a8917baea8439be999036ca436337e"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-640.jpg",
+          "bytes": 92537,
+          "sha256": "83f1dbc24656ca2dbb4fce4670a02bc2b2b9cfabc2c7841f9da74efd38437219"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-640.webp",
+          "bytes": 67722,
+          "sha256": "0904c67951350d45ec23d382e15d126e34c606e835f6ab70baac15ab73947c38"
+        },
+        {
+          "path": "assets/yellow-is-dead-cast-18-960.webp",
+          "bytes": 149824,
+          "sha256": "557854b16d4257dc10f22f481d941ca636218ce5cb2aed55acfd12cfe2eced9b"
+        },
+        {
+          "path": "assets/yellow-is-dead-favicon.svg",
+          "bytes": 303,
+          "sha256": "175ccabecc628300ee3c9c350bad211410765f5565b4ca3bf684d3a31be07b75"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-1600.webp",
+          "bytes": 3431788,
+          "sha256": "2418a7efd3ccf6071c861e43a7afd9cb39eacb628c51892a2ad285ed3ce33f26"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-480.webp",
+          "bytes": 382114,
+          "sha256": "ecfd35468b23336c3f0cbf93ae6653ea7b68d1807672f0369d97ec49d604f3ba"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-back-960.webp",
+          "bytes": 1372856,
+          "sha256": "f0fc433c21e5698a4b51334fdf3acc4882e03be4d475dd53bcb37e179868d6e6"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-1600.webp",
+          "bytes": 3750004,
+          "sha256": "ca7ecacc733ce67856b5667485acb8d729928d4dbbef4715bffcc50f696057bf"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-480.webp",
+          "bytes": 382904,
+          "sha256": "0e0eed7cf4da230b46addaefa45bf139f57c54e28667f354908c799a53a8a13f"
+        },
+        {
+          "path": "assets/yellow-is-dead-flyer-front-960.webp",
+          "bytes": 1406460,
+          "sha256": "5600aede10c70318ae4663d1869c0133249df9ff7a959e9736c09654b60f962e"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-1536.webp",
+          "bytes": 156452,
+          "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-1920.webp",
+          "bytes": 191672,
+          "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+          "bytes": 63374,
+          "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768"
+        },
+        {
+          "path": "assets/yellow-is-dead-hero-e-suit-mobile-800.webp",
+          "bytes": 89954,
+          "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-1200.webp",
+          "bytes": 220806,
+          "sha256": "1415be21ea1661bbb9ec3321f0947b425b6fd9a1e117fd85ea025154f6761efd"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-640.webp",
+          "bytes": 94980,
+          "sha256": "7149b6aa8e95fdc9101c37023e40ec9407edb06b724aa33e3aeb489c9462f956"
+        },
+        {
+          "path": "assets/yellow-is-dead-logo-800.webp",
+          "bytes": 125364,
+          "sha256": "c63d053fa2554f645b815587d167c233bb4d55aca8a5a68ff897d492d8e3d9b3"
+        },
+        {
+          "path": "assets/yellow-is-dead-ogp.jpg",
+          "bytes": 240312,
+          "sha256": "ef4e8ee73080c2361c518f326ba365767c28baf18143fd583ff940e227d3feb1"
+        },
+        {
+          "path": "assets/yellow-is-dead-story-floor.webp",
+          "bytes": 58880,
+          "sha256": "3506683f48d531ebc1542577fb46227a424a7abd572d73360a2a1a16931ea6d2"
+        },
+        {
+          "path": "fonts/Anton-OFL.txt",
+          "bytes": 4391,
+          "sha256": "eee1d24ff8f553eb732237c7dd9b945a78313ed49ad6de02872a47277741b44a"
+        },
+        {
+          "path": "fonts/NotoSansJP-OFL.txt",
+          "bytes": 4388,
+          "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+        },
+        {
+          "path": "fonts/yellow-is-dead-condensed.woff2",
+          "bytes": 14128,
+          "sha256": "87c123aa660b2436a31138e58cc569bd24339caf92e02039c45a44fdc5394307"
+        },
+        {
+          "path": "fonts/yellow-is-dead-gothic-400.woff2",
+          "bytes": 69700,
+          "sha256": "691b76b568896e2489613f0d9b5bfc11abff2e6bc7e070681399b1eb89093491"
+        },
+        {
+          "path": "fonts/yellow-is-dead-gothic-800.woff2",
+          "bytes": 71460,
+          "sha256": "91aa992022b42153dde37101d4b38a2b1ed24775a9b5a4024426eb5f173ce53a"
+        },
+        {
+          "path": "index.html",
+          "bytes": 38076,
+          "sha256": "a1caac7cdeb2890473a2d871a6f0cc6ce59fac2fe0282edd89020eb3fdf5b3ee"
+        },
+        {
+          "path": "style.css",
+          "bytes": 35543,
+          "sha256": "0a33ea2927a881ee78d39f3e6f91197dd42e3903d37244433cbbb7359c36a62e"
+        }
+      ]
+    }
+  ],
+  "sourceArchive": {
+    "file": "yellow-is-dead_更新用ソース.zip",
+    "bytes": 16174834,
+    "sha256": "45f29df00811331196ca22b8a76512e1cae35cf2d79efa0327caa22bfbe861a6",
+    "files": 102,
+    "manifest": [
+      {
+        "path": "app.js",
+        "bytes": 15497,
+        "sha256": "1378eb352fe4d95e69e22afdd4b410dc759ce1008f67db283a3d954fd5dcebc1"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-01-320.webp",
+        "bytes": 16288,
+        "sha256": "e40e3d1ef374c1fcc244bf264481ed4777f09e9cced93dc5fa4717b3ed809581"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-01-640.jpg",
+        "bytes": 73769,
+        "sha256": "0cc59fcc24927855a5bf4f80077be892083f3239f8fd7a25a396874adf49c6c1"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-01-640.webp",
+        "bytes": 44466,
+        "sha256": "c1348ea6e78ebfa205a5c7ba955fdff2ff0bf8c595efa4461b2a49a2a75136e1"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-01-960.webp",
+        "bytes": 82300,
+        "sha256": "0f8a42948ba831a30da92eb11bc94ff8bb894370bc93b52dd2ae9e0adeebc291"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-02-320.webp",
+        "bytes": 34772,
+        "sha256": "41e5e15bdae1a133decaccac3be2f0c852b32add45ecda0b6f7aee7373ff92f6"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-02-380.jpg",
+        "bytes": 54867,
+        "sha256": "d07ca0d17865281ee6bcc1a214f9ad0f08abf0b144d1a62c1803178515de4f3a"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-02-380.webp",
+        "bytes": 50452,
+        "sha256": "71874cdecbef888cda72070a16cb1b12b093e9a9098b693a67faec0263e033ca"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-03-320.webp",
+        "bytes": 12314,
+        "sha256": "8765e60bfa427fb715cea8263531ec3fc9c85a7d5916e842774605e39d55be2a"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-03-640.jpg",
+        "bytes": 66332,
+        "sha256": "0cbd7a755e5a0590c6d0709b20c4cd6af3d898caa27939794d95fcc9e3f562e6"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-03-640.webp",
+        "bytes": 40258,
+        "sha256": "13e08eea3add33434e7cd142a51750ec309c119159b7e4f3be26410ef5471569"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-03-960.webp",
+        "bytes": 81770,
+        "sha256": "7a4d2f29517d40ea3043a23fe11f7d811ea44ebb4d13ba9613c502a9325dfda0"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-04-320.webp",
+        "bytes": 16282,
+        "sha256": "4ca85ed5aaa07b16fcef11429987e5c8930af2a041cdb1b798cad1e205baf1fc"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-04-474.jpg",
+        "bytes": 46321,
+        "sha256": "6392506de3afd1765c4d6c58f41eefea2861c2102476dcabf0697663dd7aefb1"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-04-474.webp",
+        "bytes": 31386,
+        "sha256": "402857e788d86ff9d808439fec043b6eec73c3c4a53a1442401162ab48f75d77"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-05-320.webp",
+        "bytes": 22580,
+        "sha256": "c52bd4ad380b1f5e91c832db1406c323fa24236563b93a9c8b51d0a82419966b"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-05-640.jpg",
+        "bytes": 104380,
+        "sha256": "33d5113eb41d9390c4014482e45a691d3836fad1feb7e2998f3b5925461f53a3"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-05-640.webp",
+        "bytes": 86858,
+        "sha256": "d019e68bbdd1c90e1aef515ef550ce3cbbaa2251700c76d64bb9e688e241a794"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-06-320.webp",
+        "bytes": 16892,
+        "sha256": "69d8eeabec4f6bb763f9a3c96d7e735cc0070317f076f1ee38f81766f5fd2064"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-06-397.jpg",
+        "bytes": 34757,
+        "sha256": "8f201f03d90006a66aaebaa0095ac9b9ec10e5cc4a965a7d390f7b0dc7cb1dc4"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-06-397.webp",
+        "bytes": 23032,
+        "sha256": "498c7cccd3a6f9c5f40d5de55a7cd33f7bccdae5a51a5b58a808a2993fad5c60"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-07-320.webp",
+        "bytes": 15334,
+        "sha256": "665adaf092d1953dd39f016987ab370f5453e9eeb54be29c3a95ea4056144aa0"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-07-640.jpg",
+        "bytes": 77584,
+        "sha256": "9c433b3798c5275f2ff6fb879250d00b55b282eb6e948dd411966597d2740adb"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-07-640.webp",
+        "bytes": 47516,
+        "sha256": "7af8520b4d399f0dc31a089c9228ba6de4a16e32bac7b25ec32e0fa3f80235e3"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-07-960.webp",
+        "bytes": 87860,
+        "sha256": "01b6d5f542c8bf180acbd6f42d2262c49e54809892647c1402dae94349625c01"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-08-320.webp",
+        "bytes": 15754,
+        "sha256": "534412cfea405dacb3420a43427ad6182f1cfa3c725a424793bbdeed75affbc0"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-08-640.jpg",
+        "bytes": 74234,
+        "sha256": "dcfb6e6f34667266f43a512c69b9e5370763b82a1df0b3161bce7d420ca180b4"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-08-640.webp",
+        "bytes": 47050,
+        "sha256": "cd69633c82e2aaf646329917538f9d6ad28be218adcb44f6b26438c0c0815360"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-08-768.webp",
+        "bytes": 62932,
+        "sha256": "74fcc5df2ebba68c0678dd176da3441b031636ea225a1973ab84a7c603db518e"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-09-320.webp",
+        "bytes": 16438,
+        "sha256": "f222e629c1d113ff0f2949e841fc0fe9974911abb6c3f83a8b74f6ab23139b60"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-09-640.jpg",
+        "bytes": 81486,
+        "sha256": "35370c8f95166f40ee596265e15588ce46dbc0709b97bc98c8a65ae8fa8918a8"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-09-640.webp",
+        "bytes": 60106,
+        "sha256": "951702d9f8ea7a23ec934017ab3f697469e82d4f858f980f6dae3bcdfc2d9ec6"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-09-960.webp",
+        "bytes": 134180,
+        "sha256": "e0133bec9bcae350791aaecc2ca4203f05c0ea60c88d3769130342e5030f7040"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-10-320.webp",
+        "bytes": 16296,
+        "sha256": "b87814bee20b06b4b47ca17b43ef4f83b7e4f73c4e3580ae2052a7d7203343c7"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-10-640.jpg",
+        "bytes": 74278,
+        "sha256": "d4920d8fa0adb2ee84380dcb7e75136d21da6747b447c048263cc53c2dee45e0"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-10-640.webp",
+        "bytes": 55952,
+        "sha256": "7874dbf2cda3ceb4366c857862030cac7058a95971adb6f6178c4113b7a24208"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-10-960.webp",
+        "bytes": 96336,
+        "sha256": "943c184676fb2ee908c19fb4a7a30ad0bb223579e6da4153072858f5fdc646df"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-11-320.webp",
+        "bytes": 28226,
+        "sha256": "00e804914c8314a048aace87145aec524f50252aac6809cb39b937a9804c79a6"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-11-602.jpg",
+        "bytes": 101224,
+        "sha256": "6b60f46d756b53111f1d60851656651b3c0a3745905aed91104bf7f828de168c"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-11-602.webp",
+        "bytes": 89190,
+        "sha256": "248c050514ccae5c5637560e930fc55e1af866002b3d24718a55305691131b50"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-12-320.webp",
+        "bytes": 16166,
+        "sha256": "39bcc6ea46124b49baa476891bcec2dd85e5cf73907a5503c9bb2bd7f18ab702"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-12-640.jpg",
+        "bytes": 76166,
+        "sha256": "d64dd14ad71de79488d23f158640612db430bf752e11c5ba4f8e42e67967bd9e"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-12-640.webp",
+        "bytes": 46878,
+        "sha256": "b3c7b76bed0b1c703c1d71cf0ef3efc4d5c9bc848518cb0c9457e2b326ec3722"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-12-960.webp",
+        "bytes": 93110,
+        "sha256": "4cc1546b2e44842bf9c7488e1c98612817c34e4a155d2c6d2fa71911acdfe84b"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-13-320.webp",
+        "bytes": 23918,
+        "sha256": "30518bb3e388665e0236ce6f74152583764f57997c1c8b2fc02d344d7aa11998"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-13-419.jpg",
+        "bytes": 49173,
+        "sha256": "10d2b661ab4acb10f50e9a6489b04ad20f0ec4e38c884368c453a9c6f5419be0"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-13-419.webp",
+        "bytes": 36080,
+        "sha256": "6913406ba5b5ca1b6060b6f8347b7636ef8e8fc87be08e806f85495c0be71018"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-14-320.webp",
+        "bytes": 20568,
+        "sha256": "2738683df7991a32484c9e4f15a57fdb7b5426b86ac0b74d34d7859ebc4257ac"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-14-640.jpg",
+        "bytes": 100807,
+        "sha256": "bb015785a3a539af2b4c87f074d30a05df433cceba6ad1e51f2dc3dc7d714387"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-14-640.webp",
+        "bytes": 81308,
+        "sha256": "3c721423bb8e6baeea2eed6312b8da9573154c860177366831648380e021e37a"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-14-749.webp",
+        "bytes": 111136,
+        "sha256": "b015d684b08faf9a0137aff97726f85c67f56c10853b27ecbed97b8d94f1da6f"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-15-320.webp",
+        "bytes": 15958,
+        "sha256": "bf44c7e2b8d7293946bc554d699c64ff83c5a001d6c265b6b607ae42b1acf21d"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-15-640.jpg",
+        "bytes": 79417,
+        "sha256": "34cd64435d5a4d7a98901eadcc2d29822b2ec6c3ed4ec61d291148acceb54f3a"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-15-640.webp",
+        "bytes": 56902,
+        "sha256": "d863bc604a42c0b9195c20f4a393e4ed54acbd2771c4efa8a03569d218295e29"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-15-960.webp",
+        "bytes": 107386,
+        "sha256": "9746fba28ae39549685c5d7878d8386cbd8455f9248116ac5119fe0350f288bc"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-16-320.webp",
+        "bytes": 16046,
+        "sha256": "cd88f6f8c61866a199ac758c9d728539659f113cec9d5ebdf60b95157a473273"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-16-640.jpg",
+        "bytes": 98103,
+        "sha256": "610e3480bca4f6e75941bf40bd031cc8b3e60d930d66a78636ea325794b53475"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-16-640.webp",
+        "bytes": 73874,
+        "sha256": "9982c83422ddfd3476e8ec0a24095186b8d80eedbc2002e28aae732bce03d88d"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-16-960.webp",
+        "bytes": 197566,
+        "sha256": "00fc653e66c94f222325848fd26deb490ad7cef267398ec1c51a53ce6eefeaa6"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-17-320.webp",
+        "bytes": 16592,
+        "sha256": "a5979abc2e88396dc235a5d2ee22b9ec273d8e643300665b5ecad11fc0ac6d37"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-17-640.jpg",
+        "bytes": 81011,
+        "sha256": "39b8e934c02437cd602b1c90c2765905476e44472784fa309da153a0cd507326"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-17-640.webp",
+        "bytes": 59862,
+        "sha256": "82e05dc3031f7426e935a4ac626906c43a60dc7f0beab38b1a9347761f20800d"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-17-960.webp",
+        "bytes": 126892,
+        "sha256": "f849de48e4df58ec45d66e870b3695c3be20080423ac7212613ac35e872e9e29"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-18-320.webp",
+        "bytes": 20154,
+        "sha256": "9c688cf4fcf6c338c153fd07dc7adf93a6a8917baea8439be999036ca436337e"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-18-640.jpg",
+        "bytes": 92537,
+        "sha256": "83f1dbc24656ca2dbb4fce4670a02bc2b2b9cfabc2c7841f9da74efd38437219"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-18-640.webp",
+        "bytes": 67722,
+        "sha256": "0904c67951350d45ec23d382e15d126e34c606e835f6ab70baac15ab73947c38"
+      },
+      {
+        "path": "assets/yellow-is-dead-cast-18-960.webp",
+        "bytes": 149824,
+        "sha256": "557854b16d4257dc10f22f481d941ca636218ce5cb2aed55acfd12cfe2eced9b"
+      },
+      {
+        "path": "assets/yellow-is-dead-favicon.svg",
+        "bytes": 303,
+        "sha256": "175ccabecc628300ee3c9c350bad211410765f5565b4ca3bf684d3a31be07b75"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-back-1600.webp",
+        "bytes": 3431788,
+        "sha256": "2418a7efd3ccf6071c861e43a7afd9cb39eacb628c51892a2ad285ed3ce33f26"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-back-480.webp",
+        "bytes": 382114,
+        "sha256": "ecfd35468b23336c3f0cbf93ae6653ea7b68d1807672f0369d97ec49d604f3ba"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-back-960.webp",
+        "bytes": 1372856,
+        "sha256": "f0fc433c21e5698a4b51334fdf3acc4882e03be4d475dd53bcb37e179868d6e6"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-front-1600.webp",
+        "bytes": 3750004,
+        "sha256": "ca7ecacc733ce67856b5667485acb8d729928d4dbbef4715bffcc50f696057bf"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-front-480.webp",
+        "bytes": 382904,
+        "sha256": "0e0eed7cf4da230b46addaefa45bf139f57c54e28667f354908c799a53a8a13f"
+      },
+      {
+        "path": "assets/yellow-is-dead-flyer-front-960.webp",
+        "bytes": 1406460,
+        "sha256": "5600aede10c70318ae4663d1869c0133249df9ff7a959e9736c09654b60f962e"
+      },
+      {
+        "path": "assets/yellow-is-dead-hero-e-suit-1536.webp",
+        "bytes": 156452,
+        "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee"
+      },
+      {
+        "path": "assets/yellow-is-dead-hero-e-suit-1920.webp",
+        "bytes": 191672,
+        "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8"
+      },
+      {
+        "path": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+        "bytes": 63374,
+        "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768"
+      },
+      {
+        "path": "assets/yellow-is-dead-hero-e-suit-mobile-800.webp",
+        "bytes": 89954,
+        "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f"
+      },
+      {
+        "path": "assets/yellow-is-dead-logo-1200.webp",
+        "bytes": 220806,
+        "sha256": "1415be21ea1661bbb9ec3321f0947b425b6fd9a1e117fd85ea025154f6761efd"
+      },
+      {
+        "path": "assets/yellow-is-dead-logo-640.webp",
+        "bytes": 94980,
+        "sha256": "7149b6aa8e95fdc9101c37023e40ec9407edb06b724aa33e3aeb489c9462f956"
+      },
+      {
+        "path": "assets/yellow-is-dead-logo-800.webp",
+        "bytes": 125364,
+        "sha256": "c63d053fa2554f645b815587d167c233bb4d55aca8a5a68ff897d492d8e3d9b3"
+      },
+      {
+        "path": "assets/yellow-is-dead-ogp.jpg",
+        "bytes": 240312,
+        "sha256": "ef4e8ee73080c2361c518f326ba365767c28baf18143fd583ff940e227d3feb1"
+      },
+      {
+        "path": "assets/yellow-is-dead-story-floor.webp",
+        "bytes": 58880,
+        "sha256": "3506683f48d531ebc1542577fb46227a424a7abd572d73360a2a1a16931ea6d2"
+      },
+      {
+        "path": "fonts/Anton-OFL.txt",
+        "bytes": 4391,
+        "sha256": "eee1d24ff8f553eb732237c7dd9b945a78313ed49ad6de02872a47277741b44a"
+      },
+      {
+        "path": "fonts/NotoSansJP-OFL.txt",
+        "bytes": 4388,
+        "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+      },
+      {
+        "path": "fonts/yellow-is-dead-condensed.woff2",
+        "bytes": 14128,
+        "sha256": "87c123aa660b2436a31138e58cc569bd24339caf92e02039c45a44fdc5394307"
+      },
+      {
+        "path": "fonts/yellow-is-dead-gothic-400.woff2",
+        "bytes": 69700,
+        "sha256": "691b76b568896e2489613f0d9b5bfc11abff2e6bc7e070681399b1eb89093491"
+      },
+      {
+        "path": "fonts/yellow-is-dead-gothic-800.woff2",
+        "bytes": 71460,
+        "sha256": "91aa992022b42153dde37101d4b38a2b1ed24775a9b5a4024426eb5f173ce53a"
+      },
+      {
+        "path": "index.html",
+        "bytes": 38026,
+        "sha256": "5b34c274f5383872aa1126ee2fafb158c8124323797d18a6849994df4c789f8e"
+      },
+      {
+        "path": "performance.json",
+        "bytes": 25603,
+        "sha256": "d9a0034b85dabc6d7e023f3805f86f690968cee5adf2618925e78307542ab38a"
+      },
+      {
+        "path": "README_更新手順.txt",
+        "bytes": 4345,
+        "sha256": "aa9d3f8b9284958deb3eaac7c623f83d53812e21245553ab05dd75567a748706"
+      },
+      {
+        "path": "style.css",
+        "bytes": 35543,
+        "sha256": "0a33ea2927a881ee78d39f3e6f91197dd42e3903d37244433cbbb7359c36a62e"
+      },
+      {
+        "path": "tools/build.py",
+        "bytes": 21452,
+        "sha256": "98d1776d90db37c999070b8d23a3241b06f0716a7f42b8fb51073886647b966c"
+      },
+      {
+        "path": "tools/check_cast.cjs",
+        "bytes": 6977,
+        "sha256": "48685d37f720abf4159e692bcbbb1400d984cc5b14ed1164bfa327053b9b2735"
+      },
+      {
+        "path": "tools/check_flyer_drag.cjs",
+        "bytes": 12738,
+        "sha256": "14655c70a793b509d8482ba1574d7f2f4bd8adc9df383c1135c56539101840f9"
+      },
+      {
+        "path": "tools/check_flyer_viewer.cjs",
+        "bytes": 7805,
+        "sha256": "4fb46225cf47c5284d3f6c8b90f9baa79a6f2ddc7730eb6cf093423008b06c00"
+      },
+      {
+        "path": "tools/check_ticket_sale.cjs",
+        "bytes": 9324,
+        "sha256": "29b23fa0b8d36179c7c830a567afabd01f7e2b31ca0c2c686ba8382af1a63403"
+      },
+      {
+        "path": "tools/package_delivery.py",
+        "bytes": 6329,
+        "sha256": "66b44f6d6fcce9190c189f12d04ca8bd932f824d215cf27b5a8825dc00d70703"
+      },
+      {
+        "path": "tools/prepare_cast.py",
+        "bytes": 4471,
+        "sha256": "6fc788bfcd16c7fbe2ed50f881e55ce1560e77b62832e85b16e86616433e866c"
+      },
+      {
+        "path": "tools/prepare_flyers.py",
+        "bytes": 2247,
+        "sha256": "c9c879f01f9212e606ce23d470ccdd505358e529d3f63b001af36edf451963b4"
+      },
+      {
+        "path": "tools/prepare_hero.cjs",
+        "bytes": 2111,
+        "sha256": "e1f0f6d0a331681b85ef412a54da15f450fedd15e231f35d8d38f90696617220"
+      },
+      {
+        "path": "素材対応.csv",
+        "bytes": 5162,
+        "sha256": "effa6dce0a45c42df645bd5254e57bb9c6e19f483850efed2712c2ceb8ed0031"
+      }
+    ]
+  },
+  "verification": {
+    "sourceFilesMatchedGitHub": 99,
+    "htmlContentUnchangedExceptProductionMetadata": true,
+    "saleAutomation": {
+      "https": {
+        "date": "2026-10-11",
+        "browser": "154.0.8037.98",
+        "environment": "Windows Chrome headless; HTTP/HTTPS requests fulfilled by Playwright from verified local files; no client-server/TLS or physical mobile tests",
+        "sale": {
+          "status": "scheduled",
+          "url": "http://confetti-web.com/softboiled16",
+          "vendor": "カンフェティ",
+          "startsAt": "2026-10-13T22:00:00+09:00",
+          "endsAt": "2026-11-23T21:00:00+09:00",
+          "startLabel": "2026年10月13日（火）22:00",
+          "endLabel": "11月23日（祝・月）21:00",
+          "method": "先着順",
+          "releaseText": "10月13日（火）22:00〜 カンフェティにて販売開始"
+        },
+        "results": [
+          {
+            "name": "start-minus-1ms",
+            "state": "before_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演日程・チケット",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "カンフェティの販売ページを見る",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "exact-start",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "late-install",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "end-minus-1ms",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "exact-end",
+            "state": "ended",
+            "links": [
+              {
+                "place": "header",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": true,
+                "hintHidden": true
+              },
+              {
+                "place": "footer",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "after-end",
+            "state": "ended",
+            "links": [
+              {
+                "place": "header",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": true,
+                "hintHidden": true
+              },
+              {
+                "place": "footer",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "open-across-start",
+            "state": "on_sale"
+          },
+          {
+            "name": "open-across-end",
+            "state": "ended"
+          },
+          {
+            "name": "resume-pageshow",
+            "state": "on_sale"
+          },
+          {
+            "name": "resume-focus",
+            "state": "on_sale"
+          },
+          {
+            "name": "resume-visibilitychange",
+            "state": "on_sale"
+          },
+          {
+            "name": "stale-cta-click",
+            "state": "on_sale"
+          },
+          {
+            "name": "missing-url",
+            "state": "information"
+          },
+          {
+            "name": "invalid-url",
+            "state": "information"
+          },
+          {
+            "name": "invalid-period",
+            "state": "information"
+          },
+          {
+            "name": "manual-before",
+            "state": "before_sale"
+          },
+          {
+            "name": "manual-ended",
+            "state": "ended"
+          },
+          {
+            "name": "manual-active",
+            "state": "on_sale"
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "before_sale",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "on_sale",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "ended",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "javascript-disabled",
+            "fallback": "neutral release information and sales-page link"
+          }
+        ],
+        "passed": 43
+      },
+      "http": {
+        "date": "2026-10-11",
+        "browser": "154.0.8037.98",
+        "environment": "Windows Chrome headless; HTTP/HTTPS requests fulfilled by Playwright from verified local files; no client-server/TLS or physical mobile tests",
+        "sale": {
+          "status": "scheduled",
+          "url": "http://confetti-web.com/softboiled16",
+          "vendor": "カンフェティ",
+          "startsAt": "2026-10-13T22:00:00+09:00",
+          "endsAt": "2026-11-23T21:00:00+09:00",
+          "startLabel": "2026年10月13日（火）22:00",
+          "endLabel": "11月23日（祝・月）21:00",
+          "method": "先着順",
+          "releaseText": "10月13日（火）22:00〜 カンフェティにて販売開始"
+        },
+        "results": [
+          {
+            "name": "start-minus-1ms",
+            "state": "before_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演日程・チケット",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "カンフェティの販売ページを見る",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "チケット情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "exact-start",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "late-install",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "end-minus-1ms",
+            "state": "on_sale",
+            "links": [
+              {
+                "place": "header",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "hero",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "ticket",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "footer",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              },
+              {
+                "place": "sticky",
+                "label": "チケットを購入",
+                "href": "http://confetti-web.com/softboiled16",
+                "target": "_blank",
+                "rel": "noopener noreferrer",
+                "hidden": false,
+                "hintHidden": false
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "exact-end",
+            "state": "ended",
+            "links": [
+              {
+                "place": "header",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": true,
+                "hintHidden": true
+              },
+              {
+                "place": "footer",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "after-end",
+            "state": "ended",
+            "links": [
+              {
+                "place": "header",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "hero",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "ticket",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": true,
+                "hintHidden": true
+              },
+              {
+                "place": "footer",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              },
+              {
+                "place": "sticky",
+                "label": "公演情報",
+                "href": "#ticket",
+                "target": "",
+                "rel": "",
+                "hidden": false,
+                "hintHidden": true
+              }
+            ],
+            "errors": []
+          },
+          {
+            "name": "open-across-start",
+            "state": "on_sale"
+          },
+          {
+            "name": "open-across-end",
+            "state": "ended"
+          },
+          {
+            "name": "resume-pageshow",
+            "state": "on_sale"
+          },
+          {
+            "name": "resume-focus",
+            "state": "on_sale"
+          },
+          {
+            "name": "resume-visibilitychange",
+            "state": "on_sale"
+          },
+          {
+            "name": "stale-cta-click",
+            "state": "on_sale"
+          },
+          {
+            "name": "missing-url",
+            "state": "information"
+          },
+          {
+            "name": "invalid-url",
+            "state": "information"
+          },
+          {
+            "name": "invalid-period",
+            "state": "information"
+          },
+          {
+            "name": "manual-before",
+            "state": "before_sale"
+          },
+          {
+            "name": "manual-ended",
+            "state": "ended"
+          },
+          {
+            "name": "manual-active",
+            "state": "on_sale"
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 320,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 375,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 390,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 430,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 768,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1024,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "before_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "on_sale",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1080,
+            "state": "ended",
+            "protocol": "http",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "before_sale",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "on_sale",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "layout",
+            "width": 1440,
+            "state": "ended",
+            "protocol": "https",
+            "subdirectory": true
+          },
+          {
+            "name": "javascript-disabled",
+            "fallback": "neutral release information and sales-page link"
+          }
+        ],
+        "passed": 43
+      }
+    },
+    "visual": {
+      "browser": "154.0.8037.98",
+      "environment": "Windows Chrome headless; production URL fulfilled from extracted ZIP locally, no live TLS/network",
+      "results": [
+        {
+          "width": 390,
+          "height": 900,
+          "fonts": [
+            {
+              "family": "YID Gothic",
+              "status": "loaded",
+              "weight": "800"
+            },
+            {
+              "family": "YID Gothic",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "YID Condensed",
+              "status": "loaded",
+              "weight": "700"
+            }
+          ],
+          "requests": [
+            {
+              "rel": "index.html",
+              "bytes": 38080,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+              "bytes": 63374,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-gothic-800.woff2",
+              "bytes": 71460,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-logo-640.webp",
+              "bytes": 94980,
+              "initial": true
+            },
+            {
+              "rel": "style.css",
+              "bytes": 35543,
+              "initial": true
+            },
+            {
+              "rel": "app.js",
+              "bytes": 15497,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-gothic-400.woff2",
+              "bytes": 69700,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-condensed.woff2",
+              "bytes": 14128,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-story-floor.webp",
+              "bytes": 58880,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-favicon.svg",
+              "bytes": 303,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-01-320.webp",
+              "bytes": 16288,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-14-320.webp",
+              "bytes": 20568,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-15-320.webp",
+              "bytes": 15958,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-02-320.webp",
+              "bytes": 34772,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-03-320.webp",
+              "bytes": 12314,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-04-320.webp",
+              "bytes": 16282,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-05-320.webp",
+              "bytes": 22580,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-06-320.webp",
+              "bytes": 16892,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-07-320.webp",
+              "bytes": 15334,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-16-320.webp",
+              "bytes": 16046,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-08-320.webp",
+              "bytes": 15754,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-09-320.webp",
+              "bytes": 16438,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-17-320.webp",
+              "bytes": 16592,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-18-320.webp",
+              "bytes": 20154,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-10-320.webp",
+              "bytes": 16296,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-11-320.webp",
+              "bytes": 28226,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-12-320.webp",
+              "bytes": 16166,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-13-320.webp",
+              "bytes": 23918,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-flyer-front-480.webp",
+              "bytes": 382904,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-flyer-back-480.webp",
+              "bytes": 382114,
+              "initial": false
+            }
+          ],
+          "initialBytes": 461945,
+          "errors": [],
+          "castImagesDecoded": 18,
+          "screenshots": [
+            "390-top.png",
+            "390-full.png"
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "fonts": [
+            {
+              "family": "YID Gothic",
+              "status": "loaded",
+              "weight": "800"
+            },
+            {
+              "family": "YID Gothic",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "YID Condensed",
+              "status": "loaded",
+              "weight": "700"
+            }
+          ],
+          "requests": [
+            {
+              "rel": "index.html",
+              "bytes": 38080,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-gothic-800.woff2",
+              "bytes": 71460,
+              "initial": true
+            },
+            {
+              "rel": "style.css",
+              "bytes": 35543,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-hero-e-suit-1536.webp",
+              "bytes": 156452,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-logo-800.webp",
+              "bytes": 125364,
+              "initial": true
+            },
+            {
+              "rel": "app.js",
+              "bytes": 15497,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-gothic-400.woff2",
+              "bytes": 69700,
+              "initial": true
+            },
+            {
+              "rel": "fonts/yellow-is-dead-condensed.woff2",
+              "bytes": 14128,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-story-floor.webp",
+              "bytes": 58880,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-favicon.svg",
+              "bytes": 303,
+              "initial": true
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-01-320.webp",
+              "bytes": 16288,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-14-320.webp",
+              "bytes": 20568,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-15-320.webp",
+              "bytes": 15958,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-02-320.webp",
+              "bytes": 34772,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-03-320.webp",
+              "bytes": 12314,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-04-320.webp",
+              "bytes": 16282,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-05-320.webp",
+              "bytes": 22580,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-16-320.webp",
+              "bytes": 16046,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-06-320.webp",
+              "bytes": 16892,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-07-320.webp",
+              "bytes": 15334,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-08-320.webp",
+              "bytes": 15754,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-09-320.webp",
+              "bytes": 16438,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-18-320.webp",
+              "bytes": 20154,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-17-320.webp",
+              "bytes": 16592,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-10-320.webp",
+              "bytes": 16296,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-11-320.webp",
+              "bytes": 28226,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-12-320.webp",
+              "bytes": 16166,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-cast-13-320.webp",
+              "bytes": 23918,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-flyer-front-480.webp",
+              "bytes": 382904,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-flyer-back-480.webp",
+              "bytes": 382114,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+              "bytes": 63374,
+              "initial": false
+            },
+            {
+              "rel": "assets/yellow-is-dead-logo-640.webp",
+              "bytes": 94980,
+              "initial": false
+            }
+          ],
+          "initialBytes": 585407,
+          "errors": [],
+          "castImagesDecoded": 18,
+          "screenshots": [
+            "1440-top.png",
+            "1440-full.png"
+          ]
+        }
+      ],
+      "ogp": {
+        "format": "jpeg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "checklist": [
+      {
+        "id": "I01",
+        "result": "未検証",
+        "evidence": "承認済みGitHub公開データをバイト一致で維持。手元の正式情報は2026-10-01版のため、2026-10-10版正本との全面再照合は未実施。"
+      },
+      {
+        "id": "I02",
+        "result": "未検証",
+        "evidence": "氏名・順序・区切りは承認済みデータのまま。DOM18名を確認。最新正本との全面再照合はI01と同じ未検証範囲。"
+      },
+      {
+        "id": "I03",
+        "result": "合格",
+        "evidence": "固定人物ID・公開写真の対応を納品元から維持し全画像のGit blob SHAを照合。原宣材写真を入れず公開派生画像のみを同梱。"
+      },
+      {
+        "id": "I04",
+        "result": "未検証",
+        "evidence": "公開あらすじを含むデータは承認済みGitHub版と同一。最新正本との全面再照合は未実施。"
+      },
+      {
+        "id": "I05",
+        "result": "合格",
+        "evidence": "承認済みロゴ・HERO・OGPをバイト一致で保持。新たな造形・配色変更なし。"
+      },
+      {
+        "id": "I06",
+        "result": "合格",
+        "evidence": "公開ZIPをindex.html/CSS/JS/assets/fontsの許可リストで作成。非公開プロット、原写真、印刷原データ、制作資料を同梱しない。"
+      },
+      {
+        "id": "I07",
+        "result": "合格",
+        "evidence": "新たな公開情報を追加せず、正式販売日時・URLの既存設定を維持。"
+      },
+      {
+        "id": "I08",
+        "result": "合格",
+        "evidence": "本番化によるHTML差分はrobots/canonical/OGP等の公開URL設定だけ。本文・JSON・全導線データは変更なし。"
+      },
+      {
+        "id": "I09",
+        "result": "合格",
+        "evidence": "表裏フライヤーの公開画像と比率を承認済み版から維持。原JPGは配信ZIP外。"
+      },
+      {
+        "id": "D01",
+        "result": "合格",
+        "evidence": "ユーザー承認のB/CAUTION WHITEとE案HERO、正式採用OGPを維持。旧ブリーフのHERO条件は後続の明示採用に置換済み。"
+      },
+      {
+        "id": "D02",
+        "result": "合格",
+        "evidence": "PC1440px・スマホ390pxのHEROを目視。ロゴ・マスク・日程・CTAを表示。"
+      },
+      {
+        "id": "D03",
+        "result": "合格",
+        "evidence": "納品のPC・スマホ全ページを目視。コードと画像は承認済み版から変更なし。"
+      },
+      {
+        "id": "D04",
+        "result": "合格",
+        "evidence": "3書体のロード・HTML氏名・日程・価格の表示を確認。元ファイルを保持。"
+      },
+      {
+        "id": "D05",
+        "result": "未検証",
+        "evidence": "過去のフッターコントラスト記録あり。今回、全領域の比率を再計算する監査は未実施。"
+      },
+      {
+        "id": "D06",
+        "result": "合格",
+        "evidence": "承認済みCAST公開画像と焦点設定を保持。写真18枚を表示。元幅が小さい4枚の画質上限は従来通り。"
+      },
+      {
+        "id": "D07",
+        "result": "合格",
+        "evidence": "CASTの写真付きグリッドとグループ区切りを承認済み版から保持。"
+      },
+      {
+        "id": "U01",
+        "result": "未検証",
+        "evidence": "320/375/390/430/768/1024/1080/1440pxで3販売状態・横はみ出しなしを確認。全ブレークポイント前後・ネイティブ200%ズームは今回未実施。"
+      },
+      {
+        "id": "U02",
+        "result": "未検証",
+        "evidence": "PC/スマホの構成を確認。実機の回転・アドレスバー変化・安全領域は未検証。"
+      },
+      {
+        "id": "U03",
+        "result": "合格",
+        "evidence": "承認済みstickyヘッダーを保持しPC/スマホの先頭・中間・末尾を確認。"
+      },
+      {
+        "id": "U04",
+        "result": "合格",
+        "evidence": "モバイルメニューの開閉・Escapeを確認。その他操作は過去記録参照、実機支援技術は未検証。"
+      },
+      {
+        "id": "U05",
+        "result": "合格",
+        "evidence": "内部リンク・直接ハッシュは過去記録参照。本番化でパス構造を変更せず、ZIPのルート/サブディレクトリを検証。"
+      },
+      {
+        "id": "U06",
+        "result": "未検証",
+        "evidence": "スマホ下部CTAの状態・文言・配置を確認。実機の安全領域は未検証。"
+      },
+      {
+        "id": "U07",
+        "result": "未検証",
+        "evidence": "PC/スマホの主要操作を確認。全操作部の寸法監査と実機支援技術は未実施。"
+      },
+      {
+        "id": "U08",
+        "result": "合格",
+        "evidence": "あらすじは初期HTMLに全文、CAST18名を通常スクロールで閲覧可能。"
+      },
+      {
+        "id": "U09",
+        "result": "合格",
+        "evidence": "動き低減の既存実装を保持。追加ブラウザ確認で演出を抑制した状態でも内容を確認。"
+      },
+      {
+        "id": "U10",
+        "result": "未検証",
+        "evidence": "lang=ja・見出し・画像altを保持。スクリーンリーダー実操作は未実施。"
+      },
+      {
+        "id": "U11",
+        "result": "未検証",
+        "evidence": "JavaScript無効時の正式販売案内・販売先リンクを確認。画像/フォント遮断は過去記録参照。"
+      },
+      {
+        "id": "U12",
+        "result": "合格",
+        "evidence": "フライヤービュー開閉・Escapeを確認。表裏/ズーム/ドラッグパンの回帰は過去記録参照。"
+      },
+      {
+        "id": "L01",
+        "result": "合格",
+        "evidence": "正式販売URLを既存設定のまま使用。日時切替は2026-10-11のユーザー明示指示に従う。"
+      },
+      {
+        "id": "L02",
+        "result": "合格",
+        "evidence": "5配置のCTAが開始/終了の境界、発売後設置、復帰/クリック直前で同期。"
+      },
+      {
+        "id": "L03",
+        "result": "合格",
+        "evidence": "URL欠落/不正、日時不正、手動状態、販売終了時の導線を確認。"
+      },
+      {
+        "id": "L04",
+        "result": "未検証",
+        "evidence": "外部リンクのURL・別タブ属性を保持。販売先の実際の受付、地図サービス、Xへの到達は今回未検証。"
+      },
+      {
+        "id": "L05",
+        "result": "対象外",
+        "evidence": "解析未導入。購入クリックを購入完了として記録する処理は追加していない。"
+      },
+      {
+        "id": "P01",
+        "result": "合格",
+        "evidence": "HERO優先・CAST/FLYER遅延読込を保持。初期フライヤー・拡大画像先読みなしを確認。"
+      },
+      {
+        "id": "P02",
+        "result": "未検証",
+        "evidence": "配信JSのgzipは4609 bytes。ローカルで初期リソースを記録。本番サーバー転送・実回線性能は未測定。"
+      },
+      {
+        "id": "P03",
+        "result": "合格",
+        "evidence": "HERO最大：PC191672 bytes、スマホ89954 bytes。各目安の範囲内。"
+      },
+      {
+        "id": "P04",
+        "result": "未検証",
+        "evidence": "今回のLCP/CLS再計測は未実施。以前の異なるビジュアル・環境の値を現行達成値に流用しない。"
+      },
+      {
+        "id": "P05",
+        "result": "未検証",
+        "evidence": "主操作と日時切替はローカルで確認。実利用INPは未測定。"
+      },
+      {
+        "id": "P06",
+        "result": "合格",
+        "evidence": "サブセット3書体をバイト一致で保持しロードを確認。公開文字の追加なし。"
+      },
+      {
+        "id": "P07",
+        "result": "合格",
+        "evidence": "今回のローカル操作範囲で未処理例外・必須素材404なし。実サーバー設定は別確認。"
+      },
+      {
+        "id": "P08",
+        "result": "未検証",
+        "evidence": "Windows Chrome154で確認。実機iOS/Android、Firefox/Safariおよび今回のEdge検証は未実施。"
+      },
+      {
+        "id": "R01",
+        "result": "合格",
+        "evidence": "コード正本・対象SHA・公開データ参照版を記録。同期ソースは読み取りのみ。"
+      },
+      {
+        "id": "R02",
+        "result": "合格",
+        "evidence": "HTTP/HTTPS別の本番ビルド・再生成一致を確認。自動切替の仮設定はテスト内のみ。"
+      },
+      {
+        "id": "R03",
+        "result": "合格",
+        "evidence": "正式OGP画像のSHA/寸法を照合。title/descriptionは承認済み版を維持。"
+      },
+      {
+        "id": "R04",
+        "result": "未検証",
+        "evidence": "本番用HTMLのnoindex除去・canonical/OGP/X画像URLを確認。公開プロトコルはクライアントのSSL確認後に選択。本番取得・SNSカードは未検証。"
+      },
+      {
+        "id": "R05",
+        "result": "未検証",
+        "evidence": "本番ZIPの展開・全ファイル一致・ローカルHTTP/HTTPSルート/サブディレクトリ検証は合格。本番Webサーバーへの配置は未実施。"
+      },
+      {
+        "id": "R06",
+        "result": "合格",
+        "evidence": "本番配置ZIP2種、更新用ソース、配置/運用説明、検証・未検証記録、ファイルハッシュを用意。"
+      }
+    ],
+    "scope": "Results apply to the described conditions and delivery changes; not all quality targets or environments are verified."
+  },
+  "documents": [
+    {
+      "file": "01_設置・運用ガイド.txt",
+      "bytes": 4854,
+      "sha256": "e07a4f3033a63389af0793df5fe96c9b8c7fb87b0b44d6a3f472ebdb0b0a01d2"
+    },
+    {
+      "file": "02_検証記録.txt",
+      "bytes": 3889,
+      "sha256": "38fe68b83959899d5c9ea198703b6f5f44c4b8d63610e8ae08bbfd361172046c"
+    }
+  ]
+}
