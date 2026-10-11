@@ -87,6 +87,7 @@ const subjectText = document.querySelector("[data-subject-text]");
 const selectedTalentText = document.querySelector("[data-selected-talent]");
 const profileReturn = document.querySelector("[data-talent-return]");
 const profileReturnLink = document.querySelector("[data-talent-return-link]");
+const inquiryGuidance = document.querySelector("[data-inquiry-guidance]");
 let inquiryText = "";
 
 function updateInquiry() {
@@ -107,6 +108,14 @@ function updateInquiry() {
   inquiryText = `件名：${subject}\r\n\r\n${body}`;
   if (subjectText) subjectText.textContent = `件名：${subject}`;
   if (inquiryBody) inquiryBody.textContent = inquiryText;
+  if (inquiryGuidance) {
+    const items = ["対象タレント名（指定がある場合）", ...inquiry.fields.map((field) => field.replace(/：$/, "")), "ご担当者名・ご連絡先"];
+    inquiryGuidance.replaceChildren(...items.map((text) => {
+      const item = document.createElement("li");
+      item.textContent = text;
+      return item;
+    }));
+  }
   if (selectedTalentText) {
     selectedTalentText.hidden = !name;
     selectedTalentText.textContent = name ? `${name}への${inquiry.label}` : "";
