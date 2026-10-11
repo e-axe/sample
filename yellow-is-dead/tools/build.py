@@ -3,6 +3,12 @@ import json, html, pathlib, datetime, re, hashlib, os
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'performance.json').read_text(encoding='utf-8'))
+if DATA['sale']['status'] == 'scheduled':
+    starts = datetime.datetime.fromisoformat(DATA['sale']['startsAt'])
+    ends = datetime.datetime.fromisoformat(DATA['sale']['endsAt'])
+    if starts.utcoffset() is None or ends.utcoffset() is None or starts >= ends:
+        raise ValueError('Scheduled sales require ordered ISO start/end timestamps with timezone offsets')
+sale_config = json.dumps(DATA['sale'], ensure_ascii=False, separators=(',', ':')).replace('<', r'\u003c').replace('>', r'\u003e').replace('&', r'\u0026')
 def asset_version(name):
     return hashlib.sha256((ROOT / name).read_bytes()).hexdigest()[:12]
 esc = html.escape
@@ -15,8 +21,8 @@ def cta(place, label='チケット情報', style='primary'):
     target=sale['url'] if active else '#ticket'
     text='チケットを購入' if active else ('公演情報' if sale['status']=='ended' else label)
     extra = f' {new_tab}' if active else ''
-    hint = new_tab_hint if active else ''
-    return f'<a class="button {style}" data-ticket-placement="{place}" href="{esc(target)}"{extra}>{text}{hint}</a>'
+    hint = f'<span class="sr-only ticket-new-tab-hint"{ "" if active else " hidden" }>（新しいタブで開きます）</span>'
+    return f'<a class="button {style}" data-ticket-placement="{place}" data-ticket-label="{esc(label)}" href="{esc(target)}"{extra}><span class="ticket-cta-label">{text}</span>{hint}</a>'
 nav=''.join(f'<a href="#{key}">{key.upper()}</a>' for key in ['story','schedule','ticket','cast','flyer','access'])
 people=[p for g in DATA['castGroups'] for p in g['members']]
 reading_ids={p['id'] for g in DATA['castGroups'] if g['label']=='〈Reading cast〉' for p in g['members']}
@@ -77,7 +83,7 @@ sale_message='発売前' if sale['status']=='before_sale' else release
 sale_details=f'<div><p class="sale-status">{sale_message}</p><p class="sale-vendor">{esc(sale.get("vendor",""))}</p>{sale_period or "<p>"+release+"</p>"}</div>'
 if sale['url'] and sale['status']!='ended':
     ticket_label='チケットを購入' if sale['status']=='on_sale' else 'カンフェティの販売ページを見る'
-    ticket_primary=f'<a class="button primary sale-page-link" data-ticket-placement="ticket" href="{esc(sale["url"])}" {new_tab}>{ticket_label}{new_tab_hint}</a>'
+    ticket_primary=f'<a class="button primary sale-page-link" data-ticket-placement="ticket" data-ticket-label="カンフェティの販売ページを見る" href="{esc(sale["url"])}" {new_tab}><span class="ticket-cta-label">{ticket_label}</span><span class="sr-only ticket-new-tab-hint">（新しいタブで開きます）</span></a>'
 else:
     ticket_primary=''
 ticket_actions=f'{ticket_primary}<a class="button secondary" href="#schedule">出演日程を確認する</a>'
@@ -127,7 +133,7 @@ social_meta=(
 )
 brand_title=title.replace('イエロー','<span class="title-yellow">イエロー</span>',1).replace('死','<span class="title-red">死</span>',1)
 page=f'''<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="{robots}"><meta name="theme-color" content="#FFD928"><title>舞台『{title}』｜Soft Boiled Theater-16</title><meta name="description" content="{page_description}">{social_meta}{canonical}<link rel="icon" type="image/svg+xml" href="assets/yellow-is-dead-favicon.svg"><link rel="preload" as="image" href="assets/yellow-is-dead-hero-e-suit-mobile-800.webp" imagesrcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" imagesizes="100vw" media="(max-width:767px)" type="image/webp" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="fonts/yellow-is-dead-gothic-800.woff2" crossorigin><link rel="stylesheet" href="style.css?v={asset_version("style.css")}"><script src="app.js?v={asset_version("app.js")}" defer></script></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="{robots}"><meta name="theme-color" content="#FFD928"><title>舞台『{title}』｜Soft Boiled Theater-16</title><meta name="description" content="{page_description}">{social_meta}{canonical}<link rel="icon" type="image/svg+xml" href="assets/yellow-is-dead-favicon.svg"><link rel="preload" as="image" href="assets/yellow-is-dead-hero-e-suit-mobile-800.webp" imagesrcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" imagesizes="100vw" media="(max-width:767px)" type="image/webp" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="fonts/yellow-is-dead-gothic-800.woff2" crossorigin><link rel="stylesheet" href="style.css?v={asset_version("style.css")}"><script src="app.js?v={asset_version("app.js")}" defer></script><script type="application/json" id="ticket-sale-config">{sale_config}</script></head>
 <body><a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="#top" aria-label="{title}のページ先頭"><span class="brand-title">{brand_title}</span><span class="brand-series en">Soft Boiled Theater-16</span></a><nav class="desktop-nav" aria-label="メインメニュー">{nav}</nav>{cta('header','チケット情報','primary header-ticket')}<details class="mobile-menu"><summary aria-label="メニューを開閉" aria-controls="mobile-navigation"><span class="menu-lines" aria-hidden="true"></span><span class="menu-caption">MENU</span></summary><nav id="mobile-navigation" aria-label="モバイルメニュー">{nav}</nav></details></div></header>
 <main id="main" tabindex="-1"><section class="hero" id="top" aria-label="公演概要"><picture class="hero-picture"><source media="(max-width:767px)" srcset="assets/yellow-is-dead-hero-e-suit-mobile-640.webp 640w, assets/yellow-is-dead-hero-e-suit-mobile-800.webp 800w" sizes="100vw"><img src="assets/yellow-is-dead-hero-e-suit-1536.webp" srcset="assets/yellow-is-dead-hero-e-suit-1536.webp 1536w, assets/yellow-is-dead-hero-e-suit-1920.webp 1920w" sizes="(min-width:1600px) 1215px, (min-width:1201px) 1080px, (min-width:1080px) 1005px, (min-width:960px) 960px, 100vw" alt="白いコインランドリーの作業台に残された、イエローのマスクと破れた黄色いスーツ" width="1536" height="1024" fetchpriority="high" decoding="async"></picture><div class="caution-tape" aria-hidden="true"><span class="en">CAUTION</span><strong class="en">Soft Boiled Theater-16</strong><span class="en">CAUTION</span></div><div class="hero-inner"><div class="hero-copy"><p class="hero-unit">クリエイティブユニット【ソフトボイルド】</p><p class="hero-series en">Soft Boiled Theater-16</p><h1><span class="sr-only">{title}</span><picture><source media="(max-width:767px)" srcset="assets/yellow-is-dead-logo-640.webp"><img class="official-logo" src="assets/yellow-is-dead-logo-800.webp" srcset="assets/yellow-is-dead-logo-640.webp 640w, assets/yellow-is-dead-logo-800.webp 800w, assets/yellow-is-dead-logo-1200.webp 1200w" sizes="(max-width:767px) calc(100vw - 40px), (min-width:1600px) 560px, 46vw" alt="" width="1200" height="750" fetchpriority="high"></picture></h1><div class="hero-date"><span class="en year">{year}</span><p class="en date-range"><span>{start_date}<small>{start_en}</small></span><span class="date-separator">—</span><span>{end_date}<small>{end_en}</small></span></p></div><p class="hero-venue en">{venue} <span class="jp">全{total}ステージ</span></p><p class="release-text">{release}</p><div class="hero-actions">{cta('hero','公演日程・チケット')}<a class="button secondary" href="#story">物語を読む</a></div></div></div></section>

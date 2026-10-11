@@ -96,7 +96,7 @@
   ],
   "ticketNote": "全席指定席／当日券500円増し",
   "sale": {
-    "status": "before_sale",
+    "status": "scheduled",
     "url": "http://confetti-web.com/softboiled16",
     "vendor": "カンフェティ",
     "startsAt": "2026-10-13T22:00:00+09:00",

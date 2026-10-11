@@ -1,0 +1,551 @@
+{
+  "date": "2026-10-11",
+  "browser": "154.0.8037.98",
+  "environment": "Windows Chrome headless; HTTP/HTTPS requests fulfilled by Playwright from verified local files; no client-server/TLS or physical mobile tests",
+  "sale": {
+    "status": "scheduled",
+    "url": "http://confetti-web.com/softboiled16",
+    "vendor": "カンフェティ",
+    "startsAt": "2026-10-13T22:00:00+09:00",
+    "endsAt": "2026-11-23T21:00:00+09:00",
+    "startLabel": "2026年10月13日（火）22:00",
+    "endLabel": "11月23日（祝・月）21:00",
+    "method": "先着順",
+    "releaseText": "10月13日（火）22:00〜 カンフェティにて販売開始"
+  },
+  "results": [
+    {
+      "name": "start-minus-1ms",
+      "state": "before_sale",
+      "links": [
+        {
+          "place": "header",
+          "label": "チケット情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "hero",
+          "label": "公演日程・チケット",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "ticket",
+          "label": "カンフェティの販売ページを見る",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "footer",
+          "label": "チケット情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "sticky",
+          "label": "チケット情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "exact-start",
+      "state": "on_sale",
+      "links": [
+        {
+          "place": "header",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "hero",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "ticket",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "footer",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "sticky",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "late-install",
+      "state": "on_sale",
+      "links": [
+        {
+          "place": "header",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "hero",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "ticket",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "footer",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "sticky",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "end-minus-1ms",
+      "state": "on_sale",
+      "links": [
+        {
+          "place": "header",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "hero",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "ticket",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "footer",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        },
+        {
+          "place": "sticky",
+          "label": "チケットを購入",
+          "href": "http://confetti-web.com/softboiled16",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "hidden": false,
+          "hintHidden": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "exact-end",
+      "state": "ended",
+      "links": [
+        {
+          "place": "header",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "hero",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "ticket",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": true,
+          "hintHidden": true
+        },
+        {
+          "place": "footer",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "sticky",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "after-end",
+      "state": "ended",
+      "links": [
+        {
+          "place": "header",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "hero",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "ticket",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": true,
+          "hintHidden": true
+        },
+        {
+          "place": "footer",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        },
+        {
+          "place": "sticky",
+          "label": "公演情報",
+          "href": "#ticket",
+          "target": "",
+          "rel": "",
+          "hidden": false,
+          "hintHidden": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "open-across-start",
+      "state": "on_sale"
+    },
+    {
+      "name": "open-across-end",
+      "state": "ended"
+    },
+    {
+      "name": "resume-pageshow",
+      "state": "on_sale"
+    },
+    {
+      "name": "resume-focus",
+      "state": "on_sale"
+    },
+    {
+      "name": "resume-visibilitychange",
+      "state": "on_sale"
+    },
+    {
+      "name": "stale-cta-click",
+      "state": "on_sale"
+    },
+    {
+      "name": "missing-url",
+      "state": "information"
+    },
+    {
+      "name": "invalid-url",
+      "state": "information"
+    },
+    {
+      "name": "invalid-period",
+      "state": "information"
+    },
+    {
+      "name": "manual-before",
+      "state": "before_sale"
+    },
+    {
+      "name": "manual-ended",
+      "state": "ended"
+    },
+    {
+      "name": "manual-active",
+      "state": "on_sale"
+    },
+    {
+      "name": "layout",
+      "width": 320,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 320,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 320,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 375,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 375,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 375,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 390,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 390,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 390,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 430,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 430,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 430,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 768,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 768,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 768,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1024,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1024,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1024,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1080,
+      "state": "before_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1080,
+      "state": "on_sale",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1080,
+      "state": "ended",
+      "protocol": "http",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1440,
+      "state": "before_sale",
+      "protocol": "https",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1440,
+      "state": "on_sale",
+      "protocol": "https",
+      "subdirectory": true
+    },
+    {
+      "name": "layout",
+      "width": 1440,
+      "state": "ended",
+      "protocol": "https",
+      "subdirectory": true
+    },
+    {
+      "name": "javascript-disabled",
+      "fallback": "neutral release information and sales-page link"
+    }
+  ],
+  "passed": 43
+}

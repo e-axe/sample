@@ -1,4 +1,76 @@
 (() => {
+  const source = document.getElementById('ticket-sale-config');
+  if (!source) return;
+  let sale;
+  try { sale = JSON.parse(source.textContent); } catch { return; }
+  const start = Date.parse(sale.startsAt), end = Date.parse(sale.endsAt);
+  const scheduled = sale.status === 'scheduled';
+  const validPeriod = Number.isFinite(start) && Number.isFinite(end) && start < end;
+  let ticketUrl = '';
+  try {
+    const url = new URL(sale.url);
+    if (['http:', 'https:'].includes(url.protocol) && !url.username && !url.password) ticketUrl = url.href;
+  } catch { /* No purchase CTA without a confirmed HTTP(S) URL. */ }
+  const links = [...document.querySelectorAll('[data-ticket-placement]')];
+  let renderedState, timer;
+  const stateAt = now => {
+    if (!scheduled) return ['before_sale', 'on_sale', 'ended'].includes(sale.status) ? sale.status : 'information';
+    if (!validPeriod || !Number.isFinite(now)) return 'information';
+    return now >= end ? 'ended' : now >= start ? 'on_sale' : 'before_sale';
+  };
+  const render = state => {
+    if (state === renderedState) return;
+    renderedState = state;
+    const active = state === 'on_sale' && Boolean(ticketUrl);
+    const ended = state === 'ended';
+    links.forEach(link => {
+      const direct = link.dataset.ticketPlacement === 'ticket';
+      const external = Boolean(ticketUrl) && (active || (direct && !ended));
+      const hidden = direct && (ended || !ticketUrl);
+      const label = active ? 'チケットを購入' : ended ? '公演情報' : link.dataset.ticketLabel;
+      link.href = external ? ticketUrl : '#ticket';
+      link.querySelector('.ticket-cta-label').textContent = label;
+      link.querySelector('.ticket-new-tab-hint').hidden = !external;
+      if (external) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      } else {
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+      }
+      if (hidden && document.activeElement === link) document.querySelector('.ticket-action .secondary')?.focus({preventScroll:true});
+      link.hidden = hidden;
+    });
+    const status = document.querySelector('.sale-status');
+    if (status) status.textContent = ended ? '販売終了' : active ? '販売中' : state === 'before_sale' ? '発売前' : 'チケット情報';
+    const release = document.querySelector('.release-text');
+    if (release) release.textContent = ended ? '販売終了' : active ? sale.vendor + 'にて販売中' : sale.releaseText;
+    const badge = document.querySelector('.ticket-release > .en');
+    if (badge) badge.textContent = ended ? 'CLOSED' : active ? 'ON SALE' : 'RELEASE';
+  };
+  const refresh = () => {
+    clearTimeout(timer);
+    const now = Date.now();
+    render(stateAt(now));
+    if (!scheduled || !validPeriod) return;
+    // Exact boundary timers, bounded to recheck device-clock adjustments.
+    const boundary = now < start ? start : now < end ? end : Infinity;
+    timer = setTimeout(refresh, Math.max(1, Math.min(30000, boundary - now)));
+  };
+  refresh();
+  window.addEventListener('pageshow', refresh);
+  window.addEventListener('focus', refresh);
+  document.addEventListener('visibilitychange', refresh);
+  // Recheck before navigation even if a background tab's timer was throttled.
+  document.addEventListener('click', event => {
+    const link = event.target.closest('[data-ticket-placement]');
+    if (!link) return;
+    refresh();
+    if (link.hidden) event.preventDefault();
+  }, true);
+})();
+
+(() => {
   const header = document.querySelector('.site-header');
   if (header && 'ResizeObserver' in window) {
     const updateHeaderOffset = () => document.documentElement.style.setProperty('--header-offset', `${Math.ceil(header.getBoundingClientRect().height)}px`);

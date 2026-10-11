@@ -1,0 +1,14 @@
+[
+  {
+    "protocol": "http",
+    "canonicalAndOGPMatch": true,
+    "previewURLAbsent": true,
+    "scheduledSaleIncluded": true
+  },
+  {
+    "protocol": "https",
+    "canonicalAndOGPMatch": true,
+    "previewURLAbsent": true,
+    "scheduledSaleIncluded": true
+  }
+]
