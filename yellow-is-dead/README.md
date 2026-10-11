@@ -43,7 +43,7 @@ python3 tools/build.py
 ## 現在の確定待ち
 
 - キャスト写真18枚は2026-10-10に受領・実装済み。元幅500px未満の4枚は高密度画面での解像感に元素材の上限がある。
-- 本番公開先・canonical・索引方針。確認用のnoindexを本番に引き継ぐかは本番公開前に決定する。
+- 本番公開URL予定は `yellow-is-dead.softboiled.net`。HTTPS/TLSは本番サーバー側の確認待ち。確認用のnoindexは本番用ビルドに引き継がず、本番はcanonicalとOGP URLを本番アドレスに切り替える。
 - 実機iOS Safari / Android Chromeでの最終確認。
 
 未提示の開場時刻、上演時間、配役、座席図、残席、販売手数料、問い合わせ先、権利者は追加していない。公演理解用の非公開プロット・印刷原データ・元宣材写真は配信しない。
@@ -137,3 +137,15 @@ python3 tools/build.py
 ```
 
 画像出力には開発環境のsharpが必要。閲覧・サーバー配置には不要。配信容量・元画像ハッシュ・切り出し位置は `docs/hero-assets-20261011.json`、検証範囲は `docs/hero-implementation-20261011.md` を参照。旧HEROはGit履歴と素材ファイルで保持し、HTMLからは参照せず、今回の配置用ZIPには採用画像だけを入れる。
+
+## 2026-10-11 OGP正式採用・本番URL予定（ユーザー承認）
+
+- 正式採用したOGP画像：2026-10-11制作の横長ビジュアル。洗濯機内のイエローのマスク、作品タイトル、黄色と黒の規制テープ、公演日程・劇場表記。以後、代替画像への独断変更をしない。通常のHEROは承認済みE案・スーツ残骸追加版を維持し、OGPのみこの画像を使用する。
+- 正式配信画像：`assets/yellow-is-dead-ogp.jpg`（1200×630px、JPEG、240,312 bytes、SHA-256 `ef4e8ee73080c2361c518f326ba365767c28baf18143fd583ff940e227d3feb1`）。
+- 元の公式素材保管先：Google Drive『イエローが死んだ』フォルダ内 `yellow-is-dead-ogp.jpg`（ファイルID `1gzkgOpvC71BjLvGnxB41aREhRIKMz0i4`）。GitHubの配信素材とバイト単位で同一。
+- 確認用GitHub Pages：`https://e-axe.github.io/sample/yellow-is-dead/`。既存通り `noindex,nofollow,noarchive` を維持。OGP画像URLは確認用ドメインの絶対URLを設定。
+- 本番URL予定：`https://yellow-is-dead.softboiled.net/`（**HTTPS/TLS有効化をサーバー側で確認するまで確定公開URLとして断定しない**）。ユーザーからの指定は `yellow-is-dead.softboiled.net/`、正式なプロトコルは公開時のSSL確認で決定。
+- OGP／Xカード：`og:type`、`og:locale`、`og:site_name`、`og:title`、`og:description`、`og:url`、`og:image`、画像寸法とalt、`twitter:card=summary_large_image` ほかをビルドで出力。
+- 本番ビルドの例（HTTPS利用可能と確認後）：`YELLOW_IS_DEAD_ENV=production YELLOW_IS_DEAD_PUBLIC_URL=https://yellow-is-dead.softboiled.net/ python3 tools/build.py`。既定では確認用URL＋noindexを出力する。**本番ビルドはGitHub Pages上の確認用index.htmlを置換せず、納品用の別コピーで実行すること**。
+- 配信前の検証：実ファイルへのHTTP 200、Content-Type `image/jpeg`、1200×630px、OGP/Twitterの画像URL、canonicalの一致、`noindex` の本番残存なし、X/Facebook等のカードプレビュー、TLS・リダイレクト。SNSキャッシュの再取得は公開後に行う。
+- 制作の記録はGitHubを正本とする。OGP採用・本番URL予定は正式公演の内容変更ではないため、公演情報最新版ファイルの内容は改変しない。
