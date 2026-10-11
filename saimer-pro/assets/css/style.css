@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&display=swap");
 
+/* Casting-focused additions; retain the approved blue editorial design. */
+[hidden] {
+  display: none !important;
+}
+
 :root {
   /* Shared palette — v1.3.2 vivid blue matched to the supplied reference. */
   --color-bg: #F5FAFE;
@@ -1644,6 +1649,251 @@ h1, h2, h3, .brand, .global-nav, .footer-brand {
 
 .back-link:focus-visible .link-arrow {
   transform: translateX(-4px);
+}
+
+/* Final-review content and casting journey, 2026-10-11. */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin-top: 28px;
+  max-width: 680px;
+}
+
+.hero-actions .button {
+  gap: 16px;
+  min-width: 0;
+}
+
+.hero-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  color: var(--color-accent-hover);
+  font-size: 13px;
+}
+
+.hero-contact-link:hover,
+.hero-contact-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.hero-actions .link-arrow,
+.talent-card-role .link-arrow {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 16px;
+}
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-line);
+}
+
+.photo-placeholder::before {
+  position: absolute;
+  inset: 18px;
+  border: 1px solid var(--color-line);
+  content: "";
+}
+
+.photo-placeholder-copy {
+  display: grid;
+  gap: 8px;
+  padding: 28px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.photo-placeholder-en {
+  font-family: var(--serif-en);
+  font-size: clamp(28px, 3.4vw, 44px);
+  letter-spacing: 0.07em;
+}
+
+.photo-placeholder-caption {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.talent-card-role {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+.talent-card-role span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.talent-intro {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.talent-main-photo {
+  width: 100%;
+  max-width: 480px;
+}
+
+.talent-bio {
+  margin: 24px 0 0;
+  font-family: var(--serif-ja);
+  line-height: 1.9;
+}
+
+.offer-talent-name {
+  margin: 0 0 16px;
+  font-family: var(--serif-ja);
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 500;
+}
+
+.offer-intro {
+  max-width: 760px;
+  margin: 0 0 24px;
+}
+
+.talent-contact,
+.talent-social {
+  margin-top: clamp(36px, 5vw, 60px);
+}
+
+.talent-social-title {
+  margin-bottom: 20px;
+}
+
+.talent-social .social-description {
+  overflow-wrap: anywhere;
+}
+
+.works-pending {
+  margin: 0;
+}
+
+.philosophy-copy {
+  max-width: 800px;
+  margin-top: 32px;
+  font-family: var(--serif-ja);
+  line-height: 2;
+}
+
+.company-pending {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+
+.page-lead p {
+  margin: 0;
+}
+
+.page-lead p + p {
+  margin-top: 12px;
+}
+
+.section-description {
+  max-width: 760px;
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.contact-heading {
+  margin: 28px 0 0;
+  font-family: var(--serif-ja);
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.contact-email-section {
+  padding-top: 0;
+}
+
+.selected-talent {
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-line);
+  font-family: var(--serif-ja);
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.email-pending {
+  margin: 0;
+  font-family: var(--serif-ja);
+  font-size: clamp(20px, 2.8vw, 32px);
+  line-height: 1.6;
+}
+
+.email-pending-note {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.button[aria-disabled="true"],
+.button:disabled {
+  border-color: var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  cursor: default;
+}
+
+.contact-subject {
+  overflow-wrap: anywhere;
+}
+
+.contact-guidance h3 {
+  margin: 0 0 24px;
+  font-family: var(--serif-ja);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .hero-inner {
+    padding-block: 44px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 360px;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-contact-link {
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .talent-main-photo {
+    max-width: 360px;
+  }
+
+  .talent-intro {
+    gap: 28px;
+  }
+
+  .button {
+    min-width: 0;
+  }
+
+  .email-panel .button {
+    padding-inline: 14px;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

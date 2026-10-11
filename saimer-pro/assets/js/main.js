@@ -66,9 +66,80 @@ setMenu(false);
 
 const copyButton = document.querySelector("[data-copy-email]");
 const copyStatus = document.querySelector("[data-copy-status]");
-const email = "saimer.pro.onishi@outlook.jp";
+// Set only the approved recipient on the contact page after it is received.
+const contactPanel = document.querySelector("[data-contact-email]");
+const email = contactPanel?.dataset.contactEmail.trim() || "";
+
+const talentNames = Object.freeze({
+  "ishihara-yueto": "石原 月斗",
+  "nakayama-yui": "中山 結心",
+  "tsukigata-hina": "月形 陽南",
+  "takashima-hiroki": "髙島 大幹",
+});
+
+const params = new URLSearchParams(window.location.search);
+const talentSlug = params.get("talent");
+const selectedTalent = Object.hasOwn(talentNames, talentSlug)
+  ? talentNames[talentSlug]
+  : "";
+const mailLinks = document.querySelectorAll("[data-mail-link]");
+const subjectText = document.querySelector("[data-subject-text]");
+const selectedTalentText = document.querySelector("[data-selected-talent]");
+
+function castingSubject(name) {
+  return name
+    ? `【出演依頼】${name}様へのご相談｜S'aimerプロダクション`
+    : "【S'aimerプロダクション】出演・キャスティングのご相談";
+}
+
+function castingBody(name) {
+  return [
+    "S'aimerプロダクション ご担当者様",
+    "",
+    "出演・キャスティングについて相談いたします。",
+    "",
+    `対象タレント名：${name || "（指定がある場合）"}`,
+    "作品・企画の概要：",
+    "出演予定日・期間：",
+    "撮影・公演場所：",
+    "ご希望の役柄や出演条件：",
+    "ご予算・報酬条件（決まっている場合）：",
+    "ご担当者名・ご連絡先：",
+    "",
+    "※わかる範囲でご記入ください。すべての項目が揃っていなくてもご相談いただけます。",
+  ].join("\r\n");
+}
+
+if (contactPanel) {
+  const subject = castingSubject(selectedTalent);
+  if (subjectText) subjectText.textContent = `件名：${subject}`;
+  if (selectedTalent && selectedTalentText) {
+    selectedTalentText.hidden = false;
+    selectedTalentText.textContent = `${selectedTalent}への出演・キャスティングのご相談`;
+  }
+
+  // An unset recipient must never fall back to the superseded address.
+  if (email) {
+    const href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(castingBody(selectedTalent))}`;
+    mailLinks.forEach((mailLink) => {
+      mailLink.href = href;
+      mailLink.classList.remove("is-disabled");
+      mailLink.removeAttribute("aria-disabled");
+    });
+    const address = document.querySelector("[data-email-address]");
+    if (address) {
+      address.textContent = email;
+      address.hidden = false;
+    }
+    document.querySelectorAll("[data-email-pending]").forEach((node) => {
+      node.hidden = true;
+    });
+    if (copyButton) copyButton.disabled = false;
+  }
+}
 
 copyButton?.addEventListener("click", async () => {
+  if (!email) return;
   copyButton.disabled = true;
   let copied = false;
   try {
@@ -98,30 +169,6 @@ copyButton?.addEventListener("click", async () => {
       : "コピーできませんでした。表示されているメールアドレスを選択してコピーしてください。";
   }
 });
-
-const talentNames = {
-  "ishihara-yueto": "石原 月斗",
-  "nakayama-yui": "中山 結心",
-  "tsukigata-hina": "月形 陽奈",
-  "takashima-hiroki": "髙島 大幹",
-};
-
-const params = new URLSearchParams(window.location.search);
-const selectedTalent = talentNames[params.get("talent")];
-const mailLinks = document.querySelectorAll("[data-mail-link]");
-const subjectText = document.querySelector("[data-subject-text]");
-
-if (mailLinks.length) {
-  const subject = selectedTalent
-    ? `【出演・キャスティングのご相談】${selectedTalent}について`
-    : "【S'aimerプロダクション】お問い合わせ";
-  mailLinks.forEach((mailLink) => {
-    mailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-  });
-  if (selectedTalent && subjectText) {
-    subjectText.textContent = `${selectedTalent}さんへのご依頼として件名を設定します。`;
-  }
-}
 
 document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
