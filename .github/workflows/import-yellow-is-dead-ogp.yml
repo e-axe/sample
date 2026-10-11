@@ -1,0 +1,40 @@
+name: Import approved Yellow Is Dead OGP
+on:
+  push:
+    paths:
+      - .github/workflows/import-yellow-is-dead-ogp.yml
+permissions:
+  contents: write
+jobs:
+  import-ogp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Fetch exact approved OGP from official asset folder
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="ef4e8ee73080c2361c518f326ba365767c28baf18143fd583ff940e227d3feb1"
+          for url in "https://drive.google.com/uc?export=download&id=1gzkgOpvC71BjLvGnxB41aREhRIKMz0i4" "https://drive.usercontent.google.com/download?id=1gzkgOpvC71BjLvGnxB41aREhRIKMz0i4&export=download&confirm=t"; do
+            if curl --retry 3 --max-time 60 -fLsS "$url" -o /tmp/approved-ogp.jpg; then
+              got="$(sha256sum /tmp/approved-ogp.jpg | cut -d ' ' -f1)"
+              if [[ "$got" == "$expected" ]]; then
+                cp /tmp/approved-ogp.jpg yellow-is-dead/assets/yellow-is-dead-ogp.jpg
+                break
+              fi
+            fi
+          done
+          test -f yellow-is-dead/assets/yellow-is-dead-ogp.jpg
+          echo "$expected  yellow-is-dead/assets/yellow-is-dead-ogp.jpg" | sha256sum -c -
+      - name: Commit OGP asset
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add yellow-is-dead/assets/yellow-is-dead-ogp.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Add approved Yellow Is Dead OGP image (1200x630)"
+            git push origin HEAD:main
+          fi
