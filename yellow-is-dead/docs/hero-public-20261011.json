@@ -1,0 +1,75 @@
+{
+  "verifiedAt": "2026-10-11T03:04:34.710023+00:00",
+  "sourceCommit": "a0c7ccc55c9b0b61cd7c00f566b4516caa8b4ca2",
+  "url": "https://e-axe.github.io/sample/yellow-is-dead/",
+  "canonicalHtmlMatchesSource": true,
+  "pagesWorkflowRun": 38107122750,
+  "files": [
+    {
+      "path": "index.html",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 35131,
+      "sha256": "4248f814de7585c6730e61ad382828d77987fe2017c68a9c42c6d265a7555194",
+      "matchesSource": true
+    },
+    {
+      "path": "style.css?v=ad031dee9ad6",
+      "http": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 35445,
+      "sha256": "ad031dee9ad6e9e7f5703f3c4470a9bde69a4c1dba7b8c61d6ee1a7df2b7b7e0",
+      "matchesSource": true
+    },
+    {
+      "path": "app.js?v=bf9612b339e6",
+      "http": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 12009,
+      "sha256": "bf9612b339e668a04b8838459da0949d8e2f16344a3986bdec417164242346ad",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/yellow-is-dead-hero-e-suit-1536.webp",
+      "http": 200,
+      "contentType": "image/webp",
+      "bytes": 156452,
+      "sha256": "01aa28bdaf4e6e23344b9786355dc5307ea318e368c05564b92e8bda48e9e9ee",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/yellow-is-dead-hero-e-suit-1920.webp",
+      "http": 200,
+      "contentType": "image/webp",
+      "bytes": 191672,
+      "sha256": "e41266d95c26dd631cff8d5e99b259c2458ba56e4ee88e50faaeeb2c43b7a7d8",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/yellow-is-dead-hero-e-suit-mobile-640.webp",
+      "http": 200,
+      "contentType": "image/webp",
+      "bytes": 63374,
+      "sha256": "2add9dbacb85874ea8af76a0dbe8e80571fa56fe14c7590e219b32a2fcc44768",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/yellow-is-dead-hero-e-suit-mobile-800.webp",
+      "http": 200,
+      "contentType": "image/webp",
+      "bytes": 89954,
+      "sha256": "fc7ee1ef7f6411136971f68330a5d47604915e1d9b63cc53201da1c52361579f",
+      "matchesSource": true
+    },
+    {
+      "path": "yellow-is-dead-client-preview.zip?revision=a0c7ccc",
+      "http": 200,
+      "contentType": "application/x-zip-compressed",
+      "bytes": 15899235,
+      "sha256": "9c2c4c1e443612c8b7807f6854a22e20ff965d924a4262201fc79595423cc9db",
+      "matchesSource": true
+    }
+  ],
+  "browserAndRealDeviceQa": "not performed; this record verifies HTTP delivery and byte equality only",
+  "pagesWorkflowConclusion": "success"
+}
