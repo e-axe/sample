@@ -1,172 +1,95 @@
-# S'aimerプロダクション サンプルサイト
-
-## 現在の実装 2026年10月11日
+# S'aimerプロダクション｜確認用サイト
 
 確認用URL: https://e-axe.github.io/sample/saimer-pro/
 
-当日のクライアント回答・制作ブリーフと、20:05のユーザーによる実装指示を反映した最終確認用サイト。所属4名・全9ページの静的構成を維持しています。以下の従来記録より、この節と `docs/production-brief-2026-10-11.md` の最新状況を優先します。
+所属4名・全9ページの静的HTML/CSS/JavaScript。第一目的はキャスティングオファー獲得。2026-10-11のクライアント回答反映後、不具合・可読性・問い合わせ内容の整合性を改善した。
 
-- 第一目的はキャスティングオファー獲得。トップ→一覧→プロフィール・出演歴→氏名付き出演相談→CONTACTへつなぐ。ヒーローに一覧の主CTAと出演相談リンクを追加。
-- 承認対象の掲載原稿を、そのままトップABOUT・理念・事業内容・一覧・CONTACTに反映。既存の青空、鮮やかな青、英語ナビゲーションは維持。
-- 4名の基本情報・提供された紹介文・実績を反映し、「月形 陽南」「子役」へ訂正。身長や空の紹介文を表示しない。写真は3:4の文字と罫線による非人物プレースホルダー。未支給のギャラリーは非表示。
-- 事務所公式SNS4種はアイコンと「公開予定」を表示。本人SNSは20:50のユーザー指示により、アンケート記載のアカウントを正式な掲載情報として扱い、石原さんのX・Instagram、中山さんと月形さんのInstagramを新しいタブで開く有効リンクとして反映。髙島さんの回答は「なし」のためSNSを追加しない。
-- 問い合わせの対象タレント名を画面・件名・任意の本文に引き継ぐ。新メール未受領のためメールとコピーは無効化し、「メール窓口は公開準備中です」と表示。旧アドレスへ送信しない。
-- クライアント最終確認用のため全9ページの検索除外とサンプル表示を維持。本番公開は未完了。
+現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。本番公開には正式写真・新問い合わせメール・公開環境等の確定が必要。
 
-### 正式メール受領時
+制作判断と担当・素材待ちは [現在の制作ブリーフ](docs/production-brief-2026-10-11.md)、今回のレビューと検証は [レビュー記録](docs/review-2026-10-11.md) を参照。過去の保留判断・旧配色・旧写真の記録はGit履歴に保存されている。
 
-1. `contact/index.html` の `data-contact-email=""` に承認済みメールを設定。JSがメール件名・本文を生成し、表示アドレス・起動・コピーを有効化します。
-2. 同時にHTML側のメールCTAに一般問い合わせの `mailto:` を設定し、`aria-disabled` と `is-disabled` を削除。アドレス表示を実メール入りにし `hidden` を削除、コピーの `disabled` を削除、公開準備中の案内を除去。JavaScript無効時もメール・表示アドレスを使えるようにします。
-3. ABOUT／PRIVACYの問い合わせ窓口表示、サンプル案内、制作ブリーフの受領状況を更新。
+## 構成
 
-### 最終確認・素材待ち
+- `index.html`: 青空ヒーロー → TALENTS → ABOUT → SOCIAL → CONTACT
+- `talents/index.html`: 所属4名の一覧
+- `talents/<slug>/index.html`: 個別プロフィール・出演歴・対象者名付き出演相談・本人SNS
+- `about/index.html`: 理念・事業・会社情報
+- `contact/index.html`: メール窓口、相談種類・対象者選択、任意の相談文面
+- `privacy/index.html`: クライアント最終確認待ちのプライバシー文面
 
-正式写真、新問い合わせメール、事務所SNS URL、掲載文章・プライバシーの最終確認、公開環境の確定。未成年の保護者確認は取得済みで、再確認タスクに戻しません。
+CMS・ニュース・SNS埋め込み・送信フォーム・オーディションページは追加しない。
 
-中山さんの出演役名と、石原さんの「神戸セーラーボーイズ」の掲載分類は確認待ち。中山さんは作品名のみ、石原さんは確認できているミュージカル出演歴のみ掲載。髙島さんの出演歴は後日追加。
+## 色・レイアウト
 
-TikTokアイコン: Simple Icons のモノクロ形状（CC0）。取得元 https://github.com/simple-icons/simple-icons/blob/develop/icons/tiktok.svg 。他3サービスは従来の配布素材を維持。
-
-## 従来の実装記録
-
-仕様書 Version 1.2（2026年9月5日）対応。HTML / CSS / バニラJavaScriptで構成した、デザイン・構成確認用の全9ページです。
-
-確認用URL: https://e-axe.github.io/sample/saimer-pro/
-
-## 今回の反映
-
-- 9ページ、所属4名、既存URLと共通テンプレートを維持。
-- ブルーホワイト背景、見本に合わせた鮮やかな青の文字、スカイブルーの枠、ミストブルーのABOUTに統一。
-- トップの順序はヒーロー → TALENTS → ABOUT → SOCIAL → CONTACT。SOCIALとCONTACTは独立。
-- PCは4列、タブレットは2列、480px未満は1列。6名の一覧は `.talent-grid.is-six` でPC3列×2段に切り替え可能。トップは4名のまま。
-- メール問い合わせ・コピー、タレント名付きの件名、スマートフォンメニューを維持。コピー失敗時も成功と誤表示しない。
-- 正式素材未支給のため、サンプル表示を維持し、全ページに `noindex, nofollow` を設定。これは本番公式サイトの公開完了ではない。
-
-## カラーと余白
-
-`assets/css/style.css` の `:root` が調整箇所です。
+共通設定: `assets/css/style.css` の`:root`。トップの空画像とフェード: `assets/css/sky-images.css`。
 
 | 変数 | 値 | 用途 |
 | --- | --- | --- |
-| `--color-bg` | `#F5FAFE` | 全体背景 |
-| `--color-surface` | `#E6F3FB` | ABOUT・補助面 |
-| `--color-heading` | `#3883C8` | 見出し・ナビ |
-| `--color-text` | `#2478B3` | 本文 |
-| `--color-muted` | `#2478B3` | 補助文字 |
-| `--color-accent` | `#008BCB` | CTA枠 |
-| `--color-accent-hover` | `#17659D` | リンク・塗りボタンのホバー |
+| `--color-bg` | `#F5FAFE` | 基本背景 |
+| `--color-surface` | `#E6F3FB` | 補助面 |
+| `--color-heading` | `#3883C8` | 大見出し。参照モックの青を保持 |
+| `--color-text` / `--color-muted` | `#206DA2` | 本文・補助文字・小さな見出し・ナビ |
+| `--color-accent` | `#008BCB` | 枠・装飾 |
+| `--color-accent-hover` | `#17659D` | ホバー・操作部品の境界 |
 | `--color-line` | `#C6DEED` | 装飾罫線 |
-| `--color-white` / `--color-cta-text` | `#FFFFFF` | 白い面・ボタン文字 |
 | `--color-cta-bg` | `#006FA6` | 塗りボタン |
+| `--color-white` / `--color-cta-text` | `#FFFFFF` | 白い面・ボタン文字 |
 | `--color-focus` | `#3883C8` | キーボードフォーカス |
 
-最大幅1,240px。左右余白はPC40px／タブレット24px／スマートフォン20px。セクション上下余白はPC72px／スマートフォン40px。境界は1,200px／768pxです。
+最大幅1,240px。左右余白PC40／タブレット24／スマートフォン20px。セクション上下余白PC72／スマートフォン40px。4名はPC4列、1,200px未満2列、480px未満1列。6名へ追加する場合は`.talent-grid.is-six`でPC3列×2段にできる。
 
-## ヒーロー画像の差し替え
+Google FontsはHTMLのstylesheetリンクから読み込む。既存のCormorant Garamond、Noto Serif JP、Noto Sans JPと`display=swap`を維持。CSSの`@import`による追加の読み込み段階を除いた。
 
-更新日: 2026-09-06。ユーザーが今回選定したAI生成の青空画像を反映。旧画像は削除・上書きせず保存しています。
+## 画像差し替え
 
-| 対象 | 現在の参照先 | 寸法 | 表示位置 |
-| --- | --- | --- | --- |
-| PC | `assets/images/hero/sky-vivid-20260906-pc.webp` | 1,672×941 | `--hero-position-pc: 50% 50%` |
-| スマートフォン | `assets/images/hero/sky-vivid-20260906-sp.webp` | 960×540 | `--hero-position-sp: 38% 50%` |
+| 対象 | 現在使用中の素材 | 寸法 |
+| --- | --- | --- |
+| ヒーローPC | `assets/images/hero/sky-vivid-20260906-pc.webp` | 1,672×941 |
+| ヒーローSP | `assets/images/hero/sky-vivid-20260906-sp.webp` | 960×540 |
+| ABOUT PC | `assets/images/about/sky-arch-20260906-pc.webp` | 1,672×941 |
+| ABOUT SP | `assets/images/about/sky-arch-portrait-v2.webp` | 960×1,440 |
 
-1. ユーザー提供の原本を保管し、掲載許諾、残す被写体、切り抜き可否を確認する。
-2. Web用複製をsRGB・WebPで書き出す。PC1,920px程度／スマートフォン960px程度を目安にし、原本より拡大しない。
-3. `index.html` の `.hero-media picture` 内の `source srcset` と `img src` を正式ファイルへ変更する。`width`・`height` を実寸に合わせ、装飾写真は `alt=""` のままにする。画像を遅延読み込みしない。
-4. `--hero-position-pc` と `--hero-position-sp` を個別調整する。PCは `object-fit: cover`、文字は左配置。スマートフォンも画像をヒーロー全体の背景として配置し、文字を重ねる。高さは `clamp(420px, 65svh, 560px)` を最小値とし、文字量に応じて伸長する。
-5. `--hero-overlay` は `assets/css/sky-images.css` でPC・スマートフォン別に設定するブルーホワイトのグラデーション。写真への色加工は行わない。文字の最も読みにくい位置を確認し、必要なら面の濃度や文字領域を調整する。
-6. 320／375／768／1,024／1,440pxで切り抜き・文字・画像切れを確認する。差し替え時はこの表の参照先・位置・更新日を更新する。旧画像はユーザー指示により保存する。今回の画像には `data-asset-status="generated"` を設定。
+空・アーチはユーザー選定済み。旧空画像は以前の指示により保存。ヒーローの位置は`--hero-position-pc`、SPは`sky-images.css`内の`--hero-position-sp: 38% 50%`で調整する。
 
-現時点のヒーローはOGPには使用していません。OGP画像は正式素材・公開URL確定後に別途設定し、共有時の構図も確認します。
+**現在は所属者の人物写真を使用していない。** トップ・一覧・個別の`.photo-placeholder`を実画像へ置き換える。旧`sample-portraits.webp`は未使用の従来素材で、所属者の正式写真として流用しない。
 
-## タレント写真とギャラリー
+1. 原本を保管し、sRGBのWebP／JPEGを用意する。
+2. `.talent-photo`内に`img`を配置し、`.photo-placeholder`と仮コピーを外す。`role="img"`・仮`aria-label`・`data-asset-status="pending"`も外す。
+3. `src`、実寸の`width`・`height`、本人名を含む`alt`を設定。必要なら`--talent-position`で切り抜き位置を調整。
+4. 3:4を基本に顔・頭部が欠けないことをPC/SPで確認。ギャラリーは既存の`.talent-gallery`内に`figure`を追加し、標準3〜4枚／最大6枚程度まで確認。
+5. ファーストビューのメイン写真は遅延読み込みせず、ギャラリーに`loading="lazy" decoding="async"`を設定。
 
-現在の人物写真はデザイン確認用の1枚のスプライト画像で、実在する所属者の正式写真ではありません。
+## 正式メール受領時
 
-正式素材受領時は、各写真を `assets/images/talents/` に独立ファイルで配置します。`img` から `sprite-image`、`sprite-col-*`、`sprite-row-2` を除去し、`src`・`width`・`height`・`alt` を更新します。`.talent-photo > img:not(.sprite-image)` に3:4・`object-fit: cover`を設定済みです。必要なら `.talent-photo` の `--talent-position` を調整します。
+新メール未受領のため、現在はメール・アドレスコピーを無効化している。旧アドレスへ送信しない。
 
-4名ともメイン1枚＋ギャラリー1枚を仮配置しています。ギャラリー内の `figure` を複製し、サブ1〜5枚（合計2〜6枚）を掲載できます。共通のCSS Gridで自動改行します。ファーストビュー以外は `loading="lazy"` を設定します。
+1. `contact/index.html`の`data-contact-email=""`へ承認済みの新メールを設定。
+2. HTML側の`[data-mail-link]`にも一般相談の`mailto:`を設定し、`aria-disabled`・`is-disabled`を外す。アドレス表示に実メールを入れて`hidden`を外し、コピーの`disabled`を外す。`[data-email-pending]`を除去。JavaScript無効でもメールとアドレスが使えるようにする。
+3. ABOUT・PRIVACYのメール準備中表示、全ページのサンプル案内、制作ブリーフを更新。
+4. `?talent=<slug>`で4名の氏名が画面・件名・本文へ渡ることを確認。`?type=press`／`?type=other`で相談内容が一致することを確認。
+5. 件名・本文は相談種類に応じてJSが生成する。メールアプリの起動は送信完了ではなく、サイト内に送信処理はない。
 
-## 本番公開前の確認
+相談文面のコピーはメール未設定でも使える。任意項目の下書き補助であり、入力フォームではない。コピー失敗時は失敗を表示し、成功を装わない。
 
-- 正式ヒーロー画像、4名各2枚以上の正式写真を受領して差し替え。
-- 氏名・ふりがな・英字表記・URLスラッグと、公開許諾済みプロフィール・出演歴を確認。
-- 事務所理念・紹介文とプライバシーポリシーの最終文面を承認。
-- 事務所・本人の公式SNS URLを確認し、該当するものだけリンク化。`target="_blank" rel="noopener noreferrer"` と識別可能な名称を付与。未確認URLは作らない。
-- 全ページから仮表記・仮素材を除去した後に、検索除外用metaを外す。
-- canonical／OGP／sitemapを正式URLに合わせる。robots.txtは原則ドメイン直下で有効となるため、現状のサブフォルダ内のファイルは検索除外に使わずmetaを使用する。
-- メニュー開閉・Esc・フォーカス・背景スクロール、メール件名とコピー、JavaScript無効時の主要導線を確認。
-- 主要ブラウザとAndroid Chrome／iOS Safariの実機確認を本番公開前に行う。
+## SNS
 
-ニュースページ、SNS埋め込み、問い合わせ送信フォーム、CMS、オーディションページは追加しません。
+本人SNS4リンクはアンケート回答から反映済み。個別の`Talent Social`とトップの事務所`SOCIAL`を区別する。髙島さんは回答「なし」。事務所4サービスは公開予定の非クリック表示で維持。
 
-## ローカルプレビュー
+公式URL受領時は該当`.social-row`を`a`へ変更し、`target="_blank" rel="noopener noreferrer"`と識別可能な`aria-label`を設定。「公開予定」を外す。未開設のURLや`href="#"`は使わない。
 
-Node.jsが利用できる環境で、`saimer-pro` 内から `npm run dev -- --port 4173` を実行します。依存パッケージのインストールは不要です。開発用サーバーは `tools/preview.mjs` です。GitHub Pagesでは従来どおり静的ファイルを配信します。
-
-## v1.2実装時の検証結果
-
-- Chromiumで全9ページ×320／375／768／1,024／1,440pxの45通りを確認。横方向のはみ出し・画像欠落なし。写真領域の高さと一覧の列数も確認。
-- モバイルメニューの開閉、最初のリンクへのフォーカス、Escで閉じた後のフォーカス復帰、SOCIALへの移動を確認。
-- メールアドレスのコピー成功表示、一般問い合わせの件名、タレント詳細からの氏名入り件名を確認（メール送信は行わない）。
-- 全9ページのローカルリンク・アンカー・画像参照・画像属性・h1・検索除外metaを検査。JavaScript構文と `git diff --check` にエラーなし。
-- 使用する通常文字色と背景色の組み合わせの最小コントラスト比は4.86:1。白文字CTAは5.49:1、仮ヒーロー上の濃紺文字は最小6.55:1。
-- Android／iOSの実機およびSafariでの確認は未実施。正式素材への差し替え時に再確認する。
-
-### スマートフォンのヒーロー修正（v1.2.1）
-
-文字と空画像を上下に分離せず、PC同様に画像へ文字を重ねる構成へ変更。共通の淡い面と濃紺文字で可読性を確保し、PC側のレイアウトは変更していません。
-
-修正後はChromiumで320／375／430／767／1,440pxを確認。画像がヒーロー全面を覆い、見出しと本文が画像内に収まり、横方向にはみ出さないことを確認しました。
-
-## デザイン調整（v1.3）
-
-- X・Instagram・YouTubeを公式配布素材に更新。ロゴ本来の縦横比を保ち、見た目の大きさと中心を調整。青系UIに合わせ、ロゴは公式のモノクロ表現を使用。
-- ヒーローの日本語の字間・行間、モバイルのコピー、タレント名・英字表記のサイズと余白を調整。スマホの文字と空画像の重なり、既存の9ページとURLは維持。
-- CONTACT・VIEW ALL・MORE ABOUT US・BACK TO HOMEの矢印を共通のSVGに統一。CONTACTをGridで整列し、スマホでは説明文を次の行に配置。
-- ナビゲーションの下線やCONTACTのマウスオーバーは既存の動きを維持。写真の薄くなる効果を控えめにし、キーボードフォーカスでもリンクの手がかりを表示。動きを減らす設定では矢印移動・写真拡大も停止。
-- SOCIALは公式URL未支給のため、準備中の表示を維持。リンク先や実在プロフィールは追加していません。正式写真のトリミング・露出合わせは素材受領後に実施。
-
-### SNS素材の出典
-
-| ファイル | 公式配布元・処理 |
+| 素材 | 出典 |
 | --- | --- |
-| `assets/icons/x.svg` | https://about.x.com/en/who-we-are/brand-toolkit の `x-logo.zip` 内 `logo.svg`。形状・比率を保持し、同梱の黒版と同じ黒単色で表示。 |
-| `assets/icons/instagram.svg` | https://www.meta.com/brand/resources/instagram/instagram-brand/ の `IG_brand_asset_pack_2023.zip` 内 `Instagram_Glyph_Black.svg` をそのまま使用。 |
-| `assets/icons/youtube.png` | https://brand.youtube/youtube-icon の `youtube-icon.zip` 内 `yt_icon_almostblack_digital.png` をそのまま使用。配布画像内の透明な余白を含むため、表示幅40pxでロゴ本体が約26pxになるよう調整。 |
+| `assets/icons/x.svg` | X公式ブランドツールキットの黒版。 https://about.x.com/en/who-we-are/brand-toolkit |
+| `assets/icons/instagram.svg` | Meta公式配布のInstagram Glyph Black。 https://www.meta.com/brand/resources/instagram/instagram-brand/ |
+| `assets/icons/youtube.png` | YouTube公式配布のalmostblack digital。 https://brand.youtube/youtube-icon |
+| `assets/icons/tiktok.svg` | Simple Icons（CC0）。 https://github.com/simple-icons/simple-icons/blob/develop/icons/tiktok.svg |
 
-SNSロゴの形状・比率・配色は各社の公式素材に従います。UIの矢印は自作の共通線画で、SNSロゴには独自の変形・色フィルター・ホバーアニメーションを適用しません。
+SNSロゴの形・比率を維持。YouTube PNGの透明余白を含む表示幅は40px。サイトの矢印は共通のSVG。
 
-### v1.3の確認結果
+## 公開環境
 
-Chromiumで全9ページ×320／375／480／768／1,440pxの45通りを確認。横方向のはみ出し・画像欠落・CONTACTの文字と矢印の重なりなし。スマホのヒーロー背景と文字の重なりを維持。PCでCONTACTの既存ホバー（矢印6px移動）を確認しました。全9ページのリンク先が変更前と一致し、画像参照とSVGが有効であることも確認しています。
+GitHub Pagesは既存の`main`ブランチから静的配信。現在のcanonical・sitemapは確認用URLに合わせている。サブフォルダ内の`robots.txt`は検索除外の根拠にせず、全9ページのmetaで検索除外する。
 
-## ヒーロー表記・文字色の調整（v1.3.1）
+本番移行時は正式URL・HTTPS・設置方法を確定し、正式なOGP画像とプロフィール写真を設定する。確認用のSAMPLE表示・noindexを見直す。本番用ファイルに未使用サンプル人物素材や制作用docs/toolsを混ぜない。
 
-ヒーローの「プロダクション」を「Production」に変更。「S'aimer」と同じ欧文セリフ体で2段に配置。見出しを `#236695`、本文を `#2A5777`、補助文字を `#466C85` に調整しました。空画像上の小さなコピーは本文色を使用し、読みやすさを保ちます。公式SNSロゴは配布時のモノクロ表現を維持。会社名・連絡先・リンク先・既存の動きは変更していません。
-
-確認: 320／375／768／1,440pxで英字のはみ出しと背景上の文字配置を確認。通常背景上の文字コントラストは最小4.96:1。ヒーロー画像全域での最小値は、大きな見出し3.71:1、小さなコピー4.63:1です。
-
-## 見本に合わせた鮮やかな青（v1.3.2）
-
-添付見本のヒーロー文字から採った代表色 `#3883C8` を見出し・ナビゲーションに使用。本文・補助文字・文字リンクは、同系統で少し深い `#2478B3` に統一しました。JPEG画像のため、元デザインの厳密な指定色ではなく近似色です。白文字ボタンと選択文字の背景には濃い青を使用し、リンクのホバーは `#17659D` に切り替えます。
-
-レイアウト・文字内容・写真・公式SNSロゴ・リンク先・アニメーションは維持。全9ページのCSS参照を `v=1.3.2` に更新しています。過去バージョンのコントラスト検証値は旧配色に対する値です。
-
-確認: Chromiumでヒーロー・SOCIAL・CONTACT・フッターの描画と適用色を確認。全9ページのHTMLはCSSキャッシュ番号以外が変更前と完全一致し、CSSの差分は配色のみ。`git diff --check` にエラーなし。
-
-## 青空画像の反映（2026-09-06）
-
-- ユーザーが選定した青空・白いアーチの2点をトップのヒーローとABOUTに反映。元画像は各1,672×941。WebPのPC版と960×540のSP版を追加。
-- ABOUT: `assets/images/about/sky-arch-20260906-pc.webp` / `sky-arch-20260906-sp.webp`。PCでは右側にアーチ、左側に紹介文。767px以下では紹介文の下に画像を配置。
-- トップ専用の `assets/css/sky-images.css` を追加。既存の共通CSS・配色・ホバー動作・他8ページを維持。
-- 旧画像 `assets/images/hero/sky-sample-pc.webp` / `sky-sample-sp.webp` は元の場所に無変更で保存。旧ABOUTは画像なしの背景色。
-- 戻す場合: トップHTMLのヒーロー画像参照を旧2ファイルへ戻し、`sky-images.css` のlinkと `.about-sky-media` のpictureを外す。
-- サンプルサイトの表示・検索除外を維持。今回の画像選定は本番公式サイト全体の公開承認を意味しない。
-
-## ABOUTのレスポンシブ修正（2026-09-06 / v2）
-
-- PCの画像左端に直接フェードを設定し、背景色と画像の縦の境目を解消。アーチを含む元画像を contain で表示し、画像比率を維持。
-- 767px以下は縦長の新素材 `assets/images/about/sky-arch-portrait-v2.webp`（960×1440）を使用。文章も同じ画像領域に重ね、画面下部にアーチを収める。画像は contain で全体を保持し、余白は空色でなじませる。
-- 従来の青空画像・アーチ画像は全て保持。ヒーローと他セクションは変更しない。
+既存のローカル開発コマンドは`npm run dev -- --port 4173`（依存パッケージ不要、`tools/preview.mjs`）。今回の検証ではローカルブラウザサーバーを起動していない。
