@@ -1,0 +1,47 @@
+{
+  "static": {
+    "pages": 9,
+    "localReferences": 308,
+    "failures": []
+  },
+  "behavior": {
+    "cases": 31,
+    "checks": [
+      "contact:true:ishihara-yueto:casting",
+      "contact:true:ishihara-yueto:press",
+      "contact:true:ishihara-yueto:other",
+      "contact:true:nakayama-yui:casting",
+      "contact:true:nakayama-yui:press",
+      "contact:true:nakayama-yui:other",
+      "contact:true:tsukigata-hina:casting",
+      "contact:true:tsukigata-hina:press",
+      "contact:true:tsukigata-hina:other",
+      "contact:true:takashima-hiroki:casting",
+      "contact:true:takashima-hiroki:press",
+      "contact:true:takashima-hiroki:other",
+      "contact:false:ishihara-yueto:casting",
+      "contact:false:ishihara-yueto:press",
+      "contact:false:ishihara-yueto:other",
+      "contact:false:nakayama-yui:casting",
+      "contact:false:nakayama-yui:press",
+      "contact:false:nakayama-yui:other",
+      "contact:false:tsukigata-hina:casting",
+      "contact:false:tsukigata-hina:press",
+      "contact:false:tsukigata-hina:other",
+      "contact:false:takashima-hiroki:casting",
+      "contact:false:takashima-hiroki:press",
+      "contact:false:takashima-hiroki:other",
+      "invalid:?talent=__proto__&type=__proto__",
+      "invalid:?talent=missing",
+      "invalid:?type=missing",
+      "selection URL",
+      "copy pending notice",
+      "resize focus",
+      "menu Escape"
+    ],
+    "method": "main.js executed with lightweight DOM and URL mocks; not browser or jsdom verification"
+  },
+  "jsSyntax": true,
+  "browserChecked": false,
+  "npmTestsRun": false
+}

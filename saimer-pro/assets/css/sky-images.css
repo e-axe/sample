@@ -3,7 +3,7 @@
 .about-section { position: relative; isolation: isolate; overflow: hidden; background: #f0f8fe; }
 .about-sky-media { position: absolute; z-index: -1; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
 .about-sky-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(90deg, transparent 22%, #000 85%); opacity: .72; }
-.about-section .about-preview-copy { max-width: min(60%, 680px); }
+.about-section .about-preview-copy { max-width: 680px; }
 .page-hero { background: linear-gradient(90deg, rgb(245 250 254 / 98%) 25%, rgb(245 250 254 / 60%) 100%), url('../images/about/sky-light-20261012-1600.webp') right 60% / cover; }
 .profile-intro-section { background: linear-gradient(90deg, var(--color-bg) 50%, rgb(245 250 254 / 88%) 100%), url('../images/about/sky-light-20261012-1600.webp') right top / cover; }
 .contact-page .page-hero { background-image: linear-gradient(90deg, rgb(245 250 254 / 98%) 35%, rgb(245 250 254 / 84%) 100%), url('../images/about/sky-light-20261012-1600.webp'); }

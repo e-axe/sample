@@ -45,9 +45,11 @@
     opener = trigger;
     scrollPosition = window.scrollY;
     savedStyle = document.body.getAttribute('style');
+    const scrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+    const bodyPadding = parseFloat(window.getComputedStyle(document.body).paddingRight) || 0;
     show(requested);
     viewer.showModal();
-    Object.assign(document.body.style, { position: 'fixed', top: `-${scrollPosition}px`, left: '0', right: '0', overflow: 'hidden' });
+    Object.assign(document.body.style, { position: 'fixed', top: `-${scrollPosition}px`, left: '0', right: '0', overflow: 'hidden', paddingRight: `${bodyPadding + scrollbarWidth}px` });
     close.focus({ preventScroll: true });
   };
   items.forEach((item, itemIndex) => {
@@ -89,8 +91,8 @@
     if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) show(index + (dx < 0 ? 1 : -1));
   }, { passive: true });
   stage.addEventListener('touchcancel', () => { touchStart = undefined; }, { passive: true });
-  image.addEventListener('error', () => { image.hidden = true; error.hidden = false; });
-  image.addEventListener('load', () => { image.hidden = false; error.hidden = true; });
+  image.addEventListener('error', () => { if (viewer.open) { image.hidden = true; error.hidden = false; } });
+  image.addEventListener('load', () => { if (viewer.open) { image.hidden = false; error.hidden = true; } });
   viewer.addEventListener('close', () => {
     if (savedStyle === null) document.body.removeAttribute('style');
     else document.body.setAttribute('style', savedStyle);

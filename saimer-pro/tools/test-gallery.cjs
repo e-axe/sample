@@ -39,6 +39,8 @@ function fixture(count, supported = true) {
   assert.equal(d.body.getAttribute('style'), 'color: blue');
   assert.equal(d.activeElement, link);
   assert.equal(f.scroll().top, 280);
+  viewer.querySelector('img').dispatchEvent(new f.w.Event('error'));
+  assert(viewer.querySelector('.photo-viewer-error').hidden, 'Closed gallery must ignore late image errors');
   cases++; f.dom.window.close();
 }
 {

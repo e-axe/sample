@@ -24,6 +24,9 @@ function setMenu(open, restoreFocus = true) {
     mobileMenu.querySelector("a")?.focus();
   } else if (!open && wasOpen && restoreFocus && isMobile) {
     (lastFocusedElement === menuButton ? lastFocusedElement : menuButton).focus();
+  } else if (isMobile && !open && mobileMenu.contains(document.activeElement)) {
+    // Resizing from desktop must not leave focus inside the hidden menu.
+    menuButton.focus({ preventScroll: true });
   }
 }
 
@@ -84,11 +87,9 @@ const inquiryCopyButton = document.querySelector("[data-copy-inquiry]");
 const inquiryCopyStatus = document.querySelector("[data-inquiry-copy-status]");
 const inquiryBody = document.querySelector("[data-inquiry-body]");
 const mailLinks = document.querySelectorAll("[data-mail-link]");
-const subjectText = document.querySelector("[data-subject-text]");
 const selectedTalentText = document.querySelector("[data-selected-talent]");
 const profileReturn = document.querySelector("[data-talent-return]");
 const profileReturnLink = document.querySelector("[data-talent-return-link]");
-const inquiryGuidance = document.querySelector("[data-inquiry-guidance]");
 let inquiryText = "";
 
 function updateInquiry() {
@@ -107,16 +108,7 @@ function updateInquiry() {
     "※わかる範囲でご記入ください。すべての項目が揃っていなくてもご相談いただけます。",
   ].join("\r\n");
   inquiryText = `件名：${subject}\r\n\r\n${body}`;
-  if (subjectText) subjectText.textContent = `件名：${subject}`;
   if (inquiryBody) inquiryBody.textContent = inquiryText;
-  if (inquiryGuidance) {
-    const items = ["対象タレント名（指定がある場合）", ...inquiry.fields.map((field) => field.replace(/：$/, "")), "ご担当者名・ご連絡先"];
-    inquiryGuidance.replaceChildren(...items.map((text) => {
-      const item = document.createElement("li");
-      item.textContent = text;
-      return item;
-    }));
-  }
   if (selectedTalentText) {
     selectedTalentText.hidden = !name;
     selectedTalentText.textContent = name ? `${name}への${inquiry.label}` : "";
@@ -154,8 +146,18 @@ if (contactPanel) {
   const params = new URLSearchParams(window.location.search);
   if (typeSelect && owns(inquiryTypes, params.get("type"))) typeSelect.value = params.get("type");
   if (talentSelect && owns(talentNames, params.get("talent"))) talentSelect.value = params.get("talent");
-  typeSelect?.addEventListener("change", updateInquiry);
-  talentSelect?.addEventListener("change", updateInquiry);
+  const updateSelection = () => {
+    updateInquiry();
+    const url = new URL(window.location.href);
+    if (owns(talentNames, talentSelect?.value)) url.searchParams.set("talent", talentSelect.value);
+    else url.searchParams.delete("talent");
+    if (owns(inquiryTypes, typeSelect?.value) && typeSelect.value !== "casting") url.searchParams.set("type", typeSelect.value);
+    else url.searchParams.delete("type");
+    // The selected state survives refresh and can be shared without adding history entries.
+    window.history.replaceState(window.history.state, "", url);
+  };
+  typeSelect?.addEventListener("change", updateSelection);
+  talentSelect?.addEventListener("change", updateSelection);
   updateInquiry();
 }
 
@@ -184,7 +186,7 @@ async function copyText(value, button, status, successMessage, failureMessage) {
 }
 
 copyButton?.addEventListener("click", () => {
-  void copyText(email, copyButton, copyStatus, "メールアドレスをコピーしました。", "コピーできませんでした。表示されているメールアドレスを選択してコピーしてください。");
+  void copyText(email, copyButton, copyStatus, contactReady ? "メールアドレスをコピーしました。" : "メールアドレスをコピーしました。窓口は開設準備中のため、まだ送信できません。", "コピーできませんでした。表示されているメールアドレスを選択してコピーしてください。");
 });
 inquiryCopyButton?.addEventListener("click", () => {
   void copyText(inquiryText, inquiryCopyButton, inquiryCopyStatus, "ご相談用の文面をコピーしました。", "コピーできませんでした。表示されている文面を選択してコピーしてください。");

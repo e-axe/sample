@@ -82,3 +82,64 @@
 .hero-title .hero-reading { display: block; margin-top: 16px; font: 500 15px / 1.6 var(--sans); letter-spacing: .1em; }
 .footer-brand-reading { display: block; margin-top: 8px; font: 400 12px / 1.8 var(--sans); letter-spacing: .06em; }
 @media (max-width: 767px) { .hero-title .hero-reading { margin-top: 12px; font-size: 13px; } }
+
+/* Information hierarchy: published talent facts precede supplementary notices. */
+.section-label { display: block; margin-top: 8px; font: 500 13px / 1.6 var(--sans); letter-spacing: .04em; color: var(--color-text); }
+.talent-card-facts { margin: 8px 0 0; font: 400 12px / 1.7 var(--sans); }
+.talent-details, .talent-name-block { min-width: 0; }
+.talent-bio, .credit-item p, .profile-list dd { overflow-wrap: anywhere; }
+.home-social .social-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.home-social .social-row { cursor: default; }
+.related-talents { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--color-line); font-family: var(--sans); }
+.related-talents p { margin: 0 0 12px; font-size: 13px; }
+.related-talents > div { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.related-talents a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
+.related-talents a:hover, .related-talents a:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
+.contact-privacy { margin: 24px 0 0; padding-top: 20px; border-top: 1px solid var(--color-line); font-size: 13px; }
+.template-help { margin: 0 0 16px; font-size: 14px; }
+.email-panel .email-address { margin-bottom: 24px; }
+.email-panel .email-pending-note { margin: 0 0 12px; }
+.contact-page .contact-email-section { padding-bottom: 48px; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .talent-social .social-row { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 4px 16px; padding-block: 16px; }
+  .talent-social .social-description { grid-column: 2 / -1; grid-row: 2; }
+  .talent-social .social-status { grid-column: 3; grid-row: 1; }
+  .talent-social .social-icon { grid-column: 1; grid-row: 1; }
+}
+@media (max-width: 767px) {
+  .home-social .social-list { gap: 0 20px; }
+  .home-social .social-row[data-social-status="pending"] { grid-template-columns: 28px minmax(0, 1fr); gap: 4px 8px; }
+  .home-social .social-row .social-status { grid-column: 2 !important; grid-row: 2 !important; }
+  .home-social .social-icon { width: 28px; }
+  .home-social .social-name { font-size: 13px; }
+  .talent-social-title .section-label { font-size: 12px; }
+  .contact-setting select { font-size: 16px; }
+}
+@media (max-width: 359px) {
+  .talent-intro { grid-template-columns: minmax(0, 1fr); }
+  .talent-main-photo { grid-column: 1; grid-row: 2; }
+  .talent-details { grid-column: 1; grid-row: 3; }
+  .home-social .social-list { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+  @page { margin: 14mm; }
+  body { background: white; color: #111; font-size: 11pt; }
+  .site-header, .sample-bar, .site-footer, .skip-link, .profile-offer,
+  .talent-contact, .portrait-open, .related-talents, .back-link, .photo-viewer,
+  .portrait-trigger::after { display: none !important; }
+  .js .reveal.will-reveal { opacity: 1; transform: none; }
+  .profile-intro-section, .page-hero { background: white; }
+  .section { padding-block: 16px; }
+  .container { width: 100%; }
+  .talent-intro { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; }
+  .talent-profile { display: block; }
+  .talent-main-photo { max-width: 220px; grid-row: auto; grid-column: auto; }
+  .talent-name-ja, .talent-name-en, .section-title, .talent-social-title { color: #111; }
+  .talent-name-ja { font-size: 26pt; }
+  .profile-list > div { break-inside: avoid; padding-block: 8px; }
+  .talent-social { margin-top: 24px; }
+  .talent-social .social-row { display: block; min-height: 0; padding-block: 8px; }
+  .talent-social .social-icon, .talent-social .social-status, .talent-social .social-description { display: none; }
+  .talent-social a::after { content: " " attr(href); font-size: 9pt; overflow-wrap: anywhere; }
+  .credit-item { break-inside: avoid; }
+}

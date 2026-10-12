@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261012-seo1"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261012-review2"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);
@@ -40,7 +40,7 @@ for (const file of paths) {
     assert.equal(document.querySelectorAll('[data-gallery-item]').length,1);
     assert(!document.querySelector('[data-gallery-item]').hasAttribute('target'));
     assert(document.querySelector('[data-gallery-open]').hidden);
-    assert.equal(document.querySelectorAll('script[src*="gallery.js?v=20261012-seo1"]').length,1);
+    assert.equal(document.querySelectorAll('script[src*="gallery.js?v=20261012-review2"]').length,1);
   }
 }
 for(const file of ['style.css','sky-images.css','design-20261012.css','gallery.css']) {
@@ -86,12 +86,14 @@ for(const ready of [false,true]) {
   d.querySelector('[data-inquiry-talent]').value='nakayama-yui';
   d.querySelector('[data-inquiry-talent]').dispatchEvent(new dom.window.Event('change'));
   assert(d.querySelector('[data-selected-talent]').textContent.includes('中山 結心'));
+  assert.equal(new URL(dom.window.location.href).searchParams.get('talent'), 'nakayama-yui');
+  assert(!d.querySelector('.contact-purpose-grid'), 'Do not repeat the inquiry selector as static categories');
   assert.equal(d.querySelector('[data-mail-link]').hasAttribute('href'),ready);
   cases++;dom.window.close();
 }
 for(const query of ['?talent=__proto__&type=__proto__','?talent=missing','?type=missing']) {
   const dom=fixture(false,query);assert.equal(dom.window.document.querySelector('[data-mail-link]').hasAttribute('href'),false);cases++;dom.window.close();
 }
-const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261012-seo1',ready:false};
+const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261012-review2',ready:false};
 fs.writeFileSync(path.join(root,'docs/ui-20261012-static.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result));
