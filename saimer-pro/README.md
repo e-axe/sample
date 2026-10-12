@@ -4,7 +4,7 @@
 
 所属4名・全9ページの静的HTML/CSS/JavaScript。第一目的はキャスティングオファー獲得。2026-10-11のクライアント回答反映とレビュー後、2026-10-12に支給された4名の宣材写真を実装した。
 
-現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。宣材メイン写真4枚は反映済み。掲載メールはcontact@saimer-pro.comに確定。本番公開にはメールボックス開設・送受信確認と公開環境の最終確認が必要。追加写真は受領後にギャラリーへ掲載する。
+現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。正式な読みは「セメプロダクション」、本番URLは`https://saimer-pro.com/`（wwwなし）に確定。宣材メイン写真4枚とページ内拡大は反映済みで、複数写真の追加にも対応している。掲載メールはcontact@saimer-pro.comで開設準備中。本番公開にはメールボックス開設・送受信確認と公開環境の最終確認が必要。
 
 制作判断と担当・素材待ちは [現在の制作ブリーフ](docs/production-brief-2026-10-11.md)、今回の改善・検証は [10月12日の反映記録](docs/ui-update-2026-10-12.md)、前回のレビューと検証は [レビュー記録](docs/review-2026-10-11.md) を参照。過去の保留判断・旧配色・旧写真の記録はGit履歴に保存されている。
 
@@ -92,8 +92,8 @@ SNSロゴの形・比率を維持。YouTube PNGの透明余白を含む表示幅
 
 ## 公開環境
 
-GitHub Pagesは既存の`main`ブランチから静的配信。現在のcanonical・sitemapは確認用URLに合わせている。サブフォルダ内の`robots.txt`は検索除外の根拠にせず、全9ページのmetaで検索除外する。
+GitHub Pagesは既存の`main`ブランチから静的配信。canonical・OGP・JSON-LDは確認用URLに合わせ、全9ページのmetaで検索除外する。確認用sitemapはURLを列挙しない。サブフォルダ内の`robots.txt`は検索除外の根拠にしない。
 
-本番移行時は正式URL・HTTPS・設置方法を確定し、正式なOGP画像を設定し、実装済みのプロフィール写真の掲載を最終確認する。確認用のSAMPLE表示・noindexを見直す。本番用ファイルに未使用サンプル人物素材や制作用docs/toolsを混ぜない。
+本番用は`npm run build:production`で別フォルダへ生成する。正式URL、検索許可、サイトマップ、画像URL、構造化データ、SAMPLE表示の除去を一括で切り替え、参照される公開用の資産のみを出力する。確認用ソースをそのまま本番へコピーしない。SEO・AIO・OGP、再生成・検証、サーバー公開時の手順は[docs/seo-and-production.md](docs/seo-and-production.md)にまとめた。OGP画像の生成記録と最終プロンプトは[docs/ogp-20261012.md](docs/ogp-20261012.md)。
 
 既存のローカル開発コマンドは`npm run dev -- --port 4173`（依存パッケージ不要、`tools/preview.mjs`）。プレビューはWindowsのパスに対応し、`127.0.0.1`でのみ起動する。JPEGも正しいMIMEで配信する。

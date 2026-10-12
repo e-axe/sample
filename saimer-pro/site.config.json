@@ -1,0 +1,20 @@
+{
+  "name": "S'aimerプロダクション",
+  "reading": "セメプロダクション",
+  "englishName": "S'aimer Production",
+  "legalName": "合同会社S'aimerプロダクション",
+  "previewBaseUrl": "https://e-axe.github.io/sample/saimer-pro/",
+  "productionBaseUrl": "https://saimer-pro.com/",
+  "description": "S'aimerプロダクション（セメプロダクション）は、俳優・タレント・子役のマネジメントを行う芸能事務所です。",
+  "ogImage": "assets/images/ogp/saimer-production-20261012.jpg",
+  "ogImageAlt": "青空を背景にS'aimer Production、セメプロダクション、俳優・タレントマネジメントと記した共有画像",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "160-0023",
+    "addressRegion": "東京都",
+    "addressLocality": "新宿区",
+    "streetAddress": "西新宿3丁目3番13号 西新宿水間ビル2階",
+    "addressCountry": "JP"
+  },
+  "corporateNumber": "8011103014507"
+}

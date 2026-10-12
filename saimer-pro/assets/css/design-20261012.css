@@ -77,3 +77,8 @@
   .email-panel .button { font-size: 13px; }
   .email-address { font-size: 18px; }
 }
+
+/* The official reading is visible without changing the brand typography. */
+.hero-title .hero-reading { display: block; margin-top: 16px; font: 500 15px / 1.6 var(--sans); letter-spacing: .1em; }
+.footer-brand-reading { display: block; margin-top: 8px; font: 400 12px / 1.8 var(--sans); letter-spacing: .06em; }
+@media (max-width: 767px) { .hero-title .hero-reading { margin-top: 12px; font-size: 13px; } }

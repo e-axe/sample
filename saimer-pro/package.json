@@ -5,7 +5,10 @@
     "dev": "node tools/preview.mjs",
     "test": "node tools/test-site.cjs",
     "test:portraits": "python tools/test-portraits.py",
-    "test:gallery": "node tools/test-gallery.cjs"
+    "test:gallery": "node tools/test-gallery.cjs",
+    "seo:preview": "node tools/sync-seo.cjs",
+    "build:production": "node tools/build-production.cjs",
+    "test:seo": "node tools/test-seo.cjs"
   },
   "devDependencies": {
     "jsdom": "^30.1.2"
