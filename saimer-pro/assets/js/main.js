@@ -73,8 +73,9 @@ const inquiryTypes = Object.freeze({
 });
 const owns = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
 const contactPanel = document.querySelector("[data-contact-email]");
-// No fallback to the superseded recipient. Set only the approved new address.
+// Publishing an address and having an operational mailbox are separate states.
 const email = contactPanel?.dataset.contactEmail?.trim() || "";
+const contactReady = Boolean(email && contactPanel?.dataset.contactReady === "true");
 const typeSelect = document.querySelector("[data-inquiry-type]");
 const talentSelect = document.querySelector("[data-inquiry-talent]");
 const copyButton = document.querySelector("[data-copy-email]");
@@ -126,11 +127,15 @@ function updateInquiry() {
     else profileReturnLink.removeAttribute("href");
   }
   mailLinks.forEach((mailLink) => {
-    mailLink.textContent = inquiry.button;
-    if (email) {
+    mailLink.textContent = contactReady ? inquiry.button : "メール窓口の開設準備中";
+    if (contactReady) {
       mailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       mailLink.classList.remove("is-disabled");
       mailLink.removeAttribute("aria-disabled");
+    } else {
+      mailLink.removeAttribute("href");
+      mailLink.classList.add("is-disabled");
+      mailLink.setAttribute("aria-disabled", "true");
     }
   });
   if (email) {
@@ -139,7 +144,7 @@ function updateInquiry() {
       address.textContent = email;
       address.hidden = false;
     }
-    document.querySelectorAll("[data-email-pending]").forEach((node) => { node.hidden = true; });
+    document.querySelectorAll("[data-email-pending]").forEach((node) => { node.hidden = contactReady; });
     if (copyButton) copyButton.disabled = false;
   }
   if (inquiryCopyStatus) inquiryCopyStatus.textContent = "";

@@ -19,8 +19,17 @@ TALENTS = {
 
 
 def optimize(source_dir, site):
+    # HTML advertises 320/640/960 for every portrait. Validate the entire batch
+    # before writing anything so a smaller replacement cannot leave stale candidates.
+    for basename in TALENTS:
+        source = source_dir / (basename + ".jpg")
+        with Image.open(source) as original:
+            im = ImageOps.exif_transpose(original)
+            if im.width < 960:
+                raise ValueError(f"{source.name}: oriented width {im.width}px is below 960px. No assets were written. Supply a wider original or revise all srcset candidates before using this source.")
     output = site / "assets/images/talents"
     output.mkdir(parents=True, exist_ok=True)
+    (site / "docs").mkdir(parents=True, exist_ok=True)
     manifest = []
     for basename, (slug, name) in TALENTS.items():
         source = source_dir / (basename + ".jpg")
@@ -34,8 +43,6 @@ def optimize(source_dir, site):
                 im = im.convert("RGB")
             row = {"name": name, "slug": slug, "original": source.name, "original_size": list(im.size), "original_bytes": source.stat().st_size, "original_sha256": digest, "variants": []}
             for width in (320, 640, 960):
-                if width > im.width:
-                    continue
                 height = round(im.height * width / im.width)
                 resized = im.resize((width, height), Image.Resampling.LANCZOS)
                 # Clear inherited EXIF/GPS, comments, and color profiles after sRGB conversion.

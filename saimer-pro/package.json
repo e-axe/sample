@@ -1,1 +1,12 @@
-{"name":"saimer-pro-preview","private":true,"scripts":{"dev":"node tools/preview.mjs"}}
+{
+  "name": "saimer-pro-preview",
+  "private": true,
+  "scripts": {
+    "dev": "node tools/preview.mjs",
+    "test": "node tools/test-site.cjs",
+    "test:portraits": "python tools/test-portraits.py"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  }
+}
