@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261012-ux1"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261012-gallery1"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);
@@ -37,9 +37,13 @@ for (const file of paths) {
     const slug=file.split('/')[1];
     assert.equal(document.querySelector('.profile-offer').getAttribute('href'),`../../contact/?talent=${slug}`);
     assert.equal(document.querySelectorAll('.talent-contact a[href*="?talent="]').length,1);
+    assert.equal(document.querySelectorAll('[data-gallery-item]').length,1);
+    assert(!document.querySelector('[data-gallery-item]').hasAttribute('target'));
+    assert(document.querySelector('[data-gallery-open]').hidden);
+    assert.equal(document.querySelectorAll('script[src*="gallery.js?v=20261012-gallery1"]').length,1);
   }
 }
-for(const file of ['style.css','sky-images.css','design-20261012.css']) {
+for(const file of ['style.css','sky-images.css','design-20261012.css','gallery.css']) {
   const css=fs.readFileSync(path.join(root,'assets/css',file),'utf8');
   for(const m of css.matchAll(/url\(['"]?([^'"\)]+)['"]?\)/g)) {
     if(/^https?:|^data:/.test(m[1]))continue;
@@ -47,6 +51,9 @@ for(const file of ['style.css','sky-images.css','design-20261012.css']) {
   }
 }
 assert.deepEqual(failures,[]);
+const aboutDocument=new JSDOM(fs.readFileSync(path.join(root,'about/index.html'),'utf8')).window.document;
+assert(aboutDocument.querySelector('.about-opening > .page-hero'));
+assert(aboutDocument.querySelector('.about-opening > .philosophy-section'));
 const code=fs.readFileSync(path.join(root,'assets/js/main.js'),'utf8');
 const original=fs.readFileSync(path.join(root,'contact/index.html'),'utf8');
 const names={'ishihara-yueto':'石原 月斗','nakayama-yui':'中山 結心','tsukigata-hina':'月形 陽南','takashima-hiroki':'髙島 大幹'};
@@ -85,6 +92,6 @@ for(const ready of [false,true]) {
 for(const query of ['?talent=__proto__&type=__proto__','?talent=missing','?type=missing']) {
   const dom=fixture(false,query);assert.equal(dom.window.document.querySelector('[data-mail-link]').hasAttribute('href'),false);cases++;dom.window.close();
 }
-const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261012-ux1',ready:false};
+const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261012-gallery1',ready:false};
 fs.writeFileSync(path.join(root,'docs/ui-20261012-static.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result));
