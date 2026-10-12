@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "node tools/preview.mjs",
     "test": "node tools/test-site.cjs",
-    "test:portraits": "python tools/test-portraits.py"
+    "test:portraits": "python tools/test-portraits.py",
+    "test:gallery": "node tools/test-gallery.cjs"
   },
   "devDependencies": {
     "jsdom": "^30.1.2"

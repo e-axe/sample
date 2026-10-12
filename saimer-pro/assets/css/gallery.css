@@ -1,0 +1,38 @@
+/* Photo links remain usable when JavaScript or native dialogs are unavailable. */
+.portrait-trigger { display: block; position: relative; width: 100%; height: 100%; color: inherit; }
+.portrait-trigger > picture { display: block; width: 100%; height: 100%; }
+.talent-main-photo .portrait-trigger img { display: block; width: 100%; height: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: center top; }
+.gallery-ready .portrait-trigger { cursor: zoom-in; }
+.gallery-ready .portrait-trigger::after { content: '拡大'; position: absolute; right: 12px; bottom: 12px; padding: 5px 10px; border: 1px solid rgb(255 255 255 / 70%); border-radius: 20px; background: rgb(245 250 254 / 92%); color: #245d8d; font-family: var(--sans); font-size: 12px; line-height: 1.5; }
+.portrait-trigger:focus-visible { outline: 3px solid var(--color-accent); outline-offset: -4px; }
+button.portrait-open { padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; font-family: var(--sans); }
+.portrait-open[hidden], .photo-viewer [hidden] { display: none; }
+.photo-viewer { width: min(1040px, calc(100vw - 48px)); height: min(960px, calc(100dvh - 48px)); max-width: none; max-height: none; margin: auto; padding: 0; border: 0; border-radius: 8px; background: #f5fafe; color: #245d8d; font-family: var(--sans); box-shadow: 0 20px 80px rgb(0 20 40 / 25%); }
+.photo-viewer[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
+.photo-viewer::backdrop { background: rgb(10 27 43 / 78%); }
+.photo-viewer-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 12px 10px 24px; }
+.photo-viewer-header h2 { margin: 0; font: 500 15px / 1.6 var(--sans); }
+.photo-viewer-close, .photo-viewer-prev, .photo-viewer-next { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; border: 1px solid #c8dceb; border-radius: 50%; background: #f5fafe; color: #245d8d; cursor: pointer; font: 300 30px / 1 var(--sans); }
+.photo-viewer button:hover { background: #e2f0fa; }
+.photo-viewer button:focus-visible { outline: 3px solid #245d8d; outline-offset: 3px; }
+.photo-viewer-stage { position: relative; display: grid; place-items: center; min-height: 0; padding: 0 64px; overflow: hidden; }
+.photo-viewer-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.photo-viewer-prev, .photo-viewer-next { position: absolute; top: calc(50% - 22px); }
+.photo-viewer-prev { left: 10px; }
+.photo-viewer-next { right: 10px; }
+.photo-viewer-error { max-width: 30em; padding: 20px; font-size: 14px; line-height: 1.8; }
+.photo-viewer-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 24px; }
+.photo-viewer-footer p { margin: 0; font-size: 13px; line-height: 1.6; }
+.photo-viewer-counter { flex: none; font-variant-numeric: tabular-nums; }
+.talent-gallery .portrait-trigger img { display: block; width: 100%; height: auto; }
+@media (max-width: 767px) {
+  .photo-viewer { width: calc(100vw - 24px); height: calc(100dvh - 24px); }
+  .photo-viewer-header { padding-left: 16px; }
+  .photo-viewer-header h2 { font-size: 13px; }
+  .photo-viewer-stage { padding-inline: 0; }
+  .photo-viewer-prev, .photo-viewer-next { background: rgb(245 250 254 / 94%); box-shadow: 0 2px 12px rgb(0 20 40 / 12%); }
+  .photo-viewer-prev { left: 6px; }
+  .photo-viewer-next { right: 6px; }
+  .photo-viewer-footer { padding: 12px 16px; }
+  .gallery-ready .portrait-trigger::after { right: 8px; bottom: 8px; font-size: 11px; }
+}
