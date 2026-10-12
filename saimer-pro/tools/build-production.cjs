@@ -53,7 +53,8 @@ function build(output, base = seo.config.productionBaseUrl) {
   files.set('sitemap.xml', Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${sitemap.join('\n')}\n</urlset>\n`));
   files.set('robots.txt', Buffer.from(`User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`));
   const www = new URL(base).hostname.replace(/\./g, '\\.');
-  files.set('.htaccess', Buffer.from(`DirectoryIndex index.html\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\n# Enable only after SSL for both apex and www is available.\nRewriteCond %{HTTP_HOST} ^www\\.${www}$ [NC,OR]\nRewriteCond %{HTTPS} !=on\nRewriteRule ^ ${base.slice(0, -1)}%{REQUEST_URI} [R=301,L,NE]\n\n# Keep index.html and directory URLs on one canonical URL.\nRewriteCond %{THE_REQUEST} \\s/+(.*/)?index\\.html(?:[?\\s]) [NC]\nRewriteRule ^(.*)index\\.html$ ${base}$1 [R=301,L,NE]\n</IfModule>\n`));
+  const directoryRoutes = seo.pages.filter(file => file !== 'index.html').map(file => file.replace(/\/index\.html$/, '')).join('|');
+  files.set('.htaccess', Buffer.from(`DirectoryIndex index.html\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\n# Enable only after SSL for both apex and www is available.\n# Normalize file and directory URLs directly to the final HTTPS host.\nRewriteCond %{THE_REQUEST} \\s/+(.*/)?index\\.html(?:[?\\s]) [NC]\nRewriteRule ^(.*)index\\.html$ ${base}$1 [R=301,L,NE]\n\nRewriteRule ^(${directoryRoutes})$ ${base}$1/ [R=301,L,NE]\n\nRewriteCond %{HTTP_HOST} ^www\\.${www}$ [NC,OR]\nRewriteCond %{HTTPS} !=on\nRewriteRule ^ ${base.slice(0, -1)}%{REQUEST_URI} [R=301,L,NE]\n</IfModule>\n`));
   // Finish validation before writing: incomplete builds never modify the source.
   fs.mkdirSync(output, { recursive: true });
   const manifest = [];
