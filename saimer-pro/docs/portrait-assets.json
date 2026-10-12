@@ -1,0 +1,222 @@
+[
+  {
+    "name": "石原 月斗",
+    "slug": "ishihara-yueto",
+    "original": "yueto.jpg",
+    "original_size": [
+      2240,
+      3360
+    ],
+    "original_bytes": 2612821,
+    "original_sha256": "c8836e32b220900f0aaabfd22aca0e5fec539c0e5b1b2eb83d81e42bcaad0c8f",
+    "variants": [
+      {
+        "file": "assets/images/talents/ishihara-yueto-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 7958,
+        "sha256": "2007875cd2331f53eaa0852c0d541d2fceb730e84e5f92ba5f9d3a02c0e033cb"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-320.jpg",
+        "width": 320,
+        "height": 480,
+        "bytes": 17385,
+        "sha256": "8b3d0db839c5dc7c1ff23c7f3e86bb479024e3491150e30b4a96ee241f0ac776"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 31806,
+        "sha256": "567bb4958660c1d1da8deb50b1d7fbc559a91d0ad12d2e8d0835406225e1748d"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-640.jpg",
+        "width": 640,
+        "height": 960,
+        "bytes": 60467,
+        "sha256": "fd8878788d320dd4bed01f8e54686ee44455947333d18fa17e7338b273fcb2d2"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 71316,
+        "sha256": "4655287658aa154c6388d9388e9e76f5afe828ee7b5ef35a79f2dffa3ff5ab43"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-960.jpg",
+        "width": 960,
+        "height": 1440,
+        "bytes": 132535,
+        "sha256": "bd3fb633f783483265e9a4f505c620e57b51019180ac082ca27b65c09f2cd867"
+      }
+    ]
+  },
+  {
+    "name": "中山 結心",
+    "slug": "nakayama-yui",
+    "original": "yui.jpg",
+    "original_size": [
+      1045,
+      1567
+    ],
+    "original_bytes": 221364,
+    "original_sha256": "456e47a094c836886a160c50622c4c2a6f33eca38e7f7fc74bba54debf699938",
+    "variants": [
+      {
+        "file": "assets/images/talents/nakayama-yui-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 17976,
+        "sha256": "9ac651d952127cd9cf88116363c7642781cba3f49fddb3124852b42f50b08921"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-320.jpg",
+        "width": 320,
+        "height": 480,
+        "bytes": 31598,
+        "sha256": "28abf08f5ef7b56aa15cdc6d2ba27e170758c5abb1e7eba9cd05795c493a8501"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 57752,
+        "sha256": "c413f67a8b461528dca83e699093c1f99945ff843998da98e39b8b6c35d2adbd"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-640.jpg",
+        "width": 640,
+        "height": 960,
+        "bytes": 100487,
+        "sha256": "bd57d769a5da31ef955e8b78a5d380792092354adbaa098a9b6d0e0419fc9589"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 114822,
+        "sha256": "53c22e82f1d1c50fe0b748814a7c96d1093b4d8798e83bca98af4379ff67ced2"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-960.jpg",
+        "width": 960,
+        "height": 1440,
+        "bytes": 199780,
+        "sha256": "ff109818806666bd74d506bb14a2b9ac12842fcadf1c376a2b83eb2fc5cd4488"
+      }
+    ]
+  },
+  {
+    "name": "月形 陽南",
+    "slug": "tsukigata-hina",
+    "original": "hina.jpg",
+    "original_size": [
+      1672,
+      2508
+    ],
+    "original_bytes": 480112,
+    "original_sha256": "37e6d355641297d844281ad5cbcb053ceeae7afba7967e547dace88fc61f3122",
+    "variants": [
+      {
+        "file": "assets/images/talents/tsukigata-hina-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 14070,
+        "sha256": "1671266bc36e46022dd17ca54951b1dc1d77941a9556bd5caf429bde19805053"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-320.jpg",
+        "width": 320,
+        "height": 480,
+        "bytes": 28478,
+        "sha256": "c675ff6054fc0d821beb926acbc59f14c31d2c6ab731f94261067f4058d61927"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 40250,
+        "sha256": "de79b5b75b6201220807618eb7ca313ff2c04cd7a026d49a969e21bc81c1a8fc"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-640.jpg",
+        "width": 640,
+        "height": 960,
+        "bytes": 85222,
+        "sha256": "f0fc3ef36ead920b895a2db6e8f2875099bda62bfc65cd427385f35bc9f5674c"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 85062,
+        "sha256": "e5edc9c6123b75b302f8ff0f4854925c23235768cf1be125d8a883b55bed85c6"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-960.jpg",
+        "width": 960,
+        "height": 1440,
+        "bytes": 173053,
+        "sha256": "37b1420bac4de6c21a7025f3acc4f27b3c7c0424d111a488e000a00cae0a082f"
+      }
+    ]
+  },
+  {
+    "name": "髙島 大幹",
+    "slug": "takashima-hiroki",
+    "original": "hiroki.jpg",
+    "original_size": [
+      1023,
+      1537
+    ],
+    "original_bytes": 193907,
+    "original_sha256": "16bba33bf6090df05034a634e2cffca7991b6239f53329a3db88448bab6e5cff",
+    "variants": [
+      {
+        "file": "assets/images/talents/takashima-hiroki-320.webp",
+        "width": 320,
+        "height": 481,
+        "bytes": 17988,
+        "sha256": "cadfd85b92c50cb8cb161dd9052979ec7cab5dfb944b7445869b28d2bf56cd5d"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-320.jpg",
+        "width": 320,
+        "height": 481,
+        "bytes": 32338,
+        "sha256": "033bc29f002ca67a1bbd96addf316fe7b242c58cea04796fcd103a9eba77ccad"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-640.webp",
+        "width": 640,
+        "height": 962,
+        "bytes": 54550,
+        "sha256": "53b6fbd7cadcd4d58305a9573e8b991d5e8c3e990e000c5475e954bdf29e86b1"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-640.jpg",
+        "width": 640,
+        "height": 962,
+        "bytes": 103689,
+        "sha256": "893d5ef1126112d2ccaa3df916fcd1a883a2d0fe4ca06e855dcac96034a7e565"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-960.webp",
+        "width": 960,
+        "height": 1442,
+        "bytes": 105364,
+        "sha256": "b8980718fcfd021c6aebe55e0f5f32cc39a85764113bd8857064211b66c62e9b"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-960.jpg",
+        "width": 960,
+        "height": 1442,
+        "bytes": 203753,
+        "sha256": "443d3d1d455f6eb262f8c6a56f92f24249952eb9456e6a14f7febcf509d81a86"
+      }
+    ]
+  }
+]

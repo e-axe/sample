@@ -2050,3 +2050,21 @@ h3, .brand, .global-nav, .footer-brand, .talent-card-name,
     transform: none !important;
   }
 }
+
+/* Supplied portraits: cards retain 3:4; profile photographs show the full 2:3 frame. */
+.talent-photo > picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.talent-photo > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--talent-position, 50% 20%);
+}
+
+.talent-main-photo {
+  aspect-ratio: 2 / 3;
+}

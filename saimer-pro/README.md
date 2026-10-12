@@ -2,9 +2,9 @@
 
 確認用URL: https://e-axe.github.io/sample/saimer-pro/
 
-所属4名・全9ページの静的HTML/CSS/JavaScript。第一目的はキャスティングオファー獲得。2026-10-11のクライアント回答反映後、不具合・可読性・問い合わせ内容の整合性を改善した。
+所属4名・全9ページの静的HTML/CSS/JavaScript。第一目的はキャスティングオファー獲得。2026-10-11のクライアント回答反映とレビュー後、2026-10-12に支給された4名の宣材写真を実装した。
 
-現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。本番公開には正式写真・新問い合わせメール・公開環境等の確定が必要。
+現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。宣材メイン写真4枚は反映済み。本番公開には新問い合わせメール・公開環境等の確定が必要。追加写真は受領後にギャラリーへ掲載する。
 
 制作判断と担当・素材待ちは [現在の制作ブリーフ](docs/production-brief-2026-10-11.md)、今回のレビューと検証は [レビュー記録](docs/review-2026-10-11.md) を参照。過去の保留判断・旧配色・旧写真の記録はGit履歴に保存されている。
 
@@ -51,13 +51,13 @@ Google FontsはHTMLのstylesheetリンクから読み込む。既存のCormorant
 
 空・アーチはユーザー選定済み。旧空画像は以前の指示により保存。ヒーローの位置は`--hero-position-pc`、SPは`sky-images.css`内の`--hero-position-sp: 38% 50%`で調整する。
 
-**現在は所属者の人物写真を使用していない。** トップ・一覧・個別の`.photo-placeholder`を実画像へ置き換える。旧`sample-portraits.webp`は未使用の従来素材で、所属者の正式写真として流用しない。
+**4名の支給宣材をトップ・一覧・各プロフィールの合計12か所へ反映済み。** 元画像はローカルの`タレント宣材`で保管し、公開リポジトリへ原本を格納しない。写真台帳は`docs/portrait-assets.json`、更新記録は`docs/portrait-update-2026-10-12.md`を参照。
 
-1. 原本を保管し、sRGBのWebP／JPEGを用意する。
-2. `.talent-photo`内に`img`を配置し、`.photo-placeholder`と仮コピーを外す。`role="img"`・仮`aria-label`・`data-asset-status="pending"`も外す。
-3. `src`、実寸の`width`・`height`、本人名を含む`alt`を設定。必要なら`--talent-position`で切り抜き位置を調整。
-4. 3:4を基本に顔・頭部が欠けないことをPC/SPで確認。ギャラリーは既存の`.talent-gallery`内に`figure`を追加し、標準3〜4枚／最大6枚程度まで確認。
-5. ファーストビューのメイン写真は遅延読み込みせず、ギャラリーに`loading="lazy" decoding="async"`を設定。
+1. `tools/optimize-portraits.py <原本フォルダ>`で320・640・960px幅のWebP品質90／JPEG品質90を生成する。Pillowが必要。拡大は行わず、EXIFの向きを適用し、埋め込みICCがある場合はsRGBへ変換、公開用画像からEXIF/GPSを除く。
+2. `picture`のWebPとJPEGフォールバック、双方の`srcset`と`sizes`を維持する。原寸比率はほぼ2:3。カードは従来の3:4、プロフィールは2:3で頭部と全体が見える構成。
+3. `width`・`height`と本人名を含む`alt`を設定。メイン写真は即読み込み、カードは`loading="lazy"`を使用する。
+4. 写真追加時は別の原本を使ってギャラリーを設ける。今回は各1枚なので、同一写真を重複掲載して枚数を補わない。追加写真は現在のメイン写真の反映を妨げない。
+5. 旧`sample-portraits.webp`は未使用の従来素材。所属者の正式写真として流用せず、公開用パッケージには含めない。
 
 ## 正式メール受領時
 
@@ -90,6 +90,6 @@ SNSロゴの形・比率を維持。YouTube PNGの透明余白を含む表示幅
 
 GitHub Pagesは既存の`main`ブランチから静的配信。現在のcanonical・sitemapは確認用URLに合わせている。サブフォルダ内の`robots.txt`は検索除外の根拠にせず、全9ページのmetaで検索除外する。
 
-本番移行時は正式URL・HTTPS・設置方法を確定し、正式なOGP画像とプロフィール写真を設定する。確認用のSAMPLE表示・noindexを見直す。本番用ファイルに未使用サンプル人物素材や制作用docs/toolsを混ぜない。
+本番移行時は正式URL・HTTPS・設置方法を確定し、正式なOGP画像を設定し、実装済みのプロフィール写真の掲載を最終確認する。確認用のSAMPLE表示・noindexを見直す。本番用ファイルに未使用サンプル人物素材や制作用docs/toolsを混ぜない。
 
-既存のローカル開発コマンドは`npm run dev -- --port 4173`（依存パッケージ不要、`tools/preview.mjs`）。今回の検証ではローカルブラウザサーバーを起動していない。
+既存のローカル開発コマンドは`npm run dev -- --port 4173`（依存パッケージ不要、`tools/preview.mjs`）。プレビューはWindowsのパスに対応し、`127.0.0.1`でのみ起動する。JPEGも正しいMIMEで配信する。
