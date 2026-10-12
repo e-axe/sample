@@ -1,4 +1,3 @@
+# Preview is excluded by meta noindex on every page. This file is below the host root.
 User-agent: *
 Allow: /sample/saimer-pro/
-
-Sitemap: https://e-axe.github.io/sample/saimer-pro/sitemap.xml
