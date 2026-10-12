@@ -11,6 +11,10 @@ const originals = new Map(seo.pages.map(file => [file, sha(seo.read(file))]));
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'saimer-seo-'));
 const output = path.join(temp, 'public_html');
 let checks = 0;
+const contactState = new JSDOM(seo.read('contact/index.html'));
+const mailbox = contactState.window.document.querySelector('[data-contact-email]');
+const expectedEmail = mailbox.dataset.contactReady === 'true' ? mailbox.dataset.contactEmail : undefined;
+contactState.window.close();
 function validate(file, html, base, production) {
   const dom = new JSDOM(html);
   const d = dom.window.document;
@@ -60,7 +64,7 @@ function validate(file, html, base, production) {
   assert.equal(org.url, base);
   assert.equal(org.address.postalCode, '160-0023');
   assert.equal(org.identifier.value, '8011103014507');
-  assert(!org.email, 'Pending mailbox must not become an active structured contact');
+  assert.equal(org.email, expectedEmail, 'Structured contact must match the visible mailbox readiness');
   const web = graph.find(n => /^(WebPage|ProfilePage|CollectionPage|AboutPage|ContactPage)$/.test(n['@type']));
   assert.equal(web.url, seo.urlFor(file, base));
   const person = graph.find(n => n['@type'] === 'Person');
@@ -120,6 +124,20 @@ try {
     }
     dom.window.close();
   }
+  const redirects = fs.readFileSync(path.join(output, '.htaccess'), 'utf8');
+  const rules = redirects.split('\n').filter(line => line.startsWith('RewriteRule '));
+  assert.equal(rules.length, 3);
+  assert(redirects.indexOf(rules[0]) < redirects.indexOf('RewriteCond %{HTTP_HOST}'));
+  assert(redirects.indexOf(rules[1]) < redirects.indexOf('RewriteCond %{HTTP_HOST}'));
+  const fileRule = rules[0].split(' '), directoryRule = rules[1].split(' ');
+  for (const file of seo.pages) {
+    assert.equal(file.replace(new RegExp(fileRule[1]), fileRule[2]), seo.urlFor(file, seo.config.productionBaseUrl));
+    if (file !== 'index.html') {
+      const withoutSlash = file.replace(/\/index\.html$/, '');
+      assert.equal(withoutSlash.replace(new RegExp(directoryRule[1]), directoryRule[2]), seo.urlFor(file, seo.config.productionBaseUrl));
+    }
+  }
+  assert(!new RegExp(directoryRule[1]).test(seo.config.ogImage));
   assert.throws(() => build(output), /既存ファイル/);
   assert.throws(() => build(seo.root), /ソース/);
   assert.throws(() => build(path.join(seo.root, 'assets/test-output')), /ソース/);
