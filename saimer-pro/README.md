@@ -4,9 +4,9 @@
 
 所属4名・全9ページの静的HTML/CSS/JavaScript。第一目的はキャスティングオファー獲得。2026-10-11のクライアント回答反映とレビュー後、2026-10-12に支給された4名の宣材写真を実装した。
 
-現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。宣材メイン写真4枚は反映済み。本番公開には新問い合わせメール・公開環境等の確定が必要。追加写真は受領後にギャラリーへ掲載する。
+現在はクライアント最終確認用。SAMPLE表示と全9ページの`noindex, nofollow`を維持する。宣材メイン写真4枚は反映済み。掲載メールはcontact@saimer-pro.comに確定。本番公開にはメールボックス開設・送受信確認と公開環境の最終確認が必要。追加写真は受領後にギャラリーへ掲載する。
 
-制作判断と担当・素材待ちは [現在の制作ブリーフ](docs/production-brief-2026-10-11.md)、今回のレビューと検証は [レビュー記録](docs/review-2026-10-11.md) を参照。過去の保留判断・旧配色・旧写真の記録はGit履歴に保存されている。
+制作判断と担当・素材待ちは [現在の制作ブリーフ](docs/production-brief-2026-10-11.md)、今回の改善・検証は [10月12日の反映記録](docs/ui-update-2026-10-12.md)、前回のレビューと検証は [レビュー記録](docs/review-2026-10-11.md) を参照。過去の保留判断・旧配色・旧写真の記録はGit履歴に保存されている。
 
 ## 構成
 
@@ -21,7 +21,7 @@ CMS・ニュース・SNS埋め込み・送信フォーム・オーディショ�
 
 ## 色・レイアウト
 
-共通設定: `assets/css/style.css` の`:root`。トップの空画像とフェード: `assets/css/sky-images.css`。
+共通設定: `assets/css/style.css` の`:root`。トップ・下層の空画像とフェード: `assets/css/sky-images.css`。10月12日の配置・文字の調整は`assets/css/design-20261012.css`。
 
 | 変数 | 値 | 用途 |
 | --- | --- | --- |
@@ -46,30 +46,34 @@ Google FontsはHTMLのstylesheetリンクから読み込む。既存のCormorant
 | --- | --- | --- |
 | ヒーローPC | `assets/images/hero/sky-vivid-20260906-pc.webp` | 1,672×941 |
 | ヒーローSP | `assets/images/hero/sky-vivid-20260906-sp.webp` | 960×540 |
-| ABOUT PC | `assets/images/about/sky-arch-20260906-pc.webp` | 1,672×941 |
-| ABOUT SP | `assets/images/about/sky-arch-portrait-v2.webp` | 960×1,440 |
+| ABOUT・下層 PC | `assets/images/about/sky-light-20261012-1600.webp` | 1,600×900 |
+| ABOUT・下層 SP | `assets/images/about/sky-light-20261012-800.webp` | 800×450 |
 
-空・アーチはユーザー選定済み。旧空画像は以前の指示により保存。ヒーローの位置は`--hero-position-pc`、SPは`sky-images.css`内の`--hero-position-sp: 38% 50%`で調整する。
+ヒーローの青空は維持。ABOUTのアーチは2026-10-12の承認により空と光へ差し替え済み。背景の生成方法・プロンプトは`docs/background-20261012.md`。旧空画像は以前の指示により保存。ヒーローの位置は`--hero-position-pc`、SPは`sky-images.css`内の`--hero-position-sp: 38% 50%`で調整する。
 
 **4名の支給宣材をトップ・一覧・各プロフィールの合計12か所へ反映済み。** 元画像はローカルの`タレント宣材`で保管し、公開リポジトリへ原本を格納しない。写真台帳は`docs/portrait-assets.json`、更新記録は`docs/portrait-update-2026-10-12.md`を参照。
 
-1. `tools/optimize-portraits.py <原本フォルダ>`で320・640・960px幅のWebP品質90／JPEG品質90を生成する。Pillowが必要。拡大は行わず、EXIFの向きを適用し、埋め込みICCがある場合はsRGBへ変換、公開用画像からEXIF/GPSを除く。
+1. `tools/optimize-portraits.py <原本フォルダ>`で320・640・960px幅のWebP品質90／JPEG品質90を生成する。Pillowが必要。全原本がEXIF適用後の横幅960px以上であることを出力前に検証し、不足する場合はファイルを変更せず停止する。拡大は行わず、EXIFの向きを適用し、埋め込みICCがある場合はsRGBへ変換、公開用画像からEXIF/GPSを除く。
 2. `picture`のWebPとJPEGフォールバック、双方の`srcset`と`sizes`を維持する。原寸比率はほぼ2:3。カードは従来の3:4、プロフィールは2:3で頭部と全体が見える構成。
 3. `width`・`height`と本人名を含む`alt`を設定。メイン写真は即読み込み、カードは`loading="lazy"`を使用する。
 4. 写真追加時は別の原本を使ってギャラリーを設ける。今回は各1枚なので、同一写真を重複掲載して枚数を補わない。追加写真は現在のメイン写真の反映を妨げない。
 5. 旧`sample-portraits.webp`は未使用の従来素材。所属者の正式写真として流用せず、公開用パッケージには含めない。
 
-## 正式メール受領時
+## メール窓口の開設後
 
-新メール未受領のため、現在はメール・アドレスコピーを無効化している。旧アドレスへ送信しない。
+掲載先はユーザーが確定した`contact@saimer-pro.com`。現在はメールボックス作成前のため、アドレスと開設準備中を表示する。アドレスと相談文面のコピーは使えるが、メール起動は無効。
 
-1. `contact/index.html`の`data-contact-email=""`へ承認済みの新メールを設定。
-2. HTML側の`[data-mail-link]`にも一般相談の`mailto:`を設定し、`aria-disabled`・`is-disabled`を外す。アドレス表示に実メールを入れて`hidden`を外し、コピーの`disabled`を外す。`[data-email-pending]`を除去。JavaScript無効でもメールとアドレスが使えるようにする。
-3. ABOUT・PRIVACYのメール準備中表示、全ページのサンプル案内、制作ブリーフを更新。
-4. `?talent=<slug>`で4名の氏名が画面・件名・本文へ渡ることを確認。`?type=press`／`?type=other`で相談内容が一致することを確認。
-5. 件名・本文は相談種類に応じてJSが生成する。メールアプリの起動は送信完了ではなく、サイト内に送信処理はない。
+1. メールボックスを作成し、送信・受信を確認する。
+2. `contact/index.html`の`data-contact-ready="false"`を`true`へ変更。
+3. HTMLの`[data-mail-link]`にも一般相談の`mailto:contact@saimer-pro.com`を設定し、`aria-disabled`・`is-disabled`を外して文言を戻す。`[data-email-pending]`を非表示にする。JavaScript無効でもメール起動を使えるようにする。
+4. ABOUT・PRIVACY・全9ページの案内と制作ブリーフから開設準備中を外す。更新したCSS・JSのバージョンを全ページで揃える。
+5. 4名の相談導線、3種類の相談文面、対象者変更、アドレスコピーを確認。
 
-相談文面のコピーはメール未設定でも使える。任意項目の下書き補助であり、入力フォームではない。コピー失敗時は失敗を表示し、成功を装わない。
+メールアプリの起動・文面コピーは送信完了ではない。サイト自体にメール送信処理はない。
+
+## 開発検証
+
+`npm ci`後に`npm test`でページ参照・キャッシュ版・相談の17ケースを検査。`npm run test:portraits`はPillowがあるPython環境で画像の更新処理を検査する。実際のブラウザー確認は別途実施する。
 
 ## SNS
 
