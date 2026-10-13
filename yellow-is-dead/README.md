@@ -155,3 +155,7 @@ python3 tools/build.py
 - 本番ビルドの例（HTTPS利用可能と確認後）：`YELLOW_IS_DEAD_ENV=production YELLOW_IS_DEAD_PUBLIC_URL=https://yellow-is-dead.softboiled.net/ python3 tools/build.py`。既定では確認用URL＋noindexを出力する。**本番ビルドはGitHub Pages上の確認用index.htmlを置換せず、納品用の別コピーで実行すること**。
 - 配信前の検証：実ファイルへのHTTP 200、Content-Type `image/jpeg`、1200×630px、OGP/Twitterの画像URL、canonicalの一致、`noindex` の本番残存なし、X/Facebook等のカードプレビュー、TLS・リダイレクト。SNSキャッシュの再取得は公開後に行う。
 - 制作の記録はGitHubを正本とする。OGP採用・本番URL予定は正式公演の内容変更ではないため、公演情報最新版ファイルの内容は改変しない。
+
+## 2026-10-14 OGP決定画像の差し替え
+
+ユーザーの明示指示により、添付 `yellow-is-dead-ogp-clean.png` を正式採用。10月11日のOGP採用記録は履歴とし、以後の配信には `assets/yellow-is-dead-ogp-clean-20261014.jpg`（1200×630 JPEG）を使用する。添付の構図・文字・マスクを再生成せず縮小し、OGP/X両参照を更新。旧画像は履歴として保持するが納品パッケージから除外。本番URLはユーザー指定の `https://yellow-is-dead.softboiled.net/`。HTTPSでHTML取得成功、現行HTMLにはHTTPのOGP/canonicalが残っていたため差し替え用HTMLではHTTPSへ統一。GitHubの確認用URL/noindexは維持し、本番サーバーへはクライアントが配置する。

@@ -3,7 +3,7 @@ import argparse, datetime, hashlib, json, os, pathlib, shutil, subprocess, sys, 
 from html.parser import HTMLParser
 
 OLD_HERO = {
-    "yellow-is-dead-hero-1536.webp", "yellow-is-dead-hero-1920.webp",
+    "yellow-is-dead-ogp.jpg", "yellow-is-dead-hero-1536.webp", "yellow-is-dead-hero-1920.webp",
     "yellow-is-dead-hero-mobile-640.webp", "yellow-is-dead-hero-mobile-800.webp",
 }
 PUBLIC_TOP = {"index.html", "style.css", "app.js"}
@@ -67,8 +67,8 @@ def main():
         url=env["YELLOW_IS_DEAD_PUBLIC_URL"]
         for token in ('<link rel="canonical" href="'+url+'">',
                       '<meta property="og:url" content="'+url+'">',
-                      '<meta property="og:image" content="'+url+'assets/yellow-is-dead-ogp.jpg">',
-                      '<meta name="twitter:image" content="'+url+'assets/yellow-is-dead-ogp.jpg">',
+                      '<meta property="og:image" content="'+url+'assets/yellow-is-dead-ogp-clean-20261014.jpg">',
+                      '<meta name="twitter:image" content="'+url+'assets/yellow-is-dead-ogp-clean-20261014.jpg">',
                       '<meta name="robots" content="index,follow,max-image-preview:large">'):
             assert token in html, token
         for name in ("style.css","app.js"):

@@ -111,7 +111,7 @@ if site_env=='production' and 'YELLOW_IS_DEAD_PUBLIC_URL' not in os.environ:
 robots='index,follow,max-image-preview:large' if site_env=='production' else 'noindex,nofollow,noarchive'
 page_title=f'舞台『{title}』｜Soft Boiled Theater-16'
 page_description=f'舞台『{title}』。{period}、{venue}にて全{total}ステージ。公演日程、チケット、出演者、あらすじのご案内。'
-og_image=site_url+'assets/yellow-is-dead-ogp.jpg'
+og_image=site_url+'assets/yellow-is-dead-ogp-clean-20261014.jpg'
 canonical=f'<link rel="canonical" href="{esc(site_url)}">' if site_env=='production' else ''
 social_meta=(
     f'<meta property="og:type" content="website">'

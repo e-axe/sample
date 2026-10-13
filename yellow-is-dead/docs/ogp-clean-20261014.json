@@ -1,0 +1,17 @@
+{
+  "approvedSource": "yellow-is-dead-ogp-clean.png",
+  "sourceSize": [
+    1731,
+    909
+  ],
+  "sourceSHA256": "c2b6573e337aa918f39e4a7b9c4ace1887a55863e3ace9318d019cdbcd554ab3",
+  "output": "yellow-is-dead-ogp-clean-20261014.jpg",
+  "size": [
+    1200,
+    630
+  ],
+  "bytes": 438450,
+  "outputSHA256": "b065a7aba308fc372cae51d4ec4a8e529b90c1f1f55f1ef50b1d13a14e45b4bb",
+  "publicURL": "https://yellow-is-dead.softboiled.net/",
+  "verification": "Local metadata and image checks; production upload and SNS card rendering not yet performed."
+}
