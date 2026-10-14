@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261012-review2"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261014-release1"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);
@@ -40,7 +40,7 @@ for (const file of paths) {
     assert.equal(document.querySelectorAll('[data-gallery-item]').length,1);
     assert(!document.querySelector('[data-gallery-item]').hasAttribute('target'));
     assert(document.querySelector('[data-gallery-open]').hidden);
-    assert.equal(document.querySelectorAll('script[src*="gallery.js?v=20261012-review2"]').length,1);
+    assert.equal(document.querySelectorAll('script[src*="gallery.js?v=20261014-release1"]').length,1);
   }
 }
 for(const file of ['style.css','sky-images.css','design-20261012.css','gallery.css']) {
@@ -57,6 +57,13 @@ assert(aboutDocument.querySelector('.about-opening > .philosophy-section'));
 const code=fs.readFileSync(path.join(root,'assets/js/main.js'),'utf8');
 const original=fs.readFileSync(path.join(root,'contact/index.html'),'utf8');
 const names={'ishihara-yueto':'石原 月斗','nakayama-yui':'中山 結心','tsukigata-hina':'月形 陽南','takashima-hiroki':'髙島 大幹'};
+const staticContact = new JSDOM(original).window.document;
+assert.equal(staticContact.querySelector('[data-contact-email]').dataset.contactReady, 'true');
+assert.equal(staticContact.querySelector('[data-mail-link]').getAttribute('href'), 'mailto:contact@saimer-pro.com');
+assert(!staticContact.querySelector('[data-mail-link]').hasAttribute('aria-disabled'));
+assert(!staticContact.querySelector('[data-copy-email]').disabled);
+assert([...staticContact.querySelectorAll('[data-email-pending]')].every(n => n.hidden));
+assert(!original.includes('開設準備中'));
 let cases=0;
 function fixture(ready, query, html=original) {
   const dom=new JSDOM(html,{url:'https://example.test/contact/'+query,runScripts:'outside-only'});
@@ -94,6 +101,6 @@ for(const ready of [false,true]) {
 for(const query of ['?talent=__proto__&type=__proto__','?talent=missing','?type=missing']) {
   const dom=fixture(false,query);assert.equal(dom.window.document.querySelector('[data-mail-link]').hasAttribute('href'),false);cases++;dom.window.close();
 }
-const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261012-review2',ready:false};
-fs.writeFileSync(path.join(root,'docs/ui-20261012-static.json'),JSON.stringify(result,null,2)+'\n');
+const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261014-release1',ready:true};
+fs.writeFileSync(path.join(root,'docs/release-20261014-site-check.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result));
