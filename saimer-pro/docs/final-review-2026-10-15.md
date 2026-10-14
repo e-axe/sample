@@ -34,11 +34,11 @@
 ページ別title/description、canonical、Organization・Person・ProfilePage・BreadcrumbList等と実際の掲載内容、本人SNSのsameAsを検査。GoogleのAI検索向けに専用ファイルを追加する必要はないため、AI用の装飾的なファイルや架空の実績は追加しない。公開後に索引登録と実際の検索流入を確認する。
 参考：https://developers.google.com/search/docs/appearance/ai-features
 
-## 公開前に必要な4項目
+## 公開前に残る確認（同日の後続確認を反映）
 
-1. クライアントの最終掲載確認（プロフィール・法人情報・プライバシー本文を含む）。
-2. contact@saimer-pro.comの実送受信と管理者のiPhoneメール受信確認。メールボックス作成とmailto起動コードは完了済み。
-3. 最新の本番用出力をXServerへ配置し、HTTPS・apex/www・index.htmlの転送、全9ページ・OGP・キャッシュを確認。10月14日の設定記録はあるが、今回本番での反映は未確認。
+1. プライバシー本文は同日にユーザーから最終承認OKの報告を受領。その他の掲載情報の未確認事項は独立して確認する。
+2. contact@saimer-pro.comのWebメールとGmailの往復送受信は02:37〜02:38 JSTに確認済み。管理者のiPhoneメール設定・受信は未確認。
+3. 最新の本番用出力をXServerへ配置し、HTTPS・apex/www・index.htmlの転送、全9ページ・OGP・キャッシュを確認。SSL反映・apex/www証明書・HTTPS転送は同日の後続確認で正常。サイト配置・配置後の確認は未実施。
 4. 本番のiPhone/Safari・Android・PCでの表示/操作確認とSearch Consoleの所有権確認・サイトマップ送信。
 
 ## 公開後の充実（公開の必須条件ではない）

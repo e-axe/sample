@@ -97,7 +97,7 @@ try {
   for (const file of seo.pages) {
     const html = seo.read(file);
     validate(file, html, seo.config.previewBaseUrl, false);
-    assert.equal(seo.render(file, html), html, 'Preview generation must be repeatable');
+    assert.equal(seo.render(file, html).replaceAll('\r\n', '\n'), html.replaceAll('\r\n', '\n'), 'Preview generation must be repeatable');
   }
   const result = build(output);
   for (const file of seo.pages) validate(file, fs.readFileSync(path.join(output, file), 'utf8'), seo.config.productionBaseUrl, true);
