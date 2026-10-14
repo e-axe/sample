@@ -24,10 +24,11 @@ function build(output, base = seo.config.productionBaseUrl) {
   }
   for (const file of seo.pages) {
     let html = seo.render(file, seo.read(file), { production: true, base });
+    if (file === 'contact/index.html' && !html.includes('data-contact-ready="true"')) throw new Error('本番用メール窓口が有効になっていません。');
     html = html.replace(/\s*<span class="sample-tag">SAMPLE SITE<\/span>/g, '')
       .replace(/\s*<div class="sample-bar">[\s\S]*?<\/div>\s*<\/div>/g, '')
       .replace(/\s*<p>SAMPLE SITE \/ NOT FOR PUBLIC RELEASE<\/p>/g, '');
-    if (/noindex|nofollow|SAMPLE SITE|最終確認用サイト|e-axe\.github\.io/.test(html)) throw new Error('確認用設定が残っています: ' + file);
+    if (/noindex|nofollow|SAMPLE SITE|最終確認用サイト|e-axe\.github\.io|開設準備中|サンプル文面|policy-notice/.test(html)) throw new Error('確認用設定が残っています: ' + file);
     files.set(file, Buffer.from(html));
     const dom = new JSDOM(html);
     for (const node of dom.window.document.querySelectorAll('[href],[src],[srcset]')) {

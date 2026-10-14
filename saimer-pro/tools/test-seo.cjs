@@ -52,7 +52,13 @@ function validate(file, html, base, production) {
   assert.equal(meta('robots').includes('nofollow'), !production);
   if (production) {
     assert.equal(d.querySelectorAll('.sample-tag,.sample-bar').length, 0);
-    assert(!/SAMPLE SITE|e-axe\.github\.io|最終確認用サイト|noindex|nofollow/.test(html));
+    assert(!/SAMPLE SITE|e-axe\.github\.io|最終確認用サイト|noindex|nofollow|開設準備中|サンプル文面/.test(html));
+    assert.equal(d.querySelectorAll('.policy-notice').length, 0);
+    if (file === 'contact/index.html') {
+      assert.equal(d.querySelector('[data-contact-email]').dataset.contactReady, 'true');
+      assert.equal(d.querySelector('[data-mail-link]').getAttribute('href'), 'mailto:contact@saimer-pro.com');
+      assert(!d.querySelector('[data-mail-link]').hasAttribute('aria-disabled'));
+    }
   }
   const ld = JSON.parse(d.querySelector('#seo-structured-data').textContent);
   assert.equal(ld['@context'], 'https://schema.org');
@@ -157,7 +163,7 @@ try {
   }
   assert.deepEqual(dimensions, [1200, 630]);
   const record = { metadataPages: checks, previewNoindex: 9, productionIndexable: 9, productionFiles: result.files, ogImage: { width: 1200, height: 630, bytes: jpg.length }, sourceUnchanged: true, deploymentPerformed: false };
-  fs.writeFileSync(path.join(seo.root, 'docs/seo-20261012-check.json'), JSON.stringify(record, null, 2) + '\n');
+  fs.writeFileSync(path.join(seo.root, 'docs/release-20261014-seo-check.json'), JSON.stringify(record, null, 2) + '\n');
   console.log(JSON.stringify(record));
 } finally {
   // Only remove this test's freshly created temporary directory.

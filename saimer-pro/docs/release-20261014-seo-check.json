@@ -1,0 +1,13 @@
+{
+  "metadataPages": 18,
+  "previewNoindex": 9,
+  "productionIndexable": 9,
+  "productionFiles": 52,
+  "ogImage": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 110450
+  },
+  "sourceUnchanged": true,
+  "deploymentPerformed": false
+}
