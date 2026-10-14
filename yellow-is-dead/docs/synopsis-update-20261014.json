@@ -1,0 +1,23 @@
+{
+  "publicFiles": 90,
+  "zipFiles": 91,
+  "productionURL": "https://yellow-is-dead.softboiled.net/",
+  "localReferences": "passed",
+  "zipCRC": "passed",
+  "extractedBytesMatch": "passed",
+  "productionMetadata": "passed",
+  "officialFlyerOldSynopsis": "retained; replacement official artwork pending",
+  "zipSHA256": "c0716e48bb4c6a344a6ff7762af24ed1bb6905ef965b5e595f47f97964d4c36e",
+  "source": {
+    "filename": "イエローが死んだ_公演情報最新版.md",
+    "updated": "2026-10-14",
+    "libraryVersion": 5
+  },
+  "storyExactMatch": true,
+  "unchangedOtherPublicData": true,
+  "roleColorsRetained": true,
+  "newGlyphsAdded": false,
+  "fontCmapInspection": "not run: Brotli dependency unavailable",
+  "browserReview": "not run: no Chromium executable; browser download failed",
+  "productionDeployment": "client action pending"
+}

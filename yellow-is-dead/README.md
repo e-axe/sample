@@ -49,7 +49,7 @@ python3 tools/build.py
 ## 現在の確定待ち
 
 - キャスト写真18枚は2026-10-10に受領・実装済み。元幅500px未満の4枚は高密度画面での解像感に元素材の上限がある。
-- 本番公開URL予定は `yellow-is-dead.softboiled.net`。HTTPS/TLSは本番サーバー側の確認待ち。確認用のnoindexは本番用ビルドに引き継がず、本番はcanonicalとOGP URLを本番アドレスに切り替える。
+- 本番公開URLは `https://yellow-is-dead.softboiled.net/`（2026-10-14ユーザー指定）。確認用のnoindexは本番用ビルドに引き継がず、本番はcanonicalとOGP URLを本番アドレスに切り替える。
 - 実機iOS Safari / Android Chromeでの最終確認。
 
 未提示の開場時刻、上演時間、配役、座席図、残席、販売手数料、問い合わせ先、権利者は追加していない。公演理解用の非公開プロット・印刷原データ・元宣材写真は配信しない。
@@ -159,3 +159,11 @@ python3 tools/build.py
 ## 2026-10-14 OGP決定画像の差し替え
 
 ユーザーの明示指示により、添付 `yellow-is-dead-ogp-clean.png` を正式採用。10月11日のOGP採用記録は履歴とし、以後の配信には `assets/yellow-is-dead-ogp-clean-20261014.jpg`（1200×630 JPEG）を使用する。添付の構図・文字・マスクを再生成せず縮小し、OGP/X両参照を更新。旧画像は履歴として保持するが納品パッケージから除外。本番URLはユーザー指定の `https://yellow-is-dead.softboiled.net/`。HTTPSでHTML取得成功、現行HTMLにはHTTPのOGP/canonicalが残っていたため差し替え用HTMLではHTTPSへ統一。GitHubの確認用URL/noindexは維持し、本番サーバーへはクライアントが配置する。
+
+## 2026-10-14 公開用あらすじ変更・一括差し替え納品
+
+- 正式公演情報の2026-10-14版に合わせ、組織名・送金主を『ジャスティス』、動機導入を「組織のメンバー」に更新。日程・CAST・料金・販売情報は変更なし。本文全文表示と色名の着色を維持。
+- `performance.json` から確認用HTML、本番HTTPS用HTML、確認用ZIPを再生成。旧確認用ZIPは `docs/archives/yellow-is-dead-client-preview-20261011.zip` に履歴として保管し、現行納品用には使用しない。既採用OGP `yellow-is-dead-ogp-clean-20261014.jpg` を一括差し替えに含める。
+- クライアント用ZIPは本番URL `https://yellow-is-dead.softboiled.net/` に固定し、公開に必要なHTML/CSS/JS/画像/フォントをまとめる。制作資料と非公開プロットを含めない。
+- 公式フライヤー裏面の画像には旧あらすじが残る。原素材の同一性を維持し、画像を加工しない。修正版公式フライヤー受領時に画像差し替えが必要。
+- 過去の検証記録は履歴として維持。今回の検証は `docs/synopsis-update-20261014.json` に記録する。本番サーバーへの配置はクライアント担当。

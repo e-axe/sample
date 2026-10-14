@@ -1,7 +1,7 @@
 """Package only the static preview and client placement instructions."""
 import pathlib,zipfile,hashlib,json
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-OLD_HERO={'yellow-is-dead-hero-1536.webp','yellow-is-dead-hero-1920.webp','yellow-is-dead-hero-mobile-640.webp','yellow-is-dead-hero-mobile-800.webp'}
+OLD_HERO={'yellow-is-dead-ogp.jpg','yellow-is-dead-hero-1536.webp','yellow-is-dead-hero-1920.webp','yellow-is-dead-hero-mobile-640.webp','yellow-is-dead-hero-mobile-800.webp'}
 files=[ROOT/name for name in ('index.html','style.css','app.js')]
 for folder in ('assets','fonts'):
     files.extend(p for p in sorted((ROOT/folder).rglob('*')) if p.is_file() and p.name not in OLD_HERO)
