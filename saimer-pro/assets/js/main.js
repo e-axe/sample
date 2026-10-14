@@ -1,9 +1,14 @@
 document.documentElement.classList.remove("no-js");
 document.documentElement.classList.add("js");
 
+// Font downloads must not block the first readable frame.
+document.querySelectorAll('[data-font-stylesheet]').forEach((link) => { link.media = 'all'; });
+
 const menuButton = document.querySelector("[data-menu-toggle]");
 const mobileMenu = document.querySelector("[data-menu]");
+const menuRegions = document.querySelectorAll("main, .site-footer, .sample-bar, .brand, .skip-link");
 let lastFocusedElement = null;
+let menuIsMobile = window.innerWidth <= 767;
 
 function setMenu(open, restoreFocus = true) {
   if (!menuButton || !mobileMenu) return;
@@ -15,7 +20,7 @@ function setMenu(open, restoreFocus = true) {
   menuButton.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
   mobileMenu.setAttribute("aria-hidden", String(isMobile && !open));
   mobileMenu.inert = isMobile && !open;
-  document.querySelectorAll("main, .site-footer, .sample-bar, .brand, .skip-link").forEach((region) => {
+  menuRegions.forEach((region) => {
     region.inert = open;
   });
 
@@ -27,6 +32,8 @@ function setMenu(open, restoreFocus = true) {
   } else if (isMobile && !open && mobileMenu.contains(document.activeElement)) {
     // Resizing from desktop must not leave focus inside the hidden menu.
     menuButton.focus({ preventScroll: true });
+  } else if (!isMobile && document.activeElement === menuButton) {
+    mobileMenu.querySelector("a")?.focus({ preventScroll: true });
   }
 }
 
@@ -35,7 +42,17 @@ menuButton?.addEventListener("click", () => {
 });
 
 mobileMenu?.addEventListener("click", (event) => {
-  if (event.target === mobileMenu || event.target.closest("a")) setMenu(false);
+  const link = event.target.closest("a");
+  if (event.target !== mobileMenu && !link) return;
+  setMenu(false);
+  if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const destination = new URL(link.href, window.location.href);
+  if (destination.pathname !== window.location.pathname || destination.search !== window.location.search || !destination.hash) return;
+  const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+  if (target) {
+    if (!target.hasAttribute("tabindex")) target.tabIndex = -1;
+    target.focus({ preventScroll: true });
+  }
 });
 
 document.addEventListener("keydown", (event) => {
@@ -59,7 +76,10 @@ document.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  setMenu(window.innerWidth <= 767 && document.body.classList.contains("menu-open"), false);
+  const isMobile = window.innerWidth <= 767;
+  if (isMobile === menuIsMobile) return;
+  menuIsMobile = isMobile;
+  setMenu(false, false);
 });
 setMenu(false);
 
