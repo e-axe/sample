@@ -94,4 +94,4 @@ GitHub Pagesは既存の`main`ブランチから静的配信。canonical・OGP�
 
 ## 本番生成前の確認記録
 
-site.config.jsonのreleaseReadinessにメール往復確認・プライバシー最終承認を記録する。プライバシー本文の正規化したテキストのSHA-256を承認対象と照合し、承認後に本文が変更された場合は再確認する。記録欠落・未確認・本文不一致の場合は出力前に本番生成を停止する。検証は`npm run test:release`。詳細は[PR #6対応](docs/pr6-review-fix-2026-10-15.md)。
+site.config.jsonのreleaseReadinessにメール往復確認・プライバシー最終承認を記録する。プライバシー本文の各policy-sectionの正規化したテキストのSHA-256を承認対象と照合し、承認後に本文が変更された場合は再確認する。記録欠落・未確認・本文不一致の場合は出力前に本番生成を停止する。検証は`npm run test:release`。詳細は[PR #6対応](docs/pr6-review-fix-2026-10-15.md)。

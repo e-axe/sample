@@ -7,10 +7,23 @@ const xml = text => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;'
 function privacyWordingHash(html) {
   const dom = new JSDOM(html);
   try {
-    const policy = dom.window.document.querySelector('article.policy');
-    if (!policy) throw new Error('プライバシー本文が見つかりません。');
-    const wording = policy.textContent.replace(/\s+/g, ' ').trim();
+    const sections = [...dom.window.document.querySelectorAll('article.policy .policy-section')];
+    if (!sections.length) throw new Error('プライバシー本文が見つかりません。');
+    const wording = sections.map(section => section.textContent.replace(/\s+/g, ' ').trim()).join('\n');
     return crypto.createHash('sha256').update(wording).digest('hex');
+  } finally { dom.window.close(); }
+}
+function validatePublishedMailbox(html, address, file) {
+  const dom = new JSDOM(html);
+  try {
+    const document = dom.window.document;
+    const published = [...(document.body.textContent.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) || [])];
+    for (const node of document.querySelectorAll('[data-contact-email],a[href^="mailto:"]')) {
+      if (node.dataset.contactEmail) published.push(node.dataset.contactEmail);
+      const href = node.getAttribute('href');
+      if (href?.startsWith('mailto:')) published.push(decodeURIComponent(href.slice(7).split('?')[0]));
+    }
+    if (published.some(value => value !== address)) throw new Error(`確認済みメールと掲載アドレスが一致していません: ${file}`);
   } finally { dom.window.close(); }
 }
 function validateRelease(readiness, contactHtml, privacyHtml) {
@@ -52,6 +65,7 @@ function build(output, base = seo.config.productionBaseUrl) {
       .replace(/\s*<div class="sample-bar">[\s\S]*?<\/div>\s*<\/div>/g, '')
       .replace(/\s*<p>SAMPLE SITE \/ NOT FOR PUBLIC RELEASE<\/p>/g, '');
     if (/noindex|nofollow|SAMPLE SITE|最終確認用サイト|e-axe\.github\.io|開設準備中|サンプル文面|policy-notice/.test(html)) throw new Error('確認用設定が残っています: ' + file);
+    validatePublishedMailbox(html, seo.config.releaseReadiness.email.address, file);
     files.set(file, Buffer.from(html));
     const dom = new JSDOM(html);
     for (const node of dom.window.document.querySelectorAll('[href],[src],[srcset]')) {
@@ -96,4 +110,4 @@ if (require.main === module) {
   const result = build(args[1] || path.join(seo.root, 'dist/production'));
   console.log(JSON.stringify({ baseUrl: result.baseUrl, pages: result.pages, files: result.files, output: result.output }));
 }
-module.exports = { build, validateRelease, privacyWordingHash };
+module.exports = { build, validateRelease, privacyWordingHash, validatePublishedMailbox };
