@@ -64,3 +64,7 @@ node tools/build-production.cjs --out 出力先の空フォルダ
 - [Google：Site names](https://developers.google.com/search/docs/appearance/site-names) — WebSiteのname・alternateName。本番はドメインのルートで使用。
 - [OpenAI：Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots) — ChatGPT検索用のOAI-SearchBotと学習用GPTBotは別の設定。付属設定は検索へのアクセスを妨げず、既存の学習用ポリシーを別途変更するものではない。
 - [Open Graph protocol](https://ogp.me/) — 画像URL、画像の構造化属性、タイトル、説明、URL。
+
+## 2026-10-15の確認・承認
+
+SSLはapex/www両方の証明書検証とHTTP→HTTPS転送を確認済み。contact@saimer-pro.comはGmailとの往復で両受信トレイへの到着、SPF・DKIM・DMARC PASSを確認。プライバシー本文はユーザーから最終承認OKの報告を受領。releaseReadinessの記録と本文ハッシュが一致しない場合は、出力前に本番生成を停止する。実端末のメールソフト設定、サイト配置・配置後確認、Search Console登録は別の残作業。

@@ -9,7 +9,8 @@
     "seo:preview": "node tools/sync-seo.cjs",
     "build:production": "node tools/build-production.cjs",
     "test:seo": "node tools/test-seo.cjs",
-    "test:final": "node tools/test-final.cjs"
+    "test:final": "node tools/test-final.cjs",
+    "test:release": "node tools/test-release.cjs"
   },
   "devDependencies": {
     "jsdom": "^30.1.2"

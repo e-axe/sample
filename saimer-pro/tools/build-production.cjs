@@ -4,12 +4,48 @@ const crypto = require('node:crypto');
 const { JSDOM } = require('jsdom');
 const seo = require('./seo.cjs');
 const xml = text => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+function privacyWordingHash(html) {
+  const dom = new JSDOM(html);
+  try {
+    const sections = [...dom.window.document.querySelectorAll('article.policy .policy-section')];
+    if (!sections.length) throw new Error('プライバシー本文が見つかりません。');
+    const wording = sections.map(section => section.textContent.replace(/\s+/g, ' ').trim()).join('\n');
+    return crypto.createHash('sha256').update(wording).digest('hex');
+  } finally { dom.window.close(); }
+}
+function validatePublishedMailbox(html, address, file) {
+  const dom = new JSDOM(html);
+  try {
+    const document = dom.window.document;
+    const published = [...(document.body.textContent.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) || [])];
+    for (const node of document.querySelectorAll('[data-contact-email],a[href^="mailto:"]')) {
+      if (node.dataset.contactEmail) published.push(node.dataset.contactEmail);
+      const href = node.getAttribute('href');
+      if (href?.startsWith('mailto:')) published.push(decodeURIComponent(href.slice(7).split('?')[0]));
+    }
+    if (published.some(value => value !== address)) throw new Error(`確認済みメールと掲載アドレスが一致していません: ${file}`);
+  } finally { dom.window.close(); }
+}
+function validateRelease(readiness, contactHtml, privacyHtml) {
+  const email = readiness?.email;
+  if (email?.status !== 'verified' || !email.verifiedOn || !email.evidence) throw new Error('メールの往復送受信確認が記録されていません。');
+  const contact = new JSDOM(contactHtml);
+  try {
+    const panel = contact.window.document.querySelector('[data-contact-email]');
+    const link = contact.window.document.querySelector('[data-mail-link]');
+    if (panel?.dataset.contactEmail !== email.address || panel?.dataset.contactReady !== 'true' || link?.getAttribute('href') !== `mailto:${email.address}` || link?.getAttribute('aria-disabled') === 'true') throw new Error('確認済みメールと問い合わせ窓口の設定が一致していません。');
+  } finally { contact.window.close(); }
+  const privacy = readiness?.privacy;
+  if (privacy?.status !== 'approved' || !privacy.approvedOn || !privacy.evidence) throw new Error('プライバシー文面の最終承認が記録されていません。');
+  if (privacy.wordingSha256 !== privacyWordingHash(privacyHtml)) throw new Error('プライバシー本文が承認後に変更されています。再確認してください。');
+}
 function build(output, base = seo.config.productionBaseUrl) {
   base = seo.baseUrl(base, true);
   output = path.resolve(output);
   const dist = path.join(seo.root, 'dist');
   if (output === seo.root || seo.root.startsWith(output + path.sep) || (output.startsWith(seo.root + path.sep) && output !== dist && !output.startsWith(dist + path.sep))) throw new Error('出力先をソースや画像フォルダにしないでください。');
   if (fs.existsSync(output) && fs.readdirSync(output).length) throw new Error('出力先に既存ファイルがあります。新しい空のフォルダを指定してください。');
+  validateRelease(seo.config.releaseReadiness, seo.read('contact/index.html'), seo.read('privacy/index.html'));
   const files = new Map();
   const assets = new Set([seo.config.ogImage]);
   function reference(ref, pageUrl) {
@@ -29,6 +65,7 @@ function build(output, base = seo.config.productionBaseUrl) {
       .replace(/\s*<div class="sample-bar">[\s\S]*?<\/div>\s*<\/div>/g, '')
       .replace(/\s*<p>SAMPLE SITE \/ NOT FOR PUBLIC RELEASE<\/p>/g, '');
     if (/noindex|nofollow|SAMPLE SITE|最終確認用サイト|e-axe\.github\.io|開設準備中|サンプル文面|policy-notice/.test(html)) throw new Error('確認用設定が残っています: ' + file);
+    validatePublishedMailbox(html, seo.config.releaseReadiness.email.address, file);
     files.set(file, Buffer.from(html));
     const dom = new JSDOM(html);
     for (const node of dom.window.document.querySelectorAll('[href],[src],[srcset]')) {
@@ -73,4 +110,4 @@ if (require.main === module) {
   const result = build(args[1] || path.join(seo.root, 'dist/production'));
   console.log(JSON.stringify({ baseUrl: result.baseUrl, pages: result.pages, files: result.files, output: result.output }));
 }
-module.exports = { build };
+module.exports = { build, validateRelease, privacyWordingHash, validatePublishedMailbox };
