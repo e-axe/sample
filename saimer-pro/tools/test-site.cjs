@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261015-final1"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261019-client1"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);
@@ -35,7 +35,8 @@ for (const file of paths) {
   for(const img of document.querySelectorAll('img[src*="images/talents"]'))assert(img.hasAttribute('width')&&img.hasAttribute('height')&&img.getAttribute('alt'),file);
   if(file.split('/').length===3) {
     const slug=file.split('/')[1];
-    assert.equal(document.querySelector('.profile-offer').getAttribute('href'),`../../contact/?talent=${slug}`);
+    assert.equal(document.querySelector('.profile-offer'),null);
+    assert.equal(document.querySelector('.talent-offer-link').getAttribute('href'),`../../contact/?talent=${slug}`);
     assert.equal(document.querySelectorAll('.talent-contact a[href*="?talent="]').length,1);
     assert.equal(document.querySelectorAll('[data-gallery-item]').length,1);
     assert(!document.querySelector('[data-gallery-item]').hasAttribute('target'));
