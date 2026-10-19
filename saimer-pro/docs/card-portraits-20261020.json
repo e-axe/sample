@@ -1,0 +1,190 @@
+[
+  {
+    "slug": "ishihara-yueto",
+    "original": "yueto.jpg",
+    "original_sha256": "c8836e32b220900f0aaabfd22aca0e5fec539c0e5b1b2eb83d81e42bcaad0c8f",
+    "crop_box": [
+      468,
+      239,
+      1816,
+      2037
+    ],
+    "original_size": [
+      2240,
+      3360
+    ],
+    "head_height_ratio": 0.63,
+    "top_space_ratio": 0.08,
+    "variants": [
+      {
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-320.webp",
+        "width": 320,
+        "height": 426,
+        "bytes": 10262,
+        "sha256": "ff39a3ba84ca6fe2f30d89189e9eb53440b2f7a74ffd774a0c0ccec218c66ccc"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-320.jpg",
+        "width": 320,
+        "height": 426,
+        "bytes": 19786,
+        "sha256": "fd23d84fbaa000372d92137a4c62fd7a2931f5d9da72f27329ddac982b3d3e71"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 40488,
+        "sha256": "e7a49af2fe41118f1db5180bef063d49b99bc9f07e6d1e24da6adfe1ffc06dd5"
+      },
+      {
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-640.jpg",
+        "width": 640,
+        "height": 853,
+        "bytes": 72060,
+        "sha256": "0dd5c143d13d6ee06c0bed48bcfacd0fd17a141cabf98b7c06a76b7f54e8e9f0"
+      }
+    ]
+  },
+  {
+    "slug": "nakayama-yui",
+    "original": "yui.jpg",
+    "original_sha256": "456e47a094c836886a160c50622c4c2a6f33eca38e7f7fc74bba54debf699938",
+    "crop_box": [
+      154,
+      68,
+      870,
+      1023
+    ],
+    "original_size": [
+      1045,
+      1567
+    ],
+    "head_height_ratio": 0.63,
+    "top_space_ratio": 0.08,
+    "variants": [
+      {
+        "file": "assets/images/talents/nakayama-yui-card-20261020-320.webp",
+        "width": 320,
+        "height": 426,
+        "bytes": 25096,
+        "sha256": "147b4ee3eee47902b4766c00fdb34e25d8aefc1abf242ee64a017a8c25ffd568"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-card-20261020-320.jpg",
+        "width": 320,
+        "height": 426,
+        "bytes": 37616,
+        "sha256": "6083f989ba31f0d283d237e622adbd473b7147b2829c8ab54150c07260bd1ba4"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-card-20261020-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 81376,
+        "sha256": "d71ded4039cf1b74b768320ce625e910772b75467342db861959c702d413196b"
+      },
+      {
+        "file": "assets/images/talents/nakayama-yui-card-20261020-640.jpg",
+        "width": 640,
+        "height": 853,
+        "bytes": 122026,
+        "sha256": "e92d03c70574262762017ef7598bd14920b8540e25a4ccdc02effdb03368a722"
+      }
+    ]
+  },
+  {
+    "slug": "tsukigata-hina",
+    "original": "hina.jpg",
+    "original_sha256": "37e6d355641297d844281ad5cbcb053ceeae7afba7967e547dace88fc61f3122",
+    "crop_box": [
+      198,
+      121,
+      1106,
+      1332
+    ],
+    "original_size": [
+      1672,
+      2508
+    ],
+    "head_height_ratio": 0.63,
+    "top_space_ratio": 0.08,
+    "variants": [
+      {
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-320.webp",
+        "width": 320,
+        "height": 426,
+        "bytes": 13752,
+        "sha256": "9838705c972a05b3bf5e012015edd6d310851a79aad04ac7369b5ec345192784"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-320.jpg",
+        "width": 320,
+        "height": 426,
+        "bytes": 25079,
+        "sha256": "166294c4fcaac1ee2443b9d520736b05c4c05c27c422710f8eb4a3b3cb984dd6"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 46102,
+        "sha256": "09e56f175cba27ee49ae0784e3f1962272c7993ff2855ae3403d6ec76523d24f"
+      },
+      {
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-640.jpg",
+        "width": 640,
+        "height": 853,
+        "bytes": 83401,
+        "sha256": "486a293f769bb16963e433071307158f09320d8b43ca6a7b6b0fd5753624361a"
+      }
+    ]
+  },
+  {
+    "slug": "takashima-hiroki",
+    "original": "hiroki.jpg",
+    "original_sha256": "16bba33bf6090df05034a634e2cffca7991b6239f53329a3db88448bab6e5cff",
+    "crop_box": [
+      7,
+      38,
+      1023,
+      1392
+    ],
+    "original_size": [
+      1023,
+      1537
+    ],
+    "head_height_ratio": 0.63,
+    "top_space_ratio": 0.08,
+    "variants": [
+      {
+        "file": "assets/images/talents/takashima-hiroki-card-20261020-320.webp",
+        "width": 320,
+        "height": 426,
+        "bytes": 17696,
+        "sha256": "e28db7e122b420ab6e968c9b4da36e55707afb24b5e1ac8f0da71dfacbf6683e"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-card-20261020-320.jpg",
+        "width": 320,
+        "height": 426,
+        "bytes": 29847,
+        "sha256": "b1f6fffbd5acbc6ce36c35242634ea2cb342ac24c35ffb33fcf2f60d2cab97f8"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-card-20261020-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 52004,
+        "sha256": "351a28e527d8cf89eab5a56d2c6628d64b8ae6f8240ee79124e0f64cfbc39ee5"
+      },
+      {
+        "file": "assets/images/talents/takashima-hiroki-card-20261020-640.jpg",
+        "width": 640,
+        "height": 853,
+        "bytes": 96157,
+        "sha256": "3da775b9c07cd5023e0c6dd67bfbe2b7e78592d89903c51462a8a8512897af35"
+      }
+    ]
+  }
+]
