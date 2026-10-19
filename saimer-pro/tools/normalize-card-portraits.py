@@ -10,9 +10,9 @@ rows = []
 # Hairline/crown to chin, measured on each supplied photograph. Fit the head
 # to 63% of the card height with 8% clear space above the crown.
 anchors = [
-    ('yueto', 'ishihara-yueto', .51, .114, .451),
+    ('yueto', 'ishihara-yueto', .449, .114, .451),
     ('yui', 'nakayama-yui', .49, .092, .476),
-    ('hina', 'tsukigata-hina', .39, .087, .391),
+    ('hina', 'tsukigata-hina', .303, .087, .391),
     ('hiroki', 'takashima-hiroki', .52, .095, .650),
 ]
 sheet = Image.new('RGB', (1120, 420), 'white')
@@ -34,12 +34,13 @@ for i, (original, slug, cx, crown, chin) in enumerate(anchors):
         assert box[0]>=0 and box[1]>=0 and box[2]<=im.width and box[3]<=im.height
         assert box[2]-box[0]>=640, (slug, box)
         cropped = im.crop(box)
-        row = {'slug':slug,'original':p.name,'original_sha256':before,'crop_box':box,'original_size':im.size,'head_height_ratio':.63,'top_space_ratio':.08,'variants':[]}
+        row = {'slug':slug,'original':p.name,'original_sha256':before,'crop_box':box,'original_size':im.size,'horizontal_center_ratio':cx,'head_height_ratio':.63,'top_space_ratio':.08,'variants':[]}
         for width in (320,640):
             thumb = cropped.resize((width,width*4//3),Image.Resampling.LANCZOS)
             thumb.info.clear()
             for ext in ('webp','jpg'):
-                rel = f'assets/images/talents/{slug}-card-20261020-{width}.{ext}'
+                version = '20261020-center' if original in ('yueto', 'hina') else '20261020'
+                rel = f'assets/images/talents/{slug}-card-{version}-{width}.{ext}'
                 target = site/rel
                 if ext=='webp': thumb.save(target, 'WEBP', quality=90, method=6)
                 else: thumb.save(target, 'JPEG', quality=90, optimize=True, progressive=True, subsampling=0)
@@ -57,9 +58,11 @@ for rel in ('index.html','talents/index.html'):
         pattern=r'<picture>[\s\S]*?</picture>'
         def replace(m):
             block=m.group(0)
-            if slug+'-320.' not in block: return block
-            block=re.sub(r', [^,\" ]*'+re.escape(slug)+r'-960\.(?:webp|jpg) 960w','',block)
-            block=re.sub(re.escape(slug)+r'-(320|640|960)\.(webp|jpg)',lambda x:slug+'-card-20261020-'+('640' if x[1]=='960' else x[1])+'.'+x[2],block)
+            if slug not in block: return block
+            version = '20261020-center' if row['original'] in ('yueto.jpg', 'hina.jpg') else '20261020'
+            prefix = re.escape(slug)+r'-(?:card-20261020(?:-center)?-)?'
+            block=re.sub(r', [^,\" ]*'+prefix+r'960\.(?:webp|jpg) 960w','',block)
+            block=re.sub(prefix+r'(320|640|960)\.(webp|jpg)',lambda x:slug+'-card-'+version+'-'+('640' if x[1]=='960' else x[1])+'.'+x[2],block)
             block=re.sub(r'width="960" height="144[02]"','width="640" height="853"',block)
             return block
         text=re.sub(pattern,replace,text)

@@ -4,45 +4,46 @@
     "original": "yueto.jpg",
     "original_sha256": "c8836e32b220900f0aaabfd22aca0e5fec539c0e5b1b2eb83d81e42bcaad0c8f",
     "crop_box": [
-      468,
+      332,
       239,
-      1816,
+      1680,
       2037
     ],
     "original_size": [
       2240,
       3360
     ],
+    "horizontal_center_ratio": 0.449,
     "head_height_ratio": 0.63,
     "top_space_ratio": 0.08,
     "variants": [
       {
-        "file": "assets/images/talents/ishihara-yueto-card-20261020-320.webp",
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-center-320.webp",
         "width": 320,
         "height": 426,
-        "bytes": 10262,
-        "sha256": "ff39a3ba84ca6fe2f30d89189e9eb53440b2f7a74ffd774a0c0ccec218c66ccc"
+        "bytes": 10126,
+        "sha256": "51143acf668aeb8000f8d7a6b7df1a93592780be6db0bbf2ee42f57d34df462a"
       },
       {
-        "file": "assets/images/talents/ishihara-yueto-card-20261020-320.jpg",
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-center-320.jpg",
         "width": 320,
         "height": 426,
-        "bytes": 19786,
-        "sha256": "fd23d84fbaa000372d92137a4c62fd7a2931f5d9da72f27329ddac982b3d3e71"
+        "bytes": 19544,
+        "sha256": "5d486a16093bf4083ccd2a3c27a3adf5df97ad22f4e0840442f01eb0c71087d0"
       },
       {
-        "file": "assets/images/talents/ishihara-yueto-card-20261020-640.webp",
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-center-640.webp",
         "width": 640,
         "height": 853,
-        "bytes": 40488,
-        "sha256": "e7a49af2fe41118f1db5180bef063d49b99bc9f07e6d1e24da6adfe1ffc06dd5"
+        "bytes": 39646,
+        "sha256": "08c575b9f1d9783cce96b87a49351a77e694d648af7a087e6fd104ba0868844c"
       },
       {
-        "file": "assets/images/talents/ishihara-yueto-card-20261020-640.jpg",
+        "file": "assets/images/talents/ishihara-yueto-card-20261020-center-640.jpg",
         "width": 640,
         "height": 853,
-        "bytes": 72060,
-        "sha256": "0dd5c143d13d6ee06c0bed48bcfacd0fd17a141cabf98b7c06a76b7f54e8e9f0"
+        "bytes": 71183,
+        "sha256": "4a6f3bc9a762ccb1f69890c790dca50ad60d6eb97834d563467a5403dfa89e3a"
       }
     ]
   },
@@ -60,6 +61,7 @@
       1045,
       1567
     ],
+    "horizontal_center_ratio": 0.49,
     "head_height_ratio": 0.63,
     "top_space_ratio": 0.08,
     "variants": [
@@ -98,45 +100,46 @@
     "original": "hina.jpg",
     "original_sha256": "37e6d355641297d844281ad5cbcb053ceeae7afba7967e547dace88fc61f3122",
     "crop_box": [
-      198,
+      53,
       121,
-      1106,
+      960,
       1332
     ],
     "original_size": [
       1672,
       2508
     ],
+    "horizontal_center_ratio": 0.303,
     "head_height_ratio": 0.63,
     "top_space_ratio": 0.08,
     "variants": [
       {
-        "file": "assets/images/talents/tsukigata-hina-card-20261020-320.webp",
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-center-320.webp",
         "width": 320,
         "height": 426,
-        "bytes": 13752,
-        "sha256": "9838705c972a05b3bf5e012015edd6d310851a79aad04ac7369b5ec345192784"
+        "bytes": 13906,
+        "sha256": "1d91046a4ba2d8338352c9eebc412076d35f71bac17cd7b6e4ced6f892e36925"
       },
       {
-        "file": "assets/images/talents/tsukigata-hina-card-20261020-320.jpg",
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-center-320.jpg",
         "width": 320,
         "height": 426,
-        "bytes": 25079,
-        "sha256": "166294c4fcaac1ee2443b9d520736b05c4c05c27c422710f8eb4a3b3cb984dd6"
+        "bytes": 25380,
+        "sha256": "e7a4edc5ec1f36274370d1611ec6a05b38d0a0408cdbd9658fbb716d211b35ad"
       },
       {
-        "file": "assets/images/talents/tsukigata-hina-card-20261020-640.webp",
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-center-640.webp",
         "width": 640,
         "height": 853,
-        "bytes": 46102,
-        "sha256": "09e56f175cba27ee49ae0784e3f1962272c7993ff2855ae3403d6ec76523d24f"
+        "bytes": 46330,
+        "sha256": "88ec809e92b853c6093652efb38792ad984c1ea9ecc0a26d1f51f77bccf7d899"
       },
       {
-        "file": "assets/images/talents/tsukigata-hina-card-20261020-640.jpg",
+        "file": "assets/images/talents/tsukigata-hina-card-20261020-center-640.jpg",
         "width": 640,
         "height": 853,
-        "bytes": 83401,
-        "sha256": "486a293f769bb16963e433071307158f09320d8b43ca6a7b6b0fd5753624361a"
+        "bytes": 84087,
+        "sha256": "8f1f1875059b0466b1a973b1cfe5589974e39741dd292d92b6a4b339999976e3"
       }
     ]
   },
@@ -154,6 +157,7 @@
       1023,
       1537
     ],
+    "horizontal_center_ratio": 0.52,
     "head_height_ratio": 0.63,
     "top_space_ratio": 0.08,
     "variants": [
