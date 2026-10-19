@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261019-client1"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/design-20261012.css?v=20261019-client2"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);

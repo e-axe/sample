@@ -137,19 +137,26 @@
   .credit-item { break-inside: avoid; }
 }
 
-/* Client revision 2026-10-19: a quiet, accessible casting link. */
+/* Client revision 2026-10-19: compact casting button. */
 .talent-offer-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   max-width: 100%;
   min-height: 44px;
-  padding-block: 8px;
-  font: 400 14px / 1.8 var(--sans);
-  color: var(--color-text);
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 1px;
+  padding: 10px 18px;
+  border: 1px solid var(--color-cta-bg);
+  border-radius: 2px;
+  background: var(--color-cta-bg);
+  font: 500 13px / 1.8 var(--sans);
+  color: var(--color-white);
+  text-decoration: none;
 }
 .talent-offer-link span { flex: 0 0 auto; }
-.talent-offer-link:hover { color: var(--color-accent-hover); }
+.talent-offer-link:hover,
+.talent-offer-link:focus-visible {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-white);
+}
