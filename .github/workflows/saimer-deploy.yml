@@ -62,7 +62,7 @@ jobs:
         shell: bash
         run: |
           git fetch --no-tags --depth=1 origin main
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
             echo "A newer commit is on main. Stopping the stale deployment."
             exit 1
           fi
