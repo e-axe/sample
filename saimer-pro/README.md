@@ -105,3 +105,7 @@ site.config.jsonのreleaseReadinessにメール往復確認・プライバシー
 `npx playwright install --with-deps chromium webkit`の後、`npm run test:browser`で全9ページを320・375・390・430・768・1024・1440pxとWebKitのスマホ縦横表示で検査する。写真開閉とスクロール復帰、メニューのフォーカス、対象タレントの引き継ぎ、200%文字拡大、JavaScript無効時も対象。Google Fontsの外部接続を検査中だけ隔離し、システムフォントへのフォールバックを使う。外部SNSの到達可否・実機iPhone・メール送信完了はこの検査の対象外。
 
 `.github/workflows/saimer-checks.yml`はこのサイトの変更を含むPRとmain更新時、および手動実行時に両方の検査を走らせる。失敗時だけスクリーンショット・トレースを7日保存。検査結果や一時ファイルはソースへ出力しない。検査は本番サーバーへの公開を行わない。
+
+## 本番サイト自動更新（GitHub Actions → FTPS）
+
+GitHubの本番転送は対象フォルダの初期確認・手動承認を経て有効にする。通常更新ではエックスサーバー管理画面への再ログインは不要。FTPSの安全な初期設定、Secrets、接続テスト、本番転送・自動化の手順は [FTPSデプロイ運用手順](docs/deploy-ftps.md) を参照。現時点では認証情報のGitHub Secretsへの設定と本番の接続テストは未確認であり、自動公開が動作したという意味ではない。
