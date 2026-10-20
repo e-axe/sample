@@ -127,6 +127,10 @@ jobs:
             --confirmation "$INITIALIZE_CONFIRMATION" \
             --local saimer-pro/dist/production
 
+      - name: Verify published files over HTTPS
+        if: env.DEPLOY_MODE == 'deploy'
+        run: python saimer-pro/tools/deploy-ftps.py --mode verify --local saimer-pro/dist/production
+
       - name: Deployment completed
         if: env.DEPLOY_MODE == 'deploy'
         run: echo "Production files transferred. Verify https://saimer-pro.com/ in a browser."
