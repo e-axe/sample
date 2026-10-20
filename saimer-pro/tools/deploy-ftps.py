@@ -169,7 +169,8 @@ def deploy(ftp, local_dir):
     # Upload assets before HTML, root index.html after nested HTML, and redirects last.
     order = sorted(files, key=lambda name: (
         name == ".htaccess", name == "index.html",
-        not name.startswith("assets/"), name))
+        not name.startswith("assets/"),
+        Path(name).suffix.lower() in (".css", ".js"), name))
     changed = 0
     for name in order:
         if old.get(name) == hashes[name]:
