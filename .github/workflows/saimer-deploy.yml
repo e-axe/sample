@@ -98,6 +98,23 @@ jobs:
           npx playwright install --with-deps chromium webkit
           npm run test:browser
 
+      - name: Back up the verified production site before writes
+        if: env.DEPLOY_MODE != 'probe'
+        env:
+          SAIMER_FTPS_HOST: ${{ secrets.SAIMER_FTPS_HOST }}
+          SAIMER_FTPS_USER: ${{ secrets.SAIMER_FTPS_USER }}
+          SAIMER_FTPS_PASSWORD: ${{ secrets.SAIMER_FTPS_PASSWORD }}
+        run: python saimer-pro/tools/deploy-ftps.py --mode backup
+
+      - name: Preserve verified production backup
+        if: env.DEPLOY_MODE != 'probe'
+        uses: actions/upload-artifact@v4
+        with:
+          name: saimer-production-backup-${{ github.run_id }}
+          path: saimer-backup/
+          retention-days: 90
+          if-no-files-found: error
+
       - name: Inspect, initialize or deploy over encrypted FTPS
         env:
           SAIMER_FTPS_HOST: ${{ secrets.SAIMER_FTPS_HOST }}
