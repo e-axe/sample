@@ -1,0 +1,110 @@
+name: Saimer production deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe = read-only; initialize = one-time target approval; deploy = publish"
+        required: true
+        type: choice
+        default: probe
+        options:
+          - probe
+          - initialize
+          - deploy
+      confirmation:
+        description: "For initialize only, enter saimer-pro.com after verifying the target."
+        required: false
+        type: string
+  workflow_run:
+    workflows: ["Saimer site checks"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: saimer-production-ftps
+  cancel-in-progress: false
+
+jobs:
+  production:
+    if: >-
+      ${{
+        github.event_name == 'workflow_dispatch' ||
+        (
+          github.event_name == 'workflow_run' &&
+          github.event.workflow_run.event == 'push' &&
+          github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_repository.full_name == github.repository &&
+          vars.SAIMER_FTPS_AUTO_DEPLOY == 'true'
+        )
+      }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      DEPLOY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'deploy' }}
+      INITIALIZE_CONFIRMATION: ${{ github.event_name == 'workflow_dispatch' && inputs.confirmation || '' }}
+      SAIMER_FTPS_HOST: ${{ secrets.SAIMER_FTPS_HOST }}
+      SAIMER_FTPS_USER: ${{ secrets.SAIMER_FTPS_USER }}
+      SAIMER_FTPS_PASSWORD: ${{ secrets.SAIMER_FTPS_PASSWORD }}
+      SAIMER_FTPS_REMOTE_DIR: ${{ vars.SAIMER_FTPS_REMOTE_DIR }}
+    steps:
+      - name: Check out the verified source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
+
+      - name: Avoid deploying an outdated revision
+        if: github.event_name == 'workflow_run'
+        shell: bash
+        run: |
+          git fetch --no-tags --depth=1 origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "A newer commit is on main. Stopping the stale deployment."
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        if: env.DEPLOY_MODE == 'deploy'
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: saimer-pro/package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate the production deployment tool
+        run: python -m unittest discover -s saimer-pro/tests -p "test_deploy_ftps.py" -v
+
+      - name: Test and build the production-only files
+        if: env.DEPLOY_MODE == 'deploy'
+        working-directory: saimer-pro
+        run: |
+          npm ci
+          python -m pip install Pillow
+          npm run test:all
+          npm run build:production -- --out dist/production
+
+      - name: Run browser checks on manually requested deployments
+        if: github.event_name == 'workflow_dispatch' && env.DEPLOY_MODE == 'deploy'
+        working-directory: saimer-pro
+        run: |
+          npx playwright install --with-deps chromium webkit
+          npm run test:browser
+
+      - name: Inspect, initialize or deploy over encrypted FTPS
+        shell: bash
+        run: |
+          python saimer-pro/tools/deploy-ftps.py \
+            --mode "$DEPLOY_MODE" \
+            --confirmation "$INITIALIZE_CONFIRMATION" \
+            --local saimer-pro/dist/production
+
+      - name: Deployment completed
+        if: env.DEPLOY_MODE == 'deploy'
+        run: echo "Production files transferred. Verify https://saimer-pro.com/ in a browser."
