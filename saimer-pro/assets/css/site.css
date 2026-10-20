@@ -1905,3 +1905,4 @@ color: var(--color-white);
 .brand { max-width: calc(100% - 56px); }
 .menu-toggle { flex: 0 0 44px; }
 }
+.page-title, .section-title, .hero-title, .talent-name-en { overflow-wrap: anywhere; }

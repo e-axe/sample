@@ -190,3 +190,6 @@
   .brand { max-width: calc(100% - 56px); }
   .menu-toggle { flex: 0 0 44px; }
 }
+
+/* Long Latin headings must reflow when users enlarge text. */
+.page-title, .section-title, .hero-title, .talent-name-en { overflow-wrap: anywhere; }

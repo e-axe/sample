@@ -7,7 +7,8 @@ test.beforeEach(async ({ page }) => {
   await page.route('https://fonts.googleapis.com/**', route => route.fulfill({ contentType: 'text/css', body: '' }));
 });
 async function noOverflow(page) {
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+  const size = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, viewport: document.documentElement.clientWidth }));
+  expect(size.scroll, `${page.url()}: horizontal overflow`).toBeLessThanOrEqual(size.viewport + 1);
 }
 
 test('all nine pages render without overflow, missing local assets or runtime errors', async ({ page }) => {
@@ -96,7 +97,7 @@ test('casting link carries talent into contact and selection updates email', asy
 });
 
 test('200 percent text remains inside page', async ({ page }) => {
-  for (const route of ['talents/ishihara-yueto/', 'contact/']) {
+  for (const route of ['', 'talents/', 'talents/ishihara-yueto/', 'contact/', 'privacy/']) {
     await page.goto(route);
     await page.evaluate(() => {
       // Simulate text-only enlargement, including explicitly sized labels.
