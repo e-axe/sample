@@ -97,3 +97,11 @@ GitHub Pagesは既存の`main`ブランチから静的配信。canonical・OGP�
 ## 本番生成前の確認記録
 
 site.config.jsonのreleaseReadinessにメール往復確認・プライバシー最終承認を記録する。プライバシー本文の各policy-sectionの正規化したテキストのSHA-256を承認対象と照合し、承認後に本文が変更された場合は再確認する。記録欠落・未確認・本文不一致の場合は出力前に本番生成を停止する。検証は`npm run test:release`。詳細は[PR #6対応](docs/pr6-review-fix-2026-10-15.md)。
+
+## 自動検査（2026-10-20）
+
+`npm run test:all`で参照・問い合わせ・メニュー・写真・SEO・本番生成・画像更新を検査する。既存の確認記録を上書きしたい場合のみ、該当スクリプトに`--write-report`を渡す。
+
+`npx playwright install --with-deps chromium webkit`の後、`npm run test:browser`で全9ページを320・375・390・430・768・1024・1440pxとWebKitのスマホ縦横表示で検査する。写真開閉とスクロール復帰、メニューのフォーカス、対象タレントの引き継ぎ、200%文字拡大、JavaScript無効時も対象。Google Fontsの外部接続を検査中だけ隔離し、システムフォントへのフォールバックを使う。外部SNSの到達可否・実機iPhone・メール送信完了はこの検査の対象外。
+
+`.github/workflows/saimer-checks.yml`はこのサイトの変更を含むPRとmain更新時、および手動実行時に両方の検査を走らせる。失敗時だけスクリーンショット・トレースを7日保存。検査結果や一時ファイルはソースへ出力しない。検査は本番サーバーへの公開を行わない。

@@ -16,7 +16,7 @@ for (const file of paths) {
   assert(!html.includes('20261011-3'),file+' stale cache key');
   assert(!html.includes('sky-arch-'),file+' active arch reference');
   assert(html.includes('contact@saimer-pro.com'),file+' contact address');
-  assert.equal(document.querySelectorAll('link[href*="assets/css/site.css?v=20261020-review1"]').length,1,file);
+  assert.equal(document.querySelectorAll('link[href*="assets/css/site.css?v=20261020-mobile1"]').length,1,file);
   for (const n of document.querySelectorAll('[href],[src],[srcset]')) {
     for(const attr of ['href','src','srcset']) {
       const value=n.getAttribute(attr);
@@ -103,5 +103,5 @@ for(const query of ['?talent=__proto__&type=__proto__','?talent=missing','?type=
   const dom=fixture(false,query);assert.equal(dom.window.document.querySelector('[data-mail-link]').hasAttribute('href'),false);cases++;dom.window.close();
 }
 const result={pages:paths.length,localReferences:checkedRefs,contactCases:cases,cacheVersion:'20261015-final1',ready:true};
-fs.writeFileSync(path.join(root,'docs/release-20261014-site-check.json'),JSON.stringify(result,null,2)+'\n');
+if (process.argv.includes('--write-report')) fs.writeFileSync(path.join(root,'docs/release-20261014-site-check.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result));
