@@ -46,11 +46,12 @@ jobs:
     env:
       DEPLOY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'deploy' }}
       INITIALIZE_CONFIRMATION: ${{ github.event_name == 'workflow_dispatch' && inputs.confirmation || '' }}
-      SAIMER_FTPS_HOST: ${{ secrets.SAIMER_FTPS_HOST }}
-      SAIMER_FTPS_USER: ${{ secrets.SAIMER_FTPS_USER }}
-      SAIMER_FTPS_PASSWORD: ${{ secrets.SAIMER_FTPS_PASSWORD }}
       SAIMER_FTPS_REMOTE_DIR: ${{ vars.SAIMER_FTPS_REMOTE_DIR }}
     steps:
+      - name: Require main for manual operations
+        if: github.event_name == 'workflow_dispatch'
+        run: test "$GITHUB_REF" = refs/heads/main
+
       - name: Check out the verified source
         uses: actions/checkout@v4
         with:
@@ -62,7 +63,7 @@ jobs:
         shell: bash
         run: |
           git fetch --no-tags --depth=1 origin main
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+          if ! git diff --quiet HEAD FETCH_HEAD -- saimer-pro .github/workflows/saimer-deploy.yml .github/workflows/saimer-checks.yml; then
             echo "A newer commit is on main. Stopping the stale deployment."
             exit 1
           fi
@@ -98,6 +99,10 @@ jobs:
           npm run test:browser
 
       - name: Inspect, initialize or deploy over encrypted FTPS
+        env:
+          SAIMER_FTPS_HOST: ${{ secrets.SAIMER_FTPS_HOST }}
+          SAIMER_FTPS_USER: ${{ secrets.SAIMER_FTPS_USER }}
+          SAIMER_FTPS_PASSWORD: ${{ secrets.SAIMER_FTPS_PASSWORD }}
         shell: bash
         run: |
           python saimer-pro/tools/deploy-ftps.py \
