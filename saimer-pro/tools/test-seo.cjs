@@ -163,7 +163,7 @@ try {
   }
   assert.deepEqual(dimensions, [1200, 630]);
   const record = { metadataPages: checks, previewNoindex: 9, productionIndexable: 9, productionFiles: result.files, ogImage: { width: 1200, height: 630, bytes: jpg.length }, sourceUnchanged: true, deploymentPerformed: false };
-  fs.writeFileSync(path.join(seo.root, 'docs/release-20261014-seo-check.json'), JSON.stringify(record, null, 2) + '\n');
+  if (process.argv.includes('--write-report')) fs.writeFileSync(path.join(seo.root, 'docs/release-20261014-seo-check.json'), JSON.stringify(record, null, 2) + '\n');
   console.log(JSON.stringify(record));
 } finally {
   // Only remove this test's freshly created temporary directory.

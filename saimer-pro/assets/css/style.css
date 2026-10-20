@@ -37,7 +37,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 24px);
+  scroll-padding-top: calc(var(--header-offset, var(--header-height)) + 24px);
 }
 
 body {
@@ -1278,7 +1278,7 @@ h3, .brand, .global-nav, .footer-brand, .talent-card-name,
   .global-nav {
     position: fixed;
     z-index: -1;
-    inset: var(--header-height) 0 0;
+    inset: var(--header-offset, var(--header-height)) 0 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

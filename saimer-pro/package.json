@@ -14,9 +14,12 @@
     "build:assets": "node tools/build-assets.cjs",
     "test:assets": "node tools/build-assets.cjs --check",
     "pretest": "npm run test:assets",
-    "prebuild:production": "npm run build:assets"
+    "prebuild:production": "npm run build:assets",
+    "test:all": "npm test && npm run test:final && npm run test:gallery && npm run test:seo && npm run test:release && npm run test:portraits",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "jsdom": "^30.1.2"
   }
 }

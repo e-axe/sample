@@ -103,3 +103,12 @@ if ("IntersectionObserver" in window && !reduceMotion) {
     observer.observe(target);
   });
 }
+
+// Follow the real header height when fonts, text size or line wrapping change.
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader && 'ResizeObserver' in window) {
+  const headerObserver = new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--header-offset', `${siteHeader.getBoundingClientRect().height}px`);
+  });
+  headerObserver.observe(siteHeader);
+}
