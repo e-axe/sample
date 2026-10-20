@@ -13,6 +13,7 @@ from pathlib import Path, PurePosixPath
 import ssl
 import zipfile
 from urllib.request import urlopen
+from urllib.parse import quote
 from ftplib import FTP_TLS, error_perm
 
 DOMAIN = "saimer-pro.com"
@@ -241,10 +242,23 @@ def backup(ftp):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=("probe", "backup", "initialize", "deploy"), required=True)
+    parser.add_argument("--mode", choices=("probe", "backup", "initialize", "deploy", "verify"), required=True)
     parser.add_argument("--confirmation", default="")
     parser.add_argument("--local", default="saimer-pro/dist/production")
     args = parser.parse_args()
+    if args.mode == "verify":
+        checked = 0
+        for name, data in deployed_files(args.local).items():
+            if any(part.startswith(".") for part in PurePosixPath(name).parts):
+                continue
+            with urlopen("https://saimer-pro.com/" + quote(name) + "?deploy=" +
+                         hashlib.sha256(data).hexdigest()[:12], timeout=35) as response:
+                actual = response.read(len(data) + 1)
+            if actual != data:
+                raise ValueError("HTTPS content differs from build: " + name)
+            checked += 1
+        print(json.dumps({"https_verification": "passed", "files": checked}))
+        return
     host = os.environ.get("SAIMER_FTPS_HOST")
     user = os.environ.get("SAIMER_FTPS_USER")
     password = os.environ.get("SAIMER_FTPS_PASSWORD")
