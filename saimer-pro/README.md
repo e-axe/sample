@@ -21,7 +21,7 @@ CMS・ニュース・SNS埋め込み・送信フォーム・オーディショ�
 
 ## 色・レイアウト
 
-共通設定: `assets/css/style.css` の`:root`。トップ・下層の空画像とフェード: `assets/css/sky-images.css`。10月12日の配置・文字の調整は`assets/css/design-20261012.css`。
+共通設定: `assets/css/style.css` の`:root`。トップ・下層の空画像とフェード: `assets/css/sky-images.css`。10月12日の配置・文字の調整は`assets/css/design-20261012.css`。編集用の3ファイルは`npm run build:assets`で`assets/css/site.css`にまとめ、全ページで1本だけ読み込む。生成CSSは直接編集せず、ソースと一緒にコミットする。`npm test`は生成物の不一致も検出する。
 
 | 変数 | 値 | 用途 |
 | --- | --- | --- |
@@ -59,6 +59,8 @@ Google FontsはHTMLのstylesheetリンクから読み込む。既存のCormorant
 4. 写真追加時は別の原本を使ってギャラリーを設ける。今回は各1枚なので、同一写真を重複掲載して枚数を補わない。追加写真は現在のメイン写真の反映を妨げない。
 5. 旧`sample-portraits.webp`は未使用の従来素材。所属者の正式写真として流用せず、公開用パッケージには含めない。
 
+相談文面・メールコピーの処理は`assets/js/contact.js`に分離し、CONTACTだけで読み込む。共通の`main.js`はメニュー・フォント・表示処理を担当する。
+
 ## メール窓口
 
 contact@saimer-pro.com（容量2GB）を作成済み。CONTACTのdata-contact-readyはtrue、静的HTMLのmailtoとアドレスコピーを有効化。全ページ・会社概要・プライバシーから開設準備中を除去した。構造化データにもメールを同期する。
@@ -67,7 +69,7 @@ contact@saimer-pro.com（容量2GB）を作成済み。CONTACTのdata-contact-re
 
 ## 開発検証
 
-`npm ci`後に`npm test`でページ参照・キャッシュ版・相談の17ケースを検査。`npm run test:portraits`はPillowがあるPython環境で画像の更新処理を検査する。実際のブラウザー確認は別途実施する。
+CSS編集後は`npm run build:assets`を実行。`npm ci`後に`npm test`でページ参照・キャッシュ版・相談の17ケースを検査。`npm run test:portraits`はPillowがあるPython環境で画像の更新処理を検査する。実際のブラウザー確認は別途実施する。
 
 ## SNS
 

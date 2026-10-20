@@ -9,10 +9,11 @@
   viewer.setAttribute('aria-labelledby', 'photo-viewer-title');
   viewer.innerHTML = `
     <header class="photo-viewer-header"><h2 id="photo-viewer-title"></h2><button class="photo-viewer-close" type="button" aria-label="写真を閉じる" autofocus><span aria-hidden="true">×</span></button></header>
-    <div class="photo-viewer-stage"><img class="photo-viewer-image" alt="" decoding="async"><p class="photo-viewer-error" role="status" hidden>写真を読み込めませんでした。閉じてからもう一度お試しください。</p><button class="photo-viewer-prev" type="button" aria-label="前の写真"><span aria-hidden="true">‹</span></button><button class="photo-viewer-next" type="button" aria-label="次の写真"><span aria-hidden="true">›</span></button></div>
+    <div class="photo-viewer-stage"><picture class="photo-viewer-picture"><source type="image/webp"><img class="photo-viewer-image" alt="" decoding="async"></picture><p class="photo-viewer-error" role="status" hidden>写真を読み込めませんでした。閉じてからもう一度お試しください。</p><button class="photo-viewer-prev" type="button" aria-label="前の写真"><span aria-hidden="true">‹</span></button><button class="photo-viewer-next" type="button" aria-label="次の写真"><span aria-hidden="true">›</span></button></div>
     <footer class="photo-viewer-footer"><p class="photo-viewer-caption"></p><p class="photo-viewer-counter" aria-live="polite" aria-atomic="true"></p></footer>`;
   document.body.append(viewer);
   const image = viewer.querySelector('.photo-viewer-image');
+  const webp = viewer.querySelector('source');
   const caption = viewer.querySelector('.photo-viewer-caption');
   const counter = viewer.querySelector('.photo-viewer-counter');
   const error = viewer.querySelector('.photo-viewer-error');
@@ -36,6 +37,15 @@
     error.hidden = true;
     image.hidden = false;
     image.alt = text;
+    // Reuse the responsive WebP assets already declared in the profile.
+    // The JPEG remains the fallback for browsers without WebP support.
+    const source = item.querySelector('source[type="image/webp"]');
+    if (source?.srcset) {
+      webp.sizes = '(max-width: 767px) calc(100vw - 24px), (max-width: 1088px) calc(100vw - 176px), 912px';
+      webp.srcset = source.srcset;
+    } else {
+      webp.removeAttribute('srcset');
+    }
     image.src = item.href;
     caption.textContent = text;
     counter.textContent = `${index + 1} / ${items.length}`;
@@ -98,6 +108,7 @@
     else document.body.setAttribute('style', savedStyle);
     window.scrollTo({ top: scrollPosition, left: 0, behavior: 'instant' });
     opener?.focus({ preventScroll: true });
+    webp.removeAttribute('srcset');
     image.removeAttribute('src');
     touchStart = undefined;
   });

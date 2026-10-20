@@ -1,0 +1,129 @@
+const talentNames = Object.freeze({
+  "ishihara-yueto": "石原 月斗",
+  "nakayama-yui": "中山 結心",
+  "tsukigata-hina": "月形 陽南",
+  "takashima-hiroki": "髙島 大幹",
+});
+const inquiryTypes = Object.freeze({
+  casting: { label: "出演・キャスティングのご相談", prefix: "出演依頼", opening: "出演・キャスティングについて相談いたします。", button: "メールで出演・キャスティングを相談する", fields: ["作品・企画の概要：", "出演予定日・期間：", "撮影・公演場所：", "ご希望の役柄や出演条件：", "ご予算・報酬条件（決まっている場合）："] },
+  press: { label: "取材・媒体のご相談", prefix: "取材依頼", opening: "取材・媒体について相談いたします。", button: "メールで取材・媒体について相談する", fields: ["媒体名・企画の概要：", "取材の内容：", "取材希望日・場所：", "掲載・公開予定日："] },
+  other: { label: "その他のお問い合わせ", prefix: "お問い合わせ", opening: "以下の内容についてお問い合わせいたします。", button: "メールで問い合わせる", fields: ["お問い合わせ内容："] },
+});
+const owns = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
+const contactPanel = document.querySelector("[data-contact-email]");
+// Publishing an address and having an operational mailbox are separate states.
+const email = contactPanel?.dataset.contactEmail?.trim() || "";
+const contactReady = Boolean(email && contactPanel?.dataset.contactReady === "true");
+const typeSelect = document.querySelector("[data-inquiry-type]");
+const talentSelect = document.querySelector("[data-inquiry-talent]");
+const copyButton = document.querySelector("[data-copy-email]");
+const copyStatus = document.querySelector("[data-copy-status]");
+const inquiryCopyButton = document.querySelector("[data-copy-inquiry]");
+const inquiryCopyStatus = document.querySelector("[data-inquiry-copy-status]");
+const inquiryBody = document.querySelector("[data-inquiry-body]");
+const mailLinks = document.querySelectorAll("[data-mail-link]");
+const selectedTalentText = document.querySelector("[data-selected-talent]");
+const profileReturn = document.querySelector("[data-talent-return]");
+const profileReturnLink = document.querySelector("[data-talent-return-link]");
+let inquiryText = "";
+
+function updateInquiry() {
+  if (!contactPanel) return;
+  const type = owns(inquiryTypes, typeSelect?.value) ? typeSelect.value : "casting";
+  const slug = owns(talentNames, talentSelect?.value) ? talentSelect.value : "";
+  const name = slug ? talentNames[slug] : "";
+  const inquiry = inquiryTypes[type];
+  const subject = name
+    ? `【${inquiry.prefix}】${name}様へのご相談｜S'aimerプロダクション`
+    : `【S'aimerプロダクション】${inquiry.label}`;
+  const body = [
+    "S'aimerプロダクション ご担当者様", "", inquiry.opening, "",
+    `対象タレント名：${name || "（指定がある場合）"}`,
+    ...inquiry.fields, "ご担当者名・ご連絡先：", "",
+    "※わかる範囲でご記入ください。すべての項目が揃っていなくてもご相談いただけます。",
+  ].join("\r\n");
+  inquiryText = `件名：${subject}\r\n\r\n${body}`;
+  if (inquiryBody) inquiryBody.textContent = inquiryText;
+  if (selectedTalentText) {
+    selectedTalentText.hidden = !name;
+    selectedTalentText.textContent = name ? `${name}への${inquiry.label}` : "";
+  }
+  if (profileReturn && profileReturnLink) {
+    profileReturn.hidden = !slug;
+    if (slug) profileReturnLink.href = `../talents/${slug}/`;
+    else profileReturnLink.removeAttribute("href");
+  }
+  mailLinks.forEach((mailLink) => {
+    mailLink.textContent = contactReady ? inquiry.button : "メール窓口の開設準備中";
+    if (contactReady) {
+      mailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      mailLink.classList.remove("is-disabled");
+      mailLink.removeAttribute("aria-disabled");
+    } else {
+      mailLink.removeAttribute("href");
+      mailLink.classList.add("is-disabled");
+      mailLink.setAttribute("aria-disabled", "true");
+    }
+  });
+  if (email) {
+    const address = document.querySelector("[data-email-address]");
+    if (address) {
+      address.textContent = email;
+      address.hidden = false;
+    }
+    document.querySelectorAll("[data-email-pending]").forEach((node) => { node.hidden = contactReady; });
+    if (copyButton) copyButton.disabled = false;
+  }
+  if (inquiryCopyStatus) inquiryCopyStatus.textContent = "";
+}
+
+if (contactPanel) {
+  const params = new URLSearchParams(window.location.search);
+  if (typeSelect && owns(inquiryTypes, params.get("type"))) typeSelect.value = params.get("type");
+  if (talentSelect && owns(talentNames, params.get("talent"))) talentSelect.value = params.get("talent");
+  const updateSelection = () => {
+    updateInquiry();
+    const url = new URL(window.location.href);
+    if (owns(talentNames, talentSelect?.value)) url.searchParams.set("talent", talentSelect.value);
+    else url.searchParams.delete("talent");
+    if (owns(inquiryTypes, typeSelect?.value) && typeSelect.value !== "casting") url.searchParams.set("type", typeSelect.value);
+    else url.searchParams.delete("type");
+    // The selected state survives refresh and can be shared without adding history entries.
+    window.history.replaceState(window.history.state, "", url);
+  };
+  typeSelect?.addEventListener("change", updateSelection);
+  talentSelect?.addEventListener("change", updateSelection);
+  updateInquiry();
+}
+
+async function copyText(value, button, status, successMessage, failureMessage) {
+  if (!value || !button) return;
+  button.disabled = true;
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(value);
+    copied = true;
+  } catch {
+    const input = document.createElement("textarea");
+    input.value = value;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.appendChild(input);
+    input.select();
+    try { copied = document.execCommand("copy"); }
+    catch { copied = false; }
+    finally { input.remove(); }
+  }
+  button.disabled = false;
+  button.focus();
+  if (status) status.textContent = copied ? successMessage : failureMessage;
+}
+
+copyButton?.addEventListener("click", () => {
+  void copyText(email, copyButton, copyStatus, contactReady ? "メールアドレスをコピーしました。" : "メールアドレスをコピーしました。窓口は開設準備中のため、まだ送信できません。", "コピーできませんでした。表示されているメールアドレスを選択してコピーしてください。");
+});
+inquiryCopyButton?.addEventListener("click", () => {
+  void copyText(inquiryText, inquiryCopyButton, inquiryCopyStatus, "ご相談用の文面をコピーしました。", "コピーできませんでした。表示されている文面を選択してコピーしてください。");
+});
+

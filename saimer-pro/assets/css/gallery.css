@@ -16,6 +16,7 @@ button.portrait-open { padding: 0; border: 0; background: transparent; color: in
 .photo-viewer button:hover { background: #e2f0fa; }
 .photo-viewer button:focus-visible { outline: 3px solid #245d8d; outline-offset: 3px; }
 .photo-viewer-stage { position: relative; display: grid; place-items: center; min-height: 0; padding: 0 64px; overflow: hidden; }
+.photo-viewer-picture { display: block; width: 100%; height: 100%; min-height: 0; }
 .photo-viewer-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 .photo-viewer-prev, .photo-viewer-next { position: absolute; top: calc(50% - 22px); }
 .photo-viewer-prev { left: 10px; }
