@@ -11,6 +11,8 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import ssl
+import zipfile
+from urllib.request import urlopen
 from ftplib import FTP_TLS, error_perm
 
 DOMAIN = "saimer-pro.com"
@@ -192,9 +194,54 @@ def deploy(ftp, local_dir):
     }))
 
 
+def backup(ftp):
+    """Read the complete selected static site before any production write."""
+    page = read_remote(ftp, "index.html", 1024 * 1024)
+    if page is None:
+        raise ValueError("Cannot verify target without index.html.")
+    with urlopen("https://saimer-pro.com/index.html", timeout=35) as response:
+        public_page = response.read(1024 * 1024 + 1)
+    if page != public_page:
+        raise ValueError("FTPS index.html does not match HTTPS production. No writes allowed.")
+    output = Path("saimer-backup")
+    output.mkdir(exist_ok=True)
+    hashes = {}
+    total = 0
+    with zipfile.ZipFile(output / "site.zip", "w", zipfile.ZIP_DEFLATED) as archive:
+        def walk(directory):
+            nonlocal total
+            for name, facts in list(ftp.mlsd(directory)):
+                if name in (".", "..") or facts.get("type") in ("cdir", "pdir"):
+                    continue
+                if "/" in name or "\\" in name or any(ord(ch) < 32 for ch in name):
+                    raise ValueError("Unsafe backup path.")
+                path = name if directory == "." else directory + "/" + name
+                kind = facts.get("type")
+                if kind == "dir":
+                    walk(path)
+                elif kind == "file":
+                    data = read_remote(ftp, path, 100 * 1024 * 1024)
+                    if data is None:
+                        raise ValueError("File disappeared during backup.")
+                    total += len(data)
+                    if total > 1024 * 1024 * 1024:
+                        raise ValueError("Backup size exceeds static site safety limit.")
+                    archive.writestr(path, data)
+                    hashes[path] = hashlib.sha256(data).hexdigest()
+                else:
+                    raise ValueError("Unsupported remote entry type; backup stopped.")
+        walk(".")
+    with zipfile.ZipFile(output / "site.zip") as archive:
+        if archive.testzip() is not None or set(archive.namelist()) != set(hashes):
+            raise ValueError("Backup verification failed.")
+    (output / "sha256.json").write_text(json.dumps(hashes, sort_keys=True), encoding="utf-8")
+    print(json.dumps({"backup": "verified", "files": len(hashes), "bytes": total,
+                      "target_matches_https": True}))
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=("probe", "initialize", "deploy"), required=True)
+    parser.add_argument("--mode", choices=("probe", "backup", "initialize", "deploy"), required=True)
     parser.add_argument("--confirmation", default="")
     parser.add_argument("--local", default="saimer-pro/dist/production")
     args = parser.parse_args()
@@ -214,7 +261,9 @@ def main():
             probe(ftp)
             return
         ftp.cwd(remote_dir)
-        if args.mode == "initialize":
+        if args.mode == "backup":
+            backup(ftp)
+        elif args.mode == "initialize":
             initialize(ftp, args.confirmation)
         else:
             deploy(ftp, args.local)
