@@ -83,4 +83,18 @@ function fixture(count, supported = true) {
   assert.equal(f.d.querySelector('[data-gallery-item]').getAttribute('href'), 'photo-1.jpg');
   cases++; f.dom.window.close();
 }
+{
+  const f = fixture(2), d = f.d;
+  const item = d.querySelector('[data-gallery-item]');
+  item.innerHTML = '<picture><source type="image/webp" srcset="photo-320.webp 320w, photo-960.webp 960w"><img alt="写真"></picture>';
+  item.click();
+  const viewer = d.querySelector('dialog');
+  assert.equal(viewer.querySelector('source').srcset, 'photo-320.webp 320w, photo-960.webp 960w');
+  assert(viewer.querySelector('img').src.endsWith('photo-1.jpg'), 'JPEG fallback remains usable');
+  viewer.querySelector('.photo-viewer-next').click();
+  assert(!viewer.querySelector('source').hasAttribute('srcset'), 'A JPEG-only item must not reuse the previous photo');
+  viewer.close();
+  assert(!viewer.querySelector('source').hasAttribute('srcset'), 'Closing releases responsive sources');
+  cases++; f.dom.window.close();
+}
 console.log(JSON.stringify({ galleryCases: cases, singlePhoto: true, multiplePhotos: true, fallback: true }));
