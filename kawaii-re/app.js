@@ -53,18 +53,45 @@ function render() {
     const article = document.createElement('article');
     article.className = 'result-show';
     const title = document.createElement('h4');
-    title.textContent = `${label(show)} ｜ 本番${show.id}`;
-    article.append(title);
+    const date = document.createElement('span');
+    date.className = 'result-date';
+    date.textContent = `12.${show.day}`;
+    const time = document.createElement('span');
+    time.className = 'result-time';
+    time.textContent = `（${show.weekday}）${show.time} 開演`;
+    title.append(date, time);
+    const showHead = document.createElement('div');
+    showHead.className = 'result-show-head';
+    const selection = document.createElement(selectedShow ? 'span' : 'button');
+    selection.className = selectedShow ? 'selection-label' : 'select-result-show';
+    selection.textContent = selectedShow ? '選択中の公演' : 'この公演を選択';
+    if (!selectedShow) { selection.type = 'button'; selection.dataset.selectShow = show.id; selection.setAttribute('aria-label', `${label(show)}の公演を選択`); }
+    showHead.append(title, selection);
+    article.append(showHead);
     const details = document.createElement('details');
     details.open = Boolean(selectedShow);
     const summary = document.createElement('summary');
-    summary.textContent = 'この回の出演者を見る（19名）';
-    const names = document.createElement('p');
-    data.cast.filter(person => person.shows.includes(show.id)).forEach((person, index) => {
-      if (index) names.append(' ／ ');
-      const name = document.createElement(person.id === filter.value ? 'strong' : 'span');
+    const people = data.cast.filter(person => person.shows.includes(show.id));
+    summary.textContent = `出演者 ${people.length}名`;
+    const names = document.createElement('ul');
+    names.className = 'result-cast';
+    people.forEach(person => {
+      const item = document.createElement('li');
+      item.className = person.id === filter.value ? 'is-matched' : '';
+      const picture = document.createElement('img');
+      picture.src = `assets/cast/kawaii-re-cast-${String(person.imageNumber).padStart(2, '0')}.${person.source ? 'webp' : 'svg'}`;
+      picture.width = picture.height = 80;
+      picture.alt = '';
+      picture.loading = 'lazy';
+      const info = document.createElement('span');
+      const name = document.createElement('strong');
       name.textContent = person.name;
-      names.append(name);
+      const role = document.createElement('span');
+      role.className = 'result-role';
+      role.textContent = `${person.role} 役`;
+      info.append(name, role);
+      item.append(picture, info);
+      names.append(item);
     });
     details.append(summary, names);
     article.append(details);
@@ -81,16 +108,21 @@ document.querySelectorAll('[data-cast]').forEach(link => link.addEventListener('
   filter.focus({ preventScroll: true });
   document.getElementById('cast-finder').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
 }));
-document.querySelectorAll('[data-show]').forEach(button => button.addEventListener('click', () => {
-  if (button.disabled) return;
-  const id = Number(button.dataset.show);
+function selectShow(id) {
   selectedShow = selectedShow === id ? null : id;
   render();
   if (!results.hidden) {
     heading.focus({ preventScroll: true });
     results.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
   }
+}
+document.querySelectorAll('[data-show]').forEach(button => button.addEventListener('click', () => {
+  if (!button.disabled) selectShow(Number(button.dataset.show));
 }));
+list.addEventListener('click', event => {
+  const button = event.target.closest('[data-select-show]');
+  if (button) selectShow(Number(button.dataset.selectShow));
+});
 document.getElementById('reset-filter').addEventListener('click', () => {
   filter.value = ''; selectedShow = null; render(); filter.focus();
 });
@@ -142,7 +174,7 @@ if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
     }), { threshold: 0.1 });
-    document.querySelectorAll('.section-head, .story-copy').forEach(element => {
+    document.querySelectorAll('.section-head, .story-copy, .story-art, .cast-row').forEach(element => {
       element.classList.add('reveal'); revealObserver.observe(element);
     });
     document.body.classList.add('motion-ready');

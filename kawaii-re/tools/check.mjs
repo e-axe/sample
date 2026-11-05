@@ -37,6 +37,9 @@ for(const s of d.shows){
  assert.equal(['日','月','火','水','木','金','土'][new Date(date.toLocaleString('en-US',{timeZone:'Asia/Tokyo'})).getDay()],s.weekday);
 }
 assert.equal(new Set(d.cast.map(c=>c.imageNumber)).size,36);
+const billing=[[[1]],[[2,3,4],[5,6],[7,8],[9,10],[11,12],[13,14,15]],[[16],[17],[18,19],[20,21],[22,23],[24,25],[26,27]],[[28],[29,30],[31,32],[33,34],[35,36]]];
+assert.deepEqual(d.billingGroups.map(group=>group.map(row=>row.map(id=>d.cast.find(c=>c.id===id)?.imageNumber))),billing,'User-specified billing singles/pairs/triples and block boundaries');
+assert.deepEqual(d.billingGroups.flat(2),d.cast.map(c=>c.id),'Billing sequence includes every cast once in official order');
 for(const c of d.cast){assert.equal(new Set(c.shows).size,c.shows.length);assert(c.shows.every(n=>d.shows.some(s=>s.id===n)));assert(Number.isInteger(c.imageNumber)&&c.imageNumber>0);await access(path.join(root,`assets/cast/kawaii-re-cast-${String(c.imageNumber).padStart(2,'0')}.${c.source?'webp':'svg'}`));}
 const html=await readFile(path.join(root,'index.html'),'utf8');assert(!html.includes('{{'));assert.equal((html.match(/class="cast-card"/g)||[]).length,36);
 for(const match of html.matchAll(/(?:href|src)="([^"#][^"]*)"/g)){if(!/^(https?:|mailto:)/.test(match[1]))await access(path.join(root,match[1]));}

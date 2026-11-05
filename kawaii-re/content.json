@@ -503,7 +503,8 @@
       "imageNumber": 25,
       "crop": {
         "position": "north",
-        "inset": 0
+        "inset": 0,
+        "verticalOffset": 0.3
       }
     },
     {
@@ -708,5 +709,89 @@
     }
   ],
   "endsAt": "2026-12-21T00:00:00+09:00",
-  "socialUrl": "https://x.com/mayholictheater"
+  "socialUrl": "https://x.com/mayholictheater",
+  "billingGroups": [
+    [
+      [
+        "sasaki-kotoko"
+      ]
+    ],
+    [
+      [
+        "sagara-mayu",
+        "kosaka-saki",
+        "shioiri-asuka"
+      ],
+      [
+        "yagi-mashiro",
+        "yoshitake-chihaya"
+      ],
+      [
+        "kohinata-mika",
+        "kato-yui"
+      ],
+      [
+        "hirose-yuki",
+        "tanaka-saho"
+      ],
+      [
+        "harada-sayaka",
+        "minato-mio"
+      ],
+      [
+        "nakazawa-mina",
+        "mano-mizuki",
+        "fukagawa-ruka"
+      ]
+    ],
+    [
+      [
+        "ishihara-misaki"
+      ],
+      [
+        "mita-ibuki"
+      ],
+      [
+        "abe-hisayo",
+        "nakamura-akari"
+      ],
+      [
+        "shirosaki-momoka",
+        "ogoe-haruka"
+      ],
+      [
+        "yumoto-ami",
+        "yuki-rina"
+      ],
+      [
+        "aimoto-ami",
+        "nobematsu-maika"
+      ],
+      [
+        "natsume-hina",
+        "hoshino-miyu"
+      ]
+    ],
+    [
+      [
+        "okamoto-meiko"
+      ],
+      [
+        "sakura-kaoru",
+        "murahoshi-riju"
+      ],
+      [
+        "honda-shiori",
+        "hiruta-airi"
+      ],
+      [
+        "mitsuha-mio",
+        "nishio-momoko"
+      ],
+      [
+        "fukushima-haruna",
+        "amane-miho"
+      ]
+    ]
+  ]
 }
