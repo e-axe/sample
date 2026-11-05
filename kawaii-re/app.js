@@ -6,12 +6,18 @@ const results = document.getElementById('show-results');
 const heading = document.getElementById('results-heading');
 const list = document.getElementById('result-list');
 const status = document.getElementById('result-status');
+const selectionSummary = document.getElementById('selection-summary');
+const clearShow = document.getElementById('clear-show');
+const clearCast = document.getElementById('clear-cast');
+const showButtons = [...document.querySelectorAll('[data-show]')];
+const peopleByShow = new Map(data.shows.map(show => [show.id, data.cast.filter(person => person.shows.includes(show.id))]));
 const nav = document.getElementById('navigation');
 const menu = document.querySelector('.menu-toggle');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const label = show => `12/${show.day}（${show.weekday}）${show.time}`;
 let selectedShow = null;
 document.documentElement.classList.add('js');
+document.documentElement.classList.remove('no-js');
 document.body.classList.add('ready');
 
 function closeMenu() {
@@ -30,18 +36,25 @@ document.addEventListener('keydown', event => {
   }
 });
 document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
+matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
 
 function render() {
   const cast = data.cast.find(person => person.id === filter.value);
   const shows = data.shows.filter(show => (!cast || cast.shows.includes(show.id)) && (!selectedShow || show.id === selectedShow));
-  document.querySelectorAll('[data-show]').forEach(button => {
+  showButtons.forEach(button => {
     const id = Number(button.dataset.show);
     const unavailable = Boolean(cast && !cast.shows.includes(id));
     button.disabled = unavailable;
     button.setAttribute('aria-pressed', String(selectedShow === id));
+    button.setAttribute('aria-label', `12月${data.shows.find(show => show.id === id).day}日 ${button.firstElementChild.textContent}${selectedShow === id ? ' 選択中。もう一度押すと日時を解除' : 'の出演者を見る'}`);
+    button.querySelector('.show-selected').hidden = selectedShow !== id;
     button.closest('.show-slot').classList.toggle('is-unavailable', unavailable);
     button.nextElementSibling.hidden = !unavailable;
   });
+  const show = data.shows.find(show => show.id === selectedShow);
+  selectionSummary.textContent = `${cast ? `出演者：${cast.name}` : '出演者：指定なし'}\n${show ? `日時：${label(show)} 開演` : '日時：指定なし（すべての公演）'}`;
+  clearShow.hidden = !selectedShow;
+  clearCast.hidden = !cast;
   results.hidden = !cast && !selectedShow;
   list.replaceChildren();
   if (results.hidden) return;
@@ -49,6 +62,7 @@ function render() {
   status.textContent = cast
     ? `${shows.length}公演${selectedShow ? 'を選択中' : 'に出演'}。日時をご確認ください。`
     : 'この公演に出演するキャストをご確認ください。';
+  const fragment = document.createDocumentFragment();
   for (const show of shows) {
     const article = document.createElement('article');
     article.className = 'result-show';
@@ -71,11 +85,16 @@ function render() {
     const details = document.createElement('details');
     details.open = Boolean(selectedShow);
     const summary = document.createElement('summary');
-    const people = data.cast.filter(person => person.shows.includes(show.id));
+    const people = peopleByShow.get(show.id);
     summary.textContent = `出演者 ${people.length}名`;
     const names = document.createElement('ul');
     names.className = 'result-cast';
-    people.forEach(person => {
+    // Populate portraits only for an opened show; a search need not build 171 cards.
+    let populated = false;
+    function populate() {
+      if (!details.open || populated) return;
+      populated = true;
+      people.forEach(person => {
       const item = document.createElement('li');
       item.className = person.id === filter.value ? 'is-matched' : '';
       const picture = document.createElement('img');
@@ -83,6 +102,7 @@ function render() {
       picture.width = picture.height = 80;
       picture.alt = '';
       picture.loading = 'lazy';
+      picture.decoding = 'async';
       const info = document.createElement('span');
       const name = document.createElement('strong');
       name.textContent = person.name;
@@ -92,40 +112,56 @@ function render() {
       info.append(name, role);
       item.append(picture, info);
       names.append(item);
-    });
-    details.append(summary, names);
+      });
+      details.append(names);
+    }
+    details.addEventListener('toggle', populate);
+    populate();
+    details.prepend(summary);
     article.append(details);
-    list.append(article);
+    fragment.append(article);
   }
+  list.append(fragment);
 }
 
 filter.addEventListener('change', () => { selectedShow = null; render(); });
-document.querySelectorAll('[data-cast]').forEach(link => link.addEventListener('click', event => {
+document.querySelector('.cast-grid').addEventListener('click', event => {
+  const link = event.target.closest('[data-cast]');
+  if (!link) return;
   event.preventDefault();
   filter.value = link.dataset.cast;
   selectedShow = null;
   render();
   filter.focus({ preventScroll: true });
   document.getElementById('cast-finder').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
-}));
-function selectShow(id) {
+});
+function selectShow(id, fromResults = false) {
   selectedShow = selectedShow === id ? null : id;
   render();
-  if (!results.hidden) {
+  if (fromResults && !results.hidden) {
     heading.focus({ preventScroll: true });
     results.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
   }
 }
-document.querySelectorAll('[data-show]').forEach(button => button.addEventListener('click', () => {
+showButtons.forEach(button => button.addEventListener('click', () => {
   if (!button.disabled) selectShow(Number(button.dataset.show));
 }));
 list.addEventListener('click', event => {
   const button = event.target.closest('[data-select-show]');
-  if (button) selectShow(Number(button.dataset.selectShow));
+  if (button) selectShow(Number(button.dataset.selectShow), true);
+});
+clearShow.addEventListener('click', () => {
+  const previous = selectedShow;
+  selectedShow = null; render();
+  showButtons.find(button => Number(button.dataset.show) === previous)?.focus({ preventScroll: true });
+});
+clearCast.addEventListener('click', () => {
+  filter.value = ''; render(); filter.focus({ preventScroll: true });
 });
 document.getElementById('reset-filter').addEventListener('click', () => {
   filter.value = ''; selectedShow = null; render(); filter.focus();
 });
+render();
 
 let lastSaleState;
 let saleTimer;
@@ -161,6 +197,7 @@ document.querySelectorAll('[data-sale-link]').forEach(link => link.addEventListe
   if (lastSaleState !== 'open') event.preventDefault();
 }));
 document.addEventListener('visibilitychange', () => { if (!document.hidden) updateSale(); });
+window.addEventListener('pageshow', () => { render(); updateSale(); });
 updateSale();
 
 if ('IntersectionObserver' in window) {
@@ -174,7 +211,7 @@ if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
     }), { threshold: 0.1 });
-    document.querySelectorAll('.section-head, .story-copy, .story-art, .cast-row').forEach(element => {
+    document.querySelectorAll('.section-head, .story-art').forEach(element => {
       element.classList.add('reveal'); revealObserver.observe(element);
     });
     document.body.classList.add('motion-ready');
