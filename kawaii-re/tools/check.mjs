@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {getSaleState} from '../sale-state.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const d=JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
@@ -42,7 +43,19 @@ assert.deepEqual(d.billingGroups.map(group=>group.map(row=>row.map(id=>d.cast.fi
 assert.deepEqual(d.billingGroups.flat(2),d.cast.map(c=>c.id),'Billing sequence includes every cast once in official order');
 for(const c of d.cast){assert.equal(new Set(c.shows).size,c.shows.length);assert(c.shows.every(n=>d.shows.some(s=>s.id===n)));assert(Number.isInteger(c.imageNumber)&&c.imageNumber>0);await access(path.join(root,`assets/cast/kawaii-re-cast-${String(c.imageNumber).padStart(2,'0')}.${c.source?'webp':'svg'}`));}
 const html=await readFile(path.join(root,'index.html'),'utf8');assert(!html.includes('{{'));assert.equal((html.match(/class="cast-card"/g)||[]).length,36);
-for(const match of html.matchAll(/(?:href|src)="([^"#][^"]*)"/g)){if(!/^(https?:|mailto:)/.test(match[1]))await access(path.join(root,match[1]));}
+for(const match of html.matchAll(/(?:href|src)="([^"#][^"]*)"/g)){if(!/^(https?:|mailto:)/.test(match[1]))await access(path.join(root,match[1].split(/[?#]/)[0]));}
+// Keep the locally subset fonts complete when cast or interactive text changes.
+const fontManifest=JSON.parse(await readFile(path.join(root,'assets/fonts/manifest.json'),'utf8'));
+const supportedCharacters=new Set(fontManifest.characters);
+const fontCorpus=html+await readFile(path.join(root,'app.js'),'utf8');
+const missing=[...new Set([...fontCorpus].filter(c=>/[\p{L}\p{N}\p{M}\p{P}\p{S} ]/u.test(c)&&!supportedCharacters.has(c)))];
+assert.deepEqual(missing,[],'Regenerate local font subsets with tools/prepare-fonts.py after public copy changes');
+for(const font of fontManifest.fonts){
+ const bytes=await readFile(path.join(root,font.file));
+ assert.equal(bytes.subarray(0,4).toString(),'wOF2');
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),font.sha256);
+ await access(path.join(root,font.license));
+}
 assert.equal(Date.parse(d.saleAt),Date.UTC(2026,10,12,13));
 assert.equal(d.ticketUrl,'https://confetti-web.com/@/may-holic23');
 const sale=Date.parse(d.saleAt),end=Date.parse(d.endsAt);

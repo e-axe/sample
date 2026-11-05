@@ -31,3 +31,11 @@ node tools/check.mjs
 検索インデックスは無効。本番運用する際は、本番URL・OGP・検索方針を確認して変更する。
 
 最新のUI/UX修正・確認範囲：[ux-review-20261106.md](docs/ux-review-20261106.md)。ヘッダー追従、キャストの同ブロック内横並び、条件の個別解除、公式制作ロゴを反映。
+
+## 日本語Webフォント
+
+スマホでも明朝・ゴシックを表示するため、`assets/fonts/` の必要文字だけを含むWOFF2を自サイトから配信。SIL OFL 1.1ライセンスを同梱。閲覧時にGoogle Fontsへ接続しない。
+
+本文や動的文言が変わった場合は、HTML生成後にビルド環境へ `fonttools[woff]` を用意し、`python tools/prepare-fonts.py --cache <原本キャッシュフォルダ>`、続けて `node tools/check.mjs` を実行する。原本は公式Google Fontsリポジトリから取得し、文字のサブセット化はローカルで実施する。通常の閲覧にはPythonやライブラリは不要。
+
+フッターの作品ロゴを戻す場合は、`template.html` の `data-title-logo="true"` を `false` にしてビルドする。メイホリックのロゴは企画・制作欄に配置。

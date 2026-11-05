@@ -40,3 +40,10 @@
 
 - メイホリック公式ロゴ：プロジェクト添付 `メイホリックロゴ.png`（この作業の入力 `05-png`、714×593px RGBA）。透明余白を除去して360×221pxに縮小、色・形状・縦横比を保って可逆WebP化。公開先 `assets/mayholic-logo.webp`。公式作品ロゴと役割を区別する。
 - STORY：ユーザーの新規画像作成指示で `assets/story-theatre.webp`（1152×768px）を新規生成。マイク画像とCSSだけのぼかし案は現行では使用しない。生成記録は `image-generation.md`、斜めの配置はCSSで実装。
+
+
+## 日本語Webフォントの配信素材
+
+- 公式Google FontsリポジトリのNoto Serif JP / Noto Sans JPの可変TTFを原本とする。原本URL・ハッシュは `assets/fonts/manifest.json`。
+- 固定の原本・ライセンスURLを取得し、FontToolsとBrotliでローカル処理。本文・ソースの外部送信は行わない。
+- 同梱の `kawaii-serif-jp-OFL.txt` / `kawaii-sans-jp-OFL.txt` にSIL Open Font License 1.1を保持。閲覧者は当サイトのWOFF2だけを読む。

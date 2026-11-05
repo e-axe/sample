@@ -5,8 +5,8 @@
   --ink: #171419;
   --muted: #655d64;
   --line: #e7c9da;
-  --serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-  --sans: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --serif: "Kawaii Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --sans: "Kawaii Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   --page: 1240px;
   --header-offset: 92px;
 }
@@ -80,8 +80,8 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .story-intro { grid-column: 1/-1; font-family: var(--serif); font-size: clamp(20px, 1.75vw, 24px); font-weight: 700; color: var(--pink-ink); line-height: 1.9; margin: 0 0 24px; }
 .story-copy { position: relative; z-index: 1; font-weight: var(--copy-weight); line-height: 2.1; }
 .story-copy strong { color: var(--pink-ink); font-weight: 700; }
-.story-copy > .story-climax { padding: 18px 0 18px 20px; border-left: 3px solid var(--pink); font-family: var(--serif); font-weight: 700; background: linear-gradient(90deg, #ffedf780, transparent); border-radius: 0 16px 16px 0; }
-.story-climax strong { font-size: 1.15em; }
+.story-copy > .story-climax { padding: 8px 0; font-family: var(--serif); font-weight: 600; letter-spacing: .025em; }
+.story-climax strong { font-size: 1.2em; font-weight: 700; }
 .story-copy > p + p { margin-top: 22px; }
 .story-live { font-family: var(--serif); color: var(--pink-ink); font-size: 22px; font-weight: 700; }
 .story-art { margin: 0; position: relative; align-self: stretch; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
@@ -219,11 +219,15 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .credits .text-link { font-size: 14px; margin-top: 10px; }
 .email-link { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; }
 .credits .caption { margin-top: 12px; font-size: 13px; }
+.production-credit { display: flex; align-items: center; gap: 16px; margin-top: 18px; font-size: 13px; }
+.production-credit img { width: 112px; }
 .social-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .x-icon { fill: currentColor; stroke: none; }
 footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #f1e5ee; background: #fff; padding: 24px 48px; font-size: 12px; color: var(--muted); }
-.footer-brand { display: flex; align-items: center; gap: 24px; }
-.footer-brand img { width: 140px; }
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.footer-title { display: block; width: 260px; max-width: 100%; }
+.footer-title img { width: 100%; }
+footer[data-title-logo="false"] .footer-title { display: none; }
 .mobile-ticket { display: none; }
 
 /* Keep motion small, non-blocking, and removable through the OS preference. */
@@ -330,7 +334,6 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .story-copy > p + p { margin-top: 20px; }
   .story-live { font-size: 18px; }
   .story-intro { font-size: 20px; margin-bottom: 20px; }
-  .story-copy > .story-climax { padding: 14px 0 14px 14px; }
   .desktop-only { display: none; }
   .mobile-only { display: initial; }
   .cast-section { padding: 22px 0 34px; }
@@ -401,7 +404,7 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .social-links { gap: 8px 20px; }
   footer { padding: 16px 20px; font-size: 11px; display: block; }
   .footer-brand { margin-bottom: 12px; }
-  .footer-brand img { width: 120px; }
+  .footer-title { width: 220px; }
   footer p + p { margin-top: 3px; }
   .mobile-ticket { display: flex; position: fixed; bottom: max(8px, env(safe-area-inset-bottom)); left: 12px; right: 12px; z-index: 25; min-height: 50px; border: 2px solid #fff; box-shadow: 0 2px 20px #35222c26; font-size: 18px; transition: opacity .2s, transform .2s; }
   .mobile-ticket svg { position: absolute; right: 20px; }

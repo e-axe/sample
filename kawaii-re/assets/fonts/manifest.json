@@ -1,0 +1,28 @@
+{
+  "characters": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~¥©×—※≡☆✓、。々「」『』【】〒〜あいうえおかがきくけげこごさざしじすずせぜそただちっつてでとどなにぬのはばびぶへべぺほまみむめもやゅゆよらりるれろわをん゙゚ァアィイェエォカキギクグケゲコゴサザシジスセゼタダチッテデトドナニネハバパビピフブプベペホマミムメャュユョラリルレロワンヴ・ー一三上下与世中主乃了予事亜京人他付以仰件企会伝佐体何作佳保信倉偶備像優先光入全八公典内円再写出分列制券前劇加動区千原取受可各合吉同名向含吹告周命和咲品唯唱問啓回図土在地坂城報場声売変夏外多夢天女妃始子学守定宣寿導小少尾届岡崎嶋川己帆席幕干年幻広度庭延式当彩役待後心必応思性悠情想愛感慎慮懸成戻払択押指振捨探提援文斗料斜新方日星春時晴曲更最月有望木未本朱材村条来東松枚柄桃案梨楓楽概様欄歌武歩死水汐沙況法活海消深渋渡湊湯準滞演澤瀬無版物特状玄現琴瑠生用田画界留番異発的目直相真着知石確示神福秋移程税種立算箱紀約細終結絞絵続緒織美者能脚自舞良花芽若茉菜華葉葛薫藍藤蛭融表複西要見覚解触記設証詞詳認語谷販貴質購越踏身転載輩辺込返進道遠選部都配里重野金長開間阿除階集非音項順題額願類颯香髙！（）＋：？［］｜",
+  "weights": "400..700",
+  "fonts": [
+    {
+      "family": "Kawaii Serif JP",
+      "originalFamily": "Noto Serif JP",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
+      "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
+      "file": "assets/fonts/kawaii-serif-jp.woff2",
+      "license": "assets/fonts/kawaii-serif-jp-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifjp/OFL.txt",
+      "bytes": 342168,
+      "sha256": "9e5209896cec95de0b282e68f72f25ebfcf117a308f21814df36e7fa1f52d794"
+    },
+    {
+      "family": "Kawaii Sans JP",
+      "originalFamily": "Noto Sans JP",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+      "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+      "file": "assets/fonts/kawaii-sans-jp.woff2",
+      "license": "assets/fonts/kawaii-sans-jp-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/OFL.txt",
+      "bytes": 232824,
+      "sha256": "8ee71e53f3904e465ca335d9f8894670b3ccb9f24944703426042ba5b68c209d"
+    }
+  ]
+}
