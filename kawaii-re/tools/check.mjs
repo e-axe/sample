@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {getSaleState} from '../sale-state.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const d=JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
 assert.equal(d.cast.length,36);assert.equal(d.shows.length,9);
@@ -35,9 +36,24 @@ for(const s of d.shows){
  const date=new Date(`2026-12-${s.day}T${s.time}:00+09:00`);
  assert.equal(['日','月','火','水','木','金','土'][new Date(date.toLocaleString('en-US',{timeZone:'Asia/Tokyo'})).getDay()],s.weekday);
 }
-for(const c of d.cast){assert.equal(new Set(c.shows).size,c.shows.length);assert(c.shows.every(n=>d.shows.some(s=>s.id===n)));await access(path.join(root,`assets/cast/${c.id}.${c.source?'webp':'svg'}`));}
+assert.equal(new Set(d.cast.map(c=>c.imageNumber)).size,36);
+for(const c of d.cast){assert.equal(new Set(c.shows).size,c.shows.length);assert(c.shows.every(n=>d.shows.some(s=>s.id===n)));assert(Number.isInteger(c.imageNumber)&&c.imageNumber>0);await access(path.join(root,`assets/cast/kawaii-re-cast-${String(c.imageNumber).padStart(2,'0')}.${c.source?'webp':'svg'}`));}
 const html=await readFile(path.join(root,'index.html'),'utf8');assert(!html.includes('{{'));assert.equal((html.match(/class="cast-card"/g)||[]).length,36);
 for(const match of html.matchAll(/(?:href|src)="([^"#][^"]*)"/g)){if(!/^(https?:|mailto:)/.test(match[1]))await access(path.join(root,match[1]));}
 assert.equal(Date.parse(d.saleAt),Date.UTC(2026,10,12,13));
 assert.equal(d.ticketUrl,'https://confetti-web.com/@/may-holic23');
+const sale=Date.parse(d.saleAt),end=Date.parse(d.endsAt);
+assert.equal(getSaleState(sale-1,d.saleAt,d.endsAt),'upcoming');
+assert.equal(getSaleState(sale,d.saleAt,d.endsAt),'open');
+assert.equal(getSaleState(end-1,d.saleAt,d.endsAt),'open');
+assert.equal(getSaleState(end,d.saleAt,d.endsAt),'ended');
+assert.equal(getSaleState(end+86400000,d.saleAt,d.endsAt),'ended');
+assert(!html.includes('id="all-cast"'));
+assert(!html.includes('<details class="story-details"'));
+assert(!html.slice(html.indexOf('<section class="hero"'),html.indexOf('<section id="story"')).includes('上演時間'));
+assert(html.indexOf('id="show-results"')<html.indexOf('class="ticket-grid"'));
+assert(html.indexOf('class="purchase-reminder"')<html.indexOf('data-sale-link'));
+assert(html.includes('https://x.com/mayholictheater'));
+assert(html.includes('title="CBGKシブゲキ!! 周辺地図"'));
+assert(!html.includes('>会場<'));
 console.log('PASS: official role chart × 9 shows, 36 cast, local links/assets, release timezone, generated HTML');

@@ -1,0 +1,17 @@
+/* Readability adjustment, 2026-11-06. Keep type tuning separate for easy review/revert. */
+:root {
+  --body-size: 16px;
+  --body-weight: 500;
+  --copy-weight: 500;
+  --caption-size: 13px;
+  --important-size: 15px;
+  --cast-name-size: 22px;
+}
+@media (max-width: 600px) {
+  :root {
+    --body-size: 15px;
+    --caption-size: 12px;
+    --important-size: 14px;
+    --cast-name-size: 20px;
+  }
+}
