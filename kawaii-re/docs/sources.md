@@ -1,0 +1,21 @@
+# 正式情報・素材台帳
+
+確認日：2026-11-05（JST）
+
+| 資料 | 用途 | 取扱い |
+| --- | --- | --- |
+| `KAWAII_LP参考イメージ.png` | 採用デザイン | 作業フォルダ `design/approved-mock.png` に保存。丸写真・ライブ訴求がある修正版 |
+| [公式ブログ・全キャスト出演日程発表](https://ameblo.jp/may-holic/entry-12983587226.html) | 全36名、9回の出演回、販売先、注意事項 | 11/5時点の情報。古い告知より優先 |
+| [公式Driveフォルダ](https://drive.google.com/drive/folders/1MBEAz7ZeHY9FtrrQdApD32zvaPdH-IY1) | ロゴ、更新チラシ、役別出演表 | 参照元。共有設定は変更しない |
+| [再修正裏面チラシ・11/5](https://drive.google.com/file/d/1_etwldEI438Moe_KRWeYEHSMvObCi0eR/view) | 最新料金・特典・あらすじ | 原本は作業フォルダ `source-materials/flyer-back-20261105.jpg` |
+| [舞台かわぱ出演日程表修正](https://drive.google.com/file/d/1V6-yV8ilRfBa_-xjmCaN9gwzX5XqLs7v/view) | 役名と各日の配役 | `source-materials/cast-schedule-20261105.jpg`。公式ブログの出演回と照合 |
+| `Asset/logo_02_KAWAII.png` | 公式ロゴ | 支給PNGからWebPを作成。縦横比・色・透明を保持 |
+| `キャスト画像_オリジナル/` | 35名分の正式宣材（吉武千颯のみ未提供） | 支給ファイル名と公式の名前を照合。人物の加工はせず、Web用サイズ・丸型表示のみ |
+
+ローカル素材の原本位置：`C:/Users/axe/Pictures/LPサイト/2026-11-13_KAWAII偶像パラドキシカル-再演_LP/`。
+
+表記注意：原本ファイル名の「ナカザワミナ」は公式表示「中澤ミナ」、「広瀬ゆうき」と「水湊美緒」も公式表記に統一。ファイル名の表記ゆれを勝手な改名判断の根拠にしない。人物画像は対応を台帳で保持する。
+
+公式ブログには特典付A席の細則が一部省略されるが、最新裏面の「非売品2L版ブロマイド1枚（種類はS席特典と同じ）」を掲載する。開場時刻とアフターイベント詳細は未掲載のため補わない。
+
+背景は採用モックの世界観を再現したサイト専用の生成イラスト。公式舞台写真とは扱わない。ロゴ・キャスト写真は生成していない。生成方法とプロンプトは作業フォルダ `design/image-generation.md` を参照。
