@@ -34,10 +34,9 @@ section[id], #cast-finder, #show-results { scroll-margin-top: 0; }
 
 /* Header and hero: text has its own white area. */
 .site-header { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 8px 42px; position: sticky; top: 0; background: #fff; z-index: 40; border-bottom: 1px solid #f8eff5; }
-.brand { display: flex; align-items: center; gap: 14px; flex: 0 1 auto; min-width: 0; font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; position: relative; max-width: 550px; }
+.brand { display: flex; align-items: center; gap: 14px; flex: 0 1 auto; min-width: 0; min-height: 44px; font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; position: relative; max-width: 580px; }
 .brand-logo { width: 110px; flex: none; }
-.brand-title { font-family: var(--sans); font-weight: 700; font-size: 16px; line-height: 1.5; }
-.brand-title > span { display: block; white-space: nowrap; }
+.brand-title { font-family: var(--sans); font-weight: 700; font-size: 16px; line-height: 1.4; white-space: nowrap; }
 .brand-title small { font-size: 11px; margin-left: 2px; }
 .brand-text { display: none; }
 [data-brand-style="text"] .brand { width: auto; padding-left: 25px; }
@@ -205,9 +204,9 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .purchase > .button { width: 100%; max-width: 500px; font-size: 20px; gap: 20px; }
 .purchase > .sale-line { color: var(--pink-ink); margin-top: 10px; }
 .ticket-link[aria-disabled="true"] { background: #29252a; cursor: default; }
-.purchase-notes { margin-top: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; font-size: 14px; }
-.purchase-notes summary { font-weight: 700; min-height: 28px; }
-.purchase-notes ul { padding-left: 20px; max-width: 1050px; margin-bottom: 0; }
+.purchase-notes { margin-top: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 6px 0; font-size: 14px; }
+.purchase-notes summary { font-weight: 700; min-height: 44px; padding: 8px 0; }
+.purchase-notes ul { padding-left: 20px; max-width: 1050px; margin: 4px 0 8px; }
 .purchase-notes li + li { margin-top: 8px; }
 
 /* Restore the earlier theatrical artwork at the foot of the page. */
@@ -220,14 +219,14 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .venue p { font-size: 15px; }
 .theatre-map { display: block; width: 100%; height: 300px; border: 1px solid #e7dce6; border-radius: 18px; background: #fff; margin-top: 22px; }
 .venue .text-link { margin-top: 12px; }
-.faq details { border-bottom: 1px solid #b09ca9; padding: 12px 0; font-size: 14px; }
-.faq summary { font-weight: 700; }
-.faq details p { padding: 10px 0; line-height: 1.9; }
+.faq details { border-bottom: 1px solid #b09ca9; padding: 4px 0; font-size: 14px; }
+.faq summary { font-weight: 700; min-height: 44px; padding: 8px 0; }
+.faq details p { padding: 4px 0 10px; line-height: 1.9; }
 .credits { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 36px 0 40px; }
 .credits h2 { font-size: 17px; margin-bottom: 10px; }
 .credits p { font-size: 14px; }
 .credits .text-link { font-size: 14px; margin-top: 10px; }
-.email-link { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; }
+.email-link { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; min-height: 44px; }
 .credits .caption { margin-top: 12px; font-size: 13px; }
 .social-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .x-icon { fill: currentColor; stroke: none; }
@@ -427,6 +426,10 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   body:not(.ready) .mobile-ticket, .has-visible-ticket-cta .mobile-ticket, [data-sale-state="ended"] .mobile-ticket { opacity: 0; visibility: hidden; transform: translateY(10px); }
 }
 @media (max-width: 360px) {
+  .brand { gap: 8px; }
+  .brand-logo { width: 56px; }
+  .brand-title { font-size: 11px; }
+  .brand-title small { font-size: 9.5px; }
   .result-cast li { flex-direction: column; text-align: center; }
   .result-cast img { width: 36px; height: 36px; }
   .cast-row-3 .text-link { font-size: 10px; }
