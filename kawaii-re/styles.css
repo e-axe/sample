@@ -34,11 +34,14 @@ section[id], #cast-finder, #show-results { scroll-margin-top: 20px; }
 
 /* Header and hero: text has its own white area. */
 .site-header { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 8px 42px; position: sticky; top: 0; background: #fff; z-index: 40; border-bottom: 1px solid #f8eff5; }
-.brand { display: block; flex: none; width: 190px; font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; position: relative; max-width: 550px; }
-.brand-logo { width: 100%; }
+.brand { display: flex; align-items: center; gap: 14px; flex: 0 1 auto; min-width: 0; font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; position: relative; max-width: 550px; }
+.brand-logo { width: 110px; flex: none; }
+.brand-title { font-family: var(--serif); font-size: 16px; line-height: 1.5; }
+.brand-title > span { display: block; white-space: nowrap; }
+.brand-title small { font-size: 11px; margin-left: 2px; }
 .brand-text { display: none; }
 [data-brand-style="text"] .brand { width: auto; padding-left: 25px; }
-[data-brand-style="text"] .brand-logo { display: none; }
+[data-brand-style="text"] .brand-logo, [data-brand-style="text"] .brand-title { display: none; }
 [data-brand-style="text"] .brand-text { display: block; }
 [data-brand-style="text"] .brand::before { content: ""; position: absolute; width: 4px; height: 32px; left: 9px; top: 0; background: var(--pink); transform: skew(-35deg); }
 nav { display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 700; }
@@ -250,7 +253,8 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
 }
 @media (max-width: 1100px) {
   .site-header { min-height: 70px; padding: 6px 28px; }
-  .brand { width: 174px; max-width: calc(100% - 55px); font-size: 12px; }
+  .brand { max-width: calc(100% - 68px); font-size: 12px; }
+  .brand-logo { width: 100px; }
   .brand-text > span { display: block; }
   .menu-toggle { display: flex; flex-direction: column; gap: 5px; width: 44px; height: 44px; align-items: center; justify-content: center; border: 0; background: #fff; padding: 6px; }
   .menu-toggle > span:not(.sr-only) { width: 25px; height: 2px; background: var(--pink); transition: transform .2s; }
@@ -310,7 +314,11 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .wrap { width: calc(100% - 40px); }
   body { padding-bottom: 78px; }
   .site-header { padding: 6px 20px; }
-  .brand { width: 154px; font-size: 10.5px; }
+  .site-header { gap: 12px; }
+  .brand { gap: 10px; max-width: calc(100% - 56px); font-size: 10.5px; }
+  .brand-logo { width: 64px; }
+  .brand-title { font-size: 12px; }
+  .brand-title small { font-size: 10px; }
   [data-brand-style="text"] .brand { padding-left: 16px; }
   [data-brand-style="text"] .brand::before { left: 3px; width: 3px; height: 27px; top: 4px; }
   nav { padding-inline: 20px; }
