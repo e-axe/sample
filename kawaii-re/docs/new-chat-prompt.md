@@ -46,7 +46,7 @@ GitHub：https://github.com/e-axe/sample/tree/main/kawaii-re
 
 - 公開するキャスト画像は `kawaii-re-cast-01.webp` のように番号で管理してください。
 - `docs/cast-image-map.md` に、固定番号・出演者・役名・公開ファイル名・元の宣材ファイル名の対応表があります。差し替え前に必ず照合し、並びを変更しても既存番号は勝手に振り直さないでください。
-- 吉武千颯さんは06番で、正式宣材が未提供です。現在は仮画像です。受領後に同じ番号で差し替えてください。
+- 吉武千颯さんは06番で、公式Driveから受領した正式宣材 `吉武千颯 (1).jpeg` を `kawaii-re-cast-06.webp` に反映し、仮SVGは削除済みです。全36名が正式宣材です。
 - `content.json` が公演・出演回・画像番号の正本です。`template.html` などを編集し、`node tools/build.mjs` で `index.html` と対応表を生成してください。生成HTMLを直接直して内容を食い違わせないでください。
 
 **正式情報と確認・公開**

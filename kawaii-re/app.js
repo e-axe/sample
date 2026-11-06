@@ -9,6 +9,7 @@ const status = document.getElementById('result-status');
 const selectionSummary = document.getElementById('selection-summary');
 const clearShow = document.getElementById('clear-show');
 const clearCast = document.getElementById('clear-cast');
+const resultClearShow = document.getElementById('result-clear-show');
 const showButtons = [...document.querySelectorAll('[data-show]')];
 const peopleByShow = new Map(data.shows.map(show => [show.id, data.cast.filter(person => person.shows.includes(show.id))]));
 const nav = document.getElementById('navigation');
@@ -55,6 +56,9 @@ function render() {
   selectionSummary.textContent = `${cast ? `出演者：${cast.name}` : '出演者：指定なし'}\n${show ? `日時：${label(show)} 開演` : '日時：指定なし（すべての公演）'}`;
   clearShow.hidden = !selectedShow;
   clearCast.hidden = !cast;
+  // With a cast filter, let visitors return to all of that person's shows without leaving the results.
+  resultClearShow.hidden = !(cast && selectedShow);
+  if (cast) resultClearShow.textContent = `日時を解除（全${cast.shows.length}公演を表示）`;
   results.hidden = !cast && !selectedShow;
   list.replaceChildren();
   if (results.hidden) return;
@@ -157,6 +161,11 @@ clearShow.addEventListener('click', () => {
 });
 clearCast.addEventListener('click', () => {
   filter.value = ''; render(); filter.focus({ preventScroll: true });
+});
+resultClearShow.addEventListener('click', () => {
+  selectedShow = null; render();
+  heading.focus({ preventScroll: true });
+  results.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
 });
 document.getElementById('reset-filter').addEventListener('click', () => {
   filter.value = ''; selectedShow = null; render(); filter.focus();

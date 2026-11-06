@@ -17,9 +17,9 @@
   <link rel="preload" href="assets/fonts/kawaii-serif-jp.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="type-tokens.css">
-  <link rel="stylesheet" href="styles.css?v=20261106-header-title">
+  <link rel="stylesheet" href="styles.css?v=20261106-review">
   <script id="performance-data" type="application/json">{{DATA}}</script>
-  <script src="app.js" type="module"></script>
+  <script src="app.js?v=20261106-review" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -64,10 +64,10 @@
     </section>
     <section id="ticket" class="ticket-section wrap">
       <div class="section-head"><h2>SCHEDULE &amp; TICKET <span>公演日程・チケット</span></h2></div>
-      <div id="cast-finder" class="finder-intro"><label for="cast-filter">出演者から探す<select id="cast-filter" aria-label="出演者から探す"><option value="">すべての出演者</option>{{CAST_OPTIONS}}</select></label><div><p class="important">ご購入前に、キャストの出演日をご確認ください。</p><p class="finder-note">応援キャストは、出演日以外の公演でも選択できます。</p></div></div>
+      <div id="cast-finder" class="finder-intro"><label for="cast-filter">出演者から探す<select id="cast-filter"><option value="">すべての出演者</option>{{CAST_OPTIONS}}</select></label><div><p class="important">ご購入前に、キャストの出演日をご確認ください。</p><p class="finder-note">応援キャストは、出演日以外の公演でも選択できます。</p></div></div>
       <noscript><p>出演回の絞り込みにはJavaScriptが必要です。出演者欄に全出演日時を記載しています。<a href="https://ameblo.jp/may-holic/entry-12983587226.html">公式の全出演日程もご確認ください。</a></p></noscript>
       <div class="schedule-panel"><div class="schedule"><table><caption>2026年12月 公演日程（全9公演）</caption><tbody>{{CALENDAR}}</tbody></table><p class="caption js-help">開演時間を選ぶと、下に出演者を表示します。<br>選択中の時間をもう一度押すと、日時だけ解除できます。</p></div><div class="selection-state"><p class="selection-title">現在の選択</p><p id="selection-summary" role="status" aria-live="polite">日時・出演者は未選択です。</p><div class="selection-actions"><button id="clear-show" type="button" hidden>日時を解除 <span aria-hidden="true">×</span></button><button id="clear-cast" type="button" hidden>出演者を解除 <span aria-hidden="true">×</span></button></div><p class="caption">上演時間：約120分（予定）<br>※演出の都合により若干変動する可能性がございます。</p></div></div>
-      <div id="show-results" class="show-results" hidden><div class="result-head"><h3 id="results-heading" tabindex="-1">出演公演</h3><button id="reset-filter" class="text-link" type="button">条件をすべて解除</button></div><p id="result-status"></p><div id="result-list"></div></div>
+      <div id="show-results" class="show-results" hidden><div class="result-head"><h3 id="results-heading" tabindex="-1">出演公演</h3><div class="result-actions"><button id="result-clear-show" class="text-link" type="button" hidden>日時を解除</button><button id="reset-filter" class="text-link" type="button">条件をすべて解除</button></div></div><p id="result-status"></p><div id="result-list"></div></div>
       <div class="ticket-grid">
       <div class="prices"><h3>チケット <small>（全席指定・税込）</small></h3><dl><div><dt>S席</dt><dd>¥11,000</dd></div><div><dt>特典付A席</dt><dd>¥9,800</dd></div><div><dt>A席</dt><dd>¥8,800</dd></div></dl><p class="caption">当日券 ＋500円</p></div>
       <div class="benefits"><h3>［ S席特典 ］</h3><ul><li>前方列保証</li><li>非売品2L版ブロマイド1枚</li></ul><h3>［ 特典付A席 ］</h3><p>非売品2L版ブロマイド1枚<br><small>（ブロマイドの種類はS席特典と同じ）</small></p></div>
