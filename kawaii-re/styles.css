@@ -74,6 +74,7 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .hero-cta { min-width: 360px; margin-top: 15px; }
 .sale-line { font-size: var(--important-size); font-weight: 700; margin-top: 12px; line-height: 1.8; max-width: 600px; }
 .sale-line::before { content: ""; display: inline-block; width: 13px; height: 13px; border: 1.5px solid var(--pink-ink); border-top-width: 4px; margin-right: 9px; vertical-align: -1px; }
+.sale-countdown { display: inline-block; font-size: 13px; font-weight: 700; color: var(--pink-ink); background: #fff0f8; border: 1px solid #f2c4df; border-radius: 999px; padding: 2px 12px; margin-top: 6px; line-height: 1.7; font-variant-numeric: tabular-nums; }
 .micro { font-size: var(--caption-size); line-height: 1.8; margin-top: 4px; max-width: 600px; }
 
 /* A dedicated theatrical illustration with the approved diagonal presentation. */
@@ -113,6 +114,7 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .cast-row .cast-card { width: var(--cast-size); }
 .cast-block-lead .cast-card { width: 208px; }
 .cast-card { text-align: center; min-width: 0; }
+.cast-photo-link { display: block; border-radius: 50%; text-decoration: none; }
 .cast-card img { aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 1px #efd7e6, 0 5px 16px #ad3d7a0a; background: #fff; width: 100%; transition: transform .3s ease, box-shadow .3s ease; }
 .cast-card:hover img, .cast-card:focus-within img { transform: translateY(-3px); }
 .cast-card h3 { color: var(--pink-ink); font-family: var(--serif); font-size: var(--cast-name-size); font-weight: 700; white-space: nowrap; margin-top: 9px; }
@@ -137,6 +139,13 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .selection-state { padding: 20px 24px; border-radius: 20px; background: #fff; align-self: start; }
 .selection-title { color: var(--pink-ink); font-size: 14px; font-weight: 700; }
 #selection-summary { margin-top: 6px; white-space: pre-line; font-weight: 700; font-size: 16px; }
+.same-role { margin-top: 12px; padding-top: 10px; border-top: 1px solid #f4dfec; }
+.same-role-label { font-size: 13px; font-weight: 700; color: var(--muted); }
+.same-role-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.same-role-list:empty { display: none; }
+.same-role-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e7c9da; background: #fff; border-radius: 999px; min-height: 38px; padding: 4px 12px; font-size: 13px; font-weight: 700; color: var(--ink); transition: border-color .2s, background .2s, color .2s; }
+.same-role-chip small { font-size: 11px; color: var(--pink-ink); font-weight: 700; }
+.same-role-chip:hover { border-color: var(--pink-ink); background: #fff5fb; color: var(--pink-ink); }
 .selection-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .selection-actions:empty { display: none; }
 .selection-actions button { display: inline-flex; align-items: center; gap: 12px; border: 1px solid #edc7df; background: #fff7fc; border-radius: 999px; min-height: 44px; padding: 6px 14px; font-size: 14px; color: var(--pink-ink); font-weight: 700; }
@@ -163,11 +172,13 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .result-show details { padding: 8px 20px 14px; }
 .result-show summary { font-size: 14px; font-weight: 700; padding: 5px 0; min-height: 38px; color: var(--pink-ink); }
 .result-cast { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; list-style: none; margin: 8px 0 0; padding: 0; }
-.result-cast li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; min-width: 0; border-radius: 12px; background: #faf7fa; border: 1px solid transparent; }
+.result-cast li { min-width: 0; }
+.result-cast-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; min-width: 0; border-radius: 12px; background: #faf7fa; border: 1px solid transparent; text-align: left; color: inherit; transition: border-color .2s, background .2s; }
+.result-cast-btn:hover { border-color: #e4b8d2; background: #fff5fb; }
 .result-cast img { width: 44px; height: 44px; border-radius: 50%; flex: none; object-fit: cover; }
 .result-cast strong { display: block; font-size: 15px; line-height: 1.6; }
 .result-role { display: block; font-size: 12px; color: var(--muted); line-height: 1.5; }
-.result-cast .is-matched { background: #ffedf7; border-color: var(--pink-ink); box-shadow: inset 3px 0 var(--pink-ink); }
+.result-cast .is-matched .result-cast-btn { background: #ffedf7; border-color: var(--pink-ink); box-shadow: inset 3px 0 var(--pink-ink); }
 .is-matched strong { color: var(--pink-ink); }
 .ticket-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; align-items: start; }
 .schedule table { border-collapse: collapse; width: 100%; font-family: var(--serif); }
@@ -217,7 +228,9 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .bottom-grid h2 { font-size: 30px; }
 .venue h3 { font-family: var(--serif); font-size: 31px; margin-bottom: 10px; }
 .venue p { font-size: 15px; }
-.theatre-map { display: block; width: 100%; height: 300px; border: 1px solid #e7dce6; border-radius: 18px; background: #fff; margin-top: 22px; }
+.theatre-map { display: block; width: 100%; height: 300px; border: 1px solid #e7dce6; border-radius: 18px; background: #fff7fc; margin-top: 22px; }
+.js .venue noscript { display: none; }
+.no-js .theatre-map[data-map-src] { display: none; }
 .venue .text-link { margin-top: 12px; }
 .faq details { border-bottom: 1px solid #b09ca9; padding: 4px 0; font-size: 14px; }
 .faq summary { font-weight: 700; min-height: 44px; padding: 8px 0; }
@@ -384,7 +397,7 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .selection-label { font-size: 11px; }
   .result-show details { padding: 8px 10px 12px; }
   .result-cast { gap: 7px 5px; }
-  .result-cast li { padding: 7px 5px; gap: 6px; border-radius: 10px; }
+  .result-cast-btn { padding: 7px 5px; gap: 6px; border-radius: 10px; }
   .result-cast img { width: 32px; height: 32px; }
   .result-cast strong { font-size: 13px; }
   .result-role { font-size: 11px; }
@@ -430,7 +443,7 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .brand-logo { width: 56px; }
   .brand-title { font-size: 11px; }
   .brand-title small { font-size: 9.5px; }
-  .result-cast li { flex-direction: column; text-align: center; }
+  .result-cast-btn { flex-direction: column; text-align: center; }
   .result-cast img { width: 36px; height: 36px; }
   .cast-row-3 .text-link { font-size: 10px; }
 }
