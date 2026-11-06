@@ -17,14 +17,14 @@
   <link rel="preload" href="assets/fonts/kawaii-serif-jp.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="type-tokens.css">
-  <link rel="stylesheet" href="styles.css?v=20261106-typography">
+  <link rel="stylesheet" href="styles.css?v=20261106-blend">
   <script id="performance-data" type="application/json">{{DATA}}</script>
   <script src="app.js" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header">
-    <a class="brand" href="#top"><span>演劇ユニット【メイホリック】× ライブイベント【Kawaii Party！】</span><span>メイホリックシアター23</span></a>
+  <header class="site-header" data-brand-style="logo">
+    <a class="brand" href="#top" aria-label="KAWAII偶像パラドキシカル 再演・ページ上部へ"><img class="brand-logo" src="assets/official-logo.webp" width="1400" height="547" alt=""><span class="brand-text"><span>演劇ユニット【メイホリック】× ライブイベント【Kawaii Party！】</span><span>メイホリックシアター23</span></span></a>
     <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">メニュー</span></button>
     <nav id="navigation" aria-label="メインナビゲーション"><a href="#story">物語</a><a href="#cast">出演者</a><a href="#ticket">公演日程・チケット</a><a href="#venue">劇場</a></nav>
   </header>
@@ -45,7 +45,7 @@
     </section>
     <section id="story" class="story">
       <div class="story-band"><h2>STORY</h2><p>「あなたたちは死にました」</p></div>
-      <div class="story-inner wrap">
+      <div class="story-inner">
         <p class="story-intro">転生を願う少女たちが、<br class="mobile-only">神の箱庭でアイドルとして生き直す。</p>
         <div class="story-copy"><p>神にそう告げられたのは<strong>11人の少女たち。</strong><br>しかし、神が見守る箱庭で<strong>アイドルとして活動し、</strong><br class="desktop-only">自身の転生に必要なエネルギーを信仰心というかたちで集めれば、<br class="desktop-only">己の望むままに再び生を受けることができるという。</p>
         <p>少女たちは神の提案に応じ、これまでの名を捨て、<br class="desktop-only">神に与えられた名でアイドルとして新たな一歩を踏み出すことにした。</p>
@@ -53,8 +53,8 @@
         <p>少女たちは見知らぬ世界でアイドルとして生き直すなかで、<br class="desktop-only"><strong>何を思い、何を感じ、どのような選択を下すのか。</strong></p>
         <p>そして、神はなぜ少女たちをアイドルにしたのか。</p>
         <p class="story-climax">これは神と偶像が織りなすLIVE。<br><strong>心の葛藤は歌声になる。</strong><br>己の体すべてをつかって貴方に届ける。</p>
-        <p class="story-live">新感覚LIVE×Reading<br class="mobile-only">エンターテインメント、開幕。</p></div>
-        <figure class="story-art"><div class="story-atmosphere"><img src="assets/story-theatre.webp" width="1152" height="768" alt="花とクリスタルが光を受ける、幻想的な劇場のイメージ" loading="lazy" decoding="async"><span aria-hidden="true"></span></div><figcaption>物語とライブパフォーマンスが融合する、<br><span>LIVE×Reading公演。</span></figcaption></figure>
+        <p class="story-live">新感覚LIVE×Reading<br class="mobile-only">エンターテインメント、開幕。</p><p class="story-format">物語とライブパフォーマンスが融合する、<br><span>LIVE×Reading公演。</span></p></div>
+        <div class="story-art" aria-hidden="true"><div class="story-atmosphere"><img src="assets/story-theatre.webp" width="1152" height="768" alt="" loading="lazy" decoding="async"><span></span></div></div>
       </div>
     </section>
     <section id="cast" class="cast-section wrap">
@@ -78,9 +78,9 @@
       <section id="venue" class="venue"><div class="section-head"><h2>THEATRE <span>劇場</span></h2></div><h3>CBGKシブゲキ!!</h3><p>〒150-0043<br>東京都渋谷区道玄坂2-29-5<br>渋谷プライム 6階</p><iframe class="theatre-map" title="CBGKシブゲキ!! 周辺地図" src="https://maps.google.com/maps?q=CBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD%21%21&amp;hl=ja&amp;z=16&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=CBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Google マップで見る<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a></section>
       <section class="faq" id="faq"><div class="section-head"><h2>FAQ <span>よくあるご質問</span></h2></div><details><summary>キャストの出演日はどこで確認できますか？</summary><p>「出演者から探す」でお名前を選ぶと出演公演を絞り込めます。各開演時間から、その回に出演する全キャストも確認できます。</p></details><details><summary>上演時間はどのくらいですか？</summary><p>約120分を予定しています。演出の都合により若干変動する可能性があります。</p></details><details><summary>当日券はありますか？</summary><p>当日券料金は前売料金に500円を加算した金額です。販売有無・販売方法は公式からの案内をご確認ください。</p></details><details><summary>お花・プレゼントは渡せますか？</summary><p>スペースの都合上、お花・プレゼント・ファンレターは受付できません。入り待ち・出待ちや長時間の劇場周辺での滞留もご遠慮ください。</p></details></section>
     </div></div>
-    <section class="credits wrap"><div><h2>主題歌「Kawaii☆stage」</h2><p>作曲：秋谷啓斗<br>作詞・振付：石原美沙紀<br>歌唱：石原美沙紀 × 岡本芽子</p><a class="text-link" href="https://linkco.re/REqy1NRP?lang=ja" target="_blank" rel="noopener noreferrer">楽曲配信ページへ<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a></div><div><h2>お問い合わせ</h2><a class="email-link" href="mailto:mayholic20209@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>mayholic20209@gmail.com</a><p class="caption">返信を受信できるよう、gmail.comからのメールを<br>受信可能に設定してください。</p><div class="production-credit"><span>企画・制作</span><img src="assets/mayholic-logo.webp" width="360" height="221" alt="メイホリック" loading="lazy" decoding="async"></div><div class="social-links"><a class="text-link" href="https://x.com/mayholictheater" target="_blank" rel="noopener noreferrer"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-6.5L6.4 22H3.2l7.4-8.5L.8 2h6.4l4.5 6L18.9 2ZM17.8 20h1.7L6.2 4H4.4l13.4 16Z"/></svg>メイホリック公式X</a><a class="text-link" href="https://ameblo.jp/may-holic/entry-12983587226.html" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5Z"/><path d="M14 3v5h5M8 12h8M8 16h8"/></svg>公式ブログ</a></div></div></section>
+    <section class="credits wrap"><div><h2>主題歌「Kawaii☆stage」</h2><p>作曲：秋谷啓斗<br>作詞・振付：石原美沙紀<br>歌唱：石原美沙紀 × 岡本芽子</p><a class="text-link" href="https://linkco.re/REqy1NRP?lang=ja" target="_blank" rel="noopener noreferrer">楽曲配信ページへ<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a></div><div><h2>お問い合わせ</h2><a class="email-link" href="mailto:mayholic20209@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>mayholic20209@gmail.com</a><p class="caption">返信を受信できるよう、gmail.comからのメールを<br>受信可能に設定してください。</p><p class="caption">企画・制作：メイホリック</p><div class="social-links"><a class="text-link" href="https://x.com/mayholictheater" target="_blank" rel="noopener noreferrer"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-6.5L6.4 22H3.2l7.4-8.5L.8 2h6.4l4.5 6L18.9 2ZM17.8 20h1.7L6.2 4H4.4l13.4 16Z"/></svg>メイホリック公式X</a><a class="text-link" href="https://ameblo.jp/may-holic/entry-12983587226.html" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5Z"/><path d="M14 3v5h5M8 12h8M8 16h8"/></svg>公式ブログ</a></div></div></section>
   </main>
-  <footer data-title-logo="true"><div class="footer-brand"><a class="footer-title" href="#top" aria-label="KAWAII偶像パラドキシカル 再演・ページ上部へ"><img src="assets/official-logo.webp" width="1400" height="547" alt="KAWAII偶像パラドキシカル 再演" loading="lazy" decoding="async"></a><p>© メイホリック</p></div><p>クライアント確認用サイト見本</p></footer>
+  <footer><div class="footer-brand"><img src="assets/mayholic-logo.webp" width="360" height="221" alt="メイホリック公式ロゴ" loading="lazy" decoding="async"><p>© メイホリック</p></div><p>クライアント確認用サイト見本</p></footer>
   <a class="mobile-ticket button button-dark" href="#ticket">公演日程・チケット<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>
 </body>
 </html>

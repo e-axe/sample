@@ -38,4 +38,6 @@ node tools/check.mjs
 
 本文や動的文言が変わった場合は、HTML生成後にビルド環境へ `fonttools[woff]` を用意し、`python tools/prepare-fonts.py --cache <原本キャッシュフォルダ>`、続けて `node tools/check.mjs` を実行する。原本は公式Google Fontsリポジトリから取得し、文字のサブセット化はローカルで実施する。通常の閲覧にはPythonやライブラリは不要。
 
-フッターの作品ロゴを戻す場合は、`template.html` の `data-title-logo="true"` を `false` にしてビルドする。メイホリックのロゴは企画・制作欄に配置。
+ヘッダー左に作品の公式ロゴを表示。以前の文字表示に戻す場合は、`template.html` の `data-brand-style="logo"` を `text` にしてビルドする。フッターは変更前のメイホリックのロゴ＋著作権表示。
+
+STORY画像は文章の背景へ統合。PCは右側の画像を見せ、左側にフェード・ぼかし・白いベールを重ねて可読性を確保する。スマホでは下寄せの背景として使用。原本の生成画像を変更せず、CSSで配置する。

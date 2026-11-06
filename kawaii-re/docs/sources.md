@@ -47,3 +47,8 @@
 - 公式Google FontsリポジトリのNoto Serif JP / Noto Sans JPの可変TTFを原本とする。原本URL・ハッシュは `assets/fonts/manifest.json`。
 - 固定の原本・ライセンスURLを取得し、FontToolsとBrotliでローカル処理。本文・ソースの外部送信は行わない。
 - 同梱の `kawaii-serif-jp-OFL.txt` / `kawaii-sans-jp-OFL.txt` にSIL Open Font License 1.1を保持。閲覧者は当サイトのWOFF2だけを読む。
+
+
+## ヘッダー・背景への使用方法の訂正
+
+作品ロゴの追加先はヘッダー左へ訂正。フッターはメイホリックのロゴへ復元。STORY画像は同じ承認済みWebPを本文背景に使い、配置・マスク・ぼかしをCSSで指定。画像原本とキャスト画像、フォントファイルは変更していない。
