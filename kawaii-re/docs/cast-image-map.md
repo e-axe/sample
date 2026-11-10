@@ -19,7 +19,7 @@
 | 04 | `kawaii-re-cast-04.webp` | 汐入あすか | 神 | `汐入あすかアー写 のコピー.png` |
 | 05 | `kawaii-re-cast-05.webp` | 八木ましろ | ムギ美 | `八木ましろ様宣材写真.jpg` |
 | 06 | `kawaii-re-cast-06.webp` | 吉武千颯 | ムギ美 | `吉武千颯 (1).jpeg` |
-| 07 | `kawaii-re-cast-07.webp` | 小日向美香 | アワ和 | `小日向美香_宣材写真_S.jpeg` |
+| 07 | `kawaii-re-cast-07.webp` | 小日向美香 | アワ和 | `小日向美香_宣材写真 (2).jpg` |
 | 08 | `kawaii-re-cast-08.webp` | 加藤結 | アワ和 | `加藤結写真.jpg` |
 | 09 | `kawaii-re-cast-09.webp` | 広瀬ゆうき | キビ崎 | `広瀬ゆうき.jpg のコピー.jpg` |
 | 10 | `kawaii-re-cast-10.webp` | 田中咲帆 | キビ崎 | `田中咲帆 宣材写真.png のコピー.png` |
