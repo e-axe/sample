@@ -267,8 +267,8 @@ function updateSale() {
     lastSaleState = state;
     document.body.dataset.saleState = state;
     document.querySelectorAll('[data-sale-link]').forEach(link => {
-      link.setAttribute('aria-disabled', String(upcoming || ended));
-      link.href = state === 'open' ? data.ticketUrl : '#ticket';
+      link.removeAttribute('aria-disabled');
+      link.href = data.ticketUrl;
     });
     document.querySelectorAll('[data-sale-cta]').forEach(text => {
       text.textContent = upcoming ? '11/12 22:00 発売開始' : ended ? '公演は終了しました' : 'チケット販売ページへ';
@@ -291,10 +291,6 @@ function updateSale() {
     saleTimer = setTimeout(updateSale, Math.min(Math.max(next, 1000), 86400000));
   }
 }
-document.querySelectorAll('[data-sale-link]').forEach(link => link.addEventListener('click', event => {
-  updateSale();
-  if (lastSaleState !== 'open') event.preventDefault();
-}));
 document.addEventListener('visibilitychange', () => { if (!document.hidden) updateSale(); });
 window.addEventListener('pageshow', () => { render(); updateSale(); });
 updateSale();
