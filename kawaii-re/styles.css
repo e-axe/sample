@@ -224,9 +224,22 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .cast-schedule-section { padding: 20px 0 48px; }
 .cast-schedule-section > .caption { margin-bottom: 16px; }
 .cast-schedule-frame { background: #fff; border-radius: 20px; border: 1px solid #f4dfec; box-shadow: 0 4px 24px #ad3d7a14; padding: 16px; overflow: hidden; }
-.cast-schedule-link { display: block; text-decoration: none; border-radius: 12px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
-.cast-schedule-link:hover, .cast-schedule-link:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 24px #d6007226; }
-.cast-schedule-link img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.cast-schedule-trigger { display: block; width: 100%; padding: 0; border: none; background: none; font: inherit; color: inherit; text-align: inherit; border-radius: 12px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; cursor: zoom-in; }
+.cast-schedule-trigger:hover, .cast-schedule-trigger:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 24px #d6007226; }
+.cast-schedule-trigger img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+/* Lightbox modal for cast schedule chart */
+body.lightbox-open { overflow: hidden; }
+.lightbox-dialog { border: none; background: transparent; padding: 0; margin: 0; max-width: 100vw; max-height: 100dvh; width: 100vw; height: 100dvh; overflow: hidden; position: fixed; inset: 0; z-index: 1000; color: inherit; }
+.lightbox-dialog::backdrop { background: rgba(15, 12, 18, 0.85); backdrop-filter: blur(4px); overflow: hidden; overscroll-behavior: contain; }
+.lightbox-dialog:modal { overscroll-behavior: contain; }
+.lightbox-shell { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 56px 16px 24px; box-sizing: border-box; overflow: auto; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; }
+.lightbox-body { margin: auto; display: flex; align-items: center; justify-content: center; max-width: 100%; }
+.lightbox-image { display: block; max-width: 100%; max-height: calc(100dvh - 90px); width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); cursor: zoom-in; transition: transform .2s ease; user-select: none; -webkit-user-select: none; }
+.lightbox-image.is-zoomed { max-width: none; max-height: none; width: min(1414px, max(100%, 1000px)); cursor: zoom-out; }
+.lightbox-close { position: fixed; top: max(14px, env(safe-area-inset-top, 14px)); right: max(16px, env(safe-area-inset-right, 16px)); z-index: 1002; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(23, 20, 25, 0.75); color: #fff; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; transition: background .2s ease, transform .2s ease, border-color .2s ease; }
+.lightbox-close:hover, .lightbox-close:focus-visible { background: var(--pink-ink, #d60072); border-color: transparent; transform: scale(1.08); }
+.lightbox-close svg { width: 22px; height: 22px; stroke: #fff; }
 
 /* Restore the earlier theatrical artwork at the foot of the page. */
 .bottom-art { padding: 45px 0 78px; position: relative; isolation: isolate; background: #fff; }
@@ -432,7 +445,11 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .purchase-notes { font-size: 14px; }
   .cast-schedule-section { padding: 16px 0 34px; }
   .cast-schedule-frame { padding: 8px; border-radius: 14px; }
-  .cast-schedule-link img { border-radius: 8px; }
+  .cast-schedule-trigger img { border-radius: 8px; }
+  .lightbox-shell { padding: 48px 10px 16px; }
+  .lightbox-image { max-height: calc(100dvh - 72px); border-radius: 6px; }
+  .lightbox-close { top: max(10px, env(safe-area-inset-top, 10px)); right: max(10px, env(safe-area-inset-right, 10px)); width: 40px; height: 40px; }
+  .lightbox-close svg { width: 20px; height: 20px; }
   .bottom-art { padding: 28px 0 38px; }
   .bottom-art::before { mask-image: linear-gradient(transparent 65%, #000); opacity: .5; }
   .bottom-grid h2 { font-size: 27px; }

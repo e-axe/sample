@@ -75,6 +75,10 @@ assert(!html.includes('>会場<'));
 if(d.castSchedule){
  assert(html.includes('id="cast-schedule"'));
  assert(html.includes(d.castSchedule.image));
+ assert(!html.includes(`href="${d.castSchedule.image}"`),'Cast schedule chart should not link directly to the image file');
+ assert(html.includes('id="cast-schedule-dialog"'),'Cast schedule lightbox dialog exists');
+ assert(html.includes('role="dialog"'),'Cast schedule lightbox has role="dialog"');
+ assert(html.includes('aria-modal="true"'),'Cast schedule lightbox has aria-modal="true"');
  await access(path.join(root,d.castSchedule.image));
 }
 console.log('PASS: official role chart × 9 shows, 36 cast, local links/assets, release timezone, generated HTML');

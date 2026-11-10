@@ -335,3 +335,74 @@ if ('IntersectionObserver' in window) {
 } else {
   loadMap();
 }
+
+const scheduleTrigger = document.getElementById('cast-schedule-open');
+const scheduleDialog = document.getElementById('cast-schedule-dialog');
+const scheduleClose = document.getElementById('cast-schedule-close');
+const scheduleImage = scheduleDialog?.querySelector('.lightbox-image');
+
+if (scheduleTrigger && scheduleDialog) {
+  const openLightbox = () => {
+    if (typeof scheduleDialog.showModal === 'function') {
+      scheduleDialog.showModal();
+    } else {
+      scheduleDialog.setAttribute('open', '');
+    }
+    document.body.classList.add('lightbox-open');
+  };
+
+  const closeLightbox = () => {
+    if (scheduleDialog.hasAttribute('open')) {
+      if (typeof scheduleDialog.close === 'function') {
+        scheduleDialog.close();
+      } else {
+        scheduleDialog.removeAttribute('open');
+      }
+    }
+    document.body.classList.remove('lightbox-open');
+    scheduleImage?.classList.remove('is-zoomed');
+  };
+
+  scheduleTrigger.addEventListener('click', openLightbox);
+  scheduleClose?.addEventListener('click', closeLightbox);
+
+  let pressedOutside = false;
+  scheduleDialog.addEventListener('pointerdown', (e) => {
+    pressedOutside = !e.target.closest('.lightbox-image') && !e.target.closest('.lightbox-close');
+  });
+  scheduleDialog.addEventListener('pointerup', (e) => {
+    if (pressedOutside && !e.target.closest('.lightbox-image') && !e.target.closest('.lightbox-close')) {
+      closeLightbox();
+    }
+    pressedOutside = false;
+  });
+
+  scheduleDialog.addEventListener('click', (e) => {
+    if (e.target.closest('#cast-schedule-close')) {
+      closeLightbox();
+      return;
+    }
+    if (!e.target.closest('.lightbox-image')) {
+      closeLightbox();
+    }
+  });
+
+  scheduleImage?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    scheduleImage.classList.toggle('is-zoomed');
+  });
+
+  scheduleDialog.addEventListener('cancel', (e) => {
+    e.preventDefault();
+    closeLightbox();
+  });
+  scheduleDialog.addEventListener('close', () => {
+    document.body.classList.remove('lightbox-open');
+    scheduleImage?.classList.remove('is-zoomed');
+  });
+  scheduleDialog.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+}
