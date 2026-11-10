@@ -277,7 +277,7 @@ function updateSale() {
       text.textContent = upcoming ? '11/12（木）22:00 発売開始｜先着順' : ended ? '公演は終了しました。ご来場ありがとうございました。' : 'チケットの販売状況はカンフェティでご確認ください。';
     });
     document.querySelectorAll('[data-sale-note]').forEach(text => {
-      text.textContent = upcoming ? '発売日時になると販売ページへ進めます。' : ended ? '最新のご案内は公式ブログ・公式Xをご確認ください。' : '出演日と券種をご確認のうえ、販売ページへお進みください。';
+      text.textContent = upcoming ? 'チケットはリンク先のカンフェティでお求めいただけます。' : ended ? '最新のご案内は公式ブログ・公式Xをご確認ください。' : '出演日と券種をご確認のうえ、販売ページへお進みください。';
     });
   }
   const saleTime = Date.parse(data.saleAt);
