@@ -143,7 +143,7 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .same-role-label { font-size: 13px; font-weight: 700; color: var(--muted); }
 .same-role-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .same-role-list:empty { display: none; }
-.same-role-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e7c9da; background: #fff; border-radius: 999px; min-height: 38px; padding: 4px 12px; font-size: 13px; font-weight: 700; color: var(--ink); transition: border-color .2s, background .2s, color .2s; }
+.same-role-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e7c9da; background: #fff; border-radius: 999px; min-height: 44px; padding: 4px 12px; font-size: 13px; font-weight: 700; color: var(--ink); transition: border-color .2s, background .2s, color .2s; }
 .same-role-chip small { font-size: 11px; color: var(--pink-ink); font-weight: 700; }
 .same-role-chip:hover { border-color: var(--pink-ink); background: #fff5fb; color: var(--pink-ink); }
 .selection-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
@@ -170,7 +170,7 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .select-result-show { border: 1px solid var(--pink-ink); border-radius: 999px; background: #fff; color: var(--pink-ink); font-size: 13px; font-weight: 700; min-height: 44px; padding: 6px 16px; }
 .select-result-show:hover { color: #fff; background: var(--pink-ink); }
 .result-show details { padding: 8px 20px 14px; }
-.result-show summary { font-size: 14px; font-weight: 700; padding: 5px 0; min-height: 38px; color: var(--pink-ink); }
+.result-show summary { font-size: 14px; font-weight: 700; padding: 5px 0; min-height: 44px; color: var(--pink-ink); }
 .result-cast { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; list-style: none; margin: 8px 0 0; padding: 0; }
 .result-cast li { min-width: 0; }
 .result-cast-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; min-width: 0; border-radius: 12px; background: #faf7fa; border: 1px solid transparent; text-align: left; color: inherit; transition: border-color .2s, background .2s; }
@@ -230,12 +230,12 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 
 /* Lightbox modal for cast schedule chart */
 body.lightbox-open { overflow: hidden; }
-.lightbox-dialog { border: none; background: transparent; padding: 0; margin: 0; max-width: 100vw; max-height: 100dvh; width: 100vw; height: 100dvh; overflow: hidden; position: fixed; inset: 0; z-index: 1000; color: inherit; }
+.lightbox-dialog { border: none; background: transparent; padding: 0; margin: 0; max-width: 100vw; max-height: 100vh; max-height: 100dvh; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden; position: fixed; inset: 0; z-index: 1000; color: inherit; }
 .lightbox-dialog::backdrop { background: rgba(15, 12, 18, 0.85); backdrop-filter: blur(4px); overflow: hidden; overscroll-behavior: contain; }
 .lightbox-dialog:modal { overscroll-behavior: contain; }
 .lightbox-shell { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 56px 16px 24px; box-sizing: border-box; overflow: auto; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; }
 .lightbox-body { margin: auto; display: flex; align-items: center; justify-content: center; max-width: 100%; }
-.lightbox-image { display: block; max-width: 100%; max-height: calc(100dvh - 90px); width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); cursor: zoom-in; transition: transform .2s ease; user-select: none; -webkit-user-select: none; }
+.lightbox-image { display: block; max-width: 100%; max-height: calc(100vh - 90px); max-height: calc(100dvh - 90px); width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); cursor: zoom-in; transition: transform .2s ease; user-select: none; -webkit-user-select: none; }
 .lightbox-image.is-zoomed { max-width: none; max-height: none; width: min(1414px, max(100%, 1000px)); cursor: zoom-out; }
 .lightbox-close { position: fixed; top: max(14px, env(safe-area-inset-top, 14px)); right: max(16px, env(safe-area-inset-right, 16px)); z-index: 1002; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(23, 20, 25, 0.75); color: #fff; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; transition: background .2s ease, transform .2s ease, border-color .2s ease; }
 .lightbox-close:hover, .lightbox-close:focus-visible { background: var(--pink-ink, #d60072); border-color: transparent; transform: scale(1.08); }
@@ -413,7 +413,7 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .show-results { padding: 15px 10px; border-radius: 18px; }
   .result-head { align-items: flex-start; gap: 12px; flex-direction: column; }
   .result-head h3 { font-size: 17px; }
-  .result-head button { font-size: 13px; min-height: 36px; }
+  .result-head button { font-size: 13px; min-height: 44px; }
   .show-results #result-status { font-size: 13px; }
   .result-show-head { padding: 12px; gap: 6px; }
   .result-date { font-size: 27px; }
@@ -447,8 +447,8 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .cast-schedule-frame { padding: 8px; border-radius: 14px; }
   .cast-schedule-trigger img { border-radius: 8px; }
   .lightbox-shell { padding: 48px 10px 16px; }
-  .lightbox-image { max-height: calc(100dvh - 72px); border-radius: 6px; }
-  .lightbox-close { top: max(10px, env(safe-area-inset-top, 10px)); right: max(10px, env(safe-area-inset-right, 10px)); width: 40px; height: 40px; }
+  .lightbox-image { max-height: calc(100vh - 72px); max-height: calc(100dvh - 72px); border-radius: 6px; }
+  .lightbox-close { top: max(10px, env(safe-area-inset-top, 10px)); right: max(10px, env(safe-area-inset-right, 10px)); width: 44px; height: 44px; }
   .lightbox-close svg { width: 20px; height: 20px; }
   .bottom-art { padding: 28px 0 38px; }
   .bottom-art::before { mask-image: linear-gradient(transparent 65%, #000); opacity: .5; }
