@@ -72,4 +72,9 @@ assert(html.indexOf('class="purchase-reminder"')<html.indexOf('data-sale-link'))
 assert(html.includes('https://x.com/mayholictheater'));
 assert(html.includes('title="CBGKシブゲキ!! 周辺地図"'));
 assert(!html.includes('>会場<'));
+if(d.castSchedule){
+ assert(html.includes('id="cast-schedule"'));
+ assert(html.includes(d.castSchedule.image));
+ await access(path.join(root,d.castSchedule.image));
+}
 console.log('PASS: official role chart × 9 shows, 36 cast, local links/assets, release timezone, generated HTML');

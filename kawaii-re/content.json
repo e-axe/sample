@@ -4,6 +4,13 @@
   "ticketUrl": "https://confetti-web.com/@/may-holic23",
   "officialUrl": "https://ameblo.jp/may-holic/entry-12983587226.html",
   "email": "mayholic20209@gmail.com",
+  "castSchedule": {
+    "image": "assets/cast-schedule.webp",
+    "width": 1414,
+    "height": 2000,
+    "alt": "キャストスケジュール（公演回ごとの出演キャスト表）",
+    "source": "cast-schedule-20261105.jpg"
+  },
   "shows": [
     {
       "id": 1,

@@ -220,6 +220,14 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .purchase-notes ul { padding-left: 20px; max-width: 1050px; margin: 4px 0 8px; }
 .purchase-notes li + li { margin-top: 8px; }
 
+/* Cast schedule chart */
+.cast-schedule-section { padding: 20px 0 48px; }
+.cast-schedule-section > .caption { margin-bottom: 16px; }
+.cast-schedule-frame { background: #fff; border-radius: 20px; border: 1px solid #f4dfec; box-shadow: 0 4px 24px #ad3d7a14; padding: 16px; overflow: hidden; }
+.cast-schedule-link { display: block; text-decoration: none; border-radius: 12px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.cast-schedule-link:hover, .cast-schedule-link:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 24px #d6007226; }
+.cast-schedule-link img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
 /* Restore the earlier theatrical artwork at the foot of the page. */
 .bottom-art { padding: 45px 0 78px; position: relative; isolation: isolate; background: #fff; }
 .bottom-art::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("assets/stage.webp") center 84%/cover; mask-image: linear-gradient(transparent 42%, #000 100%); opacity: .6; }
@@ -383,6 +391,9 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .ticket-section > .section-head h2 { font-size: 25px; }
   .ticket-section > .section-head h2 span { display: block; margin: 4px 0 0; font-size: 13px; }
   .ticket-section > .section-head h2 span::before { display: none; }
+  .cast-schedule-section > .section-head h2 { font-size: 25px; }
+  .cast-schedule-section > .section-head h2 span { display: block; margin: 4px 0 0; font-size: 13px; }
+  .cast-schedule-section > .section-head h2 span::before { display: none; }
   .finder-intro label { min-width: 0; font-size: 14px; }
   .finder-intro select { font-size: 16px; }
   .important { font-size: 14px; }
@@ -419,6 +430,9 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .purchase > .button { font-size: 18px; }
   .purchase-reminder { font-size: 14px; }
   .purchase-notes { font-size: 14px; }
+  .cast-schedule-section { padding: 16px 0 34px; }
+  .cast-schedule-frame { padding: 8px; border-radius: 14px; }
+  .cast-schedule-link img { border-radius: 8px; }
   .bottom-art { padding: 28px 0 38px; }
   .bottom-art::before { mask-image: linear-gradient(transparent 65%, #000); opacity: .5; }
   .bottom-grid h2 { font-size: 27px; }
