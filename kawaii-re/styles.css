@@ -227,6 +227,9 @@ nav a:not(:last-child)::after { content: ""; position: absolute; right: -14px; t
 .cast-schedule-trigger { display: block; width: 100%; padding: 0; border: none; background: none; font: inherit; color: inherit; text-align: inherit; border-radius: 12px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; cursor: zoom-in; }
 .cast-schedule-trigger:hover, .cast-schedule-trigger:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 24px #d6007226; }
 .cast-schedule-trigger img { width: 100%; height: auto; display: block; border-radius: 12px; }
+@media (min-width: 761px) {
+  .cast-schedule-frame { max-width: 720px; margin-inline: auto; }
+}
 
 /* Lightbox modal for cast schedule chart */
 body.lightbox-open { overflow: hidden; }
