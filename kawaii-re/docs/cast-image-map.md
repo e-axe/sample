@@ -34,7 +34,7 @@
 | 19 | `kawaii-re-cast-19.webp` | 中村朱里 | KURARA | `中村朱里宣材写真.jpg` |
 | 20 | `kawaii-re-cast-20.webp` | 城崎桃華 | SERIMU | `城崎桃華.jpg` |
 | 21 | `kawaii-re-cast-21.webp` | 小越春花 | SERIMU | `小越春花_宣材写真.jpg のコピー.jpg` |
-| 22 | `kawaii-re-cast-22.webp` | 湯本亜美 | YOMONE | `湯本亜美アー写.jpg` |
+| 22 | `kawaii-re-cast-22.webp` | 湯本亜美 | YOMONE | `湯本亜美_BU宣材.jpg` |
 | 23 | `kawaii-re-cast-23.webp` | 結城りな | YOMONE | `結城りな宣材写真.jpg` |
 | 24 | `kawaii-re-cast-24.webp` | 藍本あみ | RANON | `藍本あみ宣材写真.jpg` |
 | 25 | `kawaii-re-cast-25.webp` | 延松舞佳 | RANON | `延松舞佳_宣材写真.jpg` |
