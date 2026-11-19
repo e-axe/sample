@@ -402,3 +402,36 @@ if (scheduleTrigger && scheduleDialog) {
     }
   });
 }
+
+const flyerDialog = document.getElementById('flyer-dialog');
+if (typeof flyerDialog?.showModal === 'function') {
+  const zoom = flyerDialog.querySelector('.flyer-zoom');
+  const flyerImage = zoom.querySelector('img');
+  const shell = flyerDialog.querySelector('.lightbox-shell');
+
+  function setFlyerZoom(expanded) {
+    zoom.setAttribute('aria-pressed', String(expanded));
+    flyerImage.classList.toggle('is-zoomed', expanded);
+    shell.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
+
+  document.querySelectorAll('.flyer-card').forEach(card => {
+    card.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+      event.preventDefault();
+      flyerDialog.setAttribute('aria-label', '公演チラシ ' + card.querySelector('span').textContent.trim());
+      flyerImage.src = card.href;
+      setFlyerZoom(false);
+      flyerDialog.showModal();
+      document.body.classList.add('lightbox-open');
+    });
+  });
+
+  zoom.addEventListener('click', () => setFlyerZoom(zoom.getAttribute('aria-pressed') === 'false'));
+  flyerDialog.querySelector('.lightbox-close').addEventListener('click', () => flyerDialog.close());
+  shell.addEventListener('click', event => {
+    if (!event.target.closest('.flyer-zoom')) flyerDialog.close();
+  });
+  flyerDialog.addEventListener('close', () => document.body.classList.remove('lightbox-open'));
+}

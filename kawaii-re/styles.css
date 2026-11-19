@@ -244,6 +244,25 @@ body.lightbox-open { overflow: hidden; }
 .lightbox-close:hover, .lightbox-close:focus-visible { background: var(--pink-ink, #d60072); border-color: transparent; transform: scale(1.08); }
 .lightbox-close svg { width: 22px; height: 22px; stroke: #fff; }
 
+.flyer-section { padding: 20px 0 48px; }
+.flyer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.flyer-card { display: flex; flex-direction: column; justify-content: space-between; padding: 10px 10px 0; background: #fff; border: 1px solid #f4dfec; border-radius: 16px; box-shadow: 0 4px 24px #ad3d7a14; text-decoration: none; cursor: zoom-in; }
+.flyer-card img { width: 100%; border-radius: 8px; }
+.flyer-card span { min-height: 44px; padding: 6px 4px; display: flex; justify-content: space-between; align-items: center; color: var(--pink-ink); font-weight: 700; }
+.flyer-card:hover { border-color: var(--pink); }
+
+.flyer-lightbox .lightbox-shell { display: block; }
+.flyer-lightbox .lightbox-body { display: grid; place-items: center; min-width: 100%; min-height: 100%; width: max-content; max-width: none; margin: 0; }
+.flyer-zoom { border: 0; padding: 0; background: transparent; border-radius: 8px; }
+.flyer-zoom img { max-width: calc(100vw - 32px); }
+.flyer-zoom img.is-zoomed { max-width: none; width: clamp(1400px, 150vw, 2400px); }
+.flyer-zoom:focus-visible { outline-color: var(--cyan); }
+
+@media (max-width: 760px) {
+  .flyer-section { padding: 16px 0 34px; }
+  .flyer-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
+
 /* Restore the earlier theatrical artwork at the foot of the page. */
 .bottom-art { padding: 45px 0 78px; position: relative; isolation: isolate; background: #fff; }
 .bottom-art::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("assets/stage.webp") center 84%/cover; mask-image: linear-gradient(transparent 42%, #000 100%); opacity: .6; }

@@ -53,3 +53,12 @@
 
 作品ロゴの追加先はヘッダー左へ訂正。フッターはメイホリックのロゴへ復元。STORY画像は同じ承認済みWebPを本文背景に使い、配置・マスク・ぼかしをCSSで指定。
 また、未提供だった吉武千颯（固定06番）の正式宣材 `吉武千颯 (1).jpeg` を公式Driveから受領し、他のキャストと同様に丸枠・480×480 WebP（`assets/cast/kawaii-re-cast-06.webp`、`position: north`）へ変換して反映し、仮SVGを削除した。全36名分の正式宣材が揃った状態。
+
+## 2026-11-20 本チラシの受領
+
+| 面 | クライアント支給原本 | サンプルLPの配信画像 |
+| --- | --- | --- |
+| 表面 | [かわぱ_表面チラシ.png](https://drive.google.com/file/d/1urK7nHpivXkzmIVmccKHd92-ClUXzcmJ/view)（4095 × 2894 px） | `assets/flyer-front-preview.webp`、`assets/flyer-front.webp` |
+| 裏面 | [かわぱ再演_裏面チラシ.jpg](https://drive.google.com/file/d/1RIa3R7ZIQ-06UPp322MphiD0uEeVBHGF/view)（3999 × 2851 px） | `assets/flyer-back-preview.webp`、`assets/flyer-back.webp` |
+
+原本は受領時の形式で保存。配信用WebPはトリミングせず、表示用は幅960px、拡大用は幅3000px。衣装ビジュアル版を受領したら、裏面の2ファイルを更新し、`template.html` の画像寸法を確認してHTMLを再生成する。

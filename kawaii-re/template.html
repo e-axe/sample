@@ -17,16 +17,16 @@
   <link rel="preload" href="assets/fonts/kawaii-serif-jp.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="type-tokens.css">
-  <link rel="stylesheet" href="styles.css?v=20261106-ux2">
+  <link rel="stylesheet" href="styles.css?v=20261120-flyer">
   <script id="performance-data" type="application/json">{{DATA}}</script>
-  <script src="app.js?v=20261106-ux2" type="module"></script>
+  <script src="app.js?v=20261120-flyer" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header" data-brand-style="logo">
     <a class="brand" href="#top" aria-label="KAWAII偶像パラドキシカル 再演・ページ上部へ"><img class="brand-logo" src="assets/official-logo.webp" width="1400" height="547" alt="" decoding="async"><span class="brand-title">KAWAII偶像パラドキシカル <small>再演</small></span><span class="brand-text"><span>演劇ユニット【メイホリック】× ライブイベント【Kawaii Party！】</span><span>メイホリックシアター23</span></span></a>
     <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">メニュー</span></button>
-    <nav id="navigation" aria-label="メインナビゲーション"><a href="#story">物語</a><a href="#cast">出演者</a><a href="#ticket">公演日程・チケット</a><a href="#venue">劇場</a></nav>
+    <nav id="navigation" aria-label="メインナビゲーション"><a href="#story">物語</a><a href="#cast">出演者</a><a href="#ticket">公演日程・チケット</a><a href="#flyer">チラシ</a><a href="#venue">劇場</a></nav>
   </header>
   <main id="main">
     <section class="hero" id="top" aria-label="公演概要">
@@ -76,6 +76,27 @@
       <details class="purchase-notes"><summary>チケット特典・ご購入前の確認事項</summary><ul><li>特典ブロマイドはチケット購入時に選択した応援キャストのものです。出演しない回でも応援キャストを選択できるため、ご購入前に出演日と券種を必ずご確認ください。</li><li>ブロマイドは公演ごとに絵柄が異なります。佐々木琴子さんのみ日ごとに異なり、全5種類です。</li><li>予約成立後の取消し・払い戻し・他ステージへの変更はできません。重複購入の場合も同様です。</li><li>一部公演終演後にアフターイベントを予定しています。詳細は公式からの続報をお待ちください。</li></ul></details>
     </section>
     {{CAST_SCHEDULE}}
+    <section id="flyer" class="flyer-section wrap">
+      <div class="section-head"><h2>FLYER <span>公演チラシ</span></h2></div>
+      <div class="flyer-grid">
+        <a class="flyer-card" href="assets/flyer-front.webp" aria-label="公演チラシの表面を拡大表示する" aria-controls="flyer-dialog" aria-haspopup="dialog">
+          <img src="assets/flyer-front-preview.webp" width="960" height="678" alt="" loading="lazy" decoding="async">
+          <span>表面<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5M8 10.5h5m-2.5-2.5v5"/></svg></span>
+        </a>
+        <a class="flyer-card" href="assets/flyer-back.webp" aria-label="公演チラシの裏面を拡大表示する" aria-controls="flyer-dialog" aria-haspopup="dialog">
+          <img src="assets/flyer-back-preview.webp" width="960" height="684" alt="" loading="lazy" decoding="async">
+          <span>裏面<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5M8 10.5h5m-2.5-2.5v5"/></svg></span>
+        </a>
+      </div>
+      <dialog id="flyer-dialog" class="lightbox-dialog flyer-lightbox" aria-label="公演チラシ" closedby="any">
+        <button type="button" class="lightbox-close" aria-label="閉じる" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        <div class="lightbox-shell">
+          <div class="lightbox-body">
+            <button type="button" class="flyer-zoom" aria-label="拡大" aria-pressed="false"><img class="lightbox-image" src="assets/flyer-front-preview.webp" alt="" loading="lazy"></button>
+          </div>
+        </div>
+      </dialog>
+    </section>
     <div class="bottom-art"><div class="bottom-grid wrap">
       <section id="venue" class="venue"><div class="section-head"><h2>THEATRE <span>劇場</span></h2></div><h3>CBGKシブゲキ!!</h3><p>〒150-0043<br>東京都渋谷区道玄坂2-29-5<br>渋谷プライム 6階</p><iframe class="theatre-map" title="CBGKシブゲキ!! 周辺地図" data-map-src="https://maps.google.com/maps?q=CBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD%21%21&amp;hl=ja&amp;z=16&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><noscript><iframe class="theatre-map" title="CBGKシブゲキ!! 周辺地図" src="https://maps.google.com/maps?q=CBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD%21%21&amp;hl=ja&amp;z=16&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></noscript><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=CBGK%E3%82%B7%E3%83%96%E3%82%B2%E3%82%AD" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Google マップで見る<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a></section>
       <section class="faq" id="faq"><div class="section-head"><h2>FAQ <span>よくあるご質問</span></h2></div><details><summary>キャストの出演日はどこで確認できますか？</summary><p>「出演者から探す」でお名前を選ぶと出演公演を絞り込めます。各開演時間から、その回に出演する全キャストも確認できます。</p></details><details><summary>上演時間はどのくらいですか？</summary><p>約120分を予定しています。演出の都合により若干変動する可能性があります。</p></details><details><summary>当日券はありますか？</summary><p>当日券料金は前売料金に500円を加算した金額です。販売有無・販売方法は公式からの案内をご確認ください。</p></details><details><summary>お花・プレゼントは渡せますか？</summary><p>スペースの都合上、お花・プレゼント・ファンレターは受付できません。入り待ち・出待ちや長時間の劇場周辺での滞留もご遠慮ください。</p></details></section>
