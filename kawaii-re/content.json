@@ -86,8 +86,8 @@
       "source": "《確認済み》佐々木様.jpg",
       "imageNumber": 1,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -103,8 +103,8 @@
       "source": "《確認済》再_相良様.jpg",
       "imageNumber": 2,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -119,8 +119,8 @@
       "source": "《確認済》再_香坂様.JPG",
       "imageNumber": 3,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -134,8 +134,9 @@
       "source": "《確認済》汐入様.jpg",
       "imageNumber": 4,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.55
       }
     },
     {
@@ -151,8 +152,9 @@
       "source": "《確認済》八木様.jpg",
       "imageNumber": 5,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.555
       }
     },
     {
@@ -169,8 +171,8 @@
       "source": "《確認済》吉武様.jpg",
       "imageNumber": 6,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -186,8 +188,8 @@
       "source": "｟確認済｠小日向様.jpg",
       "imageNumber": 7,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -204,8 +206,8 @@
       "source": "｟確認済｠加藤様.jpg",
       "imageNumber": 8,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -220,8 +222,8 @@
       "source": "｟確認済｠広瀬様.jpg",
       "imageNumber": 9,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -239,8 +241,8 @@
       "source": "《確認済》田中様.jpg",
       "imageNumber": 10,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -256,8 +258,8 @@
       "source": "｟確認済｠再_原田様.jpg",
       "imageNumber": 11,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -274,8 +276,8 @@
       "source": "｟確認済｠水湊様.jpg",
       "imageNumber": 12,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -290,8 +292,9 @@
       "source": "《確認済》中澤様.jpg",
       "imageNumber": 13,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.47
       }
     },
     {
@@ -307,8 +310,8 @@
       "source": "《確認済》再_真野様.JPG",
       "imageNumber": 14,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -322,8 +325,8 @@
       "source": "｟確認済｠深川様.jpg",
       "imageNumber": 15,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -345,8 +348,8 @@
       "source": "《確認済》石原様.jpg",
       "imageNumber": 16,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -367,8 +370,8 @@
       "source": "《確認済》三田様.jpg",
       "imageNumber": 17,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -385,8 +388,8 @@
       "source": "《確認済》阿部様.jpg",
       "imageNumber": 18,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -403,8 +406,9 @@
       "source": "｟確認済｠中村様.jpg",
       "imageNumber": 19,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.46
       }
     },
     {
@@ -421,8 +425,8 @@
       "source": "｟確認済｠城崎様.jpg",
       "imageNumber": 20,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -438,8 +442,8 @@
       "source": "《確認済》小越様.jpg",
       "imageNumber": 21,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -455,8 +459,8 @@
       "source": "｟確認済｠湯本様.jpg",
       "imageNumber": 22,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -473,8 +477,8 @@
       "source": "《確認済》新_結城様.jpg",
       "imageNumber": 23,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -491,8 +495,8 @@
       "source": "《確認済》藍本様.jpg",
       "imageNumber": 24,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -509,8 +513,9 @@
       "source": "｟確認済｠延松様.jpg",
       "imageNumber": 25,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.46
       }
     },
     {
@@ -527,8 +532,8 @@
       "source": "｟確認済｠差し替え_夏目様.jpg",
       "imageNumber": 26,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.15
       }
     },
     {
@@ -545,8 +550,8 @@
       "source": "｟確認済｠星野様.jpg",
       "imageNumber": 27,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -568,8 +573,8 @@
       "source": "｟確認済｠画質荒れ調整済_岡本.jpg",
       "imageNumber": 28,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.155
       }
     },
     {
@@ -585,8 +590,8 @@
       "source": "｟確認済｠佐倉様事務所レタッチ.jpg",
       "imageNumber": 29,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -603,8 +608,8 @@
       "source": "《確認済》村星様.jpg",
       "imageNumber": 30,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -620,8 +625,8 @@
       "source": "《確認済》再_本多様.JPG",
       "imageNumber": 31,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -638,8 +643,8 @@
       "source": "｟確認済｠蛭田様.jpg",
       "imageNumber": 32,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -656,8 +661,8 @@
       "source": "《確認済》差し替え_三葉様.jpg",
       "imageNumber": 33,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165
       }
     },
     {
@@ -691,8 +696,9 @@
       "source": "｟確認済｠福嶋様.jpg",
       "imageNumber": 35,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.165,
+        "horizontalOffset": 0.46
       }
     },
     {
@@ -709,8 +715,8 @@
       "source": "《確認済》天音様.jpg",
       "imageNumber": 36,
       "crop": {
-        "scale": 0.58,
-        "verticalOffset": 0.12
+        "scale": 0.32,
+        "verticalOffset": 0.15
       }
     }
   ],

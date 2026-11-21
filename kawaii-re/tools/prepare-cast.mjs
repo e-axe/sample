@@ -30,7 +30,14 @@ for (const cast of data.cast) {
     const scale = cast.crop.scale ?? 1;
     if (!Number.isFinite(scale) || scale <= 0 || scale > 1) throw new Error(`Invalid crop scale for ${cast.id}`);
     const side = Math.round(Math.min(width, height) * scale);
-    picture = picture.extract({left: Math.round((width-side)/2), top: Math.round((height-side)*cast.crop.verticalOffset), width: side, height: side});
+    const horizontalOffset = cast.crop.horizontalOffset ?? 0.5;
+    if (!Number.isFinite(horizontalOffset) || horizontalOffset < 0 || horizontalOffset > 1) throw new Error(`Invalid horizontal crop offset for ${cast.id}`);
+    picture = picture.extract({
+      left: Math.round((width - side) * horizontalOffset),
+      top: Math.round((height - side) * cast.crop.verticalOffset),
+      width: side,
+      height: side,
+    });
   }
   picture = picture.resize(480 - inset * 2, 480 - inset * 2, { fit: 'cover', position });
   if (inset) picture = picture.extend({ top: inset, bottom: inset, left: inset, right: inset, background: '#fff' });
