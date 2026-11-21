@@ -62,3 +62,8 @@
 | 裏面 | [かわぱ再演_裏面チラシ.jpg](https://drive.google.com/file/d/1RIa3R7ZIQ-06UPp322MphiD0uEeVBHGF/view)（3999 × 2851 px） | `assets/flyer-back-preview.webp`、`assets/flyer-back.webp` |
 
 原本は受領時の形式で保存。配信用WebPはトリミングせず、表示用は幅960px、拡大用は幅3000px。衣装ビジュアル版を受領したら、裏面の2ファイルを更新し、`template.html` の画像寸法を確認してHTMLを再生成する。
+
+## 2026-11-21 本衣装公式ビジュアル
+
+- [公式ビジュアル原本35枚](https://drive.google.com/drive/folders/1BuskB8SseqstTmdBgsqB3Zscm6X7xQ1H) を使用。西尾桃子さん（固定34番）は従来の宣材を掲載。
+- 公式原本から、顔と衣装の上半身が丸枠に収まるようにトリミングし、480px四方のWebPへ変換。原本と固定画像番号の対応は [画像番号対応表](cast-image-map.md)。再生成時は支給原本を `--source` で指定したフォルダの `キャスト画像_オリジナル/` にそろえる。阿部寿世さんの原本名はDrive上では拡張子がなく、ダウンロードZIP内では `.jpg` が付く。

@@ -83,11 +83,11 @@
         8,
         9
       ],
-      "source": "佐々木琴子.jpg",
+      "source": "《確認済み》佐々木様.jpg",
       "imageNumber": 1,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -100,11 +100,11 @@
         4,
         5
       ],
-      "source": "相良茉優宣材写真.JPG",
+      "source": "《確認済》再_相良様.jpg",
       "imageNumber": 2,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -116,11 +116,11 @@
         6,
         7
       ],
-      "source": "香坂さき_アップ.jpg",
+      "source": "《確認済》再_香坂様.JPG",
       "imageNumber": 3,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -131,11 +131,11 @@
         8,
         9
       ],
-      "source": "汐入あすかアー写 のコピー.png",
+      "source": "《確認済》汐入様.jpg",
       "imageNumber": 4,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -148,11 +148,11 @@
         8,
         9
       ],
-      "source": "八木ましろ様宣材写真.jpg",
+      "source": "《確認済》八木様.jpg",
       "imageNumber": 5,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -166,11 +166,11 @@
         6,
         7
       ],
-      "source": "吉武千颯 (1).jpeg",
+      "source": "《確認済》吉武様.jpg",
       "imageNumber": 6,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -183,11 +183,11 @@
         6,
         7
       ],
-      "source": "小日向美香_宣材写真 (2).jpg",
+      "source": "｟確認済｠小日向様.jpg",
       "imageNumber": 7,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -201,11 +201,11 @@
         8,
         9
       ],
-      "source": "加藤結写真.jpg",
+      "source": "｟確認済｠加藤様.jpg",
       "imageNumber": 8,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -217,11 +217,11 @@
         6,
         7
       ],
-      "source": "広瀬ゆうき.jpg のコピー.jpg",
+      "source": "｟確認済｠広瀬様.jpg",
       "imageNumber": 9,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -236,11 +236,11 @@
         8,
         9
       ],
-      "source": "田中咲帆 宣材写真.png のコピー.png",
+      "source": "《確認済》田中様.jpg",
       "imageNumber": 10,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -253,11 +253,11 @@
         6,
         7
       ],
-      "source": "原田彩楓_宣材写真_バストアップ_斜め.JPEG",
+      "source": "｟確認済｠再_原田様.jpg",
       "imageNumber": 11,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -271,11 +271,11 @@
         8,
         9
       ],
-      "source": "水湊美緒　宣材写真.jpg",
+      "source": "｟確認済｠水湊様.jpg",
       "imageNumber": 12,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -287,11 +287,11 @@
         8,
         9
       ],
-      "source": "ナカザワミナ.jpeg",
+      "source": "《確認済》中澤様.jpg",
       "imageNumber": 13,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -304,11 +304,11 @@
         6,
         7
       ],
-      "source": "真野美月_宣材写真.JPEG",
+      "source": "《確認済》再_真野様.JPG",
       "imageNumber": 14,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -319,11 +319,11 @@
         2,
         3
       ],
-      "source": "深川瑠華_宣材写真.JPG",
+      "source": "｟確認済｠深川様.jpg",
       "imageNumber": 15,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -342,11 +342,11 @@
         8,
         9
       ],
-      "source": "石原美沙紀_2026宣材.JPG",
+      "source": "《確認済》石原様.jpg",
       "imageNumber": 16,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -364,11 +364,11 @@
         8,
         9
       ],
-      "source": "三田美吹.JPG",
+      "source": "《確認済》三田様.jpg",
       "imageNumber": 17,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -382,11 +382,11 @@
         6,
         7
       ],
-      "source": "阿部寿世_宣伝写真.png",
+      "source": "《確認済》阿部様.jpg",
       "imageNumber": 18,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -400,11 +400,11 @@
         8,
         9
       ],
-      "source": "中村朱里宣材写真.jpg",
+      "source": "｟確認済｠中村様.jpg",
       "imageNumber": 19,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -418,11 +418,11 @@
         8,
         9
       ],
-      "source": "城崎桃華.jpg",
+      "source": "｟確認済｠城崎様.jpg",
       "imageNumber": 20,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -435,11 +435,11 @@
         6,
         7
       ],
-      "source": "小越春花_宣材写真.jpg のコピー.jpg",
+      "source": "《確認済》小越様.jpg",
       "imageNumber": 21,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -452,11 +452,11 @@
         8,
         9
       ],
-      "source": "湯本亜美_BU宣材.jpg",
+      "source": "｟確認済｠湯本様.jpg",
       "imageNumber": 22,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -470,11 +470,11 @@
         6,
         7
       ],
-      "source": "結城りな宣材写真.jpg",
+      "source": "《確認済》新_結城様.jpg",
       "imageNumber": 23,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -488,11 +488,11 @@
         8,
         9
       ],
-      "source": "藍本あみ宣材写真.jpg",
+      "source": "《確認済》藍本様.jpg",
       "imageNumber": 24,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -506,12 +506,11 @@
         4,
         5
       ],
-      "source": "延松舞佳_宣材写真.jpg",
+      "source": "｟確認済｠延松様.jpg",
       "imageNumber": 25,
       "crop": {
-        "position": "north",
-        "inset": 0,
-        "verticalOffset": 0.3
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -525,11 +524,11 @@
         6,
         7
       ],
-      "source": "夏目妃菜.jpg",
+      "source": "｟確認済｠差し替え_夏目様.jpg",
       "imageNumber": 26,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -543,11 +542,11 @@
         8,
         9
       ],
-      "source": "星野美夢宣材写真.JPG",
+      "source": "｟確認済｠星野様.jpg",
       "imageNumber": 27,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -566,11 +565,11 @@
         8,
         9
       ],
-      "source": "岡本芽子.jpg",
+      "source": "｟確認済｠画質荒れ調整済_岡本.jpg",
       "imageNumber": 28,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -583,11 +582,11 @@
         4,
         5
       ],
-      "source": "1a_014佐倉薫.jpeg",
+      "source": "｟確認済｠佐倉様事務所レタッチ.jpg",
       "imageNumber": 29,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -601,11 +600,11 @@
         8,
         9
       ],
-      "source": "村星りじゅ (1).jpg のコピー.jpg",
+      "source": "《確認済》村星様.jpg",
       "imageNumber": 30,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -618,11 +617,11 @@
         6,
         7
       ],
-      "source": "本多しおり_宣材写真.PNG",
+      "source": "《確認済》再_本多様.JPG",
       "imageNumber": 31,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -636,11 +635,11 @@
         8,
         9
       ],
-      "source": "蛭田愛梨_アー写.JPG",
+      "source": "｟確認済｠蛭田様.jpg",
       "imageNumber": 32,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -654,11 +653,11 @@
         6,
         7
       ],
-      "source": "三葉海緒_宣材写真.jpeg",
+      "source": "《確認済》差し替え_三葉様.jpg",
       "imageNumber": 33,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -689,11 +688,11 @@
         8,
         9
       ],
-      "source": "福嶋晴菜_宣材 (1).jpg",
+      "source": "｟確認済｠福嶋様.jpg",
       "imageNumber": 35,
       "crop": {
-        "position": "north",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     },
     {
@@ -707,11 +706,11 @@
         4,
         5
       ],
-      "source": "天音みほ_バストアップ.jpg",
+      "source": "《確認済》天音様.jpg",
       "imageNumber": 36,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.76,
+        "verticalOffset": 0.09
       }
     }
   ],

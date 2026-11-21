@@ -27,7 +27,9 @@ for (const cast of data.cast) {
     const width = rotated ? metadata.height : metadata.width;
     const height = rotated ? metadata.width : metadata.height;
     if (cast.crop.verticalOffset < 0 || cast.crop.verticalOffset > 1) throw new Error(`Invalid crop offset for ${cast.id}`);
-    const side = Math.min(width, height);
+    const scale = cast.crop.scale ?? 1;
+    if (!Number.isFinite(scale) || scale <= 0 || scale > 1) throw new Error(`Invalid crop scale for ${cast.id}`);
+    const side = Math.round(Math.min(width, height) * scale);
     picture = picture.extract({left: Math.round((width-side)/2), top: Math.round((height-side)*cast.crop.verticalOffset), width: side, height: side});
   }
   picture = picture.resize(480 - inset * 2, 480 - inset * 2, { fit: 'cover', position });
