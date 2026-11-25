@@ -46,6 +46,6 @@
 | 31 | `kawaii-re-cast-31.webp` | 本多しおり | カンケル | `《確認済》再_本多様.JPG` |
 | 32 | `kawaii-re-cast-32.webp` | 蛭田愛梨 | カンケル | `｟確認済｠蛭田様.jpg` |
 | 33 | `kawaii-re-cast-33.webp` | 三葉海緒 | ヴィルゴ | `《確認済》差し替え_三葉様.jpg` |
-| 34 | `kawaii-re-cast-34.webp` | 西尾桃子 | ヴィルゴ | `西尾桃子宣材写真.jpg` |
+| 34 | `kawaii-re-cast-34.webp` | 西尾桃子 | ヴィルゴ | `《確認済》西尾様.jpeg` |
 | 35 | `kawaii-re-cast-35.webp` | 福嶋晴菜 | ぺぬぺぬ | `｟確認済｠福嶋様.jpg` |
 | 36 | `kawaii-re-cast-36.webp` | 天音みほ | ぺぬぺぬ | `《確認済》天音様.jpg` |

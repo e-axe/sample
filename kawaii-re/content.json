@@ -676,11 +676,12 @@
         8,
         9
       ],
-      "source": "西尾桃子宣材写真.jpg",
+      "source": "《確認済》西尾様.jpeg",
       "imageNumber": 34,
       "crop": {
-        "position": "attention",
-        "inset": 0
+        "scale": 0.35,
+        "verticalOffset": 0.147,
+        "horizontalOffset": 0.456
       }
     },
     {
