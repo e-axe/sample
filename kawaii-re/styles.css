@@ -505,3 +505,18 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .motion-ready .reveal { opacity: 1; transform: none; }
 }
+
+/* Official after-event chart and shared zoom viewer. */
+.after-event-section { padding: 20px 0 48px; }
+.after-event-card { max-width: 760px; margin: 20px auto 0; }
+.after-event-note { margin-top: 16px; text-align: center; }
+@media (max-width: 600px) {
+  .after-event-section { padding: 16px 0 34px; }
+  .after-event-section .section-head h2 span { display: block; margin: 4px 0 0; }
+  .after-event-section .section-head h2 span::before { display: none; }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+  .site-header { padding-inline: 24px; gap: 18px; }
+  nav { font-size: 12px; gap: 18px; }
+  nav a:not(:last-child)::after { right: -9px; }
+}

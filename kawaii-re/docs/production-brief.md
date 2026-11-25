@@ -133,3 +133,8 @@
   4. ダブル／トリプルキャストの出演者を選択した際、選択状態パネル内に同じ役の他公演キャストと出演日をチップ表示（`#same-role`）し、ワンタップで比較・切替できるようにする。
   5. 発売前（`upcoming`）の間、ヒーローとチケット購入枠に発売開始までの残り時間カウント表示（`[data-sale-countdown]`）を出す（カレンダー登録リンクは設けない）。
   6. 劇場セクションのGoogleマップ `<iframe>` は初期HTMLで `data-map-src` に保持し、スクロール接近時（`IntersectionObserver`）または「劇場」ナビ押下時に読み込む（JavaScript無効時は `<noscript>` で表示）。
+
+
+## 2026-11-25 アフターイベント画像
+
+Drive「パラドキシカル原本ファイル」の [kawaii-re-event.jpg](https://drive.google.com/file/d/1boLoxTy9mzqhJRt-zxi4dnYeHLC5KpbQ/view)（875×1227px、283149 bytes）を `assets/after-event.jpg` に原寸・無加工で掲載。公演日程・チケットの直後に配置し、メニューと購入注意事項から誘導。既存の拡大ビューアを共用。12/16夜・12/20夜は開催なしと画像どおり案内。確認用GitHub Pagesを更新対象とする。

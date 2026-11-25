@@ -420,8 +420,9 @@ if (typeof flyerDialog?.showModal === 'function') {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 
       event.preventDefault();
-      flyerDialog.setAttribute('aria-label', '公演チラシ ' + card.querySelector('span').textContent.trim());
+      flyerDialog.setAttribute('aria-label', card.dataset.lightboxLabel || '公演チラシ ' + card.querySelector('span').textContent.trim());
       flyerImage.src = card.href;
+      flyerImage.alt = card.querySelector('img').alt || flyerDialog.getAttribute('aria-label');
       setFlyerZoom(false);
       flyerDialog.showModal();
       document.body.classList.add('lightbox-open');
