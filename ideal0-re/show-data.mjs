@@ -1,54 +1,71 @@
-// 公開リポジトリ用の表示例。未解禁の公演データや宣材はここに入れない。
-export const venue = 'サンプル劇場';
-export const sales = { status: 'pending' };
-
-export const sessions = [
-  { id: 'session-01', date: '2027-02-24', time: '19:00' },
-  { id: 'session-02', date: '2027-02-25', time: '19:00' },
-  { id: 'session-03', date: '2027-02-26', time: '14:00' },
-  { id: 'session-04', date: '2027-02-26', time: '19:00' },
-  { id: 'session-05', date: '2027-02-27', time: '13:00' },
-  { id: 'session-06', date: '2027-02-27', time: '18:00' },
-  { id: 'session-07', date: '2027-02-28', time: '12:30' },
-  { id: 'session-08', date: '2027-02-28', time: '16:30' },
+// 配役確定後は reading と actorRole を登録する。sessions は下記の固定IDで参照する。
+export const characters = [
+  { name: '城崎華恋', note: 'プリンセスに憧れる大学生', featured: true },
+  { name: '小園ゆめか', featured: true },
+  { name: '成田ゆき' },
+  { name: '川田希美' },
+  { name: '霧谷あさひ' },
+  { name: '蒼井沙良' },
+  { name: '新川未央' },
+  { name: '田上梨乃' },
+  { name: '森野真礼' },
+  { name: '葛城久代' },
+  { name: '佐竹夜酔' },
+  { name: '小暮愛' },
+  { name: '下坂咲子' },
+  { name: '郡花奏' },
+  { name: '但馬小夏' },
+  { name: '太田梨香子' },
+  { name: '吉澤隆司', note: '「アイディール・セミナー」創始者' },
 ];
 
-export const characters = [
-  { name: '城崎華恋', note: '理想の自分を求める大学生', image: 'karen.webp', actor: 'ACTOR A', reading: [
-    { id: 'reading-a', name: '出演者 A', sessions: ['session-01', 'session-04', 'session-07'] },
-    { id: 'reading-b', name: '出演者 B', sessions: ['session-02', 'session-05', 'session-08'] },
-    { id: 'reading-c', name: '出演者 C', sessions: ['session-03', 'session-06'] },
-  ] },
-  { name: '登場人物 B', note: 'ダブルキャストの表示例', image: 'cast-sample.webp', actor: 'ACTOR B', reading: [
-    { id: 'reading-d', name: '出演者 D', sessions: ['session-01', 'session-03', 'session-05', 'session-07'] },
-    { id: 'reading-e', name: '出演者 E', sessions: ['session-02', 'session-04', 'session-06', 'session-08'] },
-  ] },
-  { name: '登場人物 C', note: 'シングルキャストの表示例', actor: 'ACTOR C', reading: [
-    { id: 'reading-f', name: '出演者 F', sessions: sessions.map(({ id }) => id) },
-  ] },
+export const idealRoles = [
+  'プレミアム・プリンセス', 'マジカル・ドリーム', 'オリーブ・ローザ', 'セバス・チュン',
+  'パーフェクト・ティーチング', 'プレイブ・ガール', 'パワー・ディレクション', 'スティール・ボディ',
+  'てんや鶴姫', 'お京の卵殻', 'ランドリー・スコッチ', 'グロップ・グライダー',
+  'ポッピングツアー', 'バーニング・スプーン', 'フレミング・ビバレッジ',
+];
+
+export const actors = [
+  ['石原美沙紀', 'おとな小学生'], ['山岸理子'], ['神志那結衣'], ['篠原望'],
+  ['石井萌々果'], ['小山内花凜'], ['三田美吹'], ['城崎桃華'], ['古仲可奈'],
+  ['村星りじゅ'], ['結城りな'], ['花塚廉太郎', 'おとな小学生'], ['大橋篤'], ['高田舟'], ['加藤光大'],
 ];
 
 export const ensemble = [
-  '出演者 G', '出演者 H', '出演者 I', '出演者 J',
-  '出演者 K', '出演者 L', '出演者 M', '出演者 N',
+  ['橋爪亮磨'], ['吉岡臣'], ['鈴木南'], ['泉田佑大'], ['桃原華恋'], ['森山真衣'], ['溝渕智都'],
 ];
 
+export const sessions = [
+  { id: 'session-01', date: '2027-01-27', time: '18:30' },
+  { id: 'session-02', date: '2027-01-28', time: '18:30' },
+  { id: 'session-03', date: '2027-01-29', time: '13:30' },
+  { id: 'session-04', date: '2027-01-29', time: '18:30' },
+  { id: 'session-05', date: '2027-01-30', time: '13:30' },
+  { id: 'session-06', date: '2027-01-30', time: '18:30' },
+  { id: 'session-07', date: '2027-01-31', time: '12:00' },
+  { id: 'session-08', date: '2027-01-31', time: '16:30' },
+];
+
+export const sales = { status: 'pending', url: 'https://www.confetti-web.com/@/otonapro-74' };
+
+const photo = '非売品キャスト別2L版ブロマイド1枚。公演回ごとに絵柄が異なり、各キャストの出演回数分をご用意します。';
+const ensemblePhoto = 'ENSEMBLEを応援キャストに選んだ場合は、選択キャストのシングルショットチェキ（全8種）となります。';
+
 export const fares = [
-  { name: 'A席', price: 8900, highlight: '全席指定', details: [
-    '座席指定の基本券種です。',
+  { name: 'A席', price: 8800, highlight: '指定席', details: ['全席指定。'] },
+  { name: '特典付A席', price: 9800, highlight: 'ブロマイド付き', details: [
+    photo, 'ブロマイドの種類はS席特典と同じです。', ensemblePhoto,
   ] },
-  { name: '特典付A席', price: 9900, highlight: '選べるキャスト特典', details: [
-    '応援キャストの2L版ブロマイド1枚。絵柄は公演回によって異なります。',
-    'アンサンブルを選択した場合は、選択キャストのシングルショットチェキが付きます。',
+  { name: 'S席', price: 12500, highlight: '前方列保証・特典付き', details: [
+    '前方列保証。', '「アイディール・セミナー」特別ライセンスPASS。', photo, ensemblePhoto,
   ] },
-  { name: 'S席', price: 12900, highlight: '前方席＋キャスト特典', details: [
-    '前方列の座席を保証。',
-    '特別ライセンスPASSと、応援キャストの2L版ブロマイド1枚。絵柄は公演回によって異なります。',
-    'アンサンブルを選択した場合は、選択キャストのシングルショットチェキが付きます。',
-  ] },
-  { name: 'VIP', price: 36000, highlight: '最前中央席＋開演前舞台ツアー', details: [
-    '最前中央席。席数に限りがあります。',
-    '特別ライセンスPASS、2L版ブロマイド1枚、公演パンフレット。',
-    '購入した公演回の開演前舞台ツアーに参加できます。',
+  { name: 'VIP', price: 37777, fullName: 'スペシャルセッションアイディールプラクティックVIPシート', highlight: '最前中央席・各回8席限定', details: [
+    '最前中央席。各公演8席限定。',
+    '「アイディール・セミナー」特別ライセンスPASS。',
+    photo + ' ブロマイドの種類はS席特典と同じです。',
+    '公演パンフレット。',
+    '開演前舞台ツアー。',
+    '美容整体VIENESSギフトカード。',
   ] },
 ];
