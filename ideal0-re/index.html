@@ -15,8 +15,8 @@
   <meta property="og:image:alt" content="作品の公式ロゴとピンクの衣装をまとった二人のキャラクター">
   <meta property="og:url" content="https://e-axe.github.io/sample/ideal0-re/">
   <link rel="icon" href="./assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="./site.css?v=20261128-5">
-  <script type="module" src="./site.mjs?v=20261128-5"></script>
+  <link rel="stylesheet" href="./site.css?v=20261128-6">
+  <script type="module" src="./site.mjs?v=20261128-6"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -36,7 +36,7 @@
         <a href="#ticket" lang="en">TICKET</a>
         <a href="#flyer" lang="en">FLYER</a>
       </nav>
-      <a class="button ribbon button-pink header-cta" href="#schedule">日程・チケットを見る <span aria-hidden="true">›</span></a>
+      <a class="button ribbon button-pink header-cta" href="#booking">日程・チケットを見る <span aria-hidden="true">›</span></a>
     </div>
   </header>
 
@@ -64,8 +64,8 @@
           <p class="hero-event"><i class="sign-icon calendar" aria-hidden="true"></i>
             <span class="hero-year">2027</span><time datetime="2027-01-27">01.27 <small>水</small></time><span aria-hidden="true">―</span><time datetime="2027-01-31">01.31 <small>日</small></time>
           </p>
-          <p class="hero-venue"><i class="sign-icon pin" aria-hidden="true"></i>シアター1010 <span class="stages">全8ステージ</span></p>
-          <a class="button ribbon button-black hero-cta" href="#schedule">日程・チケットを見る <span aria-hidden="true">›</span></a>
+          <p class="hero-venue"><i class="sign-icon pin" aria-hidden="true"></i><a href="#venue" aria-label="シアター1010の会場・アクセス">シアター1010</a> <span class="stages">全8ステージ</span></p>
+          <a class="button ribbon button-black hero-cta" href="#booking">日程・チケットを見る <span aria-hidden="true">›</span></a>
         </div>
       </div>
     </section>
@@ -104,166 +104,132 @@
             <a class="chip chip-filled" href="#characters">配役</a>
             <a class="chip" href="#actors">アクター</a>
             <a class="chip" href="#ensemble">アンサンブル</a>
+            <a class="chip cast-schedule-link" href="#schedule">出演日を探す <span aria-hidden="true">›</span></a>
           </div>
         </div>
         <section class="cast-group" id="characters" aria-labelledby="characters-title">
           <div class="cast-group-head"><h3 class="ribbon" id="characters-title">登場人物・アイディール役</h3></div>
           <div id="roles">
 <!-- START:characters -->
-            <p class="cast-preview-note"><strong>配役プレビュー</strong> 役の組み合わせ・出演者・写真・出演回は確認用の仮表示です。</p>
+            <p class="cast-preview-note"><strong>配役プレビュー</strong> 役の組み合わせ・出演者・写真は確認用の仮表示です。</p>
             <div class="character-list">
             <article class="character">
               <header class="character-head"><h4>城崎華恋</h4><p>プリンセスに憧れる大学生</p></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-01" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 01</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>プレミアム・<wbr>プリンセス</strong><p>仮アクター 01</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-01" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 01</strong></li></ul></div>
+                <div class="actor-side"><h5><span>城崎華恋の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>プレミアム・<wbr>プリンセス</strong><p>仮アクター 01</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>小園ゆめか</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-02" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 02</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-03" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 03</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>マジカル・<wbr>ドリーム</strong><p>仮アクター 02</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-02" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 02</strong></li><li class="performer" id="reading-preview-03" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 03</strong></li></ul></div>
+                <div class="actor-side"><h5><span>小園ゆめかの</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>マジカル・<wbr>ドリーム</strong><p>仮アクター 02</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>成田ゆき</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-04" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 04</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-05" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 05</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>オリーブ・<wbr>ローザ</strong><p>仮アクター 03</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-04" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 04</strong></li><li class="performer" id="reading-preview-05" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 05</strong></li></ul></div>
+                <div class="actor-side"><h5><span>成田ゆきの</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>オリーブ・<wbr>ローザ</strong><p>仮アクター 03</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>川田希美</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-06" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 06</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-07" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 07</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>セバス・<wbr>チュン</strong><p>仮アクター 04</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-06" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 06</strong></li><li class="performer" id="reading-preview-07" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 07</strong></li></ul></div>
+                <div class="actor-side"><h5><span>川田希美の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>セバス・<wbr>チュン</strong><p>仮アクター 04</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>霧谷あさひ</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-08" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 08</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-09" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 09</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-10" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 10</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>パーフェクト・<wbr>ティーチング</strong><p>仮アクター 05</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-08" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 08</strong></li><li class="performer" id="reading-preview-09" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 09</strong></li><li class="performer" id="reading-preview-10" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 10</strong></li></ul></div>
+                <div class="actor-side"><h5><span>霧谷あさひの</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>パーフェクト・<wbr>ティーチング</strong><p>仮アクター 05</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>蒼井沙良</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-11" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 11</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-12" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 12</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>プレイブ・<wbr>ガール</strong><p>仮アクター 06</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-11" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 11</strong></li><li class="performer" id="reading-preview-12" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 12</strong></li></ul></div>
+                <div class="actor-side"><h5><span>蒼井沙良の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>プレイブ・<wbr>ガール</strong><p>仮アクター 06</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>新川未央</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-13" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 13</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-14" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 14</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>パワー・<wbr>ディレクション</strong><p>仮アクター 07</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-13" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 13</strong></li><li class="performer" id="reading-preview-14" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 14</strong></li></ul></div>
+                <div class="actor-side"><h5><span>新川未央の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>パワー・<wbr>ディレクション</strong><p>仮アクター 07</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>田上梨乃</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-15" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 15</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-16" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 16</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>スティール・<wbr>ボディ</strong><p>仮アクター 08</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-15" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 15</strong></li><li class="performer" id="reading-preview-16" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 16</strong></li></ul></div>
+                <div class="actor-side"><h5><span>田上梨乃の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>スティール・<wbr>ボディ</strong><p>仮アクター 08</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>森野真礼</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-17" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 17</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-18" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 18</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>てんや鶴姫</strong><p>仮アクター 09</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-17" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 17</strong></li><li class="performer" id="reading-preview-18" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 18</strong></li></ul></div>
+                <div class="actor-side"><h5><span>森野真礼の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>てんや鶴姫</strong><p>仮アクター 09</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>葛城久代</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-19" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 19</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-20" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 20</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>お京の卵殻</strong><p>仮アクター 10</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-19" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 19</strong></li><li class="performer" id="reading-preview-20" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 20</strong></li></ul></div>
+                <div class="actor-side"><h5><span>葛城久代の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>お京の卵殻</strong><p>仮アクター 10</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>佐竹夜酔</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-21" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 21</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-22" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 22</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>ランドリー・<wbr>スコッチ</strong><p>仮アクター 11</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-21" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 21</strong></li><li class="performer" id="reading-preview-22" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 22</strong></li></ul></div>
+                <div class="actor-side"><h5><span>佐竹夜酔の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>ランドリー・<wbr>スコッチ</strong><p>仮アクター 11</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>小暮愛</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-23" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 23</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-24" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 24</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-25" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 25</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>グロップ・<wbr>グライダー</strong><p>仮アクター 12</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-23" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 23</strong></li><li class="performer" id="reading-preview-24" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 24</strong></li><li class="performer" id="reading-preview-25" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 25</strong></li></ul></div>
+                <div class="actor-side"><h5><span>小暮愛の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-05.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>グロップ・<wbr>グライダー</strong><p>仮アクター 12</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>下坂咲子</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-26" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 26</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-27" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 27</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>ポッピングツアー</strong><p>仮アクター 13</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-26" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-06.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 26</strong></li><li class="performer" id="reading-preview-27" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-07.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 27</strong></li></ul></div>
+                <div class="actor-side"><h5><span>下坂咲子の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-08.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>ポッピングツアー</strong><p>仮アクター 13</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>郡花奏</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-28" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 28</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-29" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 29</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>バーニング・<wbr>スプーン</strong><p>仮アクター 14</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-28" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-09.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 28</strong></li><li class="performer" id="reading-preview-29" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-10.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 29</strong></li></ul></div>
+                <div class="actor-side"><h5><span>郡花奏の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-11.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>バーニング・<wbr>スプーン</strong><p>仮アクター 14</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>但馬小夏</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-30" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 30</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-31" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 31</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>フレミング・<wbr>ビバレッジ</strong><p>仮アクター 15</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-30" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-12.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 30</strong></li><li class="performer" id="reading-preview-31" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-13.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 31</strong></li></ul></div>
+                <div class="actor-side"><h5><span>但馬小夏の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-14.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>フレミング・<wbr>ビバレッジ</strong><p>仮アクター 15</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>太田梨香子</h4></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-32" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 32</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-33" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 33</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>役名確認中</strong><p>仮アクター 16</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-32" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-15.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 32</strong></li><li class="performer" id="reading-preview-33" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-16.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 33</strong></li></ul></div>
+                <div class="actor-side"><h5><span>太田梨香子の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-01.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>役名確認中</strong><p>仮アクター 16</p></div></div></div>
               </div>
             </article>
             <article class="character">
               <header class="character-head"><h4>吉澤隆司</h4><p>「アイディール・セミナー」創始者</p></header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-34" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 34</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-27T18:30:00+09:00" aria-label="1/27（水） 18:30"><span>1/27<small>水</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T13:30:00+09:00" aria-label="1/29（金） 13:30"><span>1/29<small>金</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-30T13:30:00+09:00" aria-label="1/30（土） 13:30"><span>1/30<small>土</small></span><span>13:30</span></time></span></li><li><span><time datetime="2027-01-31T12:00:00+09:00" aria-label="1/31（日） 12:00"><span>1/31<small>日</small></span><span>12:00</span></time></span></li></ul></div></li><li class="performer" id="reading-preview-35" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div class="performer-caption">
-    <strong>仮キャスト 35</strong><ul class="plain-list appearance-list" role="list" aria-label="出演回"><li><span><time datetime="2027-01-28T18:30:00+09:00" aria-label="1/28（木） 18:30"><span>1/28<small>木</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-29T18:30:00+09:00" aria-label="1/29（金） 18:30"><span>1/29<small>金</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-30T18:30:00+09:00" aria-label="1/30（土） 18:30"><span>1/30<small>土</small></span><span>18:30</span></time></span></li><li><span><time datetime="2027-01-31T16:30:00+09:00" aria-label="1/31（日） 16:30"><span>1/31<small>日</small></span><span>16:30</span></time></span></li></ul></div></li></ul></div>
-                <div class="actor-side"><h5 lang="en">ACTOR</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>役名確認中</strong><p>仮アクター 17</p><small>全8セッション出演</small></div></div></div>
+                <div class="reading-side"><h5 lang="en">READING</h5><ul class="performer-list plain-list" role="list"><li class="performer" id="reading-preview-34" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-02.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 34</strong></li><li class="performer" id="reading-preview-35" tabindex="-1"><img class="cast-portrait" src="./assets/cast-preview-03.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><strong>仮キャスト 35</strong></li></ul></div>
+                <div class="actor-side"><h5><span>吉澤隆司の</span>アイディール</h5><div class="paired-actor"><img class="cast-portrait" src="./assets/cast-preview-04.webp" width="200" height="200" loading="lazy" decoding="async" alt=""><div><strong>役名確認中</strong><p>仮アクター 17</p></div></div></div>
               </div>
             </article>
             </div>
@@ -274,7 +240,7 @@
           </div>
         </section>
         <section class="cast-group" id="actors" aria-labelledby="actors-title">
-          <div class="cast-group-head"><h3 class="ribbon" id="actors-title" lang="en">ACTOR</h3><span>全セッション出演</span></div>
+          <div class="cast-group-head"><h3 class="ribbon" id="actors-title" lang="en">ACTOR</h3></div>
 <!-- START:actors -->
           <ul class="cast-grid plain-list" role="list">
             <li class="cast-card">
@@ -422,11 +388,99 @@
       </div>
     </section>
 
-    <section class="section booking" aria-label="公演日程とチケット">
+    <section class="section booking" id="booking" aria-label="公演日程とチケット">
+      <nav class="shell booking-shortcuts" aria-label="公演情報へのショートカット">
+        <a href="#schedule"><i class="sign-icon calendar" aria-hidden="true"></i>公演日程</a>
+        <a href="#ticket"><i class="sign-icon ticket-icon" aria-hidden="true"></i>チケット情報</a>
+        <a href="#venue"><i class="sign-icon pin" aria-hidden="true"></i>会場アクセス</a>
+      </nav>
       <div class="shell booking-grid">
         <section class="info-panel" id="schedule" aria-labelledby="schedule-title">
           <h2 class="panel-heading" id="schedule-title"><i class="sign-icon calendar" aria-hidden="true"></i><span lang="en">SCHEDULE</span><small>公演日程</small></h2>
-          <p class="panel-intro">開演時刻を選ぶと、出演者の案内が開きます。</p>
+          <p class="panel-intro">開演時刻を選ぶと出演者を表示します。</p>
+<!-- START:schedule-filter -->
+          <p class="schedule-preview-note">READINGとアイディールの出演情報は確認用の仮表示です。</p>
+          <div class="schedule-filter" hidden>
+            <label for="schedule-performer">出演者から出演回を探す</label>
+            <select id="schedule-performer" aria-controls="schedule-list">
+              <option value="">全日程を表示</option>
+              <optgroup label="READING（仮）">
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮キャスト 01 ／ 城崎華恋</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 02 ／ 小園ゆめか</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 03 ／ 小園ゆめか</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 04 ／ 成田ゆき</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 05 ／ 成田ゆき</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 06 ／ 川田希美</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 07 ／ 川田希美</option>
+                <option data-sessions="session-01 session-04 session-07">仮キャスト 08 ／ 霧谷あさひ</option>
+                <option data-sessions="session-02 session-05 session-08">仮キャスト 09 ／ 霧谷あさひ</option>
+                <option data-sessions="session-03 session-06">仮キャスト 10 ／ 霧谷あさひ</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 11 ／ 蒼井沙良</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 12 ／ 蒼井沙良</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 13 ／ 新川未央</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 14 ／ 新川未央</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 15 ／ 田上梨乃</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 16 ／ 田上梨乃</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 17 ／ 森野真礼</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 18 ／ 森野真礼</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 19 ／ 葛城久代</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 20 ／ 葛城久代</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 21 ／ 佐竹夜酔</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 22 ／ 佐竹夜酔</option>
+                <option data-sessions="session-01 session-04 session-07">仮キャスト 23 ／ 小暮愛</option>
+                <option data-sessions="session-02 session-05 session-08">仮キャスト 24 ／ 小暮愛</option>
+                <option data-sessions="session-03 session-06">仮キャスト 25 ／ 小暮愛</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 26 ／ 下坂咲子</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 27 ／ 下坂咲子</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 28 ／ 郡花奏</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 29 ／ 郡花奏</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 30 ／ 但馬小夏</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 31 ／ 但馬小夏</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 32 ／ 太田梨香子</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 33 ／ 太田梨香子</option>
+                <option data-sessions="session-01 session-03 session-05 session-07">仮キャスト 34 ／ 吉澤隆司</option>
+                <option data-sessions="session-02 session-04 session-06 session-08">仮キャスト 35 ／ 吉澤隆司</option>
+              </optgroup>
+              <optgroup label="アイディール（仮）">
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 01 ／ 城崎華恋</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 02 ／ 小園ゆめか</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 03 ／ 成田ゆき</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 04 ／ 川田希美</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 05 ／ 霧谷あさひ</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 06 ／ 蒼井沙良</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 07 ／ 新川未央</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 08 ／ 田上梨乃</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 09 ／ 森野真礼</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 10 ／ 葛城久代</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 11 ／ 佐竹夜酔</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 12 ／ 小暮愛</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 13 ／ 下坂咲子</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 14 ／ 郡花奏</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 15 ／ 但馬小夏</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 16 ／ 太田梨香子</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">仮アクター 17 ／ 吉澤隆司</option>
+              </optgroup>
+              <optgroup label="ACTOR">
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">石原美沙紀</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">山岸理子</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">神志那結衣</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">篠原望</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">石井萌々果</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">小山内花凜</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">三田美吹</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">城崎桃華</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">古仲可奈</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">村星りじゅ</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">結城りな</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">花塚廉太郎</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">大橋篤</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">高田舟</option>
+                <option data-sessions="session-01 session-02 session-03 session-04 session-05 session-06 session-07 session-08">加藤光大</option>
+              </optgroup>
+            </select>
+            <p class="schedule-results" role="status"></p>
+          </div>
+<!-- END:schedule-filter -->
           <div class="schedule-list" id="schedule-list">
 <!-- START:schedule -->
             <div class="day-row">
@@ -436,8 +490,8 @@
                   <summary aria-label="1/27（水） 18:30 第1セッションの出演者"><time datetime="2027-01-27T18:30:00+09:00">18:30</time></summary>
                   <div class="session-detail">
                     <h3>第1セッション <span>1/27（水） 18:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-02"><strong>仮キャスト 02</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-04"><strong>仮キャスト 04</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-06"><strong>仮キャスト 06</strong><small>川田希美</small></a></li><li><a href="#reading-preview-08"><strong>仮キャスト 08</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-11"><strong>仮キャスト 11</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-13"><strong>仮キャスト 13</strong><small>新川未央</small></a></li><li><a href="#reading-preview-15"><strong>仮キャスト 15</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-17"><strong>仮キャスト 17</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-19"><strong>仮キャスト 19</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-21"><strong>仮キャスト 21</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-23"><strong>仮キャスト 23</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-26"><strong>仮キャスト 26</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-28"><strong>仮キャスト 28</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-30"><strong>仮キャスト 30</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-32"><strong>仮キャスト 32</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-34"><strong>仮キャスト 34</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
               </div>
@@ -449,8 +503,8 @@
                   <summary aria-label="1/28（木） 18:30 第2セッションの出演者"><time datetime="2027-01-28T18:30:00+09:00">18:30</time></summary>
                   <div class="session-detail">
                     <h3>第2セッション <span>1/28（木） 18:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-03"><strong>仮キャスト 03</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-05"><strong>仮キャスト 05</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-07"><strong>仮キャスト 07</strong><small>川田希美</small></a></li><li><a href="#reading-preview-09"><strong>仮キャスト 09</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-12"><strong>仮キャスト 12</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-14"><strong>仮キャスト 14</strong><small>新川未央</small></a></li><li><a href="#reading-preview-16"><strong>仮キャスト 16</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-18"><strong>仮キャスト 18</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-20"><strong>仮キャスト 20</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-22"><strong>仮キャスト 22</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-24"><strong>仮キャスト 24</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-27"><strong>仮キャスト 27</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-29"><strong>仮キャスト 29</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-31"><strong>仮キャスト 31</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-33"><strong>仮キャスト 33</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-35"><strong>仮キャスト 35</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
               </div>
@@ -462,16 +516,16 @@
                   <summary aria-label="1/29（金） 13:30 第3セッションの出演者"><time datetime="2027-01-29T13:30:00+09:00">13:30</time></summary>
                   <div class="session-detail">
                     <h3>第3セッション <span>1/29（金） 13:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-02"><strong>仮キャスト 02</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-04"><strong>仮キャスト 04</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-06"><strong>仮キャスト 06</strong><small>川田希美</small></a></li><li><a href="#reading-preview-10"><strong>仮キャスト 10</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-11"><strong>仮キャスト 11</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-13"><strong>仮キャスト 13</strong><small>新川未央</small></a></li><li><a href="#reading-preview-15"><strong>仮キャスト 15</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-17"><strong>仮キャスト 17</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-19"><strong>仮キャスト 19</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-21"><strong>仮キャスト 21</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-25"><strong>仮キャスト 25</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-26"><strong>仮キャスト 26</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-28"><strong>仮キャスト 28</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-30"><strong>仮キャスト 30</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-32"><strong>仮キャスト 32</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-34"><strong>仮キャスト 34</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
                 <details class="session" id="session-04">
                   <summary aria-label="1/29（金） 18:30 第4セッションの出演者"><time datetime="2027-01-29T18:30:00+09:00">18:30</time></summary>
                   <div class="session-detail">
                     <h3>第4セッション <span>1/29（金） 18:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-03"><strong>仮キャスト 03</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-05"><strong>仮キャスト 05</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-07"><strong>仮キャスト 07</strong><small>川田希美</small></a></li><li><a href="#reading-preview-08"><strong>仮キャスト 08</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-12"><strong>仮キャスト 12</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-14"><strong>仮キャスト 14</strong><small>新川未央</small></a></li><li><a href="#reading-preview-16"><strong>仮キャスト 16</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-18"><strong>仮キャスト 18</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-20"><strong>仮キャスト 20</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-22"><strong>仮キャスト 22</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-23"><strong>仮キャスト 23</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-27"><strong>仮キャスト 27</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-29"><strong>仮キャスト 29</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-31"><strong>仮キャスト 31</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-33"><strong>仮キャスト 33</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-35"><strong>仮キャスト 35</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
               </div>
@@ -483,16 +537,16 @@
                   <summary aria-label="1/30（土） 13:30 第5セッションの出演者"><time datetime="2027-01-30T13:30:00+09:00">13:30</time></summary>
                   <div class="session-detail">
                     <h3>第5セッション <span>1/30（土） 13:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-02"><strong>仮キャスト 02</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-04"><strong>仮キャスト 04</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-06"><strong>仮キャスト 06</strong><small>川田希美</small></a></li><li><a href="#reading-preview-09"><strong>仮キャスト 09</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-11"><strong>仮キャスト 11</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-13"><strong>仮キャスト 13</strong><small>新川未央</small></a></li><li><a href="#reading-preview-15"><strong>仮キャスト 15</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-17"><strong>仮キャスト 17</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-19"><strong>仮キャスト 19</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-21"><strong>仮キャスト 21</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-24"><strong>仮キャスト 24</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-26"><strong>仮キャスト 26</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-28"><strong>仮キャスト 28</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-30"><strong>仮キャスト 30</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-32"><strong>仮キャスト 32</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-34"><strong>仮キャスト 34</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
                 <details class="session" id="session-06">
                   <summary aria-label="1/30（土） 18:30 第6セッションの出演者"><time datetime="2027-01-30T18:30:00+09:00">18:30</time></summary>
                   <div class="session-detail">
                     <h3>第6セッション <span>1/30（土） 18:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-03"><strong>仮キャスト 03</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-05"><strong>仮キャスト 05</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-07"><strong>仮キャスト 07</strong><small>川田希美</small></a></li><li><a href="#reading-preview-10"><strong>仮キャスト 10</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-12"><strong>仮キャスト 12</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-14"><strong>仮キャスト 14</strong><small>新川未央</small></a></li><li><a href="#reading-preview-16"><strong>仮キャスト 16</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-18"><strong>仮キャスト 18</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-20"><strong>仮キャスト 20</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-22"><strong>仮キャスト 22</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-25"><strong>仮キャスト 25</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-27"><strong>仮キャスト 27</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-29"><strong>仮キャスト 29</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-31"><strong>仮キャスト 31</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-33"><strong>仮キャスト 33</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-35"><strong>仮キャスト 35</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
               </div>
@@ -504,16 +558,16 @@
                   <summary aria-label="1/31（日） 12:00 第7セッションの出演者"><time datetime="2027-01-31T12:00:00+09:00">12:00</time></summary>
                   <div class="session-detail">
                     <h3>第7セッション <span>1/31（日） 12:00</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-02"><strong>仮キャスト 02</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-04"><strong>仮キャスト 04</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-06"><strong>仮キャスト 06</strong><small>川田希美</small></a></li><li><a href="#reading-preview-08"><strong>仮キャスト 08</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-11"><strong>仮キャスト 11</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-13"><strong>仮キャスト 13</strong><small>新川未央</small></a></li><li><a href="#reading-preview-15"><strong>仮キャスト 15</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-17"><strong>仮キャスト 17</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-19"><strong>仮キャスト 19</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-21"><strong>仮キャスト 21</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-23"><strong>仮キャスト 23</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-26"><strong>仮キャスト 26</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-28"><strong>仮キャスト 28</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-30"><strong>仮キャスト 30</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-32"><strong>仮キャスト 32</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-34"><strong>仮キャスト 34</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
                 <details class="session" id="session-08">
                   <summary aria-label="1/31（日） 16:30 第8セッションの出演者"><time datetime="2027-01-31T16:30:00+09:00">16:30</time></summary>
                   <div class="session-detail">
                     <h3>第8セッション <span>1/31（日） 16:30</span></h3>
-                    <p>READING出演者は後日発表します。</p>
-                    <a href="#actors">全セッション出演のACTORを見る ›</a>
+                    <p class="schedule-lineup-label">READING出演者（仮）</p>
+                    <ul class="plain-list schedule-cast"><li><a href="#reading-preview-01"><strong>仮キャスト 01</strong><small>城崎華恋</small></a></li><li><a href="#reading-preview-03"><strong>仮キャスト 03</strong><small>小園ゆめか</small></a></li><li><a href="#reading-preview-05"><strong>仮キャスト 05</strong><small>成田ゆき</small></a></li><li><a href="#reading-preview-07"><strong>仮キャスト 07</strong><small>川田希美</small></a></li><li><a href="#reading-preview-09"><strong>仮キャスト 09</strong><small>霧谷あさひ</small></a></li><li><a href="#reading-preview-12"><strong>仮キャスト 12</strong><small>蒼井沙良</small></a></li><li><a href="#reading-preview-14"><strong>仮キャスト 14</strong><small>新川未央</small></a></li><li><a href="#reading-preview-16"><strong>仮キャスト 16</strong><small>田上梨乃</small></a></li><li><a href="#reading-preview-18"><strong>仮キャスト 18</strong><small>森野真礼</small></a></li><li><a href="#reading-preview-20"><strong>仮キャスト 20</strong><small>葛城久代</small></a></li><li><a href="#reading-preview-22"><strong>仮キャスト 22</strong><small>佐竹夜酔</small></a></li><li><a href="#reading-preview-24"><strong>仮キャスト 24</strong><small>小暮愛</small></a></li><li><a href="#reading-preview-27"><strong>仮キャスト 27</strong><small>下坂咲子</small></a></li><li><a href="#reading-preview-29"><strong>仮キャスト 29</strong><small>郡花奏</small></a></li><li><a href="#reading-preview-31"><strong>仮キャスト 31</strong><small>但馬小夏</small></a></li><li><a href="#reading-preview-33"><strong>仮キャスト 33</strong><small>太田梨香子</small></a></li><li><a href="#reading-preview-35"><strong>仮キャスト 35</strong><small>吉澤隆司</small></a></li></ul>
                   </div>
                 </details>
               </div>
@@ -525,6 +579,10 @@
         <section class="info-panel" id="ticket" aria-labelledby="ticket-title">
           <h2 class="panel-heading" id="ticket-title"><i class="sign-icon ticket-icon" aria-hidden="true"></i><span lang="en">TICKET</span><small>チケット</small></h2>
           <p class="panel-intro">全席指定・税込　当日券は各券種500円増し</p>
+<!-- START:sale -->
+          <div class="ticket-status"><i class="sign-icon ticket-icon" aria-hidden="true"></i><span>チケット発売日</span><strong>後日発表</strong></div>
+          <p class="seller">チケット取扱 <a href="https://www.confetti-web.com/@/otonapro-74">カンフェティ ↗</a></p>
+<!-- END:sale -->
           <div id="ticket-list">
 <!-- START:fares -->
             <details class="fare">
@@ -581,10 +639,6 @@
             </details>
 <!-- END:fares -->
           </div>
-<!-- START:sale -->
-          <div class="ticket-status"><i class="sign-icon ticket-icon" aria-hidden="true"></i><span>チケット発売日</span><strong lang="en">Coming soon</strong></div>
-          <p class="seller">チケット取扱 <a href="https://www.confetti-web.com/@/otonapro-74">カンフェティ ↗</a></p>
-<!-- END:sale -->
           <details class="disclosure guide">
             <summary>特典・ご購入時の注意事項</summary>
             <ul>
@@ -656,6 +710,7 @@
             <p class="invitation-close">どうぞ勇気を持って一歩を踏み出し、<br><strong>我々と共に新しい人生をデザインしましょう。</strong></p>
           </div>
         </blockquote>
+        <a class="button ribbon button-black invitation-cta" href="#booking">日程・チケットを見る <span aria-hidden="true">›</span></a>
       </div>
     </section>
   </main>
@@ -691,6 +746,9 @@
       </nav>
     </div>
   </footer>
-  <div class="mobile-cta" hidden><a class="button button-pink" href="#schedule">日程・チケットを見る <span aria-hidden="true">›</span></a></div>
+  <nav class="mobile-cta" aria-label="日程・チケットへのショートカット" hidden>
+    <a class="button mobile-schedule" href="#schedule">公演日程</a>
+    <a class="button button-pink mobile-ticket" href="#ticket">チケット情報 <span aria-hidden="true">›</span></a>
+  </nav>
 </body>
 </html>
