@@ -487,6 +487,8 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 @media (max-width: 560px) {
   .character-body { --portrait-size: clamp(97px, 29vw, 151px); --reading-width: var(--portrait-size); --role-title-height: 3.1rem; }
   .cast-role-title { flex-direction: column; justify-content: start; }
+  .character-body:has(.performer:only-child) { --role-title-gap: 12px; }
+  .reading-side:has(.performer:only-child) .cast-role-title { align-self: end; min-height: 0; }
   .ideal-connection::before { inset-inline-start: -9px; }
   .shared-ideal {
     /* Center on the reading portraits, accounting for the caption under each one. */
