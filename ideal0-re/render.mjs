@@ -67,8 +67,11 @@ function renderCharacter(role) {
     ? `<ul class="performer-list plain-list" role="list">${role.reading.map(renderPerformer).join('')}</ul>`
     : '<p class="role-pending">出演者は後日発表</p>';
   const actorRole = role.actorRole;
+  const idealName = actorRole
+    ? `<p class="ideal-role"><strong class="ideal-role-name">${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong></p>`
+    : '';
   const pair = actorRole
-    ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div class="ideal-caption"><strong class="ideal-role-name">${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><strong class="performer-name">${escape(actorRole.performer)}</strong></div></div>`
+    ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<strong class="performer-name">${escape(actorRole.performer)}</strong></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   const connection = role.reading?.length && actorRole
     ? '\n                <span class="ideal-connection" aria-hidden="true"><span class="ideal-spark"></span></span>'
@@ -78,7 +81,7 @@ function renderCharacter(role) {
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body${sharedIdeal}">
                 <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>${connection}
-                <div class="actor-side"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${pair}</div>
+                <div class="actor-side"><div class="actor-heading"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${idealName}</div>${pair}</div>
               </div>
             </article>`;
 }
