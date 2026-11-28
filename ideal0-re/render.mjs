@@ -81,7 +81,7 @@ function renderCharacter(role) {
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body${sharedIdeal}">
                 <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>${connection}
-                <div class="actor-side"><div class="actor-heading"><div class="actor-category"><h5 class="cast-role-title" lang="en">ACTOR</h5><span class="ideal-label">アイディール</span></div>${idealName}</div>${pair}</div>
+                <div class="actor-side"><div class="actor-heading"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${idealName}</div>${pair}</div>
               </div>
             </article>`;
 }
@@ -122,7 +122,7 @@ function renderScheduleFilter() {
         ...actorRole, name: actorRole.performer, role, sessions: allAppearances,
       })) : [],
     },
-    { label: 'ACTOR', people: actors.map(([name]) => ({ name, id: rosterKey('actor', name), sessions: allAppearances })) },
+    { label: 'アイディール', people: actors.map(([name]) => ({ name, id: rosterKey('actor', name), sessions: allAppearances })) },
     { label: 'アンサンブル', people: ensemble.map(([name, , , appearances = []]) => ({ name, id: rosterKey('ensemble', name), sessions: appearances })) },
   ];
   const options = groups.map(({ label: groupLabel, people }) => {
@@ -217,7 +217,6 @@ function renderSale() {
 const parts = {
   characters: `${previewCasting ? '            <p class="cast-preview-note"><strong>配役プレビュー</strong> 役の組み合わせ・出演者・写真は確認用の仮表示です。</p>\n' : ''}            <div class="character-list">\n${(previewCasting ? castPreview : castCharacters).map(renderCharacter).join('\n')}\n            </div>`,
   roles: previewCasting ? '' : renderRoleCatalogue(),
-  actors: renderCastGrid(actors, 'actor'),
   ensemble: renderCastGrid(ensemble, 'ensemble'),
   'schedule-filter': renderScheduleFilter(),
   schedule: renderSchedule(),
