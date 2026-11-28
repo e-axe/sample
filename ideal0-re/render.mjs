@@ -81,7 +81,7 @@ function renderCharacter(role) {
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body${sharedIdeal}">
                 <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>${connection}
-                <div class="actor-side"><div class="actor-heading"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${idealName}</div>${pair}</div>
+                <div class="actor-side"><div class="actor-heading"><div class="actor-category"><h5 class="cast-role-title" lang="en">ACTOR</h5><span class="ideal-label">アイディール</span></div>${idealName}</div>${pair}</div>
               </div>
             </article>`;
 }

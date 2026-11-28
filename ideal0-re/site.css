@@ -273,9 +273,10 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 .reading-side .cast-role-title { grid-area: 1 / 1; }
 .reading-side .performer-list, .reading-side .role-pending { grid-area: 2 / 1; }
 .actor-heading { grid-area: 1 / 3; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+.actor-category { display: flex; align-items: center; gap: 2px calc(.26 * var(--role-title-size)); }
 .paired-actor, .actor-side .role-pending { grid-area: 2 / 3; }
 .cast-role-title {
-  display: flex; justify-content: center; align-items: center; gap: 2px .26em;
+  display: flex; justify-content: center; align-items: center;
   min-height: var(--role-title-height); margin: 0;
   color: var(--dark-pink); font: italic 900 var(--role-title-size)/1.15 var(--display);
 }
@@ -486,9 +487,15 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 }
 @media (max-width: 560px) {
   .character-body { --portrait-size: clamp(97px, 29vw, 151px); --reading-width: var(--portrait-size); --role-title-height: 3.1rem; }
-  .cast-role-title { flex-direction: column; justify-content: start; }
+  .reading-side .cast-role-title { align-items: start; }
+  .actor-category { flex-direction: column; min-height: var(--role-title-height); }
+  .actor-category .cast-role-title { min-height: 0; }
   .character-body:has(.performer:only-child) { --role-title-gap: 12px; }
   .reading-side:has(.performer:only-child) .cast-role-title { align-self: end; min-height: 0; }
+  .character-body:has(.performer:only-child) .actor-category { display: contents; }
+  .character-body:has(.performer:only-child) .ideal-label { grid-row: 1; }
+  .character-body:has(.performer:only-child) .ideal-role { grid-row: 2; }
+  .character-body:has(.performer:only-child) .actor-heading .cast-role-title { grid-row: 3; margin-top: 2px; }
   .ideal-connection::before { inset-inline-start: -9px; }
   .shared-ideal {
     /* Center on the reading portraits, accounting for the caption under each one. */
@@ -497,7 +504,7 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
     --role-title-gap: 12px;
   }
   .shared-ideal .paired-actor { display: contents; }
-  .shared-ideal .cast-role-title { min-height: 0; }
+  .shared-ideal .cast-role-title, .shared-ideal .actor-category { min-height: 0; }
   .shared-ideal .performer-list { display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-rows: 1fr; align-self: center; }
   .shared-ideal .ideal-connection, .shared-ideal .actor-side { align-self: center; transform: translateY(var(--reading-center-offset)); }
   .shared-ideal .actor-side {
