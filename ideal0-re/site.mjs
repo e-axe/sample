@@ -11,6 +11,7 @@ const scheduleDays = [...document.querySelectorAll('.day-row')];
 const scheduleList = document.getElementById('schedule-list');
 const performerFilter = document.getElementById('schedule-performer');
 const filterResult = document.querySelector('.schedule-results');
+const flyer = document.getElementById('flyer');
 const flyerDialog = document.querySelector('.flyer-dialog');
 
 if (typeof flyerDialog?.showModal === 'function') {
@@ -176,12 +177,15 @@ function updateMobileCta() {
   framePending = false;
   const headerBottom = header.getBoundingClientRect().bottom;
   const bookingBounds = booking.getBoundingClientRect();
+  const flyerBounds = flyer.getBoundingClientRect();
   const closingBounds = closingCta.getBoundingClientRect();
   const readingBooking = bookingBounds.top <= headerBottom + 20 && bookingBounds.bottom > headerBottom + 110;
+  const viewingFlyer = flyerBounds.top < window.innerHeight && flyerBounds.bottom > headerBottom;
   const closingVisible = closingBounds.top < window.innerHeight - 60 && closingBounds.bottom > headerBottom;
   mobileCta.hidden = !compact.matches
     || heroButton.getBoundingClientRect().bottom > headerBottom
     || readingBooking
+    || viewingFlyer
     || closingVisible;
 }
 

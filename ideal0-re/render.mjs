@@ -186,10 +186,11 @@ const vipExtras = `<div class="vip-extras">
             </div>`;
 
 function renderFares() {
-  return fares.map(({ name, price, highlight, details, fullName }) => `            <details class="fare">
+  return fares.map(({ name, price, highlights, details, fullName }) => `            <details class="fare">
               <summary class="fare-summary">
-                <span class="fare-name">${escape(name)}<small>${escape(highlight)}</small></span>
+                <span class="fare-name">${escape(name)}</span>
                 <strong class="fare-price">¥${number.format(price)}</strong><span class="fare-plus" aria-hidden="true">+</span>
+                <small class="fare-highlights">${highlights.map((highlight) => `<span>${escape(highlight)}</span>`).join(' ')}</small>
               </summary>
               <div class="fare-details">
                 ${fullName ? `<h3>${escape(fullName)}</h3>` : ''}

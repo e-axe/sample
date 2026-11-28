@@ -233,6 +233,7 @@ summary { cursor: pointer; }
 .flyer-tools button { cursor: pointer; border: 1px solid #ffb5dd; padding-inline: 14px; background: var(--dark-pink); }
 .flyer-tools :focus-visible { outline-color: #ffa8d6; }
 body:has(.flyer-dialog[open]) { overflow: hidden; }
+body:has(.flyer-dialog[open]) .mobile-cta { display: none; }
 
 .cast {
   --cast-portrait-size: clamp(101px, 15.6vw, 176px);
@@ -407,12 +408,12 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 .schedule-cast small { font-size: .8rem; color: var(--muted); }
 
 .fare { margin-bottom: 5px; border: 1px solid var(--line); border-radius: 8px; overflow: clip; }
-.fare-summary { position: relative; isolation: isolate; display: grid; grid-template-columns: 1fr auto auto; gap: 4px 8px; min-height: 52px; align-items: center; padding: 5px 10px; background: #fff8fc; list-style: none; }
+.fare-summary { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 3px 8px; min-height: 52px; align-items: center; padding: 6px 10px 8px; background: #fff8fc; list-style: none; }
 .fare-summary::before { position: absolute; inset: 0 46% 0 0; content: ""; z-index: -1; background: linear-gradient(117deg,#f6b2db,#fce0f1); clip-path: polygon(0 0,100% 0,88% 100%,0 100%); }
 .fare-summary:focus-visible { outline-offset: -3px; }
 .fare-summary:hover, .fare[open] .fare-summary { background: #fce2f2; }
 .fare-name { font-weight: 900; line-height: 1.22; font-size: clamp(14px, 1.65vw, 24px); }
-.fare-name small { display: block; font-size: 11px; color: #674259; margin-top: 3px; }
+.fare-highlights { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 1px .9em; color: #674259; font-size: .8125rem; font-weight: 700; line-height: 1.45; }
 .fare-price { white-space: nowrap; font: italic 800 clamp(26px, 3.15vw, 40px)/1 var(--numbers); }
 .fare-plus { font-weight: 700; color: var(--dark-pink); }
 .fare[open] .fare-plus { transform: rotate(45deg); }

@@ -56,14 +56,14 @@ const photo = '非売品キャスト別2L版ブロマイド1枚。公演回ご�
 const ensemblePhoto = 'ENSEMBLEを応援キャストに選んだ場合は、選択キャストのシングルショットチェキ（全8種）となります。';
 
 export const fares = [
-  { name: 'A席', price: 8800, highlight: '指定席', details: ['全席指定。'] },
-  { name: '特典付A席', price: 9800, highlight: 'ブロマイド付き', details: [
+  { name: 'A席', price: 8800, highlights: ['指定席'], details: ['全席指定。'] },
+  { name: '特典付A席', price: 9800, highlights: ['2L版ブロマイド1枚'], details: [
     photo, 'ブロマイドの種類はS席特典と同じです。', ensemblePhoto,
   ] },
-  { name: 'S席', price: 12500, highlight: '前方列保証・特典付き', details: [
+  { name: 'S席', price: 12500, highlights: ['前方列保証', '特別ライセンスPASS', '2L版ブロマイド1枚'], details: [
     '前方列保証。', '「アイディール・セミナー」特別ライセンスPASS。', photo, ensemblePhoto,
   ] },
-  { name: 'VIP', price: 37777, fullName: 'スペシャルセッションアイディールプラクティックVIPシート', highlight: '最前中央席・各回8席限定', details: [
+  { name: 'VIP', price: 37777, fullName: 'スペシャルセッションアイディールプラクティックVIPシート', highlights: ['最前中央席・各回8席限定', '開演前舞台ツアー・集合写真撮影'], details: [
     '最前中央席。各公演8席限定。',
     '「アイディール・セミナー」特別ライセンスPASS。',
     photo + ' ブロマイドの種類はS席特典と同じです。',
