@@ -17,6 +17,7 @@ const scheduleReading = previewCasting
 const actorPortraits = new Map(actors.map(([name, , image]) => [name, image]));
 const dateFormat = new Intl.DateTimeFormat('ja-JP', { weekday: 'short', timeZone: 'Asia/Tokyo' });
 const number = new Intl.NumberFormat('ja-JP');
+const rosterKey = (group, name) => `${group}:${name}`;
 
 assert.equal(schedule.size, sessions.length, 'セッションIDが重複しています');
 assert.equal(new Set(readingCast.map(({ id }) => id)).size, readingCast.length, 'READINGのIDが重複しています');
@@ -32,6 +33,10 @@ for (const { actorRole } of characters) {
     assert.ok(idealRoles.includes(actorRole.name), 'アイディール役が未登録です');
     assert.ok(actorPortraits.has(actorRole.performer), 'ACTOR出演者が未登録です');
   }
+}
+for (const [name, , , appearances = []] of ensemble) {
+  assert.equal(new Set(appearances).size, appearances.length, `出演回が重複しています: ${name}`);
+  for (const id of appearances) assert.ok(schedule.has(id), `未登録のセッション: ${id}`);
 }
 
 function dateParts(date) {
@@ -49,8 +54,12 @@ function renderPortrait(image) {
   return `<img class="cast-portrait${image ? '' : ' cast-portrait-placeholder'}" src="./assets/${escape(file)}" width="200" height="200" loading="lazy" decoding="async" alt="">`;
 }
 
+function renderPortraitLink(image, name, id) {
+  return `<a class="cast-portrait-link" href="?performer=${encodeURIComponent(id)}#schedule" aria-label="${escape(name)}の出演日を見る">${renderPortrait(image)}<span class="cast-portrait-action" aria-hidden="true">出演日を見る</span></a>`;
+}
+
 function renderPerformer({ id, name, image }) {
-  return `<li class="performer" id="${id}" tabindex="-1">${renderPortrait(image)}<strong>${escape(name)}</strong></li>`;
+  return `<li class="performer" id="${id}" tabindex="-1">${renderPortraitLink(image, name, id)}<strong>${escape(name)}</strong></li>`;
 }
 
 function renderCharacter(role) {
@@ -59,7 +68,7 @@ function renderCharacter(role) {
     : '<p class="role-pending">出演者は後日発表</p>';
   const actorRole = role.actorRole;
   const pair = actorRole
-    ? `<div class="paired-actor">${renderPortrait(actorRole.image ?? actorPortraits.get(actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p></div></div>`
+    ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
@@ -85,10 +94,10 @@ function renderRoleCatalogue() {
             </div>`;
 }
 
-function renderCastGrid(cast) {
+function renderCastGrid(cast, group) {
   return `          <ul class="cast-grid plain-list" role="list">
 ${cast.map(([name, affiliation, image]) => `            <li class="cast-card">
-              ${renderPortrait(image)}
+              ${renderPortraitLink(image, name, rosterKey(group, name))}
               <div class="cast-card-caption">
                 <strong>${escape(name)}</strong>${affiliation ? `<small>${escape(affiliation)}</small>` : ''}
               </div>
@@ -106,13 +115,13 @@ function renderScheduleFilter() {
         ...actorRole, name: actorRole.performer, role, sessions: allAppearances,
       })) : [],
     },
-    { label: 'ACTOR', people: actors.map(([name]) => ({ name, sessions: allAppearances })) },
+    { label: 'ACTOR', people: actors.map(([name]) => ({ name, id: rosterKey('actor', name), sessions: allAppearances })) },
+    { label: 'アンサンブル', people: ensemble.map(([name, , , appearances = []]) => ({ name, id: rosterKey('ensemble', name), sessions: appearances })) },
   ];
   const options = groups.map(({ label: groupLabel, people }) => {
-    const members = people.filter((person) => person.sessions.length);
-    if (!members.length) return '';
+    if (!people.length) return '';
     return `              <optgroup label="${groupLabel}">
-${members.map((person) => `                <option data-sessions="${person.sessions.join(' ')}">${escape(person.name)}${person.role ? ` ／ ${escape(person.role)}` : ''}</option>`).join('\n')}
+${people.map((person) => `                <option value="${escape(person.id)}" data-sessions="${person.sessions.join(' ')}">${escape(person.name)}${person.role ? ` ／ ${escape(person.role)}` : ''}</option>`).join('\n')}
               </optgroup>`;
   }).filter(Boolean).join('\n');
   return `${previewCasting ? '          <p class="schedule-preview-note">READINGとアイディールの出演情報は確認用の仮表示です。</p>\n' : ''}          <div class="schedule-filter" hidden>
@@ -201,8 +210,8 @@ function renderSale() {
 const parts = {
   characters: `${previewCasting ? '            <p class="cast-preview-note"><strong>配役プレビュー</strong> 役の組み合わせ・出演者・写真は確認用の仮表示です。</p>\n' : ''}            <div class="character-list">\n${(previewCasting ? castPreview : castCharacters).map(renderCharacter).join('\n')}\n            </div>`,
   roles: previewCasting ? '' : renderRoleCatalogue(),
-  actors: renderCastGrid(actors),
-  ensemble: renderCastGrid(ensemble),
+  actors: renderCastGrid(actors, 'actor'),
+  ensemble: renderCastGrid(ensemble, 'ensemble'),
   'schedule-filter': renderScheduleFilter(),
   schedule: renderSchedule(),
   fares: renderFares(),

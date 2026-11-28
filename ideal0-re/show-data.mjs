@@ -27,6 +27,7 @@ export const idealRoles = [
 ];
 
 // ACTORとENSEMBLEは [名前, 所属, assets内の写真ファイル名]。所属・写真は省略可。
+// ENSEMBLEの個別出演回が確定したら、4番目にセッションIDの配列を登録する。
 // READINGの写真は各 reading メンバーの image に登録する。
 export const actors = [
   ['石原美沙紀', 'おとな小学生'], ['山岸理子'], ['神志那結衣'], ['篠原望'],

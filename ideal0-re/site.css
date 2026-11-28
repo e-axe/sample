@@ -186,7 +186,7 @@ summary { cursor: pointer; }
 .invitation::before {
   position: absolute; z-index: -1; inset: 0; content: "";
   background: url("./assets/campus-pattern.webp") right center / max(750px, 70vw) auto no-repeat;
-  mask-image: linear-gradient(90deg, transparent 24%, #000 81%); opacity: .85;
+  mask-image: linear-gradient(115deg, transparent 14%, #0009 68%, #000); opacity: .48;
 }
 .invitation-sheet { max-width: 1160px; }
 .invitation-heading {
@@ -194,24 +194,18 @@ summary { cursor: pointer; }
   font-size: clamp(16px, 1.7vw, 23px); line-height: 1.6; font-weight: 900;
 }
 .invitation-message {
-  display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
-  grid-template-areas: "promise art" "copy art"; grid-template-rows: auto 1fr;
-  gap: clamp(12px, 1.6vw, 24px) clamp(20px, 3.2vw, 55px); margin-top: 15px;
+  display: grid; grid-template-columns: minmax(0, 1.19fr) minmax(0, 1fr); align-items: center;
+  gap: clamp(16px, 4vw, 60px); margin-top: 18px;
 }
-.invitation-promise { grid-area: promise; }
 .invitation-lead { font-weight: 800; }
 .invitation-headline {
   display: block; transform: rotate(-3deg); transform-origin: left center;
-  margin-top: .42em; font-size: clamp(26px, 4.3vw, 58px); font-weight: 900; letter-spacing: -.04em; line-height: 1.5;
+  margin-top: .42em; font-size: clamp(26px, 4.65vw, 65px); font-weight: 900; letter-spacing: -.04em; line-height: 1.5;
 }
-.invitation-art { grid-area: art; position: relative; display: block; align-self: center; }
-.invitation-art img { width: 100%; filter: drop-shadow(0 16px 17px #9a1a5b42); }
-.invitation-art::after {
-  content: ""; position: absolute; width: clamp(25px, 4.2vw, 56px); aspect-ratio: 1;
-  top: 0; right: 7%; transform: rotate(-17deg);
-  background: url("./assets/official-star.webp") center / contain no-repeat;
+.invitation-copy {
+  display: grid; gap: 15px; max-width: 36rem; font-size: 1rem; line-height: 1.88;
+  padding-inline-start: clamp(14px, 2vw, 24px); border-inline-start: 1px solid #b13b7b83;
 }
-.invitation-copy { grid-area: copy; display: grid; align-content: start; gap: 15px; max-width: 36rem; font-size: 1rem; line-height: 1.88; }
 .invitation-close { border-top: 1px solid #ad327b75; padding-top: 13px; text-wrap: pretty; }
 .invitation-close strong { color: #870644; font-weight: 900; }
 .invitation-cta { margin: 24px 0 0 7px; min-height: 48px; }
@@ -284,6 +278,14 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 .cast-card { --portrait-size: clamp(116px, 16.5vw, 182px); display: grid; justify-items: center; align-content: start; gap: 8px; flex: 0 0 clamp(129px, 17.2vw, 191px); min-width: 0; }
 .cast-portrait { width: var(--portrait-size); max-width: 100%; height: auto; aspect-ratio: 1; border: 2px solid #ca709f; border-radius: 50%; object-fit: cover; object-position: center; background: #f0ccdf; }
 .cast-portrait-placeholder { background: radial-gradient(circle, #fae5f1, #f3cce1); }
+.cast-portrait-link { display: grid; justify-items: center; width: var(--portrait-size); max-width: 100%; border-radius: 1rem; text-decoration: none; }
+.cast-portrait-action {
+  position: relative; margin-top: -.65em; padding: .32em .65em; border: 1px solid #fff6fc; border-radius: 999px;
+  color: #fff; background: var(--dark-pink); font-size: clamp(.75rem, 1.32vw, .85rem); font-weight: 900;
+  line-height: 1.2; white-space: nowrap;
+}
+.cast-portrait-link:is(:hover, :focus-visible) .cast-portrait { border-color: var(--dark-pink); }
+.cast-portrait-link:is(:hover, :focus-visible) .cast-portrait-action { background: #6f0036; }
 .cast-card-caption { display: grid; justify-items: center; text-align: center; overflow-wrap: anywhere; }
 .cast-card-caption strong { line-height: 1.3; font-size: clamp(14px, 1.75vw, 20px); font-weight: 900; }
 .cast-card-caption small { margin-top: .18em; color: var(--muted); font-size: .8125rem; line-height: 1.3; }
@@ -451,10 +453,10 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   .story-hook { font-size: clamp(22px, 5.34vw, 35px); }
   .story-visual { top: 35px; right: -17%; width: clamp(360px, 110vw, 690px); mask-image: linear-gradient(#000 52%, transparent 99%); }
   .story-prose { max-width: 100%; line-height: 1.88; }
-  .invitation::before { background-position: 55% 20%; background-size: max(520px, 105vw) auto; mask-image: linear-gradient(#0002 4%, #000 31%, transparent 80%); }
-  .invitation-message { grid-template-columns: 1fr; grid-template-areas: "promise" "art" "copy"; grid-template-rows: auto; gap: 12px; margin-top: 14px; }
+  .invitation::before { background-position: right top; background-size: max(520px, 105vw) auto; mask-image: linear-gradient(#000b, #0005 38%, transparent 85%); }
+  .invitation-message { grid-template-columns: 1fr; gap: 20px; margin-top: 14px; }
   .invitation-headline { font-size: clamp(29px, 8.2vw, 47px); }
-  .invitation-art { width: min(89%, 340px); margin: -8px 0 0 auto; }
+  .invitation-copy { padding-inline-start: 0; border-inline-start: 0; }
   .flyer-inner { grid-template-columns: 1fr; }
   .flyer-copy .section-title { display: flex; align-items: baseline; gap: 7px 11px; }
   .flyer-image { grid-row: 2; width: min(96%, 392px); margin-inline: auto; }

@@ -8,6 +8,7 @@ const header = document.querySelector('.site-header');
 const compact = window.matchMedia('(max-width: 1000px)');
 const sessions = [...document.querySelectorAll('.session')];
 const scheduleDays = [...document.querySelectorAll('.day-row')];
+const scheduleList = document.getElementById('schedule-list');
 const performerFilter = document.getElementById('schedule-performer');
 const filterResult = document.querySelector('.schedule-results');
 const flyerDialog = document.querySelector('.flyer-dialog');
@@ -56,19 +57,43 @@ nav.addEventListener('click', (event) => {
 
 function updateScheduleFilter() {
   const selected = performerFilter.selectedOptions[0];
-  const matching = selected.dataset.sessions?.split(' ');
+  const matching = selected?.value ? selected.dataset.sessions.split(' ').filter(Boolean) : null;
   for (const session of sessions) {
     session.hidden = Boolean(matching && !matching.includes(session.id));
     if (session.hidden) session.open = false;
   }
   for (const day of scheduleDays) day.hidden = day.querySelector('.session:not([hidden])') === null;
-  filterResult.textContent = matching ? `${matching.length}ステージを表示中` : '';
+  scheduleList.hidden = matching?.length === 0;
+  filterResult.textContent = !matching ? '' : matching.length
+    ? `${matching.length}ステージを表示中`
+    : '出演回は後日発表します。';
+}
+
+function readScheduleSelection() {
+  if (!performerFilter) return;
+  performerFilter.value = new URLSearchParams(location.search).get('performer') ?? '';
+  if (performerFilter.selectedIndex === -1) performerFilter.value = '';
+  updateScheduleFilter();
+}
+
+function writeScheduleSelection(performer, hash, replace = false) {
+  const url = new URL(location.href);
+  if (performer) url.searchParams.set('performer', performer);
+  else url.searchParams.delete('performer');
+  url.hash = hash;
+  if (url.href !== location.href) {
+    if (replace) history.replaceState(null, '', url);
+    else history.pushState(null, '', url);
+  }
 }
 
 if (performerFilter) {
   performerFilter.closest('.schedule-filter').hidden = false;
-  performerFilter.addEventListener('change', updateScheduleFilter);
-  updateScheduleFilter();
+  performerFilter.addEventListener('change', () => {
+    writeScheduleSelection(performerFilter.value, '#schedule', true);
+    updateScheduleFilter();
+  });
+  readScheduleSelection();
 }
 
 function goToCastOrSession(id, focus) {
@@ -77,6 +102,7 @@ function goToCastOrSession(id, focus) {
   if (target?.matches('details.session')) {
     if (target.hidden && performerFilter) {
       performerFilter.value = '';
+      writeScheduleSelection('', location.hash, true);
       updateScheduleFilter();
     }
     for (const session of sessions) if (session !== target) session.open = false;
@@ -94,13 +120,26 @@ function syncHash() {
 }
 
 window.addEventListener('hashchange', syncHash);
+window.addEventListener('popstate', () => {
+  readScheduleSelection();
+  syncHash();
+});
 if (location.hash) requestAnimationFrame(syncHash);
 
 document.addEventListener('click', (event) => {
   if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-  const link = event.target.closest('a[href^="#"]');
+  const link = event.target.closest('a.cast-portrait-link, a[href^="#"]');
   const target = link && document.getElementById(link.hash.slice(1));
   if (!target) return;
+  if (link.matches('.cast-portrait-link') && performerFilter) {
+    event.preventDefault();
+    const performer = new URL(link.href).searchParams.get('performer');
+    writeScheduleSelection(performer, link.hash);
+    readScheduleSelection();
+    focusSection(target);
+    target.scrollIntoView({ block: 'start' });
+    return;
+  }
   if (link.matches('.hero-cta, .header-cta, .invitation-cta, .cast-schedule-link, .booking-shortcuts a, .mobile-cta a')) {
     requestAnimationFrame(() => focusSection(target));
     return;

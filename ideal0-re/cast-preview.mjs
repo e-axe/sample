@@ -34,6 +34,7 @@ export const castPreview = characters.map((role, index) => {
     ...role,
     reading,
     actorRole: {
+      id: `ideal-preview-${pad(index + 1)}`,
       name: idealRoles[index] ?? '役名確認中',
       performer: `仮アクター ${pad(index + 1)}`,
       image: nextPortrait(),
