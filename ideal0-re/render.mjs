@@ -55,7 +55,7 @@ function renderPortrait(image) {
 }
 
 function renderPortraitLink(image, name, id) {
-  return `<a class="cast-portrait-link" href="?performer=${encodeURIComponent(id)}#schedule" aria-label="${escape(name)}の出演日を見る">${renderPortrait(image)}<span class="cast-portrait-action" aria-hidden="true">出演日を見る</span></a>`;
+  return `<a class="cast-portrait-link" href="?performer=${encodeURIComponent(id)}#schedule" aria-label="${escape(name)}の出演日を見る">${renderPortrait(image)}</a>`;
 }
 
 function renderPerformer({ id, name, image }) {
@@ -73,8 +73,8 @@ function renderCharacter(role) {
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body">
-                <div class="reading-side"><h5 lang="en">READING</h5>${reading}</div>
-                <div class="actor-side"><h5><span>${escape(role.name)}の</span>アイディール</h5>${pair}</div>
+                <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>
+                <div class="actor-side"><h5 class="cast-role-title"><span lang="en">ACTOR</span><span class="ideal-owner">${escape(role.name)}のアイディール</span></h5>${pair}</div>
               </div>
             </article>`;
 }
@@ -175,7 +175,7 @@ const vipExtras = `<div class="vip-extras">
               <p>ツアーガイド：石原美沙紀・花塚廉太郎・三島京華・星野美夢</p>
               <h4>美容整体VIENESSギフトカード</h4>
               <p>美容整体VIENESS池袋店の【全身美容整体＋小顔・骨盤矯正】60分コースチケットです。有効期限があります。</p>
-              <a href="https://beauty.hotpepper.jp/kr/slnH000557005/">美容整体VIENESS池袋店の店舗情報 ↗</a>
+              <a href="https://beauty.hotpepper.jp/kr/slnH000557005/" target="_blank" rel="noopener">美容整体VIENESS池袋店の店舗情報 ↗</a>
             </div>`;
 
 function renderFares() {
@@ -202,8 +202,8 @@ function renderSale() {
     closed: '<strong>販売終了</strong>',
   }[sales.status];
   const buying = sales.status === 'open'
-    ? `<a class="button ribbon button-pink purchase" href="${url}">カンフェティでチケットを購入 <span aria-hidden="true">↗</span></a>`
-    : `<p class="seller">チケット取扱 <a href="${url}">カンフェティ ↗</a></p>`;
+    ? `<a class="button ribbon button-pink purchase" href="${url}" target="_blank" rel="noopener">カンフェティでチケットを購入 <span aria-hidden="true">↗</span></a>`
+    : `<p class="seller">チケット取扱 <a href="${url}" target="_blank" rel="noopener">カンフェティ ↗</a></p>`;
   return `          <div class="ticket-status"><i class="sign-icon ticket-icon" aria-hidden="true"></i><span>${caption}</span>${status}</div>\n          ${buying}`;
 }
 
