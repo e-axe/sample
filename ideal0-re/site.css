@@ -262,6 +262,8 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   --role-title-size: clamp(25px, 3.25vw, 35px);
   --role-title-height: calc(1.15 * var(--role-title-size));
   --role-title-gap: 16px;
+  --portrait-caption-size: clamp(.9rem, 1.55vw, 1.15rem);
+  --portrait-caption-gap: 8px;
   display: grid; justify-content: center; align-items: start; isolation: isolate;
   grid-template-columns: minmax(0, var(--reading-width)) clamp(28px, 8vw, 105px) minmax(0, calc(var(--portrait-size) + 24px));
   padding: 4px clamp(10px, 2vw, 23px) clamp(15px, 2.2vw, 28px);
@@ -282,17 +284,11 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   margin-top: calc(var(--role-title-height) + var(--role-title-gap) + (var(--portrait-size) - var(--connection-height)) / 2);
   pointer-events: none;
 }
-.ideal-connection::before, .ideal-connection::after { content: ""; position: absolute; }
 .ideal-connection::before {
+  content: ""; position: absolute;
   inset-inline: -4px -17px; height: 100%;
   background: linear-gradient(90deg, #ce659e, #bf005d 65%, #e34a9a) center / 100% 2px no-repeat, linear-gradient(90deg, #f2bedb70, #ed5aab8c);
   clip-path: polygon(0 47%, 55% 34%, 100% 0, 100% 100%, 55% 66%, 0 53%);
-}
-.ideal-connection::after {
-  inset-inline-end: clamp(1px, 1.2vw, 14px);
-  width: clamp(18px, 3vw, 31px); height: clamp(17px, 2.55vw, 26px);
-  background: linear-gradient(90deg, #ce3a86, #a40059);
-  clip-path: polygon(0 4%, 40% 4%, 100% 50%, 40% 96%, 0 96%, 60% 50%);
 }
 .ideal-spark {
   position: absolute; inset-inline: -2px -14px; height: 4px; opacity: 0;
@@ -310,14 +306,19 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 .performer-list { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--reading-gap); }
 .performer, .paired-actor {
   display: grid; align-content: start; justify-items: center;
-  gap: 8px; min-width: 0; text-align: center;
+  gap: var(--portrait-caption-gap); min-width: 0; text-align: center;
 }
 .performer { flex: 0 1 var(--portrait-size); position: relative; }
 .paired-actor { width: 100%; }
-.paired-actor > div { min-width: 0; overflow-wrap: anywhere; }
-.performer > strong, .paired-actor strong { display: block; font-size: clamp(.9rem, 1.55vw, 1.15rem); font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
-.paired-actor strong { word-break: keep-all; }
-.paired-actor p { margin-block: 4px 3px; }
+.performer-name { display: block; font-size: var(--portrait-caption-size); font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
+.ideal-caption { min-width: 0; line-height: 1.4; overflow-wrap: anywhere; }
+.ideal-caption .performer-name { margin-top: 5px; }
+.ideal-role-name {
+  color: #840043; font-size: clamp(1.04rem, 1.92vw, 1.48rem); font-weight: 900; word-break: keep-all;
+  background: linear-gradient(transparent 65%, #f3b7d8 65% 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 .character:has(.performer:target) { border-top-color: var(--pink); }
 .disclosure { border-top: 1px solid var(--line); }
 .disclosure summary { min-height: 44px; padding: 9px 3px; font-size: 13px; font-weight: 900; color: var(--dark-pink); }
@@ -481,22 +482,47 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   body:has(.has-menu) .footer { padding-bottom: calc(83px + env(safe-area-inset-bottom)); }
   html { scroll-padding-bottom: 64px; }
 }
-@media (max-width: 540px) {
+@media (max-width: 560px) {
   .character-body { --portrait-size: clamp(97px, 29vw, 151px); --reading-width: var(--portrait-size); --role-title-height: 3.1rem; }
   .cast-role-title { flex-direction: column; justify-content: start; }
-  .character-body:has(.ideal-connection) .performer-list:has(.performer + .performer) .performer::before,
-  .character-body:has(.ideal-connection) .performer-list:has(.performer + .performer) .performer::after {
-    content: ""; position: absolute; right: -7px; width: 8px; pointer-events: none;
-  }
-  .performer-list:has(.performer + .performer) .performer::before { inset-block: calc(-1 * var(--reading-gap)); border-right: 1px solid #ce659e; }
-  .performer-list:has(.performer + .performer) .performer:first-child::before { top: calc(var(--portrait-size) / 2); }
-  .performer-list:has(.performer + .performer) .performer:last-child::before { bottom: calc(100% - var(--portrait-size) / 2); }
-  .performer-list:has(.performer + .performer) .performer::after { top: calc(var(--portrait-size) / 2); border-top: 1px solid #ce659e; }
   .ideal-connection::before { inset-inline-start: -9px; }
+  .shared-ideal {
+    /* Center on the reading portraits, accounting for the caption under each one. */
+    --reading-center-offset: calc(-.5 * (var(--portrait-caption-gap) + 1.35 * var(--portrait-caption-size)));
+    --connection-color: #c65e94;
+    grid-template-rows: auto 1fr;
+  }
+  .shared-ideal .reading-side, .shared-ideal .paired-actor { display: contents; }
+  .shared-ideal .reading-side .cast-role-title { grid-area: 1 / 1; min-height: 0; margin-bottom: 12px; }
+  .shared-ideal .performer-list { grid-area: 2 / 1; display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-rows: 1fr; }
+  .shared-ideal .ideal-connection, .shared-ideal .actor-side { grid-row: 2; align-self: center; transform: translateY(var(--reading-center-offset)); }
+  .shared-ideal .actor-side { display: grid; grid-template-rows: 1fr auto 1fr; justify-items: center; gap: var(--portrait-caption-gap); }
+  .shared-ideal .actor-side .cast-role-title { align-self: end; min-height: 0; margin: 0 0 4px; }
+  .shared-ideal .paired-actor .cast-portrait-link { grid-row: 2; }
+  .shared-ideal .ideal-caption { grid-row: 3; text-align: center; }
+  .shared-ideal .ideal-connection { margin-top: 0; }
+  .shared-ideal .ideal-connection::before, .shared-ideal .ideal-spark { inset-inline-start: 7px; }
+  .shared-ideal .ideal-connection::after {
+    content: ""; position: absolute; inset-inline-start: 4px; width: 6px; height: 6px;
+    border-radius: 50%; background: var(--dark-pink);
+  }
+  .shared-ideal .performer::before, .shared-ideal .performer:not(:first-child, :last-child)::after {
+    content: ""; position: absolute; right: -8px; width: 9px; pointer-events: none;
+  }
+  .shared-ideal .performer::before { inset-block: calc(-1 * var(--reading-gap)); border-right: 2px solid var(--connection-color); }
+  .shared-ideal .performer:first-child::before {
+    top: calc(var(--portrait-size) / 2 - 1px); border-top: 2px solid var(--connection-color); border-top-right-radius: 5px;
+  }
+  .shared-ideal .performer:last-child::before {
+    bottom: calc(100% - var(--portrait-size) / 2 - 1px); border-bottom: 2px solid var(--connection-color); border-bottom-right-radius: 5px;
+  }
+  .shared-ideal .performer:not(:first-child, :last-child)::after { top: calc(var(--portrait-size) / 2 - 1px); border-top: 2px solid var(--connection-color); }
 }
-@media (min-width: 541px) {
+@media (min-width: 561px) {
   .character-body:has(.performer:only-child) { --reading-width: var(--portrait-size); }
   .character-body:has(.performer:nth-child(2):last-child) { --reading-width: calc(2 * var(--portrait-size) + var(--reading-gap)); }
+  .paired-actor { grid-template-columns: minmax(0, 1fr); }
+  .ideal-caption { width: max-content; max-width: calc(100% + clamp(18px, 5vw, 70px)); }
   .character-body:has(.ideal-connection) .performer + .performer::before {
     content: ""; position: absolute; inset-inline-end: 100%; top: calc(var(--portrait-size) / 2);
     width: var(--reading-gap); border-top: 1px solid #ce659e; pointer-events: none;

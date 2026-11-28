@@ -59,7 +59,7 @@ function renderPortraitLink(image, name, id) {
 }
 
 function renderPerformer({ id, name, image }) {
-  return `<li class="performer" id="${id}" tabindex="-1">${renderPortraitLink(image, name, id)}<strong>${escape(name)}</strong></li>`;
+  return `<li class="performer" id="${id}" tabindex="-1">${renderPortraitLink(image, name, id)}<strong class="performer-name">${escape(name)}</strong></li>`;
 }
 
 function renderCharacter(role) {
@@ -68,14 +68,15 @@ function renderCharacter(role) {
     : '<p class="role-pending">出演者は後日発表</p>';
   const actorRole = role.actorRole;
   const pair = actorRole
-    ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p></div></div>`
+    ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div class="ideal-caption"><strong class="ideal-role-name">${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><strong class="performer-name">${escape(actorRole.performer)}</strong></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   const connection = role.reading?.length && actorRole
     ? '\n                <span class="ideal-connection" aria-hidden="true"><span class="ideal-spark"></span></span>'
     : '';
+  const sharedIdeal = connection && role.reading.length > 1 ? ' shared-ideal' : '';
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
-              <div class="character-body">
+              <div class="character-body${sharedIdeal}">
                 <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>${connection}
                 <div class="actor-side"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${pair}</div>
               </div>
