@@ -276,19 +276,27 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 }
 .ideal-label { color: var(--dark-pink); background: #f9d2e9; padding: 1px .4em 2px; white-space: nowrap; font: 900 clamp(.68rem, 1.26vw, .88rem)/1.45 var(--body); }
 .ideal-connection {
-  position: relative; grid-area: 1 / 2; z-index: -1; display: grid; place-items: center; height: 0;
-  margin-top: calc(var(--role-title-height) + var(--role-title-gap) + var(--portrait-size) / 2);
+  --connection-height: clamp(22px, 3.4vw, 38px);
+  position: relative; grid-area: 1 / 2; z-index: -1; display: grid; place-items: center;
+  height: var(--connection-height);
+  margin-top: calc(var(--role-title-height) + var(--role-title-gap) + (var(--portrait-size) - var(--connection-height)) / 2);
   pointer-events: none;
 }
 .ideal-connection::before, .ideal-connection::after { content: ""; position: absolute; }
 .ideal-connection::before {
-  inset-inline: -4px -17px; height: 16px;
-  background: linear-gradient(90deg, #d87bac, #d30067 60%, #ed6dad) center / 100% 2px no-repeat, linear-gradient(90deg, #f2bedb80, #df147b6e);
-  clip-path: polygon(0 43%, 100% 0, 100% 100%, 0 57%);
+  inset-inline: -4px -17px; height: 100%;
+  background: linear-gradient(90deg, #ce659e, #bf005d 65%, #e34a9a) center / 100% 2px no-repeat, linear-gradient(90deg, #f2bedb70, #ed5aab8c);
+  clip-path: polygon(0 47%, 55% 34%, 100% 0, 100% 100%, 55% 66%, 0 53%);
 }
 .ideal-connection::after {
-  width: clamp(18px, 3.8vw, 37px); height: clamp(18px, 3.8vw, 37px);
-  background: #a40059; clip-path: polygon(50% 0, 59% 35%, 100% 50%, 59% 65%, 50% 100%, 41% 65%, 0 50%, 41% 35%);
+  inset-inline-end: clamp(1px, 1.2vw, 14px);
+  width: clamp(18px, 3vw, 31px); height: clamp(17px, 2.55vw, 26px);
+  background: linear-gradient(90deg, #ce3a86, #a40059);
+  clip-path: polygon(0 4%, 40% 4%, 100% 50%, 40% 96%, 0 96%, 60% 50%);
+}
+.ideal-spark {
+  position: absolute; inset-inline: -2px -14px; height: 4px; opacity: 0;
+  background: linear-gradient(90deg, transparent, #ffd6ed 65%, white) no-repeat 0 50% / 32% 100%;
 }
 .paired-actor .cast-portrait-link { position: relative; }
 .paired-actor .cast-portrait-link::before {
@@ -547,6 +555,8 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 
 @media (prefers-reduced-motion: no-preference) {
   .paired-actor .cast-portrait-link::before { transition: border-color 180ms ease, box-shadow 180ms ease; }
+  .ideal-materializing .ideal-spark { animation: ideal-light 560ms ease-in both; }
+  .ideal-materializing .paired-actor .cast-portrait-link::before { animation: ideal-aura 650ms ease-out 440ms; }
   .hero-art { animation: hero-arrive 640ms ease-out both; }
   .hero-cta::before { animation: cta-accent 850ms ease-out 560ms both; }
   .button > span[aria-hidden="true"] { transition: transform 170ms ease; }
@@ -555,6 +565,14 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   .info-panel:target { animation: panel-accent 720ms ease-out; }
 
   @keyframes hero-arrive { from { opacity: .65; transform: translate(10px, 6px); } }
+  @keyframes ideal-light {
+    from { opacity: 0; background-position: -45% 50%; }
+    24%, 83% { opacity: 1; }
+    to { opacity: 0; background-position: 148% 50%; }
+  }
+  @keyframes ideal-aura {
+    32% { border-color: #c50064; box-shadow: 0 0 0 7px #ef8dc471, 0 0 32px #db047a93; }
+  }
   @keyframes cta-accent {
     from { box-shadow: 0 0 0 0 #db006d70; }
     to { box-shadow: 0 0 0 11px #db006d00; }

@@ -126,6 +126,17 @@ window.addEventListener('popstate', () => {
 });
 if (location.hash) requestAnimationFrame(syncHash);
 
+if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  const materialize = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.parentElement.classList.add('ideal-materializing');
+      observer.unobserve(entry.target);
+    }
+  }, { rootMargin: '-72px 0px -78px', threshold: .5 });
+  for (const connection of document.querySelectorAll('.ideal-connection')) materialize.observe(connection);
+}
+
 document.addEventListener('click', (event) => {
   if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const link = event.target.closest('a.cast-portrait-link, a[href^="#"]');

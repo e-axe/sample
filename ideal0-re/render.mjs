@@ -71,7 +71,7 @@ function renderCharacter(role) {
     ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   const connection = role.reading?.length && actorRole
-    ? '\n                <span class="ideal-connection" aria-hidden="true"></span>'
+    ? '\n                <span class="ideal-connection" aria-hidden="true"><span class="ideal-spark"></span></span>'
     : '';
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
