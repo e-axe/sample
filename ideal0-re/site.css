@@ -417,6 +417,7 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   .mobile-cta a { border-radius: 8px; gap: 8px; padding-inline: 5px; font-size: .95rem; }
   .mobile-schedule { color: var(--dark-pink); border: 1px solid #be6b9b; background: #fff; }
   .mobile-ticket { background: linear-gradient(150deg,#e50072,#b80057); }
+  body:has(.has-menu) .footer { padding-bottom: calc(83px + env(safe-area-inset-bottom)); }
   html { scroll-padding-bottom: 64px; }
 }
 @media (max-width: 740px) {
