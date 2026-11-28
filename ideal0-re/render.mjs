@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { actors, characters, ensemble, fares, idealRoles, sales, sessions } from './show-data.mjs';
+import { castPreview } from './cast-preview.mjs';
 
 const escape = (value) => String(value).replace(/[&<>"']/g, (character) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -9,6 +10,7 @@ const escape = (value) => String(value).replace(/[&<>"']/g, (character) => ({
 const schedule = new Map(sessions.map((session) => [session.id, session]));
 const readingCast = characters.flatMap((role) => (role.reading ?? []).map((person) => ({ ...person, role: role.name })));
 const castCharacters = characters.filter((role) => role.reading?.length || role.actorRole);
+const previewCasting = castCharacters.length === 0;
 const actorPortraits = new Map(actors.map(([name, , image]) => [name, image]));
 const dateFormat = new Intl.DateTimeFormat('ja-JP', { weekday: 'short', timeZone: 'Asia/Tokyo' });
 const number = new Intl.NumberFormat('ja-JP');
@@ -41,12 +43,15 @@ function label({ date, time }) {
 
 function renderPortrait(image) {
   const file = image ?? 'cast-avatar.svg';
-  return `<img class="cast-portrait${image ? '' : ' cast-portrait-placeholder'}" src="./assets/${escape(file)}" width="240" height="288" loading="lazy" decoding="async" alt="">`;
+  return `<img class="cast-portrait${image ? '' : ' cast-portrait-placeholder'}" src="./assets/${escape(file)}" width="200" height="200" loading="lazy" decoding="async" alt="">`;
 }
 
 function renderPerformer({ id, name, image, sessions: appearances }) {
-  const dates = sessions.filter((session) => appearances.includes(session.id)).map((session) =>
-    `<li><a href="#${session.id}">${label(session)}</a></li>`).join('');
+  const dates = sessions.filter((session) => appearances.includes(session.id)).map((session) => {
+    const { month, day, weekday } = dateParts(session.date);
+    const time = `<time datetime="${session.date}T${session.time}:00+09:00" aria-label="${label(session)}"><span>${month}/${day}<small>${weekday}</small></span><span>${session.time}</span></time>`;
+    return previewCasting ? `<li><span>${time}</span></li>` : `<li><a href="#${session.id}">${time}</a></li>`;
+  }).join('');
   return `<li class="performer" id="${id}" tabindex="-1">${renderPortrait(image)}<div class="performer-caption">
     <strong>${escape(name)}</strong>${dates ? `<ul class="plain-list appearance-list" role="list" aria-label="出演回">${dates}</ul>` : '<p>出演回は後日発表</p>'}</div></li>`;
 }
@@ -55,14 +60,14 @@ function renderCharacter(role) {
   const reading = role.reading?.length
     ? `<ul class="performer-list plain-list" role="list">${role.reading.map(renderPerformer).join('')}</ul>`
     : '<p class="role-pending">出演者・出演回は後日発表</p>';
-  const pair = role.actorRole
-    ? `<div class="paired-actor">${renderPortrait(actorPortraits.get(role.actorRole.performer))}<div><strong>${escape(role.actorRole.name)}</strong><p>${escape(role.actorRole.performer)}</p><small>全セッション出演</small></div></div>`
+  const actorRole = role.actorRole;
+  const pair = actorRole
+    ? `<div class="paired-actor">${renderPortrait(actorRole.image ?? actorPortraits.get(actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p><small>全${sessions.length}セッション出演</small></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body">
                 <div class="reading-side"><h5 lang="en">READING</h5>${reading}</div>
-                <span class="ideal-arrow" aria-hidden="true" lang="en">IDEAL</span>
                 <div class="actor-side"><h5 lang="en">ACTOR</h5>${pair}</div>
               </div>
             </article>`;
@@ -168,10 +173,8 @@ function renderSale() {
 }
 
 const parts = {
-  characters: castCharacters.length
-    ? `            <div class="character-list">\n${castCharacters.map(renderCharacter).join('\n')}\n            </div>`
-    : '            <p class="casting-pending">READINGの出演者・出演回とアイディール役の配役は後日発表します。</p>',
-  roles: renderRoleCatalogue(),
+  characters: `${previewCasting ? '            <p class="cast-preview-note"><strong>配役プレビュー</strong> 役の組み合わせ・出演者・写真・出演回は確認用の仮表示です。</p>\n' : ''}            <div class="character-list">\n${(previewCasting ? castPreview : castCharacters).map(renderCharacter).join('\n')}\n            </div>`,
+  roles: previewCasting ? '' : renderRoleCatalogue(),
   actors: renderCastGrid(actors),
   ensemble: renderCastGrid(ensemble),
   schedule: renderSchedule(),
