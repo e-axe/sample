@@ -70,11 +70,14 @@ function renderCharacter(role) {
   const pair = actorRole
     ? `<div class="paired-actor">${renderPortraitLink(actorRole.image ?? actorPortraits.get(actorRole.performer), actorRole.performer, previewCasting ? actorRole.id : rosterKey('actor', actorRole.performer))}<div><strong>${escape(actorRole.name).replaceAll('・', '・<wbr>')}</strong><p>${escape(actorRole.performer)}</p></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
+  const connection = role.reading?.length && actorRole
+    ? '\n                <span class="ideal-connection" aria-hidden="true"></span>'
+    : '';
   return `            <article class="character">
               <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
               <div class="character-body">
-                <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>
-                <div class="actor-side"><h5 class="cast-role-title"><span lang="en">ACTOR</span><span class="ideal-owner">${escape(role.name)}のアイディール</span></h5>${pair}</div>
+                <div class="reading-side"><h5 class="cast-role-title" lang="en">READING</h5>${reading}</div>${connection}
+                <div class="actor-side"><h5 class="cast-role-title"><span lang="en">ACTOR</span> <span class="ideal-label">アイディール</span></h5>${pair}</div>
               </div>
             </article>`;
 }
