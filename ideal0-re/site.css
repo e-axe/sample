@@ -234,7 +234,10 @@ summary { cursor: pointer; }
 .flyer-tools :focus-visible { outline-color: #ffa8d6; }
 body:has(.flyer-dialog[open]) { overflow: hidden; }
 
-.cast { position: relative; border-block: 1px solid #eab1d2; background: linear-gradient(#fce5f3, #fff8fc 55%, #ffeafa); }
+.cast {
+  --cast-portrait-size: clamp(101px, 15.6vw, 176px);
+  position: relative; border-block: 1px solid #eab1d2; background: linear-gradient(#fce5f3, #fff8fc 55%, #ffeafa);
+}
 .section-head { display: flex; flex-wrap: wrap; align-items: center; gap: 13px 22px; margin-bottom: 17px; }
 .section-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 12px; font: italic 900 clamp(35px, 5.15vw, 66px)/.95 var(--display); letter-spacing: -.02em; }
 .section-title small { color: var(--muted); font: 900 14px/1.3 var(--body); }
@@ -256,7 +259,7 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 .character-head h4 { font-size: clamp(20px, 2.75vw, 32px); line-height: 1.35; margin: 0; }
 .character-head p { color: var(--muted); font-size: .875rem; font-weight: 700; }
 .character-body {
-  --portrait-size: clamp(101px, 15.6vw, 176px);
+  --portrait-size: var(--cast-portrait-size);
   --reading-gap: clamp(12px, 1.65vw, 22px);
   --reading-width: calc(3 * var(--portrait-size) + 2 * var(--reading-gap));
   --role-title-size: clamp(25px, 3.25vw, 35px);
@@ -337,7 +340,7 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
 #characters-title { font: 900 clamp(18px, 2.25vw, 29px)/1.45 var(--body); padding-inline: .55em; }
 .cast-group-head span { color: var(--dark-pink); font-size: .875rem; font-weight: 900; }
 .cast-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(16px, 2.8vw, 32px) clamp(11px, 2.3vw, 26px); }
-.cast-card { --portrait-size: clamp(116px, 16.5vw, 182px); display: grid; justify-items: center; align-content: start; gap: 8px; flex: 0 0 clamp(129px, 17.2vw, 191px); min-width: 0; }
+.cast-card { --portrait-size: calc(.9 * var(--cast-portrait-size)); display: grid; justify-items: center; align-content: start; gap: 8px; flex: 0 0 clamp(129px, 17.2vw, 191px); min-width: 0; }
 .cast-portrait { width: var(--portrait-size); max-width: 100%; height: auto; aspect-ratio: 1; border: 2px solid #ca709f; border-radius: 50%; object-fit: cover; object-position: center; background: #f0ccdf; }
 .cast-portrait-placeholder { background: radial-gradient(circle, #fae5f1, #f3cce1); }
 .cast-portrait-link { display: grid; justify-items: center; width: var(--portrait-size); max-width: 100%; border-radius: 50%; text-decoration: none; }
@@ -485,7 +488,8 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   html { scroll-padding-bottom: 64px; }
 }
 @media (max-width: 560px) {
-  .character-body { --portrait-size: clamp(97px, 29vw, 151px); --reading-width: var(--portrait-size); --role-title-height: 3.1rem; }
+  .cast { --cast-portrait-size: clamp(97px, 29vw, 151px); }
+  .character-body { --reading-width: var(--portrait-size); --role-title-height: 3.1rem; }
   .cast-role-title { flex-direction: column; justify-content: start; }
   .character-body:has(.performer:only-child) { --role-title-gap: 12px; }
   .reading-side:has(.performer:only-child) .cast-role-title { align-self: end; min-height: 0; }
@@ -569,7 +573,7 @@ body:has(.flyer-dialog[open]) { overflow: hidden; }
   .section-head { gap: 8px; margin-bottom: 11px; }
   .section-title { font-size: clamp(33px, 8.8vw, 51px); }
   .chip { min-height: 37px; padding-inline: 8px; }
-  .cast-card { --portrait-size: clamp(85px, 26.5vw, 141px); flex-basis: clamp(94px, 28vw, 150px); }
+  .cast-card { flex-basis: clamp(94px, 28vw, 150px); }
   .booking-shortcuts { gap: 5px; }
   .booking-shortcuts a { flex-direction: column; gap: 3px; min-height: 54px; font-size: .79rem; padding-inline: 2px; }
   .booking-shortcuts .sign-icon { font-size: 18px; }
