@@ -48,20 +48,22 @@ nav.addEventListener('click', (event) => {
   }
 });
 
-function openLinkedDetails(id, focus) {
+function goToCastOrSession(id, focus) {
   const target = document.getElementById(id);
-  if (!target?.matches('details.session, details.performer')) return;
-  if (target.classList.contains('session')) {
+  let destination = target;
+  if (target?.matches('details.session')) {
     for (const session of sessions) if (session !== target) session.open = false;
+    target.open = true;
+    destination = target.querySelector('summary');
+  } else if (!target?.matches('.performer')) {
+    return;
   }
-  target.open = true;
-  const summary = target.querySelector('summary');
-  if (focus) summary.focus({ preventScroll: true });
-  summary.scrollIntoView({ block: 'start' });
+  if (focus) destination.focus({ preventScroll: true });
+  destination.scrollIntoView({ block: 'start' });
 }
 
 function syncHash() {
-  openLinkedDetails(location.hash.slice(1), false);
+  goToCastOrSession(location.hash.slice(1), false);
 }
 
 window.addEventListener('hashchange', syncHash);
@@ -73,7 +75,7 @@ document.addEventListener('click', (event) => {
   if (!link || !document.getElementById(link.hash.slice(1))) return;
   event.preventDefault();
   if (location.hash !== link.hash) history.pushState(null, '', link.hash);
-  openLinkedDetails(link.hash.slice(1), true);
+  goToCastOrSession(link.hash.slice(1), true);
 });
 
 for (const session of sessions) {

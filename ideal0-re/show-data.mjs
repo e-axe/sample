@@ -1,7 +1,7 @@
 // 配役確定後は reading と actorRole を登録する。sessions は下記の固定IDで参照する。
 export const characters = [
-  { name: '城崎華恋', note: 'プリンセスに憧れる大学生', featured: true },
-  { name: '小園ゆめか', featured: true },
+  { name: '城崎華恋', note: 'プリンセスに憧れる大学生' },
+  { name: '小園ゆめか' },
   { name: '成田ゆき' },
   { name: '川田希美' },
   { name: '霧谷あさひ' },

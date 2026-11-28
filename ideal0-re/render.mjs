@@ -8,6 +8,7 @@ const escape = (value) => String(value).replace(/[&<>"']/g, (character) => ({
 }[character]));
 const schedule = new Map(sessions.map((session) => [session.id, session]));
 const readingCast = characters.flatMap((role) => (role.reading ?? []).map((person) => ({ ...person, role: role.name })));
+const castCharacters = characters.filter((role) => role.reading?.length || role.actorRole);
 const actorPortraits = new Map(actors.map(([name, , image]) => [name, image]));
 const dateFormat = new Intl.DateTimeFormat('ja-JP', { weekday: 'short', timeZone: 'Asia/Tokyo' });
 const number = new Intl.NumberFormat('ja-JP');
@@ -46,32 +47,40 @@ function renderPortrait(image) {
 function renderPerformer({ id, name, image, sessions: appearances }) {
   const dates = sessions.filter((session) => appearances.includes(session.id)).map((session) =>
     `<li><a href="#${session.id}">${label(session)}</a></li>`).join('');
-  return `<li><details class="performer" id="${id}"><summary>${renderPortrait(image)}<strong>${escape(name)}</strong><small>出演回を見る</small></summary>
-    ${dates ? `<ul class="plain-list">${dates}</ul>` : '<p>出演回は後日発表</p>'}</details></li>`;
+  return `<li class="performer" id="${id}" tabindex="-1">${renderPortrait(image)}<div class="performer-caption">
+    <strong>${escape(name)}</strong>${dates ? `<ul class="plain-list appearance-list" role="list" aria-label="出演回">${dates}</ul>` : '<p>出演回は後日発表</p>'}</div></li>`;
 }
 
 function renderCharacter(role) {
-  const roleImage = role.featured ? '<span class="role-icon" aria-hidden="true"></span>' : '';
   const reading = role.reading?.length
-    ? `<ul class="performer-list plain-list">${role.reading.map(renderPerformer).join('')}</ul>`
+    ? `<ul class="performer-list plain-list" role="list">${role.reading.map(renderPerformer).join('')}</ul>`
     : '<p class="role-pending">出演者・出演回は後日発表</p>';
   const pair = role.actorRole
-    ? `<div class="paired-actor">${renderPortrait(actorPortraits.get(role.actorRole.performer))}<div><strong>${escape(role.actorRole.name)}</strong><p>${escape(role.actorRole.performer)} <span>全セッション出演</span></p></div></div>`
+    ? `<div class="paired-actor">${renderPortrait(actorPortraits.get(role.actorRole.performer))}<div><strong>${escape(role.actorRole.name)}</strong><p>${escape(role.actorRole.performer)}</p><small>全セッション出演</small></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
-  return `          <article class="character">
-            <div class="character-head"><span class="ribbon">登場人物</span><h3>${escape(role.name)}</h3>
-              ${role.note ? `<p>${escape(role.note)}</p>` : ''}</div>
-            <div class="character-body">${roleImage}
-              <div class="reading-side"><h4 lang="en">READING</h4>${reading}</div>
-              <span class="ideal-arrow" aria-hidden="true">IDEAL</span>
-              <div class="actor-side"><h4 lang="en">ACTOR</h4>${pair}</div>
-            </div>
-          </article>`;
+  return `            <article class="character">
+              <header class="character-head"><h4>${escape(role.name)}</h4>${role.note ? `<p>${escape(role.note)}</p>` : ''}</header>
+              <div class="character-body">
+                <div class="reading-side"><h5 lang="en">READING</h5>${reading}</div>
+                <span class="ideal-arrow" aria-hidden="true" lang="en">IDEAL</span>
+                <div class="actor-side"><h5 lang="en">ACTOR</h5>${pair}</div>
+              </div>
+            </article>`;
 }
 
-function nameList(names) {
-  return `<ul class="name-list plain-list" role="list">${names.map(([name, affiliation]) =>
-    `<li>${escape(name)}${affiliation ? `<small>（${escape(affiliation)}）</small>` : ''}</li>`).join('')}</ul>`;
+function renderRoleCatalogue() {
+  const assignedIdeals = new Set(castCharacters.flatMap(({ actorRole }) => actorRole ? [actorRole.name] : []));
+  const groups = [
+    { title: '登場人物', names: characters.filter((role) => !castCharacters.includes(role)).map(({ name }) => name) },
+    { title: 'アイディール役', names: idealRoles.filter((name) => !assignedIdeals.has(name)) },
+  ].filter(({ names }) => names.length);
+  if (!groups.length) return '';
+  return `            <div class="role-catalogue">
+              ${groups.map(({ title, names }) => `<div class="role-panel">
+                <h4>${title}</h4>
+                <ul class="role-names plain-list" role="list">${names.map((name) => `<li>${escape(name)}</li>`).join('')}</ul>
+              </div>`).join('\n              ')}
+            </div>`;
 }
 
 function renderCastGrid(cast) {
@@ -159,9 +168,10 @@ function renderSale() {
 }
 
 const parts = {
-  characters: characters.filter((role) => role.featured || role.reading?.length || role.actorRole).map(renderCharacter).join('\n'),
-  roles: `          <div class="role-columns"><div><h3>登場人物</h3>${nameList(characters.map(({ name }) => [name]))}</div>
-            <div><h3>アイディール役</h3>${nameList(idealRoles.map((name) => [name]))}</div></div>`,
+  characters: castCharacters.length
+    ? `            <div class="character-list">\n${castCharacters.map(renderCharacter).join('\n')}\n            </div>`
+    : '            <p class="casting-pending">READINGの出演者・出演回とアイディール役の配役は後日発表します。</p>',
+  roles: renderRoleCatalogue(),
   actors: renderCastGrid(actors),
   ensemble: renderCastGrid(ensemble),
   schedule: renderSchedule(),

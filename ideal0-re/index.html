@@ -15,8 +15,8 @@
   <meta property="og:image:alt" content="作品の公式ロゴとピンクの衣装をまとった二人のキャラクター">
   <meta property="og:url" content="https://e-axe.github.io/sample/ideal0-re/">
   <link rel="icon" href="./assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="./site.css?v=20261128-3">
-  <script type="module" src="./site.mjs?v=20261128-3"></script>
+  <link rel="stylesheet" href="./site.css?v=20261128-4">
+  <script type="module" src="./site.mjs?v=20261128-4"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -74,7 +74,7 @@
       <div class="shell story-inner">
         <header class="story-header">
           <h2 class="story-heading" id="story-title"><span class="ribbon" lang="en">STORY</span><small>あらすじ</small></h2>
-          <p class="story-hook"><span>アイディール・</span><wbr><span>サークルへ</span><br>ようこそ。</p>
+          <p class="story-hook"><span class="headline-tape"><span>アイディール・</span><wbr><span>サークルへ</span><wbr><span>ようこそ。</span></span></p>
         </header>
         <div class="story-visual">
           <img src="./assets/story-door.webp?v=20261128-2" width="700" height="628" loading="lazy" decoding="async" alt="開いたピンクの扉の向こうに、椅子と本棚が見える">
@@ -84,9 +84,11 @@
           <p>国立の大学に通う城崎華恋はプリンセスに憧れていた。裕福な家庭に生まれ、正にプリンセスのように優雅な生活をしていたのは小学3年生まで。</p>
           <p>父親の会社は倒産し、自己破産。突如貧相な暮らしへと急降下。人生の下剋上を狙う華恋は必死に勉学に励み、国立大学へと進学。将来有望なフィアンセを見つける為、血眼になってサークルに参加するも、冴えない男ばかりで中々お相手は見つからない。</p>
           <p>そんなときにふと「理想の自分に出逢いませんか？」というチラシが目に入る。怪しげなチラシではあるが、何かを感じた華恋はそのまま指定された部室へと向かう。</p>
-          <p>部室の扉には</p>
-          <blockquote class="story-quote">「この扉を開けば、<wbr>あなたの人生が大きく変わる。」</blockquote>
-          <p>と、より一層怪しい貼り紙が貼られていた。</p>
+          <div class="story-door-quote">
+            <p>部室の扉には</p>
+            <blockquote class="story-quote"><span class="headline-tape"><span>「この扉を開けば、</span><br><span>あなたの人生が</span><wbr><span>大きく変わる。」</span></span></blockquote>
+            <p>と、より一層怪しい貼り紙が貼られていた。</p>
+          </div>
           <p>流石に怖くなって立ち去ろうと振り返ると、1人の男が立っていた。<br>「アイディール・サークルへようこそ。」<br>その男は、満面の笑みでそう言った。</p>
           <p>これは「アイディール・セミナー」創始者・吉澤隆司、大学時代の物語。</p>
           <p class="story-return">『アイディール・セミナー』スピンオフ!!<br>朗読×ACTの新感覚バトルエンターテイメント!!<br>待望の再演!! あの物語が再び幕を開ける!!</p>
@@ -96,15 +98,21 @@
 
     <section class="section invitation" id="invitation" aria-labelledby="invitation-title">
       <div class="shell invitation-sheet">
-        <div class="invitation-cover">
-          <h2 id="invitation-title"><span>本公演に興味を</span><wbr><span>お持ちのお客様へ</span></h2>
-          <img src="./assets/official-characters-mobile.webp?v=20261128-3" width="630" height="590" loading="lazy" decoding="async" alt="">
-        </div>
-        <blockquote class="invitation-copy">
-          <p class="invitation-promise"><span>本公演の観劇をする事によって</span><br><strong><span>貴方の人生が</span><wbr><span>大きく変わります。</span></strong></p>
-          <p>成功体験をする事により人生観の拡がり、コミュニケーション力等、人間関係に必要な様々な能力の向上が望まれ、人生において大きな成果を上げることが出来ます。</p>
-          <p>悩んでいる方はご安心下さい。<br>アイディール・セミナーは貴方の人生に華を添えます。</p>
-          <p class="invitation-close">どうぞ勇気を持って一歩を踏み出し、<br>我々と共に新しい人生をデザインしましょう。</p>
+        <h2 class="invitation-heading" id="invitation-title"><span class="headline-tape"><span>本公演に興味を</span><wbr><span>お持ちのお客様へ</span></span></h2>
+        <blockquote class="invitation-message">
+          <p class="invitation-promise">
+            <span class="invitation-lead">本公演の観劇をする事によって</span>
+            <strong class="invitation-headline"><span class="headline-tape"><span>貴方の人生が</span><br><span>大きく変わります。</span></span></strong>
+          </p>
+          <picture class="invitation-art">
+            <source media="(max-width: 660px)" srcset="./assets/official-characters-mobile.webp?v=20261128-3">
+            <img src="./assets/official-characters.webp?v=20261128-3" width="1200" height="1123" loading="lazy" decoding="async" alt="">
+          </picture>
+          <div class="invitation-copy">
+            <p>成功体験をする事により人生観の拡がり、コミュニケーション力等、人間関係に必要な様々な能力の向上が望まれ、人生において大きな成果を上げることが出来ます。</p>
+            <p>悩んでいる方はご安心下さい。<br>アイディール・セミナーは貴方の人生に華を添えます。</p>
+            <p class="invitation-close">どうぞ勇気を持って一歩を踏み出し、<br><strong>我々と共に新しい人生をデザインしましょう。</strong></p>
+          </div>
         </blockquote>
       </div>
     </section>
@@ -135,11 +143,11 @@
           <div class="section-links">
             <a class="chip chip-filled" href="#actors">アクター</a>
             <a class="chip" href="#ensemble">アンサンブル</a>
-            <a class="chip" href="#characters">登場人物・リーディング</a>
+            <a class="chip" href="#characters">登場人物・アイディール役</a>
           </div>
         </div>
         <section class="cast-group" id="actors" aria-labelledby="actors-title">
-          <div class="cast-group-head"><h3 id="actors-title" lang="en">ACTOR</h3><span>全セッション出演</span></div>
+          <div class="cast-group-head"><h3 class="ribbon" id="actors-title" lang="en">ACTOR</h3><span>全セッション出演</span></div>
 <!-- START:actors -->
           <ul class="cast-grid plain-list" role="list">
             <li class="cast-card">
@@ -236,7 +244,7 @@
 <!-- END:actors -->
         </section>
         <section class="cast-group" id="ensemble" aria-labelledby="ensemble-title">
-          <div class="cast-group-head"><h3 id="ensemble-title" lang="en">ENSEMBLE</h3><span>アンサンブル</span></div>
+          <div class="cast-group-head"><h3 class="ribbon" id="ensemble-title" lang="en">ENSEMBLE</h3><span>アンサンブル</span></div>
 <!-- START:ensemble -->
           <ul class="cast-grid plain-list" role="list">
             <li class="cast-card">
@@ -285,36 +293,24 @@
 <!-- END:ensemble -->
         </section>
         <section class="cast-group" id="characters" aria-labelledby="characters-title">
-          <div class="cast-group-head"><h3 id="characters-title" lang="en">READING</h3><span>登場人物・リーディング</span></div>
-          <div class="character-list">
+          <div class="cast-group-head"><h3 class="ribbon" id="characters-title">登場人物・アイディール役</h3></div>
+          <div id="roles">
 <!-- START:characters -->
-          <article class="character">
-            <div class="character-head"><span class="ribbon">登場人物</span><h3>城崎華恋</h3>
-              <p>プリンセスに憧れる大学生</p></div>
-            <div class="character-body"><span class="role-icon" aria-hidden="true"></span>
-              <div class="reading-side"><h4 lang="en">READING</h4><p class="role-pending">出演者・出演回は後日発表</p></div>
-              <span class="ideal-arrow" aria-hidden="true">IDEAL</span>
-              <div class="actor-side"><h4 lang="en">ACTOR</h4><p class="role-pending">アイディール役の配役は後日発表</p></div>
-            </div>
-          </article>
-          <article class="character">
-            <div class="character-head"><span class="ribbon">登場人物</span><h3>小園ゆめか</h3>
-              </div>
-            <div class="character-body"><span class="role-icon" aria-hidden="true"></span>
-              <div class="reading-side"><h4 lang="en">READING</h4><p class="role-pending">出演者・出演回は後日発表</p></div>
-              <span class="ideal-arrow" aria-hidden="true">IDEAL</span>
-              <div class="actor-side"><h4 lang="en">ACTOR</h4><p class="role-pending">アイディール役の配役は後日発表</p></div>
-            </div>
-          </article>
+            <p class="casting-pending">READINGの出演者・出演回とアイディール役の配役は後日発表します。</p>
 <!-- END:characters -->
-          </div>
-          <details class="role-list disclosure" id="roles">
-            <summary>登場人物・アイディール役の一覧</summary>
 <!-- START:roles -->
-          <div class="role-columns"><div><h3>登場人物</h3><ul class="name-list plain-list" role="list"><li>城崎華恋</li><li>小園ゆめか</li><li>成田ゆき</li><li>川田希美</li><li>霧谷あさひ</li><li>蒼井沙良</li><li>新川未央</li><li>田上梨乃</li><li>森野真礼</li><li>葛城久代</li><li>佐竹夜酔</li><li>小暮愛</li><li>下坂咲子</li><li>郡花奏</li><li>但馬小夏</li><li>太田梨香子</li><li>吉澤隆司</li></ul></div>
-            <div><h3>アイディール役</h3><ul class="name-list plain-list" role="list"><li>プレミアム・プリンセス</li><li>マジカル・ドリーム</li><li>オリーブ・ローザ</li><li>セバス・チュン</li><li>パーフェクト・ティーチング</li><li>プレイブ・ガール</li><li>パワー・ディレクション</li><li>スティール・ボディ</li><li>てんや鶴姫</li><li>お京の卵殻</li><li>ランドリー・スコッチ</li><li>グロップ・グライダー</li><li>ポッピングツアー</li><li>バーニング・スプーン</li><li>フレミング・ビバレッジ</li></ul></div></div>
+            <div class="role-catalogue">
+              <div class="role-panel">
+                <h4>登場人物</h4>
+                <ul class="role-names plain-list" role="list"><li>城崎華恋</li><li>小園ゆめか</li><li>成田ゆき</li><li>川田希美</li><li>霧谷あさひ</li><li>蒼井沙良</li><li>新川未央</li><li>田上梨乃</li><li>森野真礼</li><li>葛城久代</li><li>佐竹夜酔</li><li>小暮愛</li><li>下坂咲子</li><li>郡花奏</li><li>但馬小夏</li><li>太田梨香子</li><li>吉澤隆司</li></ul>
+              </div>
+              <div class="role-panel">
+                <h4>アイディール役</h4>
+                <ul class="role-names plain-list" role="list"><li>プレミアム・プリンセス</li><li>マジカル・ドリーム</li><li>オリーブ・ローザ</li><li>セバス・チュン</li><li>パーフェクト・ティーチング</li><li>プレイブ・ガール</li><li>パワー・ディレクション</li><li>スティール・ボディ</li><li>てんや鶴姫</li><li>お京の卵殻</li><li>ランドリー・スコッチ</li><li>グロップ・グライダー</li><li>ポッピングツアー</li><li>バーニング・スプーン</li><li>フレミング・ビバレッジ</li></ul>
+              </div>
+            </div>
 <!-- END:roles -->
-          </details>
+          </div>
         </section>
       </div>
     </section>
