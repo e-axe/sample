@@ -13,6 +13,7 @@ const staggeredSessions = [
 const tripleRoles = new Set(['霧谷あさひ', '小暮愛']);
 const pad = (number) => String(number).padStart(2, '0');
 let readingNumber = 0;
+let idealNumber = 0;
 
 // 城崎華恋／プレミアム・プリンセスは初演の資料で確認済み。
 // 全体は配役確認用の仮配置。正式データは show-data.mjs に登録する。
@@ -27,13 +28,11 @@ export const castPreview = characters.map((role, index) => {
       sessions: ids,
     };
   });
-  return {
-    ...role,
-    reading,
-    actorRole: {
-      id: `ideal-preview-${pad(index + 1)}`,
-      name: idealRoles[index] ?? '役名確認中',
-      performer: `仮アクター ${pad(index + 1)}`,
-    },
-  };
+  const idealName = role.hasIdeal === false ? undefined : idealRoles[idealNumber++];
+  const actorRole = idealName ? {
+    id: `ideal-preview-${pad(idealNumber)}`,
+    name: idealName,
+    performer: `仮アクター ${pad(idealNumber)}`,
+  } : undefined;
+  return { ...role, reading, actorRole };
 });

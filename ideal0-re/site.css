@@ -283,6 +283,8 @@ body:has(.flyer-dialog[open]) .mobile-cta { display: none; }
   min-height: var(--role-title-height); margin: 0;
   color: var(--dark-pink); font: italic 900 var(--role-title-size)/1.15 var(--display);
 }
+.reading-only { grid-template-columns: minmax(0, 1fr); }
+.reading-only .cast-role-title { min-height: 0; }
 .ideal-label { color: var(--dark-pink); background: #f9d2e9; padding: 1px .4em 2px; white-space: nowrap; font: 900 clamp(.68rem, 1.26vw, .88rem)/1.45 var(--body); }
 .ideal-connection {
   --connection-height: clamp(22px, 3.4vw, 38px);

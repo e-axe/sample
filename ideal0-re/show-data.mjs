@@ -15,8 +15,8 @@ export const characters = [
   { name: '下坂咲子' },
   { name: '郡花奏' },
   { name: '但馬小夏' },
-  { name: '太田梨香子' },
-  { name: '吉澤隆司', note: '「アイディール・セミナー」創始者' },
+  { name: '太田梨香子', hasIdeal: false },
+  { name: '吉澤隆司', note: '「アイディール・セミナー」創始者', hasIdeal: false },
 ];
 
 export const idealRoles = [
