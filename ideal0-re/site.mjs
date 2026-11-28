@@ -4,8 +4,22 @@ const mobileCta = document.querySelector('.mobile-cta');
 const heroButton = document.querySelector('.hero-cta');
 const schedule = document.getElementById('schedule');
 const header = document.querySelector('.site-header');
-const compact = window.matchMedia('(max-width: 850px)');
+const compact = window.matchMedia('(max-width: 1000px)');
 const sessions = [...document.querySelectorAll('.session')];
+const flyerDialog = document.querySelector('.flyer-dialog');
+
+if (typeof flyerDialog?.showModal === 'function') {
+  for (const link of document.querySelectorAll('[data-flyer-open]')) {
+    link.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      flyerDialog.showModal();
+    });
+  }
+  flyerDialog.addEventListener('click', (event) => {
+    if (event.target === flyerDialog) flyerDialog.close();
+  });
+}
 
 function toggleMenu(open) {
   menu.setAttribute('aria-expanded', String(open));

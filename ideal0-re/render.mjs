@@ -8,7 +8,7 @@ const escape = (value) => String(value).replace(/[&<>"']/g, (character) => ({
 }[character]));
 const schedule = new Map(sessions.map((session) => [session.id, session]));
 const readingCast = characters.flatMap((role) => (role.reading ?? []).map((person) => ({ ...person, role: role.name })));
-const assignedActorNames = new Set(actors.map(([name]) => name));
+const actorPortraits = new Map(actors.map(([name, , image]) => [name, image]));
 const dateFormat = new Intl.DateTimeFormat('ja-JP', { weekday: 'short', timeZone: 'Asia/Tokyo' });
 const number = new Intl.NumberFormat('ja-JP');
 
@@ -24,7 +24,7 @@ for (const person of readingCast) {
 for (const { actorRole } of characters) {
   if (actorRole) {
     assert.ok(idealRoles.includes(actorRole.name), 'アイディール役が未登録です');
-    assert.ok(assignedActorNames.has(actorRole.performer), 'ACTOR出演者が未登録です');
+    assert.ok(actorPortraits.has(actorRole.performer), 'ACTOR出演者が未登録です');
   }
 }
 
@@ -38,10 +38,15 @@ function label({ date, time }) {
   return `${month}/${day}（${weekday}） ${time}`;
 }
 
-function renderPerformer({ id, name, sessions: appearances }) {
+function renderPortrait(image) {
+  const file = image ?? 'cast-avatar.svg';
+  return `<img class="cast-portrait${image ? '' : ' cast-portrait-placeholder'}" src="./assets/${escape(file)}" width="240" height="288" loading="lazy" decoding="async" alt="">`;
+}
+
+function renderPerformer({ id, name, image, sessions: appearances }) {
   const dates = sessions.filter((session) => appearances.includes(session.id)).map((session) =>
     `<li><a href="#${session.id}">${label(session)}</a></li>`).join('');
-  return `<li><details class="performer" id="${id}"><summary>${escape(name)}<small>出演回を見る</small></summary>
+  return `<li><details class="performer" id="${id}"><summary>${renderPortrait(image)}<strong>${escape(name)}</strong><small>出演回を見る</small></summary>
     ${dates ? `<ul class="plain-list">${dates}</ul>` : '<p>出演回は後日発表</p>'}</details></li>`;
 }
 
@@ -51,7 +56,7 @@ function renderCharacter(role) {
     ? `<ul class="performer-list plain-list">${role.reading.map(renderPerformer).join('')}</ul>`
     : '<p class="role-pending">出演者・出演回は後日発表</p>';
   const pair = role.actorRole
-    ? `<strong>${escape(role.actorRole.name)}</strong><p>${escape(role.actorRole.performer)} <span>全セッション出演</span></p>`
+    ? `<div class="paired-actor">${renderPortrait(actorPortraits.get(role.actorRole.performer))}<div><strong>${escape(role.actorRole.name)}</strong><p>${escape(role.actorRole.performer)} <span>全セッション出演</span></p></div></div>`
     : '<p class="role-pending">アイディール役の配役は後日発表</p>';
   return `          <article class="character">
             <div class="character-head"><span class="ribbon">登場人物</span><h3>${escape(role.name)}</h3>
@@ -67,6 +72,17 @@ function renderCharacter(role) {
 function nameList(names) {
   return `<ul class="name-list plain-list" role="list">${names.map(([name, affiliation]) =>
     `<li>${escape(name)}${affiliation ? `<small>（${escape(affiliation)}）</small>` : ''}</li>`).join('')}</ul>`;
+}
+
+function renderCastGrid(cast) {
+  return `          <ul class="cast-grid plain-list" role="list">
+${cast.map(([name, affiliation, image]) => `            <li class="cast-card">
+              ${renderPortrait(image)}
+              <div class="cast-card-caption">
+                <strong>${escape(name)}</strong>${affiliation ? `<small>${escape(affiliation)}</small>` : ''}
+              </div>
+            </li>`).join('\n')}
+          </ul>`;
 }
 
 function renderSchedule() {
@@ -146,8 +162,8 @@ const parts = {
   characters: characters.filter((role) => role.featured || role.reading?.length || role.actorRole).map(renderCharacter).join('\n'),
   roles: `          <div class="role-columns"><div><h3>登場人物</h3>${nameList(characters.map(({ name }) => [name]))}</div>
             <div><h3>アイディール役</h3>${nameList(idealRoles.map((name) => [name]))}</div></div>`,
-  actors: '          ' + nameList(actors),
-  ensemble: '          ' + nameList(ensemble),
+  actors: renderCastGrid(actors),
+  ensemble: renderCastGrid(ensemble),
   schedule: renderSchedule(),
   fares: renderFares(),
   sale: renderSale(),
